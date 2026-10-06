@@ -1,0 +1,240 @@
+<title>Veduta e conci</title>
+<meta name="description" content="Quinto giro del marchio di Nextstop: due idee a più colori, la veduta e i conci, provate prima di tutto nei risultati di ricerca.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&display=swap">
+<style>
+/* Quinto giro: più colori e una costruzione più ricca.
+   Tavolozza unica per i due marchi, presa dai manifesti di viaggio italiani: notte, calce, albicocca (cielo),
+   rosso sole, viola vulcano, blu maiolica (mare). Piani piatti, niente sfumature. */
+:root {
+  --carta: #F7F6F2; --pietra: #ECEAE4; --riga: #D6D2C8; --inchiostro: #16181D; --inchiostro-2: #575B65;
+  --notte: #13224A; --calce: #FFF3E2; --cielo: #F9D5AE; --cielo-2: #F4BC8C; --sole: #E2503C; --vulcano: #3D3D8F; --mare: #1F5FC4; --blu: #2F6FE0;
+  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Bodoni Moda", "Bodoni 72", Didot, Georgia, serif;
+  --morbido: cubic-bezier(0.16, 1, 0.3, 1); --dolce: cubic-bezier(0.65, 0, 0.35, 1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --carta: #101318; --pietra: #1A1E26; --riga: #2C323D; --inchiostro: #EEF0F4; --inchiostro-2: #A8AFBD; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --carta: #101318; --pietra: #1A1E26; --riga: #2C323D; --inchiostro: #EEF0F4; --inchiostro-2: #A8AFBD; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--carta); color: var(--inchiostro); font: 400 1rem/1.55 var(--sans); padding: 0 0 5rem; }
+.wrap { max-width: 64rem; margin-inline: auto; padding-inline: 16px; }
+h1 { margin: 0; font: 600 clamp(2.2rem, 9vw, 3.6rem)/1 var(--serif); letter-spacing: -.01em; }
+h2 { margin: 0 0 1rem; font: 600 1.6rem/1.1 var(--serif); }
+p { margin: 0; }
+.piccolo { font-size: .9rem; color: var(--inchiostro-2); }
+.sez { display: grid; gap: 1rem; padding-block: 2.25rem; border-top: 1px solid var(--riga); }
+:focus-visible { outline: 3px solid var(--blu); outline-offset: 3px; }
+.comandi { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--carta) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--riga); }
+.comandi .wrap { display: flex; align-items: center; justify-content: space-between; gap: .5rem; padding-block: .6rem; }
+.comandi b { font: 600 1.05rem/1 var(--serif); }
+.riproduci { min-height: 44px; padding: .5rem 1.1rem; border-radius: 999px; border: 0; background: var(--inchiostro); color: var(--carta); font: 600 .9rem/1 var(--sans); cursor: pointer; transition: transform 150ms var(--morbido); }
+.riproduci:active { transform: scale(.96); }
+.apertura { padding-block: 2rem 1.5rem; display: grid; gap: .75rem; max-width: 40rem; }
+.apertura p { color: var(--inchiostro-2); }
+
+.campi { display: grid; gap: .75rem; }
+@media (min-width: 760px) { .campi { grid-template-columns: 1fr 1fr; } }
+.campo { position: relative; display: grid; place-items: center; align-content: center; gap: 1.25rem; min-height: 24rem; border-radius: 28px; padding: 2.5rem 1rem 3rem; background: var(--pietra); }
+.campo .icona { width: min(52vw, 13rem); filter: drop-shadow(0 14px 28px rgba(13, 22, 50, .25)); }
+.campo__nome { font: 600 1.6rem/1 var(--serif); }
+.campo__idea { max-width: 26rem; text-align: center; color: var(--inchiostro-2); font-size: .95rem; }
+
+/* Google: alla misura vera e ingrandito */
+.google { display: grid; gap: .75rem; }
+@media (min-width: 760px) { .google { grid-template-columns: 1fr 1fr; } }
+.risultati { border-radius: 18px; overflow: hidden; border: 1px solid var(--riga); }
+.ris-fondo { padding: .95rem 1rem 1rem; display: grid; gap: 1.05rem; font-family: Arial, Helvetica, sans-serif; }
+.ris-chiaro { background: #FFFFFF; color: #1F1F1F; --sec: #4D5156; --tit: #1A0DAB; --vuoto: #E3E3E3; }
+.ris-scuro { background: #1F1F1F; color: #E3E3E3; --sec: #BDC1C6; --tit: #99C3FF; --vuoto: #3C4043; }
+.ris { display: grid; gap: .3rem; }
+.ris__testa { display: flex; align-items: center; gap: .65rem; }
+.ris__icona { width: 28px; height: 28px; border-radius: 50%; overflow: hidden; flex: none; background: var(--vuoto); }
+.ris__icona svg { width: 28px; height: 28px; display: block; }
+.ris__nome { font-size: .875rem; line-height: 1.25; }
+.ris__nome small { display: block; color: var(--sec); font-size: .75rem; }
+.ris__titolo { color: var(--tit); font-size: 1.1rem; line-height: 1.3; text-decoration: none; }
+.ris__testo { color: var(--sec); font-size: .85rem; line-height: 1.5; }
+.barra { height: .6rem; border-radius: 4px; background: var(--vuoto); }
+.lente { display: flex; align-items: center; gap: 1rem; padding: 1rem 1.1rem; border-radius: 18px; background: #fff; color: #1F1F1F; font-family: Arial, Helvetica, sans-serif; }
+.lente .tondo { width: 6.5rem; height: 6.5rem; border-radius: 50%; overflow: hidden; flex: none; box-shadow: 0 0 0 1px rgba(0,0,0,.08); }
+.lente .tondo svg { width: 100%; height: 100%; display: block; }
+.lente p { font-size: .85rem; color: #4D5156; }
+
+.riquadro { padding: 1.1rem; border-radius: 22px; background: var(--pietra); display: grid; gap: .9rem; align-content: start; }
+.due { display: grid; gap: .75rem; }
+@media (min-width: 760px) { .due { grid-template-columns: 1fr 1fr; } }
+.icone { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem 1.4rem; }
+.misura { display: grid; justify-items: center; gap: .35rem; font-size: .72rem; color: var(--inchiostro-2); }
+.telefono { display: grid; grid-template-columns: repeat(4, 3rem); gap: .85rem .75rem; padding: 1rem; border-radius: 22px; background: #2A2F3A; width: fit-content; }
+.app { display: grid; justify-items: center; gap: .3rem; font: 500 .6rem/1 system-ui, sans-serif; color: #fff; }
+.app i { width: 3rem; height: 3rem; border-radius: 22.5%; background: rgba(255,255,255,.18); display: block; }
+.app svg { width: 3rem; height: 3rem; border-radius: 22.5%; display: block; }
+.sito { border-radius: 18px; overflow: hidden; border: 1px solid var(--riga); background: #F7F6F2; color: #16181D; }
+.sito__testata { display: flex; align-items: center; justify-content: space-between; padding: .7rem 1rem; border-bottom: 1px solid #D6D2C8; }
+.sito__marchio { display: flex; align-items: center; gap: .55rem; }
+.sito__marchio svg { width: 2.1rem; height: 2.1rem; border-radius: 22.5%; }
+.sito__marchio span { font: 560 1.3rem/1 var(--sans); font-variation-settings: "wdth" 96; letter-spacing: -.03em; }
+.sito__menu { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #D6D2C8; display: grid; place-items: center; }
+.sito__foto { position: relative; height: 10rem; overflow: hidden; }
+.sito__foto img { width: 100%; height: 100%; object-fit: cover; }
+.sito__foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,12,22,.4), rgba(8,12,22,.72)); }
+.sito__sopra { position: absolute; z-index: 1; left: 1rem; top: .8rem; color: #fff; }
+.sito__titolo { position: absolute; z-index: 1; left: 1rem; bottom: .9rem; color: #fff; font: 800 1.9rem/.95 var(--sans); font-variation-settings: "wdth" 70; }
+.citta { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.citta figure { margin: 0; display: grid; justify-items: center; gap: .4rem; font-size: .8rem; color: var(--inchiostro-2); }
+.citta svg { width: 5rem; height: 5rem; border-radius: 22.5%; }
+.toni { display: flex; flex-wrap: wrap; gap: .5rem; }
+.tono { display: grid; gap: .3rem; font-size: .72rem; color: var(--inchiostro-2); width: 5.2rem; }
+.tono i { display: block; height: 2.6rem; border-radius: 10px; background: var(--c); box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+.tono b { color: var(--inchiostro); font-size: .8rem; }
+.icona { display: block; overflow: visible; }
+
+/* ---------- Animazioni ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  /* La veduta: si apre la finestra, sale il sole, arriva la vela */
+  .anima .finestra { animation: apri 800ms var(--morbido) both; }
+  .anima .sole { animation: sorgi 1400ms var(--dolce) both; animation-delay: 400ms; }
+  .anima .vela { animation: naviga 1600ms var(--dolce) both; animation-delay: 500ms; }
+  .anima .onde { animation: scorri 1600ms var(--dolce) both; animation-delay: 500ms; }
+  @keyframes apri { from { transform: translateY(6px); opacity: 0; } }
+  @keyframes sorgi { from { transform: translateY(13px); } }
+  @keyframes naviga { from { transform: translateX(-9px); opacity: 0; } 30% { opacity: 1; } }
+  @keyframes scorri { from { transform: translateX(6px); opacity: 0; } }
+  /* I conci: l'arco si costruisce dai due lati, la chiave di volta scende per ultima */
+  .anima .concio { animation: posa 520ms var(--morbido) both; animation-delay: calc(var(--k) * 110ms); }
+  .anima .chiave { animation: chiave 800ms var(--morbido) both; animation-delay: 900ms; }
+  .anima .gradino { transform-box: fill-box; transform-origin: center; animation: allarga 600ms var(--morbido) both; }
+  .anima .punto { transform-box: fill-box; transform-origin: center; animation: compare 700ms var(--morbido) both; animation-delay: 1550ms; }
+  @keyframes posa { from { transform: translateY(-5px); opacity: 0; } }
+  @keyframes chiave { from { transform: translateY(-12px); opacity: 0; } 50% { opacity: 1; } }
+  @keyframes allarga { from { transform: scaleX(0); } }
+  @keyframes compare { from { transform: scale(.3); opacity: 0; } 50% { opacity: 1; } }
+}
+.tema { position: fixed; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); min-height: 44px; padding: 0 14px; border-radius: 999px; border: 0; background: #26272B; color: #fff; font: 600 13px/1 system-ui, sans-serif; cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,.28); }
+</style>
+
+<!--FOTO-->
+
+<div class="comandi"><div class="wrap"><b>Veduta e conci</b><button class="riproduci" type="button" id="riproduci">Guarda l'animazione</button></div></div>
+<main class="wrap">
+  <header class="apertura">
+    <h1>Più colori, più costruzione</h1>
+    <p>Due idee nuove, tutte e due nate dall'arco. Prima di tutto le vedi dove ti preoccupavano: nei risultati di ricerca, alla misura vera e ingrandite.</p>
+  </header>
+  <section class="campi" aria-label="I due marchi" id="campi"></section>
+  <section class="sez" aria-labelledby="h-g"><h2 id="h-g">Su Google</h2><div class="google" id="google"></div></section>
+  <section class="sez" aria-labelledby="h-i"><h2 id="h-i">Sul telefono e piccolo</h2><div class="due" id="icone"></div></section>
+  <section class="sez" aria-labelledby="h-s"><h2 id="h-s">Sul sito</h2><div class="due" id="sito"></div></section>
+  <section class="sez" aria-labelledby="h-c"><h2 id="h-c">Un'idea per dopo: la veduta cambia con la città</h2>
+    <p class="piccolo">La finestra resta uguale, cambia quello che si vede: è il modo in cui lavorano i marchi «vivi». Napoli oggi; per le altre città si disegna la loro veduta quando arrivano.</p>
+    <div class="citta" id="citta"></div></section>
+  <section class="sez" aria-labelledby="h-t"><h2 id="h-t">I colori</h2><div class="toni" id="toni"></div>
+    <p class="piccolo">Sul sito restano i colori della proposta A: questi stanno solo nel marchio e in qualche dettaglio.</p></section>
+</main>
+<button class="tema" id="tema" type="button">Tema: automatico</button>
+
+<script>
+(() => {
+  let n = 0;
+  const F = v => `style="fill:var(--${v})"`;
+  // ---------- La veduta: la finestra ad arco con dentro Napoli a piani di colore ----------
+  const FIN = 'M12.5 40V22.5C12.5 13 17.6 6.5 24 6.5S35.5 13 35.5 22.5V40Z';
+  const CORNICE = 'M10.8 41V22.3C10.8 11.9 16.7 4.8 24 4.8S37.2 11.9 37.2 22.3V41Z';
+  const VESUVIO = 'M6 31.5L14.6 23.6L17.2 24.6L19.7 21.6L21.6 19.3H26.8L35.6 27.4L42 31.5Z';
+  const CUPOLA = 'M6 31.5H13V27H15.5V24C15.5 19.5 19.5 16.6 24 16.6S32.5 19.5 32.5 24V27H35V31.5H42Z';
+  function veduta({ tondo = 12, profilo = VESUVIO, sole = [29.6, 19.4], vela = true } = {}) {
+    const u = 'v' + (n++);
+    return `<svg class="icona" viewBox="0 0 48 48" aria-hidden="true">
+      <rect width="48" height="48" rx="${tondo}" ${F('notte')}/>
+      <clipPath id="${u}"><path d="${FIN}"/></clipPath>
+      <g class="finestra">
+        <path d="${CORNICE}" ${F('calce')}/>
+        <rect x="10" y="40.6" width="28" height="2.5" rx=".6" ${F('calce')}/>
+        <g clip-path="url(#${u})">
+          <rect x="0" y="0" width="48" height="48" ${F('cielo')}/>
+          <rect x="0" y="0" width="48" height="14.5" ${F('cielo-2')}/>
+          <g class="sole"><circle cx="${sole[0]}" cy="${sole[1]}" r="4.7" ${F('sole')}/></g>
+          <path d="${profilo}" ${F('vulcano')}/>
+          <rect x="0" y="30.6" width="48" height="12" ${F('mare')}/>
+          <g class="onde"><path d="M14.5 34.4h6.6M25.5 37h7.4" fill="none" stroke="var(--calce)" stroke-width="1.15" stroke-linecap="round" opacity=".9"/></g>
+          ${vela ? `<g class="vela"><path d="M17.4 30.3V24.6L20.9 30.3Z" ${F('calce')}/><path d="M15.6 30.6h6.4l-1 1.3h-4.4z" ${F('calce')}/></g>` : ''}
+        </g>
+      </g>
+    </svg>`;
+  }
+  // ---------- I conci: archivolto di 7 pietre più la chiave, piedritti in due blocchi, gradino, punto ----------
+  const settore = (cx, cy, r1, r2, a0, a1) => {
+    const p = (r, a) => [cx + r * Math.cos(a * Math.PI / 180), cy - r * Math.sin(a * Math.PI / 180)].map(v => v.toFixed(2));
+    const [x1, y1] = p(r2, a0), [x2, y2] = p(r2, a1), [x3, y3] = p(r1, a1), [x4, y4] = p(r1, a0);
+    return `M${x1} ${y1}A${r2} ${r2} 0 0 1 ${x2} ${y2}L${x3} ${y3}A${r1} ${r1} 0 0 0 ${x4} ${y4}Z`;
+  };
+  function conci({ tondo = 12, fondo = true } = {}) {
+    const cx = 24, cy = 22.4, r1 = 7.4, r2 = 13.6, g = 0.45; // g: mezza fuga in unità
+    const colori = ['calce', 'blu', 'calce', 'sole', 'calce', 'blu', 'calce'];
+    const passo = 180 / 7;
+    // ordine di posa: dai due lati verso la chiave
+    const ordine = [2, 3, 4, 0, 4, 3, 2]; // k per ogni concio (0..6); la chiave (3) ha la sua animazione
+    let s = '';
+    for (let i = 0; i < 7; i++) {
+      const a0 = 180 - i * passo, a1 = 180 - (i + 1) * passo;
+      const gd = g / ((r1 + r2) / 2) * 180 / Math.PI;
+      const chiave = i === 3;
+      const d = settore(cx, cy, chiave ? r1 - .7 : r1, chiave ? r2 + 1.5 : r2, a0 - gd, a1 + gd);
+      s += `<path class="${chiave ? 'chiave' : 'concio'}" style="--k:${ordine[i]};fill:var(--${colori[i]})" d="${d}"/>`;
+    }
+    const l1 = 10.4, l2 = 37.6 - 6.2; // x dei piedritti
+    const blocchi = [[l1, 30.6, 8, 'calce', 0], [l1, 22.4 + g, 7.75, 'blu', 1], [l2, 30.6, 8, 'calce', 0], [l2, 22.4 + g, 7.75, 'blu', 1]];
+    s = blocchi.map(([x, y, h, c, k]) => `<rect class="concio" style="--k:${k};fill:var(--${c})" x="${x}" y="${y}" width="6.2" height="${h - g}" rx=".25"/>`).join('') + s;
+    return `<svg class="icona" viewBox="0 0 48 48" aria-hidden="true">
+      ${fondo ? `<rect width="48" height="48" rx="${tondo}" ${F('notte')}/>` : ''}
+      ${s}
+      <rect class="gradino" x="9.2" y="39.8" width="29.6" height="2.5" rx=".6" ${F('calce')}/>
+      <circle class="punto" cx="24" cy="33.6" r="3.5" ${F('sole')}/>
+    </svg>`;
+  }
+
+  const MARCHI = [
+    { id: 'veduta', nome: 'La veduta', idea: "Una finestra ad arco e, dentro, Napoli come nei manifesti di viaggio: il cielo, il sole che sorge dietro il Vesuvio, il mare con una vela. Il punto di prima è diventato il sole.", ico: o => veduta(o) },
+    { id: 'conci', nome: 'I conci', idea: "L'arco costruito pietra per pietra, a colori alternati come negli archi delle chiese italiane, con la chiave di volta rossa in cima e il punto sulla soglia.", ico: o => conci(o) }
+  ];
+  document.getElementById('campi').innerHTML = MARCHI.map(m => `<div class="campo">${m.ico()}<span class="campo__nome">${m.nome}</span><p class="campo__idea">${m.idea}</p></div>`).join('');
+
+  const finto = () => `<div class="ris" aria-hidden="true"><div class="ris__testa"><span class="ris__icona"></span><span style="display:grid;gap:.35rem;width:8rem"><span class="barra"></span><span class="barra" style="width:70%"></span></span></div><span class="barra" style="height:.85rem;width:85%;margin-top:.3rem"></span></div>`;
+  const nostro = ico => `<div class="ris"><div class="ris__testa"><span class="ris__icona">${ico}</span><span class="ris__nome">Nextstop<small>https://nextstop-alpha.vercel.app › napoli</small></span></div><a class="ris__titolo" href="#">Due giorni a Napoli: l'itinerario con i tempi veri</a><p class="ris__testo">Il primo giorno al Museo Archeologico e nel centro storico, il secondo al Vomero e sul mare: 15 tappe, 75 minuti a piedi.</p></div>`;
+  document.getElementById('google').innerHTML = MARCHI.map(m => `<div style="display:grid;gap:.75rem;align-content:start">
+      <p class="piccolo"><b>${m.nome}</b></p>
+      <div class="risultati"><div class="ris-fondo ris-chiaro">${finto()}${nostro(m.ico({ tondo: 0 }))}${finto()}</div><div class="ris-fondo ris-scuro">${nostro(m.ico({ tondo: 0 }))}</div></div>
+      <div class="lente"><span class="tondo">${m.ico({ tondo: 0 })}</span><p>Ingrandito: Google ritaglia l'icona in tondo. Il disegno sta tutto dentro il cerchio.</p></div>
+    </div>`).join('');
+
+  const telefono = ico => `<div class="telefono" aria-hidden="true">${'<span class="app"><i></i>&nbsp;</span>'.repeat(5)}<span class="app">${ico}Nextstop</span>${'<span class="app"><i></i>&nbsp;</span>'.repeat(2)}</div>`;
+  document.getElementById('icone').innerHTML = MARCHI.map(m => `<div class="riquadro"><p class="piccolo"><b>${m.nome}</b></p>
+    <div class="icone">${[64, 40, 28, 16].map(s => `<span class="misura"><span style="width:${s}px;height:${s}px;display:block;border-radius:${s * .225}px;overflow:hidden">${m.ico({ tondo: 0 })}</span>${s} px</span>`).join('')}</div>
+    ${telefono(m.ico({ tondo: 0 }))}</div>`).join('');
+
+  const FOTO = window.FOTO_LOGO || '';
+  document.getElementById('sito').innerHTML = MARCHI.map(m => `<div class="sito">
+    <div class="sito__testata"><span class="sito__marchio">${m.ico({ tondo: 0 })}<span>nextstop</span></span><span class="sito__menu" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span></div>
+    <div class="sito__foto">${FOTO ? `<img src="${FOTO}" alt="">` : ''}<span class="sito__sopra sito__marchio">${m.ico({ tondo: 0 })}<span>nextstop</span></span><p class="sito__titolo">Napoli,<br>con i tempi veri.</p></div></div>`).join('');
+
+  document.getElementById('citta').innerHTML = `
+    <figure>${veduta()}<figcaption>Napoli: il Vesuvio</figcaption></figure>
+    <figure>${veduta({ profilo: CUPOLA, sole: [33.5, 15.5], vela: false })}<figcaption>Una città con una cupola</figcaption></figure>`;
+
+  document.getElementById('toni').innerHTML = [['notte', '#13224A', 'Notte'], ['calce', '#FFF3E2', 'Calce'], ['cielo', '#F9D5AE', 'Cielo'], ['sole', '#E2503C', 'Sole'], ['vulcano', '#3D3D8F', 'Vulcano'], ['mare', '#1F5FC4', 'Mare']].map(([, hex, nome]) => `<span class="tono"><i style="--c:${hex}"></i><b>${nome}</b>${hex}</span>`).join('');
+
+  const anima = () => document.querySelectorAll('.campo .icona').forEach(s => { s.classList.remove('anima'); void s.getBoundingClientRect(); s.classList.add('anima'); });
+  document.getElementById('riproduci').addEventListener('click', anima);
+  new IntersectionObserver((v, o) => { if (v[0].isIntersecting) { anima(); o.disconnect(); } }, { threshold: .4 }).observe(document.getElementById('campi'));
+
+  const temi = [null, 'light', 'dark'], nomi = ['Tema: automatico', 'Tema: chiaro', 'Tema: scuro'];
+  let t = 0;
+  const tema = () => { if (temi[t]) document.documentElement.dataset.theme = temi[t]; else delete document.documentElement.dataset.theme; document.getElementById('tema').textContent = nomi[t]; };
+  try { const q = new URLSearchParams(location.search).get('tema'); if (q) { t = temi.indexOf(q); tema(); } } catch (e) {}
+  document.getElementById('tema').addEventListener('click', () => { t = (t + 1) % 3; tema(); });
+})();
+</script>
