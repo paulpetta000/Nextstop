@@ -1,0 +1,1703 @@
+# Fonti usate nella guida. Ogni scheda in fatti.yaml deve citarne almeno una.
+# tipo: ufficiale (organizzatori, enti pubblici, squadre) | stampa | dati | altro
+# letta: true se la pagina è stata aperta e letta per intero (non solo il riassunto di un motore di ricerca)
+
+# ---------- Organizzatori e squadre ----------
+- id: ac-grazie-napoli
+  titolo: "Grazie Napoli"
+  editore: America's Cup
+  url: https://www.americascup.com/news/4372_GRAZIE-NAPOLI
+  tipo: ufficiale
+  pubblicato: 2026-09-28
+  controllato: 2026-09-30
+  letta: true
+
+- id: ac-formato-lvc
+  titolo: "Fleet racing AC75's to kick-start the Louis Vuitton Cup"
+  editore: America's Cup
+  url: https://www.americascup.com/news/4148_FLEET-RACING-AC75-s-TO-KICK-START-THE-LOUIS-VUITTON-CUP
+  tipo: ufficiale
+  controllato: 2026-09-30
+  letta: true
+
+- id: ac-youth-date
+  titolo: "Youth America's Cup dates announced"
+  editore: America's Cup
+  url: https://www.americascup.com/news/4332_YOUTH-AMERICAS-CUP-DATES-ANNOUNCED-AS-THE-AMERICAS-CUP-CELEBRATES-THE-NEXT-GENERATION-AT-PINO-DANIELE-SPORTS-CENTRE-IN-CAIVANO
+  tipo: ufficiale
+  pubblicato: 2026-09-23
+  controllato: 2026-09-30
+  letta: true
+
+- id: ac-38
+  titolo: "The Louis Vuitton 38th America's Cup"
+  editore: America's Cup
+  url: https://www.americascup.com/38th-americascup
+  tipo: ufficiale
+  controllato: 2026-09-30
+  letta: true
+
+- id: ac-host-venue
+  titolo: "Host Venue"
+  editore: America's Cup
+  url: https://www.americascup.com/host-venue
+  tipo: ufficiale
+  controllato: 2026-09-30
+  letta: true
+
+- id: ac-programma-pr2
+  titolo: "Mark your diaries – PR2 Naples is all set"
+  editore: America's Cup
+  url: https://www.americascup.com/news/4270_MARK-YOUR-DIARIES-PR2-NAPLES-IS-ALL-SET
+  tipo: ufficiale
+  controllato: 2026-09-30
+  letta: true
+
+- id: ac-protocollo
+  titolo: "Protocollo della Louis Vuitton 38ª America's Cup (12 agosto 2025)"
+  editore: America's Cup
+  url: https://www.americascup.com/files/m26244_FINAL-PROTOCOL-12-AUGUST-2025.pdf
+  tipo: ufficiale
+  pubblicato: 2025-08-12
+  controllato: 2026-09-30
+  letta: true
+
+- id: etnz-formato
+  titolo: "2027: The Louis Vuitton 38th America's Cup – May–July 2027"
+  editore: Emirates Team New Zealand
+  url: https://emirates-team-new-zealand.americascup.com/en/news/813_2027-THE-LOUIS-VUITTON-38TH-AMERICA-S-CUP-MAY-JULY-2027.html
+  tipo: ufficiale
+  controllato: 2026-09-30
+  letta: true
+
+# ---------- Comune di Napoli ----------
+- id: comune-citta-ospitante
+  titolo: "Napoli Città Ospitante della 38ª edizione della Louis Vuitton America's Cup"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/articolo_tematico/napoli-citta-ospitante-della-38esima-edizione-della-americas-cup/
+  tipo: ufficiale
+  controllato: 2026-09-30
+  letta: true
+
+# ---------- Dati ----------
+- id: osm
+  titolo: "OpenStreetMap"
+  editore: Collaboratori di OpenStreetMap (licenza ODbL)
+  url: https://www.openstreetmap.org/copyright
+  tipo: dati
+  controllato: 2026-09-30
+  letta: true
+  nota: Costa, strade, stazioni e punti panoramici della mappa.
+
+# ---------- Itinerari (Rilascio 3): musei, chiese, parchi e trasporti ----------
+# Le fonti con id «tp-» servono solo agli itinerari: finché la pagina non è online (ITINERARI_ONLINE in src/config/sito.ts)
+# la pagina Fonti non le mostra. Pagine lette il 02/10/2026 (ricerca in ricerca/2026-10-02-itinerari-orari-prezzi.md).
+- id: tp-italia-duomo
+  titolo: "Duomo di Napoli"
+  editore: Ministero del Turismo (italia.it)
+  url: https://www.italia.it/it/campania/napoli/duomo
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+  nota: "Pagina senza data: gli orari del Duomo vanno confermati con la cattedrale"
+
+- id: tp-tesoro-info
+  titolo: "Info e tariffe"
+  editore: Museo del Tesoro di San Gennaro
+  url: https://tesorosangennaro.it/info-e-tariffe/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-tesoro-faq
+  titolo: "FAQ"
+  editore: Museo del Tesoro di San Gennaro
+  url: https://tesorosangennaro.it/faq/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-sansevero-orari
+  titolo: "Orari e tariffe"
+  editore: Museo Cappella Sansevero
+  url: https://www.museosansevero.it/organizza-la-tua-visita/orari-e-tariffe
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-sansevero-accesso
+  titolo: "Modalità di accesso"
+  editore: Museo Cappella Sansevero
+  url: https://www.museosansevero.it/organizza-la-tua-visita/modalita-di-accesso
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-sansevero-accessibilita
+  titolo: "Accessibilità"
+  editore: Museo Cappella Sansevero
+  url: https://www.museosansevero.it/organizza-la-tua-visita/accessibilita
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-santachiara-orari
+  titolo: "Orari"
+  editore: Monastero di Santa Chiara
+  url: https://www.monasterodisantachiara.it/orari/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-santachiara-faq
+  titolo: "FAQ"
+  editore: Monastero di Santa Chiara
+  url: https://www.monasterodisantachiara.it/faq/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+  nota: "Le FAQ danno orari di chiusura mezz'ora più tardi della pagina degli orari: usiamo quelli della pagina degli orari"
+
+- id: tp-napolike-gesu
+  titolo: "Chiesa del Gesù Nuovo"
+  editore: Napolike
+  url: https://www.napolike.it/chiesa-del-gesu-nuovo-napoli
+  tipo: blog
+  controllato: 2026-10-02
+  letta: true
+  nota: "Sito non ufficiale: il sito della chiesa non mostra gli orari"
+
+- id: tp-napolike-sangregorio
+  titolo: "Chiesa di San Gregorio Armeno"
+  editore: Napolike
+  url: https://www.napolike.it/point/chiesa-san-gregorio-armeno-napoli
+  tipo: blog
+  controllato: 2026-10-02
+  letta: true
+  nota: "Sito non ufficiale: non abbiamo trovato un sito ufficiale della chiesa"
+
+- id: tp-piomonte
+  titolo: "Info e orari"
+  editore: Pio Monte della Misericordia
+  url: https://piomontedellamisericordia.it/info-e-orari/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-piomonte-caravaggio
+  titolo: "Caravaggio"
+  editore: Pio Monte della Misericordia
+  url: https://piomontedellamisericordia.it/caravaggio/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-mann-orari
+  titolo: "Orari e biglietti"
+  editore: Museo Archeologico Nazionale di Napoli
+  url: https://www.museoarcheologiconapoli.it/orari-e-biglietti/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-mic-mann
+  titolo: "Museo Archeologico Nazionale di Napoli"
+  editore: Ministero della Cultura
+  url: https://cultura.gov.it/luogo/museo-archeologico-nazionale-di-napoli-1
+  tipo: ufficiale
+  pubblicato: 2026-03-24
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-sanlorenzo
+  titolo: "Info visite"
+  editore: La Neapolis Sotterrata (San Lorenzo Maggiore)
+  url: https://www.laneapolissotterrata.it/Home/InfoVisite
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-sotterranea-orari
+  titolo: "Orari"
+  editore: Napoli Sotterranea
+  url: https://www.napolisotterranea.org/orari/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-sotterranea-faq
+  titolo: "FAQ"
+  editore: Napoli Sotterranea
+  url: https://www.napolisotterranea.org/faq/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-madre
+  titolo: "Visita"
+  editore: Museo Madre
+  url: https://www.madrenapoli.it/visita/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-catacombe
+  titolo: "Pianifica la visita"
+  editore: Catacombe di Napoli
+  url: https://catacombedinapoli.it/it/pianifica-visita-guidata-napoli/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-catacombe-sangennaro
+  titolo: "Catacombe di San Gennaro"
+  editore: Catacombe di Napoli
+  url: https://catacombedinapoli.it/it/luoghi/catacombe-di-san-gennaro-napoli/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-catacombe-basilica
+  titolo: "Basilica di Santa Maria della Sanità"
+  editore: Catacombe di Napoli
+  url: https://catacombedinapoli.it/it/luoghi/basilica-di-santa-maria-sanita-napoli/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-fontanelle
+  titolo: "Pianifica la visita"
+  editore: Cimitero delle Fontanelle
+  url: https://cimiterodellefontanelle.it/pianifica-visita/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-comune-fontanelle
+  titolo: "Il Cimitero delle Fontanelle riapre per sempre"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/novita/il-cimitero-delle-fontanelle-riapre-per-sempre/
+  tipo: ufficiale
+  pubblicato: 2026-04-08
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-capodimonte-orari
+  titolo: "Orari"
+  editore: Museo e Real Bosco di Capodimonte
+  url: https://capodimonte.cultura.gov.it/orari/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-capodimonte-biglietti
+  titolo: "Biglietti"
+  editore: Museo e Real Bosco di Capodimonte
+  url: https://capodimonte.cultura.gov.it/biglietti/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-mic-sanmartino
+  titolo: "Certosa e Museo di San Martino"
+  editore: Ministero della Cultura
+  url: https://cultura.gov.it/luogo/certosa-e-museo-di-san-martino
+  tipo: ufficiale
+  pubblicato: 2026-09-30
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-mic-santelmo
+  titolo: "Castel Sant'Elmo e Museo del Novecento a Napoli"
+  editore: Ministero della Cultura
+  url: https://cultura.gov.it/luogo/castel-sant-elmo-e-museo-del-novecento-a-napoli
+  tipo: ufficiale
+  pubblicato: 2026-09-17
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-mic-floridiana
+  titolo: "Museo della Ceramica Duca di Martina in Villa Floridiana"
+  editore: Ministero della Cultura
+  url: https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana
+  tipo: ufficiale
+  pubblicato: 2026-08-06
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-comune-pedamentina
+  titolo: "Dalla Pedamentina a Spaccanapoli"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/turismo/turismo-sostenibile/percorsi-a-piedi/dalla-pedamentina-a-spaccanapoli/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-anm-ascensori
+  titolo: "Ascensori"
+  editore: ANM, Azienda Napoletana Mobilità
+  url: https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=320
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-palazzoreale-info
+  titolo: "Informazioni per la visita"
+  editore: Palazzo Reale di Napoli
+  url: https://palazzorealedinapoli.org/informazioni-per-la-visita/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-palazzoreale-restauri
+  titolo: "Inizio cantiere di restauro del Salone d'Ercole e modifica del percorso di visita dell'Appartamento di Etichetta"
+  editore: Palazzo Reale di Napoli
+  url: https://palazzorealedinapoli.org/inizio-cantiere-di-restauro-del-salone-dercole-e-modifica-del-percorso-di-visita-dellappartamento-di-etichetta-da-giovedi-1ottobre/
+  tipo: ufficiale
+  pubblicato: 2026-09-29
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-sancarlo-visite
+  titolo: "Visite guidate"
+  editore: Teatro di San Carlo
+  url: https://www.teatrosancarlo.it/visite-guidate/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-comune-castelnuovo
+  titolo: "Maschio Angioino"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/maschioangioino
+  tipo: ufficiale
+  pubblicato: 2026-09-07
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-napoliforme-galleria
+  titolo: "Galleria Umberto I"
+  editore: NapoliForMe, Comune di Napoli
+  url: https://napoliforme.comune.napoli.it/en/pois/-/poi/Galleria-Umberto-I
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-anm-metroart-toledo
+  titolo: "Toledo"
+  editore: ANM, Metroart
+  url: https://metroart.anm.it/stazioni-arte/linea-1/toledo
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-borbonica-standard
+  titolo: "Percorso Standard"
+  editore: Galleria Borbonica
+  url: https://www.galleriaborbonica.com/it/percorsi/standard
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-borbonica-memorie
+  titolo: "Via delle Memorie"
+  editore: Galleria Borbonica
+  url: https://www.galleriaborbonica.com/it/percorsi/via-delle-memorie
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-borbonica-avventura
+  titolo: "Percorso Avventura"
+  editore: Galleria Borbonica
+  url: https://www.galleriaborbonica.com/it/percorsi/avventura
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-comune-casteldellovo
+  titolo: "Castel dell'Ovo"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/casteldellovo
+  tipo: ufficiale
+  pubblicato: 2025-08-12
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-comune-borgomarinari
+  titolo: "Area pedonale di Borgo Marinari"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/area-pedonale-di-borgo-marinari/
+  tipo: ufficiale
+  pubblicato: 2026-08-24
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-anm-echia
+  titolo: "Ascensore di Monte Echia"
+  editore: ANM, Azienda Napoletana Mobilità
+  url: https://www2.anm.it/index.php?option=com_content&task=view&id=4286&Itemid=314
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-comune-echia
+  titolo: "Entra in funzione l'ascensore di Monte Echia"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/novita/entra-in-funzione-lascensore-di-monte-echia/
+  tipo: ufficiale
+  pubblicato: 2024-04-08
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-comune-villacomunale
+  titolo: "Villa Comunale"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/vivere-il-comune/luoghi/villa-comunale/
+  tipo: ufficiale
+  pubblicato: 2026-08-12
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-dadom-info
+  titolo: "Biglietteria: informazioni"
+  editore: DaDoM, Stazione Zoologica Anton Dohrn
+  url: https://dadom.okticket.it/it/ticket/home/info
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-dadom-tariffe
+  titolo: "Biglietto DaDoM"
+  editore: DaDoM, Stazione Zoologica Anton Dohrn
+  url: https://dadom.okticket.it/it/biglietti/detail/236/biglietto-dadom
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-mic-virgilio
+  titolo: "Parco e Tomba di Virgilio"
+  editore: Ministero della Cultura
+  url: https://cultura.gov.it/luogo/Parco%20e%20Tomba%20di%20Virgilio
+  tipo: ufficiale
+  pubblicato: 2026-09-23
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-musei-campania-virgilio
+  titolo: "Parco delle Tombe di Virgilio e Leopardi: temporanea chiusura di alcune aree del percorso di visita"
+  editore: Direzione regionale Musei nazionali Campania
+  url: https://museicampania.cultura.gov.it/parco-delle-tombe-di-virgilio-e-leopardi-temporanea-chiusura-di-alcune-aree-del-percorso-di-visita/
+  tipo: ufficiale
+  pubblicato: 2026-09-12
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-mic-leopardi-day-2025
+  titolo: "Leopardi Day: un omaggio poetico e inclusivo a Giacomo Leopardi nel giorno della sua nascita"
+  editore: Ministero della Cultura
+  url: https://cultura.gov.it/evento/leopardi-day-un-omaggio-poetico-e-inclusivo-a-giacomo-leopardi-nel-giorno-della-sua-nascita
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+  nota: "Pagina di un evento del 2025"
+
+- id: tp-comune-ztl-marechiaro
+  titolo: "ZTL Marechiaro"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/ztl-marechiaro/
+  tipo: ufficiale
+  pubblicato: 2026-08-24
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-comune-virgiliano
+  titolo: "Parco Virgiliano"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-virgiliano/
+  tipo: ufficiale
+  pubblicato: 2026-08-12
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-comune-virgiliano-riapertura
+  titolo: "Parco Virgiliano, dal 27 giugno riapertura parziale al pubblico"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/novita/parco-virgiliano-dal-27-giugno-riapertura-parziale-al-pubblico/
+  tipo: ufficiale
+  pubblicato: 2026-06-25
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-gaiola-accesso
+  titolo: "Accesso"
+  editore: Area Marina Protetta Parco Sommerso di Gaiola
+  url: https://www.areamarinaprotettagaiola.it/accesso
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-gaiola-prenotazione
+  titolo: "Prenotazione estate"
+  editore: Area Marina Protetta Parco Sommerso di Gaiola
+  url: https://www.areamarinaprotettagaiola.it/prenotazione-summer
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-cittascienza-visita
+  titolo: "Organizza una visita"
+  editore: Città della Scienza
+  url: https://www.cittadellascienza.it/organizza-una-visita/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-cittascienza-biglietteria
+  titolo: "Biglietteria"
+  editore: Città della Scienza
+  url: https://www.cittadellascienza.it/biglietteria/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-cittascienza-faq
+  titolo: "Who we are: FAQ"
+  editore: Città della Scienza
+  url: https://www.cittadellascienza.it/en/copia-di-copia-di-chi-siamo-en/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-cittascienza-estate-2025
+  titolo: "Estate 2025 a Città della Scienza"
+  editore: Città della Scienza
+  url: https://www.cittadellascienza.it/estate-2025-a-citta-della-scienza-14-giugno-28-settembre-2025/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-pompei-orari
+  titolo: "Timetables and tickets"
+  editore: Parco Archeologico di Pompei
+  url: https://pompeiisites.org/en/visiting-info/timetables-and-tickets/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-pompei-regolamento
+  titolo: "Regulations for visitors"
+  editore: Parco Archeologico di Pompei
+  url: https://pompeiisites.org/en/visiting-info/regulations-for-visitors/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-pompei-tariffe
+  titolo: "Pompei si esplora con tutti i sensi: accessibilità e nuove tariffe di ingresso dal 12 gennaio"
+  editore: Parco Archeologico di Pompei
+  url: https://pompeiisites.org/comunicati/pompei-si-esplora-con-tutti-i-sensi-accessibilita-e-nuove-tariffe-di-ingresso-dal-12-gennaio/
+  tipo: ufficiale
+  pubblicato: 2025-10-28
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-ercolano-biglietti
+  titolo: "Tickets"
+  editore: Parco Archeologico di Ercolano
+  url: https://ercolano.cultura.gov.it/tickets/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-vesuvio-gran-cono
+  titolo: "The Great Cone of Vesuvius"
+  editore: Parco Nazionale del Vesuvio
+  url: https://www.parconazionaledelvesuvio.it/en/visit-the-park/the-paths/the-great-cono-of-vesuvius/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-eav-campania-express
+  titolo: "Orari e tariffe Campania Express (PDF)"
+  editore: EAV
+  url: https://www.eavsrl.it/download/orari-e-tariffe-campania-express/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+  nota: "Il Campania Express è sospeso dal 1° ottobre 2026: i suoi tempi valgono come minimo anche per i treni ordinari"
+
+- id: tp-eav-campania-express-sospeso
+  titolo: "Campania Express"
+  editore: EAV
+  url: https://www.eavsrl.it/campania-express/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-eav-808
+  titolo: "Orario bus 808 Pompei–Vesuvio"
+  editore: EAV
+  url: https://www.eavsrl.it/download/808-pompei-vesuvio/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-caremar-tariffe
+  titolo: "Tariffe"
+  editore: Caremar
+  url: https://shop.caremar.it/it/tariffe/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-caremar-partenze
+  titolo: "Prossime partenze"
+  editore: Caremar
+  url: https://shop.caremar.it/it/prossime-partenze/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-caremar-orari
+  titolo: "Orari"
+  editore: Caremar
+  url: https://shop.caremar.it/it/orari/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+  nota: "Il 2 ottobre 2026 la pagina mostrava solo «Aggiornamento in corso…»"
+
+- id: tp-capri-regolamento
+  titolo: "Regolamento di visita"
+  editore: Musei e Parchi archeologici di Capri
+  url: https://museicapri.cultura.gov.it/it/regolamento-di-visita/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-ischia-castello
+  titolo: "Castello Aragonese d'Ischia"
+  editore: Castello Aragonese d'Ischia
+  url: https://www.castelloaragoneseischia.com/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-anm-gtfs
+  titolo: "Orari programmati degli autobus (feed GTFS)"
+  editore: ANM, Azienda Napoletana Mobilità (dati aperti, licenza IODL 2.0)
+  url: https://www.anm.it/google/google-transit.zip
+  tipo: dati
+  controllato: 2026-10-03
+  letta: true
+  nota: "Linee, fermate, percorsi e orari dal 22 settembre al 31 dicembre 2026. Usato per 13 linee nei tempi tra le tappe (ricerca/2026-10-03-autobus-note/)."
+
+- id: tp-anm-linea1
+  titolo: "Linea 1"
+  editore: ANM, Azienda Napoletana Mobilità
+  url: https://www2.anm.it/index.php?option=com_content&task=view&id=71&Itemid=98
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-comune-linea6
+  titolo: "Linea 6 della metro: nei giorni feriali corse fino alle 21:10"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/novita/linea-6-della-metro-nei-giorni-feriali-corse-fino-alle-21-10/
+  tipo: ufficiale
+  pubblicato: 2026-03-20
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-rfi-linea2
+  titolo: "Quadro orario Linea 2 (14 giugno–12 dicembre 2026)"
+  editore: RFI, Rete Ferroviaria Italiana
+  url: https://prm.rfi.it/qo_prm/QO_Pdf.aspx?Tipo=P&lin=it&id=530
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-trenitalia-linea2
+  titolo: "Circolazione interrotta tra Napoli Campi Flegrei e Pozzuoli Solfatara"
+  editore: Trenitalia
+  url: https://www.trenitalia.com/content/trenitalia/it/informazioni/lavori-programmati/20260621-circolazione-interrotta-tra-napoli-campi-flegrei-e-puzzuoli-solfatara.html
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-anm-centrale
+  titolo: "Funicolare Centrale"
+  editore: ANM, Azienda Napoletana Mobilità
+  url: https://www2.anm.it/index.php?option=com_content&task=view&id=81&Itemid=98
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-anm-chiaia
+  titolo: "Funicolare di Chiaia"
+  editore: ANM, Azienda Napoletana Mobilità
+  url: https://www2.anm.it/index.php?option=com_content&task=view&id=82&Itemid=98
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-anm-mergellina
+  titolo: "Funicolare di Mergellina"
+  editore: ANM, Azienda Napoletana Mobilità
+  url: https://www2.anm.it/index.php?option=com_content&task=view&id=84&Itemid=98
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-comune-montesanto
+  titolo: "15 maggio 2026: chiusura della funicolare di Montesanto per la manutenzione ventennale"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/novita/15-maggio-2026-chiusura-funicolare-montesanto-per-manutenzione-ventennale/
+  tipo: ufficiale
+  pubblicato: 2026-04-27
+  controllato: 2026-10-02
+  letta: true
+
+- id: tp-eav-teleindicatori
+  titolo: "Orario treni: partenze e arrivi di Montesanto e Bagnoli (Cumana)"
+  editore: EAV
+  url: https://orariotreni.eavsrl.it/
+  tipo: ufficiale
+  controllato: 2026-10-02
+  letta: true
+  nota: "Tabellone in tempo reale letto il 2 ottobre 2026 verso le 17: da Montesanto a Bagnoli 16 minuti, un treno ogni 15 minuti fino alle 19"
+
+- id: tp-copernicus-dem
+  titolo: "Copernicus DEM GLO-30 (modello del terreno a 30 m)"
+  editore: Agenzia Spaziale Europea, programma Copernicus
+  url: https://registry.opendata.aws/copernicus-dem/
+  tipo: dati
+  controllato: 2026-10-02
+  letta: true
+  nota: "© DLR e.V. 2010-2014 e © Airbus Defence and Space GmbH 2014-2018, fornito sotto il programma Copernicus dall'Unione europea e dall'ESA"
+
+# ---------- Blocco A (03/10/2026): luoghi e gite nuove ----------
+- id: tp-doma-info
+  titolo: "Info e contatti"
+  editore: DOMA · San Domenico Maggiore (Opera San Domenico Maggiore Onlus)
+  url: https://domasandomenicomaggiore.it/info-e-contatti/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-doma-biglietti
+  titolo: "Biglietteria"
+  editore: DOMA · San Domenico Maggiore (Opera San Domenico Maggiore Onlus)
+  url: https://domasandomenicomaggiore.it/biglietteria/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-girolamini
+  titolo: "Apertura e orari dei servizi"
+  editore: Complesso monumentale dei Girolamini (Ministero della Cultura)
+  url: https://girolamini.cultura.gov.it/apertura-e-orari-dei-servizi/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-filangieri
+  titolo: "Museo Civico Gaetano Filangieri, pagina principale (orari)"
+  editore: Museo Civico Gaetano Filangieri
+  url: https://www.museofilangieri.it/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+  nota: "Il servizio di biglietteria online del museo indica invece la chiusura alle 18:00"
+
+- id: tp-purgatorio
+  titolo: "Orari, visite guidate e biglietti"
+  editore: Santa Maria delle Anime del Purgatorio ad Arco
+  url: https://www.purgatorioadarco.it/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-mudd-carbonara
+  titolo: "San Giovanni a Carbonara"
+  editore: MUDD · Museo Diocesano Diffuso di Napoli
+  url: https://www.muddnapoli.it/en/luoghi/san-giovanni-a-carbonara/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+  nota: "Il sito blocca i programmi automatici: la pagina l'ha letta Enrico sul telefono il 3 ottobre 2026"
+
+- id: tp-mudd-tetti
+  titolo: "Tetti della Cattedrale (Cathedral roofs)"
+  editore: MUDD · Museo Diocesano Diffuso di Napoli
+  url: https://www.muddnapoli.it/en/luoghi/cathedral-roofs/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+  nota: "Il sito blocca i programmi automatici: la pagina l'ha letta Enrico sul telefono il 3 ottobre 2026"
+
+- id: tp-tetti-italpress
+  titolo: "Napoli vista dai tetti del Duomo, inaugurato un nuovo percorso di visita"
+  editore: Italpress
+  url: https://www.italpress.com/?p=664594
+  tipo: stampa
+  pubblicato: 2026-03-30
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-villa-pignatelli
+  titolo: "Villa Pignatelli: spazi espositivi e orari"
+  editore: Palazzo Reale di Napoli (Ministero della Cultura)
+  url: https://palazzorealedinapoli.org/sedi/villa-pignatelli/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-mercati-municipalita2
+  titolo: "I mercati di Napoli: Municipalità 2"
+  editore: Comune di Napoli, Servizio Mercati
+  url: https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/
+  tipo: ufficiale
+  pubblicato: 2025-06-03
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-fai-donn-anna
+  titolo: "Palazzo Donn'Anna"
+  editore: FAI · Fondo per l'Ambiente Italiano (I Luoghi del Cuore)
+  url: https://fondoambiente.it/luoghi/palazzo-donn-anna
+  tipo: altro
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-parco-camaldoli
+  titolo: "Parco dei Camaldoli"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/
+  tipo: ufficiale
+  pubblicato: 2026-08-12
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-parco-poggio
+  titolo: "Parco del Poggio"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/
+  tipo: ufficiale
+  pubblicato: 2026-08-12
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-parco-mascagna
+  titolo: "Parco Mascagna"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/
+  tipo: ufficiale
+  pubblicato: 2026-08-12
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-parco-ventaglieri
+  titolo: "Parco Ventaglieri"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-ventaglieri/
+  tipo: ufficiale
+  pubblicato: 2024-09-19
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-orto-botanico
+  titolo: "Giorni e orari di apertura"
+  editore: Orto Botanico di Napoli (Università Federico II)
+  url: https://www.ortobotaniconapoli.it/it/visitare/giorni-e-orari-di-apertura.html
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-mostra-oltremare
+  titolo: "Il parco"
+  editore: Mostra d'Oltremare
+  url: https://mostradoltremare.it/il-parco/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+  nota: "La stessa pagina dà due orari di chiusura: 18:00 nella versione per computer, 20:00 in quella per telefono"
+
+- id: tp-caserta-orari
+  titolo: "Orari"
+  editore: Reggia di Caserta (Ministero della Cultura)
+  url: https://reggiadicaserta.cultura.gov.it/orari/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-caserta-biglietti
+  titolo: "Biglietti"
+  editore: Reggia di Caserta (Ministero della Cultura)
+  url: https://reggiadicaserta.cultura.gov.it/biglietti/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-caserta-arrivare
+  titolo: "Come raggiungerci"
+  editore: Reggia di Caserta (Ministero della Cultura)
+  url: https://reggiadicaserta.cultura.gov.it/come-raggiungerci/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-pietrarsa-tariffe
+  titolo: "Orari, tariffe e abbonamenti"
+  editore: Fondazione FS Italiane · Museo Nazionale Ferroviario di Pietrarsa
+  url: https://www.fondazionefs.it/it/esplora-il-museo/tariffe-abbonamenti.html
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-pietrarsa-arrivare
+  titolo: "Come arrivare"
+  editore: Fondazione FS Italiane · Museo Nazionale Ferroviario di Pietrarsa
+  url: https://www.fondazionefs.it/it/esplora-il-museo/come-arrivare.html
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-eav-l1-orario
+  titolo: "Orario ferrovia L1 Napoli–Sorrento, valido dal 1° ottobre 2026"
+  editore: EAV
+  url: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: false
+  nota: "Letto dall'agente di ricerca il 3 ottobre 2026: il direttissimo impiega circa 72 minuti, gli altri treni circa 77"
+
+- id: tp-sorrento-centro
+  titolo: "Il centro antico della città di Sorrento"
+  editore: Comune di Sorrento
+  url: https://www.comune.sorrento.na.it/it/sezione/cultura-e-turismo/page/il-centro-antico-della-citta-di-sorrento
+  tipo: ufficiale
+  pubblicato: 2025-04-29
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-correale
+  titolo: "Visita il museo"
+  editore: Museo Correale di Terranova
+  url: https://www.museocorreale.it/visita-il-museo/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+  nota: "La pagina porta ancora l'avviso «Il museo resterà chiuso fino al 23 marzo 2026», ormai passato"
+
+- id: tp-campolieto
+  titolo: "Villa Campolieto"
+  editore: Fondazione Ente Ville Vesuviane
+  url: https://www.villevesuviane.net/le-ville/villa-campolieto/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-villevesuviane-visite
+  titolo: "Visite e biglietti"
+  editore: Fondazione Ente Ville Vesuviane
+  url: https://www.villevesuviane.net/visite/
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+- id: tp-pietrarsa-visita
+  titolo: "Visita Pietrarsa"
+  editore: Fondazione FS Italiane · Museo Nazionale Ferroviario di Pietrarsa
+  url: https://www.fondazionefs.it/it/esplora-il-museo/visita-pietrarsa.html
+  tipo: ufficiale
+  controllato: 2026-10-03
+  letta: true
+
+# ================= DOVE MANGIARE: LOCALI (blocco C, 04/10/2026) =================
+- id: lc-da-michele
+  titolo: "Sede di Napoli: orari e prenotazioni"
+  editore: "L'Antica Pizzeria da Michele"
+  url: https://www.damichele.net/sede-di-napoli/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-da-michele-menu
+  titolo: "Menu della sede di Napoli (PDF)"
+  editore: "L'Antica Pizzeria da Michele"
+  url: https://www.damichele.net/menu/sede_napoli/menu%20Napoli.pdf
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-port-alba
+  titolo: "Sito ufficiale: storia, orari, piatti"
+  editore: "Antica Pizzeria Port'Alba"
+  url: https://www.anticapizzeriaportalba.com/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-di-matteo
+  titolo: "Sito ufficiale: orari e contatti"
+  editore: "Antica Pizzeria Di Matteo"
+  url: https://anticapizzeriadimatteo.it/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-di-matteo-menu
+  titolo: "Menu (PDF, luglio 2022)"
+  editore: "Antica Pizzeria Di Matteo"
+  url: https://anticapizzeriadimatteo.it/wp-content/uploads/2022/07/Menu-Online-20072022.pdf
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-chitarra
+  titolo: "Contatti e orari"
+  editore: "Osteria La Chitarra"
+  url: https://www.osterialachitarra.it/contatti/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-chitarra-menu
+  titolo: "Menu"
+  editore: "Osteria La Chitarra"
+  url: https://www.osterialachitarra.it/menu/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-chitarra-storia
+  titolo: "L'osteria"
+  editore: "Osteria La Chitarra"
+  url: https://www.osterialachitarra.it/osteria/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-gesu-vecchio
+  titolo: "I nostri contatti"
+  editore: "La Locanda Gesù Vecchio"
+  url: https://www.lalocandagesuvecchionapoli.it/i-nostri-contatti/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-gesu-vecchio-home
+  titolo: "Sito ufficiale: prenotazione e turni"
+  editore: "La Locanda Gesù Vecchio"
+  url: https://www.lalocandagesuvecchionapoli.it/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-gesu-vecchio-menu
+  titolo: "Menu di giugno 2026 (PDF)"
+  editore: "La Locanda Gesù Vecchio"
+  url: https://www.lalocandagesuvecchionapoli.it/wp-content/uploads/2026/06/MENU-LOCANDA-GIUGNO-2026-1.pdf.pdf
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-di-costanzo
+  titolo: "Sito ufficiale: orari"
+  editore: "Pasticceria Di Costanzo"
+  url: https://www.dicostanzopasticceria.it/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-brandi
+  titolo: "Information: orari e prenotazioni"
+  editore: "Pizzeria Brandi"
+  url: https://pizzeriabrandi.com/information/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-brandi-home
+  titolo: "Sito ufficiale: la storia"
+  editore: "Pizzeria Brandi"
+  url: https://pizzeriabrandi.com/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-zia-esterina
+  titolo: "Antica Pizza Fritta da Zia Esterina Sorbillo: sedi e orari"
+  editore: "Gino Sorbillo"
+  url: https://www.sorbillo.it/antica-pizza-fritta-da-zia-esterina-sorbillo/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-hosteria-toledo
+  titolo: "Sito ufficiale: orari e contatti"
+  editore: "Hosteria Toledo"
+  url: https://www.hosteriatoledo.it/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-hosteria-toledo-menu
+  titolo: "Menu (PDF caricato a maggio 2023)"
+  editore: "Hosteria Toledo"
+  url: https://www.hosteriatoledo.it/wp-content/uploads/2023/05/HOSTERIA-TOLEDO-menu-A4-print.pdf
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-gobbetto
+  titolo: "Contatti e orari"
+  editore: "Osteria Il Gobbetto"
+  url: https://osteria-il-gobbetto3.webnode.it/contatti/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-nennella
+  titolo: "Sedi e orari"
+  editore: "Trattoria da Nennella"
+  url: https://www.trattorianennella.it/sedi/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-nennella-domande
+  titolo: "Domande frequenti: prenotazione"
+  editore: "Trattoria da Nennella"
+  url: https://www.trattorianennella.it/domande/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-pintauro
+  titolo: "Contatti e orari"
+  editore: "Pasticceria Pintauro"
+  url: https://www.pasticceriapintauro1785.it/contatti/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-cinquanta-kalo
+  titolo: "Info: orari e prenotazioni"
+  editore: "50 Kalò"
+  url: https://50kalo.it/info.php
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-cinquanta-kalo-menu
+  titolo: "Menu di Napoli (PDF, file del luglio 2026)"
+  editore: "50 Kalò"
+  url: https://50kalo.it/download/menu_napoli_2023.pdf
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-salvo
+  titolo: "Dove siamo: orari"
+  editore: "Pizzeria Salvo"
+  url: https://www.pizzeriasalvo.it/dove-siamo/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-salvo-menu
+  titolo: "Menu dell'11 maggio 2026 (PDF)"
+  editore: "Pizzeria Salvo"
+  url: https://www.pizzeriasalvo.it/wp-content/uploads/2026/06/Salvo_Menu_11_05_26.pdf
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-pignatelli
+  titolo: "Sito ufficiale: orari e prenotazioni"
+  editore: "Ostaria Pignatelli"
+  url: https://www.ostariapignatelli.com/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-pignatelli-menu
+  titolo: "Menu digitale: i primi"
+  editore: "Ostaria Pignatelli (QuickerMenu)"
+  url: https://www.quickermenu.it/ostariapignatelli/i-primi/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-cantinella
+  titolo: "Contatti e orari"
+  editore: "La Cantinella"
+  url: https://lacantinella.it/contatti-ristorante-napoli/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-cantinella-home
+  titolo: "Sito ufficiale: la storia"
+  editore: "La Cantinella"
+  url: https://lacantinella.it/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-cantinella-menu
+  titolo: "Menu (PDF)"
+  editore: "La Cantinella"
+  url: https://lacantinella.it/wp-content/uploads/2025/09/Menu-tavoli.pdf
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-bersagliera
+  titolo: "Contatti e orari"
+  editore: "La Bersagliera"
+  url: https://www.labersagliera.it/contatti/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-bersagliera-home
+  titolo: "Sito ufficiale: la storia"
+  editore: "La Bersagliera"
+  url: https://www.labersagliera.it/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-scialuppa
+  titolo: "Sito ufficiale: orari e piatti"
+  editore: "La Scialuppa"
+  url: https://www.lascialuppa.net/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-calabritto
+  titolo: "Contatti e orari"
+  editore: "Terrazza Calabritto"
+  url: https://napoli.terrazzacalabritto.it/contatti/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-calabritto-menu
+  titolo: "Menu"
+  editore: "Terrazza Calabritto"
+  url: https://napoli.terrazzacalabritto.it/menu/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-chalet-ciro
+  titolo: "Sede di Mergellina: orari"
+  editore: "Chalet Ciro 1952"
+  url: https://www.chaletciro1952.com/sedi/mergellina/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-chalet-ciro-storia
+  titolo: "La storia"
+  editore: "Chalet Ciro 1952"
+  url: https://www.chaletciro1952.com/storia/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-caffettiera
+  titolo: "Sito ufficiale: orari e prenotazioni"
+  editore: "Gran Caffè La Caffettiera"
+  url: https://www.grancaffelacaffettiera.com/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-gorizia
+  titolo: "Sito ufficiale: orari e contatti"
+  editore: "Pizzeria Gorizia 1916"
+  url: https://www.gorizia1916.com/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-bellavia
+  titolo: "Contatti e orari"
+  editore: "Pasticceria Bellavia"
+  url: https://www.bellaviavomero.it/contatti
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-bellavia-store
+  titolo: "Negozio online"
+  editore: "Pasticceria Bellavia"
+  url: https://www.bellaviavomero.it/store
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-bellavia-storia
+  titolo: "La nostra storia"
+  editore: "Pasticceria Bellavia"
+  url: https://www.bellaviavomero.it/la-nostra-storia
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-meatin
+  titolo: "Sito ufficiale: orari e menu"
+  editore: "Meatin"
+  url: https://www.meatin.it/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-starita
+  titolo: "Dove siamo: orari"
+  editore: "Pizzerie Starita"
+  url: https://pizzeriestarita.it/dove-siamo/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-starita-menu
+  titolo: "Menu di Napoli (PDF, novembre 2024)"
+  editore: "Pizzerie Starita"
+  url: https://pizzeriestarita.it/wp-content/uploads/2024/11/Starita_QR_Napoli_ITA.pdf
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-concettina
+  titolo: "Contatti e orari"
+  editore: "Concettina ai Tre Santi"
+  url: https://www.concettinaaitresanti.com/contacts/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-concettina-storia
+  titolo: "La storia"
+  editore: "Concettina ai Tre Santi"
+  url: https://www.concettinaaitresanti.com/concettina/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-poppella
+  titolo: "Punti vendita e orari"
+  editore: "Pasticceria Poppella"
+  url: https://www.pasticceriapoppella.com/punti-vendita/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-poppella-storia
+  titolo: "La storia"
+  editore: "Pasticceria Poppella"
+  url: https://www.pasticceriapoppella.com/storia/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-petrucci-posillipo
+  titolo: "Pizzeria Palazzo Petrucci a Posillipo"
+  editore: "Palazzo Petrucci"
+  url: https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/
+  tipo: ufficiale
+  pubblicato: 2026-09-09
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-tufo
+  titolo: "Informazioni: orari della trattoria e dell'asporto"
+  editore: "Tufò"
+  url: https://tufotrattoria.it/informazioni/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-fenestella
+  titolo: "Contatti e orari"
+  editore: "Ristorante 'A Fenestella"
+  url: https://www.ristoranteafenestella.it/contatti/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-fenestella-home
+  titolo: "Sito ufficiale: la storia"
+  editore: "Ristorante 'A Fenestella"
+  url: https://www.ristoranteafenestella.it/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-cicciotto
+  titolo: "Cicciotto a Marechiaro dal 1942: orari"
+  editore: "Cicciotto a Marechiaro"
+  url: https://www.trattoriadacicciotto.it/trattoria-da-cicciotto-a-marechiaro-dal-1942/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-cicciotto-menu
+  titolo: "Menu della trattoria (PDF)"
+  editore: "Cicciotto a Marechiaro"
+  url: https://www.trattoriadacicciotto.it/menu/menutrattoria.pdf
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-macellegria
+  titolo: "Contatti e orari"
+  editore: "Macellegria"
+  url: https://www.macellegria.it/contatti/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-macellegria-menu
+  titolo: "Menu"
+  editore: "Macellegria"
+  url: https://www.macellegria.it/menu/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+- id: sdg-michelin-2025-pizzerie
+  titolo: "Quali sono le pizzerie nella Guida Michelin"
+  editore: "Scatti di Gusto"
+  url: https://www.scattidigusto.it/quali-sono-le-pizzerie-nella-guida-michelin
+  tipo: stampa
+  pubblicato: 2024-11-10
+  controllato: 2026-10-04
+  letta: true
+
+- id: sky-50top-2026
+  titolo: "Migliori pizzerie d'Italia, la classifica 50 Top Pizza 2026"
+  editore: "Sky TG24"
+  url: https://tg24.sky.it/lifestyle/2026/07/24/migliori-pizzerie-d-italia-classifica-2026
+  tipo: stampa
+  pubblicato: 2026-07-24
+  controllato: 2026-10-04
+  letta: true
+
+- id: sdg-bib-2025
+  titolo: "I 16 nuovi ristoranti Bib Gourmand della Guida Michelin 2025"
+  editore: "Scatti di Gusto"
+  url: https://www.scattidigusto.it/i-16-nuovi-ristoranti-bib-gourmand-della-guida-michelin-2025
+  tipo: stampa
+  pubblicato: 2024-10-29
+  controllato: 2026-10-04
+  letta: true
+
+- id: sdg-pignatelli-2026
+  titolo: "Ostaria Pignatelli a Napoli: menu, prezzi, recensione"
+  editore: "Scatti di Gusto"
+  url: https://www.scattidigusto.it/ostaria-pignatelli-a-napoli-menu-prezzi-recensione
+  tipo: stampa
+  pubblicato: 2026-01-01
+  controllato: 2026-10-04
+  letta: true
+
+- id: sdg-slowfood-2025
+  titolo: "Osterie Slow Food 2025: le Chiocciole"
+  editore: "Scatti di Gusto"
+  url: https://www.scattidigusto.it/osterie-slow-food-2025-le-chiocciole-mangi-bene-spendi-poco
+  tipo: stampa
+  pubblicato: 2024-10-14
+  controllato: 2026-10-04
+  letta: true
+
+- id: gri-pasta-patate-2024
+  titolo: "Where to eat pasta, potatoes, and provola in Naples. The 8 best restaurants chosen by Gambero Rosso"
+  editore: "Gambero Rosso International"
+  url: https://www.gamberorossointernational.com/?p=513457
+  tipo: stampa
+  pubblicato: 2024-01-23
+  controllato: 2026-10-04
+  letta: true
+
+- id: gri-cuoppo-2024
+  titolo: "The best cuoppo in Naples: must-visit spots"
+  editore: "Gambero Rosso International"
+  url: https://www.gamberorossointernational.com/news/the-best-cuoppo-in-naples-must-visit-spots/
+  tipo: stampa
+  pubblicato: 2024-07-01
+  controllato: 2026-10-04
+  letta: true
+
+- id: gri-pizza-fritta-2023
+  titolo: "Where to eat the best pizza fritta in Naples"
+  editore: "Gambero Rosso International"
+  url: https://gamberorossointernational.com/?p=481956
+  tipo: stampa
+  pubblicato: 2023-10-13
+  controllato: 2026-10-04
+  letta: true
+
+- id: napolitan-pasticcerie-2022
+  titolo: "Gambero Rosso: le migliori pasticcerie di Napoli sono sette"
+  editore: "Napolitan.it"
+  url: https://napolitan.it/2022/05/17/119813/gambero-rosso-le-migliori-pasticcerie-napoli-sette-quali/
+  tipo: stampa
+  pubblicato: 2022-05-17
+  controllato: 2026-10-04
+  letta: true
+
+- id: sdg-pintauro-2026
+  titolo: "Pintauro, il tempio delle sfogliatelle riapre a Napoli"
+  editore: "Scatti di Gusto"
+  url: https://www.scattidigusto.it/pintauro-tempio-di-sfogliatelle-riapre-a-napoli-nuova-storia
+  tipo: stampa
+  pubblicato: 2026-02-17
+  controllato: 2026-10-04
+  letta: true
+
+- id: sdg-cono-graffa
+  titolo: "Napoli: il cono graffa di Chalet Ciro a Mergellina"
+  editore: "Scatti di Gusto"
+  url: https://www.scattidigusto.it/napoli-gelato-cono-graffa-chalet-ciro-mergellina
+  tipo: stampa
+  pubblicato: 2016-05-16
+  controllato: 2026-10-04
+  letta: true
+
+- id: stripes-tufo-2022
+  titolo: "Naples ragu and genovese: Tufò"
+  editore: "Stars and Stripes"
+  url: https://www.stripes.com/living/europe_travel/after_hours/2022-12-29/naples-ragu-genovese-8416535.html
+  tipo: stampa
+  pubblicato: 2022-12-29
+  controllato: 2026-10-04
+  letta: true
+
+- id: lc-starita-home
+  titolo: "Sito ufficiale: «il rito della pizza dal 1901»"
+  editore: "Pizzerie Starita"
+  url: https://pizzeriestarita.it/
+  tipo: ufficiale
+  controllato: 2026-10-04
+  letta: true
+
+# Piatti tipici (filtro «Cosa vuoi mangiare» di /napoli/dove-mangiare/)
+- id: wiki-margherita
+  titolo: "Pizza Margherita"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Pizza_Margherita
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-marinara
+  titolo: "Pizza alla marinara"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Pizza_marinara
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-pizza-fritta
+  titolo: "Pizza fritta"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Pizza_fritta
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-frittatina
+  titolo: "Frittata di pasta"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Frittatina_di_pasta
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-genovese
+  titolo: "Genovese (sugo)"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Genovese_(sugo)
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-ragu
+  titolo: "Ragù napoletano"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Rag%C3%B9_napoletano
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-pasta-patate
+  titolo: "Cucina napoletana"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Cucina_napoletana
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-vongole
+  titolo: "Spaghetti alle vongole"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Spaghetti_alle_vongole
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-frittura
+  titolo: "Frittura di pesce"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Frittura_di_pesce
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-parmigiana
+  titolo: "Parmigiana"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Parmigiana
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-baccala
+  titolo: "Baccalà"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Bacc%C3%A0l%C3%A0
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-sfogliatella
+  titolo: "Sfogliatella"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Sfogliatella
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-baba
+  titolo: "Babà"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Bab%C3%A0
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true
+
+- id: wiki-pastiera
+  titolo: "Pastiera"
+  editore: Wikipedia
+  url: https://it.wikipedia.org/wiki/Pastiera
+  tipo: enciclopedia
+  controllato: 2026-10-04
+  letta: true

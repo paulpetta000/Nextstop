@@ -1,0 +1,35 @@
+---
+// Fonti usate nella pagina, con una sola data di controllo e, se serve, la spiegazione del segno *
+import type { Fatto, Fonte } from '../lib/fatti';
+import type { TestiPagina } from '../lib/testi';
+import { fontiDi, controlloMenoRecente } from '../lib/fatti';
+import { dataLunga } from '../lib/formato';
+interface Props { fatti?: Iterable<Fatto>; extra?: Fonte[]; testi?: TestiPagina | TestiPagina[]; cautela?: boolean }
+const { fatti = [], extra = [], cautela = false } = Astro.props;
+// Una pagina può usare più file di testi (per esempio i suoi e quelli dei punti panoramici)
+const testi = [Astro.props.testi ?? []].flat();
+const lista = [...testi.flatMap(t => t.fatti), ...fatti];
+const altre = [...testi.flatMap(t => t.fonti), ...extra];
+const fonti = fontiDi(lista, altre);
+// La data più vecchia tra schede e fonti: tutto è stato controllato almeno da quel giorno
+const quando = controlloMenoRecente(lista, altre);
+const segno = cautela || testi.some(t => t.cautela);
+const TIPO = { ufficiale: 'Ufficiale', stampa: 'Stampa', dati: 'Dati aperti', enciclopedia: 'Enciclopedia', blog: 'Blog e guide', altro: 'Altro' } as const;
+---
+{fonti.length > 0 && (
+  <section class="section fonti-pagina" aria-labelledby="fonti-h">
+    <div class="wrap">
+      <h2 id="fonti-h">Fonti di questa pagina</h2>
+      {quando && <p class="fonti-pagina__data">Informazioni controllate il {dataLunga(quando)}. L'elenco di tutte le fonti è nella pagina <a href="/fonti/">fonti</a>.</p>}
+      {segno && <p class="fonti-pagina__segno" id="segno"><span>*</span> Il segno accanto a una frase vuol dire che l'informazione non è ufficiale per il 2027: viene dai giornali o da siti non ufficiali, racconta com'era nel 2024 o nel 2026, oppure non è ancora stata pubblicata. Lo dice la frase stessa.</p>}
+      <ol>
+        {fonti.map(f => (
+          <li>
+            <a href={f.data.url} rel="noopener">{f.data.titolo}</a> · {f.data.editore}
+            {' '}<span class="tipo">{TIPO[f.data.tipo]}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+)}

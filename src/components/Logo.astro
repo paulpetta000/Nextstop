@@ -1,0 +1,7 @@
+---
+// Marchio provvisorio di Nextstop (disegno in src/lib/logo.mjs)
+import { disegno } from '../lib/logo.mjs';
+interface Props { size?: number; uid?: string }
+const { size = 34, uid = 'logo' } = Astro.props;
+---
+<svg class="logo-mark" width={size} height={size} viewBox="0 0 64 64" aria-hidden="true" focusable="false" set:html={disegno(uid)} />

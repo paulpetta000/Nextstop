@@ -1,0 +1,83 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import { getCollection } from 'astro:content';
+import { tutteLeFonti, soloItinerari } from '../lib/fatti';
+import { dataBreve } from '../lib/formato';
+
+const fonti = [...(await tutteLeFonti()).values()].filter(f => !soloItinerari(f.id));
+const fatti = (await getCollection('fatti')).filter(f => !soloItinerari(f.id));
+const uso = new Map<string, number>();
+for (const f of fatti) for (const r of f.data.fonti) uso.set(r.id, (uso.get(r.id) || 0) + 1);
+const conta = { confermato: 0, stampa: 0, segnalato: 0, atteso: 0 } as Record<string, number>;
+for (const f of fatti) conta[f.data.stato]++;
+const vecchie = fatti.filter(f => f.data.anno !== 2027).length;
+const schede = (n: number) => `${n} ${n === 1 ? 'scheda' : 'schede'}`;
+// Come le schede compaiono nei testi
+const STATI = [
+  ['confermato', 'Confermate', 'Lette su una fonte ufficiale o su dati pubblici. Nei testi non hanno nessun segno.'],
+  ['stampa', 'Dalla stampa', 'Riportate da giornali e testate, senza conferma ufficiale. La frase lo dice («secondo la stampa», «scrivono i giornali») e ha il segno *.'],
+  ['segnalato', 'Da siti non ufficiali', 'Indicate da blog o altri siti che non sono giornali. La frase lo dice e ha il segno *.'],
+  ['atteso', 'Non ancora uscite', 'Le abbiamo cercate, ma gli organizzatori non le hanno ancora pubblicate. La frase lo dice («non è ancora uscito») e ha il segno *.']
+] as const;
+const GRUPPI = [['ufficiale', 'Fonti ufficiali'], ['stampa', 'Stampa'], ['dati', 'Dati aperti'], ['enciclopedia', 'Enciclopedia'], ['blog', 'Blog e guide'], ['altro', 'Altre fonti']] as const;
+---
+<Base title="Fonti e controlli" description="Tutte le fonti degli itinerari e dei locali, con la data dell'ultimo controllo. Come distinguiamo le informazioni confermate, quelle della stampa e quelle non ancora uscite.">
+  <PageHead kicker="Trasparenza" title="Fonti e controlli" lead="Dietro ogni informazione del sito c'è una scheda con la sua fonte e la data in cui l'abbiamo controllata. Se manca la fonte, il sito non si pubblica." />
+  <section class="section">
+    <div class="wrap split">
+      <div>
+        <h2>Come leggere i testi</h2>
+        <p>Nelle pagine trovi testi normali, senza etichette. Quando un'informazione non è ufficiale lo dice la frase stessa, e accanto c'è un piccolo segno <strong class="segno">*</strong>. Le fonti di ogni pagina sono in fondo, con la data del controllo.</p>
+        <dl class="righe leggere">
+          {STATI.map(([k, t, d]) => <><dt>{t}</dt><dd>{d} <span class="mono small muted">{schede(conta[k])}</span></dd></>)}
+          <dt>Com'era negli anni passati</dt><dd>Raccontano com'era in un anno passato, per esempio un orario del 2026: sono un riferimento, non una regola per oggi. La frase dice l'anno e ha il segno *. <span class="mono small muted">{schede(vecchie)}</span></dd>
+        </dl>
+      </div>
+      <div class="terzo">
+        <h3>Come controlliamo</h3>
+        <ul>
+          <li>Apriamo la pagina originale e la leggiamo per intero: se abbiamo letto solo un riassunto lo scriviamo.</li>
+          <li>Diamo la precedenza alle fonti ufficiali: i siti dei luoghi e dei locali, le aziende di trasporto, il Comune, i ministeri.</li>
+          <li>Quando le fonti si contraddicono usiamo la più recente e lo diciamo.</li>
+          <li>Ogni scheda ha una data entro cui va ricontrollata: quando scade, il sito ci avvisa.</li>
+          <li>Se una scheda cambia, i testi che la usano vanno riletti: finché non lo facciamo, il sito non si pubblica.</li>
+        </ul>
+        <p class="small">Hai trovato un errore? Scrivici: lo correggiamo e aggiorniamo la data.</p>
+      </div>
+    </div>
+  </section>
+  {GRUPPI.map(([tipo, titolo]) => {
+    const lista = fonti.filter(f => f.data.tipo === tipo).sort((a, b) => a.data.editore.localeCompare(b.data.editore));
+    return lista.length > 0 && (
+      <section class="section band">
+        <div class="wrap">
+          <h2>{titolo} <span class="mono small muted">({lista.length})</span></h2>
+          <div class="tabella-wrap" tabindex="0" role="region" aria-label={`Fonti: ${titolo}`}>
+            <table>
+              <thead><tr><th scope="col">Fonte</th><th scope="col">Editore</th><th scope="col">Controllata</th><th scope="col" class="num">Schede</th></tr></thead>
+              <tbody>
+                {lista.map(f => (
+                  <tr>
+                    <td><a href={f.data.url} rel="noopener">{f.data.titolo}</a>{!f.data.letta && <><br /><span class="small muted">Letta solo nel riassunto</span></>}{f.data.nota && <><br /><span class="small muted">{f.data.nota}</span></>}</td>
+                    <td>{f.data.editore}</td>
+                    <td class="mono">{dataBreve(f.data.controllato)}</td>
+                    <td class="num mono">{uso.get(f.id) || '—'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    );
+  })}
+</Base>
+<style>
+  .segno { color: var(--accent); }
+  /* sul telefono la spiegazione va sotto il nome, non accanto */
+  .leggere { grid-template-columns: 1fr; }
+  .leggere > dt { border-bottom: 0; padding-bottom: .1rem; }
+  .leggere > dd { padding-top: 0; }
+  @media (min-width: 1100px) { .leggere { grid-template-columns: minmax(7.5rem, max-content) 1fr; } .leggere > dt { border-bottom: 1px solid var(--line); padding-bottom: .65rem; } .leggere > dd { padding-top: .65rem; } }
+</style>

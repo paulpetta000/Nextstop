@@ -1,0 +1,39 @@
+---
+// Home provvisoria (06/10/2026): la home vera arriva con la grafica del sito, con due proposte da scegliere.
+import Base from '../layouts/Base.astro';
+import Testo from '../components/Testo.astro';
+import Foto from '../components/Foto.astro';
+import { getTesti } from '../lib/testi';
+import { getCollection } from 'astro:content';
+import '../styles/itinerari.css';
+
+const T = await getTesti('home');
+const tappe = await getCollection('tappe');
+const locali = await getCollection('locali');
+---
+<Base title="Itinerari in città" description={`Itinerari pronti o fatti da te, con i tempi a piedi e con i mezzi. Prima città: Napoli, con ${tappe.length} tappe e ${locali.length} locali.`}>
+  <div class="it-pagina">
+    <header class="it-testa">
+      <div class="it-wrap">
+        <h1>Itinerari in città</h1>
+        <Testo b={T.b('intro')} class="it-lead" />
+      </div>
+    </header>
+    <section class="it-wrap home-citta" aria-labelledby="home-napoli-h">
+      <Foto id="tp-borgo-marinari" rapporto="3 / 2" prima sizes="(min-width: 900px) 640px, calc(100vw - 32px)" class="home-citta__foto" />
+      <h2 class="home-citta__nome" id="home-napoli-h"><a href="/napoli/">Napoli</a></h2>
+      <p class="home-citta__sotto">{tappe.length} tappe, {locali.length} locali dove mangiare</p>
+      <p class="home-azioni">
+        <a class="it-btn it-btn--primario" href="/napoli/itinerari/">Componi un itinerario</a>
+        <a class="it-btn" href="/napoli/dove-mangiare/">Dove mangiare</a>
+      </p>
+    </section>
+  </div>
+</Base>
+<style>
+  .home-citta { padding-block: 16px 48px; }
+  .home-citta :global(.home-citta__foto) { max-width: 40rem; }
+  .home-citta__nome { font-size: 2rem; margin: 16px 0 0; }
+  .home-citta__sotto { color: var(--it-ink-2); margin: 4px 0 0; }
+  .home-azioni { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+</style>

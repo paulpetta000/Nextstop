@@ -1,0 +1,1515 @@
+# Schede delle informazioni. Campi obbligatori: testo, stato, fonti, controllato.
+# stato: confermato (letto su fonte ufficiale o dati pubblici) | stampa (solo giornali o siti non ufficiali) | atteso (non ancora uscito)
+# anno: 2027 se riguarda l'evento; 2026 se racconta com'era alla regata di prova (precedente utile)
+# ricontrollare: entro questa data la build avvisa che la scheda va ricontrollata
+
+# ================= CALENDARIO 2027 =================
+- id: cal-flotta
+  testo: "Sabato 22 e domenica 23 maggio: regate di flotta, tre al giorno, con tutti e 7 gli AC75 sulla stessa linea di partenza. È la prima volta nella storia della Coppa."
+  stato: confermato
+  fonti: [ac-formato-lvc, etnz-formato]
+  controllato: 2026-09-30
+  ricontrollare: 2027-01-31
+
+- id: cal-rr
+  testo: "Poi i duelli a due barche (match race) in tre Round Robin da 21 regate: 26–28 maggio, 29–31 maggio e 9–11 giugno."
+  stato: confermato
+  fonti: [ac-formato-lvc]
+  controllato: 2026-09-30
+  ricontrollare: 2027-01-31
+
+- id: cal-pausa
+  testo: "Dal 1° all'8 giugno le squadre si fermano: una settimana di pausa tra il secondo e il terzo Round Robin."
+  stato: confermato
+  fonti: [ac-formato-lvc]
+  controllato: 2026-09-30
+
+- id: cal-ripescaggio
+  testo: "Dopo il terzo Round Robin i primi 3 sfidanti vanno dritti in semifinale. Gli altri 3 si giocano il quarto posto nel ripescaggio del 12–13 giugno: in ogni turno passa chi arriva prima a 3 punti."
+  stato: confermato
+  fonti: [ac-formato-lvc, etnz-formato]
+  controllato: 2026-09-30
+
+- id: cal-semifinali
+  testo: "Semifinali dal 16 al 20 giugno, con il 21 come giorno di riserva: passa chi arriva prima a 5 vittorie. Lo sfidante primo in classifica sceglie l'avversario."
+  stato: confermato
+  fonti: [ac-formato-lvc, ac-protocollo]
+  controllato: 2026-09-30
+
+- id: cal-finale-lvc
+  testo: "Finale della Louis Vuitton Cup dal weekend del 26–27 giugno; se serve, si chiude nel weekend del 3–4 luglio. Vince chi arriva prima a 7 vittorie, su 13 regate al massimo."
+  stato: confermato
+  fonti: [ac-formato-lvc]
+  controllato: 2026-09-30
+
+- id: cal-youth
+  testo: "Youth America's Cup, per velisti giovani: dal 2 al 6 giugno 2027, su AC40. Si chiude con una finale secca a due barche."
+  stato: confermato
+  fonti: [ac-youth-date, ac-grazie-napoli]
+  controllato: 2026-09-30
+
+- id: cal-womens
+  testo: "Women's America's Cup, per equipaggi femminili: dal 5 al 9 luglio 2027 compresi, su AC40."
+  stato: confermato
+  fonti: [ac-grazie-napoli]
+  controllato: 2026-09-30
+
+- id: cal-match
+  testo: "America's Cup Match, la sfida finale tra Emirates Team New Zealand e il vincitore della Louis Vuitton Cup: dal 10 luglio 2027, entro il 19 luglio. Vince chi arriva prima a 7 vittorie."
+  stato: confermato
+  fonti: [ac-grazie-napoli, ac-formato-lvc, etnz-formato]
+  controllato: 2026-09-30
+
+- id: cal-orari
+  testo: "Gli orari delle regate 2027 non sono ancora usciti: non si sa a che ora si parte ogni giorno."
+  stato: atteso
+  fonti: [ac-formato-lvc, ac-38]
+  controllato: 2026-09-30
+  ricontrollare: 2026-12-31
+
+- id: cal-orari-2026
+  testo: "Nel 2026 a Napoli si partiva ogni giorno alle 14:00, con tre regate al giorno venerdì e sabato e due più la finale la domenica."
+  stato: confermato
+  anno: 2026
+  fonti: [ac-programma-pr2]
+  controllato: 2026-09-30
+
+# ================= DOVE SI VEDE =================
+- id: vil-caracciolo
+  testo: "Il Race Village 2027 sarà lungo viale Francesco Caracciolo: punti di osservazione tipo tribuna ricavati sui promontori e il palco ufficiale per presentazioni e premiazioni."
+  stato: confermato
+  fonti: [ac-host-venue]
+  controllato: 2026-09-30
+
+# ================= TRASPORTI =================
+- id: trasporti-2027-atteso
+  testo: "Il piano dei trasporti e del traffico per il 2027 non è ancora uscito."
+  stato: atteso
+  fonti: [comune-citta-ospitante]
+  controllato: 2026-09-30
+  ricontrollare: 2027-02-28
+
+# ================= ITINERARI: ORARI E PREZZI DELLE TAPPE (Rilascio 3) =================
+# Schede usate solo dagli itinerari (id «tp-»): finché la pagina non è online non compaiono nella pagina Fonti.
+# Orari e prezzi in vigore il 2 ottobre 2026: per l'estate 2027 nessun ente li ha ancora pubblicati,
+# quindi tutte le schede vanno ricontrollate entro la primavera 2027.
+# ---------- Centro storico ----------
+- id: tp-duomo-orari
+  testo: "Duomo: tutti i giorni 8:30–13:30; il pomeriggio 14:30–19:30 il martedì, mercoledì, venerdì e sabato, 16:30–19:30 il lunedì, giovedì e domenica. Museo del Tesoro: tutti i giorni 9:30–18:00, ultimo ingresso alle 17:00."
+  stato: confermato
+  fonti: [tp-italia-duomo, tp-tesoro-faq]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-duomo-prezzi
+  testo: "Duomo e Cappella del Tesoro di San Gennaro: ingresso libero. Museo del Tesoro: 15 € con l'audioguida; 11 € sopra i 65 anni; gratis sotto i 12 anni e per le persone con disabilità; famiglia di 3 persone 30 €."
+  stato: confermato
+  fonti: [tp-tesoro-info]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-tesoro-durata
+  testo: "Con tutta l'audioguida la visita del Museo del Tesoro dura circa un'ora. Il biglietto online è consigliato, non obbligatorio, e vale per il giorno, non per l'ora."
+  stato: confermato
+  fonti: [tp-tesoro-faq]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sansevero-orari
+  testo: "Tutti i giorni 9:00–19:00, ultimo ingresso alle 18:30. Chiusa il martedì."
+  stato: confermato
+  fonti: [tp-sansevero-orari]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sansevero-prezzi
+  testo: "12 €; 8 € dai 18 ai 26 anni; 6 € dai 10 ai 17 anni; gratis fino a 9 anni. Persona con disabilità e accompagnatore: 7 € in due."
+  stato: confermato
+  fonti: [tp-sansevero-orari]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sansevero-prenota
+  testo: "Si entra solo con il biglietto elettronico comprato online sul sito ufficiale, fino a 60 giorni prima; altri posti si liberano due giorni prima della visita."
+  stato: confermato
+  fonti: [tp-sansevero-orari, tp-sansevero-accesso]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sansevero-regole
+  testo: "Dentro non si possono fare foto e video né usare il telefono. La Cavea, con le «macchine anatomiche», si raggiunge solo da una stretta scala a chiocciola: in sedia a rotelle si visitano la navata e la sacrestia."
+  stato: confermato
+  fonti: [tp-sansevero-accesso, tp-sansevero-accessibilita]
+  controllato: 2026-10-02
+
+- id: tp-santachiara-orari
+  testo: "Chiostro maiolicato, museo e area archeologica: dal lunedì al sabato 9:30–17:00, la domenica 10:00–14:00. Basilica: tutti i giorni 7:45–12:45 e 16:40–20:00. Chiuso il 25 dicembre, il 1° gennaio e a Pasqua."
+  stato: confermato
+  fonti: [tp-santachiara-orari]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-santachiara-prezzi
+  testo: "Chiostro, museo e area archeologica: 7 €; 5 € sopra i 65 anni, per gli universitari sotto i 30 anni e per gli insegnanti; 4 € dai 7 ai 17 anni; gratis sotto i 7 anni. I biglietti si comprano solo in biglietteria. La Basilica è gratuita."
+  stato: confermato
+  fonti: [tp-santachiara-orari]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-spaccanapoli-orari
+  testo: "Spaccanapoli e via San Gregorio Armeno sono strade pubbliche, sempre aperte. Per le chiese non abbiamo trovato orari ufficiali: alcuni siti non ufficiali indicano 8:00–13:00 e 16:00–20:00 per il Gesù Nuovo e 9:30–12:00 per il chiostro di San Gregorio Armeno."
+  stato: segnalato
+  fonti: [tp-napolike-gesu, tp-napolike-sangregorio, osm]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-tribunali-orari
+  testo: "Via dei Tribunali è una strada pubblica, sempre aperta: pizzerie, friggitorie e bar hanno ciascuno i propri orari."
+  stato: confermato
+  fonti: [osm]
+  controllato: 2026-10-02
+
+- id: tp-piomonte-orari
+  testo: "Dal lunedì al sabato 10:00–18:00 (ultimo biglietto alle 17:30); la domenica 9:00–14:30 (ultimo biglietto alle 14:00). Chiuso il 25 dicembre."
+  stato: confermato
+  fonti: [tp-piomonte]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-piomonte-prezzi
+  testo: "10 €; 8 € sotto i 25 anni; biglietto famiglia 20 €; gratis fino a 6 anni e per le persone con disabilità."
+  stato: confermato
+  fonti: [tp-piomonte]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-mann-orari
+  testo: "9:00–19:30; la biglietteria chiude alle 18:30. Chiuso il martedì (se è festivo apre), il 1° gennaio e il 25 dicembre. Alcune sale possono essere chiuse: il museo pubblica il piano delle aperture."
+  stato: confermato
+  fonti: [tp-mann-orari, tp-mic-mann]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-mann-prezzi
+  testo: "20 €; 2 € dai 18 ai 25 anni (cittadini dell'Unione europea); gratis sotto i 18 anni e per le persone con disabilità. La prima domenica del mese si entra gratis, ma restano chiuse la collezione egizia, il Gabinetto Segreto e la Magna Grecia."
+  stato: confermato
+  fonti: [tp-mann-orari]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sanlorenzo-orari
+  testo: "Tutti i giorni 9:30–17:30. Quando c'è molta gente si entra solo con la guida, a orari fissi."
+  stato: confermato
+  fonti: [tp-sanlorenzo]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sanlorenzo-prezzi
+  testo: "9 €; 7 € sopra i 65 anni, per insegnanti e universitari; 6 € sotto i 18 anni; gratis sotto i 6 anni. Con la guida 2 € in più (1 € dai 6 ai 14 anni)."
+  stato: confermato
+  fonti: [tp-sanlorenzo]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sotterranea-orari
+  testo: "Visite guidate ogni ora dalle 10:00 alle 18:00, in italiano; il giovedì anche alle 21:00, su prenotazione e con almeno 10 persone. Per chi è da solo o in un piccolo gruppo non serve prenotare."
+  stato: confermato
+  fonti: [tp-sotterranea-orari, tp-sotterranea-faq]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sotterranea-prezzi
+  testo: "Il sito ufficiale non scrive i prezzi nelle sue pagine: si vedono solo comprando il biglietto."
+  stato: confermato
+  fonti: [tp-sotterranea-orari, tp-sotterranea-faq]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sotterranea-visita
+  testo: "Si scendono 136 gradini, «bassi e comodi», fino a circa 40 metri sotto la strada; c'è un solo cunicolo stretto, ed è facoltativo. La visita dura circa un'ora, più circa 20 minuti per i resti del Teatro Romano, compresi nel biglietto. Non è accessibile in sedia a rotelle né con il deambulatore."
+  stato: confermato
+  fonti: [tp-sotterranea-faq]
+  controllato: 2026-10-02
+
+- id: tp-madre-orari
+  testo: "Lunedì e da mercoledì a sabato 10:00–19:30; domenica 10:00–20:00; ultimo ingresso un'ora prima. Chiuso il martedì."
+  stato: confermato
+  fonti: [tp-madre]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-madre-prezzi
+  testo: "8 €; ridotto 4 €."
+  stato: confermato
+  fonti: [tp-madre]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+# ---------- Toledo e Plebiscito ----------
+- id: tp-plebiscito-orari
+  testo: "Piazza del Plebiscito è sempre aperta. Galleria Umberto I: dal lunedì al venerdì 8:30–20:30, il sabato e la domenica 8:30–22:00."
+  stato: confermato
+  fonti: [tp-napoliforme-galleria, osm]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-palazzoreale-orari
+  testo: "9:00–20:00, ultimo ingresso alle 19:00. Chiuso il mercoledì, il 1° gennaio e il 25 dicembre. Il Giardino Romantico, gratuito, è aperto tutti i giorni 9:00–19:00 (ultimo ingresso alle 18:00)."
+  stato: confermato
+  fonti: [tp-palazzoreale-info]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-palazzoreale-prezzi
+  testo: "15 €; 2 € dai 18 ai 25 anni (cittadini dell'Unione europea); gratis sotto i 18 anni e la prima domenica del mese."
+  stato: confermato
+  fonti: [tp-palazzoreale-info]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-palazzoreale-restauri
+  testo: "Dal 1° ottobre 2026 la Sala degli Specchi, il Salone d'Ercole e parte della Sala delle Nature Morte sono chiusi per restauro, fino alla fine dei lavori: la data non è stata annunciata."
+  stato: confermato
+  fonti: [tp-palazzoreale-restauri]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sancarlo-orari
+  testo: "Visite guidate tutti i giorni alle 10:30, 11:30, 12:30, 14:30, 15:30 e 16:30 (in inglese alle 11:30 e alle 15:30), di 30 minuti. Il teatro avverte che possono cambiare o essere cancellate anche all'ultimo momento."
+  stato: confermato
+  fonti: [tp-sancarlo-visite]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sancarlo-prezzi
+  testo: "9 €; 7 € sotto i 30 anni; famiglia (2 adulti e 2 ragazzi sotto i 18 anni) 26 €. Il teatro consiglia di prenotare."
+  stato: confermato
+  fonti: [tp-sancarlo-visite]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-castelnuovo-orari
+  testo: "Dal lunedì al sabato 9:00–18:00, ultimo ingresso alle 17:30. Chiuso la domenica e i festivi."
+  stato: confermato
+  fonti: [tp-comune-castelnuovo]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-castelnuovo-prezzi
+  testo: "10 €; 6 € per chi abita a Napoli e nella Città Metropolitana; 5 € con l'Artecard; gratis sotto i 18 anni."
+  stato: confermato
+  fonti: [tp-comune-castelnuovo]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-toledo-orari
+  testo: "Via Toledo e i Quartieri Spagnoli sono strade pubbliche, sempre aperte. Per scendere nella stazione Toledo della Linea 1 serve un biglietto della metro."
+  stato: confermato
+  fonti: [tp-anm-metroart-toledo, osm]
+  controllato: 2026-10-02
+
+- id: tp-borbonica-orari
+  testo: "Si visita solo il venerdì, il sabato, la domenica e nei festivi. Percorso Standard alle 10:00, 12:00, 15:00 e 17:00 (circa un'ora); Via delle Memorie alle 11:00 e alle 16:00 (1 ora e 15 minuti); Avventura alle 10:00, 12:00, 15:00 e 17:00 (1 ora e 25 minuti)."
+  stato: confermato
+  fonti: [tp-borbonica-standard, tp-borbonica-memorie, tp-borbonica-avventura]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-borbonica-prezzi
+  testo: "Standard e Via delle Memorie: 15 €; 10 € dai 6 ai 18 anni e sopra i 70 anni; 7 € per le persone con disabilità; gratis fino a 5 anni. Avventura: 20 €, dai 10 anni. Prenotazione obbligatoria."
+  stato: confermato
+  fonti: [tp-borbonica-standard, tp-borbonica-memorie, tp-borbonica-avventura]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+# ---------- Lungomare e Santa Lucia ----------
+- id: tp-echia-orari
+  testo: "Al belvedere si sale con l'ascensore da via Santa Lucia, aperto tutti i giorni 7:00–22:00, oppure a piedi da Pizzofalcone."
+  stato: confermato
+  fonti: [tp-anm-echia, osm]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-echia-prezzi
+  testo: "Belvedere gratuito. Ascensore: 1,50 € a corsa per chi non abita a Napoli."
+  stato: confermato
+  fonti: [tp-anm-echia, tp-comune-echia]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-echia-recinzione
+  testo: "Per le regole sulla tutela archeologica il belvedere non ha una recinzione: con i bambini serve attenzione."
+  stato: confermato
+  fonti: [tp-comune-echia]
+  controllato: 2026-10-02
+
+- id: tp-borgo-orari
+  testo: "Il Borgo Marinari è un'area pedonale, aperta tutto il giorno. Castel dell'Ovo è chiuso al pubblico «fino a data da destinarsi» per lavori: si gira solo intorno."
+  stato: confermato
+  fonti: [tp-comune-borgomarinari, tp-comune-casteldellovo]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-lungomare-orari
+  testo: "Via Partenope e via Caracciolo sono strade pubbliche, sempre aperte. La Villa Comunale apre dal 1° luglio al 31 agosto 7:00–24:00, nel resto dell'anno 7:00–21:00."
+  stato: confermato
+  fonti: [tp-comune-villacomunale, osm]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-dadom-orari
+  testo: "Dal martedì alla domenica 9:00–17:00. Chiuso il lunedì."
+  stato: confermato
+  fonti: [tp-dadom-info]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-dadom-prezzi
+  testo: "Biglietto unico per museo e acquario: 10 € dai 12 anni; 7 € dai 4 ai 12 anni, sopra i 70 anni e per gli universitari; gratis sotto i 3 anni e per le persone con disabilità. Online il biglietto ha data e ora e non si rimborsa."
+  stato: confermato
+  fonti: [tp-dadom-info, tp-dadom-tariffe]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+# ---------- Vomero ----------
+- id: tp-santelmo-orari
+  testo: "Castello: tutti i giorni 8:30–19:30. Museo del Novecento, dentro il castello: 9:30–18:30 (ultimo ingresso alle 17:30), chiuso il martedì. Con il maltempo il castello può restare chiuso."
+  stato: confermato
+  fonti: [tp-mic-santelmo]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-santelmo-prezzi
+  testo: "5 €; ridotto 2 €."
+  stato: confermato
+  fonti: [tp-mic-santelmo]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sanmartino-orari
+  testo: "8:30–18:30, ultimo ingresso alle 17:30. Chiuso il martedì."
+  stato: confermato
+  fonti: [tp-mic-sanmartino]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sanmartino-prezzi
+  testo: "6 €; 2 € dai 18 ai 25 anni; gratis sotto i 18 anni."
+  stato: confermato
+  fonti: [tp-mic-sanmartino]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-floridiana-orari
+  testo: "Parco: da maggio ad agosto 8:30–19:30 (ultimo ingresso alle 19:00). Museo della ceramica Duca di Martina: 9:30–18:30 (ultimo ingresso alle 17:30), chiuso il martedì."
+  stato: confermato
+  fonti: [tp-mic-floridiana]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-floridiana-prezzi
+  testo: "Parco gratuito. Museo Duca di Martina: 4 €; ridotto 2 €."
+  stato: confermato
+  fonti: [tp-mic-floridiana]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-pedamentina-orari
+  testo: "Scala pubblica, sempre percorribile: da Largo San Martino scende con rampe e tornanti fino a Corso Vittorio Emanuele."
+  stato: confermato
+  fonti: [tp-comune-pedamentina, osm]
+  controllato: 2026-10-02
+
+# ---------- Sanità e Capodimonte ----------
+- id: tp-catacombe-orari
+  testo: "Solo con visita guidata, ogni ora dalle 10:00; ultimo ingresso alle 17:00. Chiuse il mercoledì e il 25 dicembre."
+  stato: confermato
+  fonti: [tp-catacombe]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-catacombe-prezzi
+  testo: "13 €; 9 € per studenti e sopra i 65 anni; 6 € sotto i 18 anni; gratis sotto i 6 anni e per le persone con disabilità. Lo stesso biglietto vale 12 mesi per le Catacombe di San Gennaro e di San Gaudioso. Prenotazione obbligatoria."
+  stato: confermato
+  fonti: [tp-catacombe]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-catacombe-note
+  testo: "Sotto terra ci sono 15–22 °C: il sito consiglia un maglioncino anche d'estate. L'accesso per le persone con disabilità motoria è temporaneamente sospeso per manutenzione."
+  stato: confermato
+  fonti: [tp-catacombe]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-sanita-orari
+  testo: "Il rione è fatto di strade pubbliche. La Basilica di Santa Maria della Sanità è aperta tutti i giorni 10:00–13:00. L'ascensore gratuito tra il ponte della Sanità e il rione funziona dal lunedì al sabato 7:00–21:30, la domenica e i festivi 7:30–14:00."
+  stato: confermato
+  fonti: [tp-catacombe-basilica, tp-anm-ascensori]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-fontanelle-orari
+  testo: "10:00–18:00, ultimo ingresso alle 17:15: si entra a gruppi ogni 15 minuti e si resta al massimo 40 minuti. Chiuso il mercoledì e il 25 dicembre."
+  stato: confermato
+  fonti: [tp-fontanelle]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-fontanelle-prezzi
+  testo: "Da 6 € con l'audioguida, da 8 € con la guida; gratis per chi abita nella II e nella III Municipalità. Prenotazione obbligatoria, solo sul sito."
+  stato: confermato
+  fonti: [tp-fontanelle, tp-comune-fontanelle]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-capodimonte-orari
+  testo: "Museo: 8:30–19:30 (ultimo ingresso alle 18:30); il secondo piano chiude alle 17:00. Chiuso il mercoledì. Real Bosco: da aprile a settembre 7:00–19:30."
+  stato: confermato
+  fonti: [tp-capodimonte-orari]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-capodimonte-prezzi
+  testo: "Museo: 15 €, oppure 12 € entrando tra le 8:30 e le 9:30 o tra le 17:30 e le 18:30; 2 € dai 18 ai 25 anni (cittadini dell'Unione europea); gratis sotto i 18 anni e la prima domenica del mese. Il biglietto vale tutto il giorno."
+  stato: confermato
+  fonti: [tp-capodimonte-biglietti]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+# ---------- Posillipo e Bagnoli ----------
+- id: tp-virgilio-orari
+  testo: "Lunedì e da giovedì a domenica 9:30–15:00; mercoledì 14:00–19:00. Chiuso il martedì. Dal 12 settembre 2026 il percorso verso la Tomba di Virgilio e l'area davanti alla Crypta Neapolitana sono chiusi, senza una data di riapertura."
+  stato: confermato
+  fonti: [tp-mic-virgilio, tp-musei-campania-virgilio]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-virgilio-prezzi
+  testo: "Nel 2025 il Ministero della Cultura scriveva che l'ingresso al parco è gratuito; la scheda di oggi non ha una voce sui biglietti."
+  stato: confermato
+  anno: 2025
+  fonti: [tp-mic-leopardi-day-2025, tp-mic-virgilio]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-marechiaro-orari
+  testo: "Il borgo è pubblico. Nell'estate 2026 il tratto finale di via Marechiaro è stato chiuso alle auto dal 16 maggio al 27 settembre, e un taxi collettivo da Posillipo costava 2 € a tratta."
+  stato: confermato
+  anno: 2026
+  fonti: [tp-comune-ztl-marechiaro]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-gaiola-orari
+  testo: "Dal 1° maggio al 30 settembre si entra in due turni, 9:00–13:00 e 14:00–18:00, al massimo 200 persone per turno. Con l'allerta meteo il parco chiude."
+  stato: confermato
+  fonti: [tp-gaiola-accesso, tp-gaiola-prenotazione]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-gaiola-prezzi
+  testo: "Ingresso, navetta elettrica e ombrelloni sono gratuiti."
+  stato: confermato
+  fonti: [tp-gaiola-prenotazione]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-gaiola-prenota
+  testo: "Si entra solo con la prenotazione online: al massimo 5 persone per prenotazione, con almeno un adulto, e non più di 3 ingressi a settimana a persona. Il modulo chiede il codice fiscale di ogni partecipante e all'ingresso servono documento e codice fiscale."
+  stato: confermato
+  fonti: [tp-gaiola-prenotazione, tp-gaiola-accesso]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-virgiliano-orari
+  testo: "Dal 1° luglio al 31 agosto 7:00–24:00; nel resto dell'anno 7:00–21:00. Dal 27 giugno 2026 è aperto solo in parte (ingresso, viale nord, belvedere e piazza di via Tito Lucrezio Caro): il resto ha lavori che dovrebbero finire nel corso del 2027."
+  stato: confermato
+  fonti: [tp-comune-virgiliano, tp-comune-virgiliano-riapertura]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-cittascienza-orari
+  testo: "Dal 22 febbraio al 31 maggio 2027 tutti i giorni 9:00–17:00. Chiuso il 25 dicembre e il 1° gennaio."
+  stato: confermato
+  fonti: [tp-cittascienza-visita]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-cittascienza-estate
+  testo: "L'orario dell'estate 2027 non è ancora uscito. Nell'estate 2025, da metà giugno a metà settembre, era ridotto: dal martedì alla domenica 10:00–16:00."
+  stato: atteso
+  fonti: [tp-cittascienza-visita, tp-cittascienza-estate-2025]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-cittascienza-prezzi
+  testo: "10 €; 8 € dai 3 ai 17 anni, per gli universitari e sopra i 65 anni; gratis sotto i 3 anni e per chi abita a Bagnoli. Planetario 5 €."
+  stato: confermato
+  fonti: [tp-cittascienza-biglietteria]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+# ---------- Gite ----------
+- id: tp-pompei-orari
+  testo: "Dal 16 marzo al 14 ottobre 9:00–19:00, ultimo ingresso alle 17:30. Chiuso il 25 dicembre e il 1° gennaio."
+  stato: confermato
+  fonti: [tp-pompei-orari]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-pompei-prezzi
+  testo: "20 € per la città antica; 25 € anche con Villa dei Misteri, Villa di Diomede e Villa Regina; 30 € «Pompei Plus», valido 3 giorni; 2 € dai 18 ai 24 anni (cittadini dell'Unione europea); gratis sotto i 18 anni e la prima domenica del mese."
+  stato: confermato
+  fonti: [tp-pompei-orari, tp-pompei-tariffe]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-pompei-biglietti
+  testo: "I biglietti sono nominativi, con giorno e fascia oraria, e non si cambiano: si comprano online o in biglietteria con un documento. Al massimo 20.000 ingressi al giorno, 15.000 tra le 9:00 e le 13:00."
+  stato: confermato
+  fonti: [tp-pompei-regolamento, tp-pompei-orari]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-pompei-viaggio
+  testo: "Con la Circumvesuviana da Napoli Garibaldi a Pompei Scavi–Villa dei Misteri: almeno 33 minuti, il tempo del treno diretto Campania Express, oggi sospeso; i treni ordinari fanno più fermate."
+  stato: confermato
+  fonti: [tp-eav-campania-express, tp-eav-campania-express-sospeso]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-ercolano-orari
+  testo: "Dal 16 marzo al 14 ottobre 8:30–19:30, ultimo ingresso alle 18:00. Chiuso il 25 dicembre."
+  stato: confermato
+  fonti: [tp-ercolano-biglietti]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-ercolano-prezzi
+  testo: "16 €; 2 € dai 18 ai 24 anni; gratis la prima domenica del mese e il 2 giugno."
+  stato: confermato
+  fonti: [tp-ercolano-biglietti]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-ercolano-viaggio
+  testo: "Con la Circumvesuviana da Napoli Garibaldi a Ercolano Scavi: almeno 13 minuti, il tempo del treno diretto Campania Express, oggi sospeso; i treni ordinari fanno più fermate."
+  stato: confermato
+  fonti: [tp-eav-campania-express, tp-eav-campania-express-sospeso]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-vesuvio-orari
+  testo: "In luglio e agosto 9:00–18:00 (ultimo accesso); la visita finisce entro un'ora dall'ultimo accesso. Con l'allerta meteo arancione o rossa sentiero e biglietteria chiudono."
+  stato: confermato
+  fonti: [tp-vesuvio-gran-cono]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-vesuvio-prezzi
+  testo: "11,68 € a persona (la stessa pagina indica anche 10 €); gratis sotto i 6 anni. Biglietti solo online, sul sito di vendita del Parco, a fasce di 10 minuti."
+  stato: confermato
+  fonti: [tp-vesuvio-gran-cono]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-vesuvio-viaggio
+  testo: "Da Pompei (piazza Anfiteatro, con fermata alla stazione Villa dei Misteri) il bus EAV 808 sale a quota 1000 in circa 50 minuti; con l'orario del 1° ottobre 2026 l'ultima discesa è alle 16:50. Da quota 1000 il sentiero è lungo 4 km tra andata e ritorno."
+  stato: confermato
+  fonti: [tp-eav-808, tp-vesuvio-gran-cono]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-capri-orari
+  testo: "Grotta Azzurra: dal 1° aprile al 30 settembre 8:30–18:00, ma con il mare mosso chiude o cambia orario. Villa Jovis: dal 1° marzo al 15 ottobre 10:00–17:00. Certosa di San Giacomo: dal 1° marzo al 31 ottobre 10:00–18:00."
+  stato: confermato
+  fonti: [tp-capri-regolamento]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-capri-prezzi
+  testo: "Grotta Azzurra: 6 € più 12 € per la barchetta. Villa Jovis 6 €, Certosa di San Giacomo 10 €; 2 € dai 18 ai 24 anni (cittadini dell'Unione europea); gratis sotto i 18 anni."
+  stato: confermato
+  fonti: [tp-capri-regolamento]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-capri-viaggio
+  testo: "Con Caremar da Calata Porta di Massa: motonave veloce in circa un'ora (21,50 € a persona, sola andata) o traghetto in 1 ora e 27 minuti (14,80 €); in più 5 € di tassa di sbarco."
+  stato: confermato
+  fonti: [tp-caremar-tariffe, tp-caremar-partenze]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-ischia-orari
+  testo: "Castello Aragonese: tutti i giorni dalle 9:00 al tramonto; l'ultimo biglietto un'ora e mezza prima."
+  stato: confermato
+  fonti: [tp-ischia-castello]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-ischia-prezzi
+  testo: "Castello Aragonese: 15 €; 12 € sopra i 70 anni; 6 € dai 10 ai 18 anni; gratis fino a 9 anni."
+  stato: confermato
+  fonti: [tp-ischia-castello]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-ischia-viaggio
+  testo: "Con Caremar: aliscafo dal Molo Beverello in 60–65 minuti (21,60 € a persona, sola andata) o traghetto da Calata Porta di Massa in 1 ora e 35 minuti (14,80 €)."
+  stato: confermato
+  fonti: [tp-caremar-tariffe, tp-caremar-partenze]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-procida-viaggio
+  testo: "Con Caremar: aliscafo dal Molo Beverello in 35–40 minuti (17,40 € a persona, sola andata) o traghetto da Calata Porta di Massa in un'ora (12,70 €); in più 3,50 € di tassa di sbarco."
+  stato: confermato
+  fonti: [tp-caremar-tariffe, tp-caremar-partenze]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+- id: tp-isole-2027
+  testo: "Gli orari estivi 2027 dei traghetti, con le ultime corse per tornare a Napoli, non sono ancora usciti."
+  stato: atteso
+  fonti: [tp-caremar-orari]
+  controllato: 2026-10-02
+  ricontrollare: 2027-04-30
+
+# ---------- Tappe del blocco A (03/10/2026) ----------
+- id: tp-sandomenico-orari
+  testo: "Visite guidate dal lunedì al venerdì 10:00–13:30 e 14:30–17:30; sabato, domenica e festivi 10:00–18:00, ultimo ingresso alle 17:30."
+  stato: confermato
+  fonti: [tp-doma-info]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-sandomenico-prezzi
+  testo: "La basilica è gratuita. Sagrestia (con le arche aragonesi) e Sala del Tesoro: 6 €, ridotto 5 €; con la guida 8 €, ridotto 6 €; con anche la Cripta Carafa di Roccella 11 €, ridotto 8 €."
+  stato: confermato
+  fonti: [tp-doma-biglietti]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-girolamini-orari
+  testo: "Chiesa-Museo: dal martedì al venerdì 10:00–18:30 (dal 25 ottobre 2026 9:00–17:30); sabato, domenica e festivi 8:30–13:30. Chiuso il lunedì. La Biblioteca ha orari suoi, più corti, ed è chiusa anche nei giorni a ingresso gratuito."
+  stato: confermato
+  fonti: [tp-girolamini]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-girolamini-prezzi
+  testo: "Chiesa-Museo 5 €, ridotto 2 €; Biblioteca e sale storiche 10 €, ridotto 2 €, con ingressi a turni (40 persone ogni 40 minuti). Biglietti sull'app o sul sito Musei Italiani, o al totem in sede (solo carta). La prima domenica del mese la Chiesa-Museo è gratuita."
+  stato: confermato
+  fonti: [tp-girolamini]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-filangieri-orari
+  testo: "Tutti i giorni 9:30–19:00, ultimo ingresso alle 18:30. La biglietteria online del museo indica invece la chiusura alle 18:00."
+  stato: confermato
+  fonti: [tp-filangieri]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-filangieri-prezzi
+  testo: "10 €. Il sito non scrive riduzioni e gratuità."
+  stato: confermato
+  fonti: [tp-filangieri]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-purgatorio-orari
+  testo: "Chiesa superiore, ipogeo e museo: dal lunedì al sabato 10:00–17:00 (ultimo ingresso alle 16:15); la domenica 10:00–14:00 (ultimo ingresso alle 13:15)."
+  stato: confermato
+  fonti: [tp-purgatorio]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-purgatorio-prezzi
+  testo: "Dal 1° ottobre 2026: 8 €; 6 € dai 18 ai 25 anni e con il biglietto del MANN; 4 € dai 7 ai 17 anni; gratis sotto i 6 anni."
+  stato: confermato
+  fonti: [tp-purgatorio]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-carbonara-orari
+  testo: "La chiesa è aperta tutti i giorni 10:00–17:00, con visita gratuita. La Sagrestia Vasariana non è compresa: ha un biglietto a parte, che si compra sul sito del MUDD."
+  stato: confermato
+  fonti: [tp-mudd-carbonara]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-tetti-orari
+  testo: "Tutti i giorni 10:00–18:00, ultimo ingresso alle 17:00, solo su prenotazione sul sito del MUDD. Il percorso oggi non è accessibile a chi ha difficoltà a camminare o problemi di vista."
+  stato: confermato
+  fonti: [tp-mudd-tetti]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-tetti-prezzi
+  testo: "Secondo la stampa, all'apertura a marzo 2026: 10 €; studenti 8 €; sotto i 16 anni 6 €; gratis sotto i 6 anni e per chi abita a Napoli, prenotando la tariffa apposita."
+  stato: stampa
+  anno: 2026
+  fonti: [tp-tetti-italpress]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-pignatelli-orari
+  testo: "Museo e giardino 9:30–17:00, ultimo ingresso alle 16:00. Chiuso il martedì, il 1° gennaio e il 25 dicembre. Il Museo delle Carrozze è chiuso per ora."
+  stato: confermato
+  fonti: [tp-villa-pignatelli]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-pignatelli-prezzi
+  testo: "Il prezzo non siamo riusciti a leggerlo su una pagina ufficiale: il sito del Ministero non rispondeva il 3 ottobre 2026. I biglietti si comprano sull'app o sul sito Musei Italiani e in biglietteria."
+  stato: confermato
+  fonti: [tp-villa-pignatelli]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-mercati-orari
+  testo: "Il Comune elenca i mercati su strada della Pignasecca e di Porta Nolana come mercati giornalieri, dalle 7:00 alle 15:00. Non dice se sono aperti anche la domenica."
+  stato: confermato
+  fonti: [tp-mercati-municipalita2]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-donnanna-orari
+  testo: "Palazzo Donn'Anna è un'abitazione privata e non si visita: si guarda da fuori, dalla strada o dal mare."
+  stato: confermato
+  fonti: [tp-fai-donn-anna]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-belvedere-orari
+  testo: "Sono spazi pubblici all'aperto, senza orari e senza biglietto: la terrazza davanti alla chiesa di Sant'Antonio a Posillipo e gli slarghi panoramici lungo via Petrarca."
+  stato: confermato
+  fonti: [osm]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-parchi-orari
+  testo: "Orari dei grandi parchi del Comune (Camaldoli, Poggio, Mascagna): marzo 7:00–18:00; da aprile a giugno 7:00–19:30; luglio e agosto 7:00–20:00; settembre 7:00–19:00; ottobre 7:00–18:00; da novembre a febbraio 7:00–17:00. Le pagine del Comune non indicano nessun biglietto da pagare."
+  stato: confermato
+  fonti: [tp-parco-camaldoli, tp-parco-poggio, tp-parco-mascagna]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-ventaglieri-orari
+  testo: "Tutti i giorni 7:00–19:30, secondo la pagina del Comune (aggiornata a settembre 2024). Non indica nessun biglietto da pagare."
+  stato: confermato
+  fonti: [tp-parco-ventaglieri]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-orto-orari
+  testo: "Lunedì, mercoledì e venerdì 9:00–14:00; martedì e giovedì 9:00–16:00; si entra fino a 30 minuti prima della chiusura. Chiuso sabato, domenica e nelle feste, e di solito quando l'Università Federico II è chiusa. Ingresso gratuito."
+  stato: confermato
+  fonti: [tp-orto-botanico]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-oltremare-orari
+  testo: "Il parco apre tutti i giorni alle 7:00. Per la chiusura la pagina ufficiale dà due orari diversi: le 18:00 in una versione e le 20:00 nell'altra."
+  stato: confermato
+  fonti: [tp-mostra-oltremare]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-oltremare-prezzi
+  testo: "1 € al giorno; abbonamento mensile 10 €."
+  stato: confermato
+  fonti: [tp-mostra-oltremare]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+# Gite nuove
+- id: tp-caserta-orari
+  testo: "Chiusa il martedì e il 25 dicembre. Appartamenti reali 8:30–19:15 (ultimo ingresso alle 18:15). Il parco e il Giardino Inglese chiudono prima, a orari che cambiano con i mesi: a ottobre il Giardino Inglese 8:30–17:00. Nei giorni gratuiti il Giardino Inglese è chiuso."
+  stato: confermato
+  fonti: [tp-caserta-orari]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-caserta-prezzi
+  testo: "18 € (più 1 € comprando online) per appartamenti, parco e Giardino Inglese; 2 € dai 18 ai 24 anni (cittadini dell'Unione europea); gratis sotto i 18 anni."
+  stato: confermato
+  fonti: [tp-caserta-biglietti]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-caserta-viaggio
+  testo: "In treno da Napoli Centrale a Caserta: la stazione è davanti alla Reggia. I tempi cambiano da treno a treno: si vedono sul sito di Trenitalia."
+  stato: confermato
+  fonti: [tp-caserta-arrivare]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-pietrarsa-orari
+  testo: "Dal martedì alla domenica 9:30–18:00. Chiuso il lunedì; chiusure straordinarie il 6, il 28 e il 29 ottobre 2026."
+  stato: confermato
+  fonti: [tp-pietrarsa-tariffe]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-pietrarsa-prezzi
+  testo: "9 €; 6 € ridotto (sotto i 18 e sopra i 65 anni); con la guida 11 € e 8 €; famiglia di due adulti e un ragazzo 20 €, con due ragazzi 25 €; gratis sotto i 6 anni."
+  stato: confermato
+  fonti: [tp-pietrarsa-tariffe]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-pietrarsa-viaggio
+  testo: "In treno sulla linea Napoli–Salerno fino alla fermata Pietrarsa–San Giorgio a Cremano, vicina al museo. Il museo fa uno sconto sull'intero a chi arriva con il biglietto del treno."
+  stato: confermato
+  fonti: [tp-pietrarsa-arrivare, tp-pietrarsa-tariffe]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-sorrento-viaggio
+  testo: "Con la Circumvesuviana da Napoli Porta Nolana o Garibaldi a Sorrento: circa 72 minuti con il treno diretto, circa 77 con gli altri. Il Campania Express, il treno turistico più veloce, è sospeso dal 1° ottobre 2026."
+  stato: confermato
+  fonti: [tp-eav-l1-orario, tp-eav-campania-express-sospeso]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-correale-orari
+  testo: "Museo Correale: dal martedì al sabato 9:30–17:30; domenica e festivi 9:00–14:00 (ultimo ingresso un'ora prima). Chiuso il lunedì. 15 €; 7,50 € studenti, soci FAI e Touring, Campania Artecard. La stessa pagina porta ancora l'avviso «chiuso fino al 23 marzo 2026»: meglio controllare prima di andare."
+  stato: confermato
+  fonti: [tp-correale]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+- id: tp-campolieto
+  testo: "Villa Campolieto, a Ercolano: dal lunedì al sabato 9:00–19:00 (ultimo ingresso alle 18:15), la domenica 9:00–14:00. 7 €."
+  stato: confermato
+  fonti: [tp-campolieto, tp-villevesuviane-visite]
+  controllato: 2026-10-03
+  ricontrollare: 2027-04-30
+
+# ================= DOVE MANGIARE: LOCALI (blocco C, 04/10/2026) =================
+# Orari e prezzi dei locali (src/data/locali.yaml) e perché sono nell'elenco. Gli orari sono quelli in vigore il
+# 4 ottobre 2026: per l'estate 2027 nessun locale li ha pubblicati. Da ricontrollare entro il 30/04/2027.
+- id: lc-da-michele-orari
+  testo: "Tutti i giorni 11:00–23:00. Non si accettano prenotazioni."
+  stato: confermato
+  fonti: [lc-da-michele]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-port-alba-orari
+  testo: "Lunedì e dal mercoledì alla domenica 12:00–17:00 e 18:00–24:00; chiuso il martedì. Si prenota online."
+  stato: confermato
+  fonti: [lc-port-alba]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-di-matteo-orari
+  testo: "Dal lunedì al sabato 10:00–23:30. Della domenica il sito non dice niente: né un orario né la chiusura."
+  stato: confermato
+  fonti: [lc-di-matteo]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-chitarra-orari
+  testo: "Solo la sera, dal lunedì al sabato 19:30–23:00 (la stessa pagina scrive anche fino alle 23:30); chiuso la domenica. Si prenota per telefono o WhatsApp, non online."
+  stato: confermato
+  fonti: [lc-chitarra]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-gesu-vecchio-orari
+  testo: "Dal martedì alla domenica 12:00–15:30 e 19:00–23:00, la sera in due turni (alle 19:00 e alle 21:30); chiuso il lunedì. Si entra solo prenotando."
+  stato: confermato
+  fonti: [lc-gesu-vecchio, lc-gesu-vecchio-home]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-di-costanzo-orari
+  testo: "Lunedì e dal mercoledì al sabato 7:00–20:00, la domenica 8:00–18:00; chiuso il martedì."
+  stato: confermato
+  fonti: [lc-di-costanzo]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-brandi-orari
+  testo: "Dal martedì alla domenica 12:30–15:30 e 19:30–23:30; chiuso il lunedì. Si prenota per telefono."
+  stato: confermato
+  fonti: [lc-brandi]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-zia-esterina-orari
+  testo: "Tutti i giorni 11:00–22:00 (sede di piazza Trieste e Trento)."
+  stato: confermato
+  fonti: [lc-zia-esterina]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-hosteria-toledo-orari
+  testo: "Tutti i giorni tranne il martedì, 12:00–16:00 e 19:00–24:00."
+  stato: confermato
+  fonti: [lc-hosteria-toledo]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-gobbetto-orari
+  testo: "Dal martedì al sabato 12:00–14:30 e 19:00–22:30; la domenica solo a pranzo, 12:00–16:00; chiuso il lunedì."
+  stato: confermato
+  fonti: [lc-gobbetto]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-nennella-orari
+  testo: "Dal lunedì al sabato 12:00–15:30 e 18:45–23:30; chiuso la domenica. Si prenota online, ma metà dei posti resta a chi arriva e si mette in lista."
+  stato: confermato
+  fonti: [lc-nennella, lc-nennella-domande]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-pintauro-orari
+  testo: "Tutti i giorni 9:00–21:00."
+  stato: confermato
+  fonti: [lc-pintauro]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-cinquanta-kalo-orari
+  testo: "Tutti i giorni 12:00–16:30 e 18:30–00:30. Non si accettano prenotazioni."
+  stato: confermato
+  fonti: [lc-cinquanta-kalo]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-salvo-orari
+  testo: "Tutti i giorni 12:30–15:30 e 19:00–24:00. Si prenota online."
+  stato: confermato
+  fonti: [lc-salvo]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-pignatelli-orari
+  testo: "Tutti i giorni 12:30–16:00 e 19:30–24:00. Si prenota con il modulo del sito; oltre 4 persone, per telefono."
+  stato: confermato
+  fonti: [lc-pignatelli]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-cantinella-orari
+  testo: "Dal lunedì al sabato 12:30–15:30 e 19:30–23:30; la domenica solo a pranzo, 12:30–15:30."
+  stato: confermato
+  fonti: [lc-cantinella]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-bersagliera-orari
+  testo: "Tutti i giorni tranne il martedì, 12:00–15:30 e 19:00–23:30."
+  stato: confermato
+  fonti: [lc-bersagliera]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-scialuppa-orari
+  testo: "Dal martedì alla domenica 12:30–15:30 e 19:00–24:00; chiuso il lunedì."
+  stato: confermato
+  fonti: [lc-scialuppa]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-calabritto-orari
+  testo: "Il lunedì solo la sera, 20:00–24:00; dal martedì al sabato 13:00–15:00 e 20:00–24:00; la domenica solo a pranzo, 13:00–15:30."
+  stato: confermato
+  fonti: [lc-calabritto]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-chalet-ciro-orari
+  testo: "Tutti i giorni dalle 6:45 alle 3:00 di notte; il sabato fino alle 4:00 (sede di Mergellina)."
+  stato: confermato
+  fonti: [lc-chalet-ciro]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-caffettiera-orari
+  testo: "Tutti i giorni 7:00–23:00. Per i gruppi di 6 persone o più si prenota con due settimane di anticipo; gli altri trovano posto in ordine di arrivo."
+  stato: confermato
+  fonti: [lc-caffettiera]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-gorizia-orari
+  testo: "Tutti i giorni 12:30–16:00 e 19:30–24:00. Si prenota dal sito o per telefono."
+  stato: confermato
+  fonti: [lc-gorizia]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-bellavia-orari
+  testo: "Tutti i giorni 7:00–21:00 (sede di Napoli)."
+  stato: confermato
+  fonti: [lc-bellavia]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-meatin-orari
+  testo: "Dal martedì al venerdì solo la sera, 19:00–24:00; sabato e domenica 12:00–16:00 e 19:00–24:00; chiuso il lunedì."
+  stato: confermato
+  fonti: [lc-meatin]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-starita-orari
+  testo: "Dal martedì alla domenica 12:00–15:30 e 19:00–23:30; chiuso il lunedì. Non si accettano prenotazioni."
+  stato: confermato
+  fonti: [lc-starita]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-concettina-orari
+  testo: "Dalla domenica al giovedì 10:30–23:30; venerdì e sabato 11:00–23:30."
+  stato: confermato
+  fonti: [lc-concettina]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-poppella-orari
+  testo: "Tutti i giorni dalle 6:00 alle 24:00 (sede di via Arena della Sanità)."
+  stato: confermato
+  fonti: [lc-poppella]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-petrucci-posillipo-orari
+  testo: "Tutte le sere a cena, dalle 19:30; l'ora di chiusura non è scritta."
+  stato: confermato
+  fonti: [lc-petrucci-posillipo]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-tufo-orari
+  testo: "Trattoria: dal lunedì al venerdì 13:00–15:30 e 20:00–23:30; il sabato 13:00–16:00 e 20:00–24:00; la domenica 13:00–17:00 e 20:00–23:30."
+  stato: confermato
+  fonti: [lc-tufo]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-fenestella-orari
+  testo: "Tutti i giorni tranne il martedì, 12:00–16:00 e 19:00–24:00."
+  stato: confermato
+  fonti: [lc-fenestella]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-cicciotto-orari
+  testo: "Tutti i giorni dalle 12:00 alle 24:00."
+  stato: confermato
+  fonti: [lc-cicciotto]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-macellegria-orari
+  testo: "Tutti i giorni 9:00–24:00: il sito dà un solo orario per la macelleria e per la braceria."
+  stato: confermato
+  fonti: [lc-macellegria]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-da-michele-prezzi
+  testo: "Margherita, marinara, cosacca e marita 6,50 €; coperto 1 € (menu della sede di Napoli)."
+  stato: confermato
+  fonti: [lc-da-michele-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-port-alba-prezzi
+  testo: "Esempi dal sito: pizza S.T.G. 7,50 €, pizza Don Vincenzo 9 €, babà 5,50 €, gnocchi verdi al salmone 12 €, filetto al pepe verde 20 €. Il menu completo non è online."
+  stato: confermato
+  fonti: [lc-port-alba]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-di-matteo-prezzi
+  testo: "Margherita 5 €, marinara 4 €, pizza fritta tradizionale 7 €, frittatina 2 €, crocchè 1 €; servizio 15%. È il menu del luglio 2022: i prezzi di oggi possono essere diversi."
+  stato: confermato
+  fonti: [lc-di-matteo-menu, lc-di-matteo]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-chitarra-prezzi
+  testo: "Primi da 12 € (fagioli alla maruzzara, risotto Napoli); pignatiello, i paccheri al ragù ripieni, 13 €. Secondi da 11 € (alici fritte); polpette al sugo e parmigiana 13 €, baccalà fritto 14 €."
+  stato: confermato
+  fonti: [lc-chitarra-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-gesu-vecchio-prezzi
+  testo: "Primi da 10 € (spaghetti alla puveriello, pasta mista con patate e provola affumicata); ziti alla genovese 13 €. Secondi da 8,50 € (uova in purgatorio); polpette al ragù 9 €, trippa 12 € (menu di giugno 2026)."
+  stato: confermato
+  fonti: [lc-gesu-vecchio-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-hosteria-toledo-prezzi
+  testo: "Primi da 8 € (patate e provola, sorrentina); genovese 10 €, spaghetti alle vongole 14 €. Secondi da 8 € (carne alla genovese, carne al ragù); paranza fritta 15 €. È il menu caricato sul sito nel 2023: i prezzi di oggi possono essere diversi."
+  stato: confermato
+  fonti: [lc-hosteria-toledo-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-cinquanta-kalo-prezzi
+  testo: "Margherita 7,50 €, marinara 6,50 €, frittatina 3 €; servizio e coperto 2 € (menu del sito, file del luglio 2026)."
+  stato: confermato
+  fonti: [lc-cinquanta-kalo-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-salvo-prezzi
+  testo: "Margherita classica 8,50 €; le altre margherite da 11 a 12,50 € (menu dell'11 maggio 2026)."
+  stato: confermato
+  fonti: [lc-salvo-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-pignatelli-prezzi
+  testo: "Primi da 13 € (pasta mista con patate e provola, mezzanelli alla lardiata); candele alla genovese 14 €. Secondi: polpette al ragù 13 €, baccalà 16 € (menu digitale aggiornato a gennaio 2026)."
+  stato: confermato
+  fonti: [lc-pignatelli-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-cantinella-prezzi
+  testo: "Primi da 15 € (pennette alla Cantinella); spaghetti alle vongole 22 €. Secondi da 16 € (frittura di paranza); spigola su piastra di sale 30 €."
+  stato: confermato
+  fonti: [lc-cantinella-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-calabritto-prezzi
+  testo: "Primi da 20 € (pomodoro fresco) a 40 €; aglio, olio e peperoncino con frutti di mare 30 €. Secondi da 30 € (guancia di manzo); branzino in crosta di sale 35 €."
+  stato: confermato
+  fonti: [lc-calabritto-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-meatin-prezzi
+  testo: "Primi da 12 €; spaghettone alla Nerano 14 €. Secondi da 20 € (guancia di manzo brasata); costata di scottona 8,50 € all'etto. Il menu letto è quello dell'estate 2026."
+  stato: confermato
+  fonti: [lc-meatin]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-bellavia-prezzi
+  testo: "Sfogliatella 2,50 € nel negozio online del sito; i prezzi al banco non sono scritti."
+  stato: confermato
+  fonti: [lc-bellavia-store]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-starita-prezzi
+  testo: "Margherita 7 €, marinara 5,50 €, frittatina di pasta 2,50 €; coperto 1,50 €. È il menu del novembre 2024: i prezzi di oggi possono essere diversi."
+  stato: confermato
+  fonti: [lc-starita-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-petrucci-posillipo-prezzi
+  testo: "Margherita 12 €, marinara 12 €, bufalina 14 €, frittatina di pasta 5 €."
+  stato: confermato
+  fonti: [lc-petrucci-posillipo]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-cicciotto-prezzi
+  testo: "Primi da 16 € (linguine alla Nerano, pasta al pomodoro); spaghetti alle vongole veraci 26 €. Secondi da 22 € (cuoppo fritto del golfo); fritto di paranza 30 €."
+  stato: confermato
+  fonti: [lc-cicciotto-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-macellegria-prezzi
+  testo: "Dalla cucina: polpettine 8 €, cotoletta 11 €. Dalla brace: hamburger di pollo 10 €, bombetta pugliese 28 €, entrecôte di podolica 46 €. Non ci sono primi: per questo non ha una fascia di prezzo."
+  stato: confermato
+  fonti: [lc-macellegria-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-da-michele-perche
+  testo: "Segnalata dalla Guida Michelin 2025 tra le pizzerie di Napoli, secondo Scatti di Gusto. Il menu del locale scrive «maestri pizzaioli dal 1870»."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [sdg-michelin-2025-pizzerie, lc-da-michele-menu]
+  controllato: 2026-10-04
+
+- id: lc-port-alba-perche
+  testo: "Secondo il locale, è nata come pizzeria nel 1738."
+  stato: confermato
+  storico: true
+  fonti: [lc-port-alba]
+  controllato: 2026-10-04
+
+- id: lc-di-matteo-perche
+  testo: "Secondo il locale, è aperta dal 1936, in un'unica sede in via dei Tribunali."
+  stato: confermato
+  storico: true
+  fonti: [lc-di-matteo-menu, lc-di-matteo]
+  controllato: 2026-10-04
+
+- id: lc-di-matteo-rinomato
+  testo: "Gambero Rosso International, nel luglio 2024, scrive che è una tappa obbligata per il cibo di strada fritto napoletano."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [gri-cuoppo-2024]
+  controllato: 2026-10-04
+
+- id: lc-chitarra-perche
+  testo: "Ha la Chiocciola di Slow Food nella guida Osterie d'Italia 2025, secondo Scatti di Gusto. Secondo il locale, l'osteria è aperta dal 1991."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [sdg-slowfood-2025, lc-chitarra-storia]
+  controllato: 2026-10-04
+
+- id: lc-gesu-vecchio-perche
+  testo: "Gambero Rosso la mette tra gli otto posti di Napoli per la pasta e patate con la provola, scrive Gambero Rosso International nel gennaio 2024."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [gri-pasta-patate-2024]
+  controllato: 2026-10-04
+
+- id: lc-di-costanzo-perche
+  testo: "Gambero Rosso la mette tra le sette pasticcerie di Napoli nel 2022, secondo Napolitan.it, che la descrive come una pasticceria tradizionale solida."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [napolitan-pasticcerie-2022]
+  controllato: 2026-10-04
+
+- id: lc-brandi-perche
+  testo: "Secondo il locale, qui nel 1889 è nata la pizza Margherita. L'abbiamo scelta anche per la posizione, tra via Toledo e piazza del Plebiscito."
+  stato: confermato
+  storico: true
+  fonti: [lc-brandi-home]
+  controllato: 2026-10-04
+
+- id: lc-zia-esterina-perche
+  testo: "Gambero Rosso International, nell'ottobre 2023, scrive che il suo nome a Napoli è sinonimo di pizza fritta."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [gri-pizza-fritta-2023]
+  controllato: 2026-10-04
+
+- id: lc-hosteria-toledo-perche
+  testo: "Secondo il locale, fa cucina napoletana dal 1951. Nessuna guida verificata: l'abbiamo scelta noi, per la cucina di casa a due passi da via Toledo."
+  stato: confermato
+  storico: true
+  fonti: [lc-hosteria-toledo]
+  controllato: 2026-10-04
+
+- id: lc-gobbetto-perche
+  testo: "Scelta nostra: un'osteria nei Quartieri Spagnoli, a due passi da via Toledo, con pasta e cucina di mare."
+  stato: confermato
+  fonti: [lc-gobbetto]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-nennella-perche
+  testo: "Aperta nel 1949, scrive Gambero Rosso International, che nel gennaio 2024 la mette tra gli otto posti di Napoli per la pasta e patate con la provola."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [gri-pasta-patate-2024]
+  controllato: 2026-10-04
+
+- id: lc-pintauro-perche
+  testo: "Secondo il locale, fa sfogliatelle in via Toledo dal 1785. Ha riaperto con una nuova gestione alla fine di marzo 2026, scrive Scatti di Gusto."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [lc-pintauro, sdg-pintauro-2026]
+  controllato: 2026-10-04
+
+- id: lc-cinquanta-kalo-perche
+  testo: "Quinta nella classifica 50 Top Pizza Italia 2026, secondo Sky TG24, e segnalata dalla Guida Michelin 2025, secondo Scatti di Gusto."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [sky-50top-2026, sdg-michelin-2025-pizzerie]
+  controllato: 2026-10-04
+
+- id: lc-salvo-perche
+  testo: "Ventiquattresima nella classifica 50 Top Pizza Italia 2026, secondo Sky TG24 (la classifica scrive solo «Salvo», senza dire quale sede); segnalata dalla Guida Michelin 2025 come «Salvo alla Riviera», secondo Scatti di Gusto."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [sky-50top-2026, sdg-michelin-2025-pizzerie]
+  controllato: 2026-10-04
+
+- id: lc-pignatelli-perche
+  testo: "Tra i nuovi Bib Gourmand della Guida Michelin 2025, cioè buona cucina a prezzi contenuti, secondo Scatti di Gusto."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [sdg-bib-2025]
+  controllato: 2026-10-04
+
+- id: lc-pignatelli-rinomato
+  testo: "Nella recensione del gennaio 2026, Scatti di Gusto scrive che le candele alla genovese sono molto buone."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [sdg-pignatelli-2026]
+  controllato: 2026-10-04
+
+- id: lc-cantinella-perche
+  testo: "Secondo il locale, l'ha fondata Angelo Rosolino negli anni Sessanta e oggi la porta avanti la stessa famiglia. Scelta nostra anche per la posizione, a Santa Lucia, a due passi dal lungomare."
+  stato: confermato
+  storico: true
+  fonti: [lc-cantinella-home]
+  controllato: 2026-10-04
+
+- id: lc-bersagliera-perche
+  testo: "Secondo il locale, è aperta dal 1919 sul Borgo Marinari, davanti a Castel dell'Ovo."
+  stato: confermato
+  storico: true
+  fonti: [lc-bersagliera-home]
+  controllato: 2026-10-04
+
+- id: lc-scialuppa-perche
+  testo: "Scelta nostra: sul Borgo Marinari, davanti al porticciolo, aperta a pranzo e a cena."
+  stato: confermato
+  fonti: [lc-scialuppa]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-calabritto-perche
+  testo: "Scelta nostra: cucina di mare in piazza Vittoria, accanto alla Villa Comunale e al lungomare."
+  stato: confermato
+  fonti: [lc-calabritto-menu]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-chalet-ciro-perche
+  testo: "Secondo il locale, è sul lungomare di Mergellina dal 1952."
+  stato: confermato
+  storico: true
+  fonti: [lc-chalet-ciro-storia]
+  controllato: 2026-10-04
+
+- id: lc-chalet-ciro-rinomato
+  testo: "Scatti di Gusto, nel 2016, scrive del suo cono graffa: il gelato servito dentro una graffa fritta e zuccherata."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [sdg-cono-graffa]
+  controllato: 2026-10-04
+
+- id: lc-caffettiera-perche
+  testo: "Scelta nostra: caffè e dolci in piazza dei Martiri, a Chiaia, aperto tutto il giorno. Secondo il locale, è attivo da oltre 40 anni."
+  stato: confermato
+  storico: true
+  fonti: [lc-caffettiera]
+  controllato: 2026-10-04
+
+- id: lc-gorizia-perche
+  testo: "Sessantottesima nella classifica 50 Top Pizza Italia 2026, secondo Sky TG24. Secondo il locale, è aperta dal 1916."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [sky-50top-2026, lc-gorizia]
+  controllato: 2026-10-04
+
+- id: lc-bellavia-perche
+  testo: "Secondo il locale, la famiglia fa dolci dal 1925 ed è al Vomero dagli anni Sessanta. Nessuna guida verificata: scelta nostra, per il Vomero."
+  stato: confermato
+  storico: true
+  fonti: [lc-bellavia-storia]
+  controllato: 2026-10-04
+
+- id: lc-meatin-perche
+  testo: "Scelta nostra: l'unico locale di carne dell'elenco al Vomero, con gli orari e il menu sul sito."
+  stato: confermato
+  fonti: [lc-meatin]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-starita-perche
+  testo: "Secondo il locale, fa la pizza dal 1901."
+  stato: confermato
+  storico: true
+  fonti: [lc-starita-home]
+  controllato: 2026-10-04
+
+- id: lc-concettina-perche
+  testo: "Segnalata dalla Guida Michelin 2025 tra le pizzerie di Napoli, secondo Scatti di Gusto. Secondo il locale, è nata nel 1951."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [sdg-michelin-2025-pizzerie, lc-concettina-storia]
+  controllato: 2026-10-04
+
+- id: lc-poppella-perche
+  testo: "Gambero Rosso la mette tra le sette pasticcerie di Napoli nel 2022, riporta Napolitan.it, che cita la sua pastiera tra le migliori in città. Secondo il locale, è aperta dal 1920."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [napolitan-pasticcerie-2022, lc-poppella-storia]
+  controllato: 2026-10-04
+
+- id: lc-poppella-rinomato
+  testo: "Il suo fiocco di neve, scrive Gambero Rosso secondo Napolitan.it (2022), è ormai un dolce conosciutissimo anche all'estero."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [napolitan-pasticcerie-2022]
+  controllato: 2026-10-04
+
+- id: lc-petrucci-posillipo-perche
+  testo: "La pizzeria Palazzo Petrucci è terza nella classifica 50 Top Pizza Italia 2026, secondo Sky TG24: la classifica riguarda la sede di piazza San Domenico Maggiore. Questa sede, a Posillipo, il locale l'ha presentata nel settembre 2026."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [sky-50top-2026, lc-petrucci-posillipo]
+  controllato: 2026-10-04
+
+- id: lc-tufo-perche
+  testo: "Scelta nostra: una trattoria di cucina napoletana su via Posillipo, aperta tutti i giorni a pranzo e a cena."
+  stato: confermato
+  fonti: [lc-tufo]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30
+
+- id: lc-tufo-rinomato
+  testo: "Stars and Stripes, nel dicembre 2022, scrive che la pasta e patate, finita al tavolo, è il primo simbolo del locale, e loda la genovese."
+  stato: stampa
+  storico: true
+  comeFatto: true
+  fonti: [stripes-tufo-2022]
+  controllato: 2026-10-04
+
+- id: lc-fenestella-perche
+  testo: "Secondo il locale, una delle sue finestre è quella resa celebre dalla canzone di Salvatore Di Giacomo su Marechiaro."
+  stato: confermato
+  storico: true
+  fonti: [lc-fenestella-home]
+  controllato: 2026-10-04
+
+- id: lc-cicciotto-perche
+  testo: "Secondo il locale, è a Marechiaro dal 1942."
+  stato: confermato
+  storico: true
+  fonti: [lc-cicciotto]
+  controllato: 2026-10-04
+
+- id: lc-macellegria-perche
+  testo: "Scelta nostra: macelleria e braceria a Fuorigrotta, vicino alla Mostra d'Oltremare, aperta tutti i giorni."
+  stato: confermato
+  fonti: [lc-macellegria]
+  controllato: 2026-10-04
+  ricontrollare: 2027-04-30

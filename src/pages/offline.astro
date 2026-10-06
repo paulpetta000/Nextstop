@@ -1,0 +1,19 @@
+---
+import Base from '../layouts/Base.astro';
+import Icon from '../components/Icon.astro';
+---
+<Base title="Sei senza rete" description="Pagina mostrata quando manca la connessione." noindex>
+  <section class="section">
+    <div class="wrap stack">
+      <p class="kicker">Senza rete</p>
+      <h1>Niente connessione, per ora</h1>
+      <p class="lead">In metropolitana o in un vicolo capita. Queste pagine sono salvate sul telefono e funzionano lo stesso:</p>
+      <ul class="vai">
+        {[
+          ['/napoli/itinerari/', 'pin', 'Itinerari a Napoli'],
+          ['/napoli/dove-mangiare/', 'piatto', 'Dove mangiare']
+        ].map(([h, i, t]) => <li><a href={h}><span class="vai__icona"><Icon name={i as any} /></span><span class="vai__titolo">{t}</span><span class="vai__freccia"><Icon name="freccia" /></span></a></li>)}
+      </ul>
+    </div>
+  </section>
+</Base>

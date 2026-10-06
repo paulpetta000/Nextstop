@@ -1,0 +1,44 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import { SITO } from '../config/sito';
+import { dataLunga } from '../lib/formato';
+const t = SITO.titolare;
+const host = SITO.url.replace(/^https?:\/\//, '');
+---
+<Base title="Termini d'uso" description={`Termini d'uso di ${SITO.nome}: sito indipendente e gratuito di itinerari in città, con orari, prezzi e tempi che possono cambiare. Link esterni, contenuti di terzi, diritti.`}>
+  <PageHead kicker="Trasparenza" title="Termini d'uso" lead="Le regole del gioco, in parole semplici: che cos'è questo sito, cosa puoi aspettarti e cosa no." aggiornato={SITO.versioneTermini} />
+  <section class="section">
+    <div class="wrap prose">
+      <h2>Chi siamo</h2>
+      <p><strong>{SITO.nome}</strong> ({host}) è un sito gratuito di itinerari, scritto e gestito da <strong>{t.nome}</strong>, una persona e non un'azienda. Per contatti: <a href={`mailto:${t.email}`}>{t.email}</a>. Usando il sito accetti questi termini; se non ti vanno bene, ti chiediamo di non usarlo.</p>
+
+      <h2>Un sito indipendente</h2>
+      <p>Il sito non è gestito, approvato o sponsorizzato dai musei, dai luoghi, dai locali o dalle aziende di trasporto di cui parla, e non vende biglietti, visite o prenotazioni.</p>
+
+      <h2>Le informazioni possono cambiare</h2>
+      <p>Raccontiamo orari, prezzi e luoghi come li riportano le fonti indicate in fondo a ogni pagina e nella pagina <a href="/fonti/">fonti</a>, con la data dell'ultimo controllo. I luoghi, i locali e le aziende di trasporto però possono cambiarli in qualsiasi momento, e anche noi possiamo sbagliare. Le informazioni non ancora ufficiali sono segnate come tali. Prima di decisioni importanti (un viaggio, una prenotazione, una gita) controlla sempre sui siti ufficiali. Se trovi un errore, scrivici: lo correggiamo.</p>
+      <p>I tempi a piedi e con i mezzi sono stime nostre, e la scelta delle tappe e dei locali è un consiglio nostro: non sono informazioni ufficiali.</p>
+
+      <h2>Fin dove arriva la nostra responsabilità</h2>
+      <p>Facciamo del nostro meglio perché il sito sia corretto e funzioni, ma lo offriamo così com'è, senza garanzie. Per quanto la legge lo permette, non rispondiamo dei danni che derivano dall'aver usato solo le informazioni di questo sito, dei contenuti dei siti esterni o dei periodi in cui il sito non è raggiungibile. Questo non vale nei casi in cui la legge non consente di limitare la responsabilità, per esempio per dolo o colpa grave.</p>
+
+      <h2>Link e contenuti di altri</h2>
+      <p>Mettiamo link a siti ufficiali, giornali e altri servizi perché tu possa controllare le fonti. Non li gestiamo noi: un link non vuol dire che approviamo tutto quello che c'è dall'altra parte. Se un giorno ci saranno link pubblicitari o di affiliazione, li segneremo in modo chiaro accanto al link.</p>
+      <p>Alcuni contenuti sono di altri e li usiamo come permettono le loro licenze: foto di Wikimedia Commons, dati di OpenStreetMap, orari dei bus pubblicati come dati aperti. Autori e licenze sono nella pagina <a href="/note-legali/">note legali</a>.</p>
+
+      <h2>Nomi, marchi e diritti</h2>
+      <p>I nomi dei luoghi, dei locali, degli eventi e delle aziende citati appartengono ai rispettivi titolari: li usiamo solo per dire di chi e di cosa parliamo.</p>
+      <p>Testi, disegni e mappe di questo sito sono nostri, salvo i contenuti di altri indicati sopra. Puoi linkare qualsiasi pagina e citarne brevi parti indicando la fonte; per altri usi chiedici prima il permesso.</p>
+
+      <h2>Usare il sito con buon senso</h2>
+      <p>Non usare il sito per provare a forzarne la sicurezza o per scaricarne i contenuti in massa con programmi automatici. Come trattiamo i dati è spiegato nella pagina <a href="/privacy/">privacy</a>.</p>
+
+      <h2>Modifiche e legge applicabile</h2>
+      <p>Possiamo aggiornare questi termini: la data in alto dice quando è successo l'ultima volta. Il sito e questi termini sono regolati dalla legge italiana; restano ferme le tutele che la legge riconosce ai consumatori.</p>
+
+      <p class="small muted">Ultimo aggiornamento: {dataLunga(SITO.versioneTermini)}.</p>
+    </div>
+  </section>
+</Base>
+<style>.prose h2 { font-size: 1.5rem; margin-top: 2rem; } .prose h2:first-of-type { margin-top: 1rem; }</style>

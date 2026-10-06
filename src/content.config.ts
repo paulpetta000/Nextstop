@@ -1,0 +1,167 @@
+// Collezioni di dati degli itinerari. Se manca un campo obbligatorio (fonte, stato, data di controllo)
+// la build si ferma: nessuna informazione va online senza fonte.
+import { defineCollection, reference } from 'astro:content';
+import { file, glob } from 'astro/loaders';
+import { z } from 'astro/zod';
+
+const data = z.coerce.date();
+
+const fonti = defineCollection({
+  loader: file('src/data/fonti.yaml'),
+  schema: z.object({
+    titolo: z.string().min(3),
+    editore: z.string().min(2),
+    url: z.string().url(),
+    // enciclopedia: Wikipedia; blog: blog di viaggio e siti di guide. Stesso elenco di TIPI_FONTE in src/lib/regole.mjs
+    tipo: z.enum(['ufficiale', 'stampa', 'dati', 'enciclopedia', 'blog', 'altro']),
+    pubblicato: data.optional(),
+    controllato: data,
+    letta: z.boolean(),
+    nota: z.string().optional()
+  })
+});
+
+const fatti = defineCollection({
+  loader: file('src/data/fatti.yaml'),
+  schema: z.object({
+    testo: z.string().min(10),
+    stato: z.enum(['confermato', 'stampa', 'segnalato', 'atteso']),
+    anno: z.number().int().default(2027),
+    // Un fatto del passato che non può valere per il 2027 (un risultato): nei testi l'anno va detto,
+    // ma non serve il segno * (src/lib/testi.ts)
+    storico: z.boolean().default(false),
+    // Un fatto del passato letto solo sui giornali (premi delle guide, classifiche, recensioni, notizie di un locale)
+    // che nei testi si scrive
+    // come fatto, senza segno: la build lo elenca come da verificare sulla fonte originale (src/lib/fatti.ts)
+    comeFatto: z.boolean().default(false),
+    fonti: z.array(reference('fonti')).min(1),
+    controllato: data,
+    ricontrollare: data.optional()
+  })
+});
+
+// Foto con licenza libera: senza autore, licenza e pagina di origine la build si ferma
+const foto = defineCollection({
+  loader: file('src/data/foto.yaml'),
+  schema: ({ image }) => z.object({
+    src: image(),
+    alt: z.string().min(20),
+    didascalia: z.string().min(10),
+    autore: z.string().min(2),
+    autoreUrl: z.string().url().optional(),
+    licenza: z.enum(['CC0', 'Pubblico dominio', 'CC BY 2.0', 'CC BY 3.0', 'CC BY 4.0', 'CC BY-SA 2.0', 'CC BY-SA 3.0', 'CC BY-SA 3.0 DE', 'CC BY-SA 4.0']),
+    licenzaUrl: z.string().url().optional(),
+    fonte: z.string().url(),
+    anno: z.number().int().optional(),
+    modifiche: z.string().default('Ritagliata e ridimensionata'),
+    controllato: data
+  })
+});
+
+// Stazioni e porti: da dove partono le gite (campo «partenza» delle tappe)
+const luoghi = defineCollection({
+  loader: file('src/data/luoghi.yaml'),
+  schema: z.object({
+    nome: z.string(),
+    tipo: z.enum(['stazione', 'porto']),
+    linea: z.string().optional(),
+    lat: z.number(),
+    lon: z.number()
+  })
+});
+
+// ---------- Itinerari (Rilascio 3) ----------
+// Tappe da combinare negli itinerari. Orari e prezzi sono schede (fatti) con fonte e data da ricontrollare;
+// i tempi tra le tappe stanno in src/data/tempi-tappe.json (scripts/itinerari/). Altri controlli in src/lib/tappe.ts.
+const giorno = z.enum(['lun', 'mar', 'mer', 'gio', 'ven', 'sab', 'dom']);
+const tappe = defineCollection({
+  loader: file('src/data/tappe.yaml'),
+  schema: z.object({
+    nome: z.string().min(3),
+    // nome corto per la mappa e per la lista dell'itinerario
+    breve: z.string().max(22).optional(),
+    tipo: z.enum(['citta', 'gita']),
+    zona: z.enum(['centro-storico', 'toledo-plebiscito', 'lungomare', 'vomero', 'sanita-capodimonte', 'posillipo-bagnoli', 'vesuvio', 'isole', 'dintorni']),
+    generi: z.array(z.enum(['museo', 'chiesa', 'sotterraneo', 'archeologia', 'panorama', 'parco', 'passeggiata', 'castello', 'mare', 'cibo', 'teatro'])).min(1),
+    lat: z.number(),
+    lon: z.number(),
+    osm: z.string().regex(/^(node|way|relation)\/\d+$/).optional(),
+    // percorsi a piedi: dove finiscono, e se si possono fare anche al contrario
+    fine: z.object({ nome: z.string(), lat: z.number(), lon: z.number(), osm: z.string().regex(/^(node|way|relation)\/\d+$/).optional() }).optional(),
+    reversibile: z.boolean().default(true),
+    durata: z.number().int().min(10).max(600),
+    durataFonte: reference('fonti').optional(),
+    orari: reference('fatti').optional(),
+    prezzi: reference('fatti').optional(),
+    ingresso: z.enum(['gratis', 'pagamento', 'in-parte']),
+    prenotazione: z.enum(['no', 'consigliata', 'obbligatoria']),
+    chiuso: z.array(giorno).default([]),
+    alChiuso: z.enum(['si', 'no', 'in-parte']),
+    gradini: z.enum(['no', 'pochi', 'molti']).optional(),
+    bambini: z.enum(['si', 'attenzione']),
+    momento: z.enum(['mattina', 'pomeriggio', 'sera', 'quando-vuoi']),
+    avviso: z.enum(['chiuso-in-parte']).optional(),
+    foto: reference('foto').optional(),
+    // gite: da dove si parte e come si arriva (scheda con tempi e prezzi del viaggio)
+    partenza: reference('luoghi').optional(),
+    viaggio: reference('fatti').optional()
+  })
+    .refine(t => t.tipo === 'gita' || t.orari, { message: 'Ogni tappa in città deve avere la scheda degli orari' })
+    .refine(t => t.tipo === 'citta' || (t.partenza && t.viaggio), { message: 'Ogni gita deve avere partenza e viaggio' })
+    // «in-parte»: si paga solo una parte (un museo dentro un parco, la metro per vedere una stazione); il testo lo dice
+    .refine(t => t.ingresso !== 'pagamento' || t.prezzi || t.tipo === 'gita', { message: 'Una tappa a pagamento deve avere la scheda dei prezzi' })
+});
+
+// Locali di «Dove mangiare» (blocco C): sono anche tappe in città degli itinerari, con gli stessi tempi.
+// Orari, prezzi e motivo della scelta sono schede (fatti) con fonte; altri controlli in src/lib/locali.ts
+// (le ore di «apertura» devono comparire nella scheda degli orari, id diversi da quelli delle tappe).
+const locali = defineCollection({
+  loader: file('src/data/locali.yaml'),
+  schema: z.object({
+    nome: z.string().min(3),
+    breve: z.string().max(22).optional(),
+    zona: z.enum(['centro-storico', 'toledo-plebiscito', 'lungomare', 'vomero', 'sanita-capodimonte', 'posillipo-bagnoli']),
+    indirizzo: z.string().min(5),
+    lat: z.number().min(40.786).max(40.874),
+    lon: z.number().min(14.135).max(14.29),
+    osm: z.string().regex(/^(node|way|relation)\/\d+$/).optional(),
+    sito: z.string().url(),
+    cucina: z.array(z.enum(['napoletana', 'pasta', 'pesce', 'pizza', 'carne', 'strada', 'dolci'])).min(1),
+    pasto: z.array(z.enum(['pranzo', 'cena', 'spuntino'])).min(1),
+    durata: z.number().int().min(10).max(180).optional(),
+    // giorno (o gruppo di giorni, «mar-dom») -> «12:00-15:30, 19:00-23:30» | «chiuso» | «?»
+    apertura: z.record(z.string().regex(/^(lun|mar|mer|gio|ven|sab|dom)(-(lun|mar|mer|gio|ven|sab|dom))?$/), z.string()),
+    orari: reference('fatti'),
+    prezzoBase: z.number().positive().optional(),
+    prezzi: reference('fatti').optional(),
+    prenotazione: z.enum(['obbligatoria', 'possibile', 'no']).optional(),
+    piatti: z.array(z.enum(['margherita', 'marinara', 'pizza-fritta', 'cuoppo', 'frittatina', 'montanara', 'genovese', 'ragu', 'pasta-patate', 'vongole', 'frittura', 'polpette', 'parmigiana', 'baccala', 'sfogliatella', 'baba', 'pastiera', 'caffe'])).default([]),
+    perche: reference('fatti'),
+    rinomatoPer: z.object({ piatto: z.string().min(3), scheda: reference('fatti') }).optional(),
+    menu: z.object({ url: z.string().url(), controllato: data }).optional(),
+    foto: reference('foto').optional()
+  }).refine(l => !l.prezzoBase || l.prezzi, { message: 'Un locale con prezzoBase deve avere la scheda dei prezzi' })
+});
+
+// ---------- Testi discorsivi ----------
+// Un file per pagina (src/testi/<pagina>.yaml), un blocco per argomento. Ogni blocco dichiara le schede
+// (usa) o le fonti che usa: l'elenco «Fonti di questa pagina» nasce da qui. Gli altri controlli
+// (segni di cautela, firme delle schede) sono in src/lib/testi.ts.
+const blocco = z.object({
+  usa: z.array(reference('fatti')).default([]),
+  fonti: z.array(reference('fonti')).default([]),
+  // Solo per consigli nostri, che non hanno bisogno di una fonte: perché
+  senzaFonte: z.string().min(10).optional(),
+  testo: z.string().min(20).optional(),
+  // Numeri in evidenza: cifra grande e spiegazione
+  voci: z.array(z.object({ num: z.string(), testo: z.string().min(5) })).optional()
+})
+  .refine(b => b.testo || b.voci, { message: 'Ogni blocco deve avere un testo o delle voci' })
+  .refine(b => b.usa.length + b.fonti.length > 0 || b.senzaFonte, { message: 'Ogni blocco deve dire quali schede (usa) o fonti usa. Se è solo un consiglio nostro, scrivi senzaFonte: "perché"' });
+
+const testi = defineCollection({
+  loader: glob({ pattern: '**/*.yaml', base: './src/testi' }),
+  schema: z.record(z.string().regex(/^[a-z0-9-]+$/), blocco)
+});
+
+export const collections = { fonti, fatti, foto, luoghi, testi, tappe, locali };

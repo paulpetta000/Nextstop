@@ -1,0 +1,33 @@
+---
+// Pagina della città (provvisoria, 06/10/2026): porta agli itinerari e a «Dove mangiare».
+import Base from '../../layouts/Base.astro';
+import Testo from '../../components/Testo.astro';
+import Foto from '../../components/Foto.astro';
+import { getTesti } from '../../lib/testi';
+import '../../styles/itinerari.css';
+
+const T = await getTesti('napoli');
+---
+<Base title="Napoli: itinerari e dove mangiare" description="Itinerari a Napoli da mezza giornata a tre giorni, o fatti da te, con i tempi a piedi e con i mezzi, e i locali dove mangiare.">
+  <div class="it-pagina">
+    <header class="it-testa">
+      <div class="it-wrap">
+        <nav class="it-briciole" aria-label="Percorso"><a href="/">Home</a></nav>
+        <h1>Napoli</h1>
+        <Testo b={T.b('intro')} class="it-lead" />
+      </div>
+    </header>
+    <section class="it-wrap citta" aria-label="Cosa trovi">
+      <Foto id="tp-spaccanapoli" rapporto="3 / 2" prima sizes="(min-width: 900px) 640px, calc(100vw - 32px)" class="citta__foto" />
+      <p class="citta__azioni">
+        <a class="it-btn it-btn--primario" href="/napoli/itinerari/">Itinerari a Napoli</a>
+        <a class="it-btn" href="/napoli/dove-mangiare/">Dove mangiare</a>
+      </p>
+    </section>
+  </div>
+</Base>
+<style>
+  .citta { padding-block: 16px 48px; }
+  .citta :global(.citta__foto) { max-width: 40rem; }
+  .citta__azioni { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+</style>

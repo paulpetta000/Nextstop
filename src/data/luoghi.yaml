@@ -1,0 +1,30 @@
+# Stazioni e porti usati dalle tappe (partenza delle gite). Coordinate da OpenStreetMap (ODbL).
+# tipo: stazione | porto
+- { id: mergellina-l6, nome: "Mergellina", linea: "Metro Linea 6", tipo: stazione, lat: 40.83060, lon: 14.21737 }
+- { id: arco-mirelli, nome: "Arco Mirelli–Repubblica", linea: "Metro Linea 6", tipo: stazione, lat: 40.83254, lon: 14.22669 }
+- { id: san-pasquale, nome: "San Pasquale", linea: "Metro Linea 6", tipo: stazione, lat: 40.83362, lon: 14.23470 }
+- { id: chiaia-l6, nome: "Chiaia–Monte di Dio", linea: "Metro Linea 6", tipo: stazione, lat: 40.83555, lon: 14.24503 }
+- { id: municipio, nome: "Municipio", linea: "Metro Linea 1 e 6", tipo: stazione, lat: 40.83939, lon: 14.25284 }
+- { id: toledo, nome: "Toledo", linea: "Metro Linea 1", tipo: stazione, lat: 40.84244, lon: 14.24887 }
+- { id: mergellina-l2, nome: "Napoli Mergellina", linea: "Linea 2 (treni)", tipo: stazione, lat: 40.83157, lon: 14.21870 }
+- { id: piazza-amedeo, nome: "Piazza Amedeo", linea: "Linea 2 (treni)", tipo: stazione, lat: 40.83848, lon: 14.23312 }
+- { id: cavalleggeri, nome: "Cavalleggeri Aosta", linea: "Linea 2 (treni)", tipo: stazione, lat: 40.81988, lon: 14.18763 }
+- { id: bagnoli-l2, nome: "Bagnoli–Agnano Terme", linea: "Linea 2 (treni)", tipo: stazione, lat: 40.81942, lon: 14.16667 }
+- { id: bagnoli-cumana, nome: "Bagnoli–Città della Scienza", linea: "Cumana (EAV)", tipo: stazione, lat: 40.81510, lon: 14.16679 }
+- { id: fun-chiaia, nome: "Parco Margherita", linea: "Funicolare di Chiaia", tipo: stazione, lat: 40.83812, lon: 14.23470 }
+- { id: fun-centrale, nome: "Augusteo", linea: "Funicolare Centrale", tipo: stazione, lat: 40.83894, lon: 14.24769 }
+- { id: fun-mergellina, nome: "Mergellina", linea: "Funicolare di Mergellina", tipo: stazione, lat: 40.82635, lon: 14.21941 }
+- { id: fun-sant-antonio, nome: "Sant'Antonio", linea: "Funicolare di Mergellina", tipo: stazione, lat: 40.82605, lon: 14.21767 }
+- { id: fun-manzoni, nome: "Manzoni", linea: "Funicolare di Mergellina", tipo: stazione, lat: 40.82588, lon: 14.21291 }
+- { id: fun-cimarosa, nome: "Cimarosa", linea: "Funicolare di Chiaia", tipo: stazione, lat: 40.84232, lon: 14.23202 }
+# Aggiunte il 01/10/2026 con la mappa più larga (coordinate OpenStreetMap)
+- { id: napoli-centrale, nome: "Napoli Centrale–Garibaldi", linea: "Treni, Metro Linea 1 e 2, Circumvesuviana", tipo: stazione, lat: 40.85302, lon: 14.27314 }
+- { id: museo, nome: "Museo–Piazza Cavour", linea: "Metro Linea 1 e Linea 2", tipo: stazione, lat: 40.85342, lon: 14.25170 }
+- { id: dante, nome: "Dante", linea: "Metro Linea 1", tipo: stazione, lat: 40.84894, lon: 14.25012 }
+- { id: universita, nome: "Università", linea: "Metro Linea 1", tipo: stazione, lat: 40.84359, lon: 14.25552 }
+- { id: montesanto, nome: "Montesanto", linea: "Cumana, Circumflegrea, Linea 2 e Funicolare di Montesanto", tipo: stazione, lat: 40.84717, lon: 14.24567 }
+- { id: vanvitelli, nome: "Vanvitelli", linea: "Metro Linea 1", tipo: stazione, lat: 40.84392, lon: 14.23175 }
+- { id: campi-flegrei, nome: "Napoli Campi Flegrei", linea: "Linea 2 (treni)", tipo: stazione, lat: 40.82218, lon: 14.19464 }
+- { id: mostra, nome: "Mostra", linea: "Metro Linea 6 e Cumana", tipo: stazione, lat: 40.82434, lon: 14.19366 }
+- { id: molo-beverello, nome: "Molo Beverello", linea: "Aliscafi e traghetti", tipo: porto, lat: 40.83735, lon: 14.25475 }
+- { id: molo-mergellina, nome: "Molo Mergellina", linea: "Aliscafi", tipo: porto, lat: 40.82885, lon: 14.22272 }

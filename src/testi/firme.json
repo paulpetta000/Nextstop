@@ -1,0 +1,377 @@
+{
+  "dove-mangiare#intro": {},
+  "dove-mangiare#criteri": {},
+  "dove-mangiare#fasce": {},
+  "dove-mangiare#indipendente": {},
+  "dove-mangiare#orari": {},
+  "dove-mangiare#itinerario": {},
+  "dove-mangiare#piatto-margherita": {},
+  "dove-mangiare#piatto-marinara": {},
+  "dove-mangiare#piatto-pizza-fritta": {},
+  "dove-mangiare#piatto-frittatina": {},
+  "dove-mangiare#piatto-genovese": {},
+  "dove-mangiare#piatto-ragu": {},
+  "dove-mangiare#piatto-pasta-patate": {},
+  "dove-mangiare#piatto-vongole": {},
+  "dove-mangiare#piatto-frittura": {},
+  "dove-mangiare#piatto-parmigiana": {},
+  "dove-mangiare#piatto-baccala": {},
+  "dove-mangiare#piatto-sfogliatella": {},
+  "dove-mangiare#piatto-baba": {},
+  "dove-mangiare#piatto-pastiera": {},
+  "home#intro": {},
+  "itinerari#regate": {
+    "cal-orari": "f52b029084",
+    "cal-orari-2026": "84169bb83f"
+  },
+  "itinerari#pronto-mezza-giornata": {
+    "tp-sansevero-orari": "d805258c2e",
+    "tp-sansevero-prenota": "34ece27e45"
+  },
+  "itinerari#pronto-un-giorno": {
+    "tp-sanmartino-orari": "dad9948f0a",
+    "tp-sansevero-orari": "d805258c2e"
+  },
+  "itinerari#pronto-due-giorni": {
+    "tp-mann-orari": "59d7a18bdd",
+    "tp-sansevero-orari": "d805258c2e",
+    "tp-sanmartino-orari": "dad9948f0a",
+    "tp-palazzoreale-orari": "d06011bf38"
+  },
+  "itinerari#pronto-tre-giorni": {
+    "tp-capodimonte-orari": "257ccbd98e",
+    "tp-catacombe-orari": "a56fac6625",
+    "tp-catacombe-prezzi": "51ebf9ff1a",
+    "tp-madre-orari": "b4e055460e"
+  },
+  "itinerari#pronto-regata": {
+    "tp-palazzoreale-orari": "d06011bf38"
+  },
+  "itinerari#gite": {
+    "tp-isole-2027": "2eba5fd02a"
+  },
+  "itinerari#tempi": {
+    "trasporti-2027-atteso": "8b175e8ad6"
+  },
+  "itinerari#orari": {},
+  "itinerari#salvare": {},
+  "locali#da-michele": {
+    "lc-da-michele-perche": "126821a827"
+  },
+  "locali#port-alba": {
+    "lc-port-alba-perche": "5d6de800c6"
+  },
+  "locali#di-matteo": {
+    "lc-di-matteo-perche": "2f4b76b7a8",
+    "lc-di-matteo-rinomato": "e982787222"
+  },
+  "locali#chitarra": {
+    "lc-chitarra-perche": "626b58f61e"
+  },
+  "locali#gesu-vecchio": {
+    "lc-gesu-vecchio-perche": "45c4ad7fe1"
+  },
+  "locali#di-costanzo": {
+    "lc-di-costanzo-perche": "1aa87ac632"
+  },
+  "locali#brandi": {
+    "lc-brandi-perche": "c32ea082cd"
+  },
+  "locali#zia-esterina": {
+    "lc-zia-esterina-perche": "3ec6281a50"
+  },
+  "locali#hosteria-toledo": {
+    "lc-hosteria-toledo-perche": "9fb5b532bb"
+  },
+  "locali#gobbetto": {
+    "lc-gobbetto-perche": "953512b6f6"
+  },
+  "locali#nennella": {
+    "lc-nennella-perche": "58013e0651"
+  },
+  "locali#pintauro": {
+    "lc-pintauro-perche": "e256576e38"
+  },
+  "locali#cinquanta-kalo": {
+    "lc-cinquanta-kalo-perche": "8cb4048327"
+  },
+  "locali#salvo": {
+    "lc-salvo-perche": "1c7f0476ee"
+  },
+  "locali#pignatelli": {
+    "lc-pignatelli-perche": "3ffde1a375",
+    "lc-pignatelli-rinomato": "f4b4e0ecb2"
+  },
+  "locali#cantinella": {
+    "lc-cantinella-perche": "402f22c210"
+  },
+  "locali#bersagliera": {
+    "lc-bersagliera-perche": "31f650a0cd"
+  },
+  "locali#scialuppa": {
+    "lc-scialuppa-perche": "f24ece3686"
+  },
+  "locali#calabritto": {
+    "lc-calabritto-perche": "10fd9162e8"
+  },
+  "locali#chalet-ciro": {
+    "lc-chalet-ciro-perche": "c68be86c2a",
+    "lc-chalet-ciro-rinomato": "c47a463218"
+  },
+  "locali#caffettiera": {
+    "lc-caffettiera-perche": "3e73356abd"
+  },
+  "locali#gorizia": {
+    "lc-gorizia-perche": "7e00487e3f"
+  },
+  "locali#bellavia": {
+    "lc-bellavia-perche": "4c99969230"
+  },
+  "locali#meatin": {
+    "lc-meatin-perche": "1507e62f77"
+  },
+  "locali#starita": {
+    "lc-starita-perche": "a3a1fe73df"
+  },
+  "locali#concettina": {
+    "lc-concettina-perche": "9bc372401e"
+  },
+  "locali#poppella": {
+    "lc-poppella-perche": "f6a75d2adb",
+    "lc-poppella-rinomato": "2515b480ce"
+  },
+  "locali#petrucci-posillipo": {
+    "lc-petrucci-posillipo-perche": "8337d331e1"
+  },
+  "locali#tufo": {
+    "lc-tufo-perche": "38a57f5833",
+    "lc-tufo-rinomato": "9242b06bae"
+  },
+  "locali#fenestella": {
+    "lc-fenestella-perche": "3b4afd1c64"
+  },
+  "locali#cicciotto": {
+    "lc-cicciotto-perche": "71b3eb6277"
+  },
+  "locali#macellegria": {
+    "lc-macellegria-perche": "d2da841b13"
+  },
+  "napoli#intro": {},
+  "tappe#duomo": {
+    "tp-duomo-prezzi": "87c0cda2b3",
+    "tp-tesoro-durata": "e1d702b5a2"
+  },
+  "tappe#sansevero": {
+    "tp-sansevero-prenota": "34ece27e45",
+    "tp-sansevero-regole": "8341c87042"
+  },
+  "tappe#santa-chiara": {
+    "tp-santachiara-prezzi": "a5d546697b"
+  },
+  "tappe#spaccanapoli": {
+    "tp-spaccanapoli-orari": "d93dd7a576"
+  },
+  "tappe#tribunali": {
+    "tp-tribunali-orari": "56d2bcb65c"
+  },
+  "tappe#pio-monte": {
+    "tp-piomonte-orari": "2fcbdeff65"
+  },
+  "tappe#mann": {
+    "tp-mann-orari": "59d7a18bdd",
+    "tp-mann-prezzi": "69fd701eb9"
+  },
+  "tappe#san-lorenzo": {
+    "tp-sanlorenzo-orari": "b2cee3a7df"
+  },
+  "tappe#napoli-sotterranea": {
+    "tp-sotterranea-visita": "1a91f2044b",
+    "tp-sotterranea-prezzi": "6cab1ce417"
+  },
+  "tappe#madre": {
+    "tp-madre-orari": "b4e055460e"
+  },
+  "tappe#plebiscito": {
+    "tp-plebiscito-orari": "064aad137e"
+  },
+  "tappe#palazzo-reale": {
+    "tp-palazzoreale-restauri": "ae1a86bc05"
+  },
+  "tappe#san-carlo": {
+    "tp-sancarlo-orari": "37ea2ec7f0"
+  },
+  "tappe#castel-nuovo": {
+    "tp-castelnuovo-orari": "7043321f1f"
+  },
+  "tappe#toledo": {
+    "tp-toledo-orari": "ed56d6515f"
+  },
+  "tappe#galleria-borbonica": {
+    "tp-borbonica-orari": "8a456646e1",
+    "tp-borbonica-prezzi": "82a7890433"
+  },
+  "tappe#monte-echia": {
+    "tp-echia-orari": "8d2c9cb463",
+    "tp-echia-prezzi": "af68397908",
+    "tp-echia-recinzione": "0dd4baa7e9"
+  },
+  "tappe#borgo-marinari": {
+    "tp-borgo-orari": "45ef91683f"
+  },
+  "tappe#lungomare": {
+    "tp-lungomare-orari": "00c1bda401",
+    "vil-caracciolo": "c8fd6023fa"
+  },
+  "tappe#dadom": {
+    "tp-dadom-orari": "dea837f539",
+    "tp-dadom-prezzi": "363e706ba3"
+  },
+  "tappe#sant-elmo": {
+    "tp-santelmo-orari": "bf2ca804eb"
+  },
+  "tappe#san-martino": {
+    "tp-sanmartino-orari": "dad9948f0a",
+    "tp-sanmartino-prezzi": "35425459f1"
+  },
+  "tappe#floridiana": {
+    "tp-floridiana-orari": "794202de37",
+    "tp-floridiana-prezzi": "bd609975ec"
+  },
+  "tappe#pedamentina": {
+    "tp-pedamentina-orari": "b882cfba48"
+  },
+  "tappe#catacombe": {
+    "tp-catacombe-orari": "a56fac6625",
+    "tp-catacombe-prezzi": "51ebf9ff1a",
+    "tp-catacombe-note": "fef33ec483"
+  },
+  "tappe#sanita": {
+    "tp-sanita-orari": "0658ee5892"
+  },
+  "tappe#fontanelle": {
+    "tp-fontanelle-orari": "a1055961ee",
+    "tp-fontanelle-prezzi": "cb053abd26"
+  },
+  "tappe#capodimonte": {
+    "tp-capodimonte-orari": "257ccbd98e",
+    "tp-capodimonte-prezzi": "c7172bd803"
+  },
+  "tappe#virgilio": {
+    "tp-virgilio-orari": "041877bc05",
+    "tp-virgilio-prezzi": "fefc54e740"
+  },
+  "tappe#marechiaro": {
+    "tp-marechiaro-orari": "349d5386da"
+  },
+  "tappe#gaiola": {
+    "tp-gaiola-orari": "b425ffca06",
+    "tp-gaiola-prenota": "c3bef7bc61"
+  },
+  "tappe#parco-virgiliano": {
+    "tp-virgiliano-orari": "b3ae22ceb6"
+  },
+  "tappe#citta-scienza": {
+    "tp-cittascienza-orari": "79257e04f1",
+    "tp-cittascienza-estate": "1a91b61206"
+  },
+  "tappe#pompei": {
+    "tp-pompei-biglietti": "2b3802c0bd",
+    "tp-pompei-viaggio": "a5d4f8487d"
+  },
+  "tappe#ercolano": {
+    "tp-ercolano-viaggio": "3009b07dc0",
+    "tp-ercolano-prezzi": "abb7e10d39",
+    "tp-campolieto": "49c180cb3f"
+  },
+  "tappe#vesuvio": {
+    "tp-vesuvio-orari": "52e395f806",
+    "tp-vesuvio-prezzi": "a3ffdafddf",
+    "tp-vesuvio-viaggio": "8d64c49923"
+  },
+  "tappe#capri": {
+    "tp-capri-viaggio": "3a535a7886",
+    "tp-capri-orari": "83f124f379",
+    "tp-isole-2027": "2eba5fd02a"
+  },
+  "tappe#ischia": {
+    "tp-ischia-viaggio": "7ff262c43c",
+    "tp-ischia-orari": "2a4281b93e",
+    "tp-isole-2027": "2eba5fd02a"
+  },
+  "tappe#procida": {
+    "tp-procida-viaggio": "6d6d80d858",
+    "tp-isole-2027": "2eba5fd02a"
+  },
+  "tappe#san-domenico": {
+    "tp-sandomenico-prezzi": "236abfba32",
+    "tp-sandomenico-orari": "0d70b4fea0"
+  },
+  "tappe#purgatorio-ad-arco": {
+    "tp-purgatorio-orari": "1a6a5db811",
+    "tp-purgatorio-prezzi": "8ba613e5d7"
+  },
+  "tappe#girolamini": {
+    "tp-girolamini-orari": "f3f283ac3a",
+    "tp-girolamini-prezzi": "34215f9bf2"
+  },
+  "tappe#tetti-duomo": {
+    "tp-tetti-orari": "3343c0c622",
+    "tp-tetti-prezzi": "45ae30b644"
+  },
+  "tappe#filangieri": {
+    "tp-filangieri-orari": "c0a53f3173"
+  },
+  "tappe#san-giovanni-a-carbonara": {
+    "tp-carbonara-orari": "b7a10cb78d"
+  },
+  "tappe#mercato-porta-nolana": {
+    "tp-mercati-orari": "64478f6a9c"
+  },
+  "tappe#pignasecca": {
+    "tp-mercati-orari": "64478f6a9c"
+  },
+  "tappe#ventaglieri": {
+    "tp-ventaglieri-orari": "5484c60364"
+  },
+  "tappe#villa-pignatelli": {
+    "tp-pignatelli-orari": "7d3b1a9c36",
+    "tp-pignatelli-prezzi": "f86db30802"
+  },
+  "tappe#parco-mascagna": {
+    "tp-parchi-orari": "a09971a23b"
+  },
+  "tappe#camaldoli": {
+    "tp-parchi-orari": "a09971a23b"
+  },
+  "tappe#parco-poggio": {
+    "tp-parchi-orari": "a09971a23b"
+  },
+  "tappe#orto-botanico": {
+    "tp-orto-orari": "dc013ec32c"
+  },
+  "tappe#sant-antonio-posillipo": {
+    "tp-belvedere-orari": "94bba85a3a"
+  },
+  "tappe#via-petrarca": {
+    "tp-belvedere-orari": "94bba85a3a"
+  },
+  "tappe#palazzo-donn-anna": {
+    "tp-donnanna-orari": "a6c2b6c6db"
+  },
+  "tappe#mostra-oltremare": {
+    "tp-oltremare-orari": "ebb8c1ff7d",
+    "tp-oltremare-prezzi": "7f65926e3c"
+  },
+  "tappe#caserta": {
+    "tp-caserta-orari": "63861202e7",
+    "tp-caserta-viaggio": "176e03628b"
+  },
+  "tappe#pietrarsa": {
+    "tp-pietrarsa-orari": "1c22f9d2a9",
+    "tp-pietrarsa-viaggio": "3b004977d5"
+  },
+  "tappe#sorrento": {
+    "tp-sorrento-viaggio": "37c5392034",
+    "tp-correale-orari": "4f3a73eb99"
+  }
+}

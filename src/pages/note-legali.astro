@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHead from '../components/PageHead.astro';
+import { SITO } from '../config/sito';
+import { getCollection } from 'astro:content';
+const foto = await getCollection('foto');
+const t = SITO.titolare;
+---
+<Base title="Note legali" description={`Note legali di ${SITO.nome}, sito indipendente di itinerari in città: marchi dei rispettivi titolari, fonti, foto e mappe con licenza libera.`}>
+  <PageHead kicker="Trasparenza" title="Note legali" lead="Chi ha fatto cosa: foto, mappe, dati e font di altri, con autori e licenze. Le regole d'uso del sito sono nei termini d'uso." aggiornato={SITO.versioneTermini} />
+  <section class="section">
+    <div class="wrap prose">
+      <p>Le regole per usare il sito (informazioni, responsabilità, diritti) sono nella pagina <a href="/termini/">termini d'uso</a>; i dati personali nella pagina <a href="/privacy/">privacy</a>.</p>
+      <h2>Sito indipendente</h2>
+      <p><strong>{SITO.nome}</strong> è un sito <strong>indipendente</strong>. Non è gestito, approvato o sponsorizzato dai musei, dai luoghi, dai locali, dagli organizzatori degli eventi o dalle aziende di trasporto di cui parla.</p>
+      <h2>Marchi</h2>
+      <p>I nomi dei luoghi, dei locali, degli eventi e delle aziende citati, e i loro marchi, appartengono ai rispettivi titolari. Li usiamo solo per indicare di chi e di cosa parliamo, senza loghi e senza grafica ufficiale.</p>
+      <h2>Informazioni</h2>
+      <p>Le informazioni vengono dalle fonti indicate in ogni pagina e nella pagina <a href="/fonti/">fonti</a>, con la data del controllo. Possono cambiare: per decisioni importanti (viaggi, prenotazioni, gite) verifica sempre sui siti ufficiali.</p>
+      <h2>Foto</h2>
+      <p>Usiamo solo foto con licenza libera, prese da Wikimedia Commons. Le foto con licenza CC BY-SA, ritagliate da noi, restano con la stessa licenza.</p>
+      <ul class="crediti">
+        {foto.map(f => <li><strong>{f.data.didascalia}</strong> Foto di {f.data.autore}, {f.data.licenza}{f.data.modifiche && `, ${f.data.modifiche.toLowerCase()}`}. <a href={f.data.fonte} rel="noopener">Pagina di origine</a>.</li>)}
+      </ul>
+      <h2>Mappe, dati e font</h2>
+      <p>Mappe disegnate da noi (si spostano e si ingrandiscono, funzionano senza rete) con dati © collaboratori di <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a>, licenza ODbL. Le salite per i tempi a piedi vengono dal modello del terreno Copernicus; gli orari dei bus dai dati aperti dell'ANM. Font Barlow, Archivo e IBM Plex Mono, licenza SIL Open Font License (<a href="/fonts/LICENSE-Barlow.txt">testo</a>, <a href="/fonts/LICENSE-Archivo.txt">testo</a>, <a href="/fonts/LICENSE-IBM-Plex-Mono.txt">testo</a>).</p>
+      <h2>Contatti</h2>
+      <p>Titolare del sito: <strong>{t.nome || '[da completare]'}</strong> · {t.email || '[email da completare]'}.</p>
+    </div>
+  </section>
+</Base>
+<style>.prose h2 { font-size: 1.5rem; margin-top: 2rem; } .prose h2:first-of-type { margin-top: .5rem; }</style>
