@@ -1,0 +1,184 @@
+<title>Loghi ad arco</title>
+<meta name="description" content="Secondo giro di loghi per Nextstop: quattro archi pieni e colorati, provati nei risultati di ricerca, sul telefono e nella scheda del browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&display=swap">
+<style>
+/* Secondo giro: l'arco, ma pieno e colorato. Su un elenco di risultati l'icona è un cerchietto di 26–28 px:
+   vince un colore forte e una forma semplice che resta leggibile ritagliata in tondo.
+   Animazioni più lunghe e morbide (700–1000 ms): è il momento del marchio, non un pulsante. */
+:root {
+  --carta: #F7F6F2; --pietra: #ECEAE4; --riga: #D6D2C8;
+  --inchiostro: #16181D; --inchiostro-2: #575B65;
+  --notte: #142039; --tufo: #E0A51B;
+  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Bodoni Moda", "Bodoni 72", Didot, Georgia, serif;
+  --morbido: cubic-bezier(0.22, 1, 0.36, 1); --dolce: cubic-bezier(0.65, 0, 0.35, 1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --carta: #0F1524; --pietra: #19223A; --riga: #2B3653; --inchiostro: #EEF0F4; --inchiostro-2: #A8AFBD; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --carta: #0F1524; --pietra: #19223A; --riga: #2B3653; --inchiostro: #EEF0F4; --inchiostro-2: #A8AFBD; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--carta); color: var(--inchiostro); font: 400 1rem/1.55 var(--sans); padding: 1.5rem 16px 5rem; }
+.wrap { max-width: 64rem; margin-inline: auto; display: grid; gap: 2.5rem; }
+h1 { margin: 0; font: 800 clamp(2.4rem, 11vw, 4rem)/.92 var(--sans); font-variation-settings: "wdth" 70; letter-spacing: -.015em; }
+.intro { display: grid; gap: .75rem; max-width: 40rem; }
+.intro p { margin: 0; color: var(--inchiostro-2); }
+.intro a { color: inherit; }
+.direzione { display: grid; gap: 1.25rem; padding-top: 2rem; border-top: 1px solid var(--riga); }
+.direzione__testa { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: .75rem 1rem; }
+.direzione h2 { margin: 0; font: 600 2rem/1 var(--serif); }
+.direzione__idea { margin: 0; max-width: 40rem; color: var(--inchiostro-2); }
+.riproduci { min-height: 44px; padding: .5rem 1.1rem; border-radius: 999px; border: 1.5px solid var(--inchiostro); background: transparent; color: var(--inchiostro); font: 600 .95rem/1 var(--sans); cursor: pointer; transition: transform 150ms var(--morbido); }
+.riproduci:active { transform: scale(.96); }
+.palco { display: grid; grid-template-columns: minmax(0, 1fr); gap: .75rem; }
+@media (min-width: 760px) { .palco { grid-template-columns: 1fr 1fr; } }
+.grande { display: grid; place-items: center; gap: 1rem; padding: 2rem 1rem 1.5rem; border-radius: 22px; background: var(--pietra); }
+.grande .tessera { width: min(46vw, 11rem); filter: drop-shadow(0 10px 22px rgba(10, 16, 34, .22)); }
+.firma { display: inline-flex; align-items: center; gap: .65rem; }
+.firma .tessera { width: 40px; }
+.firma span { font: 800 2rem/1 var(--sans); font-variation-settings: "wdth" 70; letter-spacing: -.01em; }
+
+/* Elenco di risultati di ricerca (neutro, solo per provare l'icona alla sua misura vera) */
+.risultati { display: grid; gap: 0; border-radius: 22px; overflow: hidden; border: 1px solid var(--riga); }
+.risultati__fondo { padding: 1rem 1.1rem 1.1rem; display: grid; gap: 1.1rem; font-family: Arial, Helvetica, sans-serif; }
+.risultati__fondo--chiaro { background: #FFFFFF; color: #1F1F1F; --sec: #4D5156; --tit: #1A0DAB; --vuoto: #E3E3E3; }
+.risultati__fondo--scuro { background: #1F1F1F; color: #E3E3E3; --sec: #BDC1C6; --tit: #99C3FF; --vuoto: #3C4043; }
+.risultato { display: grid; gap: .3rem; }
+.risultato__testa { display: flex; align-items: center; gap: .65rem; }
+.risultato__icona { width: 28px; height: 28px; border-radius: 50%; overflow: hidden; flex: none; display: grid; place-items: center; background: var(--vuoto); box-shadow: 0 0 0 1px rgba(0,0,0,.06); }
+.risultato__icona .tessera { width: 28px; height: 28px; }
+.risultato__nome { font-size: .875rem; line-height: 1.25; }
+.risultato__nome small { display: block; color: var(--sec); font-size: .75rem; }
+.risultato__titolo { color: var(--tit); font-size: 1.15rem; line-height: 1.3; text-decoration: none; }
+.risultato__testo { margin: 0; color: var(--sec); font-size: .85rem; line-height: 1.5; }
+.barra { height: .6rem; border-radius: 4px; background: var(--vuoto); }
+.etichetta-prova { font: 600 .75rem/1 var(--sans); padding: .55rem 1.1rem 0; color: var(--inchiostro-2); background: var(--pietra); }
+
+.piccoli { display: flex; flex-wrap: wrap; align-items: end; gap: 1.25rem 2rem; padding: 1rem 1.1rem; border-radius: 16px; background: var(--pietra); }
+.telefono { display: grid; grid-template-columns: repeat(4, 3rem); gap: .9rem .8rem; padding: 1rem; border-radius: 22px; background: linear-gradient(160deg, #3A4A6B, #1C2436); }
+.app { display: grid; justify-items: center; gap: .3rem; font: 500 .62rem/1 system-ui, sans-serif; color: #fff; }
+.app i { width: 3rem; height: 3rem; border-radius: 22.5%; background: rgba(255,255,255,.22); display: block; }
+.app .tessera { width: 3rem; height: 3rem; border-radius: 22.5%; }
+.scheda-browser { display: inline-flex; align-items: center; gap: .5rem; padding: .5rem .85rem; border-radius: 10px 10px 0 0; background: var(--carta); font: 500 .8rem/1 system-ui, sans-serif; color: var(--inchiostro); }
+.scheda-browser .tessera { width: 16px; height: 16px; }
+.didascalia { font-size: .75rem; color: var(--inchiostro-2); margin-top: .35rem; }
+.tessera { display: block; overflow: visible; }
+
+/* ---------- Animazioni (morbide; ferme con «riduci movimento») ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .anima .entra { animation: entra 700ms var(--morbido) both; }
+  .anima .sorge { animation: sorge 1000ms var(--morbido) both; animation-delay: 250ms; }
+  .anima .scende { animation: scende 800ms var(--morbido) both; }
+  .anima .ombra { transform-box: fill-box; transform-origin: center; animation: ombra 800ms var(--morbido) both; }
+  .anima .apre { transform-box: fill-box; transform-origin: 50% 100%; animation: apre 600ms var(--morbido) both; animation-delay: 550ms; }
+  .anima .sale-1 { animation: sale 700ms var(--morbido) both; }
+  .anima .sale-2 { animation: sale 700ms var(--morbido) both; animation-delay: 180ms; }
+  .anima .accende { animation: accende 600ms var(--dolce) both; animation-delay: 750ms; }
+  .anima .disegna { stroke-dasharray: 1; animation: disegna 900ms var(--dolce) both; }
+  .anima .arriva { animation: arriva 800ms var(--morbido) both; animation-delay: 600ms; }
+  @keyframes entra { from { opacity: 0; } }
+  @keyframes sorge { from { transform: translateY(10px); } }
+  @keyframes scende { from { opacity: 0; transform: translateY(-9px); } }
+  @keyframes ombra { from { opacity: 0; transform: scale(.4); } }
+  @keyframes apre { from { transform: scaleY(0); } }
+  @keyframes sale { from { opacity: 0; transform: translateY(7px); } }
+  @keyframes accende { from { opacity: 0; } }
+  @keyframes disegna { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  @keyframes arriva { from { opacity: 0; transform: translateY(13px); } 35% { opacity: 1; } }
+}
+.tema { position: fixed; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); min-height: 44px; padding: 0 14px; border-radius: 999px; border: 0; background: #26272B; color: #fff; font: 600 13px/1 system-ui, sans-serif; cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,.28); }
+:focus-visible { outline: 3px solid var(--tufo); outline-offset: 3px; }
+</style>
+
+<div class="wrap">
+  <header class="intro">
+    <h1>L'arco, pieno e colorato</h1>
+    <p>Hai scelto l'arco: qui ce ne sono quattro versioni. Nei risultati di ricerca l'icona è un cerchietto di pochi pixel accanto al nome del sito: per farsi notare servono un colore pieno e una forma che si capisce anche così piccola.</p>
+    <p>Ogni logo è provato in un elenco di risultati (in chiaro e in scuro, tra due risultati finti senza nome), sul telefono e nella scheda del browser. Tocca «Guarda l'animazione».</p>
+  </header>
+  <div id="direzioni" style="display:grid;gap:2.5rem"></div>
+</div>
+<button class="tema" id="tema" type="button">Tema: automatico</button>
+
+<script>
+(() => {
+  const N = '#142039', Y = '#E0A51B', P = '#F3EAD2', M = '#27426F';
+  // Ogni logo è una «tessera» quadrata 48 × 48 (angoli tondi), con il disegno dentro il cerchio centrale:
+  // così resta intero anche quando viene ritagliato in tondo.
+  const LOGHI = {
+    alba: {
+      nome: "L'arco con il sole",
+      idea: "Una finestra ad arco e, dentro, il sole che sorge: la giornata che comincia, il viaggio. Caldo e allegro, si nota subito anche piccolissimo.",
+      svg: u => `<rect width="48" height="48" rx="12" fill="${N}"/>
+        <clipPath id="${u}c"><path d="M11 41V22a13 13 0 0 1 26 0v19z"/></clipPath>
+        <path class="entra" d="M11 41V22a13 13 0 0 1 26 0v19z" fill="${P}"/>
+        <g clip-path="url(#${u}c)"><g class="sorge"><circle cx="24" cy="32.5" r="9" fill="${Y}"/></g><rect x="9" y="32.5" width="30" height="10" fill="${M}"/></g>`
+    },
+    segnaposto: {
+      nome: 'Il segnaposto',
+      idea: "Il segno dei posti sulle mappe, che tutti riconoscono, con dentro una porta ad arco: un luogo in cui entrare. Dice «itinerari» senza bisogno di parole.",
+      svg: u => `<rect width="48" height="48" rx="12" fill="${N}"/>
+        <ellipse class="ombra" cx="24" cy="44" rx="7.5" ry="1.7" fill="#000" opacity=".35"/>
+        <g class="scende"><path d="M24 42.5C24 42.5 9 30 9 20a15 15 0 0 1 30 0C39 30 24 42.5 24 42.5z" fill="${Y}"/>
+        <path class="apre" d="M18.7 28.5v-7.3a5.3 5.3 0 0 1 10.6 0v7.3z" fill="${N}"/></g>`
+    },
+    portici: {
+      nome: 'I portici',
+      idea: "Due archi, come i portici di una città: quello dove sei e il prossimo, acceso di giallo. È il «next stop» del nome, ma fatto di architettura.",
+      svg: u => `<rect width="48" height="48" rx="12" fill="${N}"/>
+        <rect x="8" y="39.2" width="32" height="2.6" rx="1.3" fill="${P}" opacity=".6" class="entra"/>
+        <path class="sale-1" d="M8.4 37V23.5a6.6 6.6 0 0 1 13.2 0V37z" fill="none" stroke="${P}" stroke-width="2.8" opacity=".75"/>
+        <g class="sale-2"><path d="M25 37V23.5a8 8 0 0 1 16 0V37z" fill="none" stroke="${P}" stroke-width="2.8" opacity=".75" transform="translate(-.6 0)"/>
+        <path class="accende" d="M24.4 37V23.5a8 8 0 0 1 16 0V37z" fill="${Y}"/></g>`
+    },
+    soglia: {
+      nome: "L'arco sulla soglia",
+      idea: "Il primo arco che ti è piaciuto, ma su un tondo giallo pieno e con il tratto più grosso: il punto entra dalla porta. Il più semplice dei quattro.",
+      svg: u => `<rect width="48" height="48" rx="12" fill="${Y}"/>
+        <path class="disegna" pathLength="1" d="M13 40V23a11 11 0 0 1 22 0v17" fill="none" stroke="${N}" stroke-width="6" stroke-linecap="round"/>
+        <circle class="arriva" cx="24" cy="32.5" r="4.8" fill="${N}"/>`
+    }
+  };
+  let n = 0;
+  const tessera = (k, extra = '') => { const u = `t${n++}`; return `<svg class="tessera" viewBox="0 0 48 48" aria-hidden="true" ${extra}>${LOGHI[k].svg(u)}</svg>`; };
+  const finto = () => `<div class="risultato" aria-hidden="true"><div class="risultato__testa"><span class="risultato__icona"></span><span style="display:grid;gap:.35rem;width:9rem"><span class="barra"></span><span class="barra" style="width:70%"></span></span></div><span class="barra" style="height:.9rem;width:85%;margin-top:.3rem"></span><span class="barra" style="width:95%"></span></div>`;
+  const nostro = k => `<div class="risultato"><div class="risultato__testa"><span class="risultato__icona">${tessera(k)}</span><span class="risultato__nome">Nextstop<small>https://nextstop-alpha.vercel.app › napoli</small></span></div>
+    <a class="risultato__titolo" href="#">Due giorni a Napoli: l'itinerario con i tempi veri</a>
+    <p class="risultato__testo">Il primo giorno al Museo Archeologico e nel centro storico, il secondo al Vomero, in via Toledo e sul mare: 15 tappe, 75 minuti a piedi.</p></div>`;
+
+  document.getElementById('direzioni').innerHTML = Object.keys(LOGHI).map(k => {
+    const l = LOGHI[k];
+    return `<section class="direzione" aria-labelledby="h-${k}">
+      <div class="direzione__testa"><h2 id="h-${k}">${l.nome}</h2><button class="riproduci" type="button">Guarda l'animazione</button></div>
+      <p class="direzione__idea">${l.idea}</p>
+      <div class="palco">
+        <div class="grande">${tessera(k)}<span class="firma">${tessera(k)}<span>Nextstop</span></span></div>
+        <div class="risultati">
+          <div class="etichetta-prova">Così in un elenco di risultati, alla misura vera</div>
+          <div class="risultati__fondo risultati__fondo--chiaro">${finto()}${nostro(k)}${finto()}</div>
+          <div class="risultati__fondo risultati__fondo--scuro">${nostro(k)}</div>
+        </div>
+      </div>
+      <div class="piccoli">
+        <div><div class="telefono" aria-hidden="true">${'<span class="app"><i></i>&nbsp;</span>'.repeat(5)}<span class="app">${tessera(k)}Nextstop</span>${'<span class="app"><i></i>&nbsp;</span>'.repeat(2)}</div><p class="didascalia">Sul telefono</p></div>
+        <div><span class="scheda-browser">${tessera(k)}Nextstop · Due giorni</span><p class="didascalia">Nella scheda del browser (16 px)</p></div>
+      </div>
+    </section>`;
+  }).join('');
+
+  const anima = sez => { sez.querySelectorAll('.grande .tessera').forEach(s => { s.classList.remove('anima'); void s.getBoundingClientRect(); s.classList.add('anima'); }); };
+  document.querySelectorAll('.direzione').forEach(sez => {
+    sez.querySelector('.riproduci').addEventListener('click', () => anima(sez));
+    new IntersectionObserver((v, o) => { if (v[0].isIntersecting) { anima(sez); o.disconnect(); } }, { threshold: .5 }).observe(sez.querySelector('.grande'));
+  });
+
+  const temi = [null, 'light', 'dark'], nomi = ['Tema: automatico', 'Tema: chiaro', 'Tema: scuro'];
+  let t = 0;
+  const imposta = () => { if (temi[t]) document.documentElement.dataset.theme = temi[t]; else delete document.documentElement.dataset.theme; document.getElementById('tema').textContent = nomi[t]; };
+  try { const q = new URLSearchParams(location.search).get('tema'); if (q) { t = temi.indexOf(q); imposta(); } } catch (e) {}
+  document.getElementById('tema').addEventListener('click', () => { t = (t + 1) % 3; imposta(); });
+})();
+</script>
