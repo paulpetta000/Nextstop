@@ -13,6 +13,7 @@ Lo stato giorno per giorno è in `PROGRESS.md`; qui solo l'ordine delle cose.
 ## Fase 1 · Identità e home «wow» (prossima sessione · Opus, effort extra)
 L'obiettivo di Enrico: un sito che sembri da 5.000 euro.
 1. **Specifica della home**: chi arriva (turista, anche italiano nella sua città), cosa deve capire e trovare nei primi 5 secondi, cosa c'è sotto.
+   Fatta e approvata il 06/10/2026: `specifiche/home-e-identita.md`, con i **racconti** degli itinerari pronti (idea di Enrico: pagine da leggere, stile MUDD, che Google trova) e il compositore da rifare.
 2. **Due proposte di direzione grafica**: home e pagina «Itinerari a Napoli», con i dati veri e le nostre foto, in chiaro e in scuro, viste da telefono.
    Ispirazioni: `design/ispirazioni/` (MUDD) e `.claude/skills/design-sito/references/ispirazioni.md`. Lo stile «Orario» di oggi si può cambiare.
 3. **Logo**: 3 o 4 direzioni (SVG, chiaro e scuro, anche piccolo come icona del telefono).

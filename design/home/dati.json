@@ -1,0 +1,2690 @@
+{
+ "conteggi": {
+  "tappeCitta": 51,
+  "gite": 9,
+  "locali": 32,
+  "cucine": {
+   "dolci": 6,
+   "pesce": 14,
+   "pasta": 16,
+   "pizza": 11,
+   "carne": 11,
+   "napoletana": 8,
+   "strada": 4
+  }
+ },
+ "zone": {
+  "centro-storico": "Centro storico",
+  "toledo-plebiscito": "Toledo e Plebiscito",
+  "lungomare": "Lungomare e Santa Lucia",
+  "vomero": "Vomero",
+  "sanita-capodimonte": "Sanità e Capodimonte",
+  "posillipo-bagnoli": "Posillipo e Bagnoli",
+  "vesuvio": "Pompei, Ercolano e Vesuvio",
+  "isole": "Le isole",
+  "dintorni": "Caserta, Sorrento e dintorni"
+ },
+ "tappe": [
+  {
+   "id": "borgo-marinari",
+   "nome": "Borgo Marinari e Castel dell'Ovo",
+   "breve": "Borgo Marinari",
+   "tipo": "citta",
+   "zona": "lungomare",
+   "durata": 30,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "sera",
+   "generi": [
+    "passeggiata",
+    "mare",
+    "castello"
+   ],
+   "xy": [
+    1911.6,
+    1012.9
+   ],
+   "foto": "tp-borgo-marinari"
+  },
+  {
+   "id": "camaldoli",
+   "nome": "Parco dei Camaldoli",
+   "breve": "Camaldoli",
+   "tipo": "citta",
+   "zona": "vomero",
+   "durata": 90,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "parco",
+    "panorama"
+   ],
+   "xy": [
+    992.2,
+    304.7
+   ],
+   "foto": "tp-camaldoli"
+  },
+  {
+   "id": "capodimonte",
+   "nome": "Museo e Real Bosco di Capodimonte",
+   "breve": "Capodimonte",
+   "tipo": "citta",
+   "zona": "sanita-capodimonte",
+   "durata": 150,
+   "chiuso": [
+    "mer"
+   ],
+   "ingresso": "in-parte",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "museo",
+    "parco",
+    "panorama"
+   ],
+   "xy": [
+    1947,
+    154.7
+   ],
+   "foto": "tp-capodimonte"
+  },
+  {
+   "id": "capri",
+   "nome": "Capri",
+   "breve": "Capri",
+   "tipo": "gita",
+   "zona": "isole",
+   "durata": 480,
+   "chiuso": [],
+   "ingresso": "in-parte",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "mare",
+    "panorama"
+   ],
+   "xy": [
+    2017.2,
+    813.4
+   ],
+   "foto": "tp-capri"
+  },
+  {
+   "id": "caserta",
+   "nome": "Reggia di Caserta",
+   "breve": "Caserta",
+   "tipo": "gita",
+   "zona": "dintorni",
+   "durata": 420,
+   "chiuso": [
+    "mar"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "museo",
+    "parco"
+   ],
+   "xy": [
+    2327,
+    465.6
+   ],
+   "foto": "tp-caserta"
+  },
+  {
+   "id": "castel-nuovo",
+   "nome": "Castel Nuovo (Maschio Angioino)",
+   "breve": "Castel Nuovo",
+   "tipo": "citta",
+   "zona": "toledo-plebiscito",
+   "durata": 60,
+   "chiuso": [
+    "dom"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "castello",
+    "museo"
+   ],
+   "xy": [
+    1979.3,
+    781.2
+   ],
+   "foto": "tp-castel-nuovo"
+  },
+  {
+   "id": "catacombe",
+   "nome": "Catacombe di San Gennaro",
+   "breve": "Catacombe",
+   "tipo": "citta",
+   "zona": "sanita-capodimonte",
+   "durata": 60,
+   "chiuso": [
+    "mer"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "obbligatoria",
+   "momento": "pomeriggio",
+   "generi": [
+    "sotterraneo",
+    "archeologia"
+   ],
+   "xy": [
+    1889.9,
+    196.4
+   ],
+   "foto": "tp-catacombe"
+  },
+  {
+   "id": "citta-scienza",
+   "nome": "Città della Scienza",
+   "breve": "Città della Scienza",
+   "tipo": "citta",
+   "zona": "posillipo-bagnoli",
+   "durata": 120,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "museo"
+   ],
+   "xy": [
+    668.2,
+    1536.9
+   ],
+   "foto": "tp-citta-scienza"
+  },
+  {
+   "id": "dadom",
+   "nome": "Acquario e museo Darwin-Dohrn",
+   "breve": "Acquario",
+   "tipo": "citta",
+   "zona": "lungomare",
+   "durata": 75,
+   "chiuso": [
+    "lun"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "museo"
+   ],
+   "xy": [
+    1695.1,
+    916.1
+   ],
+   "foto": "tp-dadom"
+  },
+  {
+   "id": "duomo",
+   "nome": "Duomo e Tesoro di San Gennaro",
+   "breve": "Duomo",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 75,
+   "chiuso": [],
+   "ingresso": "in-parte",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "chiesa",
+    "museo"
+   ],
+   "xy": [
+    2087.1,
+    477.2
+   ],
+   "foto": "tp-duomo"
+  },
+  {
+   "id": "ercolano",
+   "nome": "Ercolano",
+   "breve": "Ercolano",
+   "tipo": "gita",
+   "zona": "vesuvio",
+   "durata": 300,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "archeologia"
+   ],
+   "xy": [
+    2327,
+    465.6
+   ],
+   "foto": "tp-ercolano"
+  },
+  {
+   "id": "filangieri",
+   "nome": "Museo Filangieri",
+   "breve": "Museo Filangieri",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 60,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "quando-vuoi",
+   "generi": [
+    "museo"
+   ],
+   "xy": [
+    2118.1,
+    554.6
+   ],
+   "foto": "tp-filangieri"
+  },
+  {
+   "id": "floridiana",
+   "nome": "Villa Floridiana e il museo della ceramica",
+   "breve": "Floridiana",
+   "tipo": "citta",
+   "zona": "vomero",
+   "durata": 60,
+   "chiuso": [],
+   "ingresso": "in-parte",
+   "prenotazione": "no",
+   "momento": "pomeriggio",
+   "generi": [
+    "parco",
+    "museo",
+    "panorama"
+   ],
+   "xy": [
+    1590.9,
+    719.5
+   ],
+   "foto": "floridiana-viale"
+  },
+  {
+   "id": "fontanelle",
+   "nome": "Cimitero delle Fontanelle",
+   "breve": "Fontanelle",
+   "tipo": "citta",
+   "zona": "sanita-capodimonte",
+   "durata": 40,
+   "chiuso": [
+    "mer"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "obbligatoria",
+   "momento": "pomeriggio",
+   "generi": [
+    "sotterraneo"
+   ],
+   "xy": [
+    1750.2,
+    336
+   ],
+   "foto": "tp-fontanelle"
+  },
+  {
+   "id": "gaiola",
+   "nome": "Parco sommerso della Gaiola",
+   "breve": "Gaiola",
+   "tipo": "citta",
+   "zona": "posillipo-bagnoli",
+   "durata": 240,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "obbligatoria",
+   "momento": "mattina",
+   "generi": [
+    "mare",
+    "parco"
+   ],
+   "xy": [
+    887.7,
+    1806.7
+   ],
+   "foto": "tp-gaiola"
+  },
+  {
+   "id": "galleria-borbonica",
+   "nome": "Galleria Borbonica",
+   "breve": "Galleria Borbonica",
+   "tipo": "citta",
+   "zona": "toledo-plebiscito",
+   "durata": 60,
+   "chiuso": [
+    "lun",
+    "mar",
+    "mer",
+    "gio"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "obbligatoria",
+   "momento": "quando-vuoi",
+   "generi": [
+    "sotterraneo"
+   ],
+   "xy": [
+    1874.5,
+    854.9
+   ],
+   "foto": "tp-galleria-borbonica"
+  },
+  {
+   "id": "girolamini",
+   "nome": "Girolamini, chiesa, museo e biblioteca",
+   "breve": "Girolamini",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 60,
+   "chiuso": [
+    "lun"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "chiesa",
+    "museo"
+   ],
+   "xy": [
+    2094.4,
+    487.8
+   ],
+   "foto": "tp-girolamini"
+  },
+  {
+   "id": "ischia",
+   "nome": "Ischia",
+   "breve": "Ischia",
+   "tipo": "gita",
+   "zona": "isole",
+   "durata": 480,
+   "chiuso": [],
+   "ingresso": "in-parte",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "mare",
+    "castello"
+   ],
+   "xy": [
+    2017.2,
+    813.4
+   ],
+   "foto": "tp-ischia"
+  },
+  {
+   "id": "lungomare",
+   "nome": "Il lungomare: via Partenope, via Caracciolo e Villa Comunale",
+   "breve": "Lungomare",
+   "tipo": "citta",
+   "zona": "lungomare",
+   "durata": 60,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "sera",
+   "generi": [
+    "passeggiata",
+    "mare",
+    "parco"
+   ],
+   "xy": [
+    1896.8,
+    978.7
+   ],
+   "xyFine": [
+    1477.7,
+    1002
+   ],
+   "foto": "via-partenope"
+  },
+  {
+   "id": "madre",
+   "nome": "Museo Madre",
+   "breve": "Madre",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 75,
+   "chiuso": [
+    "mar"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "pomeriggio",
+   "generi": [
+    "museo"
+   ],
+   "xy": [
+    2081.7,
+    417.5
+   ],
+   "foto": "tp-madre"
+  },
+  {
+   "id": "mann",
+   "nome": "Museo Archeologico Nazionale",
+   "breve": "MANN",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 120,
+   "chiuso": [
+    "mar"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "pomeriggio",
+   "generi": [
+    "museo",
+    "archeologia"
+   ],
+   "xy": [
+    1947.3,
+    463.8
+   ],
+   "foto": "tp-mann"
+  },
+  {
+   "id": "marechiaro",
+   "nome": "Marechiaro",
+   "breve": "Marechiaro",
+   "tipo": "citta",
+   "zona": "posillipo-bagnoli",
+   "durata": 60,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "sera",
+   "generi": [
+    "mare",
+    "passeggiata",
+    "panorama"
+   ],
+   "xy": [
+    951.8,
+    1753.3
+   ],
+   "foto": "tp-marechiaro"
+  },
+  {
+   "id": "mercato-porta-nolana",
+   "nome": "Il mercato di Porta Nolana",
+   "breve": "Porta Nolana",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 30,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "cibo",
+    "passeggiata"
+   ],
+   "xy": [
+    2238.4,
+    525.5
+   ],
+   "foto": "tp-porta-nolana"
+  },
+  {
+   "id": "monte-echia",
+   "nome": "Monte Echia, il belvedere di Pizzofalcone",
+   "breve": "Monte Echia",
+   "tipo": "citta",
+   "zona": "lungomare",
+   "durata": 30,
+   "chiuso": [],
+   "ingresso": "in-parte",
+   "prenotazione": "no",
+   "momento": "sera",
+   "generi": [
+    "panorama"
+   ],
+   "xy": [
+    1902.2,
+    949.2
+   ],
+   "foto": "vista-monte-echia"
+  },
+  {
+   "id": "mostra-oltremare",
+   "nome": "Il parco della Mostra d'Oltremare",
+   "breve": "Mostra d'Oltremare",
+   "tipo": "citta",
+   "zona": "posillipo-bagnoli",
+   "durata": 60,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "parco"
+   ],
+   "xy": [
+    972,
+    1123.2
+   ],
+   "foto": "tp-mostra-oltremare"
+  },
+  {
+   "id": "napoli-sotterranea",
+   "nome": "Napoli Sotterranea",
+   "breve": "Napoli Sotterranea",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 80,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "pomeriggio",
+   "generi": [
+    "sotterraneo",
+    "archeologia"
+   ],
+   "xy": [
+    2060.2,
+    510.4
+   ],
+   "foto": "tp-napoli-sotterranea"
+  },
+  {
+   "id": "orto-botanico",
+   "nome": "Orto Botanico",
+   "breve": "Orto Botanico",
+   "tipo": "citta",
+   "zona": "sanita-capodimonte",
+   "durata": 75,
+   "chiuso": [
+    "sab",
+    "dom"
+   ],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "parco",
+    "museo"
+   ],
+   "xy": [
+    2166.3,
+    293
+   ],
+   "foto": "tp-orto-botanico"
+  },
+  {
+   "id": "palazzo-donn-anna",
+   "nome": "Palazzo Donn'Anna, da fuori",
+   "breve": "Palazzo Donn'Anna",
+   "tipo": "citta",
+   "zona": "posillipo-bagnoli",
+   "durata": 15,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "quando-vuoi",
+   "generi": [
+    "mare",
+    "passeggiata"
+   ],
+   "xy": [
+    1338.9,
+    1201.3
+   ],
+   "foto": "tp-donn-anna"
+  },
+  {
+   "id": "palazzo-reale",
+   "nome": "Palazzo Reale",
+   "breve": "Palazzo Reale",
+   "tipo": "citta",
+   "zona": "toledo-plebiscito",
+   "durata": 60,
+   "chiuso": [
+    "mer"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "quando-vuoi",
+   "generi": [
+    "museo"
+   ],
+   "xy": [
+    1924.1,
+    841.6
+   ],
+   "foto": "tp-palazzo-reale"
+  },
+  {
+   "id": "parco-mascagna",
+   "nome": "Parco Mascagna",
+   "breve": "Parco Mascagna",
+   "tipo": "citta",
+   "zona": "vomero",
+   "durata": 30,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "quando-vuoi",
+   "generi": [
+    "parco"
+   ],
+   "xy": [
+    1572.7,
+    561.3
+   ]
+  },
+  {
+   "id": "parco-poggio",
+   "nome": "Parco del Poggio",
+   "breve": "Parco del Poggio",
+   "tipo": "citta",
+   "zona": "sanita-capodimonte",
+   "durata": 45,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "pomeriggio",
+   "generi": [
+    "parco",
+    "panorama"
+   ],
+   "xy": [
+    1759.6,
+    159.8
+   ],
+   "foto": "tp-poggio"
+  },
+  {
+   "id": "parco-virgiliano",
+   "nome": "Parco Virgiliano",
+   "breve": "Parco Virgiliano",
+   "tipo": "citta",
+   "zona": "posillipo-bagnoli",
+   "durata": 45,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "sera",
+   "generi": [
+    "parco",
+    "panorama"
+   ],
+   "xy": [
+    784.8,
+    1642.1
+   ],
+   "foto": "tp-parco-virgiliano"
+  },
+  {
+   "id": "pedamentina",
+   "nome": "La Pedamentina, da San Martino in discesa",
+   "breve": "Pedamentina",
+   "tipo": "citta",
+   "zona": "vomero",
+   "durata": 30,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "pomeriggio",
+   "generi": [
+    "passeggiata",
+    "panorama"
+   ],
+   "xy": [
+    1777.8,
+    660.9
+   ],
+   "xyFine": [
+    1830.1,
+    630.3
+   ]
+  },
+  {
+   "id": "pietrarsa",
+   "nome": "Museo ferroviario di Pietrarsa",
+   "breve": "Pietrarsa",
+   "tipo": "gita",
+   "zona": "dintorni",
+   "durata": 180,
+   "chiuso": [
+    "lun"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "museo"
+   ],
+   "xy": [
+    2327,
+    465.6
+   ],
+   "foto": "tp-pietrarsa"
+  },
+  {
+   "id": "pignasecca",
+   "nome": "Il mercato della Pignasecca",
+   "breve": "Pignasecca",
+   "tipo": "citta",
+   "zona": "toledo-plebiscito",
+   "durata": 30,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "cibo",
+    "passeggiata"
+   ],
+   "xy": [
+    1896.8,
+    613
+   ],
+   "foto": "tp-pignasecca"
+  },
+  {
+   "id": "pio-monte",
+   "nome": "Pio Monte della Misericordia",
+   "breve": "Pio Monte",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 30,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "quando-vuoi",
+   "generi": [
+    "museo",
+    "chiesa"
+   ],
+   "xy": [
+    2111.5,
+    492.5
+   ],
+   "foto": "tp-pio-monte"
+  },
+  {
+   "id": "plebiscito",
+   "nome": "Piazza del Plebiscito e Galleria Umberto I",
+   "breve": "Plebiscito",
+   "tipo": "citta",
+   "zona": "toledo-plebiscito",
+   "durata": 30,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "sera",
+   "generi": [
+    "passeggiata"
+   ],
+   "xy": [
+    1919.7,
+    818.5
+   ],
+   "foto": "tp-plebiscito"
+  },
+  {
+   "id": "pompei",
+   "nome": "Pompei",
+   "breve": "Pompei",
+   "tipo": "gita",
+   "zona": "vesuvio",
+   "durata": 480,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "consigliata",
+   "momento": "mattina",
+   "generi": [
+    "archeologia"
+   ],
+   "xy": [
+    2327,
+    465.6
+   ],
+   "foto": "tp-pompei"
+  },
+  {
+   "id": "procida",
+   "nome": "Procida",
+   "breve": "Procida",
+   "tipo": "gita",
+   "zona": "isole",
+   "durata": 420,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "mare",
+    "passeggiata"
+   ],
+   "xy": [
+    2017.2,
+    813.4
+   ],
+   "foto": "tp-procida"
+  },
+  {
+   "id": "purgatorio-ad-arco",
+   "nome": "Purgatorio ad Arco, chiesa e ipogeo",
+   "breve": "Purgatorio ad Arco",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 45,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "quando-vuoi",
+   "generi": [
+    "chiesa",
+    "sotterraneo"
+   ],
+   "xy": [
+    2032.9,
+    518.4
+   ],
+   "foto": "tp-purgatorio"
+  },
+  {
+   "id": "san-carlo",
+   "nome": "Teatro di San Carlo",
+   "breve": "San Carlo",
+   "tipo": "citta",
+   "zona": "toledo-plebiscito",
+   "durata": 30,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "consigliata",
+   "momento": "quando-vuoi",
+   "generi": [
+    "teatro"
+   ],
+   "xy": [
+    1925.4,
+    807.2
+   ],
+   "foto": "tp-san-carlo"
+  },
+  {
+   "id": "san-domenico",
+   "nome": "San Domenico Maggiore e le arche aragonesi",
+   "breve": "San Domenico",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 60,
+   "chiuso": [],
+   "ingresso": "in-parte",
+   "prenotazione": "no",
+   "momento": "quando-vuoi",
+   "generi": [
+    "chiesa",
+    "museo"
+   ],
+   "xy": [
+    2010.8,
+    564.4
+   ],
+   "foto": "tp-san-domenico"
+  },
+  {
+   "id": "san-giovanni-a-carbonara",
+   "nome": "San Giovanni a Carbonara",
+   "breve": "San Giovanni a Carb.",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 40,
+   "chiuso": [],
+   "ingresso": "in-parte",
+   "prenotazione": "no",
+   "momento": "quando-vuoi",
+   "generi": [
+    "chiesa"
+   ],
+   "xy": [
+    2107.5,
+    397.5
+   ],
+   "foto": "tp-carbonara"
+  },
+  {
+   "id": "san-lorenzo",
+   "nome": "San Lorenzo Maggiore e gli scavi",
+   "breve": "San Lorenzo",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 60,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "pomeriggio",
+   "generi": [
+    "chiesa",
+    "archeologia",
+    "sotterraneo"
+   ],
+   "xy": [
+    2067.1,
+    507.8
+   ],
+   "foto": "tp-san-lorenzo"
+  },
+  {
+   "id": "san-martino",
+   "nome": "Certosa e Museo di San Martino",
+   "breve": "San Martino",
+   "tipo": "citta",
+   "zona": "vomero",
+   "durata": 90,
+   "chiuso": [
+    "mar"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "museo",
+    "chiesa",
+    "panorama"
+   ],
+   "xy": [
+    1784.7,
+    670.2
+   ],
+   "foto": "tp-san-martino"
+  },
+  {
+   "id": "sanita",
+   "nome": "Rione Sanità e Basilica della Sanità",
+   "breve": "Rione Sanità",
+   "tipo": "citta",
+   "zona": "sanita-capodimonte",
+   "durata": 60,
+   "chiuso": [],
+   "ingresso": "in-parte",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "passeggiata",
+    "chiesa"
+   ],
+   "xy": [
+    1925.9,
+    321.8
+   ],
+   "foto": "tp-sanita"
+  },
+  {
+   "id": "sansevero",
+   "nome": "Cappella Sansevero",
+   "breve": "Cappella Sansevero",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 45,
+   "chiuso": [
+    "mar"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "obbligatoria",
+   "momento": "quando-vuoi",
+   "generi": [
+    "museo",
+    "chiesa"
+   ],
+   "xy": [
+    2020.1,
+    548.2
+   ]
+  },
+  {
+   "id": "sant-antonio-posillipo",
+   "nome": "Il belvedere di Sant'Antonio a Posillipo",
+   "breve": "Sant'Antonio",
+   "tipo": "citta",
+   "zona": "posillipo-bagnoli",
+   "durata": 20,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "pomeriggio",
+   "generi": [
+    "panorama"
+   ],
+   "xy": [
+    1394.9,
+    1019.3
+   ]
+  },
+  {
+   "id": "sant-elmo",
+   "nome": "Castel Sant'Elmo",
+   "breve": "Sant'Elmo",
+   "tipo": "citta",
+   "zona": "vomero",
+   "durata": 60,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "pomeriggio",
+   "generi": [
+    "castello",
+    "panorama",
+    "museo"
+   ],
+   "xy": [
+    1758.6,
+    650.3
+   ],
+   "foto": "tp-sant-elmo"
+  },
+  {
+   "id": "santa-chiara",
+   "nome": "Santa Chiara e il chiostro maiolicato",
+   "breve": "Santa Chiara",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 40,
+   "chiuso": [],
+   "ingresso": "in-parte",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "chiesa",
+    "museo"
+   ],
+   "xy": [
+    1993.1,
+    598.6
+   ],
+   "foto": "tp-santa-chiara"
+  },
+  {
+   "id": "sorrento",
+   "nome": "Sorrento",
+   "breve": "Sorrento",
+   "tipo": "gita",
+   "zona": "dintorni",
+   "durata": 480,
+   "chiuso": [],
+   "ingresso": "in-parte",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "passeggiata",
+    "museo"
+   ],
+   "xy": [
+    2327,
+    465.6
+   ],
+   "foto": "tp-sorrento"
+  },
+  {
+   "id": "spaccanapoli",
+   "nome": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+   "breve": "Spaccanapoli",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 60,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "passeggiata",
+    "chiesa"
+   ],
+   "xy": [
+    1967.2,
+    597.7
+   ],
+   "xyFine": [
+    2060,
+    512
+   ],
+   "foto": "tp-spaccanapoli"
+  },
+  {
+   "id": "tetti-duomo",
+   "nome": "I tetti del Duomo",
+   "breve": "Tetti del Duomo",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 60,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "obbligatoria",
+   "momento": "quando-vuoi",
+   "generi": [
+    "panorama",
+    "chiesa"
+   ],
+   "xy": [
+    2087.1,
+    477.2
+   ]
+  },
+  {
+   "id": "toledo",
+   "nome": "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+   "breve": "Via Toledo",
+   "tipo": "citta",
+   "zona": "toledo-plebiscito",
+   "durata": 60,
+   "chiuso": [],
+   "ingresso": "in-parte",
+   "prenotazione": "no",
+   "momento": "quando-vuoi",
+   "generi": [
+    "passeggiata"
+   ],
+   "xy": [
+    1913.6,
+    807.8
+   ],
+   "xyFine": [
+    1940.9,
+    551.5
+   ],
+   "foto": "tp-toledo"
+  },
+  {
+   "id": "tribunali",
+   "nome": "Via dei Tribunali: pizza e cibo di strada",
+   "breve": "Via dei Tribunali",
+   "tipo": "citta",
+   "zona": "centro-storico",
+   "durata": 45,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "quando-vuoi",
+   "generi": [
+    "cibo",
+    "passeggiata"
+   ],
+   "xy": [
+    2016.9,
+    530
+   ],
+   "foto": "tp-tribunali"
+  },
+  {
+   "id": "ventaglieri",
+   "nome": "Parco dei Ventaglieri",
+   "breve": "Parco Ventaglieri",
+   "tipo": "citta",
+   "zona": "toledo-plebiscito",
+   "durata": 30,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "quando-vuoi",
+   "generi": [
+    "parco"
+   ],
+   "xy": [
+    1841.3,
+    538.4
+   ],
+   "foto": "tp-ventaglieri"
+  },
+  {
+   "id": "vesuvio",
+   "nome": "Vesuvio, il Gran Cono",
+   "breve": "Vesuvio",
+   "tipo": "gita",
+   "zona": "vesuvio",
+   "durata": 480,
+   "chiuso": [],
+   "ingresso": "pagamento",
+   "prenotazione": "obbligatoria",
+   "momento": "mattina",
+   "generi": [
+    "panorama"
+   ],
+   "xy": [
+    2327,
+    465.6
+   ],
+   "foto": "tp-vesuvio"
+  },
+  {
+   "id": "via-petrarca",
+   "nome": "Il belvedere di via Petrarca",
+   "breve": "Via Petrarca",
+   "tipo": "citta",
+   "zona": "posillipo-bagnoli",
+   "durata": 20,
+   "chiuso": [],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "pomeriggio",
+   "generi": [
+    "panorama"
+   ],
+   "xy": [
+    1311.2,
+    1150.7
+   ]
+  },
+  {
+   "id": "villa-pignatelli",
+   "nome": "Villa Pignatelli, museo e giardino",
+   "breve": "Villa Pignatelli",
+   "tipo": "citta",
+   "zona": "lungomare",
+   "durata": 75,
+   "chiuso": [
+    "mar"
+   ],
+   "ingresso": "pagamento",
+   "prenotazione": "no",
+   "momento": "quando-vuoi",
+   "generi": [
+    "museo",
+    "parco"
+   ],
+   "xy": [
+    1659.6,
+    862.9
+   ],
+   "foto": "tp-villa-pignatelli"
+  },
+  {
+   "id": "virgilio",
+   "nome": "Parco delle Tombe di Virgilio e Leopardi",
+   "breve": "Tomba di Virgilio",
+   "tipo": "citta",
+   "zona": "posillipo-bagnoli",
+   "durata": 30,
+   "chiuso": [
+    "mar"
+   ],
+   "ingresso": "gratis",
+   "prenotazione": "no",
+   "momento": "mattina",
+   "generi": [
+    "parco",
+    "archeologia"
+   ],
+   "xy": [
+    1388.7,
+    969.2
+   ],
+   "foto": "tp-virgilio"
+  }
+ ],
+ "locali": [
+  {
+   "id": "bellavia",
+   "nome": "Pasticceria Bellavia",
+   "breve": "Bellavia",
+   "zona": "vomero",
+   "cucina": [
+    "dolci"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "sfogliatella",
+    "baba",
+    "pastiera",
+    "caffe"
+   ],
+   "xy": [
+    1574.2,
+    695.3
+   ]
+  },
+  {
+   "id": "bersagliera",
+   "nome": "La Bersagliera",
+   "breve": "La Bersagliera",
+   "zona": "lungomare",
+   "cucina": [
+    "pesce",
+    "pasta"
+   ],
+   "fascia": 0,
+   "piatti": [],
+   "xy": [
+    1912.4,
+    984
+   ]
+  },
+  {
+   "id": "brandi",
+   "nome": "Pizzeria Brandi",
+   "breve": "Brandi",
+   "zona": "toledo-plebiscito",
+   "cucina": [
+    "pizza"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "margherita",
+    "marinara"
+   ],
+   "xy": [
+    1885,
+    826.7
+   ]
+  },
+  {
+   "id": "caffettiera",
+   "nome": "Gran Caffè La Caffettiera",
+   "breve": "La Caffettiera",
+   "zona": "lungomare",
+   "cucina": [
+    "dolci"
+   ],
+   "fascia": 0,
+   "piatti": [],
+   "xy": [
+    1799.4,
+    881.3
+   ]
+  },
+  {
+   "id": "calabritto",
+   "nome": "Terrazza Calabritto",
+   "breve": "Terrazza Calabritto",
+   "zona": "lungomare",
+   "cucina": [
+    "pesce",
+    "pasta",
+    "carne"
+   ],
+   "fascia": 3,
+   "piatti": [],
+   "xy": [
+    1792.5,
+    917.5
+   ]
+  },
+  {
+   "id": "cantinella",
+   "nome": "La Cantinella",
+   "breve": "La Cantinella",
+   "zona": "lungomare",
+   "cucina": [
+    "pesce",
+    "pasta",
+    "carne"
+   ],
+   "fascia": 2,
+   "piatti": [
+    "vongole"
+   ],
+   "xy": [
+    1955.9,
+    925.9
+   ]
+  },
+  {
+   "id": "chalet-ciro",
+   "nome": "Chalet Ciro",
+   "breve": "Chalet Ciro",
+   "zona": "lungomare",
+   "cucina": [
+    "dolci"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "sfogliatella",
+    "baba"
+   ],
+   "xy": [
+    1434.2,
+    1048.6
+   ]
+  },
+  {
+   "id": "chitarra",
+   "nome": "Osteria La Chitarra",
+   "breve": "La Chitarra",
+   "zona": "centro-storico",
+   "cucina": [
+    "napoletana",
+    "pasta",
+    "carne",
+    "pesce"
+   ],
+   "fascia": 2,
+   "piatti": [
+    "ragu",
+    "polpette",
+    "parmigiana",
+    "baccala"
+   ],
+   "xy": [
+    2043.3,
+    627
+   ]
+  },
+  {
+   "id": "cicciotto",
+   "nome": "Cicciotto a Marechiaro",
+   "breve": "Cicciotto",
+   "zona": "posillipo-bagnoli",
+   "cucina": [
+    "pesce",
+    "pasta"
+   ],
+   "fascia": 3,
+   "piatti": [
+    "vongole",
+    "frittura",
+    "cuoppo"
+   ],
+   "xy": [
+    970.4,
+    1737.3
+   ]
+  },
+  {
+   "id": "cinquanta-kalo",
+   "nome": "50 Kalò",
+   "breve": "50 Kalò",
+   "zona": "lungomare",
+   "cucina": [
+    "pizza"
+   ],
+   "fascia": 1,
+   "piatti": [
+    "margherita",
+    "marinara",
+    "frittatina",
+    "montanara"
+   ],
+   "xy": [
+    1433,
+    1012.2
+   ]
+  },
+  {
+   "id": "concettina",
+   "nome": "Concettina ai Tre Santi",
+   "breve": "Concettina",
+   "zona": "sanita-capodimonte",
+   "cucina": [
+    "pizza",
+    "strada"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "montanara"
+   ],
+   "xy": [
+    1976.3,
+    367.7
+   ]
+  },
+  {
+   "id": "da-michele",
+   "nome": "L'Antica Pizzeria da Michele",
+   "breve": "Da Michele",
+   "zona": "centro-storico",
+   "cucina": [
+    "pizza"
+   ],
+   "fascia": 1,
+   "piatti": [
+    "margherita",
+    "marinara"
+   ],
+   "xy": [
+    2162.1,
+    538.2
+   ]
+  },
+  {
+   "id": "di-costanzo",
+   "nome": "Pasticceria Di Costanzo",
+   "breve": "Di Costanzo",
+   "zona": "centro-storico",
+   "cucina": [
+    "dolci"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "sfogliatella",
+    "caffe"
+   ],
+   "xy": [
+    2000.5,
+    417.7
+   ]
+  },
+  {
+   "id": "di-matteo",
+   "nome": "Antica Pizzeria Di Matteo",
+   "breve": "Di Matteo",
+   "zona": "centro-storico",
+   "cucina": [
+    "pizza",
+    "strada"
+   ],
+   "fascia": 1,
+   "piatti": [
+    "margherita",
+    "marinara",
+    "pizza-fritta",
+    "frittatina"
+   ],
+   "xy": [
+    2072.3,
+    504
+   ]
+  },
+  {
+   "id": "fenestella",
+   "nome": "'A Fenestella",
+   "breve": "A Fenestella",
+   "zona": "posillipo-bagnoli",
+   "cucina": [
+    "pesce",
+    "pasta"
+   ],
+   "fascia": 0,
+   "piatti": [],
+   "xy": [
+    964.9,
+    1746.6
+   ]
+  },
+  {
+   "id": "gesu-vecchio",
+   "nome": "La Locanda Gesù Vecchio",
+   "breve": "Gesù Vecchio",
+   "zona": "centro-storico",
+   "cucina": [
+    "napoletana",
+    "pasta",
+    "carne",
+    "pesce"
+   ],
+   "fascia": 2,
+   "piatti": [
+    "genovese",
+    "ragu",
+    "pasta-patate",
+    "polpette",
+    "baccala",
+    "pastiera"
+   ],
+   "xy": [
+    2057.5,
+    594.8
+   ]
+  },
+  {
+   "id": "gobbetto",
+   "nome": "Osteria Il Gobbetto",
+   "breve": "Il Gobbetto",
+   "zona": "toledo-plebiscito",
+   "cucina": [
+    "napoletana",
+    "pasta",
+    "pesce"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "pasta-patate",
+    "vongole",
+    "baccala"
+   ],
+   "xy": [
+    1905.5,
+    799.2
+   ]
+  },
+  {
+   "id": "gorizia",
+   "nome": "Pizzeria Gorizia 1916",
+   "breve": "Gorizia 1916",
+   "zona": "vomero",
+   "cucina": [
+    "pizza",
+    "napoletana",
+    "pasta",
+    "pesce",
+    "carne"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "margherita",
+    "marinara",
+    "pizza-fritta",
+    "genovese",
+    "ragu",
+    "vongole"
+   ],
+   "xy": [
+    1623.9,
+    611.4
+   ]
+  },
+  {
+   "id": "hosteria-toledo",
+   "nome": "Hosteria Toledo",
+   "breve": "Hosteria Toledo",
+   "zona": "toledo-plebiscito",
+   "cucina": [
+    "napoletana",
+    "pasta",
+    "carne",
+    "pesce"
+   ],
+   "fascia": 2,
+   "piatti": [
+    "genovese",
+    "ragu",
+    "pasta-patate",
+    "vongole",
+    "baccala",
+    "frittura",
+    "baba",
+    "caffe"
+   ],
+   "xy": [
+    1902.5,
+    732.6
+   ]
+  },
+  {
+   "id": "macellegria",
+   "nome": "Macellegria",
+   "breve": "Macellegria",
+   "zona": "posillipo-bagnoli",
+   "cucina": [
+    "carne"
+   ],
+   "fascia": 0,
+   "piatti": [],
+   "xy": [
+    886.6,
+    1170.9
+   ]
+  },
+  {
+   "id": "meatin",
+   "nome": "Meatin",
+   "breve": "Meatin",
+   "zona": "vomero",
+   "cucina": [
+    "carne",
+    "pasta"
+   ],
+   "fascia": 2,
+   "piatti": [],
+   "xy": [
+    1356.9,
+    779
+   ]
+  },
+  {
+   "id": "nennella",
+   "nome": "Trattoria da Nennella",
+   "breve": "Nennella",
+   "zona": "toledo-plebiscito",
+   "cucina": [
+    "napoletana",
+    "pasta"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "pasta-patate"
+   ],
+   "xy": [
+    1933.3,
+    652.3
+   ]
+  },
+  {
+   "id": "petrucci-posillipo",
+   "nome": "Palazzo Petrucci Pizzeria, Posillipo",
+   "breve": "Petrucci Posillipo",
+   "zona": "posillipo-bagnoli",
+   "cucina": [
+    "pizza"
+   ],
+   "fascia": 1,
+   "piatti": [
+    "margherita",
+    "marinara",
+    "frittatina"
+   ],
+   "xy": [
+    1344.6,
+    1166
+   ]
+  },
+  {
+   "id": "pignatelli",
+   "nome": "Ostaria Pignatelli",
+   "breve": "Pignatelli",
+   "zona": "lungomare",
+   "cucina": [
+    "napoletana",
+    "pasta",
+    "carne",
+    "pesce"
+   ],
+   "fascia": 2,
+   "piatti": [
+    "genovese",
+    "pasta-patate",
+    "polpette",
+    "baccala"
+   ],
+   "xy": [
+    1692.6,
+    889.3
+   ]
+  },
+  {
+   "id": "pintauro",
+   "nome": "Pasticceria Pintauro",
+   "breve": "Pintauro",
+   "zona": "toledo-plebiscito",
+   "cucina": [
+    "dolci"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "sfogliatella",
+    "baba",
+    "pastiera"
+   ],
+   "xy": [
+    1908.1,
+    769.7
+   ]
+  },
+  {
+   "id": "poppella",
+   "nome": "Pasticceria Poppella",
+   "breve": "Poppella",
+   "zona": "sanita-capodimonte",
+   "cucina": [
+    "dolci"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "pastiera"
+   ],
+   "xy": [
+    1989.9,
+    367.7
+   ]
+  },
+  {
+   "id": "port-alba",
+   "nome": "Antica Pizzeria Port'Alba",
+   "breve": "Port'Alba",
+   "zona": "centro-storico",
+   "cucina": [
+    "pizza",
+    "pasta",
+    "pesce",
+    "carne"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "baba"
+   ],
+   "xy": [
+    1966,
+    546.6
+   ]
+  },
+  {
+   "id": "salvo",
+   "nome": "Pizzeria Salvo",
+   "breve": "Salvo",
+   "zona": "lungomare",
+   "cucina": [
+    "pizza"
+   ],
+   "fascia": 1,
+   "piatti": [
+    "margherita",
+    "marinara"
+   ],
+   "xy": [
+    1751.9,
+    902.2
+   ]
+  },
+  {
+   "id": "scialuppa",
+   "nome": "La Scialuppa",
+   "breve": "La Scialuppa",
+   "zona": "lungomare",
+   "cucina": [
+    "pesce",
+    "pasta",
+    "pizza"
+   ],
+   "fascia": 0,
+   "piatti": [],
+   "xy": [
+    1910.9,
+    1007.8
+   ]
+  },
+  {
+   "id": "starita",
+   "nome": "Pizzeria Starita a Materdei",
+   "breve": "Starita",
+   "zona": "sanita-capodimonte",
+   "cucina": [
+    "pizza",
+    "strada"
+   ],
+   "fascia": 1,
+   "piatti": [
+    "margherita",
+    "marinara",
+    "montanara",
+    "frittatina"
+   ],
+   "xy": [
+    1876.2,
+    401.3
+   ]
+  },
+  {
+   "id": "tufo",
+   "nome": "Tufò Trattoria",
+   "breve": "Tufò",
+   "zona": "posillipo-bagnoli",
+   "cucina": [
+    "napoletana",
+    "pasta",
+    "carne",
+    "pesce"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "pasta-patate",
+    "genovese",
+    "ragu",
+    "polpette"
+   ],
+   "xy": [
+    1250.2,
+    1313.2
+   ]
+  },
+  {
+   "id": "zia-esterina",
+   "nome": "Antica Pizza Fritta da Zia Esterina Sorbillo",
+   "breve": "Zia Esterina",
+   "zona": "toledo-plebiscito",
+   "cucina": [
+    "strada"
+   ],
+   "fascia": 0,
+   "piatti": [
+    "pizza-fritta"
+   ],
+   "xy": [
+    1907.9,
+    810.7
+   ]
+  }
+ ],
+ "martedi": {
+  "data": "2026-10-13",
+  "avvisi": [
+   {
+    "tipo": "chiusa",
+    "id": "mann",
+    "giorno": "mar"
+   },
+   {
+    "tipo": "chiusa",
+    "id": "sansevero",
+    "giorno": "mar"
+   }
+  ],
+  "voci": [
+   {
+    "id": "mann",
+    "chiusa": true
+   },
+   {
+    "id": "tribunali"
+   },
+   {
+    "id": "sansevero",
+    "chiusa": true
+   },
+   {
+    "id": "santa-chiara"
+   },
+   {
+    "id": "spaccanapoli"
+   },
+   {
+    "id": "san-lorenzo"
+   },
+   {
+    "id": "duomo"
+   }
+  ]
+ },
+ "itinerari": [
+  {
+   "id": "mezza-giornata",
+   "nome": "Mezza giornata nel centro storico",
+   "giorni": [
+    {
+     "inizio": 570,
+     "fine": 773,
+     "visite": 190,
+     "spostamenti": 13,
+     "metri": 890,
+     "avvisi": [],
+     "voci": [
+      {
+       "tipo": "tappa",
+       "id": "sansevero",
+       "nome": "Cappella Sansevero",
+       "inizio": 570,
+       "fine": 615
+      },
+      {
+       "tipo": "tratto",
+       "min": 6,
+       "metri": 410,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "santa-chiara",
+       "nome": "Santa Chiara e il chiostro maiolicato",
+       "inizio": 621,
+       "fine": 661
+      },
+      {
+       "tipo": "tratto",
+       "min": 3,
+       "metri": 230,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "spaccanapoli",
+       "nome": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+       "inizio": 664,
+       "fine": 724
+      },
+      {
+       "tipo": "tratto",
+       "min": 4,
+       "metri": 250,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "tribunali",
+       "nome": "Via dei Tribunali: pizza e cibo di strada",
+       "inizio": 728,
+       "fine": 773
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "un-giorno",
+   "nome": "Un giorno: dal Vomero al centro storico",
+   "giorni": [
+    {
+     "inizio": 570,
+     "fine": 1022,
+     "visite": 400,
+     "spostamenti": 52,
+     "metri": 3440,
+     "avvisi": [],
+     "voci": [
+      {
+       "tipo": "tappa",
+       "id": "sant-elmo",
+       "nome": "Castel Sant'Elmo",
+       "inizio": 570,
+       "fine": 630
+      },
+      {
+       "tipo": "tratto",
+       "min": 3,
+       "metri": 180,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "san-martino",
+       "nome": "Certosa e Museo di San Martino",
+       "inizio": 633,
+       "fine": 723
+      },
+      {
+       "tipo": "tratto",
+       "min": 1,
+       "metri": 80,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "pedamentina",
+       "nome": "La Pedamentina, da San Martino in discesa",
+       "inizio": 724,
+       "fine": 754
+      },
+      {
+       "tipo": "tratto",
+       "min": 14,
+       "metri": 970,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "spaccanapoli",
+       "nome": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+       "inizio": 768,
+       "fine": 828
+      },
+      {
+       "tipo": "tratto",
+       "min": 4,
+       "metri": 250,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "tribunali",
+       "nome": "Via dei Tribunali: pizza e cibo di strada",
+       "inizio": 832,
+       "fine": 877
+      },
+      {
+       "tipo": "tratto",
+       "min": 3,
+       "metri": 160,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "sansevero",
+       "nome": "Cappella Sansevero",
+       "inizio": 880,
+       "fine": 925
+      },
+      {
+       "tipo": "tratto",
+       "min": 6,
+       "metri": 410,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "santa-chiara",
+       "nome": "Santa Chiara e il chiostro maiolicato",
+       "inizio": 931,
+       "fine": 971
+      },
+      {
+       "tipo": "tratto",
+       "min": 21,
+       "metri": 1390,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "plebiscito",
+       "nome": "Piazza del Plebiscito e Galleria Umberto I",
+       "inizio": 992,
+       "fine": 1022
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "due-giorni",
+   "nome": "Due giorni a Napoli",
+   "giorni": [
+    {
+     "inizio": 570,
+     "fine": 1042,
+     "visite": 445,
+     "spostamenti": 27,
+     "metri": 1730,
+     "avvisi": [],
+     "voci": [
+      {
+       "tipo": "tappa",
+       "id": "mann",
+       "nome": "Museo Archeologico Nazionale",
+       "inizio": 570,
+       "fine": 690
+      },
+      {
+       "tipo": "tratto",
+       "min": 10,
+       "metri": 630,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "tribunali",
+       "nome": "Via dei Tribunali: pizza e cibo di strada",
+       "inizio": 700,
+       "fine": 745
+      },
+      {
+       "tipo": "tratto",
+       "min": 3,
+       "metri": 160,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "sansevero",
+       "nome": "Cappella Sansevero",
+       "inizio": 748,
+       "fine": 793
+      },
+      {
+       "tipo": "tratto",
+       "min": 6,
+       "metri": 410,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "santa-chiara",
+       "nome": "Santa Chiara e il chiostro maiolicato",
+       "inizio": 799,
+       "fine": 839
+      },
+      {
+       "tipo": "tratto",
+       "min": 3,
+       "metri": 230,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "spaccanapoli",
+       "nome": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+       "inizio": 842,
+       "fine": 902
+      },
+      {
+       "tipo": "tratto",
+       "min": 1,
+       "metri": 50,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "san-lorenzo",
+       "nome": "San Lorenzo Maggiore e gli scavi",
+       "inizio": 903,
+       "fine": 963
+      },
+      {
+       "tipo": "tratto",
+       "min": 4,
+       "metri": 250,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "duomo",
+       "nome": "Duomo e Tesoro di San Gennaro",
+       "inizio": 967,
+       "fine": 1042
+      }
+     ]
+    },
+    {
+     "inizio": 570,
+     "fine": 1008,
+     "visite": 390,
+     "spostamenti": 48,
+     "metri": 2990,
+     "avvisi": [],
+     "voci": [
+      {
+       "tipo": "tappa",
+       "id": "sant-elmo",
+       "nome": "Castel Sant'Elmo",
+       "inizio": 570,
+       "fine": 630
+      },
+      {
+       "tipo": "tratto",
+       "min": 3,
+       "metri": 180,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "san-martino",
+       "nome": "Certosa e Museo di San Martino",
+       "inizio": 633,
+       "fine": 723
+      },
+      {
+       "tipo": "tratto",
+       "min": 1,
+       "metri": 80,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "pedamentina",
+       "nome": "La Pedamentina, da San Martino in discesa",
+       "inizio": 724,
+       "fine": 754
+      },
+      {
+       "tipo": "tratto",
+       "min": 15,
+       "metri": 1060,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "toledo",
+       "nome": "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+       "inizio": 769,
+       "fine": 829
+      },
+      {
+       "tipo": "tratto",
+       "min": 1,
+       "metri": 90,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "plebiscito",
+       "nome": "Piazza del Plebiscito e Galleria Umberto I",
+       "inizio": 830,
+       "fine": 860
+      },
+      {
+       "tipo": "tratto",
+       "min": 2,
+       "metri": 130,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "palazzo-reale",
+       "nome": "Palazzo Reale",
+       "inizio": 862,
+       "fine": 922
+      },
+      {
+       "tipo": "tratto",
+       "min": 16,
+       "metri": 890,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "monte-echia",
+       "nome": "Monte Echia, il belvedere di Pizzofalcone",
+       "inizio": 938,
+       "fine": 968
+      },
+      {
+       "tipo": "tratto",
+       "min": 10,
+       "metri": 560,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "borgo-marinari",
+       "nome": "Borgo Marinari e Castel dell'Ovo",
+       "inizio": 978,
+       "fine": 1008
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "tre-giorni",
+   "nome": "Tre giorni a Napoli",
+   "giorni": [
+    {
+     "inizio": 570,
+     "fine": 1042,
+     "visite": 445,
+     "spostamenti": 27,
+     "metri": 1730,
+     "avvisi": [],
+     "voci": [
+      {
+       "tipo": "tappa",
+       "id": "mann",
+       "nome": "Museo Archeologico Nazionale",
+       "inizio": 570,
+       "fine": 690
+      },
+      {
+       "tipo": "tratto",
+       "min": 10,
+       "metri": 630,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "tribunali",
+       "nome": "Via dei Tribunali: pizza e cibo di strada",
+       "inizio": 700,
+       "fine": 745
+      },
+      {
+       "tipo": "tratto",
+       "min": 3,
+       "metri": 160,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "sansevero",
+       "nome": "Cappella Sansevero",
+       "inizio": 748,
+       "fine": 793
+      },
+      {
+       "tipo": "tratto",
+       "min": 6,
+       "metri": 410,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "santa-chiara",
+       "nome": "Santa Chiara e il chiostro maiolicato",
+       "inizio": 799,
+       "fine": 839
+      },
+      {
+       "tipo": "tratto",
+       "min": 3,
+       "metri": 230,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "spaccanapoli",
+       "nome": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+       "inizio": 842,
+       "fine": 902
+      },
+      {
+       "tipo": "tratto",
+       "min": 1,
+       "metri": 50,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "san-lorenzo",
+       "nome": "San Lorenzo Maggiore e gli scavi",
+       "inizio": 903,
+       "fine": 963
+      },
+      {
+       "tipo": "tratto",
+       "min": 4,
+       "metri": 250,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "duomo",
+       "nome": "Duomo e Tesoro di San Gennaro",
+       "inizio": 967,
+       "fine": 1042
+      }
+     ]
+    },
+    {
+     "inizio": 570,
+     "fine": 1008,
+     "visite": 390,
+     "spostamenti": 48,
+     "metri": 2990,
+     "avvisi": [],
+     "voci": [
+      {
+       "tipo": "tappa",
+       "id": "sant-elmo",
+       "nome": "Castel Sant'Elmo",
+       "inizio": 570,
+       "fine": 630
+      },
+      {
+       "tipo": "tratto",
+       "min": 3,
+       "metri": 180,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "san-martino",
+       "nome": "Certosa e Museo di San Martino",
+       "inizio": 633,
+       "fine": 723
+      },
+      {
+       "tipo": "tratto",
+       "min": 1,
+       "metri": 80,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "pedamentina",
+       "nome": "La Pedamentina, da San Martino in discesa",
+       "inizio": 724,
+       "fine": 754
+      },
+      {
+       "tipo": "tratto",
+       "min": 15,
+       "metri": 1060,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "toledo",
+       "nome": "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+       "inizio": 769,
+       "fine": 829
+      },
+      {
+       "tipo": "tratto",
+       "min": 1,
+       "metri": 90,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "plebiscito",
+       "nome": "Piazza del Plebiscito e Galleria Umberto I",
+       "inizio": 830,
+       "fine": 860
+      },
+      {
+       "tipo": "tratto",
+       "min": 2,
+       "metri": 130,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "palazzo-reale",
+       "nome": "Palazzo Reale",
+       "inizio": 862,
+       "fine": 922
+      },
+      {
+       "tipo": "tratto",
+       "min": 16,
+       "metri": 890,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "monte-echia",
+       "nome": "Monte Echia, il belvedere di Pizzofalcone",
+       "inizio": 938,
+       "fine": 968
+      },
+      {
+       "tipo": "tratto",
+       "min": 10,
+       "metri": 560,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "borgo-marinari",
+       "nome": "Borgo Marinari e Castel dell'Ovo",
+       "inizio": 978,
+       "fine": 1008
+      }
+     ]
+    },
+    {
+     "inizio": 570,
+     "fine": 1051,
+     "visite": 425,
+     "spostamenti": 56,
+     "metri": 3860,
+     "avvisi": [],
+     "voci": [
+      {
+       "tipo": "tappa",
+       "id": "capodimonte",
+       "nome": "Museo e Real Bosco di Capodimonte",
+       "inizio": 570,
+       "fine": 720
+      },
+      {
+       "tipo": "tratto",
+       "min": 15,
+       "metri": 1010,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "catacombe",
+       "nome": "Catacombe di San Gennaro",
+       "inizio": 735,
+       "fine": 795
+      },
+      {
+       "tipo": "tratto",
+       "min": 15,
+       "metri": 1060,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "sanita",
+       "nome": "Rione Sanità e Basilica della Sanità",
+       "inizio": 810,
+       "fine": 870
+      },
+      {
+       "tipo": "tratto",
+       "min": 16,
+       "metri": 1090,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "madre",
+       "nome": "Museo Madre",
+       "inizio": 886,
+       "fine": 961
+      },
+      {
+       "tipo": "tratto",
+       "min": 10,
+       "metri": 700,
+       "mezzi": [],
+       "scenario": "feriale"
+      },
+      {
+       "tipo": "tappa",
+       "id": "napoli-sotterranea",
+       "nome": "Napoli Sotterranea",
+       "inizio": 971,
+       "fine": 1051
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

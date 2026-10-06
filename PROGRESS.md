@@ -1,6 +1,12 @@
 # PROGRESS
 
-_Ultimo aggiornamento: 06/10/2026 (nascita del sito)._
+_Ultimo aggiornamento: 07/10/2026 (Fase 1: due proposte grafiche)._
+
+## Fase 1 in corso (ramo `grafica-home`)
+- Specifica `specifiche/home-e-identita.md` **approvata da Enrico il 06/10/2026**, con le sue aggiunte: il compositore si rifà tutto (restano dati e calcoli), le pagine «racconto» degli itinerari pronti (stile MUDD, per Google), il menu con le tre linee.
+- **Due proposte** con dati e foto veri, home + racconto «Due giorni» + compositore, chiaro e scuro: A «Rivista» https://claude.ai/artifact/37yToKfDMfL87fHKvGQDE3 · B «La linea» https://claude.ai/artifact/6DswrzVy5fXuW3rA5iZDDq.
+  Sorgenti in `design/home/` (`a.html`, `b.html`; `node design/home/dati.mjs` dopo la build, poi `node design/home/genera.mjs`), immagini di confronto in `design/home/immagini/`.
+- Prossimo: Enrico sceglie (anche mescolando) → logo in 3 o 4 direzioni → Figma (proposta scelta e logo animato) → `DESIGN.md` → costruzione della home.
 
 ## Dove siamo
 - **06/10/2026: il sito è nato** separando gli itinerari da Napoli a Vela (`specifiche/sito-itinerari-separazione.md`, approvata da Enrico).
@@ -16,7 +22,7 @@ _Ultimo aggiornamento: 06/10/2026 (nascita del sito)._
 3. Google Search Console: proprietà nuova per `nextstop-alpha.vercel.app` e invio di `/sitemap.xml`.
 
 ## Prossimi passi (in ordine: vedi `ROADMAP.md`)
-1. **Grafica e home «wow»** (Enrico, 06/10/2026: «un sito da 5.000 euro»): prima una specifica corta (chi arriva, cosa deve trovare in 5 secondi), poi **due proposte** (home e una pagina interna, con i dati veri e le foto che abbiamo) da far scegliere, poi il logo (3 o 4 direzioni). Figma è collegato ma con il piano gratuito si usa al massimo circa 20 volte al mese: proposte in HTML, in Figma solo quella scelta. Ispirazioni: `design/ispirazioni/` (MUDD) e `.claude/skills/design-sito/references/ispirazioni.md`. Modello Opus, effort extra.
+1. **Grafica e home «wow»**: vedi «Fase 1 in corso» qui sopra. Modello Opus, effort extra.
 2. **Curare meglio gli itinerari di Napoli**: più itinerari pronti, con nomi, e le correzioni del trascinamento (`da-risolvere.md`).
 3. **Città nuove**: una specifica per città (tappe con fonti, tempi da OpenStreetMap, mezzi pubblici). Consiglio: Napoli perfetta più 1 o 2 città, poi si allarga.
 4. **SEO** con claude-seo (deciso per Napoli a Vela il 06/10/2026), quando la struttura è finita; pagine fisse per gli itinerari pronti (il compositore ha il contenuto dopo il «#», Google non lo vede).

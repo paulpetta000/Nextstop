@@ -1,0 +1,778 @@
+<title>Proposta La linea</title>
+<meta name="description" content="Proposta B per Nextstop: home, racconto «Due giorni a Napoli» e compositore, con i dati veri.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Barlow:wght@400;500;600;700&display=swap">
+<style>
+/* Proposta B · «La linea». Idea: ogni itinerario è una linea, come sulla mappa di una metro: un colore e un numero,
+   le tappe sono fermate su una linea spessa, i tratti dicono quanti minuti e con che mezzo.
+   Barlow Condensed (nato dai cartelli stradali) per titoli e numeri, Barlow per il testo. Mare e notte per le bande scure. */
+:root {
+  --fondo: #F2F4F3; --superficie: #FFFFFF; --riga: #D3DADE;
+  --inchiostro: #0D1B26; --inchiostro-2: #4E5C67;
+  --mare: #0B3954; --su-mare: #F2F7FA; --su-mare-2: #A6C0CF;
+  --l-mezza: #F0B000; --l-uno: #D9402F; --l-due: #176FB0; --l-tre: #2C9757; --l-tuo: #0D1B26;
+  --su-linea: #FFFFFF; --su-gialla: #0D1B26;
+  --avviso: #FFF0C7; --su-avviso: #5A4300; --chiuso: #C42B20;
+  --cond: "Barlow Condensed", "Arial Narrow", "Roboto Condensed", sans-serif;
+  --sans: "Barlow", "Helvetica Neue", Arial, sans-serif;
+  --m100: 100ms; --m150: 150ms; --m200: 200ms; --m300: 300ms;
+  --esci: cubic-bezier(0.7, 0, 0.84, 0); --entra: cubic-bezier(0.16, 1, 0.3, 1);
+  --gutter: 20px; --largo: 72rem; --binario: 6px;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --fondo: #07131C; --superficie: #0F202C; --riga: #213848;
+    --inchiostro: #E7EEF2; --inchiostro-2: #9DAFBC;
+    --mare: #03101A; --su-mare: #E7EEF2; --su-mare-2: #8FA9B9;
+    --l-mezza: #FFC52E; --l-uno: #FF6A5C; --l-due: #4BA7EE; --l-tre: #4CC27A; --l-tuo: #E7EEF2;
+    --su-linea: #07131C; --su-gialla: #07131C;
+    --avviso: #382D0C; --su-avviso: #F6DA8E; --chiuso: #FF8A80;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --fondo: #07131C; --superficie: #0F202C; --riga: #213848;
+  --inchiostro: #E7EEF2; --inchiostro-2: #9DAFBC;
+  --mare: #03101A; --su-mare: #E7EEF2; --su-mare-2: #8FA9B9;
+  --l-mezza: #FFC52E; --l-uno: #FF6A5C; --l-due: #4BA7EE; --l-tre: #4CC27A; --l-tuo: #E7EEF2;
+  --su-linea: #07131C; --su-gialla: #07131C;
+  --avviso: #382D0C; --su-avviso: #F6DA8E; --chiuso: #FF8A80;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--fondo); color: var(--inchiostro); font: 400 1.0625rem/1.55 var(--sans); padding-bottom: 88px; }
+img { max-width: 100%; display: block; }
+a { color: inherit; }
+h1, h2, h3, h4 { margin: 0; text-wrap: balance; }
+p { margin: 0; text-wrap: pretty; }
+:focus-visible { outline: 3px solid var(--l-due); outline-offset: 3px; border-radius: 4px; }
+.wrap { width: 100%; max-width: var(--largo); margin-inline: auto; padding-inline: var(--gutter); }
+.num { font-variant-numeric: tabular-nums; }
+.vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+.cond { font-family: var(--cond); font-weight: 700; letter-spacing: -.005em; line-height: .95; }
+.titolo-sez { font-size: clamp(2.25rem, 9vw, 3.75rem); }
+.piccolo { font-size: .875rem; line-height: 1.45; color: var(--inchiostro-2); }
+
+/* Il segno di una linea: cerchio colorato con il numero */
+.linea-segno { --c: var(--l-due); flex: none; width: 2.4rem; height: 2.4rem; border-radius: 50%; display: grid; place-items: center; background: var(--c); color: var(--su-linea); font: 800 1.2rem/1 var(--cond); }
+.linea-segno[data-l="mezza-giornata"] { --c: var(--l-mezza); color: var(--su-gialla); }
+.linea-segno[data-l="un-giorno"] { --c: var(--l-uno); }
+.linea-segno[data-l="due-giorni"] { --c: var(--l-due); }
+.linea-segno[data-l="tre-giorni"] { --c: var(--l-tre); }
+.linea-segno[data-l="tuo"] { --c: transparent; color: var(--inchiostro); box-shadow: inset 0 0 0 3px var(--l-tuo); }
+
+/* ---------- Pulsanti ---------- */
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .7rem 1.3rem; border-radius: 12px;
+  font: 600 1rem/1.2 var(--sans); text-decoration: none; border: 2px solid var(--inchiostro); color: var(--inchiostro); background: transparent; cursor: pointer;
+  transition: transform var(--m100) var(--entra), background-color var(--m150) var(--entra), color var(--m150) var(--entra); }
+.btn--pieno { background: var(--l-due); border-color: var(--l-due); color: var(--su-linea); }
+.btn:active { transform: scale(.97); }
+@media (hover: hover) { .btn:hover { background: var(--inchiostro); color: var(--fondo); } .btn--pieno:hover { background: var(--inchiostro); border-color: var(--inchiostro); } }
+.su-mare .btn { border-color: var(--su-mare); color: var(--su-mare); }
+
+/* ---------- Testata e menu ---------- */
+.testata { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 20; background: var(--fondo); border-bottom: 1px solid var(--riga); }
+.testata__riga { display: flex; align-items: center; justify-content: space-between; min-height: 60px; }
+.marchio { display: inline-flex; align-items: center; gap: .5rem; text-decoration: none; font: 800 1.5rem/1 var(--cond); letter-spacing: .005em; }
+.marchio__segno { width: 1.6rem; height: .8rem; position: relative; }
+.marchio__segno::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 4px; margin-top: -2px; border-radius: 2px; background: var(--l-due); }
+.marchio__segno::after { content: ""; position: absolute; right: -1px; top: 50%; width: .8rem; height: .8rem; margin-top: -.4rem; border-radius: 50%; background: var(--fondo); box-shadow: inset 0 0 0 3.5px var(--inchiostro); }
+.pulsante-menu { display: inline-flex; align-items: center; gap: .55rem; min-height: 44px; padding: .35rem .9rem .35rem .75rem; border-radius: 12px; border: 2px solid var(--inchiostro); background: transparent; color: var(--inchiostro); font: 700 1rem/1 var(--sans); cursor: pointer; transition: transform var(--m100) var(--entra); }
+.pulsante-menu:active { transform: scale(.96); }
+.pulsante-menu svg { width: 20px; height: 20px; }
+
+.menu { position: fixed; inset: 0; width: 100%; height: 100dvh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; background: var(--mare); color: var(--su-mare); overflow-y: auto;
+  opacity: 0; transform: translateY(-12px);
+  transition: opacity var(--m200) var(--esci), transform var(--m200) var(--esci), overlay var(--m200) allow-discrete, display var(--m200) allow-discrete; }
+.menu:popover-open { opacity: 1; transform: none; transition-duration: var(--m300); transition-timing-function: var(--entra); }
+@starting-style { .menu:popover-open { opacity: 0; transform: translateY(-12px); } }
+.menu__testa { display: flex; justify-content: space-between; align-items: center; min-height: 60px; padding-top: env(safe-area-inset-top, 0px); }
+.menu .pulsante-menu { border-color: var(--su-mare); color: var(--su-mare); }
+.menu .marchio__segno::after { background: var(--mare); box-shadow: inset 0 0 0 3.5px var(--su-mare); }
+.menu__mappa { position: relative; margin: 1.5rem 0 3rem; padding: 0; list-style: none; display: grid; }
+.menu__mappa::before { content: ""; position: absolute; left: calc(1.2rem - var(--binario) / 2); top: 1.5rem; bottom: 1.5rem; width: var(--binario); border-radius: 3px; background: var(--l-due); transform-origin: top; transition: transform var(--m300) var(--entra); }
+@starting-style { .menu:popover-open .menu__mappa::before { transform: scaleY(0); } }
+.menu__mappa li { position: relative; opacity: 1; transform: none; transition: opacity var(--m300) var(--entra), transform var(--m300) var(--entra); transition-delay: calc(var(--i, 0) * 40ms); }
+@starting-style { .menu:popover-open .menu__mappa li { opacity: 0; transform: translateX(-10px); } }
+.menu__mappa a { display: flex; align-items: center; gap: 1rem; min-height: 56px; text-decoration: none; font: 700 1.75rem/1.05 var(--cond); }
+.menu__mappa a::before { content: ""; flex: none; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--mare); box-shadow: inset 0 0 0 5px var(--su-mare); transform: scale(.6); }
+.menu__mappa .menu__citta { padding: 1rem 0 .25rem 3.4rem; font: 600 .95rem/1 var(--sans); color: var(--su-mare-2); }
+.menu__mappa a[aria-current="page"]::before { transform: scale(.75); background: var(--su-mare); }
+.menu__mappa .linea-segno { position: absolute; left: 0; top: .5rem; transform: none; }
+.menu__mappa a.ha-segno::before { visibility: hidden; }
+.menu__piccoli { display: flex; flex-wrap: wrap; gap: .25rem 1.5rem; padding: 0; margin: 0 0 2rem; list-style: none; }
+.menu__piccoli a { display: inline-flex; align-items: center; min-height: 44px; color: var(--su-mare-2); }
+
+/* ---------- Binario della home: si riempie mentre scorri ---------- */
+.binario { position: relative; }
+.binario::before, .binario::after { content: ""; position: absolute; left: calc(var(--gutter) + 1.2rem - var(--binario) / 2); top: 0; bottom: 0; width: var(--binario); border-radius: 3px; }
+@media (min-width: 72rem) { .binario::before, .binario::after { left: calc((100% - var(--largo)) / 2 + var(--gutter) + 1.2rem - var(--binario) / 2); } }
+.binario::before { background: var(--riga); }
+.binario::after { background: var(--l-due); transform-origin: top; transform: scaleY(1); }
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    .binario::after { animation: riempi linear both; animation-timeline: --binario; animation-range: cover 0% contain 100%; }
+    .binario { view-timeline: --binario; }
+    @keyframes riempi { from { transform: scaleY(0); } }
+  }
+}
+.fermata { position: relative; padding-left: 3.6rem; }
+.fermata__punto { position: absolute; z-index: 1; left: 0; top: .1rem; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--fondo); box-shadow: inset 0 0 0 6px var(--inchiostro); }
+.fermata__nome { font: 600 .95rem/1.2 var(--sans); color: var(--inchiostro-2); margin-bottom: .35rem; }
+
+/* ---------- HOME · apertura ---------- */
+.apertura { position: relative; isolation: isolate; background: var(--mare); color: var(--su-mare); overflow: hidden; }
+.apertura__foto { position: relative; height: clamp(15rem, 44svh, 30rem); }
+.apertura__foto img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 62%; animation: avvicina var(--m300) var(--entra) both; }
+.apertura__foto::after { content: ""; position: absolute; inset: auto 0 0 0; height: 45%; background: linear-gradient(transparent, var(--mare)); }
+.apertura__credito { position: absolute; right: var(--gutter); top: 4.5rem; font-size: .7rem; color: rgba(255,255,255,.85); text-shadow: 0 1px 3px rgba(0,0,0,.6); }
+.apertura__credito a { color: inherit; }
+.apertura__dentro { position: relative; margin-top: -5.5rem; padding-bottom: 2rem; display: grid; gap: 1rem; }
+.cartello { display: inline-grid; justify-self: start; gap: .1rem; padding: .7rem 1.1rem .8rem; border-radius: 10px; background: var(--su-mare); color: var(--mare); box-shadow: 0 8px 30px rgba(0,0,0,.25); }
+.cartello__sopra { font: 600 .85rem/1 var(--sans); color: var(--inchiostro-2); }
+.cartello h1 { font: 800 clamp(3.5rem, 19vw, 7rem)/.85 var(--cond); letter-spacing: -.01em; }
+.apertura__lead { font-size: 1.125rem; max-width: 34rem; color: var(--su-mare-2); }
+.apertura__lead b { color: var(--su-mare); font-weight: 600; }
+@keyframes avvicina { from { transform: scale(1.05); } }
+@keyframes sali { from { transform: translateY(10px); opacity: .01; } }
+.cartello, .apertura__lead, .partenze { animation: sali var(--m300) var(--entra) both; }
+.apertura__lead { animation-delay: 80ms; } .partenze { animation-delay: 160ms; }
+
+/* Tabellone «Quanto tempo hai?» */
+.partenze { margin-top: .5rem; border-radius: 16px; background: color-mix(in srgb, var(--su-mare) 7%, transparent); padding: .4rem 0; }
+.partenze h2 { font: 700 1.5rem/1 var(--cond); padding: .8rem 1rem .5rem; }
+.partenze ul { list-style: none; margin: 0; padding: 0; }
+.partenza { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: .9rem; min-height: 60px; padding: .55rem 1rem; text-decoration: none; border-top: 1px solid color-mix(in srgb, var(--su-mare) 12%, transparent);
+  transition: background-color var(--m150) var(--entra); }
+.partenza:active { background: color-mix(in srgb, var(--su-mare) 12%, transparent); }
+@media (hover: hover) { .partenza:hover { background: color-mix(in srgb, var(--su-mare) 9%, transparent); } }
+.partenza__nome { font: 700 1.35rem/1.05 var(--cond); }
+.partenza__dati { font-size: .85rem; color: var(--su-mare-2); }
+.partenza__freccia { width: 22px; height: 22px; transition: transform var(--m150) var(--entra); }
+.partenza:active .partenza__freccia { transform: translateX(4px); }
+.su-mare .linea-segno[data-l="tuo"], .apertura .linea-segno[data-l="tuo"] { color: var(--su-mare); box-shadow: inset 0 0 0 3px var(--su-mare); }
+
+/* ---------- HOME · sezioni sul binario ---------- */
+.tratto-home { padding-block: 3.5rem 1rem; display: grid; gap: 1.25rem; }
+.passi { list-style: none; margin: 1rem 0 0; padding: 0; display: grid; gap: 2rem; }
+.passi li { position: relative; padding-left: 3.6rem; }
+.passi li::before { content: ""; position: absolute; left: .55rem; top: .2rem; width: 1.3rem; height: 1.3rem; border-radius: 50%; background: var(--fondo); box-shadow: inset 0 0 0 4px var(--l-due); }
+.passi h3 { font: 700 1.6rem/1.05 var(--cond); margin-bottom: .25rem; }
+.esempio { margin-top: .8rem; display: grid; grid-template-columns: auto auto 1fr; gap: .2rem .7rem; align-items: center; max-width: 24rem; padding: .9rem 1rem; border-radius: 14px; background: var(--superficie); border: 1px solid var(--riga); font-size: .95rem; }
+.esempio__ora { font: 700 1.1rem/1 var(--cond); }
+.esempio__pallino { width: .9rem; height: .9rem; border-radius: 50%; box-shadow: inset 0 0 0 3px var(--l-due); }
+.esempio__tratto { grid-column: 2 / 4; display: grid; grid-template-columns: .9rem 1fr; gap: .7rem; color: var(--inchiostro-2); font-size: .85rem; }
+.esempio__tratto::before { content: ""; justify-self: center; width: 3px; height: 1.6rem; background: var(--l-due); border-radius: 2px; }
+
+.linee { display: grid; gap: .9rem; margin-top: .5rem; }
+@media (min-width: 900px) { .linee { grid-template-columns: repeat(2, 1fr); } }
+.linea-scheda { display: grid; grid-template-columns: 7.5rem 1fr; gap: 0; border-radius: 18px; overflow: hidden; background: var(--superficie); border: 1px solid var(--riga); text-decoration: none; transition: transform var(--m100) var(--entra); }
+.linea-scheda:active { transform: scale(.985); }
+.linea-scheda__foto { position: relative; }
+.linea-scheda__foto img { width: 100%; height: 100%; object-fit: cover; min-height: 9rem; }
+.linea-scheda__foto .linea-segno { position: absolute; left: .6rem; top: .6rem; box-shadow: 0 0 0 3px var(--superficie); }
+.linea-scheda__testo { display: grid; align-content: center; gap: .4rem; padding: 1rem 1.1rem; min-width: 0; }
+.linea-scheda h3 { font: 700 1.45rem/1.05 var(--cond); }
+.linea-scheda__fermate { display: flex; align-items: center; gap: 0; margin-top: .2rem; }
+.linea-scheda__fermate i { width: .7rem; height: .7rem; border-radius: 50%; box-shadow: inset 0 0 0 2.5px var(--c); flex: none; }
+.linea-scheda__fermate b { flex: 1; height: 3px; background: var(--c); max-width: 1.4rem; }
+.linea-scheda__dati { display: flex; flex-wrap: wrap; gap: .1rem .9rem; font-size: .875rem; color: var(--inchiostro-2); }
+.linea-scheda__dati b { color: var(--inchiostro); }
+
+.su-mare { background: var(--mare); color: var(--su-mare); }
+.mangiare { padding-block: 3.5rem; display: grid; gap: 1.5rem; }
+@media (min-width: 900px) { .mangiare { grid-template-columns: 1fr 1fr; align-items: start; gap: 3rem; } }
+.mangiare__foto { border-radius: 18px; overflow: hidden; aspect-ratio: 16 / 10; }
+.mangiare__foto img { width: 100%; height: 100%; object-fit: cover; }
+.mangiare p { color: var(--su-mare-2); }
+.famiglie { display: flex; flex-wrap: wrap; gap: .5rem; margin: 1.25rem 0 0; padding: 0; list-style: none; }
+.famiglie a { display: inline-flex; align-items: center; gap: .55rem; min-height: 44px; padding: .4rem .9rem; border-radius: 999px; text-decoration: none; background: color-mix(in srgb, var(--su-mare) 10%, transparent); font-weight: 600; transition: transform var(--m100) var(--entra); }
+.famiglie a:active { transform: scale(.96); }
+.famiglie span { font: 700 1.05rem/1 var(--cond); color: var(--su-mare-2); }
+
+.cifre-home { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--riga); border: 1px solid var(--riga); border-radius: 18px; overflow: hidden; margin-top: .5rem; }
+@media (min-width: 900px) { .cifre-home { grid-template-columns: repeat(4, 1fr); } }
+.cifre-home div { background: var(--superficie); padding: 1.1rem 1rem; display: grid; gap: .3rem; align-content: start; }
+.cifre-home b { font: 800 2.5rem/1 var(--cond); }
+.cifre-home span { font-size: .9rem; color: var(--inchiostro-2); line-height: 1.35; }
+.capolinea .fermata__punto { background: var(--inchiostro); box-shadow: inset 0 0 0 6px var(--inchiostro), 0 0 0 5px var(--fondo), 0 0 0 8px var(--inchiostro); }
+
+.piede { background: var(--mare); color: var(--su-mare); padding-block: 2.5rem; font-size: .95rem; }
+.piede .marchio__segno::after { background: var(--mare); box-shadow: inset 0 0 0 3.5px var(--su-mare); }
+.piede__riga { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 1.5rem; }
+.piede ul { display: flex; flex-wrap: wrap; gap: .25rem 1.25rem; margin: 0; padding: 0; list-style: none; }
+.piede a { display: inline-flex; min-height: 44px; align-items: center; color: var(--su-mare-2); }
+
+/* ---------- RACCONTO ---------- */
+.briciole { display: flex; flex-wrap: wrap; gap: .4rem; font-size: .9rem; color: var(--inchiostro-2); padding-top: 1.25rem; }
+.briciole a { text-decoration: none; border-bottom: 1px solid var(--riga); }
+.racconto__testa { display: grid; gap: 1.25rem; padding-block: 1rem 2.5rem; }
+@media (min-width: 900px) { .racconto__testa { grid-template-columns: 1.1fr 1fr; align-items: end; gap: 3rem; } }
+.racconto__foto { position: relative; border-radius: 20px; overflow: hidden; aspect-ratio: 4 / 3; view-transition-name: foto-pronto; }
+.racconto__foto img { width: 100%; height: 100%; object-fit: cover; }
+.racconto__foto .linea-segno { position: absolute; left: 1rem; bottom: 1rem; width: 3.4rem; height: 3.4rem; font-size: 1.8rem; box-shadow: 0 0 0 4px var(--fondo); }
+.racconto h1 { font: 800 clamp(3rem, 14vw, 5.5rem)/.9 var(--cond); }
+.racconto__lead { font-size: 1.125rem; line-height: 1.6; max-width: 36rem; }
+.cifre { display: flex; flex-wrap: wrap; gap: .5rem 1.75rem; margin: 0; }
+.cifre div { display: grid; }
+.cifre dt { order: 2; font-size: .85rem; color: var(--inchiostro-2); }
+.cifre dd { margin: 0; font: 800 2.4rem/1 var(--cond); }
+.azioni { display: flex; flex-wrap: wrap; gap: .6rem; }
+.giorno__testa { padding-block: 2rem; display: flex; align-items: center; gap: 1rem; }
+.giorno__testa .linea-segno { width: 3.2rem; height: 3.2rem; font-size: 1.35rem; }
+.giorno__testa h2 { font: 800 clamp(2rem, 8vw, 3rem)/.95 var(--cond); }
+.giorno__testa p { color: var(--su-mare-2); font-size: .95rem; margin-top: .3rem; }
+.percorso { --c: var(--l-due); position: relative; padding-block: 2rem 1rem; }
+.fila { position: relative; display: grid; grid-template-columns: 3.6rem 2.4rem 1fr; gap: 0 .9rem; }
+.fila__ora { font: 700 1.3rem/1 var(--cond); text-align: right; padding-top: .55rem; }
+.fila__binario { position: relative; display: flex; justify-content: center; }
+.fila__binario::before { content: ""; position: absolute; top: 0; bottom: 0; width: var(--binario); background: var(--c); }
+.fila--prima .fila__binario::before { top: 1.2rem; }
+.fila--ultima .fila__binario::before { bottom: auto; height: 1.2rem; }
+.fila__punto { position: relative; z-index: 1; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--fondo); box-shadow: inset 0 0 0 6px var(--c); }
+.fila--ultima .fila__punto { background: var(--c); box-shadow: inset 0 0 0 6px var(--c), 0 0 0 4px var(--fondo), 0 0 0 7px var(--c); }
+.fila__corpo { display: grid; gap: .75rem; padding: .35rem 0 2rem; min-width: 0; max-width: 40rem; }
+.fila h3 { font: 700 clamp(1.7rem, 7vw, 2.2rem)/1 var(--cond); }
+@media (prefers-reduced-motion: no-preference) {
+  @supports ((animation-timeline: view()) and (animation-range: entry)) {
+    .fila__punto { animation: accendi linear both; animation-timeline: view(); animation-range: entry 30% cover 45%; }
+    @keyframes accendi { from { transform: scale(.55); } }
+  }
+}
+.etichette { display: flex; flex-wrap: wrap; gap: .4rem; }
+.etichetta { display: inline-flex; align-items: center; min-height: 28px; padding: .2rem .65rem; border-radius: 8px; background: var(--superficie); border: 1px solid var(--riga); font-size: .8rem; font-weight: 600; }
+.etichetta--attenzione { background: var(--avviso); border-color: transparent; color: var(--su-avviso); }
+.fila__foto { margin: 0; border-radius: 16px; overflow: hidden; aspect-ratio: 16 / 10; max-width: 32rem; }
+.fila__foto img { width: 100%; height: 100%; object-fit: cover; }
+.credito { font-size: .75rem; color: var(--inchiostro-2); margin-top: -.4rem; }
+.credito a { color: inherit; }
+.fila--tratto .fila__corpo { padding-block: .1rem 1.4rem; }
+.fila--extra .fila__corpo { padding-block: 0 1.75rem; }
+.mezzo { display: inline-flex; align-items: center; gap: .5rem; font-size: .9rem; color: var(--inchiostro-2); }
+.mezzo svg { width: 18px; height: 18px; flex: none; }
+.mezzo b { color: var(--inchiostro); font: 700 1.1rem/1 var(--cond); }
+.mezzo__nome { display: inline-flex; padding: .1rem .5rem; border-radius: 6px; background: var(--inchiostro); color: var(--fondo); font-weight: 600; font-size: .8rem; }
+/* «Da sapere» come un biglietto, con i dentini del bordo */
+.biglietto { position: relative; margin: 0; max-width: 30rem; padding: 1.1rem 1.25rem 1.2rem 1.4rem; border-radius: 12px; background: var(--superficie); border: 1px solid var(--riga);
+  -webkit-mask: radial-gradient(circle at 0 50%, transparent 10px, #000 10.5px) left / 51% 100% no-repeat, radial-gradient(circle at 100% 50%, transparent 10px, #000 10.5px) right / 51% 100% no-repeat;
+          mask: radial-gradient(circle at 0 50%, transparent 10px, #000 10.5px) left / 51% 100% no-repeat, radial-gradient(circle at 100% 50%, transparent 10px, #000 10.5px) right / 51% 100% no-repeat; }
+.biglietto::before { content: ""; position: absolute; left: 1.4rem; right: 1.25rem; top: 2.6rem; border-top: 2px dashed var(--riga); }
+.biglietto h4 { font: 700 1rem/1 var(--cond); color: var(--l-due); margin-bottom: 1.3rem; }
+.biglietto p { font-weight: 600; font-size: 1rem; line-height: 1.4; }
+.ristoro { margin: 0; max-width: 30rem; display: grid; gap: .45rem; padding: 1.1rem 1.25rem; border-radius: 16px; background: var(--mare); color: var(--su-mare); }
+.ristoro__tipo { font-size: .85rem; font-weight: 600; color: var(--l-mezza); }
+.ristoro h4 { font: 700 1.5rem/1 var(--cond); }
+.ristoro p { font-size: .9rem; color: var(--su-mare-2); }
+.fine-racconto { padding-block: 3rem; display: grid; gap: 1rem; justify-items: start; }
+.fonti { border-top: 1px solid var(--riga); }
+.fonti summary { display: flex; justify-content: space-between; align-items: center; min-height: 64px; cursor: pointer; font: 700 1.6rem/1 var(--cond); list-style: none; }
+.fonti summary::-webkit-details-marker { display: none; }
+.fonti summary::after { content: ""; width: 14px; height: 14px; border-right: 3px solid currentColor; border-bottom: 3px solid currentColor; rotate: 45deg; translate: 0 -4px; transition: rotate var(--m200) var(--entra), translate var(--m200) var(--entra); }
+.fonti[open] summary::after { rotate: 225deg; translate: 0 4px; }
+.fonti ol { margin: 0 0 2rem; padding-left: 1.25rem; display: grid; gap: .6rem; font-size: .9rem; }
+.fonti a { overflow-wrap: anywhere; }
+
+/* ---------- COMPOSITORE ---------- */
+.comp__testa { display: grid; gap: .9rem; padding-block: 1rem 1.25rem; }
+.comp h1 { font: 800 clamp(2.8rem, 13vw, 4.75rem)/.9 var(--cond); }
+.nome-it { display: flex; align-items: center; gap: .6rem; font-size: 1.15rem; font-weight: 600; }
+.nome-it button { border: 0; background: none; color: var(--inchiostro-2); width: 44px; height: 44px; display: grid; place-items: center; cursor: pointer; border-radius: 10px; }
+.controlli { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; border: 1px solid var(--riga); border-radius: 14px; overflow: hidden; background: var(--riga); }
+.controlli button { display: grid; gap: .1rem; text-align: left; min-height: 56px; padding: .55rem .9rem; border: 0; background: var(--superficie); color: var(--inchiostro); cursor: pointer; font: 600 1rem/1.2 var(--sans); }
+.controlli button span { font-size: .75rem; font-weight: 500; color: var(--inchiostro-2); }
+.controlli button:last-child { grid-column: 1 / -1; }
+.giorni-scelta { display: flex; gap: .5rem; margin-top: 1.25rem; }
+.giorni-scelta button { display: inline-flex; align-items: center; gap: .6rem; min-height: 48px; padding: .3rem 1rem .3rem .35rem; border-radius: 999px; border: 2px solid var(--riga); background: var(--superficie); color: var(--inchiostro); font: 700 1.1rem/1 var(--cond); cursor: pointer; transition: border-color var(--m150) var(--entra), transform var(--m100) var(--entra); }
+.giorni-scelta button:active { transform: scale(.96); }
+.giorni-scelta button[aria-selected="true"] { border-color: var(--l-due); }
+.giorni-scelta .linea-segno { width: 2.1rem; height: 2.1rem; font-size: 1rem; }
+.giorni-scelta button[aria-selected="false"] .linea-segno { --c: var(--riga); color: var(--inchiostro-2); }
+.avviso { display: grid; grid-template-columns: auto 1fr; gap: .75rem; padding: 1rem 1.1rem; border-radius: 14px; background: var(--avviso); color: var(--su-avviso); margin-block: 1.25rem; }
+.avviso svg { width: 22px; height: 22px; margin-top: .1rem; }
+.avviso p { font-weight: 600; }
+.avviso button { margin-top: .6rem; min-height: 40px; padding: .4rem .9rem; border-radius: 10px; border: 2px solid currentColor; background: transparent; color: inherit; font: 600 .9rem/1 var(--sans); cursor: pointer; }
+.tabellone { display: grid; grid-template-columns: repeat(4, auto); justify-content: space-between; gap: .5rem; padding: .9rem 1rem; border-radius: 14px; background: var(--mare); color: var(--su-mare); margin-bottom: 1.25rem; }
+.tabellone div { display: grid; gap: .15rem; }
+.tabellone b { font: 800 1.45rem/1 var(--cond); }
+.tabellone span { font-size: .75rem; color: var(--su-mare-2); }
+.comp__griglia { display: grid; gap: 2rem; }
+@media (min-width: 960px) { .comp__griglia { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; } .comp__mappa { position: sticky; top: 84px; } }
+.giornata { --c: var(--l-due); margin: 0; padding: 0; list-style: none; }
+.giornata li { position: relative; display: grid; grid-template-columns: 2.4rem 1fr; gap: 0 .9rem; }
+.giornata li::before { content: ""; position: absolute; left: calc(1.2rem - var(--binario) / 2); top: 0; bottom: 0; width: var(--binario); background: var(--c); }
+.giornata li:first-child::before { top: 1.6rem; }
+.giornata .g-tappa { align-items: center; }
+.g-punto { position: relative; z-index: 1; width: 2.4rem; height: 2.4rem; border-radius: 50%; background: var(--fondo); box-shadow: inset 0 0 0 6px var(--c); display: grid; place-items: center; font: 800 .95rem/1 var(--cond); }
+.g-tappa--chiusa .g-punto { box-shadow: inset 0 0 0 6px var(--chiuso); }
+.g-scheda { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: .5rem; margin-block: .35rem; padding: .7rem .5rem .7rem .95rem; border-radius: 14px; background: var(--superficie); border: 1px solid var(--riga); }
+.g-tappa--chiusa .g-scheda { border: 2px solid var(--chiuso); }
+.g-nome { font-weight: 700; line-height: 1.25; display: block; }
+.g-ora { font: 600 1rem/1.2 var(--cond); color: var(--inchiostro-2); }
+.g-chiusa { display: block; font-size: .8rem; font-weight: 700; color: var(--chiuso); }
+.g-azioni { display: flex; }
+.g-azioni button { width: 40px; height: 44px; border: 0; background: none; color: var(--inchiostro-2); cursor: pointer; border-radius: 10px; display: grid; place-items: center; }
+.g-tratto .mezzo { padding-block: .5rem; }
+.giornata .g-fine::before { bottom: auto; height: 1.2rem; border-radius: 0 0 3px 3px; }
+.aggiungi { display: flex; align-items: center; gap: .9rem; min-height: 56px; width: 100%; padding: 0; border: 0; background: none; color: var(--inchiostro); font: 700 1.3rem/1 var(--cond); cursor: pointer; transition: transform var(--m100) var(--entra); }
+.aggiungi:active { transform: scale(.98); }
+.aggiungi__piu { width: 2.4rem; height: 2.4rem; border-radius: 50%; border: 3px dashed var(--l-due); display: grid; place-items: center; color: var(--l-due); }
+.comp__mappa { margin: 0; border-radius: 18px; overflow: hidden; border: 1px solid var(--riga); background: var(--superficie); }
+.comp__mappa svg { display: block; width: 100%; height: auto; }
+.mappa-terra { fill: var(--superficie); }
+.mappa-mare { fill: color-mix(in srgb, var(--l-due) 16%, var(--superficie)); }
+.mappa-parchi { fill: color-mix(in srgb, var(--l-tre) 18%, var(--superficie)); }
+.mappa-strade path { fill: none; stroke: var(--riga); stroke-linecap: round; stroke-linejoin: round; }
+.mappa-percorso { fill: none; stroke: var(--l-due); stroke-linecap: round; stroke-linejoin: round; }
+.mappa-fermata circle { fill: var(--superficie); stroke: var(--l-due); }
+.mappa-fermata--chiusa circle { stroke: var(--chiuso); }
+.mappa-fermata text { fill: var(--inchiostro); font: 800 22px/1 var(--cond); text-anchor: middle; dominant-baseline: central; }
+.comp__mappa figcaption { padding: .75rem 1rem; font-size: .8rem; color: var(--inchiostro-2); }
+.condividi { display: flex; flex-wrap: wrap; gap: .6rem; margin-top: 1.5rem; }
+
+/* Foglio «Aggiungi una tappa» con la ricerca */
+.foglio { width: 100%; max-width: 40rem; max-height: 86dvh; margin: auto auto 0; padding: 0; border: 0; border-radius: 22px 22px 0 0; background: var(--fondo); color: var(--inchiostro);
+  transform: translateY(100%); transition: transform var(--m200) var(--esci), overlay var(--m200) allow-discrete, display var(--m200) allow-discrete; }
+.foglio[open] { transform: none; transition-duration: var(--m300); transition-timing-function: var(--entra); }
+@starting-style { .foglio[open] { transform: translateY(100%); } }
+.foglio::backdrop { background: rgba(3,16,26,0); transition: background-color var(--m300) var(--entra), overlay var(--m300) allow-discrete, display var(--m300) allow-discrete; }
+.foglio[open]::backdrop { background: rgba(3,16,26,.5); }
+@starting-style { .foglio[open]::backdrop { background: rgba(3,16,26,0); } }
+.foglio__testa { position: sticky; top: 0; z-index: 1; background: var(--fondo); padding: .75rem var(--gutter) 1rem; display: grid; gap: .75rem; }
+.foglio__maniglia { width: 44px; height: 5px; border-radius: 3px; background: var(--riga); margin: 0 auto .25rem; }
+.foglio__riga { display: flex; justify-content: space-between; align-items: center; }
+.foglio__riga h2 { font: 800 2rem/1 var(--cond); }
+.chiudi { width: 44px; height: 44px; border-radius: 12px; border: 2px solid var(--inchiostro); background: transparent; color: var(--inchiostro); display: grid; place-items: center; cursor: pointer; }
+.cerca { position: relative; }
+.cerca label { display: block; font: 600 .9rem/1.2 var(--sans); margin-bottom: .4rem; }
+.cerca__campo { position: relative; display: flex; align-items: center; }
+.cerca__campo svg { position: absolute; left: .9rem; width: 22px; height: 22px; color: var(--inchiostro-2); }
+.cerca input { width: 100%; min-height: 56px; padding: .6rem 1rem .6rem 2.9rem; border-radius: 14px; border: 2px solid var(--riga); background: var(--superficie); color: var(--inchiostro); font: 500 1.125rem/1.2 var(--sans); outline: none; transition: border-color var(--m150) var(--entra); }
+.cerca input:focus { border-color: var(--l-due); }
+/* la riga sotto il campo si allunga da sinistra quando scrivi (solo trasformazioni) */
+.cerca__campo::after { content: ""; position: absolute; left: 12px; right: 12px; bottom: 6px; height: 3px; border-radius: 2px; background: var(--l-due); transform: scaleX(0); transform-origin: left; transition: transform var(--m300) var(--entra); }
+.cerca__campo:focus-within::after { transform: scaleX(1); }
+.filtri { display: flex; gap: .4rem; overflow-x: auto; padding-bottom: .25rem; scrollbar-width: none; }
+.filtri button { flex: none; min-height: 40px; padding: .4rem .9rem; border-radius: 10px; border: 2px solid var(--riga); background: var(--superficie); color: var(--inchiostro); font: 600 .9rem/1 var(--sans); cursor: pointer; }
+.filtri button[aria-pressed="true"] { border-color: var(--l-due); background: var(--l-due); color: var(--su-linea); }
+.risultati { list-style: none; margin: 0; padding: 0 var(--gutter) 2rem; display: grid; gap: .5rem; }
+.risultati li { --i: 0; display: grid; grid-template-columns: auto 1fr auto; gap: .8rem; align-items: center; padding: .6rem .6rem .6rem .8rem; border-radius: 14px; background: var(--superficie); border: 1px solid var(--riga);
+  animation: entra-lista var(--m200) var(--entra) both; animation-delay: calc(min(var(--i), 10) * 30ms); }
+@supports (animation-delay: calc(sibling-index() * 1ms)) { .risultati li { animation-delay: calc(min(sibling-index() - 1, 10) * 30ms); } }
+@keyframes entra-lista { from { opacity: 0; transform: translateY(8px); } }
+.risultati__tipo { width: 1.1rem; height: 1.1rem; border-radius: 50%; box-shadow: inset 0 0 0 3.5px var(--l-due); }
+.risultati__tipo[data-t="mangiare"] { box-shadow: inset 0 0 0 3.5px var(--l-mezza); }
+.risultati__tipo[data-t="gita"] { box-shadow: inset 0 0 0 3.5px var(--l-tre); }
+.risultati h3 { font-size: 1.05rem; font-weight: 700; }
+.risultati p { font-size: .85rem; color: var(--inchiostro-2); }
+.risultati mark { background: color-mix(in srgb, var(--l-mezza) 45%, transparent); color: inherit; border-radius: 3px; }
+.risultati button { width: 44px; height: 44px; border-radius: 12px; border: 0; background: var(--l-due); color: var(--su-linea); font: 700 1.5rem/1 var(--sans); cursor: pointer; transition: transform var(--m100) var(--entra); }
+.risultati button:active { transform: scale(.92); }
+.vuoto { padding: 1.5rem var(--gutter) 2.5rem; display: grid; gap: .75rem; justify-items: start; }
+
+/* ---------- Passaggio tra pagine ---------- */
+::view-transition-old(root) { animation: var(--m200) var(--esci) both svanisci; }
+::view-transition-new(root) { animation: var(--m300) var(--entra) both compari; }
+::view-transition-group(foto-pronto) { animation-duration: var(--m300); animation-timing-function: var(--entra); }
+@keyframes svanisci { to { opacity: 0; } }
+@keyframes compari { from { opacity: 0; transform: translateY(12px); } }
+
+/* ---------- Barra della proposta (non fa parte del sito) ---------- */
+.prova { position: fixed; z-index: 50; left: 50%; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); transform: translateX(-50%); display: flex; align-items: center; gap: 2px; padding: 4px; border-radius: 999px; background: #26272B; color: #fff; box-shadow: 0 6px 24px rgba(0,0,0,.28); font: 600 13px/1 system-ui, sans-serif; max-width: calc(100vw - 16px); }
+.prova a, .prova button { display: inline-flex; align-items: center; justify-content: center; min-height: 40px; min-width: 40px; padding: 0 11px; border-radius: 999px; color: #fff; text-decoration: none; border: 0; background: transparent; font: inherit; cursor: pointer; white-space: nowrap; }
+.prova a[aria-current="page"] { background: #fff; color: #111; }
+.prova__etichetta { padding: 0 6px 0 10px; color: #A9ABB3; font-weight: 800; }
+@media (max-width: 360px) { .prova a, .prova button { padding: 0 8px; } }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; transition-delay: 0ms !important; }
+}
+</style>
+
+<!--DATI-->
+
+<div class="pagina">
+  <header class="testata">
+    <div class="wrap testata__riga">
+      <a class="marchio" href="#home" aria-label="Nextstop, vai alla home"><span class="marchio__segno" aria-hidden="true"></span>Nextstop</a>
+      <button class="pulsante-menu" popovertarget="menu" aria-controls="menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>Menu
+      </button>
+    </div>
+  </header>
+
+  <div id="menu" class="menu" popover aria-label="Menu">
+    <div class="wrap">
+      <div class="menu__testa">
+        <span class="marchio"><span class="marchio__segno" aria-hidden="true"></span>Nextstop</span>
+        <button class="pulsante-menu" popovertarget="menu" popovertargetaction="hide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>Chiudi
+        </button>
+      </div>
+      <nav aria-label="Menu principale" id="menu-voci"></nav>
+    </div>
+  </div>
+
+  <main id="p-home" data-pagina="home"></main>
+  <main id="p-racconto" data-pagina="racconto" hidden></main>
+  <main id="p-compositore" data-pagina="compositore" hidden></main>
+</div>
+
+<dialog id="foglio" class="foglio" aria-labelledby="foglio-titolo">
+  <div class="foglio__testa">
+    <div class="foglio__maniglia" aria-hidden="true"></div>
+    <div class="foglio__riga">
+      <h2 id="foglio-titolo">Aggiungi una tappa</h2>
+      <button class="chiudi" id="foglio-chiudi" aria-label="Chiudi">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <div class="cerca">
+      <label for="cerca-campo">Cerca un posto, un quartiere o un piatto</label>
+      <div class="cerca__campo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/></svg>
+        <input id="cerca-campo" type="search" autocomplete="off" enterkeyhint="search" aria-controls="risultati">
+      </div>
+    </div>
+    <div class="filtri" role="group" aria-label="Mostra">
+      <button type="button" data-filtro="tutto" aria-pressed="true">Tutto</button>
+      <button type="button" data-filtro="citta" aria-pressed="false">In città</button>
+      <button type="button" data-filtro="mangiare" aria-pressed="false">Mangiare</button>
+      <button type="button" data-filtro="gita" aria-pressed="false">Gite</button>
+    </div>
+  </div>
+  <p class="vh" id="risultati-conta" aria-live="polite"></p>
+  <ul class="risultati" id="risultati"></ul>
+  <div class="vuoto" id="vuoto" hidden>
+    <p>Nessun posto con questo nome. Prova con il quartiere o con il nome di un piatto.</p>
+    <button class="btn" type="button" id="vuoto-tutto">Guarda tutte le tappe</button>
+  </div>
+</dialog>
+
+<nav class="prova" aria-label="Pagine della proposta">
+  <span class="prova__etichetta">B</span>
+  <a href="#home">Home</a>
+  <a href="#racconto">Racconto</a>
+  <a href="#compositore">Compositore</a>
+  <button type="button" id="tema" aria-label="Tema: automatico"><svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 4a8 8 0 0 1 0 16z" fill="currentColor"/></svg></button>
+</nav>
+
+<script>
+(() => {
+  const D = window.DATI, F = window.FOTO, M = window.MAPPA;
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const ora = m => `${Math.floor(m / 60)}:${String(Math.round(m) % 60).padStart(2, '0')}`;
+  const durata = m => m < 60 ? `${m} min` : `${Math.floor(m / 60)} h${m % 60 ? ' ' + (m % 60) + ' min' : ''}`;
+  const km = metri => metri >= 1000 ? `${(metri / 1000).toFixed(1).replace('.', ',')} km` : `${metri} m`;
+  const GIORNI = { lun: 'lunedì', mar: 'martedì', mer: 'mercoledì', gio: 'giovedì', ven: 'venerdì', sab: 'sabato', dom: 'domenica' };
+  const T = id => D.tappe[id];
+  const pronto = id => D.pronti.find(p => p.id === id);
+  const img = (id, alt, attr = '') => F[id] ? `<img src="${F[id]}" alt="${esc(alt ?? D.crediti[id]?.alt ?? '')}" ${attr}>` : '';
+  const credito = id => { const c = D.crediti[id]; return c ? `Foto: ${esc(c.autore)}, <a href="${esc(c.fonte)}" target="_blank" rel="noopener">${esc(c.licenza)}</a>` : ''; };
+  const PIEDI = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="13" cy="4.5" r="1.8"/><path d="M10 21l2-6 3 3v3M9 12l2-4 4 1 2 3M11 8l-1 5"/></svg>';
+  const tratto = v => v.mezzi.length
+    ? `<span class="mezzo">${v.mezzi.map(m => `<span class="mezzo__nome">${esc(m)}</span>`).join('')}<span><b>${v.min} min</b>${v.metri ? `, ${km(v.metri)}` : ''}</span></span>`
+    : `<span class="mezzo">${PIEDI}<span><b>${v.min} min</b> a piedi${v.metri ? `, ${km(v.metri)}` : ''}</span></span>`;
+  const COPERTINE = { 'mezza-giornata': 'tp-spaccanapoli', 'un-giorno': 'tp-san-martino', 'due-giorni': 'vista-monte-echia', 'tre-giorni': 'tp-capodimonte' };
+  const NUMERO = { 'mezza-giornata': '½', 'un-giorno': '1', 'due-giorni': '2', 'tre-giorni': '3' };
+  const ETICHETTA = { 'mezza-giornata': 'Mezza giornata', 'un-giorno': 'Un giorno', 'due-giorni': 'Due giorni', 'tre-giorni': 'Tre giorni' };
+  const COLORE = { 'mezza-giornata': '--l-mezza', 'un-giorno': '--l-uno', 'due-giorni': '--l-due', 'tre-giorni': '--l-tre' };
+  const segno = (id, extra = '') => `<span class="linea-segno ${extra}" data-l="${id}" aria-hidden="true">${NUMERO[id] ?? '+'}</span>`;
+  const C = D.conteggi;
+  const pr = D.pronti;
+  const FRECCIA = '<svg class="partenza__freccia" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg>';
+
+  /* ---------- Menu: le voci come fermate su una linea ---------- */
+  $('#menu-voci').innerHTML = `
+    <ul class="menu__mappa">
+      <li style="--i:0"><a href="#home" data-va="home">Home</a></li>
+      <li class="menu__citta" style="--i:1">Napoli</li>
+      ${pr.map((p, i) => `<li style="--i:${i + 2}">${segno(p.id)}<a class="ha-segno" href="#racconto" data-va="${p.id === 'due-giorni' ? 'racconto' : ''}">${ETICHETTA[p.id]}</a></li>`).join('')}
+      <li style="--i:6"><a href="#compositore" data-va="compositore">Componi il tuo</a></li>
+      <li style="--i:7"><a href="#home">Dove mangiare</a></li>
+    </ul>
+    <ul class="menu__piccoli"><li><a href="#racconto">Fonti</a></li><li><a href="#home">Privacy</a></li><li><a href="#home">Note legali</a></li><li><a href="#home">Accessibilità</a></li></ul>`;
+
+  /* ---------- HOME ---------- */
+  const esempio = (() => { const g = pronto('due-giorni').giorni[0].voci; const i = g.findIndex(v => v.id === 'santa-chiara'); return [g[i], g[i + 1], g[i + 2]]; })();
+  $('#p-home').innerHTML = `
+  <section class="apertura" aria-labelledby="h-home">
+    <div class="apertura__foto">${img('tp-vesuvio', null, 'fetchpriority="high"')}</div>
+    <p class="apertura__credito">${credito('tp-vesuvio')}</p>
+    <div class="wrap apertura__dentro">
+      <div class="cartello"><span class="cartello__sopra">Itinerari a</span><h1 id="h-home">Napoli</h1></div>
+      <p class="apertura__lead"><b>Pronti o fatti da te, con i tempi veri.</b> Quanto ci metti da una tappa all'altra a piedi, in metro e in funicolare, cosa è chiuso quel giorno e dove fermarti a mangiare.</p>
+      <div class="partenze">
+        <h2 id="h-tempo">Quanto tempo hai?</h2>
+        <ul aria-labelledby="h-tempo">
+          ${pr.map(p => `<li><a class="partenza" href="#racconto">${segno(p.id)}<span><span class="partenza__nome">${ETICHETTA[p.id]}</span><br><span class="partenza__dati num">${p.nTappe} tappe, ${p.minPiedi} min a piedi</span></span>${FRECCIA}</a></li>`).join('')}
+          <li><a class="partenza" href="#compositore">${segno('tuo')}<span><span class="partenza__nome">Fai da te</span><br><span class="partenza__dati">Scegli tu le tappe</span></span>${FRECCIA}</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="binario">
+    <section class="wrap tratto-home" aria-labelledby="h-come">
+      <div class="fermata"><span class="fermata__punto" aria-hidden="true"></span><h2 id="h-come" class="cond titolo-sez">Come funziona</h2></div>
+      <ol class="passi">
+        <li><h3>Scegli le tappe</h3><p>${C.tappeCitta} posti in città e ${C.gite} gite fuori, ognuno con orari, prezzi e quanto dura la visita.</p></li>
+        <li><h3>Guarda quanto ci metti</h3><p>Tra una tappa e l'altra calcoliamo il tempo vero: a piedi, in metro, in funicolare e in autobus.</p>
+          <div class="esempio num" aria-label="Esempio">
+            <span class="esempio__ora">${ora(esempio[0].inizio)}</span><span class="esempio__pallino"></span><span>${esc(T(esempio[0].id).breve)}</span>
+            <span></span><span class="esempio__tratto">${tratto(esempio[1])}</span>
+            <span class="esempio__ora">${ora(esempio[2].inizio)}</span><span class="esempio__pallino"></span><span>${esc(T(esempio[2].id).breve)}</span>
+          </div></li>
+        <li><h3>Leggi gli avvisi</h3><p>Ti diciamo se quel giorno una tappa è chiusa e dove fermarti a mangiare lungo la strada.</p></li>
+      </ol>
+    </section>
+
+    <section class="wrap tratto-home" aria-labelledby="h-linee">
+      <div class="fermata"><span class="fermata__punto" aria-hidden="true"></span><h2 id="h-linee" class="cond titolo-sez">Itinerari pronti</h2></div>
+      <div class="fermata" style="padding-top:0"><div class="linee">
+        ${pr.map(p => `<a class="linea-scheda" href="#racconto">
+          <div class="linea-scheda__foto" ${p.id === 'due-giorni' ? 'style="view-transition-name: foto-pronto"' : ''}>${img(COPERTINE[p.id], '', 'loading="lazy"')}${segno(p.id)}</div>
+          <div class="linea-scheda__testo">
+            <h3>${esc(p.nome)}</h3>
+            <span class="linea-scheda__fermate" style="--c: var(${COLORE[p.id]})" aria-hidden="true">${Array.from({ length: Math.min(p.nTappe, 8) }, (_, i) => `${i ? '<b></b>' : ''}<i></i>`).join('')}</span>
+            <span class="linea-scheda__dati num"><span><b>${p.nTappe}</b> tappe</span><span><b>${p.minPiedi}</b> min a piedi</span></span>
+          </div></a>`).join('')}
+      </div></div>
+    </section>
+  </div>
+
+  <section class="su-mare" aria-labelledby="h-mangiare">
+    <div class="wrap mangiare">
+      <div class="mangiare__foto">${img('tp-pignasecca', null, 'loading="lazy"')}</div>
+      <div>
+        <h2 id="h-mangiare" class="cond titolo-sez">Dove mangiare</h2>
+        <p style="margin-top:.75rem">${C.locali} locali, dalla pizza a portafoglio al pesce sul lungomare. Ognuno entra nel tuo itinerario come pranzo, cena o spuntino.</p>
+        <ul class="famiglie">
+          ${[['pizza', 'Pizzerie'], ['napoletana', 'Cucina napoletana'], ['pesce', 'Pesce'], ['strada', 'Cibo di strada'], ['dolci', 'Dolci e caffè']].map(([k, n]) => `<li><a href="#home">${n}<span class="num">${C.cucine[k]}</span></a></li>`).join('')}
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <div class="binario">
+    <section class="wrap tratto-home" aria-labelledby="h-fidarti">
+      <div class="fermata"><span class="fermata__punto" aria-hidden="true"></span><h2 id="h-fidarti" class="cond titolo-sez">Perché fidarti</h2></div>
+      <div class="fermata" style="padding-top:0"><div class="cifre-home num">
+        <div><b>${C.fonti}</b><span>fonti, ognuna con il giorno del controllo</span></div>
+        <div><b>${C.tappeCitta + C.gite}</b><span>tappe con orari e prezzi</span></div>
+        <div><b>${D.aggiornato.split(' ').slice(0, 2).join(' ')}</b><span>ultimo controllo di orari e prezzi</span></div>
+        <div><b>0</b><span>link pagati e recensioni comprate</span></div>
+      </div></div>
+    </section>
+    <section class="wrap tratto-home capolinea" aria-label="Le prossime città" style="padding-bottom:3.5rem">
+      <div class="fermata"><span class="fermata__punto" aria-hidden="true"></span><p class="fermata__nome">Capolinea, per ora</p><p style="font-weight:600;font-size:1.15rem">Napoli è la prima città. Le altre arrivano dopo.</p></div>
+    </section>
+  </div>
+  ${piede()}`;
+
+  function piede() {
+    return `<footer class="piede"><div class="wrap piede__riga">
+      <span class="marchio"><span class="marchio__segno" aria-hidden="true"></span>Nextstop</span>
+      <ul><li><a href="#racconto">Fonti</a></li><li><a href="#home">Privacy</a></li><li><a href="#home">Note legali</a></li><li><a href="#home">Accessibilità</a></li></ul>
+    </div></footer>`;
+  }
+
+  /* ---------- RACCONTO ---------- */
+  const P = pronto('due-giorni');
+  const DOPO = { sansevero: 'tp-sansevero-prenota', duomo: 'tp-tesoro-durata', pedamentina: 'tp-pedamentina-orari', 'monte-echia': 'tp-echia-orari', 'borgo-marinari': 'tp-borgo-orari' };
+  const LOCALE_DOPO = { tribunali: 'di-matteo' };
+  const titoloGiorno = g => { const t = g.voci.filter(v => v.tipo === 'tappa'); return `Da ${T(t[0].id).breve} a ${T(t.at(-1).id).breve}`; };
+  const piediGiorno = g => g.voci.filter(v => v.tipo === 'tratto' && !v.mezzi.length).reduce((s, v) => s + v.min, 0);
+  const vociGiorno = g => {
+    const tappe = g.voci.filter(v => v.tipo === 'tappa');
+    return g.voci.map(v => {
+      if (v.tipo === 'tratto') return `<div class="fila fila--tratto"><span></span><span class="fila__binario"></span><div class="fila__corpo num">${tratto(v)}</div></div>`;
+      const t = T(v.id), f = t.foto;
+      const prima = v === tappe[0], ultima = v === tappe.at(-1);
+      const et = [`Visita: ${durata(v.fine - v.inizio)}`];
+      const att = [];
+      if (t.chiuso.length) att.push(`Chiuso ${t.chiuso.map(x => (x === 'dom' ? 'la ' : 'il ') + GIORNI[x]).join(' e ')}`);
+      if (t.prenotazione === 'obbligatoria') att.push('Biglietto online obbligatorio');
+      if (t.ingresso === 'gratis') et.push('Ingresso libero');
+      const fila = x => x ? `<div class="fila fila--extra"><span></span><span class="fila__binario"></span><div class="fila__corpo">${x}</div></div>` : '';
+      const sapere = DOPO[v.id] ? `<aside class="biglietto"><h4>Da sapere</h4><p>${esc(D.schede[DOPO[v.id]].testo)}</p></aside>` : '';
+      const loc = LOCALE_DOPO[v.id] ? (l => `<aside class="ristoro"><span class="ristoro__tipo">Per pranzo, qui</span><h4>${esc(l.nome)}</h4><p>${l.testo}</p></aside>`)(D.locali.find(l => l.id === LOCALE_DOPO[v.id])) : '';
+      return `<article class="fila ${prima ? 'fila--prima' : ''} ${ultima ? 'fila--ultima' : ''}">
+        <span class="fila__ora num">${ora(v.inizio)}</span>
+        <span class="fila__binario"><span class="fila__punto"></span></span>
+        <div class="fila__corpo">
+          <h3>${esc(t.nome)}</h3>
+          <div class="etichette">${et.map(e => `<span class="etichetta">${e}</span>`).join('')}${att.map(e => `<span class="etichetta etichetta--attenzione">${e}</span>`).join('')}</div>
+          ${f ? `<figure class="fila__foto">${img(f, null, 'loading="lazy"')}</figure><p class="credito">${credito(f)}</p>` : ''}
+          <p>${t.testo}</p>
+        </div>
+      </article>${fila(sapere)}${fila(loc)}`;
+    }).join('');
+  };
+
+  $('#p-racconto').innerHTML = `
+  <div class="wrap racconto">
+    <nav class="briciole" aria-label="Percorso"><a href="#home">Napoli</a><span aria-hidden="true">›</span><a href="#home">Itinerari pronti</a><span aria-hidden="true">›</span><span aria-current="page">Due giorni</span></nav>
+    <header class="racconto__testa">
+      <div class="racconto__foto">${img('vista-monte-echia')}${segno('due-giorni')}</div>
+      <div style="display:grid;gap:1.25rem">
+        <h1>${esc(P.nome)}</h1>
+        <p class="racconto__lead">${P.testo}</p>
+        <dl class="cifre num"><div><dt>giorni</dt><dd>${P.giorni.length}</dd></div><div><dt>tappe</dt><dd>${P.nTappe}</dd></div><div><dt>min a piedi</dt><dd>${P.minPiedi}</dd></div><div><dt>di strada</dt><dd>${km(P.metri)}</dd></div></dl>
+        <div class="azioni"><a class="btn btn--pieno" href="#compositore">Apri e cambialo</a><a class="btn" href="#compositore">Componi il tuo</a></div>
+        <p class="piccolo">${credito('vista-monte-echia')}</p>
+      </div>
+    </header>
+  </div>
+  ${P.giorni.map((g, i) => `<section aria-labelledby="h-g${i}">
+    <div class="su-mare"><div class="wrap giorno__testa"><span class="linea-segno" data-l="due-giorni" aria-hidden="true">G${i + 1}</span><div><h2 id="h-g${i}">Giorno ${i + 1}</h2><p class="num">${esc(titoloGiorno(g))}: ${g.voci.filter(v => v.tipo === 'tappa').length} tappe, dalle ${ora(g.inizio)} alle ${ora(g.fine)}, ${piediGiorno(g)} minuti a piedi.</p></div></div></div>
+    <div class="percorso"><div class="wrap">${vociGiorno(g)}</div></div>
+  </section>`).join('')}
+  <section class="wrap fine-racconto" aria-labelledby="h-fine">
+    <h2 id="h-fine" class="cond titolo-sez">Lo vuoi diverso?</h2>
+    <p style="max-width:34rem">Aprilo nel compositore: sposti le tappe, cambi il giorno, aggiungi un pranzo. I tempi si ricalcolano da soli.</p>
+    <div class="azioni"><a class="btn btn--pieno" href="#compositore">Apri e cambialo</a><a class="btn" href="#compositore">Componi il tuo</a></div>
+  </section>
+  <div class="wrap">
+    <details class="fonti"><summary>Fonti di questa pagina</summary>
+      <ol>${Object.values(D.fonti).map(f => `<li>${esc(f.titolo)}${f.editore ? `, ${esc(f.editore)}` : ''}. <a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.url.replace(/^https?:\/\//, ''))}</a></li>`).join('')}</ol>
+    </details>
+  </div>
+  ${piede()}`;
+
+  /* ---------- COMPOSITORE ---------- */
+  const mart = D.martedi;
+  const chiuse = new Set(mart.avvisi.filter(a => a.tipo === 'chiusa').map(a => a.id));
+  let giornoScelto = 0;
+  const nomiChiuse = [...chiuse].map(id => T(id).breve);
+  function giornata(g) {
+    const voci = P.giorni[g].voci;
+    let n = 0;
+    return voci.map(v => {
+      if (v.tipo === 'tratto') return `<li class="g-tratto"><span></span><span class="num">${tratto(v)}</span></li>`;
+      n++;
+      const chiusa = g === 0 && chiuse.has(v.id);
+      return `<li class="g-tappa ${chiusa ? 'g-tappa--chiusa' : ''}"><span class="g-punto num">${n}</span>
+        <div class="g-scheda"><span><span class="g-nome">${esc(T(v.id).nome)}</span><span class="g-ora num">${ora(v.inizio)}–${ora(v.fine)}</span>${chiusa ? `<span class="g-chiusa">Chiuso il martedì</span>` : ''}</span>
+          <span class="g-azioni"><button aria-label="Sposta ${esc(T(v.id).breve)}"><svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="9" cy="6" r="1.6"/><circle cx="15" cy="6" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="18" r="1.6"/><circle cx="15" cy="18" r="1.6"/></svg></button><button aria-label="Altre azioni per ${esc(T(v.id).breve)}"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><circle cx="5" cy="12" r="2"/><circle cx="12" cy="12" r="2"/><circle cx="19" cy="12" r="2"/></svg></button></span></div></li>`;
+    }).join('') + `<li class="g-fine"><span></span><button class="aggiungi" type="button" id="apri-foglio"><span class="aggiungi__piu" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span>Aggiungi una tappa</button></li>`;
+  }
+  function mappa(g) {
+    const ids = P.giorni[g].voci.filter(v => v.tipo === 'tappa').map(v => v.id);
+    const pts = ids.flatMap(id => [T(id).xy, T(id).xyFine ?? T(id).xy]);
+    const xs = pts.map(p => p[0]), ys = pts.map(p => p[1]);
+    let x0 = Math.min(...xs) - 110, x1 = Math.max(...xs) + 110, y0 = Math.min(...ys) - 110, y1 = Math.max(...ys) + 110;
+    const w = x1 - x0, h = y1 - y0, r = 0.8;
+    if (h / w < r) { const d = (w * r - h) / 2; y0 -= d; y1 += d; } else { const d = (h / r - w) / 2; x0 -= d; x1 += d; }
+    const linea = ids.map((id, i) => `${i ? 'L' : 'M'}${T(id).xy.join(' ')}${T(id).xyFine ? ` L${T(id).xyFine.join(' ')}` : ''}`).join(' ');
+    const s = (x1 - x0) / 560;
+    return `<svg viewBox="${x0} ${y0} ${x1 - x0} ${y1 - y0}" role="img" aria-label="Mappa del giorno ${g + 1}: ${ids.length} tappe">
+      <rect class="mappa-terra" x="${x0}" y="${y0}" width="${x1 - x0}" height="${y1 - y0}"/>
+      <path class="mappa-mare" d="${M.mare}"/><path class="mappa-terra" d="${M.isole}"/><path class="mappa-parchi" d="${M.parchi}"/>
+      <g class="mappa-strade">${M.strade.map((d, i) => `<path d="${d}" stroke-width="${[7, 4, 2.4][i] * s}"/>`).join('')}</g>
+      <path class="mappa-percorso" d="${linea}" style="stroke-width:${7 * s}"/>
+      ${ids.map((id, i) => `<g class="mappa-fermata ${g === 0 && chiuse.has(id) ? 'mappa-fermata--chiusa' : ''}" transform="translate(${T(id).xy.join(' ')}) scale(${s})"><circle r="17" stroke-width="5"/><text>${i + 1}</text></g>`).join('')}
+    </svg>`;
+  }
+  function disegnaComp() {
+    const g = P.giorni[giornoScelto];
+    $('#comp-giornata').innerHTML = giornata(giornoScelto);
+    $('#comp-tabellone').innerHTML = `<div><b>${ora(g.inizio)}</b><span>inizio</span></div><div><b>${ora(g.fine)}</b><span>fine</span></div><div><b>${g.voci.filter(v => v.tipo === 'tappa').length}</b><span>tappe</span></div><div><b>${km(g.metri)}</b><span>${g.spostamenti} min in giro</span></div>`;
+    $('#comp-avviso').hidden = giornoScelto !== 0;
+    $('#comp-mappa').innerHTML = `${mappa(giornoScelto)}<figcaption>Mappa: dati © i contributori di OpenStreetMap (ODbL). La linea collega le tappe in ordine.</figcaption>`;
+    document.querySelectorAll('.giorni-scelta button').forEach((b, i) => b.setAttribute('aria-selected', String(i === giornoScelto)));
+    $('#apri-foglio').addEventListener('click', apriFoglio);
+  }
+  $('#p-compositore').innerHTML = `
+  <div class="wrap comp">
+    <nav class="briciole" aria-label="Percorso"><a href="#home">Napoli</a><span aria-hidden="true">›</span><span aria-current="page">Il tuo itinerario</span></nav>
+    <div class="comp__testa">
+      <h1>Il tuo itinerario</h1>
+      <p class="nome-it"><span>${esc(P.nome)}</span><button aria-label="Cambia il nome"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 20h4L19 9l-4-4L4 16v4z"/></svg></button></p>
+      <div class="controlli">
+        <button type="button"><span>Primo giorno</span>Martedì 13 ottobre</button>
+        <button type="button"><span>Orario</span>9:30–19:00</button>
+        <button type="button"><span>Come ti sposti</span>A piedi, metro, funicolari e autobus</button>
+      </div>
+    </div>
+    <div class="giorni-scelta" role="tablist" aria-label="Giorni">
+      ${P.giorni.map((_, i) => `<button role="tab" aria-selected="${i === 0}" data-giorno="${i}"><span class="linea-segno" data-l="due-giorni" aria-hidden="true">G${i + 1}</span>Giorno ${i + 1}</button>`).join('')}
+    </div>
+    <div class="avviso" id="comp-avviso" role="status">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M12 3.5l9.5 16.5h-19z"/><path d="M12 10v4.5M12 17.5v.01"/></svg>
+      <div><p>Martedì 13 ottobre sono chiusi ${nomiChiuse.join(' e ')}.</p><button type="button">Cambia giorno</button></div>
+    </div>
+    <div class="tabellone num" id="comp-tabellone"></div>
+    <div class="comp__griglia">
+      <div>
+        <ol class="giornata" id="comp-giornata"></ol>
+        <div class="condividi"><button class="btn btn--pieno" type="button">Condividi il link</button><button class="btn" type="button">Salva sul telefono</button></div>
+      </div>
+      <figure class="comp__mappa" id="comp-mappa"></figure>
+    </div>
+  </div>
+  <div style="height:3rem"></div>
+  ${piede()}`;
+  document.querySelectorAll('.giorni-scelta button').forEach(b => b.addEventListener('click', () => {
+    const nuovo = +b.dataset.giorno;
+    if (nuovo === giornoScelto) return;
+    const vai = () => { giornoScelto = nuovo; disegnaComp(); };
+    if (document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) { const vt = document.startViewTransition(vai); vt.ready.catch(() => {}); } else vai();
+  }));
+
+  /* Ricerca nel foglio «Aggiungi una tappa» */
+  const tutte = [
+    ...Object.values(D.tappe).map(t => ({ id: t.id, nome: t.nome, sotto: t.tipo === 'gita' ? 'Gita fuori città' : t.zonaNome, tipo: t.tipo, cerca: `${t.nome} ${t.breve} ${t.zonaNome}` })),
+    ...D.locali.map(l => ({ id: l.id, nome: l.nome, sotto: `${l.zonaNome}, da mangiare`, tipo: 'mangiare', cerca: `${l.nome} ${l.zonaNome} ${(l.cucina || []).join(' ')} ${(l.piatti || []).join(' ')}` }))
+  ];
+  const norma = s => s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+  let filtro = 'tutto';
+  function cerca() {
+    const q = norma($('#cerca-campo').value.trim());
+    const lista = tutte.filter(x => (filtro === 'tutto' || x.tipo === filtro) && (!q || norma(x.cerca).includes(q))).slice(0, 30);
+    const segna = s => { if (!q) return esc(s); const i = norma(s).indexOf(q); return i < 0 ? esc(s) : esc(s.slice(0, i)) + '<mark>' + esc(s.slice(i, i + q.length)) + '</mark>' + esc(s.slice(i + q.length)); };
+    $('#risultati').innerHTML = lista.map((x, i) => `<li style="--i:${i}"><span class="risultati__tipo" data-t="${x.tipo}" aria-hidden="true"></span><div><h3>${segna(x.nome)}</h3><p>${esc(x.sotto)}</p></div><button type="button" aria-label="Aggiungi ${esc(x.nome)}">+</button></li>`).join('');
+    $('#vuoto').hidden = lista.length > 0;
+    $('#risultati-conta').textContent = lista.length ? `${lista.length} risultati` : 'Nessun risultato';
+  }
+  function apriFoglio() { $('#cerca-campo').value = ''; cerca(); $('#foglio').showModal(); }
+  $('#cerca-campo').addEventListener('input', cerca);
+  document.querySelectorAll('.filtri button').forEach(b => b.addEventListener('click', () => {
+    filtro = b.dataset.filtro;
+    document.querySelectorAll('.filtri button').forEach(x => x.setAttribute('aria-pressed', String(x === b)));
+    cerca();
+  }));
+  $('#vuoto-tutto').addEventListener('click', () => { $('#cerca-campo').value = ''; filtro = 'tutto'; document.querySelectorAll('.filtri button').forEach(x => x.setAttribute('aria-pressed', String(x.dataset.filtro === 'tutto'))); cerca(); });
+  $('#foglio-chiudi').addEventListener('click', () => $('#foglio').close());
+  $('#foglio').addEventListener('click', e => { if (e.target === $('#foglio')) $('#foglio').close(); });
+  disegnaComp();
+
+  /* ---------- Pagine della proposta e passaggio tra pagine ---------- */
+  const PAGINE = ['home', 'racconto', 'compositore'];
+  function mostra(nome, primo) {
+    if (!PAGINE.includes(nome)) nome = 'home';
+    const fai = () => {
+      PAGINE.forEach(p => { document.getElementById('p-' + p).hidden = p !== nome; });
+      document.querySelector('.pagina').className = `pagina pagina--${nome}`;
+      document.querySelectorAll('.prova a').forEach(a => { if (a.getAttribute('href') === '#' + nome) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+      document.querySelectorAll('#menu a[data-va]').forEach(a => { if (a.dataset.va === nome) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current'); });
+      window.scrollTo(0, 0);
+    };
+    try { document.getElementById('menu').hidePopover(); } catch (e) {}
+    if (!primo && document.startViewTransition && !matchMedia('(prefers-reduced-motion: reduce)').matches) { const vt = document.startViewTransition(fai); vt.ready.catch(() => {}); vt.finished.catch(() => {}); } else fai();
+  }
+  addEventListener('hashchange', () => mostra(location.hash.slice(1)));
+  mostra(location.hash.slice(1) || 'home', true);
+
+  /* Tema: sistema → chiaro → scuro */
+  const temi = [null, 'light', 'dark'], nomi = ['Tema: automatico', 'Tema: chiaro', 'Tema: scuro'];
+  let t = 0;
+  const imposta = () => { if (temi[t]) document.documentElement.dataset.theme = temi[t]; else delete document.documentElement.dataset.theme; $('#tema').setAttribute('aria-label', nomi[t]); $('#tema').title = nomi[t]; };
+  try { const q = new URLSearchParams(location.search).get('tema'); if (q) { t = temi.indexOf(q); imposta(); } } catch (e) {}
+  $('#tema').addEventListener('click', () => { t = (t + 1) % 3; imposta(); });
+})();
+</script>
