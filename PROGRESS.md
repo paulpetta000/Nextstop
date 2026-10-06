@@ -12,7 +12,7 @@ _Ultimo aggiornamento: 06/10/2026 (nascita del sito)._
 
 ## Cosa fa Enrico adesso
 1. Crea il repository vuoto `nextstop` su GitHub e il progetto su Vercel (istruzioni in chat).
-2. Dopo il primo indirizzo di Vercel: aggiornare `SITO.url` in `src/config/sito.ts` e `public/robots.txt`.
+2. Dopo il primo indirizzo di Vercel: aggiornare `SITO.url` in `src/config/sito.ts`, `site` in `astro.config.mjs` e `public/robots.txt`.
 3. Decidere l'email del sito (oggi è quella di Napoli a Vela, in `src/config/sito.ts`).
 4. Aggiungere il nuovo indirizzo in Google Search Console (proprietà nuova) e inviare `/sitemap.xml`.
 

@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import serviceWorker from './integrations/service-worker.mjs';
 
 export default defineConfig({
-  site: 'https://napoli-a-vela.vercel.app',
+  site: 'https://nextstop.vercel.app', // da aggiornare con l'indirizzo vero di Vercel, come SITO.url
   trailingSlash: 'always',
   build: {
     format: 'directory',
