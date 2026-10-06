@@ -5,8 +5,8 @@ export const SITO = {
   // Identificatore breve (nomi tecnici)
   sigla: 'nextstop',
   sottotitolo: 'Itinerari in città',
-  // Da aggiornare quando c'è il progetto su Vercel (indirizzo vero)
-  url: 'https://nextstop.vercel.app',
+  // Indirizzo gratuito di Vercel (06/10/2026); un dominio proprio dopo l'avvocato
+  url: 'https://nextstop-alpha.vercel.app',
   lingua: 'it',
   // Data dell'ultimo controllo generale delle informazioni
   aggiornato: '2026-10-04',
