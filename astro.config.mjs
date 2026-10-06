@@ -2,7 +2,7 @@ import { defineConfig } from 'astro/config';
 import serviceWorker from './integrations/service-worker.mjs';
 
 export default defineConfig({
-  site: 'https://nextstop-alpha.vercel.app' // come SITO.url in src/config/sito.ts
+  site: 'https://nextstop-alpha.vercel.app', // come SITO.url in src/config/sito.ts
   trailingSlash: 'always',
   build: {
     format: 'directory',
