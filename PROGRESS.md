@@ -8,16 +8,15 @@ _Ultimo aggiornamento: 06/10/2026 (nascita del sito)._
 - Itinerari e «Dove mangiare» **funzionano come su Napoli a Vela** (stile «Orario»). Tolti dai testi i due link alla Coppa (collegamento a senso unico).
 - **Provvisori**: la home, la pagina `/napoli/`, il logo (piastrella gialla con il segno di una fermata), i colori di intestazione e piè di pagina (ancora quelli di Napoli a Vela). Si rifanno con la grafica.
 - Controlli del 06/10/2026 sul computer di Enrico: `npm test` 26/26, build ok (11 pagine), `check:links` 781 link senza errori, immagini da telefono in chiaro e scuro, nessuno scorrimento orizzontale a 390 px.
-- **Non è ancora online**: manca il repository su GitHub e il progetto su Vercel.
+- **Online dal 06/10/2026** su https://nextstop-alpha.vercel.app (repository `paulpetta000/Nextstop`, privato). Le fasi dei lavori sono in `ROADMAP.md`.
 
 ## Cosa fa Enrico adesso
-1. Crea il repository vuoto `nextstop` su GitHub e il progetto su Vercel (istruzioni in chat).
-2. ~~Indirizzo di Vercel~~: `nextstop-alpha.vercel.app` (06/10/2026), già scritto nel sito.
-3. Decidere l'email del sito (oggi è quella di Napoli a Vela, in `src/config/sito.ts`).
-4. Aggiungere il nuovo indirizzo in Google Search Console (proprietà nuova) e inviare `/sitemap.xml`.
+1. Su Vercel: il ramo del sito pubblico deve essere `main` (Settings › Environments › Production).
+2. Decidere l'email del sito (oggi è quella di Napoli a Vela, in `src/config/sito.ts`).
+3. Google Search Console: proprietà nuova per `nextstop-alpha.vercel.app` e invio di `/sitemap.xml`.
 
-## Prossimi passi
-1. **Grafica e home «wow»** (Enrico, 06/10/2026: «un sito da 5.000 euro»): prima una specifica corta (chi arriva, cosa deve trovare in 5 secondi), poi **due proposte** (home e una pagina interna, con i dati veri e le foto che abbiamo) da far scegliere, poi il logo (3 o 4 direzioni). Ispirazioni: `design/ispirazioni/` (MUDD) e `.claude/skills/design-sito/references/ispirazioni.md`. Modello Opus, effort extra.
+## Prossimi passi (in ordine: vedi `ROADMAP.md`)
+1. **Grafica e home «wow»** (Enrico, 06/10/2026: «un sito da 5.000 euro»): prima una specifica corta (chi arriva, cosa deve trovare in 5 secondi), poi **due proposte** (home e una pagina interna, con i dati veri e le foto che abbiamo) da far scegliere, poi il logo (3 o 4 direzioni). Figma è collegato ma con il piano gratuito si usa al massimo circa 20 volte al mese: proposte in HTML, in Figma solo quella scelta. Ispirazioni: `design/ispirazioni/` (MUDD) e `.claude/skills/design-sito/references/ispirazioni.md`. Modello Opus, effort extra.
 2. **Curare meglio gli itinerari di Napoli**: più itinerari pronti, con nomi, e le correzioni del trascinamento (`da-risolvere.md`).
 3. **Città nuove**: una specifica per città (tappe con fonti, tempi da OpenStreetMap, mezzi pubblici). Consiglio: Napoli perfetta più 1 o 2 città, poi si allarga.
 4. **SEO** con claude-seo (deciso per Napoli a Vela il 06/10/2026), quando la struttura è finita; pagine fisse per gli itinerari pronti (il compositore ha il contenuto dopo il «#», Google non lo vede).
