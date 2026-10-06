@@ -1,0 +1,165 @@
+<title>Loghi Nextstop</title>
+<meta name="description" content="Quattro direzioni per il logo di Nextstop, nello stile della proposta A.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&display=swap">
+<style>
+/* Quattro direzioni per il segno di Nextstop, con i colori e i caratteri della proposta A (piperno, blu notte, giallo tufo).
+   Il nome è provvisorio: il segno deve reggersi da solo; il nome si cambia senza rifare il segno. */
+:root {
+  --carta: #F7F6F2; --pietra: #ECEAE4; --riga: #D6D2C8;
+  --inchiostro: #16181D; --inchiostro-2: #575B65;
+  --notte: #142039; --su-notte: #F3F1EC; --tufo: #E0A51B;
+  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Bodoni Moda", "Bodoni 72", Didot, Georgia, serif;
+  --entra: cubic-bezier(0.16, 1, 0.3, 1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --carta: #0F1524; --pietra: #19223A; --riga: #2B3653; --inchiostro: #EEF0F4; --inchiostro-2: #A8AFBD; --notte: #080C17; --su-notte: #EEF0F4; --tufo: #F0BE3E; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --carta: #0F1524; --pietra: #19223A; --riga: #2B3653; --inchiostro: #EEF0F4; --inchiostro-2: #A8AFBD; --notte: #080C17; --su-notte: #EEF0F4; --tufo: #F0BE3E; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--carta); color: var(--inchiostro); font: 400 1rem/1.55 var(--sans); padding: 1.5rem 16px 4rem; }
+.wrap { max-width: 64rem; margin-inline: auto; display: grid; gap: 2.5rem; }
+h1 { margin: 0; font: 800 clamp(2.4rem, 11vw, 4rem)/.92 var(--sans); font-variation-settings: "wdth" 70; letter-spacing: -.015em; }
+.intro { display: grid; gap: .75rem; max-width: 38rem; }
+.intro p { margin: 0; color: var(--inchiostro-2); }
+.direzione { display: grid; gap: 1rem; padding-top: 2rem; border-top: 1px solid var(--riga); }
+.direzione__testa { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: .5rem 1rem; }
+.direzione h2 { margin: 0; font: 600 2rem/1 var(--serif); }
+.direzione__idea { margin: 0; max-width: 40rem; color: var(--inchiostro-2); }
+.riproduci { min-height: 44px; padding: .5rem 1.1rem; border-radius: 999px; border: 1.5px solid var(--inchiostro); background: transparent; color: var(--inchiostro); font: 600 .95rem/1 var(--sans); cursor: pointer; transition: transform 100ms var(--entra); }
+.riproduci:active { transform: scale(.96); }
+.prove { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .75rem; }
+@media (min-width: 760px) { .prove { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+.prova { position: relative; display: grid; place-items: center; aspect-ratio: 1; border-radius: 18px; overflow: hidden; }
+.prova small { position: absolute; left: .7rem; bottom: .55rem; font-size: .72rem; font-weight: 600; opacity: .75; }
+.prova--chiara { background: #F7F6F2; color: #16181D; --punto: #E0A51B; --sfondo: #F7F6F2; }
+.prova--scura { background: #142039; color: #F3F1EC; --punto: #F0BE3E; --sfondo: #142039; }
+.prova--foto { color: #fff; --punto: #F0BE3E; --sfondo: #1b2232; }
+.prova--foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.prova--foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,12,22,.25), rgba(8,12,22,.55)); }
+.prova--foto .segno, .prova--foto small { position: relative; z-index: 1; }
+.prova--foto small { position: absolute; }
+.prova--app { background: var(--pietra); }
+.prova .segno { width: 46%; }
+.icona-app { width: 58%; aspect-ratio: 1; border-radius: 22.5%; display: grid; place-items: center; background: #142039; color: #F3F1EC; --punto: #F0BE3E; --sfondo: #142039; box-shadow: 0 6px 18px rgba(0,0,0,.18); }
+.icona-app .segno { width: 62%; }
+.piccoli { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; padding: 1rem 1.1rem; border-radius: 16px; background: var(--pietra); }
+.scheda-browser { display: inline-flex; align-items: center; gap: .5rem; padding: .45rem .8rem; border-radius: 10px 10px 0 0; background: var(--carta); font: 500 .8rem/1 system-ui, sans-serif; color: var(--inchiostro); --punto: var(--tufo); --sfondo: var(--carta); }
+.scheda-browser .segno { width: 16px; height: 16px; }
+.misura { display: inline-flex; align-items: center; gap: .5rem; font-size: .8rem; color: var(--inchiostro-2); --punto: var(--tufo); --sfondo: var(--pietra); color: var(--inchiostro); }
+.misura .segno { width: 32px; height: 32px; }
+.firma { display: inline-flex; align-items: center; gap: .6rem; --punto: var(--tufo); --sfondo: var(--carta); }
+.firma .segno { width: 44px; height: 44px; }
+.firma__nome { font: 800 2.1rem/1 var(--sans); font-variation-settings: "wdth" 70; letter-spacing: -.01em; }
+.firma__nome--serif { font: 600 2.1rem/1 var(--serif); letter-spacing: -.01em; }
+.firme { display: flex; flex-wrap: wrap; align-items: center; gap: 1.25rem 2.5rem; padding: 1.25rem 0 .25rem; }
+.nota { margin: 0; font-size: .9rem; color: var(--inchiostro-2); }
+.segno { display: block; overflow: visible; }
+
+/* ---------- Animazioni del segno (una volta all'apertura, poi con «Guarda l'animazione») ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .anima .traccia { stroke-dasharray: 1; stroke-dashoffset: 1; animation: disegna 300ms var(--entra) forwards; }
+  .anima .traccia--2 { animation-delay: 150ms; }
+  .anima .compare { opacity: 0; transform-box: fill-box; transform-origin: center; animation: compare 200ms var(--entra) forwards; animation-delay: calc(300ms + var(--d, 0ms)); }
+  .anima .cade { opacity: 0; transform-box: fill-box; transform-origin: center; animation: cade 300ms var(--entra) forwards; animation-delay: 280ms; }
+  .anima .gira { transform-box: view-box; transform-origin: 24px 24px; animation: gira 300ms var(--entra) both; animation-delay: 100ms; }
+  @keyframes disegna { to { stroke-dashoffset: 0; } }
+  @keyframes compare { from { opacity: 0; transform: scale(.4); } to { opacity: 1; transform: none; } }
+  @keyframes cade { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+  @keyframes gira { from { transform: rotate(-135deg); } }
+}
+
+.tema { position: fixed; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); min-height: 44px; padding: 0 14px; border-radius: 999px; border: 0; background: #26272B; color: #fff; font: 600 13px/1 system-ui, sans-serif; cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,.28); }
+:focus-visible { outline: 3px solid var(--tufo); outline-offset: 3px; }
+</style>
+
+<!--FOTO-->
+
+<div class="wrap">
+  <header class="intro">
+    <h1>Quattro loghi per Nextstop</h1>
+    <p>Tutti nello stile della proposta A: blu notte, giallo tufo, gli stessi caratteri. Il nome è provvisorio, quindi conta il segno: deve funzionare anche senza il nome.</p>
+    <p>Ogni segno è provato su fondo chiaro, su fondo scuro, sopra una foto (come nella home), come icona del telefono e piccolo come nella scheda del browser. Tocca «Guarda l'animazione» per vederlo disegnarsi.</p>
+  </header>
+  <div id="direzioni" style="display:grid;gap:2.5rem"></div>
+</div>
+<button class="tema" id="tema" type="button">Tema: automatico</button>
+
+<script>
+(() => {
+  // I quattro segni, su una griglia di 48 × 48. currentColor = inchiostro; --punto = il giallo; --sfondo = il colore dietro.
+  const SEGNI = {
+    arco: {
+      nome: "L'arco", firma: 'serif',
+      idea: "Il portale di una chiesa o di un palazzo, come le foto ritagliate ad arco della proposta A, e il punto giallo sulla soglia: entri in città. Va bene per ogni città italiana, non solo per Napoli.",
+      svg: `<path class="traccia" pathLength="1" d="M13 42V23a11 11 0 0 1 22 0v19" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="round"/>
+            <circle class="cade" cx="24" cy="33" r="4.6" fill="var(--punto)"/>`
+    },
+    tappa: {
+      nome: 'La prossima tappa', firma: 'sans',
+      idea: "Tre passi e poi la fermata: il percorso a puntini che arriva al cerchio, con il punto giallo dove stai andando. È il «next stop» del nome, disegnato. Somiglia al logo di oggi, ma racconta il cammino.",
+      svg: `<circle class="compare" style="--d:0ms" cx="8.5" cy="40" r="2.7" fill="currentColor"/>
+            <circle class="compare" style="--d:60ms" cx="13.5" cy="32.5" r="2.7" fill="currentColor"/>
+            <circle class="compare" style="--d:120ms" cx="19.5" cy="26.5" r="2.7" fill="currentColor"/>
+            <circle class="traccia traccia--2" pathLength="1" cx="31.5" cy="16.5" r="9.5" fill="none" stroke="currentColor" stroke-width="4.6" transform="rotate(135 31.5 16.5)"/>
+            <circle class="compare" style="--d:260ms" cx="31.5" cy="16.5" r="4.2" fill="var(--punto)"/>`
+    },
+    mappa: {
+      nome: 'La mappa in tasca', firma: 'sans',
+      idea: "Una piastrella quadrata con dentro una strada che va da un punto all'altro: un pezzo di mappa. È già un'icona da telefono, quadrata. La strada cambia forma per ogni città, se un giorno vorremo.",
+      svg: `<rect x="3.5" y="3.5" width="41" height="41" rx="11" fill="currentColor"/>
+            <circle cx="13.5" cy="35" r="3.6" fill="none" stroke="var(--sfondo)" stroke-width="3"/>
+            <path class="traccia" pathLength="1" d="M15.6 32.4C19 27 18 24.5 23 22.5s7.5-3 9-7.4" fill="none" stroke="var(--sfondo)" stroke-width="3.4" stroke-linecap="round"/>
+            <circle class="compare" style="--d:80ms" cx="33.5" cy="13.5" r="5" fill="var(--punto)"/>`
+    },
+    lancetta: {
+      nome: 'La lancetta', firma: 'serif',
+      idea: "Un quadrante con una lancetta che punta al punto giallo sul bordo: quanto manca alla prossima tappa. È la promessa del sito, i tempi veri, in un segno solo.",
+      svg: `<circle cx="24" cy="24" r="17" fill="none" stroke="currentColor" stroke-width="4.8"/>
+            <g class="gira"><path d="M24 24L31.2 16.8" stroke="currentColor" stroke-width="4.8" stroke-linecap="round"/></g>
+            <circle cx="24" cy="24" r="3.4" fill="currentColor"/>
+            <circle class="compare" style="--d:120ms" cx="36" cy="12" r="5.6" fill="var(--punto)" stroke="var(--sfondo)" stroke-width="3"/>`
+    }
+  };
+  const segno = (k, cls = '') => `<svg class="segno ${cls}" viewBox="0 0 48 48" aria-hidden="true">${SEGNI[k].svg}</svg>`;
+  const FOTO = window.FOTO_LOGO || '';
+
+  document.getElementById('direzioni').innerHTML = Object.keys(SEGNI).map(k => {
+    const s = SEGNI[k];
+    return `<section class="direzione" aria-labelledby="h-${k}" data-segno="${k}">
+      <div class="direzione__testa"><h2 id="h-${k}">${s.nome}</h2><button class="riproduci" type="button">Guarda l'animazione</button></div>
+      <p class="direzione__idea">${s.idea}</p>
+      <div class="prove">
+        <div class="prova prova--chiara">${segno(k)}<small>Fondo chiaro</small></div>
+        <div class="prova prova--scura">${segno(k)}<small>Fondo scuro</small></div>
+        <div class="prova prova--foto">${FOTO ? `<img src="${FOTO}" alt="">` : ''}${segno(k)}<small>Sopra una foto</small></div>
+        <div class="prova prova--app"><div class="icona-app">${segno(k)}</div><small>Icona del telefono</small></div>
+      </div>
+      <div class="piccoli">
+        <span class="scheda-browser">${segno(k)}Nextstop · Napoli</span>
+        <span class="misura">${segno(k)}32 px</span>
+        <span class="misura" style="--x:1">${segno(k).replace('class="segno ', 'style="width:16px;height:16px" class="segno ')}16 px</span>
+      </div>
+      <div class="firme">
+        <span class="firma">${segno(k)}<span class="firma__nome ${s.firma === 'serif' ? 'firma__nome--serif' : ''}">Nextstop</span></span>
+      </div>
+    </section>`;
+  }).join('');
+
+  // Animazione: all'apertura e a ogni tocco su «Guarda l'animazione»
+  const anima = sez => { sez.classList.remove('anima'); void sez.offsetWidth; sez.classList.add('anima'); };
+  document.querySelectorAll('.direzione').forEach(sez => {
+    sez.querySelector('.riproduci').addEventListener('click', () => anima(sez));
+    new IntersectionObserver((v, o) => { if (v[0].isIntersecting) { anima(sez); o.disconnect(); } }, { threshold: .4 }).observe(sez);
+  });
+
+  const temi = [null, 'light', 'dark'], nomi = ['Tema: automatico', 'Tema: chiaro', 'Tema: scuro'];
+  let t = 0;
+  const imposta = () => { if (temi[t]) document.documentElement.dataset.theme = temi[t]; else delete document.documentElement.dataset.theme; document.getElementById('tema').textContent = nomi[t]; };
+  try { const q = new URLSearchParams(location.search).get('tema'); if (q) { t = temi.indexOf(q); imposta(); } } catch (e) {}
+  document.getElementById('tema').addEventListener('click', () => { t = (t + 1) % 3; imposta(); });
+})();
+</script>

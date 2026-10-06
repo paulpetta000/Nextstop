@@ -6,7 +6,7 @@ _Ultimo aggiornamento: 07/10/2026 (Fase 1: due proposte grafiche)._
 - Specifica `specifiche/home-e-identita.md` **approvata da Enrico il 06/10/2026**, con le sue aggiunte: il compositore si rifà tutto (restano dati e calcoli), le pagine «racconto» degli itinerari pronti (stile MUDD, per Google), il menu con le tre linee.
 - **Due proposte** con dati e foto veri, home + racconto «Due giorni» + compositore, chiaro e scuro: A «Rivista» https://claude.ai/artifact/37yToKfDMfL87fHKvGQDE3 · B «La linea» https://claude.ai/artifact/6DswrzVy5fXuW3rA5iZDDq.
   Sorgenti in `design/home/` (`a.html`, `b.html`; `node design/home/dati.mjs` dopo la build, poi `node design/home/genera.mjs`), immagini di confronto in `design/home/immagini/`.
-- Prossimo: Enrico sceglie (anche mescolando) → logo in 3 o 4 direzioni → Figma (proposta scelta e logo animato) → `DESIGN.md` → costruzione della home.
+- **07/10/2026: Enrico sceglie la A «Rivista»** (stile MUDD), da completare mentre si costruisce. Loghi: 4 direzioni (arco, prossima tappa, mappa in tasca, lancetta) su https://claude.ai/artifact/Gg8XpkSJ7ZjsjjMSwDjPSj, sorgente `design/logo/`. Prossimo: logo in 3 o 4 direzioni da scegliere → Figma (proposta scelta e logo animato) → `DESIGN.md` → costruzione della home.
 
 ## Dove siamo
 - **06/10/2026: il sito è nato** separando gli itinerari da Napoli a Vela (`specifiche/sito-itinerari-separazione.md`, approvata da Enrico).

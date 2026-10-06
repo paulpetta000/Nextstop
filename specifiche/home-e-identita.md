@@ -109,7 +109,7 @@ nessuno scorrimento orizzontale a 320 e 390 px, «riduci movimento», nessun err
 - [x] Enrico approva questa specifica (06/10/2026, con le sue aggiunte).
 - [ ] Ricerca delle ricette di movimento, con le fonti.
 - [ ] Proposte A e B (home, racconto, compositore), chiaro e scuro, telefono e computer.
-- [ ] Enrico sceglie (anche mescolando).
+- [x] Enrico sceglie: **A «Rivista»** (07/10/2026), da completare mentre si costruisce.
 - [ ] Logo: 3 o 4 direzioni; Enrico sceglie.
 - [ ] Figma: la proposta scelta e il logo animato. `DESIGN.md` con il look scelto.
 - [ ] Costruzione: home, logo, menu, intestazione, piè di pagina, `?pronto=`.
