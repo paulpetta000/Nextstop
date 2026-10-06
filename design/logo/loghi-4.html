@@ -1,0 +1,281 @@
+<title>Marchio Nextstop</title>
+<meta name="description" content="Quarto giro del marchio di Nextstop: la soglia e i portici con curve continue, tre colori da città italiane, nome, icone, risultati di ricerca e animazione.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&display=swap">
+<style>
+/* Quarto giro. Tre colori presi dalle città italiane, ognuno con tre toni: primario (il colore del marchio),
+   profondo (quasi un inchiostro, dello stesso colore) e calce (il bianco caldo dei muri).
+   Archi a curvatura continua: la curva nasce dolcemente dai piedritti invece di attaccarsi a mezzo cerchio. */
+:root {
+  --carta: #F7F6F2; --pietra: #ECEAE4; --riga: #D6D2C8; --inchiostro: #16181D; --inchiostro-2: #575B65;
+  --primario: #1C3FAA; --profondo: #0E1D4D; --calce: #F6F2EA;
+  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Bodoni Moda", "Bodoni 72", Didot, Georgia, serif;
+  --morbido: cubic-bezier(0.16, 1, 0.3, 1); --dolce: cubic-bezier(0.65, 0, 0.35, 1);
+  color-scheme: light;
+}
+:root[data-palette="pompeiano"] { --primario: #A3302A; --profondo: #3A1512; --calce: #F7F0E6; }
+:root[data-palette="rame"] { --primario: #1E6B5C; --profondo: #0D2A24; --calce: #F3F1E9; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --carta: #101318; --pietra: #1A1E26; --riga: #2C323D; --inchiostro: #EEF0F4; --inchiostro-2: #A8AFBD; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --carta: #101318; --pietra: #1A1E26; --riga: #2C323D; --inchiostro: #EEF0F4; --inchiostro-2: #A8AFBD; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--carta); color: var(--inchiostro); font: 400 1rem/1.55 var(--sans); padding: 0 0 5rem; }
+.wrap { max-width: 64rem; margin-inline: auto; padding-inline: 16px; }
+h1 { margin: 0; font: 600 clamp(2.2rem, 9vw, 3.6rem)/1 var(--serif); letter-spacing: -.01em; }
+h2 { margin: 0 0 1rem; font: 600 1.6rem/1.1 var(--serif); }
+p { margin: 0; }
+.piccolo { font-size: .9rem; color: var(--inchiostro-2); }
+.sez { display: grid; gap: 1rem; padding-block: 2.25rem; border-top: 1px solid var(--riga); }
+:focus-visible { outline: 3px solid var(--primario); outline-offset: 3px; }
+
+/* Barra in alto: colori e animazione */
+.comandi { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--carta) 92%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--riga); }
+.comandi .wrap { display: flex; flex-wrap: wrap; align-items: center; gap: .5rem; padding-block: .6rem; }
+.colore { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .35rem .9rem .35rem .45rem; border-radius: 999px; border: 1.5px solid var(--riga); background: transparent; color: var(--inchiostro); font: 600 .9rem/1 var(--sans); cursor: pointer; transition: border-color 200ms var(--morbido), transform 150ms var(--morbido); }
+.colore:active { transform: scale(.96); }
+.colore i { width: 1.6rem; height: 1.6rem; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgba(0,0,0,.12); }
+.colore[aria-pressed="true"] { border-color: var(--inchiostro); }
+.riproduci { margin-left: auto; min-height: 44px; padding: .5rem 1.1rem; border-radius: 999px; border: 0; background: var(--inchiostro); color: var(--carta); font: 600 .9rem/1 var(--sans); cursor: pointer; transition: transform 150ms var(--morbido); }
+.riproduci:active { transform: scale(.96); }
+
+.apertura { padding-block: 2rem 1.5rem; display: grid; gap: .75rem; max-width: 40rem; }
+.apertura p { color: var(--inchiostro-2); }
+
+/* Il campo: i due marchi sul loro colore */
+.campi { display: grid; gap: .75rem; }
+@media (min-width: 760px) { .campi { grid-template-columns: 1fr 1fr; } }
+.campo { position: relative; display: grid; place-items: center; gap: 1.5rem; aspect-ratio: 4 / 5; border-radius: 28px; padding: 2rem 1rem; transition: background-color 400ms var(--dolce); }
+.campo--soglia { background: var(--primario); color: var(--calce); }
+.campo--portici { background: var(--profondo); color: var(--calce); }
+.campo .segno { width: min(48vw, 13rem); }
+.campo__nome { position: absolute; left: 1.1rem; bottom: .9rem; font: italic 500 1rem/1 var(--serif); opacity: .8; }
+.costr-btn { position: absolute; right: .8rem; top: .8rem; min-height: 40px; padding: .35rem .8rem; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--calce) 45%, transparent); background: transparent; color: var(--calce); font: 600 .78rem/1 var(--sans); cursor: pointer; }
+.costr-btn[aria-pressed="true"] { background: var(--calce); color: var(--profondo); }
+.costruzione { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(48vw, 13rem); height: min(48vw, 13rem); opacity: 0; transition: opacity 300ms var(--morbido); pointer-events: none; }
+.campo.mostra .costruzione { opacity: 1; }
+.costruzione * { fill: none; stroke: var(--calce); stroke-width: .12; opacity: .75; }
+.costruzione .griglia { opacity: .25; }
+
+/* Il nome */
+.firme { display: grid; gap: .75rem; }
+@media (min-width: 760px) { .firme { grid-template-columns: 1fr 1fr; } }
+.firma { display: flex; align-items: center; gap: .9rem; padding: 2rem 1.4rem; border-radius: 22px; background: var(--pietra); color: var(--inchiostro); }
+.firma .segno { width: 3.6rem; flex: none; }
+.parola { display: grid; gap: .3rem; }
+.nome { font: 560 2.4rem/1 var(--sans); font-variation-settings: "wdth" 96; letter-spacing: -.035em; display: flex; align-items: baseline; }
+.nome .l { display: inline-block; overflow: hidden; padding-bottom: .08em; margin-bottom: -.08em; }
+.nome .l > span { display: inline-block; }
+.nome .o { display: inline-block; width: .52em; height: .52em; border-radius: 50%; background: var(--primario); margin: 0 .035em -.012em .03em; }
+.descrittore { font: italic 500 .95rem/1 var(--serif); color: var(--inchiostro-2); letter-spacing: .005em; }
+
+/* Icone, risultati, sito */
+.due { display: grid; gap: .75rem; }
+@media (min-width: 760px) { .due { grid-template-columns: 1fr 1fr; } }
+.riquadro { padding: 1.1rem; border-radius: 22px; background: var(--pietra); display: grid; gap: .9rem; align-content: start; }
+.icone { display: flex; flex-wrap: wrap; align-items: end; gap: 1rem 1.4rem; }
+.misura { display: grid; justify-items: center; gap: .35rem; font-size: .72rem; color: var(--inchiostro-2); }
+.risultati { border-radius: 18px; overflow: hidden; border: 1px solid var(--riga); }
+.ris-fondo { padding: .95rem 1rem 1rem; display: grid; gap: 1rem; font-family: Arial, Helvetica, sans-serif; }
+.ris-chiaro { background: #FFFFFF; color: #1F1F1F; --sec: #4D5156; --tit: #1A0DAB; --vuoto: #E3E3E3; }
+.ris-scuro { background: #1F1F1F; color: #E3E3E3; --sec: #BDC1C6; --tit: #99C3FF; --vuoto: #3C4043; }
+.ris { display: grid; gap: .3rem; }
+.ris__testa { display: flex; align-items: center; gap: .65rem; }
+.ris__icona { width: 28px; height: 28px; border-radius: 50%; overflow: hidden; flex: none; background: var(--vuoto); }
+.ris__icona svg { width: 28px; height: 28px; display: block; }
+.ris__nome { font-size: .875rem; line-height: 1.25; }
+.ris__nome small { display: block; color: var(--sec); font-size: .75rem; }
+.ris__titolo { color: var(--tit); font-size: 1.1rem; line-height: 1.3; text-decoration: none; }
+.barra { height: .6rem; border-radius: 4px; background: var(--vuoto); }
+.telefono { display: grid; grid-template-columns: repeat(4, 3rem); gap: .85rem .75rem; padding: 1rem; border-radius: 22px; background: #2A2F3A; width: fit-content; }
+.app { display: grid; justify-items: center; gap: .3rem; font: 500 .6rem/1 system-ui, sans-serif; color: #fff; }
+.app i { width: 3rem; height: 3rem; border-radius: 22.5%; background: rgba(255,255,255,.18); display: block; }
+.app svg { width: 3rem; height: 3rem; border-radius: 22.5%; display: block; }
+.sito { border-radius: 18px; overflow: hidden; border: 1px solid var(--riga); background: #F7F6F2; color: #16181D; }
+.sito__testata { display: flex; align-items: center; justify-content: space-between; padding: .7rem 1rem; border-bottom: 1px solid #D6D2C8; }
+.sito__marchio { display: flex; align-items: center; gap: .5rem; }
+.sito__marchio .segno { width: 1.9rem; }
+.sito__marchio span { font: 560 1.3rem/1 var(--sans); font-variation-settings: "wdth" 96; letter-spacing: -.03em; }
+.sito__menu { width: 40px; height: 40px; border-radius: 50%; border: 1px solid #D6D2C8; display: grid; place-items: center; }
+.sito__foto { position: relative; height: 11rem; overflow: hidden; }
+.sito__foto img { width: 100%; height: 100%; object-fit: cover; }
+.sito__foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,12,22,.35), rgba(8,12,22,.7)); }
+.sito__sopra { position: absolute; z-index: 1; left: 1rem; right: 1rem; top: .8rem; display: flex; align-items: center; justify-content: space-between; color: #fff; }
+.sito__titolo { position: absolute; z-index: 1; left: 1rem; bottom: .9rem; color: #fff; font: 800 2rem/.95 var(--sans); font-variation-settings: "wdth" 70; }
+.colori { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; }
+.tono { display: grid; gap: .35rem; font-size: .75rem; color: var(--inchiostro-2); }
+.tono i { display: block; height: 3.2rem; border-radius: 12px; background: var(--c); box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+.tono b { color: var(--inchiostro); font-size: .85rem; }
+.segno { display: block; overflow: visible; }
+
+/* ---------- Animazione: un piccolo film, una cosa dopo l'altra ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .anima .gradino { transform-box: fill-box; transform-origin: center; animation: allarga 700ms var(--morbido) both; }
+  .anima .penna { stroke-dasharray: 1; animation: penna 1100ms var(--dolce) both; animation-delay: 250ms; }
+  .anima .punto { transform-box: fill-box; transform-origin: center; animation: compare 800ms var(--morbido) both; animation-delay: 1150ms; }
+  .anima .tenda { animation: sali 1000ms var(--dolce) both; animation-delay: 250ms; }
+  .anima .cornice { animation: posa 700ms var(--morbido) both; animation-delay: 1000ms; }
+  .anima .alba { animation: alba 900ms var(--dolce) both; animation-delay: 1350ms; }
+  .anima-nome .l > span { animation: lettera 700ms var(--morbido) both; animation-delay: calc(900ms + var(--i) * 45ms); }
+  .anima-nome .o { animation: compare 700ms var(--morbido) both; animation-delay: calc(900ms + var(--i) * 45ms); }
+  .anima-nome .descrittore { animation: svela 800ms var(--morbido) both; animation-delay: 1500ms; }
+  @keyframes allarga { from { transform: scaleX(0); } }
+  @keyframes penna { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  @keyframes compare { from { transform: scale(.3); opacity: 0; } 50% { opacity: 1; } }
+  @keyframes sali { from { transform: translateY(34px); } }
+  @keyframes posa { from { transform: translateY(-4px); opacity: 0; } }
+  @keyframes alba { from { transform: translateY(24px); } }
+  @keyframes lettera { from { transform: translateY(105%); } }
+  @keyframes svela { from { opacity: 0; transform: translateY(4px); } }
+}
+.tema { position: fixed; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); min-height: 44px; padding: 0 14px; border-radius: 999px; border: 0; background: #26272B; color: #fff; font: 600 13px/1 system-ui, sans-serif; cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,.28); }
+</style>
+
+<!--FOTO-->
+
+<div class="comandi"><div class="wrap" role="group" aria-label="Colore del marchio">
+  <button class="colore" type="button" data-p="maiolica" aria-pressed="true" style="--c:#1C3FAA"><i></i>Blu maiolica</button>
+  <button class="colore" type="button" data-p="pompeiano" aria-pressed="false" style="--c:#A3302A"><i></i>Rosso pompeiano</button>
+  <button class="colore" type="button" data-p="rame" aria-pressed="false" style="--c:#1E6B5C"><i></i>Verde rame</button>
+  <button class="riproduci" type="button" id="riproduci">Guarda l'animazione</button>
+</div></div>
+
+<main class="wrap">
+  <header class="apertura">
+    <h1>La soglia e i portici</h1>
+    <p>Stessi due segni, ridisegnati con curve continue. Scegli il colore qui sopra: tutta la pagina cambia. Poi dimmi quale segno e quale colore.</p>
+  </header>
+  <section class="campi" aria-label="I due marchi">
+    <div class="campo campo--soglia" id="campo-soglia"><span id="s-grande"></span><span class="campo__nome">La soglia</span><button class="costr-btn" type="button" aria-pressed="false">Costruzione</button></div>
+    <div class="campo campo--portici" id="campo-portici"><span id="p-grande"></span><span class="campo__nome">I portici</span><button class="costr-btn" type="button" aria-pressed="false">Costruzione</button></div>
+  </section>
+  <section class="sez" aria-labelledby="h-nome"><h2 id="h-nome">Con il nome</h2><div class="firme" id="firme"></div>
+    <p class="piccolo">Il nome è provvisorio: il segno resta uguale anche se cambia.</p></section>
+  <section class="sez" aria-labelledby="h-ico"><h2 id="h-ico">Icone e risultati di ricerca</h2><div class="due" id="icone"></div></section>
+  <section class="sez" aria-labelledby="h-sito"><h2 id="h-sito">Sul sito</h2><div class="due" id="sito"></div></section>
+  <section class="sez" aria-labelledby="h-col"><h2 id="h-col">Il colore</h2><div class="colori" id="toni"></div>
+    <p class="piccolo" id="toni-nota"></p></section>
+</main>
+<button class="tema" id="tema" type="button">Tema: automatico</button>
+
+<script>
+(() => {
+  let n = 0;
+  // Colori come classi, così cambiano con la palette
+  const C = { pri: 'fill:var(--primario)', pro: 'fill:var(--profondo)', cal: 'fill:var(--calce)' };
+  // ---------- La soglia: piedritti, arco a curvatura continua, gradino, punto ----------
+  // t = telaio, p = punto, f = fondo
+  function soglia({ t = C.pro, p = C.pri, f = null, tondo = 12 } = {}) {
+    const u = 'm' + (n++);
+    return `<svg class="segno" viewBox="0 0 48 48" aria-hidden="true">
+      ${f ? `<rect width="48" height="48" rx="${tondo}" style="${f}"/>` : ''}
+      <mask id="${u}" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><path class="penna" pathLength="1" d="M15.6 38.4V24C15.6 15.6 19.3 9.3 24 9.3S32.4 15.6 32.4 24V38.4" fill="none" stroke="#fff" stroke-width="7.6"/></mask>
+      <path mask="url(#${u})" fill-rule="evenodd" style="${t}" d="M13 37.5V24C13 14.6 17.6 7 24 7S35 14.6 35 24V37.5zM18.2 37.5V23.6C18.2 16.6 20.7 11.6 24 11.6S29.8 16.6 29.8 23.6V37.5z"/>
+      <rect class="gradino" x="10.5" y="39.3" width="27" height="2.6" rx=".6" style="${t}"/>
+      <circle class="punto" cx="24" cy="32.6" r="3.9" style="${p}"/>
+    </svg>`;
+  }
+  // ---------- I portici: facciata, cornice, gradino, due aperture; nella seconda sale la luce ----------
+  function portici({ fa = C.pri, buio = C.pro, luce = C.cal, f = null, tondo = 12 } = {}) {
+    const u = 'm' + (n++);
+    const A1 = 'M12 39V24C12 19.6 14.3 16.6 17.2 16.6S22.4 19.6 22.4 24V39z', A2 = 'M25.6 39V24C25.6 19.6 27.9 16.6 30.8 16.6S36 19.6 36 24V39z';
+    return `<svg class="segno" viewBox="0 0 48 48" aria-hidden="true">
+      ${f ? `<rect width="48" height="48" rx="${tondo}" style="${f}"/>` : ''}
+      <clipPath id="${u}a"><rect class="tenda" x="0" y="0" width="48" height="39.2"/></clipPath>
+      <clipPath id="${u}b"><rect class="alba" x="20" y="14" width="20" height="26"/></clipPath>
+      <g clip-path="url(#${u}a)">
+        <path d="${A1}" style="${buio}"/><path d="${A2}" style="${buio}"/>
+        <path d="${A2}" style="${luce}" clip-path="url(#${u}b)"/>
+        <path fill-rule="evenodd" style="${fa}" d="M8 10.4h32V39H8z${A1}${A2}"/>
+      </g>
+      <rect class="cornice" x="6.4" y="6.9" width="35.2" height="2.3" rx=".5" style="${fa}"/>
+      <rect class="gradino" x="6.4" y="40.6" width="35.2" height="2.6" rx=".6" style="${fa}"/>
+    </svg>`;
+  }
+  // Icone (quadrate, angoli secondo la misura): soglia sul primario, portici sul profondo
+  const icoSoglia = tondo => soglia({ t: C.cal, p: C.cal, f: C.pri, tondo });
+  const icoPortici = tondo => portici({ f: C.pro, fa: C.pri, buio: C.pro, luce: C.cal, tondo });
+  // Disegni a mano per i 16 pixel
+  const soglia16 = `<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" style="${C.pri}"/>
+    <path style="${C.cal}" d="M4 13V7.6C4 5 5.8 3 8 3s4 2 4 4.6V13h-2V7.6C10 6 9.1 5 8 5S6 6 6 7.6V13zM3 14h10v1H3z"/><circle cx="8" cy="11" r="1.6" style="${C.cal}"/></svg>`;
+  const portici16 = `<svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" style="${C.pro}"/>
+    <rect x="1" y="2" width="14" height="1" style="${C.pri}"/><rect x="2" y="4" width="12" height="10" style="${C.pri}"/>
+    <path style="${C.pro}" d="M3 14V8a2 2 0 0 1 4 0v6z"/><path style="${C.cal}" d="M9 14V8a2 2 0 0 1 4 0v6z"/><rect x="1" y="15" width="14" height="1" style="${C.pri}"/></svg>`;
+
+  const griglia = Array.from({ length: 13 }, (_, i) => `<path d="M${i * 4} 0V48M0 ${i * 4}H48"/>`).join('');
+  const costr = {
+    soglia: `<svg class="costruzione" viewBox="0 0 48 48" aria-hidden="true"><g class="griglia">${griglia}</g>
+      <path d="M13 24C13 14.6 17.6 7 24 7S35 14.6 35 24M18.2 23.6C18.2 16.6 20.7 11.6 24 11.6S29.8 16.6 29.8 23.6"/>
+      <path d="M13 24L13 14.6L17.6 7M35 24L35 14.6L30.4 7M18.2 23.6L18.2 16.6L20.7 11.6M29.8 23.6L29.8 16.6L27.3 11.6"/>
+      <circle cx="24" cy="32.6" r="3.9"/><path d="M24 3V46M4 7H44M4 11.6H44M4 24H44M4 37.5H44M4 39.3H44M13 4V44M18.2 4V44M29.8 4V44M35 4V44"/></svg>`,
+    portici: `<svg class="costruzione" viewBox="0 0 48 48" aria-hidden="true"><g class="griglia">${griglia}</g>
+      <path d="M24 3V46M3 24H45M3 16.6H45M3 10.4H45M3 9.2H45M3 39H45M3 40.6H45M8 3V46M12 3V46M22.4 3V46M25.6 3V46M36 3V46M40 3V46"/>
+      <path d="M12 24L12 19.6L14.3 16.6M22.4 24L22.4 19.6L20.1 16.6M25.6 24L25.6 19.6L27.9 16.6M36 24L36 19.6L33.7 16.6"/></svg>`
+  };
+  document.getElementById('s-grande').outerHTML = soglia({ t: C.cal, p: C.cal }) + costr.soglia;
+  document.getElementById('p-grande').outerHTML = portici({ fa: C.pri, buio: C.pro, luce: C.cal }) + costr.portici;
+
+  const nome = conPunto => {
+    const lettere = 'nextstop'.split('');
+    return `<span class="nome" aria-label="nextstop">${lettere.map((c, i) => conPunto && c === 'o' ? `<span class="o" style="--i:${i}" aria-hidden="true"></span>` : `<span class="l" aria-hidden="true"><span style="--i:${i}">${c}</span></span>`).join('')}</span>`;
+  };
+  document.getElementById('firme').innerHTML = `
+    <div class="firma">${soglia()}<span class="parola">${nome(true)}<span class="descrittore">itinerari in città</span></span></div>
+    <div class="firma">${portici({ fa: C.pri, buio: C.pro, luce: 'fill:var(--pietra)' })}<span class="parola">${nome(false)}<span class="descrittore">itinerari in città</span></span></div>`;
+
+  const finto = () => `<div class="ris" aria-hidden="true"><div class="ris__testa"><span class="ris__icona"></span><span style="display:grid;gap:.35rem;width:8rem"><span class="barra"></span><span class="barra" style="width:70%"></span></span></div><span class="barra" style="height:.85rem;width:85%;margin-top:.3rem"></span></div>`;
+  const nostro = ico => `<div class="ris"><div class="ris__testa"><span class="ris__icona">${ico}</span><span class="ris__nome">Nextstop<small>https://nextstop-alpha.vercel.app › napoli</small></span></div><a class="ris__titolo" href="#">Due giorni a Napoli: l'itinerario con i tempi veri</a></div>`;
+  const misure = (ico, ico16) => `<div class="icone">${[64, 40, 28].map(s => `<span class="misura"><span style="width:${s}px;height:${s}px;display:block;border-radius:${s * .225}px;overflow:hidden">${ico(0)}</span>${s} px</span>`).join('')}<span class="misura">${ico16}16 px</span></div>`;
+  const telefono = ico => `<div class="telefono" aria-hidden="true">${'<span class="app"><i></i>&nbsp;</span>'.repeat(5)}<span class="app">${ico(0)}Nextstop</span>${'<span class="app"><i></i>&nbsp;</span>'.repeat(2)}</div>`;
+  document.getElementById('icone').innerHTML = [['La soglia', icoSoglia, soglia16], ['I portici', icoPortici, portici16]].map(([t, ico, i16]) => `
+    <div class="riquadro"><p class="piccolo"><b>${t}</b></p>${misure(ico, i16)}${telefono(ico)}
+      <div class="risultati"><div class="ris-fondo ris-chiaro">${finto()}${nostro(ico(0))}</div><div class="ris-fondo ris-scuro">${nostro(ico(0))}</div></div></div>`).join('');
+
+  const FOTO = window.FOTO_LOGO || '';
+  const sito = (segnoChiaro, segnoFoto) => `<div class="sito">
+    <div class="sito__testata"><span class="sito__marchio">${segnoChiaro}<span>nextstop</span></span><span class="sito__menu" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span></div>
+    <div class="sito__foto">${FOTO ? `<img src="${FOTO}" alt="">` : ''}<div class="sito__sopra"><span class="sito__marchio">${segnoFoto}<span>nextstop</span></span></div><p class="sito__titolo">Napoli,<br>con i tempi veri.</p></div></div>`;
+  document.getElementById('sito').innerHTML =
+    sito(soglia(), soglia({ t: 'fill:#fff', p: 'fill:#fff' })) +
+    sito(portici({ fa: C.pri, buio: C.pro, luce: 'fill:#F7F6F2' }), portici({ fa: 'fill:#fff', buio: 'fill:rgba(0,0,0,.35)', luce: C.pri }));
+
+  const TONI = {
+    maiolica: [['#1C3FAA', 'Blu maiolica'], ['#0E1D4D', 'Profondo'], ['#F6F2EA', 'Calce'], 'Il blu delle maioliche, dei chiostri e dei balconi: fresco, si vede da lontano, sta bene con il blu notte della proposta A.'],
+    pompeiano: [['#A3302A', 'Rosso pompeiano'], ['#3A1512', 'Profondo'], ['#F7F0E6', 'Calce'], 'Il rosso degli affreschi di Pompei e dei palazzi storici: caldo e italiano, il più elegante dei tre.'],
+    rame: [['#1E6B5C', 'Verde rame'], ['#0D2A24', 'Profondo'], ['#F3F1E9', 'Calce'], 'Il verde delle cupole e delle statue di bronzo: calmo e raro, nessun sito di viaggio italiano lo usa.']
+  };
+  const mostraToni = p => {
+    const [a, b, c, nota] = TONI[p];
+    document.getElementById('toni').innerHTML = [a, b, c].map(([hex, nome]) => `<span class="tono"><i style="--c:${hex}"></i><b>${nome}</b>${hex}</span>`).join('');
+    document.getElementById('toni-nota').textContent = nota;
+  };
+
+  // Palette
+  const imposta = p => {
+    if (p === 'maiolica') delete document.documentElement.dataset.palette; else document.documentElement.dataset.palette = p;
+    document.querySelectorAll('.colore').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.p === p)));
+    mostraToni(p);
+  };
+  document.querySelectorAll('.colore').forEach(b => b.addEventListener('click', () => imposta(b.dataset.p)));
+  try { const q = new URLSearchParams(location.search).get('colore'); imposta(q && TONI[q] ? q : 'maiolica'); } catch (e) { imposta('maiolica'); }
+
+  // Costruzione
+  document.querySelectorAll('.costr-btn').forEach(b => b.addEventListener('click', () => { const on = b.getAttribute('aria-pressed') !== 'true'; b.setAttribute('aria-pressed', String(on)); b.closest('.campo').classList.toggle('mostra', on); }));
+
+  // Animazione: i due campi e le firme
+  const anima = () => {
+    document.querySelectorAll('.campo > .segno, .firma > .segno').forEach(s => { s.classList.remove('anima'); void s.getBoundingClientRect(); s.classList.add('anima'); });
+    document.querySelectorAll('.firma .parola').forEach(s => { s.classList.remove('anima-nome'); void s.getBoundingClientRect(); s.classList.add('anima-nome'); });
+  };
+  document.getElementById('riproduci').addEventListener('click', anima);
+  new IntersectionObserver((v, o) => { if (v[0].isIntersecting) { anima(); o.disconnect(); } }, { threshold: .4 }).observe(document.querySelector('.campi'));
+
+  const temi = [null, 'light', 'dark'], nomi = ['Tema: automatico', 'Tema: chiaro', 'Tema: scuro'];
+  let t = 0;
+  const tema = () => { if (temi[t]) document.documentElement.dataset.theme = temi[t]; else delete document.documentElement.dataset.theme; document.getElementById('tema').textContent = nomi[t]; };
+  try { const q = new URLSearchParams(location.search).get('tema'); if (q) { t = temi.indexOf(q); tema(); } } catch (e) {}
+  document.getElementById('tema').addEventListener('click', () => { t = (t + 1) % 3; tema(); });
+})();
+</script>
