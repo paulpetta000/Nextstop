@@ -22,12 +22,12 @@ _Ultimo aggiornamento: 08/10/2026 (agente «ricercatore»; ricerche su filtri de
 - **Online dal 06/10/2026** su https://nextstop-alpha.vercel.app (repository `paulpetta000/Nextstop`, privato). Le fasi dei lavori sono in `ROADMAP.md`.
 
 ## Cosa fa Enrico adesso
-1. Su Vercel: il ramo del sito pubblico deve essere `main` (Settings › Environments › Production).
+1. Verificare gli **orari dei 5 locali nuovi** (3 bracerie, 2 friggitorie: OK di Enrico, 08/10/2026) e mandarli a Claude: `da-verificare/orari-locali.md`.
 2. Decidere l'email del sito (oggi è quella di Napoli a Vela, in `src/config/sito.ts`).
 3. Google Search Console: proprietà nuova per `nextstop-alpha.vercel.app` e invio di `/sitemap.xml`.
 
 ## Prossimi passi (in ordine: vedi `ROADMAP.md`)
-1. **Fase 2 · il compositore**: bozza della specifica scritta l'08/10/2026 (`specifiche/compositore.md`, ramo `compositore`), **da approvare**: Enrico ha risposto alle domande l'08/10/2026 (barra del compositore; «Salva» subito con nome proposto; mappa **in sospeso**, vuole capire la differenza senza l'uso offline). Ricerca di altre bracerie e friggitorie (`ricerca/2026-10-08-locali-*.md`): nessuna braceria nuova con gli orari sul sito; Da Rosetta (friggitoria, centro storico) può entrare come «scelta nostra»; il resto dipende da Enrico (schede Google o telefonate come fonte degli orari?). Ricerche: `ricerca/2026-10-08-filtri-locali.md`, `ricerca/2026-10-08-mappa.md`. Poi un pezzo alla volta con **4 proposte** ciascuno, dalla pagina e barra. Opus, effort extra.
+1. **Fase 2 · il compositore**: specifica **approvata l'08/10/2026** (`specifiche/compositore.md`; mappa **in sospeso**: Enrico vuole capire cosa cambia senza l'uso offline). Ricerche in `ricerca/2026-10-08-*.md`. Prossimo: **pezzo 1, pagina e barra del compositore, 4 proposte**, su un ramo nuovo da `main`. Opus, effort extra.
 2. **Home**: foto del portico, «Come funziona», «Perché fidarti», testi, fonti a scomparsa, crediti delle foto in fondo (stessa lista).
 3. **Fase 3 · racconti degli itinerari**: la ricerca sulla storia delle 15 tappe dei due giorni è fatta (07/10/2026, ramo `racconto-due-giorni`, `ricerca/storia-luoghi/`: 125 fatti da rileggere), poi le 4 pagine.
 4. **Città nuove**, **SEO** con claude-seo, `da-risolvere.md` (28 righe aperte): vedi `ROADMAP.md`.

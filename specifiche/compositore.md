@@ -1,6 +1,6 @@
 # Fase 2 · Il compositore nuovo
 
-_Bozza dell'08/10/2026, **da approvare da Enrico**. Ramo di lavoro: `compositore` (nato da `racconto-due-giorni`, che ha la lista di Enrico del 07/10/2026).
+_Specifica dell'08/10/2026. **Approvata da Enrico l'08/10/2026**, con la mappa in sospeso (sezione 6). Ramo di lavoro: `compositore` (nato da `racconto-due-giorni`, che ha la lista di Enrico del 07/10/2026).
 Ricerche fatte per questa specifica: `ricerca/2026-10-08-filtri-locali.md`, `ricerca/2026-10-08-mappa.md`._
 
 Il compositore è la pagina `/napoli/itinerari/`. Deve far dire «wow, ci hanno speso tanto» (Enrico, 07/10/2026).
@@ -99,7 +99,8 @@ Il nostro campo `cucina` mescola tutto: oggi «Carne» mostra **11 locali** (anc
 - Prezzo: le fasce in euro restano spiegate in una riga (€ fino a 15 euro, €€ da 15 a 35, €€€ oltre 35: regola nostra, nella pagina).
 - Gli stessi filtri valgono nel compositore e nella pagina «Dove mangiare».
 - **Diete** (vegetariano, senza glutine): non adesso. Se un giorno si fanno, solo «lo dichiara il locale», con la fonte; per il senza glutine l'unico controllo esterno trovato è il programma dell'AIC.
-- Con 2 bracerie e 1 friggitoria il filtro è povero: **si cercano altri locali di questi tipi** (Enrico, 08/10/2026). Ricerche dell'08/10/2026: `ricerca/2026-10-08-locali-bracerie.md`, `ricerca/2026-10-08-locali-friggitorie.md`; i locali scelti entrano con le stesse regole dei 32 di oggi (orari scritti dal locale, fonti, tempi ricalcolati).
+- Con 2 bracerie e 1 friggitoria il filtro è povero: **si cercano altri locali di questi tipi** (Enrico, 08/10/2026). Ricerche dell'08/10/2026: `ricerca/2026-10-08-locali-bracerie.md`, `ricerca/2026-10-08-locali-friggitorie.md`; i locali scelti entrano con le stesse regole dei 32 di oggi (orari, fonti, tempi ricalcolati).
+- **Entrano** (Enrico, 08/10/2026): Barbeqool, Colantuono's Steak and Grill, Granfuoco Braceria, Friggitoria Vomero, Da Rosetta. Un premio **non** è obbligatorio («scelta nostra», la scheda lo dice). Gli orari che i siti non scrivono li verifica Enrico a mano: `da-verificare/orari-locali.md`.
 
 ## Come si lavora: 4 proposte per pezzo
 - Un pezzo alla volta, ognuno con **4 proposte molto diverse** (regola di Enrico, 07/10/2026), con i dati veri, in chiaro e in scuro, telefono (320 e 390 px) e computer.
@@ -136,8 +137,9 @@ Il nostro campo `cucina` mescola tutto: oggi «Carne» mostra **11 locali** (anc
 - Prova a mano su telefono: comporre 2 giorni, salvare, chiudere, riaprire, segnare «visitato», aprire un vecchio link condiviso.
 
 ## Compiti
-- [ ] Enrico approva questa specifica (risposte alle domande date l'08/10/2026; mappa in sospeso).
-- [ ] Ricerca di altre bracerie e friggitorie (08/10/2026), poi Enrico sceglie quali entrano.
+- [x] Enrico approva questa specifica (08/10/2026; mappa in sospeso).
+- [x] Ricerca di altre bracerie e friggitorie (08/10/2026): Enrico fa entrare tutti e 5 i candidati.
+- [ ] Orari dei locali nuovi da Enrico (`da-verificare/orari-locali.md`), poi dati, schede e tempi tra le tappe.
 - [ ] Pezzo 1 · pagina e barra: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 2 · scheda della tappa e «visitato»: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 3 · ricerca, con le parole chiave nei dati (ricerca con le fonti, agenti `ricercatore`).

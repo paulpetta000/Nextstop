@@ -27,7 +27,7 @@ Enrico dice cosa va e cosa no → 4 proposte nuove da quello che va → avanti c
 
 ## Fase 2 · Il compositore e la grafica (lista di Enrico del 07/10/2026)
 Prima una **specifica corta** del compositore nuovo (da approvare), poi i pezzi uno alla volta, ognuno con le 4 proposte.
-Bozza scritta l'08/10/2026: `specifiche/compositore.md` (ramo `compositore`), con le ricerche su filtri dei locali e mappa in `ricerca/`.
+Approvata l'08/10/2026: `specifiche/compositore.md` (mappa in sospeso), con le ricerche su filtri dei locali e mappa in `ricerca/`.
 
 **Compositore** (`/napoli/itinerari/`): deve far dire «wow, ci hanno speso tanto».
 - [ ] Grafica nuova di tutta la pagina, da sito «da 10.000 euro»; barra di navigazione.
