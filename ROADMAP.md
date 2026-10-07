@@ -6,11 +6,11 @@ Lo stato giorno per giorno è in `PROGRESS.md`; qui solo l'ordine delle cose.
 ## Fase 0 · Messa a punto (adesso, 10 minuti)
 - [x] Repository `paulpetta000/Nextstop` e progetto Vercel, indirizzo `nextstop-alpha.vercel.app` (06/10/2026).
 - [x] Su GitHub il ramo principale è `main` (Enrico, 06/10/2026).
-- [ ] Su Vercel il ramo del sito pubblico è `main` (Enrico).
+- [x] Su Vercel il ramo del sito pubblico è `main` (verificato il 07/10/2026: le pubblicazioni da `main` vanno in produzione).
 - [ ] L'email del sito (oggi è quella di Napoli a Vela).
 - [ ] Google Search Console: proprietà nuova e invio di `/sitemap.xml`.
 
-## Fase 1 · Identità e home «wow» (prossima sessione · Opus, effort extra)
+## Fase 1 · Identità e home «wow» (in corso: home, marchio, menu e piè di pagina online dal 07/10/2026)
 L'obiettivo di Enrico: un sito che sembri da 5.000 euro.
 1. **Specifica della home**: chi arriva (turista, anche italiano nella sua città), cosa deve capire e trovare nei primi 5 secondi, cosa c'è sotto.
    Fatta e approvata il 06/10/2026: `specifiche/home-e-identita.md`, con i **racconti** degli itinerari pronti (idea di Enrico: pagine da leggere, stile MUDD, che Google trova) e il compositore da rifare.
@@ -18,7 +18,8 @@ L'obiettivo di Enrico: un sito che sembri da 5.000 euro.
    Ispirazioni: `design/ispirazioni/` (MUDD) e `.claude/skills/design-sito/references/ispirazioni.md`. Lo stile «Orario» di oggi si può cambiare.
 3. **Logo**: 3 o 4 direzioni (SVG, chiaro e scuro, anche piccolo come icona del telefono).
 4. **Figma**: è collegato, ma con il piano gratuito e un posto «View» si può usare al massimo circa **20 volte al mese**. Quindi le proposte si fanno in HTML con i dati veri (come nel Blocco 1 di Napoli a Vela), e in Figma va solo la proposta scelta, come file da guardare e da tenere. Per usare Figma di più serve un piano a pagamento con un posto pieno: decide Enrico.
-5. Il nostro `DESIGN.md`: caratteri, colori, spazi, pulsanti, riquadri. Lo legge la skill `design-sito`.
+5. Il nostro `DESIGN.md`: caratteri, colori, spazi, pulsanti, riquadri. Lo legge la skill `design-sito`. Fatto (07/10/2026), con il portico di piperno e la regola «profondità e movimento».
+6. **Resta della Fase 1**: il primo racconto, «Due giorni a Napoli» (ricerca delle fonti sulla storia dei luoghi, poi la pagina `/napoli/itinerari/due-giorni/`); Figma con la grafica scelta.
 
 ## Fase 2 · La grafica su tutto il sito (Opus, effort alto)
 - Itinerari, «Dove mangiare», Napoli, fonti e pagine legali con la grafica scelta; intestazione e piè di pagina nuovi.
