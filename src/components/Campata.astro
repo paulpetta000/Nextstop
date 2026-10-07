@@ -7,7 +7,7 @@
 // animazioni legate allo scorrimento, «riduci movimento»).
 import piperno from '../assets/pietra/piperno.webp';
 import Immagine from './Immagine.astro';
-import { arcata, VANO, W, H } from '../lib/portico.mjs';
+import { arcata, VANO, MASCHERA, W, H } from '../lib/portico.mjs';
 
 interface Props { id: string; foto: string; indice?: number; pos?: number; sizes: string; widths: number[]; alt?: string; class?: string }
 const { id, foto, indice = 0, pos = 0, sizes, widths, alt = '', class: cls } = Astro.props;
@@ -21,7 +21,8 @@ const vano = `left:${VANO.left}%;top:${VANO.top}%;width:${VANO.width}%;height:${
       </span>
     </span>
   </span>
-  <svg class="campata__pietra" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" aria-hidden="true" focusable="false" set:html={arcata({ id, specchio: indice % 2 === 1, pietra: piperno.src, seme: indice + 1 })} />
+  <span class:list={['campata__muro', { 'campata__muro--specchio': indice % 2 === 1 }]} style={`-webkit-mask-image:${MASCHERA};mask-image:${MASCHERA}`}></span>
+  <svg class="campata__pietra" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" aria-hidden="true" focusable="false" set:html={arcata({ id, seme: indice + 1 })} />
 </span>
 
 <style>
@@ -29,7 +30,12 @@ const vano = `left:${VANO.left}%;top:${VANO.top}%;width:${VANO.width}%;height:${
      della build non conosce view(inline) e cancellerebbe la regola */
   .campata { position: relative; display: block; aspect-ratio: 300 / 420; isolation: isolate; --linea-lato: view(inline); }
   /* un pixel in più a destra: tra due arcate vicine non resta mai un filo di vuoto */
-  .campata__pietra { position: absolute; top: 0; left: 0; z-index: 1; width: calc(100% + 1px); height: 100%; pointer-events: none; }
+  /* la pietra: lo sfondo grande come l'arcata, ritagliato a forma di muro; un'arcata sì e una no girata a specchio, così due
+     arcate vicine si toccano senza giunzione */
+  .campata__muro { position: absolute; top: 0; left: 0; z-index: 1; width: calc(100% + 1px); height: 100%; background: var(--pietra) center / 100% 100%;
+    -webkit-mask-size: 100% 100%; mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-repeat: no-repeat; }
+  .campata__muro--specchio { scale: -1 1; }
+  .campata__pietra { position: absolute; top: 0; left: 0; z-index: 2; width: calc(100% + 1px); height: 100%; pointer-events: none; }
   .campata__pietra :global(.pc-velo) { fill: #0B0E16; fill-opacity: var(--velo-pietra, 0); }
   /* lo spessore dell'arco: pietra in ombra, più buia in alto (sotto l'arco) e a sinistra, il pavimento in fondo un po' più chiaro */
   .campata__vano { position: absolute; z-index: 0; overflow: clip;

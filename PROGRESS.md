@@ -1,6 +1,6 @@
 # PROGRESS
 
-_Ultimo aggiornamento: 07/10/2026 (Fase 1: home costruita, anteprima di Vercel sul ramo `grafica-home`)._
+_Ultimo aggiornamento: 07/10/2026 (Fase 1: home nuova pubblicata su `main`)._
 
 ## Fase 1 in corso (ramo `grafica-home`, anche su GitHub dal 07/10/2026)
 - Specifica `specifiche/home-e-identita.md` approvata il 06/10/2026, con le aggiunte di Enrico: il compositore si rifà tutto (restano dati e calcoli), i **racconti** degli itinerari pronti (stile MUDD, per Google), il menu con le tre linee.
@@ -10,8 +10,8 @@ _Ultimo aggiornamento: 07/10/2026 (Fase 1: home costruita, anteprima di Vercel s
 - **`DESIGN.md`** scritto: colori, caratteri, forme, componenti, movimento, marchio. Da decidere vedendo l'anteprima: accento del sito giallo tufo o pervinca del marchio.
 - **Costruzione (07/10/2026), sul ramo `grafica-home`**: home nuova (`src/pages/index.astro`, testi in `src/testi/home.yaml` con i numeri dai dati: `riempi` in `src/lib/regole.mjs`), testata con menu a popover, piè di pagina blu notte, marchio animato (`Marchio.astro`, `src/lib/marchio.mjs`), icone e anteprime nuove, Bodoni Moda, `?pronto=` nel compositore, `?cucina=` in «Dove mangiare». Corretto un errore vecchio: su computer «Aggiungi» da «Dove mangiare» bloccava il compositore.
 - **Secondo giro con Enrico (07/10/2026, «più profondità, più movimento, premium»)**: portico di piperno al posto delle foto ad arco (`Campata.astro`, `src/lib/portico.mjs`, pietra da `scripts/pietra.mjs`), con prospettiva che si muove scorrendo e nebbia color pietra intorno; rombo a tre piani con il Borgo Marinari (via il fruttivendolo) e il titolo sulla punta; «Quanto tempo hai?» come fascia con i numeri in Bodoni; la foto in alto scende più piano delle parole.
-- Controlli del 07/10/2026: `npm test` 27/27, build ok, `check:links` puliti, contrasti e nomi controllati a mano nel browser in chiaro e scuro (axe e Lighthouse non installati: servirebbe un pacchetto), CLS 0, home circa 350 kB, nessuno scorrimento di lato a 320 e 390 px.
-- **Da decidere vedendo l'anteprima**: accento giallo tufo o pervinca; pietra più chiara o più scura; poi OK di Enrico e `main`.
+- Controlli del 07/10/2026: `npm test` 27/27, build ok, `check:links` puliti; **Lighthouse da telefono** (in locale, senza compressione): home 96, itinerari 94, dove mangiare 95, fonti 99; accessibilità, buone pratiche e SEO 100 ovunque; **axe** zero problemi in chiaro e scuro (home, menu, itinerari, dove mangiare); CLS 0; nessuno scorrimento di lato a 320 e 390 px. Strumenti in `C:UsersWindows11	oolscontrolli` (vedi `CLAUDE.md`).
+- **Pubblicata su `main` il 07/10/2026** (OK di Enrico). Da decidere guardando il sito: accento giallo tufo o pervinca; pietra più chiara o più scura.
 
 ## Dove siamo
 - **06/10/2026: il sito è nato** separando gli itinerari da Napoli a Vela (`specifiche/sito-itinerari-separazione.md`, approvata da Enrico).

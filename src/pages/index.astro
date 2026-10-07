@@ -70,7 +70,7 @@ const cr0 = crediti[0];
 <Base title="Itinerari in città" description={`Itinerari a Napoli pronti o fatti da te, con i tempi veri a piedi, in metro, in funicolare e in autobus: ${tappe.length} tappe in città, ${gite.length} gite e ${locali.length} locali dove mangiare.`} home>
   <div class="home">
     <section class="apertura" aria-labelledby="h-home">
-      <span class="apertura__sfondo"><Immagine id={FOTO_APERTURA} prima class="apertura__foto" widths={[480, 750, 1000]} sizes="100vw" posizione="50% 38%" /></span>
+      <span class="apertura__sfondo"><Immagine id={FOTO_APERTURA} prima qualita={40} class="apertura__foto" widths={[480, 750, 1000]} sizes="100vw" posizione="50% 38%" /></span>
       <div class="dentro apertura__dentro">
         <h1 id="h-home" class="titolone"><span>{napoli.nome},</span> <span>con i tempi veri.</span></h1>
         <Testo b={T.b('apertura')} class="apertura__lead" />
@@ -284,6 +284,8 @@ const cr0 = crediti[0];
 
   /* ---------- itinerari pronti: il portico di piperno ---------- */
   .sezione--pronti { padding-top: 0; --nebbia: color-mix(in srgb, #6C675F 17%, var(--carta)); }
+  /* il portico si disegna quando ci arrivi vicino: all'apertura il browser pensa solo alla foto in alto (non sulla banda di «Dove mangiare»: ritaglierebbe il rombo che esce sopra) */
+  .sezione--pronti { content-visibility: auto; contain-intrinsic-size: auto 900px; }
   .pronti__testa { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
   /* la nebbia color pietra dietro il portico: dalla carta alla pietra senza uno stacco */
   .portico-scena { position: relative; isolation: isolate; padding-top: 2.5rem; }

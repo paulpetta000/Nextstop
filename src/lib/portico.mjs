@@ -43,9 +43,13 @@ const CORSI = [
   [353, SOGLIA, [0, 300]]
 ];
 
-// L'interno dell'SVG di un'arcata. id: unico nella pagina; specchio: gira la pietra; pietra: indirizzo dell'immagine;
+// La forma della pietra: tutto tranne il vuoto dell'arco (più lo sporto dei capitelli). È la maschera dello sfondo di pietra
+// (Campata.astro): la pietra è uno sfondo CSS, non un'immagine dentro l'SVG, che Chrome scambiava per il contenuto principale.
+export const MASCHERA = `url("data:image/svg+xml,${encodeURIComponent(`<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 ${W} ${H}' preserveAspectRatio='none'><path fill-rule='evenodd' d='M-2 -2H${W + 2}V${H + 2}H-2Z${luce}'/><path d='M${CX - R - 1} ${IMPOSTA[0]}H${CX - R + SPORTO}V${IMPOSTA[1]}H${CX - R - 1}ZM${CX + R - SPORTO} ${IMPOSTA[0]}H${CX + R + 1}V${IMPOSTA[1]}H${CX + R - SPORTO}Z'/></svg>`)}")`;
+
+// L'interno dell'SVG di un'arcata (giunti, conci, ombre: la pietra è sotto). id: unico nella pagina;
 // seme: cambia i toni dei blocchi, perché due arcate non siano uguali
-export function arcata({ id, specchio = false, pietra, seme = 1 }) {
+export function arcata({ id, seme = 1 }) {
   const u = `pc-${id}`;
   const tono = (a, b) => {
     const v = caso(a + seme * 7.3, b + seme * 3.1);
@@ -71,7 +75,7 @@ export function arcata({ id, specchio = false, pietra, seme = 1 }) {
     const [p0, q0] = [punto(R, a0), punto(R, a1)];
     if (k === kChiave) {
       const [s0, s1] = [punto(RK, a0 + 1.6), punto(RK, a1 - 1.6)];
-      chiave = `<path d="M${p0[0]} ${p0[1]}L${s0[0]} ${s0[1]}A${RK} ${RK} 0 0 1 ${s1[0]} ${s1[1]}L${q0[0]} ${q0[1]}A${R} ${R} 0 0 0 ${p0[0]} ${p0[1]}Z" fill="url(#${u}-p)"/>`
+      chiave = `<path d="M${p0[0]} ${p0[1]}L${s0[0]} ${s0[1]}A${RK} ${RK} 0 0 1 ${s1[0]} ${s1[1]}L${q0[0]} ${q0[1]}A${R} ${R} 0 0 0 ${p0[0]} ${p0[1]}Z" fill="#fff" fill-opacity=".04"/>`
         + `<path d="M${p0[0]} ${p0[1]}L${s0[0]} ${s0[1]}A${RK} ${RK} 0 0 1 ${s1[0]} ${s1[1]}L${q0[0]} ${q0[1]}A${R} ${R} 0 0 0 ${p0[0]} ${p0[1]}Z" ${tono(40, seme)}/>`
         + `<path d="M${s0[0]} ${s0[1]}A${RK} ${RK} 0 0 1 ${s1[0]} ${s1[1]}" class="pc-sp"/>`
         + `<path d="M${p0[0]} ${p0[1]}L${s0[0]} ${s0[1]}M${q0[0]} ${q0[1]}L${s1[0]} ${s1[1]}" class="pc-g"/>`
@@ -92,14 +96,13 @@ export function arcata({ id, specchio = false, pietra, seme = 1 }) {
 
   // capitelli, cornice in alto e gradino: pietra che sporge, con la faccia di sopra chiara e l'ombra sotto
   const capitelli = [[0, CX - R + SPORTO], [CX + R - SPORTO, W]].map(([x0, x1]) =>
-    `<rect x="${x0}" y="${IMPOSTA[0]}" width="${x1 - x0}" height="${IMPOSTA[1] - IMPOSTA[0]}" fill="url(#${u}-p)"/>`
-    + `<rect x="${x0}" y="${IMPOSTA[0]}" width="${x1 - x0}" height="3.2" fill="#fff" fill-opacity=".2"/>`
+    `<rect x="${x0}" y="${IMPOSTA[0]}" width="${x1 - x0}" height="3.2" fill="#fff" fill-opacity=".2"/>`
     + `<rect x="${x0}" y="${IMPOSTA[1] - 4}" width="${x1 - x0}" height="4" fill="#000" fill-opacity=".16"/>`
     + `<rect x="${x0}" y="${IMPOSTA[1]}" width="${x1 - x0}" height="16" fill="url(#${u}-sotto)"/>`
     + `<path d="M${x0} ${IMPOSTA[0]}H${x1}M${x0} ${IMPOSTA[1] + .4}H${x1}" class="pc-g"/>`).join('');
-  const cornice = `<rect x="0" y="0" width="${W}" height="${CORNICE}" fill="url(#${u}-p)"/><rect x="0" y="0" width="${W}" height="3.4" fill="#fff" fill-opacity=".18"/>`
+  const cornice = `<rect x="0" y="0" width="${W}" height="3.4" fill="#fff" fill-opacity=".18"/>`
     + `<rect x="0" y="${CORNICE - 3}" width="${W}" height="3" fill="#000" fill-opacity=".18"/><rect x="0" y="${CORNICE}" width="${W}" height="18" fill="url(#${u}-sotto)"/><path d="M0 ${CORNICE + .4}H${W}" class="pc-g"/>`;
-  const gradino = `<rect x="0" y="${SOGLIA}" width="${W}" height="${H - SOGLIA}" fill="url(#${u}-p)"/><rect x="0" y="${SOGLIA}" width="${W}" height="4" fill="#fff" fill-opacity=".22"/>`
+  const gradino = `<rect x="0" y="${SOGLIA}" width="${W}" height="4" fill="#fff" fill-opacity=".22"/>`
     + `<rect x="0" y="${SOGLIA + 4}" width="${W}" height="${H - SOGLIA - 4}" fill="#000" fill-opacity=".12"/><path d="M0 ${SOGLIA}H${W}" class="pc-g"/>`;
 
   // patine: più chiaro in alto, più scuro in basso (uguale in ogni arcata, così tra due arcate non c'è uno scalino); qualche macchia di sporco, morbida, in punti diversi per ogni arcata
@@ -108,7 +111,6 @@ export function arcata({ id, specchio = false, pietra, seme = 1 }) {
     + [0, 1, 2].map(i => { const r = 26 + caso(seme + i, 9) * 30, x = r * 1.4 + caso(seme, i) * (W - r * 2.8), y = 40 + caso(i, seme) * 330; return `<ellipse cx="${f(x)}" cy="${f(y)}" rx="${f(r * 1.4)}" ry="${f(r)}" fill="url(#${u}-macchia)" mask="url(#${u}-m)"/>`; }).join('');
 
   return `<defs>
-    <pattern id="${u}-p" patternUnits="userSpaceOnUse" width="${W}" height="${H}"><image href="${pietra}" x="-2" y="-2" width="${W + 4}" height="${H + 4}" preserveAspectRatio="none"${specchio ? ` transform="matrix(-1 0 0 1 ${W} 0)"` : ''}/></pattern>
     <mask id="${u}-m" maskUnits="userSpaceOnUse" x="0" y="0" width="${W}" height="${H}"><rect width="${W}" height="${H}" fill="#fff"/><path d="${luce}" fill="#000"/></mask>
     <mask id="${u}-mm" maskUnits="userSpaceOnUse" x="0" y="0" width="${W}" height="${H}"><rect width="${W}" height="${H}" fill="#fff"/><path d="${arcoPieno}" fill="#000"/></mask>
     <linearGradient id="${u}-luce" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff" stop-opacity=".12"/><stop offset=".45" stop-color="#fff" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".24"/></linearGradient>
@@ -119,7 +121,6 @@ export function arcata({ id, specchio = false, pietra, seme = 1 }) {
     <linearGradient id="${u}-sx" gradientUnits="userSpaceOnUse" x1="${CX - RA}" y1="0" x2="${CX + RA}" y2="0"><stop offset="0" stop-color="#fff" stop-opacity=".28"/><stop offset=".6" stop-color="#fff" stop-opacity=".08"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
   </defs>
   <style>.pc-g{fill:none;stroke:#161310;stroke-opacity:.55;stroke-width:1.5}.pc-l{fill:none;stroke:#fff;stroke-opacity:.13;stroke-width:1}.pc-sp{fill:none;stroke:#fff;stroke-opacity:.26;stroke-width:1.4}</style>
-  <path d="M0 0H${W}V${SOGLIA}H0Z${luce}" fill-rule="evenodd" fill="url(#${u}-p)"/>
   <g mask="url(#${u}-mm)">${blocchi}${giunti}</g>
   ${conci}${giuntiArco}${anello}${chiave}${spigolo}${capitelli}${cornice}${gradino}${patine}
   <rect class="pc-velo" width="${W}" height="${H}" mask="url(#${u}-m)"/>`;

@@ -5,8 +5,8 @@
 import { Picture } from 'astro:assets';
 import { getEntry } from 'astro:content';
 
-interface Props { id: string; sizes: string; widths: number[]; prima?: boolean; alt?: string; class?: string; posizione?: string }
-const { id, sizes, widths, prima = false, alt, class: cls, posizione } = Astro.props;
+interface Props { id: string; sizes: string; widths: number[]; prima?: boolean; alt?: string; class?: string; posizione?: string; qualita?: number }
+const { id, sizes, widths, prima = false, alt, class: cls, posizione, qualita = 50 } = Astro.props;
 const f = await getEntry('foto', id);
 if (!f) throw new Error(`Foto "${id}" non trovata in src/data/foto.yaml`);
 const d = f.data;
@@ -19,7 +19,7 @@ if (!w.length) w.push(d.src.width);
   widths={w}
   sizes={sizes}
   formats={['avif', 'webp']}
-  quality={50}
+  quality={qualita}
   loading={prima ? 'eager' : 'lazy'}
   decoding={prima ? 'auto' : 'async'}
   fetchpriority={prima ? 'high' : undefined}
