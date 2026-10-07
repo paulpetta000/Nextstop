@@ -28,9 +28,10 @@ e `stile-testi` (per le parole sulle pagine).
 | `references/ui-ux-pro-max/quick-reference.md` | lista di controllo completa (accessibilità, tocco, prestazioni, moduli, navigazione) |
 | `references/ispirazioni.md` | idee di stile per le proposte grafiche (8 stili riassunti da noi) |
 | `design/ispirazioni/` (nel progetto) | schermate MUDD Napoli scelte da Enrico |
+| `DESIGN.md` (nel progetto) | **la grafica scelta** (A «Rivista») e il marchio (la soglia astratta): colori, caratteri, forme, componenti, movimento. Vince sui riferimenti qui sopra |
 
 Nei file di impeccable i comandi «/impeccable …» non esistono: usa il file con lo stesso nome qui sopra, se c'è.
-Quando Enrico sceglie la grafica del sito si scrive il nostro `DESIGN.md` con il look scelto e lo si aggiunge a questa tabella.
+La grafica scelta è in `DESIGN.md` (07/10/2026).
 
 ## Licenze
 impeccable: Apache 2.0, Paul Bakaus (`references/impeccable/LICENSE`, `NOTICE`, file modificati).

@@ -110,7 +110,8 @@ nessuno scorrimento orizzontale a 320 e 390 px, «riduci movimento», nessun err
 - [ ] Ricerca delle ricette di movimento, con le fonti.
 - [ ] Proposte A e B (home, racconto, compositore), chiaro e scuro, telefono e computer.
 - [x] Enrico sceglie: **A «Rivista»** (07/10/2026), da completare mentre si costruisce.
-- [ ] Logo: 3 o 4 direzioni; Enrico sceglie.
-- [ ] Figma: la proposta scelta e il logo animato. `DESIGN.md` con il look scelto.
+- [x] Logo: sette giri; Enrico sceglie la **soglia astratta** (07/10/2026). Tutto in `design/logo/` (README).
+- [x] `DESIGN.md` con il look scelto (07/10/2026).
+- [ ] Figma: la proposta scelta, dopo la costruzione (il file rispecchia il sito vero). L'animazione del marchio vive nel codice.
 - [ ] Costruzione: home, logo, menu, intestazione, piè di pagina, `?pronto=`.
 - [ ] Controlli, anteprima di Vercel sul ramo `grafica-home`, OK di Enrico, poi `main`.
