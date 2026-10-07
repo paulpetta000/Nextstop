@@ -1,6 +1,6 @@
 # PROGRESS
 
-_Ultimo aggiornamento: 07/10/2026 (Fase 1: costruzione a metà, non ancora controllata)._
+_Ultimo aggiornamento: 07/10/2026 (Fase 1: home costruita, anteprima di Vercel sul ramo `grafica-home`)._
 
 ## Fase 1 in corso (ramo `grafica-home`, anche su GitHub dal 07/10/2026)
 - Specifica `specifiche/home-e-identita.md` approvata il 06/10/2026, con le aggiunte di Enrico: il compositore si rifà tutto (restano dati e calcoli), i **racconti** degli itinerari pronti (stile MUDD, per Google), il menu con le tre linee.
@@ -8,8 +8,10 @@ _Ultimo aggiornamento: 07/10/2026 (Fase 1: costruzione a metà, non ancora contr
 - **Marchio scelto: la soglia astratta** (07/10/2026), dopo sette giri tutti salvati in `design/logo/` (README con i link). La «o» del nome è un segnaposto; sopra le foto calde la versione ambra.
   Su Google l'icona resta ferma (Google mostra solo immagini fisse); l'animazione vive sul sito.
 - **`DESIGN.md`** scritto: colori, caratteri, forme, componenti, movimento, marchio. Da decidere vedendo l'anteprima: accento del sito giallo tufo o pervinca del marchio.
-- **Costruzione (07/10/2026, commit sul ramo, NON ancora su GitHub)**: fatti home nuova (`src/pages/index.astro`, testi in `src/testi/home.yaml` con i numeri dai dati: `riempi` in `src/lib/regole.mjs`), testata con menu a popover (`Header.astro`), piè di pagina blu notte (`Footer.astro`), marchio animato (`Marchio.astro`, geometria unica in `src/lib/marchio.mjs`), icone e immagini di anteprima nuove, Bodoni Moda in `public/fonts/`, `?pronto=` nel compositore e `?cucina=` in «Dove mangiare». `npm test` 27/27, build ok, `check:links` 888 link puliti.
-- **Da fare (sessione nuova, Opus effort alto)**: guardare la home nel browser (telefono 320/390, chiaro e scuro, menu, animazione, `?pronto=` anche su computer: controllare che `?aggiungi=` non dia errore prima di `let mappaVicina` in `app.ts`), axe, Lighthouse, riduci movimento; poi push del ramo e anteprima di Vercel; README (caratteri) e DESIGN.md.
+- **Costruzione (07/10/2026), sul ramo `grafica-home`**: home nuova (`src/pages/index.astro`, testi in `src/testi/home.yaml` con i numeri dai dati: `riempi` in `src/lib/regole.mjs`), testata con menu a popover, piè di pagina blu notte, marchio animato (`Marchio.astro`, `src/lib/marchio.mjs`), icone e anteprime nuove, Bodoni Moda, `?pronto=` nel compositore, `?cucina=` in «Dove mangiare». Corretto un errore vecchio: su computer «Aggiungi» da «Dove mangiare» bloccava il compositore.
+- **Secondo giro con Enrico (07/10/2026, «più profondità, più movimento, premium»)**: portico di piperno al posto delle foto ad arco (`Campata.astro`, `src/lib/portico.mjs`, pietra da `scripts/pietra.mjs`), con prospettiva che si muove scorrendo e nebbia color pietra intorno; rombo a tre piani con il Borgo Marinari (via il fruttivendolo) e il titolo sulla punta; «Quanto tempo hai?» come fascia con i numeri in Bodoni; la foto in alto scende più piano delle parole.
+- Controlli del 07/10/2026: `npm test` 27/27, build ok, `check:links` puliti, contrasti e nomi controllati a mano nel browser in chiaro e scuro (axe e Lighthouse non installati: servirebbe un pacchetto), CLS 0, home circa 350 kB, nessuno scorrimento di lato a 320 e 390 px.
+- **Da decidere vedendo l'anteprima**: accento giallo tufo o pervinca; pietra più chiara o più scura; poi OK di Enrico e `main`.
 
 ## Dove siamo
 - **06/10/2026: il sito è nato** separando gli itinerari da Napoli a Vela (`specifiche/sito-itinerari-separazione.md`, approvata da Enrico).

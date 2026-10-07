@@ -1,0 +1,65 @@
+---
+// Un'arcata del portico di piperno (disegno in src/lib/portico.mjs, pietra di scripts/pietra.mjs).
+// Davanti la pietra; nel vuoto dell'arco lo spessore dell'arco (in ombra) e, più indietro, la foto: il «fondo» è il vuoto
+// sul retro dell'arco, più piccolo perché più lontano. Quando l'arcata scorre di lato (il portico sul telefono) o in su
+// e in giù (la pagina), fondo e foto si spostano a velocità diverse, come in una prospettiva vera.
+// pos: dove sta l'arcata rispetto al centro di chi guarda (−1,5 … 1,5), per la prospettiva ferma (computer, browser senza
+// animazioni legate allo scorrimento, «riduci movimento»).
+import piperno from '../assets/pietra/piperno.webp';
+import Immagine from './Immagine.astro';
+import { arcata, VANO, W, H } from '../lib/portico.mjs';
+
+interface Props { id: string; foto: string; indice?: number; pos?: number; sizes: string; widths: number[]; alt?: string; class?: string }
+const { id, foto, indice = 0, pos = 0, sizes, widths, alt = '', class: cls } = Astro.props;
+const vano = `left:${VANO.left}%;top:${VANO.top}%;width:${VANO.width}%;height:${VANO.height}%;border-radius:${VANO.raggio}`;
+---
+<span class:list={['campata', cls]} style={`--pietra:url(${piperno.src});--pos:${pos}`}>
+  <span class="campata__vano" style={vano}>
+    <span class="campata__alto">
+      <span class="campata__fondo" style={`border-radius:${VANO.raggio}`}>
+        <Immagine id={foto} alt={alt} widths={widths} sizes={sizes} class="campata__foto" />
+      </span>
+    </span>
+  </span>
+  <svg class="campata__pietra" viewBox={`0 0 ${W} ${H}`} preserveAspectRatio="none" aria-hidden="true" focusable="false" set:html={arcata({ id, specchio: indice % 2 === 1, pietra: piperno.src, seme: indice + 1 })} />
+</span>
+
+<style>
+  /* --linea-lato: la posizione nel portico che scorre di lato. Scritta in una variabile perché il compressore del CSS
+     della build non conosce view(inline) e cancellerebbe la regola */
+  .campata { position: relative; display: block; aspect-ratio: 300 / 420; isolation: isolate; --linea-lato: view(inline); }
+  /* un pixel in più a destra: tra due arcate vicine non resta mai un filo di vuoto */
+  .campata__pietra { position: absolute; top: 0; left: 0; z-index: 1; width: calc(100% + 1px); height: 100%; pointer-events: none; }
+  .campata__pietra :global(.pc-velo) { fill: #0B0E16; fill-opacity: var(--velo-pietra, 0); }
+  /* lo spessore dell'arco: pietra in ombra, più buia in alto (sotto l'arco) e a sinistra, il pavimento in fondo un po' più chiaro */
+  .campata__vano { position: absolute; z-index: 0; overflow: clip;
+    background:
+      linear-gradient(90deg, rgba(0, 0, 0, .34), rgba(0, 0, 0, 0) 32%, rgba(0, 0, 0, 0) 68%, rgba(255, 244, 224, .06)),
+      linear-gradient(180deg, rgba(10, 8, 6, .8), rgba(10, 8, 6, .55) 50%, rgba(28, 24, 20, .42) 86%, rgba(60, 56, 50, .3)),
+      var(--pietra) center / cover; }
+  /* overflow: clip e non hidden: hidden farebbe di ogni cornice un contenitore che scorre, e le animazioni legate allo
+     scorrimento guarderebbero lei invece del portico o della pagina */
+  .campata__alto { position: absolute; inset: 0; }
+  /* il vuoto sul retro dell'arco: più piccolo e spostato verso il punto dove guardi */
+  .campata__fondo { position: absolute; inset: 0; overflow: clip; transform-origin: 50% 64%; scale: .86; translate: calc(var(--pos) * 3.2%) 0;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .35); }
+  /* l'ombra dell'arco sul paesaggio, in alto */
+  .campata__fondo::after { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(180deg, rgba(6, 8, 14, .42), rgba(6, 8, 14, 0) 24%), linear-gradient(90deg, rgba(6, 8, 14, .18), rgba(6, 8, 14, 0) 18%, rgba(6, 8, 14, 0) 82%, rgba(6, 8, 14, .12)); }
+  .campata :global(.campata__foto) { position: absolute; top: -3%; left: -10%; width: 120%; max-width: none; height: 106%; object-fit: cover; translate: calc(var(--pos) * 2.4%) 0; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    @supports ((animation-timeline: view()) and (animation-range: cover)) {
+      .campata__fondo { animation: campata-profondita linear both; animation-timeline: var(--linea-lato); }
+      .campata :global(.campata__foto) { animation: campata-lontano linear both; animation-timeline: var(--linea-lato); }
+      .campata__alto { animation: campata-altezza linear both; animation-timeline: var(--linea-alto, view()); }
+    }
+  }
+  /* di lato: il retro dell'arco va verso il centro dello schermo; la foto, più lontana ancora, di più */
+  @keyframes campata-profondita { from { translate: -6.5% 0; } to { translate: 6.5% 0; } }
+  @keyframes campata-lontano { from { translate: -5% 0; } to { translate: 5% 0; } }
+  /* in su e in giù: quando l'arcata è in basso nello schermo vedi più pavimento, quando è in alto più arco */
+  @keyframes campata-altezza { from { translate: 0 -4%; } to { translate: 0 4.5%; } }
+
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme="light"])) .campata { --velo-pietra: .2; } }
+  :global(:root[data-theme="dark"]) .campata { --velo-pietra: .2; }
+</style>

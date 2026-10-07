@@ -5,6 +5,7 @@
 import Base from '../layouts/Base.astro';
 import Testo from '../components/Testo.astro';
 import Immagine from '../components/Immagine.astro';
+import Campata from '../components/Campata.astro';
 import { getTesti, type Blocco } from '../lib/testi';
 import { riempi } from '../lib/regole.mjs';
 import { LICENZE } from '../lib/foto';
@@ -57,11 +58,11 @@ const FAMIGLIE = ['pizza', 'napoletana', 'pesce', 'strada', 'dolci'];
 const famiglie = FAMIGLIE.map(k => ({ k, nome: CUCINE[k], n: locali.filter(l => l.cucina?.includes(k)).length })).filter(f => f.n > 0);
 
 // Le foto della pagina e i loro crediti (la foto grande li ha anche sopra)
-const FOTO_APERTURA = 'tp-spaccanapoli', FOTO_MANGIARE = 'tp-pignasecca';
+const FOTO_APERTURA = 'tp-spaccanapoli', FOTO_MANGIARE = 'tp-borgo-marinari';
 const credito = async (id: string) => {
   const f = await getEntry('foto', id);
   if (!f) throw new Error(`Foto "${id}" non trovata`);
-  return { id, autore: f.data.autore, autoreUrl: f.data.autoreUrl, licenza: f.data.licenza, licUrl: LICENZE[f.data.licenza], fonte: f.data.fonte, didascalia: f.data.didascalia };
+  return { id, alt: f.data.alt, autore: f.data.autore, autoreUrl: f.data.autoreUrl, licenza: f.data.licenza, licUrl: LICENZE[f.data.licenza], fonte: f.data.fonte, didascalia: f.data.didascalia };
 };
 const crediti = await Promise.all([FOTO_APERTURA, ...pronti.map(p => p.foto!), FOTO_MANGIARE].map(credito));
 const cr0 = crediti[0];
@@ -69,18 +70,24 @@ const cr0 = crediti[0];
 <Base title="Itinerari in città" description={`Itinerari a Napoli pronti o fatti da te, con i tempi veri a piedi, in metro, in funicolare e in autobus: ${tappe.length} tappe in città, ${gite.length} gite e ${locali.length} locali dove mangiare.`} home>
   <div class="home">
     <section class="apertura" aria-labelledby="h-home">
-      <Immagine id={FOTO_APERTURA} prima class="apertura__foto" widths={[480, 750, 1000]} sizes="100vw" posizione="50% 38%" />
+      <span class="apertura__sfondo"><Immagine id={FOTO_APERTURA} prima class="apertura__foto" widths={[480, 750, 1000]} sizes="100vw" posizione="50% 38%" /></span>
       <div class="dentro apertura__dentro">
         <h1 id="h-home" class="titolone"><span>{napoli.nome},</span> <span>con i tempi veri.</span></h1>
         <Testo b={T.b('apertura')} class="apertura__lead" />
         <div class="tempo">
           <h2 class="tempo__titolo" id="h-tempo">Quanto tempo hai?</h2>
+          <!-- una fascia unica: il numero grande e, sotto, la parola («½ giornata», «2 giorni»); il nome intero per chi non vede -->
           <ul class="tempo__scelte" aria-labelledby="h-tempo">
             {pronti.map(p => (
-              <li><a class="scelta" href={linkPronto(napoli, p.id)}><span class="scelta__n" aria-hidden="true">{p.numero}</span>{p.durata}</a></li>
+              <li>
+                <a class="scelta" href={linkPronto(napoli, p.id)} aria-label={`${p.durata}: ${p.nome}`}>
+                  <span class="scelta__n" aria-hidden="true">{p.numero}</span>
+                  <span class="scelta__u" aria-hidden="true">{p.durata.split(' ').slice(1).join(' ')}</span>
+                </a>
+              </li>
             ))}
-            <li><a class="scelta scelta--tuo" href={`${napoli.itinerari}#compositore`}>Fai da te</a></li>
           </ul>
+          <a class="tempo__tuo" href={`${napoli.itinerari}#compositore`}>Oppure componi il tuo itinerario<svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
         </div>
         <p class="apertura__credito">Foto: {cr0.autoreUrl ? <a href={cr0.autoreUrl} rel="noopener">{cr0.autore}</a> : cr0.autore}, {cr0.licUrl ? <a href={cr0.licUrl} rel="noopener license">{cr0.licenza}</a> : cr0.licenza}</p>
       </div>
@@ -107,28 +114,41 @@ const cr0 = crediti[0];
       </div>
     </section>
 
-    <section class="sezione sezione--pronti dentro" aria-labelledby="h-pronti">
+    <!-- il portico nasce da una nebbia color pietra: niente stacco netto tra la carta e la pietra -->
+    <section class="sezione sezione--pronti" aria-labelledby="h-pronti">
+      <div class="dentro">
       <div class="pronti__testa">
         <h2 id="h-pronti" class="serif sezione__titolo">Itinerari pronti</h2>
         <a class="btn" href={`${napoli.itinerari}#compositore`}>Componi il tuo</a>
       </div>
-      <ul class="carosello">
-        {pronti.map(p => (
+      <!-- il portico: un'arcata per itinerario, una accanto all'altra; sul telefono scorre di lato -->
+      <div class="portico-scena">
+      <ul class="portico">
+        {pronti.map((p, i) => (
           <li>
             <a class="scheda" href={linkPronto(napoli, p.id)}>
-              <span class="arco"><Immagine id={p.foto!} alt="" widths={[320, 480, 640]} sizes="(min-width: 900px) 17rem, min(78vw, 20rem)" /></span>
-              <span class="scheda__nome serif">{p.nome}</span>
-              <span class="scheda__dati"><span><b>{p.nTappe}</b> tappe</span> <span><b>{p.minPiedi}</b> min a piedi</span></span>
+              <Campata id={`pronto-${p.id}`} foto={p.foto!} indice={i} pos={+(i - (pronti.length - 1) / 2).toFixed(2)} widths={[320, 480, 640]} sizes="(min-width: 900px) 15rem, min(62vw, 17rem)" />
+              <span class="scheda__testo">
+                <span class="scheda__nome serif">{p.nome}</span>
+                <span class="scheda__dati"><span><b>{p.nTappe}</b> tappe</span> <span><b>{p.minPiedi}</b> min a piedi</span></span>
+              </span>
             </a>
           </li>
         ))}
       </ul>
+      </div>
+      </div>
     </section>
 
     <section class="su-notte sezione mangiare-banda" aria-labelledby="h-mangiare">
       <div class="dentro mangiare">
-        <div class="mangiare__foto"><Immagine id={FOTO_MANGIARE} widths={[360, 560, 720]} sizes="(min-width: 900px) 22rem, 70vw" /></div>
-        <div>
+        <!-- il rombo a tre piani: l'ombra, il contorno sfalsato più indietro, la foto davanti; il titolo si appoggia sulla punta -->
+        <div class="rombo">
+          <svg class="rombo__ombra" viewBox="-30 -30 160 160" aria-hidden="true" focusable="false"><defs><filter id="rombo-sfuma" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="9" /></filter></defs><polygon points="50,0 100,50 50,100 0,50" fill="#000" fill-opacity=".55" filter="url(#rombo-sfuma)" /></svg>
+          <span class="rombo__eco" aria-hidden="true"></span>
+          <span class="rombo__foto"><Immagine id={FOTO_MANGIARE} class="rombo__img" widths={[400, 600, 800]} sizes="(min-width: 900px) 24rem, 82vw" /></span>
+        </div>
+        <div class="mangiare__testi">
           <h2 id="h-mangiare" class="serif sezione__titolo">Dove mangiare</h2>
           <Testo b={con('mangiare', { locali: locali.length })} class="mangiare__testo" />
           <ul class="famiglie">
@@ -143,7 +163,7 @@ const cr0 = crediti[0];
       <h2 id="h-fidarti" class="serif sezione__titolo">Perché fidarti</h2>
       <div class="foglietti">
         <Testo b={con('fidarti-fonti', { fonti: fonti.length })} class="foglietto" />
-        <Testo b={con('fidarti-data', { data: dataLunga(SITO.aggiornato) })} class="foglietto" />
+        <Testo b={con('fidarti-data', { data: dataLunga(SITO.aggiornato).replace(' ', ' ') /* «4 ottobre» non va a capo */ })} class="foglietto" />
         <Testo b={T.b('fidarti-link')} class="foglietto" />
         <Testo b={T.b('fidarti-rete')} class="foglietto" />
       </div>
@@ -156,7 +176,7 @@ const cr0 = crediti[0];
         <span class="citta-dopo__fermata" aria-hidden="true"></span>
       </div>
       <p class="crediti">
-        Foto di questa pagina, da Wikimedia Commons:
+        Foto di questa pagina, da Wikimedia Commons:{' '}
         {crediti.map((c, i) => (
           <>{i > 0 && '; '}{c.didascalia.replace(/\.$/, '')} di {c.autoreUrl ? <a href={c.autoreUrl} rel="noopener">{c.autore}</a> : c.autore} ({c.licUrl ? <a href={c.licUrl} rel="noopener license">{c.licenza}</a> : c.licenza}, <a href={c.fonte} rel="noopener">origine</a>)</>
         ))}.
@@ -190,23 +210,36 @@ const cr0 = crediti[0];
 
   /* ---------- apertura: foto a tutto schermo, la promessa, «Quanto tempo hai?» ---------- */
   .apertura { position: relative; isolation: isolate; display: flex; align-items: flex-end; min-height: min(100svh, 52rem); overflow: hidden; background: #1B2232; color: #FFFFFF; --anello: #F0BE3E; }
-  .apertura :global(.apertura__foto) { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+  .apertura__sfondo { position: absolute; inset: 0; z-index: -2; overflow: hidden; }
+  .apertura :global(.apertura__foto) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
   .apertura::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(8, 12, 22, .5) 0%, rgba(8, 12, 22, .12) 18%, rgba(8, 12, 22, .5) 40%, rgba(8, 12, 22, .86) 70%, rgba(8, 12, 22, .95) 100%); }
   .apertura__dentro { display: grid; gap: 1.25rem; padding-block: calc(var(--head-h) + 3rem) 1.5rem; }
   .apertura h1 { font-size: clamp(3.1rem, 15vw, 7.5rem); max-width: 11ch; text-shadow: 0 2px 24px rgba(0, 0, 0, .35); }
   .apertura h1 span { display: block; }
   .apertura :global(.apertura__lead p) { max-width: 34rem; font-size: 1.0625rem; line-height: 1.5; color: rgba(255, 255, 255, .9); }
   .apertura__credito { font-size: .75rem; color: rgba(255, 255, 255, .72); }
-  .tempo { display: grid; gap: .75rem; padding-top: .25rem; }
-  .tempo__titolo { font: italic 500 1.375rem/1.1 var(--f-serif); letter-spacing: 0; }
-  .tempo__scelte { display: flex; flex-wrap: wrap; gap: .5rem; }
-  .scelta { display: inline-flex; align-items: center; gap: .55rem; min-height: 48px; padding: .5rem 1.05rem .5rem .55rem; border-radius: 999px; background: #F3F1EC; color: #12182A; text-decoration: none; font-weight: 600; font-size: 1rem; line-height: 1;
-    transition: transform var(--m100) var(--entra), background-color var(--m150) var(--entra); }
-  .scelta:active { transform: scale(.96); }
-  @media (hover: hover) { .scelta:hover { background: #FFFFFF; } }
-  .scelta__n { width: 2.1rem; height: 2.1rem; display: grid; place-items: center; border-radius: 50%; background: #12182A; color: #FFFFFF; font-weight: 800; font-stretch: 75%; font-size: 1rem; }
-  .scelta--tuo { padding-left: 1.05rem; background: transparent; color: #FFFFFF; border: 1.5px solid rgba(255, 255, 255, .8); }
-  @media (hover: hover) { .scelta--tuo:hover { background: rgba(255, 255, 255, .12); } }
+  /* «Quanto tempo hai?»: una fascia unica, come un biglietto, con il numero grande in Bodoni e la parola sotto */
+  .tempo { display: grid; gap: .85rem; padding-top: .5rem; }
+  .tempo__titolo { font: italic 500 1.5rem/1.1 var(--f-serif); letter-spacing: 0; }
+  .tempo__scelte { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); max-width: 30rem; border-radius: 20px; overflow: clip;
+    background: rgba(14, 18, 30, .36); -webkit-backdrop-filter: blur(14px) saturate(1.25); backdrop-filter: blur(14px) saturate(1.25);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .3), inset 0 1px 0 rgba(255, 255, 255, .22), 0 22px 44px -20px rgba(0, 0, 0, .7); }
+  .tempo__scelte li { display: grid; }
+  .tempo__scelte li + li { border-left: 1px solid rgba(255, 255, 255, .2); }
+  .scelta { position: relative; display: grid; justify-items: center; align-content: center; gap: .35rem; min-height: 5.75rem; padding: .7rem .25rem 1rem; color: #FFFFFF; text-decoration: none;
+    transition: background-color var(--m150) var(--entra), color var(--m150) var(--entra); }
+  .scelta__n { font-family: var(--f-serif); font-weight: 600; font-optical-sizing: auto; font-size: 2.75rem; line-height: .9; }
+  .scelta__u { font-size: .8125rem; font-weight: 500; line-height: 1; color: rgba(255, 255, 255, .8); transition: color var(--m150) var(--entra); }
+  /* il punto color tufo che compare sotto, come una fermata */
+  .scelta::after { content: ''; position: absolute; left: 50%; bottom: .45rem; width: 5px; height: 5px; margin-left: -2.5px; border-radius: 50%; background: var(--tufo); opacity: 0; translate: 0 4px;
+    transition: opacity var(--m150) var(--entra), translate var(--m200) var(--entra); }
+  @media (hover: hover) { .scelta:hover { background: rgba(255, 255, 255, .1); } .scelta:hover::after { opacity: 1; translate: 0 0; } }
+  .scelta:active { background: #F3F1EC; color: #12182A; }
+  .scelta:active .scelta__u { color: #3A3F4B; }
+  .scelta:focus-visible { outline-offset: -4px; border-radius: 16px; }
+  .tempo__tuo { justify-self: start; display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; color: #FFFFFF; font-weight: 600; text-decoration: underline; text-decoration-thickness: 1px; text-decoration-color: rgba(255, 255, 255, .5); text-underline-offset: 6px; }
+  .tempo__tuo svg { width: 20px; height: 20px; flex: none; transition: translate var(--m200) var(--entra); }
+  @media (hover: hover) { .tempo__tuo:hover svg { translate: 4px 0; } .tempo__tuo:hover { text-decoration-color: #FFFFFF; } }
   @media (prefers-reduced-motion: no-preference) {
     .apertura :global(.apertura__foto) { animation: respira var(--m300) var(--entra) both; }
     .apertura h1 span, .apertura :global(.apertura__lead), .tempo { animation: sali var(--m300) var(--entra) both; }
@@ -214,6 +247,15 @@ const cr0 = crediti[0];
     .apertura :global(.apertura__lead) { animation-delay: 160ms; }
     .tempo { animation-delay: 220ms; }
   }
+  /* scorrendo, la foto scende più piano della pagina e si avvicina un poco; le parole salgono e sfumano: due piani, uno dietro l'altro */
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: scroll()) {
+      .apertura__sfondo { animation: apertura-lontana linear both; animation-timeline: scroll(root); animation-range: 0 100svh; }
+      .apertura__dentro { animation: apertura-vicina linear both; animation-timeline: scroll(root); animation-range: 0 90svh; }
+    }
+  }
+  @keyframes apertura-lontana { to { translate: 0 32%; scale: 1.08; } }
+  @keyframes apertura-vicina { to { translate: 0 -14%; opacity: .2; } }
   @keyframes respira { from { transform: scale(1.04); } }
   @keyframes sali { from { transform: translateY(10px); opacity: .01; } }
 
@@ -240,30 +282,64 @@ const cr0 = crediti[0];
   }
   @keyframes traccia { to { stroke-dashoffset: 0; } }
 
-  /* ---------- itinerari pronti: foto ad arco, di lato sul telefono ---------- */
-  .sezione--pronti { padding-top: 0; }
-  .pronti__testa { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1.75rem; }
-  .carosello { display: grid; grid-auto-flow: column; grid-auto-columns: min(78%, 20rem); gap: 1rem; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
-    margin-inline: calc(var(--lato) * -1); padding: 0 var(--lato) .75rem; scroll-padding-inline: var(--lato); scrollbar-width: thin; scrollbar-color: var(--riga) transparent; }
-  @media (min-width: 900px) { .carosello { grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); grid-auto-columns: auto; overflow: visible; margin-inline: 0; padding-inline: 0; } }
-  .carosello li { scroll-snap-align: start; }
-  .scheda { display: grid; gap: .65rem; text-decoration: none; border-radius: 14px; }
-  .arco { display: block; aspect-ratio: 3 / 4; overflow: hidden; border-radius: 999px 999px 14px 14px; background: var(--pietra); transition: transform var(--m100) var(--entra); }
-  .arco :global(img) { width: 100%; height: 100%; object-fit: cover; transition: transform var(--m300) var(--entra); }
-  @media (hover: hover) { .scheda:hover .arco :global(img) { transform: scale(1.03); } }
-  .scheda:active .arco { transform: scale(.985); }
+  /* ---------- itinerari pronti: il portico di piperno ---------- */
+  .sezione--pronti { padding-top: 0; --nebbia: color-mix(in srgb, #6C675F 17%, var(--carta)); }
+  .pronti__testa { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1.25rem; }
+  /* la nebbia color pietra dietro il portico: dalla carta alla pietra senza uno stacco */
+  .portico-scena { position: relative; isolation: isolate; padding-top: 2.5rem; }
+  .portico-scena::before { content: ''; position: absolute; z-index: -1; inset: -1rem calc(var(--lato) * -1) -2rem; pointer-events: none;
+    background: radial-gradient(130% 62% at 50% 46%, var(--nebbia) 0%, color-mix(in srgb, var(--nebbia) 55%, transparent) 48%, transparent 78%); }
+  @media (min-width: 900px) { .portico-scena::before { inset: -2rem -12vw -3rem; } }
+  /* il portico: le arcate si toccano, la pietra continua da una all'altra. Sul telefono va da un bordo all'altro dello schermo */
+  .portico { display: grid; grid-auto-flow: column; grid-auto-columns: min(80%, 21rem); overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+    margin-inline: calc(var(--lato) * -1); padding-bottom: .75rem; scrollbar-width: thin; scrollbar-color: color-mix(in srgb, #6C675F 40%, transparent) transparent;
+    /* in su e in giù le arcate seguono la posizione del portico nella pagina (il portico scorre solo di lato) */
+    view-timeline: --portico block; --linea-alto: --portico; }
+  @media (min-width: 900px) { .portico { grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); grid-auto-columns: auto; overflow: visible; margin-inline: 0; } }
+  .portico li { scroll-snap-align: center; }
+  /* la pietra nasce dalla nebbia e ci torna: sfuma in alto, in basso e alle due estremità del portico */
+  .portico :global(.campata) { --sfuma-v: linear-gradient(180deg, transparent 0, #000 17%, #000 83%, transparent 100%);
+    -webkit-mask-image: var(--sfuma-v); mask-image: var(--sfuma-v); }
+  .portico li:first-child :global(.campata) { -webkit-mask-image: var(--sfuma-v), linear-gradient(90deg, transparent, #000 16%); mask-image: var(--sfuma-v), linear-gradient(90deg, transparent, #000 16%); -webkit-mask-composite: source-in; mask-composite: intersect; }
+  .portico li:last-child :global(.campata) { -webkit-mask-image: var(--sfuma-v), linear-gradient(270deg, transparent, #000 16%); mask-image: var(--sfuma-v), linear-gradient(270deg, transparent, #000 16%); -webkit-mask-composite: source-in; mask-composite: intersect; }
+  .scheda { display: grid; gap: .6rem; text-decoration: none; }
+  /* il nome sotto l'arco, allineato alla sua luce */
+  .scheda__testo { display: grid; gap: .4rem; padding-inline: 15.4%; }
+  .scheda :global(.campata__foto) { transition: scale var(--m300) var(--entra); }
+  @media (hover: hover) { .scheda:hover :global(.campata__foto) { scale: 1.04; } }
   .scheda__nome { font-size: 1.5rem; }
   .scheda__dati { display: flex; flex-wrap: wrap; gap: .25rem .9rem; font-size: .9rem; color: var(--inchiostro-2); font-variant-numeric: tabular-nums; }
   .scheda__dati b { color: var(--inchiostro); font-weight: 700; }
 
   /* ---------- dove mangiare: banda notte e foto a rombo ---------- */
   .su-notte { background: var(--notte); color: var(--su-notte); --anello: #F0BE3E; }
-  .mangiare-banda { margin-top: 5rem; }
-  .mangiare { display: grid; gap: 2rem; }
-  @media (min-width: 900px) { .mangiare-banda { margin-top: 0; } .mangiare { grid-template-columns: 1fr 1.1fr; align-items: center; gap: 4rem; } }
-  .mangiare__foto { width: min(70%, 18rem); aspect-ratio: 1; margin-top: -6.5rem; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
-  .mangiare__foto :global(img) { width: 100%; height: 100%; object-fit: cover; }
-  @media (min-width: 900px) { .mangiare__foto { width: 22rem; margin-top: 0; } }
+  .mangiare-banda { margin-top: 9rem; }
+  .mangiare { display: grid; }
+  @media (min-width: 900px) { .mangiare-banda { margin-top: 7rem; } .mangiare { grid-template-columns: 1fr 1.05fr; align-items: center; gap: 0 2rem; } }
+  /* il rombo a tre piani, a cavallo tra la carta e la banda notte: l'ombra sul fondo, un contorno color tufo più indietro,
+     la foto davanti con un filo chiaro come un passe-partout. Scorrendo, i piani si muovono a velocità diverse. */
+  .rombo { position: relative; justify-self: end; width: min(80%, 21rem); aspect-ratio: 1; margin-top: -10rem; }
+  .rombo__ombra { position: absolute; z-index: 0; left: 4%; top: 12%; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+  .rombo__eco { position: absolute; z-index: 1; left: 14.645%; top: 14.645%; width: 70.71%; height: 70.71%; rotate: 45deg; border: 1.5px solid var(--tufo); translate: -9% -4%; opacity: .9; }
+  .rombo__foto { position: absolute; z-index: 2; inset: 0; overflow: clip; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); background: #1B2232; }
+  .rombo__foto::after { content: ''; position: absolute; left: 17.5%; top: 17.5%; width: 65%; height: 65%; rotate: 45deg; border: 1px solid rgba(255, 255, 255, .42); pointer-events: none; }
+  .rombo :global(.rombo__img) { position: absolute; left: -8%; top: -10%; width: 116%; max-width: none; height: 120%; object-fit: cover; }
+  @media (min-width: 900px) { .rombo { justify-self: center; align-self: start; width: 25rem; margin-top: -10rem; } }
+  /* il titolo si appoggia sopra la punta in basso del rombo */
+  .mangiare__testi { position: relative; z-index: 3; margin-top: -3.4rem; }
+  .mangiare__testi .sezione__titolo { font-size: clamp(2.6rem, 11vw, 4.25rem); text-shadow: 0 2px 22px rgba(6, 9, 18, .55); }
+  @media (min-width: 900px) { .mangiare__testi { margin: 0; } .mangiare__testi .sezione__titolo { position: relative; margin-left: -8.5rem; } }
+  @media (prefers-reduced-motion: no-preference) {
+    @supports (animation-timeline: view()) {
+      .rombo { view-timeline: --rombo block; }
+      .rombo__eco { animation: rombo-eco linear both; animation-timeline: --rombo; }
+      .rombo :global(.rombo__img) { animation: rombo-foto linear both; animation-timeline: --rombo; }
+      .rombo__ombra { animation: rombo-ombra linear both; animation-timeline: --rombo; }
+    }
+  }
+  @keyframes rombo-eco { from { translate: -14% 2%; } to { translate: -4% -12%; } }
+  @keyframes rombo-foto { from { translate: 0 -7%; } to { translate: 0 7%; } }
+  @keyframes rombo-ombra { from { translate: 0 -4%; } to { translate: 0 5%; } }
   .home :global(.mangiare__testo) { margin-top: .75rem; }
   .home :global(.mangiare__testo p) { color: var(--su-notte-2); max-width: 32rem; }
   .famiglie { margin-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, .16); }
@@ -275,7 +351,7 @@ const cr0 = crediti[0];
   /* ---------- perché fidarti: foglietti appoggiati ---------- */
   .foglietti { display: grid; max-width: 34rem; margin-top: 2rem; }
   @media (min-width: 900px) { .foglietti { grid-template-columns: repeat(2, 1fr); max-width: none; gap: 1.25rem; } }
-  .foglietti :global(.foglietto) { margin: -.6rem 0 0; padding: 1.5rem 1.4rem; border-radius: 18px; background: var(--pietra); box-shadow: 0 1px 0 var(--riga); rotate: var(--r, -2deg); }
+  .foglietti :global(.foglietto) { margin: -.6rem 0 0; padding: 1.5rem 1.4rem; border-radius: 18px; background: var(--pietra); box-shadow: 0 1px 1px rgba(40, 32, 20, .06), 0 6px 12px -4px rgba(40, 32, 20, .1), 0 18px 32px -14px rgba(40, 32, 20, .22); rotate: var(--r, -2deg); }
   .foglietti :global(.foglietto:nth-child(2)) { --r: 1.6deg; background: var(--pietra-2); }
   .foglietti :global(.foglietto:nth-child(3)) { --r: -1deg; }
   .foglietti :global(.foglietto:nth-child(4)) { --r: 2.2deg; background: var(--pietra-2); }
@@ -295,7 +371,4 @@ const cr0 = crediti[0];
   .citta-dopo__fermata { width: 1.1rem; height: 1.1rem; border-radius: 50%; border: 3px solid var(--inchiostro-2); }
   .crediti { max-width: 72ch; padding-bottom: 1rem; font-size: .8125rem; line-height: 1.5; color: var(--inchiostro-2); }
 
-  /* ---------- tema scuro: un velo leggero sulle foto ---------- */
-  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme="light"])) :is(.arco, .mangiare__foto) :global(img) { filter: brightness(.86); } }
-  :global(:root[data-theme="dark"]) :is(.arco, .mangiare__foto) :global(img) { filter: brightness(.86); }
 </style>

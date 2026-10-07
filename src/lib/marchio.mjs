@@ -36,7 +36,11 @@ function spillo(x, y, s, colore, buco) {
 // Gli strati e il segnaposto. colore(i) dà l'attributo di riempimento dello strato i (i = 'spillo' o 'buco' per il segnaposto)
 function interno(colore) {
   const [cx, , bottom] = STRATI[5];
-  return STRATI.map(([x, t, b, hw], i) => `<path class="strato" style="--k:${i}" d="${arco(x, t, b, hw)}" ${colore(i)}/>`).join('')
+  // un solo attributo style per arco: se ce ne sono due, il browser tiene il primo e il colore si perde (il segno diventa nero)
+  return STRATI.map(([x, t, b, hw], i) => {
+    const a = colore(i), vivo = a.startsWith('style="');
+    return `<path class="strato" ${vivo ? a.replace('style="', `style="--k:${i};`) : `style="--k:${i}"`} d="${arco(x, t, b, hw)}"${vivo ? '' : ' ' + a}/>`;
+  }).join('')
     + spillo(cx, bottom - 1.1, 0.95, colore('spillo'), colore('buco'));
 }
 

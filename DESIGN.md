@@ -4,6 +4,7 @@ _Scritto il 07/10/2026 dopo le scelte di Enrico: grafica **A «Rivista»** (stil
 _Bozzetti di riferimento: `design/home/a.html` (home, racconto, compositore) e `design/logo/loghi-7.html` (marchio). Lo legge la skill `design-sito`._
 
 ## 1. L'idea
+**Profondità e movimento** (Enrico, 07/10/2026): la pagina deve sembrare di qualità, «incredibile» come il marchio. Piani uno davanti all'altro che si muovono a velocità diverse quando scorri, pietra vera, niente stacchi netti tra un pezzo e l'altro: le cose nascono da una sfumatura.
 Una rivista di viaggio stampata su pietra chiara: **foto grandi**, **archi** (le foto ritagliate ad arco come i portali), **bande blu notte**,
 titoli compatti e grandi, titoli dei racconti con le grazie, foglietti «da sapere» appoggiati un po' storti. Telefono per primo.
 Una sola cosa forte per pagina; tutto il resto quieto.
@@ -39,16 +40,16 @@ Solo caratteri liberi (OFL), serviti dal sito (`public/fonts/`), mai da Google d
 ## 4. Spazi e forme
 - Ritmo di 4 e 8 px. Margine laterale 20 px (mai sotto i 16). Contenuto al massimo 72rem.
 - Sezioni: `clamp(3.5rem, 10vw, 6.5rem)` sopra e sotto.
-- **Arco**: `border-radius: 999px 999px 14px 14px` per le foto delle schede e dei racconti (rapporto 3:4 o 4:5).
-- **Rombo** (una volta per pagina al massimo): foto a cavallo tra una banda chiara e una scura.
+- **Portico di piperno** (al posto delle foto ad arco, 07/10/2026): arcate vere in pietra grigia, una accanto all'altra (`src/components/Campata.astro`, disegno in `src/lib/portico.mjs`, pietra fatta col codice da `scripts/pietra.mjs`). Dentro l'arco lo spessore in ombra e, più indietro, la foto. Il portico nasce da una nebbia color pietra e sfuma in alto, in basso e ai lati.
+- **Rombo a tre piani** (una volta per pagina al massimo): l'ombra, un contorno color tufo sfalsato più indietro, la foto davanti con un filo chiaro; a cavallo tra una banda chiara e una scura, con il titolo appoggiato sulla punta.
 - **Foglietti**: riquadri `--pietra` con angoli di 18 px, ruotati tra −2° e +2,2°.
 - Pulsanti a pillola (raggio 999 px, altezza minima 48 px); riquadri con angoli di 14–18 px. Aree da toccare di almeno 44 px.
 
 ## 5. Componenti (come nei bozzetti)
 - **Testata**: marchio a sinistra, menu tondo a destra. Sulla home sta **sopra la foto** (testo bianco, marchio nella versione «foto»); nelle altre pagine è chiara e resta in alto.
 - **Menu**: pannello blu notte da destra (popover), voci grandi in Archivo stretto, la pagina in cui sei segnata con il punto; si chiude con ×, Esc o tocco fuori.
-- **Apertura della home**: foto a tutto schermo con velo in basso, «Napoli, con i tempi veri.», le scelte «Quanto tempo hai?» (pillole chiare con il numero tondo).
-- **Schede degli itinerari**: foto ad arco, nome con le grazie, tappe e minuti a piedi (dalla build). Sul telefono scorrono di lato.
+- **Apertura della home**: foto a tutto schermo con velo in basso, «Napoli, con i tempi veri.», le scelte «Quanto tempo hai?»: una fascia unica divisa in quattro, numero grande in Bodoni e parola sotto, il punto tufo al tocco; sotto, «Oppure componi il tuo itinerario →».
+- **Schede degli itinerari**: un'arcata del portico ciascuna, nome con le grazie, tappe e minuti a piedi (dalla build). Sul telefono il portico scorre di lato, da bordo a bordo.
 - **Racconto**: apertura con foto ad arco, cifre (giorni, tappe, minuti a piedi), giorno per giorno su banda notte; ogni tappa con l'ora in un tondo, la linea a puntini color tufo, i tratti («3 min a piedi, 230 m»), i foglietti «Da sapere» e il locale per pranzo; fonti in fondo in un elenco che si apre.
 - **Compositore**: nome, data, orari, giorni a pillola con l'indicatore che scorre, avviso, riassunto, tappe in riquadri `--pietra` con maniglia, tratti a puntini, «Aggiungi una tappa» con il foglio che sale dal basso e la ricerca, la mappa vera.
 
@@ -56,6 +57,8 @@ Solo caratteri liberi (OFL), serviti dal sito (`public/fonts/`), mai da Google d
 - Interfaccia: 100 / 150 / 200 / 300 ms; entrata `cubic-bezier(.16,1,.3,1)`, uscita `cubic-bezier(.7,0,.84,0)`. Si muovono solo posizione e trasparenza.
 - Al tocco: `scale(.97)` per 100 ms. Liste che entrano: una dopo l'altra, 30 ms di distanza (al massimo 10).
 - Scorrimento: la linea a puntini che si disegna e i foglietti che si appoggiano, solo con `@supports (animation-timeline: view())`; senza, tutto è già al suo posto.
+- Profondità con lo scorrimento: la foto dell'apertura scende più piano delle parole; nel portico il retro dell'arco e la foto si spostano verso il centro dello schermo (di lato e in su e giù), come in una prospettiva vera; nel rombo contorno, ombra e foto si muovono a velocità diverse. Con «riduci movimento» o nei browser senza queste animazioni la prospettiva resta ferma.
+- Attenzione: dentro questi pezzi si ritaglia con `overflow: clip`, non `hidden` (hidden ferma le animazioni legate allo scorrimento); `view(inline)` va scritto in una variabile CSS, perché il compressore della build lo cancella.
 - Passaggio tra pagine: View Transitions (`@view-transition { navigation: auto; }`), la foto della scheda diventa la foto del racconto.
 - Momenti del marchio (fino a ~2 s, eccezione scritta): la soglia astratta e il nome che si scrive (vedi sotto).
 - «Riduci movimento»: tutto fermo, al massimo una dissolvenza. Nessuna animazione infinita.

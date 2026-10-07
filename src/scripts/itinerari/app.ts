@@ -1120,23 +1120,6 @@ function avvia() {
       salva();
     }
   }
-  // ---------- un locale da aggiungere, dalla pagina «Dove mangiare» (?aggiungi=<id>&g=<giorno>) ----------
-  const richiesta = new URLSearchParams((window as Window & { daAggiungere?: string }).daAggiungere ?? '');
-  const daAggiungere = richiesta.get('aggiungi');
-  if (daAggiungere) {
-    const t = tappaDi(C, daAggiungere);
-    if (t?.tipo === 'citta') {
-      const x = it();
-      giorno = Math.min(Math.max(0, Number(richiesta.get('g')) || 0), x.giorni.length - 1);
-      if (x.giorni[giorno].tappe.includes(t.id)) toast(`${maiuscola(t.breve)} è già nel giorno ${giorno + 1}`);
-      else {
-        // aggiungiTappa dice da sé se non si può (giorno pieno) o se finisce in un giorno nuovo (dopo una gita)
-        aggiungiTappa(t.id);
-        const dove = it().giorni.findIndex(G => G.tappe.includes(t.id));
-        if (dove >= 0) toast(`Aggiunto al giorno ${dove + 1}: ${t.breve}`);
-      }
-    }
-  }
   quandoCambia(() => { const n = leggi(C); if (n) { A = n; disegna(); } });
 
   // ---------- giornata o mappa ----------
@@ -1175,6 +1158,24 @@ function avvia() {
   new IntersectionObserver((v, o) => { if (v.some(x => x.isIntersecting)) { mappaVicina = true; o.disconnect(); if (largo.matches) disegnaMappa(); } }, { rootMargin: '200px' }).observe($('compositore'));
   largo.addEventListener('change', () => disegnaVista());
 
+  // ---------- un locale da aggiungere, dalla pagina «Dove mangiare» (?aggiungi=<id>&g=<giorno>) ----------
+  // Qui in fondo, dopo tutto il resto: aggiungere ridisegna la pagina, e il disegno usa la mappa (prima dava errore sui computer)
+  const richiesta = new URLSearchParams((window as Window & { daAggiungere?: string }).daAggiungere ?? '');
+  const daAggiungere = richiesta.get('aggiungi');
+  if (daAggiungere) {
+    const t = tappaDi(C, daAggiungere);
+    if (t?.tipo === 'citta') {
+      const x = it();
+      giorno = Math.min(Math.max(0, Number(richiesta.get('g')) || 0), x.giorni.length - 1);
+      if (x.giorni[giorno].tappe.includes(t.id)) toast(`${maiuscola(t.breve)} è già nel giorno ${giorno + 1}`);
+      else {
+        // aggiungiTappa dice da sé se non si può (giorno pieno) o se finisce in un giorno nuovo (dopo una gita)
+        aggiungiTappa(t.id);
+        const dove = it().giorni.findIndex(G => G.tappe.includes(t.id));
+        if (dove >= 0) toast(`Aggiunto al giorno ${dove + 1}: ${t.breve}`);
+      }
+    }
+  }
   // ---------- un itinerario pronto scelto dalla home o dal menu (?pronto=<id>, letto dalla pagina prima delle statistiche) ----------
   // Se sul telefono c'è già, con le stesse giornate, si riapre quello; altrimenti si carica come con «Apri nel compositore».
   const chiesto = PRONTI.find(p => !p.evento && p.id === (window as Window & { prontoRichiesto?: string }).prontoRichiesto);

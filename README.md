@@ -122,6 +122,8 @@ I test non fermano la pubblicazione su Vercel: si eseguono prima di dire «fatto
 
 - Mappa: `scripts/mappa/` (dati © OpenStreetMap, ODbL). Il riquadro è in `scripts/mappa/riquadro.mjs`; per rifarla: `node scripts/mappa/scarica.mjs <cartella>` e poi `node scripts/mappa/costruisci.mjs <cartella>`.
 - Font: `scripts/font/prepara.py` (licenza SIL OFL).
-- Logo (provvisorio): `src/lib/logo.mjs`; icone dell'app e favicon: `node scripts/icone.mjs`.
+- Marchio (la soglia astratta): `src/lib/marchio.mjs`, nella pagina `src/components/Marchio.astro`; icone dell'app e favicon: `node scripts/icone.mjs`.
+- Portico di piperno della home: `src/lib/portico.mjs` e `src/components/Campata.astro`; la pietra (`src/assets/pietra/piperno.webp`) si rifà con `node scripts/pietra.mjs`.
+- Caratteri in `public/fonts/` (licenza OFL accanto a ciascuno): Archivo, Bodoni Moda (titoli con le grazie), Barlow e IBM Plex Mono (pagine non ancora rifatte).
 - Statistiche (solo Vercel Web Analytics, nessun contatore nostro): partono solo sul sito pubblico (`src/scripts/sito.ts`) e mai con «Do Not Track» o «Global Privacy Control».
 - **Gli id non si rinominano** (tappe, locali, schede): finiscono nei link condivisi degli itinerari e nella memoria dei telefoni; se cambiano, le tappe dei link già mandati spariscono. Per toglierne uno, cancellalo e basta (il link lo scarta e lo dice).
