@@ -23,7 +23,7 @@ Il compositore è la pagina `/napoli/itinerari/`. Deve far dire «wow, ci hanno 
 
 ### 1. Pagina e barra di navigazione
 - Telefono per primo: la giornata è il centro; giorni, «elenco o mappa», «Aggiungi», «I miei itinerari» e «Condividi» sempre a portata di pollice.
-- **Domanda per Enrico**: per «barra di navigazione» intendo la barra **del compositore** (giorni, elenco/mappa, aggiungi, salva). Il menu del sito con le tre linee resta quello della Fase 1. Giusto?
+- La «barra di navigazione» è la barra **del compositore** (giorni, elenco/mappa, aggiungi, salva) (Enrico, 08/10/2026). Il menu del sito con le tre linee resta quello della Fase 1.
 - Le 4 proposte coprono anche il computer: giornata a sinistra, mappa fissa a destra.
 
 ### 2. Scheda della tappa
@@ -43,7 +43,7 @@ Il compositore è la pagina `/napoli/itinerari/`. Deve far dire «wow, ci hanno 
 - Dopo il salvataggio si apre la **vista «tutto l'itinerario»**: tutti i giorni uno sotto l'altro, da leggere come una pagina (orari, tratti, dove mangiare), con «Modifica» per tornare a comporre.
 - Un itinerario pronto aperto dalla home è una bozza finché non lo salvi.
 - Gli itinerari già sul telefono (salvati prima di oggi) diventano **salvati**: nessuno perde niente.
-- **Domanda per Enrico**: «Salva» chiede il nome (con un nome proposto, per esempio «Napoli, 12–14 ottobre») o salva subito e il nome si cambia dopo? Consiglio: salva subito, nome proposto, si cambia con un tocco.
+- «Salva» salva **subito**, con un **nome proposto** («Napoli, 12–14 ottobre» se c'è la data, altrimenti «Napoli in 2 giorni»); il nome si cambia con un tocco (Enrico, 08/10/2026).
 
 ### 5. Visitato / da visitare
 - Su **ogni tappa** di un itinerario salvato (pronto o tuo): «Da visitare» → tocco → «Visitato», con una piccola animazione nello stile del marchio (la soglia che si chiude). Si torna indietro con un altro tocco.
@@ -53,7 +53,17 @@ Il compositore è la pagina `/napoli/itinerari/`. Deve far dire «wow, ci hanno 
 - Con «riduci movimento» l'animazione diventa una dissolvenza.
 
 ### 6. Mappa
-Ricerca: `ricerca/2026-10-08-mappa.md`. Tre strade possibili:
+**In sospeso** (Enrico, 08/10/2026): decide più avanti. Vuole capire cosa cambia togliendo l'uso senza rete, e se così si può usare una mappa più completa di OpenStreetMap.
+
+- **Senza la mappa offline** si perde solo la mappa: elenco, tempi e schede restano salvati sul telefono (service worker).
+- **Mappe complete, solo con la rete e dopo un tocco** (l'indirizzo IP va al servizio, lo dice la pagina Privacy):
+  - **OpenStreetMap** (riquadri immagine): gratis, senza chiave; aspetto e colori loro, niente tema scuro; servizio «senza garanzie», può bloccare i siti che lo usano troppo.
+  - **CARTO** (riquadri immagine o vettoriali): stili chiaro (Positron) e scuro (Dark Matter); chiave obbligatoria; gratis fino a 1 milione di richieste al mese per uso commerciale.
+  - **OpenFreeMap** (vettoriale): gratis, uso commerciale permesso, senza chiave e senza cookie; colori nostri, chiaro e scuro; ma serve MapLibre (pacchetto nuovo).
+  - I riquadri immagine si possono mostrare senza pacchetti (da provare), ricalcolando tappe e percorsi nella proiezione delle mappe web.
+- **Strada ibrida**: la mappa nostra sempre (anche senza rete) e, con la rete, «Mappa dettagliata» con un tocco. Non si perde niente; costa più lavoro.
+
+Ricerca: `ricerca/2026-10-08-mappa.md`. Le tre strade, con l'uso senza rete:
 
 | | **A · più strade nella mappa nostra** | B · mappa vettoriale nostra (PMTiles + MapLibre) | C · riquadri di un servizio esterno |
 |---|---|---|---|
@@ -63,7 +73,7 @@ Ricerca: `ricerca/2026-10-08-mappa.md`. Tre strade possibili:
 | Peso | da misurare (oggi 123 KB) | da misurare (pochi MB o decine di MB) + la libreria | poco per noi |
 | Lavoro | medio | alto (stili chiaro e scuro, caratteri, icone) | basso, ma avviso, attribuzione, chiave |
 
-- **Consiglio: A.** Aggiungiamo dalle stesse fonti di OpenStreetMap le vie residenziali, i vicoli, le pedonali, i passaggi pedonali e le **scale** (`residential`, `living_street`, `pedestrian`, `footway`, `steps`), con i nomi delle vie più grandi. Niente pacchetti, niente servizi esterni, funziona senza rete.
+- **Se si tiene la mappa senza rete, consiglio A.** Aggiungiamo dalle stesse fonti di OpenStreetMap le vie residenziali, i vicoli, le pedonali, i passaggi pedonali e le **scale** (`residential`, `living_street`, `pedestrian`, `footway`, `steps`), con i nomi delle vie più grandi. Niente pacchetti, niente servizi esterni, funziona senza rete.
 - Per non appesantire la prima apertura: le strade piccole si caricano **a pezzi**, solo nella zona che stai guardando e solo quando ingrandisci (pezzi di mappa nostri, serviti dal sito).
 - **Prima cosa da fare**: misurare il peso delle strade nuove per Napoli. Se è troppo, o se nelle 4 proposte la mappa non fa «wow», si passa a **B** (con l'OK di Enrico per MapLibre e un controllo di un minuto: Vercel deve rispondere «206» alle richieste a pezzi).
 - **C no**: i riquadri di OpenStreetMap non si possono salvare per l'uso senza rete; gli altri servizi gratuiti sono solo per uso non commerciale o chiedono una chiave. Se un giorno servisse, il più vicino alle nostre regole è OpenFreeMap (gratis, uso commerciale permesso, senza chiave e senza cookie; passa da Cloudflare).
@@ -89,7 +99,7 @@ Il nostro campo `cucina` mescola tutto: oggi «Carne» mostra **11 locali** (anc
 - Prezzo: le fasce in euro restano spiegate in una riga (€ fino a 15 euro, €€ da 15 a 35, €€€ oltre 35: regola nostra, nella pagina).
 - Gli stessi filtri valgono nel compositore e nella pagina «Dove mangiare».
 - **Diete** (vegetariano, senza glutine): non adesso. Se un giorno si fanno, solo «lo dichiara il locale», con la fonte; per il senza glutine l'unico controllo esterno trovato è il programma dell'AIC.
-- **Domanda per Enrico**: con 2 bracerie e 1 friggitoria il filtro è povero. Vuoi una ricerca di altri locali di questi tipi (agenti `ricercatore`, con orari e menu dai siti), prima o dopo la grafica dei filtri?
+- Con 2 bracerie e 1 friggitoria il filtro è povero: **si cercano altri locali di questi tipi** (Enrico, 08/10/2026). Ricerche dell'08/10/2026: `ricerca/2026-10-08-locali-bracerie.md`, `ricerca/2026-10-08-locali-friggitorie.md`; i locali scelti entrano con le stesse regole dei 32 di oggi (orari scritti dal locale, fonti, tempi ricalcolati).
 
 ## Come si lavora: 4 proposte per pezzo
 - Un pezzo alla volta, ognuno con **4 proposte molto diverse** (regola di Enrico, 07/10/2026), con i dati veri, in chiaro e in scuro, telefono (320 e 390 px) e computer.
@@ -126,12 +136,13 @@ Il nostro campo `cucina` mescola tutto: oggi «Carne» mostra **11 locali** (anc
 - Prova a mano su telefono: comporre 2 giorni, salvare, chiudere, riaprire, segnare «visitato», aprire un vecchio link condiviso.
 
 ## Compiti
-- [ ] Enrico approva questa specifica (e risponde alle domande).
+- [ ] Enrico approva questa specifica (risposte alle domande date l'08/10/2026; mappa in sospeso).
+- [ ] Ricerca di altre bracerie e friggitorie (08/10/2026), poi Enrico sceglie quali entrano.
 - [ ] Pezzo 1 · pagina e barra: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 2 · scheda della tappa e «visitato»: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 3 · ricerca, con le parole chiave nei dati (ricerca con le fonti, agenti `ricercatore`).
 - [ ] Pezzo 4 · «Salva» e vista «tutto l'itinerario».
-- [ ] Pezzo 5 · mappa.
+- [ ] Pezzo 5 · mappa (dopo la decisione di Enrico: con o senza uso offline).
 - [ ] Pezzo 6 · mangiare nella giornata.
 - [ ] Pezzo 7 · filtri dei locali (dati nuovi con le fonti, poi compositore e «Dove mangiare»).
 - [ ] Controlli, anteprima di Vercel, OK di Enrico, poi `main`.
