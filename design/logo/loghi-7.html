@@ -1,0 +1,332 @@
+<title>Marchio Nextstop, giro finale</title>
+<meta name="description" content="Giro finale del marchio di Nextstop: soglia e portici in travertino, sera e astratto, con il nome che si scrive da sinistra e il segnaposto al posto della o, adattati alla home, alle pagine e a Google.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..800;1,6..96,400..800&display=swap">
+<style>
+/* Giro finale. Due segni (soglia, portici) × tre versioni (travertino, sera, astratto).
+   Il nome: «nextstop» con un segnaposto al posto della «o»; si scrive da sinistra seguendo un percorso a puntini.
+   Ogni versione ha i suoi adattamenti: sopra la foto della home, sull'intestazione chiara, sulle bande scure, icona e Google. */
+:root {
+  --carta: #F7F6F2; --pietra: #ECEAE4; --riga: #D6D2C8; --inchiostro: #16181D; --inchiostro-2: #575B65; --notte: #142039;
+  --sans: "Archivo", "Helvetica Neue", Arial, sans-serif;
+  --serif: "Bodoni Moda", "Bodoni 72", Didot, Georgia, serif;
+  --morbido: cubic-bezier(0.16, 1, 0.3, 1); --dolce: cubic-bezier(0.65, 0, 0.35, 1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --carta: #101318; --pietra: #1A1E26; --riga: #2C323D; --inchiostro: #EEF0F4; --inchiostro-2: #A8AFBD; color-scheme: dark; }
+}
+:root[data-theme="dark"] { --carta: #101318; --pietra: #1A1E26; --riga: #2C323D; --inchiostro: #EEF0F4; --inchiostro-2: #A8AFBD; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--carta); color: var(--inchiostro); font: 400 1rem/1.55 var(--sans); padding: 0 0 5rem; }
+.wrap { max-width: 64rem; margin-inline: auto; padding-inline: 16px; }
+h1 { margin: 0; font: 600 clamp(2.1rem, 9vw, 3.4rem)/1.02 var(--serif); letter-spacing: -.01em; }
+h2 { margin: 0 0 .9rem; font: 600 1.5rem/1.1 var(--serif); }
+p { margin: 0; }
+.piccolo { font-size: .88rem; color: var(--inchiostro-2); }
+:focus-visible { outline: 3px solid #4B5DBE; outline-offset: 3px; }
+
+/* Scelte in alto */
+.comandi { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--carta) 94%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--riga); }
+.comandi .wrap { display: grid; gap: .5rem; padding-block: .6rem; }
+.riga-scelte { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+.scelta { min-height: 44px; padding: .45rem .95rem; border-radius: 999px; border: 1.5px solid var(--riga); background: transparent; color: var(--inchiostro); font: 600 .9rem/1 var(--sans); cursor: pointer; transition: transform 150ms var(--morbido), background-color 200ms var(--morbido), border-color 200ms; }
+.scelta:active { transform: scale(.96); }
+.scelta[aria-pressed="true"] { background: var(--inchiostro); color: var(--carta); border-color: var(--inchiostro); }
+.riproduci { margin-left: auto; min-height: 44px; padding: .45rem 1rem; border-radius: 999px; border: 0; background: #4B5DBE; color: #fff; font: 600 .9rem/1 var(--sans); cursor: pointer; }
+.apertura { padding-block: 1.75rem 1rem; display: grid; gap: .6rem; max-width: 40rem; }
+.apertura p { color: var(--inchiostro-2); }
+.sez { display: grid; gap: .9rem; padding-block: 1.75rem; border-top: 1px solid var(--riga); }
+
+/* Palco: icona grande e firma grande */
+.palco { display: grid; gap: .75rem; }
+@media (min-width: 820px) { .palco { grid-template-columns: 1fr 1.4fr; } }
+.palco__icona { display: grid; place-items: center; aspect-ratio: 1; border-radius: 26px; background: var(--pietra); }
+.palco__icona .icona { width: 62%; filter: drop-shadow(0 14px 26px rgba(12, 14, 30, .25)); }
+.palco__firma { display: grid; place-items: center; padding: 2.5rem 1rem; border-radius: 26px; background: #F7F6F2; color: #16181D; }
+.palco__firma .firma { font-size: clamp(2.6rem, 11vw, 3.6rem); }
+
+/* La firma: segno + parola (il segnaposto al posto della «o») */
+.firma { display: inline-flex; align-items: center; gap: .32em; color: var(--testo, #16181D); font-size: 1.5rem; }
+.firma .icona { width: 1.45em; flex: none; }
+.parola { position: relative; display: grid; gap: .12em; }
+.lettere { position: relative; display: inline-flex; align-items: baseline; font: 560 1em/1 var(--sans); font-variation-settings: "wdth" 96; letter-spacing: -.035em; }
+.l { display: inline-block; }
+.pin { position: relative; display: inline-block; width: .5em; height: .7em; margin: 0 .03em 0 .035em; }
+.pin svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.pin .ombra { position: absolute; left: 50%; bottom: -.05em; width: .34em; height: .08em; margin-left: -.17em; border-radius: 50%; background: currentColor; opacity: 0; }
+.pin .onda { position: absolute; left: 50%; top: .25em; width: .5em; height: .5em; margin: -.25em 0 0 -.25em; border-radius: 50%; border: .05em solid var(--pin); opacity: 0; }
+.rotta { position: absolute; left: 0; right: .1em; bottom: -.16em; height: .1em; opacity: 0; background: radial-gradient(circle, var(--pin) 32%, transparent 38%) 0 50% / .2em .1em repeat-x; }
+.descr { font: italic 500 .36em/1 var(--serif); opacity: .75; letter-spacing: .01em; }
+
+/* Contesti */
+.contesti { display: grid; gap: .75rem; }
+@media (min-width: 820px) { .contesti { grid-template-columns: 1fr 1fr; } }
+.ctx { border-radius: 18px; overflow: hidden; border: 1px solid var(--riga); }
+.ctx__etichetta { font: 600 .75rem/1 var(--sans); padding: .6rem .9rem; background: var(--pietra); color: var(--inchiostro-2); }
+.ctx-foto { position: relative; height: 13rem; }
+.ctx-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+.ctx-foto::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, rgba(8,12,22,.5), rgba(8,12,22,.15) 40%, rgba(8,12,22,.75)); }
+.ctx-foto__testa, .ctx-chiaro, .ctx-scuro { display: flex; align-items: center; justify-content: space-between; padding: .8rem 1rem; }
+.ctx-foto__testa { position: relative; z-index: 1; }
+.ctx-foto__titolo { position: absolute; z-index: 1; left: 1rem; bottom: .9rem; color: #fff; font: 800 2rem/.92 var(--sans); font-variation-settings: "wdth" 70; }
+.ctx-chiaro { background: #F7F6F2; border-bottom: 1px solid #D6D2C8; }
+.ctx-chiaro + .ctx-corpo { background: #F7F6F2; color: #16181D; padding: .4rem 1rem 1.1rem; font: 600 1.4rem/1.1 var(--serif); }
+.ctx-scuro { background: #142039; padding-block: 1.4rem; }
+.menu-tondo { width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; border: 1px solid currentColor; opacity: .7; flex: none; }
+.ctx .firma { font-size: 1.4rem; }
+.ctx .firma .icona { width: 1.8em; }
+.ctx .descr { display: none; }
+.google { display: grid; gap: .75rem; }
+.ris-fondo { padding: .85rem .9rem .9rem; font-family: Arial, Helvetica, sans-serif; display: grid; gap: .25rem; }
+.ris-chiaro { background: #FFFFFF; color: #1F1F1F; --sec: #4D5156; --tit: #1A0DAB; --vuoto: #E3E3E3; }
+.ris-scuro { background: #1F1F1F; color: #E3E3E3; --sec: #BDC1C6; --tit: #99C3FF; --vuoto: #3C4043; }
+.ris__testa { display: flex; align-items: center; gap: .6rem; }
+.ris__icona { width: 28px; height: 28px; border-radius: 50%; overflow: hidden; flex: none; background: var(--vuoto); }
+.ris__icona svg { width: 28px; height: 28px; display: block; }
+.ris__nome { font-size: .85rem; line-height: 1.25; }
+.ris__nome small { display: block; color: var(--sec); font-size: .72rem; }
+.ris__titolo { color: var(--tit); font-size: 1.05rem; line-height: 1.3; text-decoration: none; }
+.mini { display: flex; align-items: end; gap: 1rem; padding: 1rem; background: var(--pietra); }
+.mini span { display: grid; justify-items: center; gap: .25rem; font-size: .68rem; color: var(--inchiostro-2); }
+
+/* Tutte e sei a confronto */
+.tutte { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .6rem; }
+.tutte button { display: grid; justify-items: center; gap: .4rem; padding: .7rem .4rem; border-radius: 16px; border: 1.5px solid transparent; background: var(--pietra); color: var(--inchiostro); font: 600 .75rem/1.2 var(--sans); cursor: pointer; }
+.tutte button[aria-pressed="true"] { border-color: var(--inchiostro); }
+.tutte .icona { width: 3.4rem; border-radius: 22.5%; }
+.icona { display: block; overflow: visible; }
+
+/* ---------- Animazioni ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  /* segni materici (come nei giri prima) */
+  .anima .gradino { transform-box: fill-box; transform-origin: center; animation: allarga 700ms var(--morbido) both; }
+  .anima .penna { stroke-dasharray: 1; animation: penna 1100ms var(--dolce) both; animation-delay: 250ms; }
+  .anima .tenda { animation: sali 1000ms var(--dolce) both; animation-delay: 250ms; }
+  .anima .cornice { animation: posa 700ms var(--morbido) both; animation-delay: 1000ms; }
+  .anima .accesa { animation: accendi 900ms var(--dolce) both; animation-delay: 1200ms; }
+  .anima .cuore { animation: accendi 900ms var(--dolce) both; animation-delay: 1500ms; }
+  .anima .punto { transform-box: fill-box; transform-origin: 50% 100%; animation: compare 800ms var(--morbido) both; animation-delay: 1500ms; }
+  /* astratto: le soglie una dopo l'altra, poi il segnaposto in fondo */
+  .anima .strato { transform-box: fill-box; transform-origin: 50% 100%; animation: strato 900ms var(--morbido) both; animation-delay: calc(var(--k) * 140ms); }
+  .anima .meta { transform-box: fill-box; transform-origin: 50% 100%; animation: cade 900ms var(--morbido) both; animation-delay: 1050ms; }
+  @keyframes allarga { from { transform: scaleX(0); } }
+  @keyframes penna { from { stroke-dashoffset: 1; } to { stroke-dashoffset: 0; } }
+  @keyframes sali { from { transform: translateY(34px); } }
+  @keyframes posa { from { transform: translateY(-4px); opacity: 0; } }
+  @keyframes accendi { from { opacity: 0; } }
+  @keyframes compare { from { transform: scale(.4); opacity: 0; } 50% { opacity: 1; } }
+  @keyframes strato { from { transform: scale(1.18); opacity: 0; } 40% { opacity: 1; } }
+  @keyframes cade { 0% { transform: translateY(-9px); opacity: 0; } 55% { transform: translateY(.6px); opacity: 1; } 78% { transform: translateY(-.8px); } 100% { transform: none; } }
+  /* il nome che si scrive da sinistra */
+  .gioca .l { animation: lettera 600ms var(--morbido) both; animation-delay: calc(250ms + var(--i) * 120ms); }
+  .gioca .rotta { animation: rotta 1250ms var(--dolce) both, svanisci 500ms var(--dolce) 1950ms forwards; }
+  .gioca .pin svg { animation: spillo 900ms var(--morbido) both; animation-delay: 970ms; }
+  .gioca .pin .ombra { animation: ombra 900ms var(--morbido) both; animation-delay: 970ms; }
+  .gioca .pin .onda { animation: onda 1000ms var(--morbido) both; animation-delay: 1500ms; }
+  .gioca .descr { animation: lettera 700ms var(--morbido) both; animation-delay: 1750ms; }
+  @keyframes lettera { from { opacity: 0; transform: translateY(.3em); } }
+  @keyframes rotta { from { clip-path: inset(0 100% 0 0); opacity: 1; } to { clip-path: inset(0 0 0 0); opacity: 1; } }
+  @keyframes svanisci { from { opacity: 1; } to { opacity: 0; } }
+  @keyframes spillo { 0% { transform: translateY(-1.1em); opacity: 0; } 55% { transform: translateY(.04em); opacity: 1; } 75% { transform: translateY(-.07em); } 100% { transform: none; } }
+  @keyframes ombra { 0% { opacity: 0; transform: scale(.3); } 55% { opacity: .25; transform: scale(1); } 100% { opacity: 0; } }
+  @keyframes onda { from { opacity: .8; transform: scale(.4); } to { opacity: 0; transform: scale(2.2); } }
+}
+.tema { position: fixed; right: 12px; bottom: calc(12px + env(safe-area-inset-bottom, 0px)); min-height: 44px; padding: 0 14px; border-radius: 999px; border: 0; background: #26272B; color: #fff; font: 600 13px/1 system-ui, sans-serif; cursor: pointer; box-shadow: 0 6px 24px rgba(0,0,0,.28); }
+</style>
+
+<!--FOTO-->
+
+<div class="comandi"><div class="wrap">
+  <div class="riga-scelte" role="group" aria-label="Segno">
+    <button class="scelta" type="button" data-segno="soglia" aria-pressed="true">La soglia</button>
+    <button class="scelta" type="button" data-segno="portici" aria-pressed="false">I portici</button>
+    <button class="riproduci" type="button" id="riproduci">Rivedi</button>
+  </div>
+  <div class="riga-scelte" role="group" aria-label="Versione">
+    <button class="scelta" type="button" data-versione="travertino" aria-pressed="false">Travertino</button>
+    <button class="scelta" type="button" data-versione="sera" aria-pressed="false">Sera</button>
+    <button class="scelta" type="button" data-versione="astratto" aria-pressed="true">Astratto</button>
+  </div>
+</div></div>
+
+<main class="wrap">
+  <header class="apertura">
+    <h1>Il giro finale</h1>
+    <p>Scegli il segno e la versione qui sopra. Il nome si scrive da sinistra e il segnaposto cade al posto della «o». Sotto vedi come cambia sulla home, sulle altre pagine, sulle bande scure e su Google.</p>
+  </header>
+  <section class="palco" aria-label="Il marchio scelto"><div class="palco__icona" id="palco-icona"></div><div class="palco__firma" id="palco-firma"></div></section>
+  <section class="sez" aria-labelledby="h-ctx"><h2 id="h-ctx">Come si adatta</h2><div class="contesti" id="contesti"></div></section>
+  <section class="sez" aria-labelledby="h-tutte"><h2 id="h-tutte">Tutte e sei</h2><div class="tutte" id="tutte"></div><p class="piccolo">Tocca un'icona per vederla sopra.</p></section>
+</main>
+<button class="tema" id="tema" type="button">Tema: automatico</button>
+
+<script>
+(() => {
+  let n = 0;
+  // ---------- Segni materici (dal giro precedente) ----------
+  const ARCO = 'M13 37.5V24C13 14.6 17.6 7 24 7S35 14.6 35 24V37.5z';
+  const APERTURA = 'M18.2 37.5V23.6C18.2 16.6 20.7 11.6 24 11.6S29.8 16.6 29.8 23.6V37.5z';
+  const CUORE = 'M20.6 37.5V25C20.6 19.6 22.1 16.4 24 16.4S27.4 19.6 27.4 25V37.5z';
+  function soglia(c, tondo = null) {
+    const u = 'm' + (n++);
+    const persona = c.persona;
+    return `<svg class="icona" viewBox="0 0 48 48" aria-hidden="true">
+      ${tondo !== null ? `<rect width="48" height="48" rx="${tondo}" fill="${c.fondo}"/>` : ''}
+      <clipPath id="${u}a"><path d="${APERTURA}"/></clipPath>
+      ${c.interno ? `<g class="accesa"><path d="${APERTURA}" fill="${c.interno}"/>${c.cuore ? `<path class="cuore" d="${CUORE}" fill="${c.cuore}"/>` : ''}<rect x="18.2" y="8" width="1.9" height="30" fill="${c.spessore}" clip-path="url(#${u}a)"/></g>` : ''}
+      <mask id="${u}m" maskUnits="userSpaceOnUse" x="0" y="0" width="48" height="48"><path class="penna" pathLength="1" d="M15.6 38.4V24C15.6 15.6 19.3 9.3 24 9.3S32.4 15.6 32.4 24V38.4" fill="none" stroke="#fff" stroke-width="7.6"/></mask>
+      <g mask="url(#${u}m)"><path fill-rule="evenodd" fill="${c.pietra}" d="${ARCO}${APERTURA}"/><path fill="${c.luce}" d="M13 37.5V24C13 14.6 17.6 7 24 7V8.6C18.6 8.6 14.6 15.4 14.6 24V37.5z"/></g>
+      <g class="gradino"><rect x="10.5" y="39.1" width="27" height="1.1" rx=".4" fill="${c.luce}"/><rect x="10.5" y="40.1" width="27" height="1.9" rx=".4" fill="${c.ombra}"/></g>
+      <g class="punto">${persona ? `<circle cx="24" cy="29.6" r="2.3" fill="${c.punto}"/><path d="M20.9 37.5C20.9 34 22.3 32.2 24 32.2S27.1 34 27.1 37.5z" fill="${c.punto}"/>` : `<circle cx="24" cy="32.6" r="3.9" fill="${c.punto}"/>`}</g>
+    </svg>`;
+  }
+  const A1 = 'M12 39V24C12 19.6 14.3 16.6 17.2 16.6S22.4 19.6 22.4 24V39z', A2 = 'M25.6 39V24C25.6 19.6 27.9 16.6 30.8 16.6S36 19.6 36 24V39z', C2 = 'M28.2 39V26C28.2 22.4 29.4 20.4 30.8 20.4S33.4 22.4 33.4 26V39z';
+  function portici(c, tondo = null) {
+    const u = 'm' + (n++);
+    return `<svg class="icona" viewBox="0 0 48 48" aria-hidden="true">
+      ${tondo !== null ? `<rect width="48" height="48" rx="${tondo}" fill="${c.fondo}"/>` : ''}
+      <clipPath id="${u}a"><rect class="tenda" x="0" y="0" width="48" height="39.2"/></clipPath><clipPath id="${u}1"><path d="${A1}"/></clipPath><clipPath id="${u}2"><path d="${A2}"/></clipPath>
+      <g clip-path="url(#${u}a)">
+        <path d="${A1}" fill="${c.buio}"/><rect x="12" y="14" width="1.7" height="26" fill="${c.muroOmbra}" clip-path="url(#${u}1)"/>
+        <path d="${A2}" fill="${c.buio}"/><g class="accesa"><path d="${A2}" fill="${c.accesa}"/><path class="cuore" d="${C2}" fill="${c.cuore}"/><rect x="25.6" y="14" width="1.7" height="26" fill="${c.spessoreAcceso}" clip-path="url(#${u}2)"/></g>
+        <path fill-rule="evenodd" fill="${c.muro}" d="M8 10.4h32V39H8z${A1}${A2}"/><rect x="8" y="10.4" width="32" height="1.3" fill="${c.muroOmbra}"/>
+      </g>
+      <g class="cornice"><rect x="6.4" y="6.8" width="35.2" height="1.1" rx=".4" fill="${c.luce}"/><rect x="6.4" y="7.8" width="35.2" height="1.6" rx=".3" fill="${c.pietra}"/></g>
+      <g class="gradino"><rect x="6.4" y="40.4" width="35.2" height="1.1" rx=".4" fill="${c.luce}"/><rect x="6.4" y="41.4" width="35.2" height="1.9" rx=".4" fill="${c.ombra}"/></g>
+    </svg>`;
+  }
+  // ---------- Astratto: archi uno dentro l'altro in prospettiva ----------
+  const arco = (cx, top, bottom, hw) => {
+    const spring = Math.min(bottom, top + 1.55 * hw), x0 = cx - hw, x1 = cx + hw, c1 = top + .447 * (spring - top), f = v => +v.toFixed(2);
+    return `M${f(x0)} ${f(bottom)}V${f(spring)}C${f(x0)} ${f(c1)} ${f(cx - .418 * hw)} ${f(top)} ${f(cx)} ${f(top)}S${f(x1)} ${f(c1)} ${f(x1)} ${f(spring)}V${f(bottom)}Z`;
+  };
+  const SPILLO = (x, y, s, colore, buco) => `<g class="meta"><path transform="translate(${x} ${y}) scale(${s})" d="M0 0C0 0-3.2-3.4-3.2-5.6A3.2 3.2 0 0 1 3.2-5.6C3.2-3.4 0 0 0 0Z" fill="${colore}"/><circle cx="${x}" cy="${+(y - 5.6 * s).toFixed(2)}" r="${+(1.15 * s).toFixed(2)}" fill="${buco}"/></g>`;
+  function astratto(tipo, c, tondo = null) {
+    // soglia: fuga al centro; portici: fuga a destra, come una galleria vista di lato
+    const strati = [];
+    for (let i = 0; i < 6; i++) {
+      if (tipo === 'soglia') { const s = .8 ** i; strati.push([24, 31 - 25 * s, 31 + 10 * s, 12 * s]); }
+      else { const s = .76 ** i; strati.push([35 + (20 - 35) * s, 27 - 22 * s, 27 + 14 * s, 11.5 * s]); }
+    }
+    const [cx, top, bottom] = strati[5];
+    return `<svg class="icona" viewBox="0 0 48 48" aria-hidden="true">
+      ${tondo !== null ? `<rect width="48" height="48" rx="${tondo}" fill="${c.fondo}"/>` : ''}
+      ${strati.map(([x, t, b, hw], i) => `<path class="strato" style="--k:${i}" d="${arco(x, t, b, hw)}" fill="${c.strati[i]}"${c.opacita ? ` fill-opacity="${c.opacita[i]}"` : ''}/>`).join('')}
+      ${SPILLO(cx, bottom - 1.1, tipo === 'soglia' ? .95 : .82, c.spillo, c.buco)}
+    </svg>`;
+  }
+
+  // ---------- Le versioni, con i colori per ogni posto ----------
+  const BIANCO_S = { pietra: '#FFFFFF', luce: '#FFFFFF', ombra: '#E6E2DA' };
+  const V = {
+    travertino: {
+      nome: 'Travertino',
+      soglia: {
+        icona: { fondo: '#2C231E', pietra: '#E2D3B5', luce: '#F0E6D1', ombra: '#C8B692', interno: '#17110E', spessore: '#3D3129', punto: '#C8963F' },
+        chiaro: { pietra: '#3A2D24', luce: '#4E3E32', ombra: '#2A201A', punto: '#B98632' },
+        foto: { ...BIANCO_S, punto: '#E0B25C' }, scuro: { pietra: '#E2D3B5', luce: '#F0E6D1', ombra: '#C8B692', punto: '#E0B25C' }
+      },
+      portici: {
+        icona: { fondo: '#2C231E', muro: '#E2D3B5', muroOmbra: '#C8B692', pietra: '#F0E6D1', luce: '#FAF4E8', ombra: '#C8B692', buio: '#17110E', accesa: '#D9A84E', cuore: '#F2CF83', spessoreAcceso: '#B9893A' },
+        chiaro: { muro: '#D3BF98', muroOmbra: '#B9A57D', pietra: '#3A2D24', luce: '#4E3E32', ombra: '#2A201A', buio: '#2A201A', accesa: '#C8963F', cuore: '#E2B865', spessoreAcceso: '#A97C30' },
+        foto: { muro: '#FFFFFF', muroOmbra: '#E6E2DA', pietra: '#FFFFFF', luce: '#FFFFFF', ombra: '#E6E2DA', buio: 'rgba(10,8,6,.5)', accesa: '#E0B25C', cuore: '#F2CF83', spessoreAcceso: '#C49544' },
+        scuro: { muro: '#E2D3B5', muroOmbra: '#C8B692', pietra: '#F0E6D1', luce: '#FAF4E8', ombra: '#C8B692', buio: '#0B1326', accesa: '#D9A84E', cuore: '#F2CF83', spessoreAcceso: '#B9893A' }
+      },
+      pin: { chiaro: '#B98632', foto: '#E0B25C', scuro: '#E0B25C' }
+    },
+    sera: {
+      nome: 'Sera',
+      soglia: {
+        icona: { fondo: '#1F2D52', pietra: '#C9B497', luce: '#DCCAAE', ombra: '#9F8C73', interno: '#FFC468', cuore: '#FFE2A6', spessore: '#E8A44A', punto: '#1F2D52', persona: true },
+        chiaro: { pietra: '#1F2D52', luce: '#2E3F6B', ombra: '#16203D', interno: '#FFC468', cuore: '#FFE2A6', spessore: '#E8A44A', punto: '#1F2D52', persona: true },
+        foto: { ...BIANCO_S, interno: '#FFC468', cuore: '#FFE2A6', spessore: '#E8A44A', punto: '#1F2D52', persona: true },
+        scuro: { pietra: '#C9B497', luce: '#DCCAAE', ombra: '#9F8C73', interno: '#FFC468', cuore: '#FFE2A6', spessore: '#E8A44A', punto: '#142039', persona: true }
+      },
+      portici: {
+        icona: { fondo: '#1F2D52', muro: '#B18B6C', muroOmbra: '#8E6E55', pietra: '#C9B497', luce: '#DCCAAE', ombra: '#9F8C73', buio: '#141D38', accesa: '#FFC468', cuore: '#FFE2A6', spessoreAcceso: '#E8A44A' },
+        chiaro: { muro: '#1F2D52', muroOmbra: '#16203D', pietra: '#2E3F6B', luce: '#3A4D7E', ombra: '#16203D', buio: '#0F1730', accesa: '#FFC468', cuore: '#FFE2A6', spessoreAcceso: '#E8A44A' },
+        foto: { muro: '#FFFFFF', muroOmbra: '#E6E6EE', pietra: '#FFFFFF', luce: '#FFFFFF', ombra: '#E6E6EE', buio: 'rgba(8,12,30,.5)', accesa: '#FFC468', cuore: '#FFE2A6', spessoreAcceso: '#E8A44A' },
+        scuro: { muro: '#B18B6C', muroOmbra: '#8E6E55', pietra: '#C9B497', luce: '#DCCAAE', ombra: '#9F8C73', buio: '#0B1326', accesa: '#FFC468', cuore: '#FFE2A6', spessoreAcceso: '#E8A44A' }
+      },
+      pin: { chiaro: '#D98C2B', foto: '#FFC468', scuro: '#FFC468' }
+    },
+    astratto: {
+      nome: 'Astratto',
+      soglia: {
+        icona: { fondo: '#0A0F27', strati: ['#10173A', '#1E2766', '#2F3D93', '#4B5DBE', '#7D8DDC', '#FFF4E0'], spillo: '#10173A', buco: '#FFF4E0' },
+        chiaro: { strati: ['#10173A', '#1E2766', '#2F3D93', '#4B5DBE', '#7D8DDC', '#FFF4E0'], spillo: '#10173A', buco: '#FFF4E0' },
+        foto: { strati: Array(6).fill('#FFFFFF'), opacita: [.16, .16, .18, .22, .32, 1], spillo: '#10173A', buco: '#FFFFFF' },
+        scuro: { strati: ['#1B2450', '#26317A', '#3646A3', '#5266C8', '#8796E4', '#FFF4E0'], spillo: '#10173A', buco: '#FFF4E0' }
+      },
+      portici: {
+        icona: { fondo: '#071F23', strati: ['#0B2E33', '#0F4C55', '#1A7178', '#36A1A0', '#8BD3C7', '#F4F1E6'], spillo: '#0B2E33', buco: '#F4F1E6' },
+        chiaro: { strati: ['#0B2E33', '#0F4C55', '#1A7178', '#36A1A0', '#8BD3C7', '#F4F1E6'], spillo: '#0B2E33', buco: '#F4F1E6' },
+        foto: { strati: Array(6).fill('#FFFFFF'), opacita: [.16, .16, .18, .22, .32, 1], spillo: '#0B2E33', buco: '#FFFFFF' },
+        scuro: { strati: ['#0F3A40', '#135A63', '#1F8087', '#40AEAB', '#93DACE', '#F4F1E6'], spillo: '#0B2E33', buco: '#F4F1E6' }
+      },
+      pinSoglia: { chiaro: '#3F51B5', foto: '#FFFFFF', scuro: '#8C9BEA' },
+      pinPortici: { chiaro: '#1A7178', foto: '#FFFFFF', scuro: '#8BD3C7' }
+    }
+  };
+  const segno = (s, v, dove, tondo = null) => {
+    const c = V[v][s][dove];
+    if (v === 'astratto') return astratto(s, c, tondo);
+    return s === 'soglia' ? soglia(c, tondo) : portici(c, tondo);
+  };
+  const pinDi = (s, v, dove) => v === 'astratto' ? V.astratto[s === 'soglia' ? 'pinSoglia' : 'pinPortici'][dove] : V[v].pin[dove];
+
+  // ---------- La firma: segno + «nextstop» con il segnaposto ----------
+  const SPILLO_O = `<svg viewBox="0 0 20 28" aria-hidden="true"><path d="M10 27.5C10 27.5 1.5 18.2 1.5 10.6A8.5 8.5 0 0 1 18.5 10.6C18.5 18.2 10 27.5 10 27.5Z" fill="var(--pin)"/><circle cx="10" cy="10.6" r="3.3" fill="var(--buco)"/></svg>`;
+  const firma = (s, v, dove, testo, buco) => {
+    const lettere = 'nextst'.split('').map((c, i) => `<span class="l" style="--i:${i}">${c}</span>`).join('');
+    return `<span class="firma" style="--testo:${testo};--pin:${pinDi(s, v, dove)};--buco:${buco}">${segno(s, v, dove)}
+      <span class="parola"><span class="lettere" aria-label="nextstop">${lettere}<span class="pin"><i class="ombra"></i>${SPILLO_O}<i class="onda"></i></span><span class="l" style="--i:7">p</span><span class="rotta" aria-hidden="true"></span></span><span class="descr">itinerari in città</span></span></span>`;
+  };
+
+  const FOTO = window.FOTO_LOGO || '';
+  const MENU = '<span class="menu-tondo" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span>';
+  const risultato = ico => `<div class="ris__testa"><span class="ris__icona">${ico}</span><span class="ris__nome">Nextstop<small>nextstop-alpha.vercel.app › napoli</small></span></div><a class="ris__titolo" href="#">Due giorni a Napoli: l'itinerario con i tempi veri</a>`;
+
+  let scelta = { s: 'soglia', v: 'astratto' };
+  function disegna() {
+    const { s, v } = scelta;
+    document.getElementById('palco-icona').innerHTML = segno(s, v, 'icona', 12);
+    document.getElementById('palco-firma').innerHTML = firma(s, v, 'chiaro', '#16181D', '#F7F6F2');
+    document.getElementById('contesti').innerHTML = `
+      <div class="ctx"><div class="ctx__etichetta">Home, sopra la foto</div>
+        <div class="ctx-foto">${FOTO ? `<img src="${FOTO}" alt="">` : ''}<div class="ctx-foto__testa" style="color:#fff">${firma(s, v, 'foto', '#FFFFFF', '#1b2232')}${MENU}</div><p class="ctx-foto__titolo">Napoli,<br>con i tempi veri.</p></div></div>
+      <div class="ctx"><div class="ctx__etichetta">Le altre pagine</div>
+        <div class="ctx-chiaro" style="color:#16181D">${firma(s, v, 'chiaro', '#16181D', '#F7F6F2')}${MENU}</div><div class="ctx-corpo">Due giorni a Napoli</div></div>
+      <div class="ctx"><div class="ctx__etichetta">Bande scure e piè di pagina</div>
+        <div class="ctx-scuro" style="color:#F3F1EC">${firma(s, v, 'scuro', '#F3F1EC', '#142039')}</div></div>
+      <div class="ctx"><div class="ctx__etichetta">Google e icona</div>
+        <div class="google"><div class="ris-fondo ris-chiaro">${risultato(segno(s, v, 'icona', 0))}</div><div class="ris-fondo ris-scuro">${risultato(segno(s, v, 'icona', 0))}</div></div>
+        <div class="mini">${[56, 32, 16].map(px => `<span><span style="width:${px}px;height:${px}px;display:block;border-radius:${px * .225}px;overflow:hidden">${segno(s, v, 'icona', 0)}</span>${px} px</span>`).join('')}</div></div>`;
+    document.querySelectorAll('[data-segno]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.segno === s)));
+    document.querySelectorAll('[data-versione]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.versione === v)));
+    document.querySelectorAll('#tutte button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.s === s && b.dataset.v === v)));
+    gioca();
+  }
+  function gioca() {
+    requestAnimationFrame(() => {
+      document.querySelectorAll('#palco-icona .icona, .firma > .icona').forEach(e => { e.classList.remove('anima'); void e.getBoundingClientRect(); e.classList.add('anima'); });
+      document.querySelectorAll('.firma').forEach(e => { e.classList.remove('gioca'); void e.getBoundingClientRect(); e.classList.add('gioca'); });
+    });
+  }
+  document.getElementById('tutte').innerHTML = ['soglia', 'portici'].flatMap(s => ['travertino', 'sera', 'astratto'].map(v => `<button type="button" data-s="${s}" data-v="${v}" aria-pressed="false">${segno(s, v, 'icona', 0)}${s === 'soglia' ? 'Soglia' : 'Portici'} · ${V[v].nome}</button>`)).join('');
+  document.querySelectorAll('#tutte button').forEach(b => b.addEventListener('click', () => { scelta = { s: b.dataset.s, v: b.dataset.v }; disegna(); window.scrollTo({ top: 0, behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); }));
+  document.querySelectorAll('[data-segno]').forEach(b => b.addEventListener('click', () => { scelta.s = b.dataset.segno; disegna(); }));
+  document.querySelectorAll('[data-versione]').forEach(b => b.addEventListener('click', () => { scelta.v = b.dataset.versione; disegna(); }));
+  document.getElementById('riproduci').addEventListener('click', gioca);
+  try { const q = new URLSearchParams(location.search); if (q.get('s')) scelta.s = q.get('s'); if (q.get('v')) scelta.v = q.get('v'); } catch (e) {}
+  disegna();
+
+  const temi = [null, 'light', 'dark'], nomi = ['Tema: automatico', 'Tema: chiaro', 'Tema: scuro'];
+  let t = 0;
+  const tema = () => { if (temi[t]) document.documentElement.dataset.theme = temi[t]; else delete document.documentElement.dataset.theme; document.getElementById('tema').textContent = nomi[t]; };
+  try { const q = new URLSearchParams(location.search).get('tema'); if (q) { t = temi.indexOf(q); tema(); } } catch (e) {}
+  document.getElementById('tema').addEventListener('click', () => { t = (t + 1) % 3; tema(); });
+})();
+</script>

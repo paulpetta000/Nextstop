@@ -7,5 +7,5 @@
 // ?p=proposta-a&w=390&h=3000&t=light&g=home
 const q = new URLSearchParams(location.search), f = document.getElementById('f');
 f.width = q.get('w') || 390; f.height = q.get('h') || 3000;
-f.src = `${q.get("p") || "proposta-a"}.html?tema=${q.get("t") || "light"}&colore=${q.get("c") || ""}#${q.get("g") || "home"}`;
+f.src = `${q.get("p") || "proposta-a"}.html?tema=${q.get("t") || "light"}&colore=${q.get("c") || ""}&s=${q.get("s") || ""}&v=${q.get("v") || ""}#${q.get("g") || "home"}`;
 </script></body></html>
