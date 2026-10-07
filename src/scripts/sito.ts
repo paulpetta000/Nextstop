@@ -1,12 +1,14 @@
-// Comportamenti comuni a tutte le pagine: tema, menu, app offline, statistiche anonime
+// Comportamenti comuni a tutte le pagine: tema, menu (rimedio per i browser vecchi), app offline, statistiche anonime
 import { SITO } from '../config/sito';
 
-// ---- tema: automatico → chiaro → scuro ----
+// ---- tema: automatico → chiaro → scuro (il pulsante è in fondo al menu) ----
 const root = document.documentElement;
 const temaBtn = document.getElementById('tema-btn');
+const temaNome = document.getElementById('tema-nome');
 const NOMI: Record<string, string> = { auto: 'automatico', light: 'chiaro', dark: 'scuro' };
 const aggiornaTema = () => {
   const t = root.dataset.theme || 'auto';
+  if (temaNome) temaNome.textContent = `Tema: ${NOMI[t]}`;
   temaBtn?.setAttribute('aria-label', `Tema: ${NOMI[t]}. Cambia tema`);
 };
 temaBtn?.addEventListener('click', () => {
@@ -18,18 +20,20 @@ temaBtn?.addEventListener('click', () => {
 });
 aggiornaTema();
 
-// ---- menu su telefono ----
-const menuBtn = document.getElementById('menu-btn');
-const menu = document.getElementById('menu-mob');
-const chiudiMenu = () => { if (!menu || !menuBtn) return; menu.hidden = true; menuBtn.setAttribute('aria-expanded', 'false'); menuBtn.setAttribute('aria-label', 'Apri il menu'); };
-menuBtn?.addEventListener('click', () => {
-  if (!menu) return;
-  const apri = menu.hidden;
-  menu.hidden = !apri;
-  menuBtn.setAttribute('aria-expanded', String(apri));
-  menuBtn.setAttribute('aria-label', apri ? 'Chiudi il menu' : 'Apri il menu');
-});
-document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu && !menu.hidden) { chiudiMenu(); menuBtn?.focus(); } });
+// ---- menu nei browser senza popover (Safari prima della 17, Firefox prima della 125) ----
+// Con il popover il browser fa tutto da solo: apre, chiude con Esc e con un tocco fuori, segna il pulsante come aperto.
+const menu = document.getElementById('menu');
+if (menu && !('popover' in HTMLElement.prototype)) {
+  const apriBtn = document.querySelector<HTMLElement>('[popovertarget="menu"]:not([popovertargetaction="hide"])');
+  const segna = (aperto: boolean) => { menu.classList.toggle('aperto', aperto); apriBtn?.setAttribute('aria-expanded', String(aperto)); };
+  apriBtn?.setAttribute('aria-expanded', 'false');
+  document.addEventListener('click', e => {
+    const b = (e.target as Element).closest('[popovertarget="menu"]');
+    if (b) segna(b.getAttribute('popovertargetaction') !== 'hide' && !menu.classList.contains('aperto'));
+    else if (menu.classList.contains('aperto') && !menu.contains(e.target as Node)) segna(false);
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape' && menu.classList.contains('aperto')) { segna(false); apriBtn?.focus(); } });
+}
 
 // ---- app installabile e offline ----
 if ('serviceWorker' in navigator && location.protocol === 'https:') {

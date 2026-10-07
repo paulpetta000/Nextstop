@@ -1,6 +1,63 @@
-# Testi della home (provvisoria, 06/10/2026: la home vera arriva con la grafica del sito).
+# Testi della home (grafica A «Rivista», 07/10/2026). Stile: specifiche/stile-testi.md.
+# I numeri non si scrivono a mano: {tappe}, {gite}, {locali}, {fonti}, {data} li mette la pagina (src/pages/index.astro) dai dati.
 
-intro:
+apertura:
   senzaFonte: "Presentazione del sito: dice cosa c'è, nessuna informazione da controllare"
   testo: |
-    Itinerari pronti o fatti da te, con i tempi veri a piedi e con i mezzi, le tappe che quel giorno sono chiuse e i posti dove fermarti a mangiare lungo la strada. Si comincia da Napoli: le altre città arrivano dopo.
+    Itinerari pronti o fatti da te: quanto ci metti da una tappa all'altra a piedi, in metro e in funicolare, cosa è chiuso quel giorno e dove fermarti a mangiare.
+
+come:
+  senzaFonte: "Presentazione del sito: dice come funziona il compositore"
+  testo: |
+    Tre cose che una lista di «cosa vedere» non ti dice.
+
+passo-tappe:
+  senzaFonte: "Presentazione del sito: i numeri vengono dai dati delle tappe"
+  testo: |
+    {tappe} posti in città e {gite} gite fuori, ognuno con orari, prezzi e quanto dura la visita.
+
+passo-tempi:
+  senzaFonte: "Presentazione del sito: come calcoliamo i tempi (spiegato nella pagina degli itinerari, con le fonti)"
+  testo: |
+    Tra una tappa e l'altra calcoliamo il tempo vero: a piedi, in metro, in funicolare e in autobus. Per esempio:
+
+passo-avvisi:
+  senzaFonte: "Presentazione del sito: dice cosa fa il compositore"
+  testo: |
+    Ti diciamo se quel giorno una tappa è chiusa e dove fermarti a mangiare lungo la strada.
+
+mangiare:
+  senzaFonte: "Presentazione della pagina «Dove mangiare»: il numero viene dai dati dei locali"
+  testo: |
+    {locali} locali, dalla pizza a portafoglio al pesce sul lungomare. Ognuno entra nel tuo itinerario come pranzo, cena o spuntino.
+
+fidarti-fonti:
+  senzaFonte: "Come lavoriamo: il numero viene dall'elenco delle fonti"
+  testo: |
+    {fonti} fonti, ognuna con il giorno del controllo.
+
+    Le trovi in fondo a ogni pagina.
+
+fidarti-data:
+  senzaFonte: "Come lavoriamo: la data viene dalle impostazioni del sito"
+  testo: |
+    Ultimo controllo generale: {data}.
+
+    Se una cosa non è sicura, lo scriviamo.
+
+fidarti-link:
+  senzaFonte: "Come lavoriamo: una nostra scelta"
+  testo: |
+    Nessun link pagato, nessuna recensione comprata.
+
+fidarti-rete:
+  senzaFonte: "Come funziona il sito: senza account, e le pagine restano sul telefono dopo la prima visita"
+  testo: |
+    Senza account, anche senza rete.
+
+    Dopo la prima visita, itinerari e locali restano sul telefono.
+
+prossime:
+  senzaFonte: "Presentazione del sito: nessuna città nuova è ancora decisa"
+  testo: |
+    Napoli è la prima città. Le altre arrivano dopo.

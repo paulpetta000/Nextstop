@@ -1,6 +1,6 @@
 # PROGRESS
 
-_Ultimo aggiornamento: 07/10/2026 (Fase 1: grafica A e marchio scelti, DESIGN.md scritto)._
+_Ultimo aggiornamento: 07/10/2026 (Fase 1: costruzione a metà, non ancora controllata)._
 
 ## Fase 1 in corso (ramo `grafica-home`, anche su GitHub dal 07/10/2026)
 - Specifica `specifiche/home-e-identita.md` approvata il 06/10/2026, con le aggiunte di Enrico: il compositore si rifà tutto (restano dati e calcoli), i **racconti** degli itinerari pronti (stile MUDD, per Google), il menu con le tre linee.
@@ -8,7 +8,8 @@ _Ultimo aggiornamento: 07/10/2026 (Fase 1: grafica A e marchio scelti, DESIGN.md
 - **Marchio scelto: la soglia astratta** (07/10/2026), dopo sette giri tutti salvati in `design/logo/` (README con i link). La «o» del nome è un segnaposto; sopra le foto calde la versione ambra.
   Su Google l'icona resta ferma (Google mostra solo immagini fisse); l'animazione vive sul sito.
 - **`DESIGN.md`** scritto: colori, caratteri, forme, componenti, movimento, marchio. Da decidere vedendo l'anteprima: accento del sito giallo tufo o pervinca del marchio.
-- **Prossimo: costruzione** (sessione nuova, Opus effort alto): home nuova, testata e menu, piè di pagina, marchio animato, `?pronto=` nel compositore; Bodoni Moda da scaricare in `public/fonts/` (OK di Enrico); controlli e anteprima di Vercel. Figma dopo la costruzione.
+- **Costruzione (07/10/2026, commit sul ramo, NON ancora su GitHub)**: fatti home nuova (`src/pages/index.astro`, testi in `src/testi/home.yaml` con i numeri dai dati: `riempi` in `src/lib/regole.mjs`), testata con menu a popover (`Header.astro`), piè di pagina blu notte (`Footer.astro`), marchio animato (`Marchio.astro`, geometria unica in `src/lib/marchio.mjs`), icone e immagini di anteprima nuove, Bodoni Moda in `public/fonts/`, `?pronto=` nel compositore e `?cucina=` in «Dove mangiare». `npm test` 27/27, build ok, `check:links` 888 link puliti.
+- **Da fare (sessione nuova, Opus effort alto)**: guardare la home nel browser (telefono 320/390, chiaro e scuro, menu, animazione, `?pronto=` anche su computer: controllare che `?aggiungi=` non dia errore prima di `let mappaVicina` in `app.ts`), axe, Lighthouse, riduci movimento; poi push del ramo e anteprima di Vercel; README (caratteri) e DESIGN.md.
 
 ## Dove siamo
 - **06/10/2026: il sito è nato** separando gli itinerari da Napoli a Vela (`specifiche/sito-itinerari-separazione.md`, approvata da Enrico).

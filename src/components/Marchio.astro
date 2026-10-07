@@ -1,0 +1,66 @@
+---
+// Il marchio: il segno (la soglia astratta, src/lib/marchio.mjs) e il nome, con il segnaposto al posto della «o».
+// dove: chiaro (intestazione delle pagine), scuro (menu e piè di pagina), foto (sopra la foto della home).
+// I colori dei tre posti sono variabili CSS scritte nel <head> da Base.astro (cssFirma).
+// L'animazione (DESIGN.md §7) parte solo nell'intestazione e solo se <html> ha la classe «marchio-anima»:
+// una volta, all'apertura della home (src/layouts/Base.astro).
+import { segnoVivo, SPILLO_O } from '../lib/marchio.mjs';
+import { SITO } from '../config/sito';
+
+interface Props { dove?: 'chiaro' | 'scuro' | 'foto'; descr?: boolean; class?: string }
+const { dove = 'chiaro', descr = false, class: cls } = Astro.props;
+// Il nome è provvisorio: si cambia solo in src/config/sito.ts. Il segnaposto prende il posto dell'ultima «o».
+const lettere = [...SITO.nome.toLowerCase()];
+const o = lettere.lastIndexOf('o');
+---
+<span class:list={['firma', `firma--${dove}`, cls]}>
+  <svg class="firma__segno" viewBox="0 0 48 48" aria-hidden="true" focusable="false" set:html={segnoVivo()} />
+  <span class="firma__parola" aria-hidden="true">
+    <span class="firma__lettere">
+      {lettere.map((c, i) => i === o
+        ? <span class="firma__pin" style={`--i:${i}`}><i class="firma__ombra"></i><svg viewBox="0 0 20 28" focusable="false" set:html={SPILLO_O} /><i class="firma__onda"></i></span>
+        : <span class="firma__l" style={`--i:${i}`}>{c}</span>)}
+      <span class="firma__rotta"></span>
+    </span>
+    {descr && <span class="firma__descr">{SITO.sottotitolo.toLowerCase()}</span>}
+  </span>
+  <span class="visually-hidden">{SITO.nome}</span>
+</span>
+
+<style>
+  .firma { display: inline-flex; align-items: center; gap: .34em; font-size: 1.375rem; line-height: 1; color: var(--firma-testo); }
+  .firma--chiaro { --firma-testo: var(--inchiostro); --pin-buco: var(--carta); }
+  .firma--scuro { --firma-testo: var(--su-notte); --pin-buco: var(--notte); }
+  .firma--foto { --firma-testo: #FFFFFF; --pin-buco: #1B2232; }
+  .firma__segno { width: 1.6em; height: 1.6em; flex: none; overflow: visible; }
+  .firma__parola { position: relative; display: grid; gap: .16em; }
+  .firma__lettere { position: relative; display: inline-flex; align-items: baseline; font-family: var(--f-sans); font-weight: 560; font-stretch: 96%; letter-spacing: -.035em; white-space: nowrap; }
+  .firma__l { display: inline-block; }
+  .firma__pin { position: relative; display: inline-block; width: .5em; height: .7em; margin: 0 .03em 0 .035em; }
+  .firma__pin svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+  .firma__ombra { position: absolute; left: 50%; bottom: -.05em; width: .34em; height: .08em; margin-left: -.17em; border-radius: 50%; background: currentColor; opacity: 0; }
+  .firma__onda { position: absolute; left: 50%; top: .25em; width: .5em; height: .5em; margin: -.25em 0 0 -.25em; border-radius: 50%; border: .05em solid var(--pin); opacity: 0; }
+  .firma__rotta { position: absolute; left: 0; right: .1em; bottom: -.16em; height: .1em; opacity: 0; background: radial-gradient(circle, var(--pin) 32%, transparent 38%) 0 50% / .2em .1em repeat-x; }
+  .firma__descr { font: italic 500 .36em/1 var(--f-serif); opacity: .78; letter-spacing: .01em; }
+
+  /* L'animazione: le soglie una dopo l'altra (140 ms), il segnaposto che cade in fondo; il nome che si scrive da sinistra
+     lungo un percorso a puntini, il segnaposto che cade al posto della «o» e manda un'onda. Circa 2 secondi, una volta. */
+  @media (prefers-reduced-motion: no-preference) {
+    :global(.marchio-anima .testata) .firma__segno :global(.strato) { transform-box: fill-box; transform-origin: 50% 100%; animation: firma-strato 900ms var(--entra) both; animation-delay: calc(var(--k) * 140ms); }
+    :global(.marchio-anima .testata) .firma__segno :global(.meta) { transform-box: fill-box; transform-origin: 50% 100%; animation: firma-cade 900ms var(--entra) both; animation-delay: 1050ms; }
+    :global(.marchio-anima .testata) .firma__l { animation: firma-lettera 600ms var(--entra) both; animation-delay: calc(250ms + var(--i) * 120ms); }
+    :global(.marchio-anima .testata) .firma__rotta { animation: firma-rotta 1250ms cubic-bezier(.65, 0, .35, 1) both, firma-svanisci 500ms cubic-bezier(.65, 0, .35, 1) 1950ms forwards; }
+    :global(.marchio-anima .testata) .firma__pin svg { animation: firma-spillo 900ms var(--entra) both; animation-delay: calc(250ms + var(--i) * 120ms); }
+    :global(.marchio-anima .testata) .firma__ombra { animation: firma-ombra 900ms var(--entra) both; animation-delay: calc(250ms + var(--i) * 120ms); }
+    :global(.marchio-anima .testata) .firma__onda { animation: firma-onda 1000ms var(--entra) both; animation-delay: calc(780ms + var(--i) * 120ms); }
+    :global(.marchio-anima .testata) .firma__descr { animation: firma-lettera 700ms var(--entra) both; animation-delay: 1750ms; }
+  }
+  @keyframes firma-strato { from { transform: scale(1.18); opacity: 0; } 40% { opacity: 1; } }
+  @keyframes firma-cade { 0% { transform: translateY(-9px); opacity: 0; } 55% { transform: translateY(.6px); opacity: 1; } 78% { transform: translateY(-.8px); } 100% { transform: none; } }
+  @keyframes firma-lettera { from { opacity: 0; transform: translateY(.3em); } }
+  @keyframes firma-rotta { from { clip-path: inset(0 100% 0 0); opacity: 1; } to { clip-path: inset(0 0 0 0); opacity: 1; } }
+  @keyframes firma-svanisci { from { opacity: 1; } to { opacity: 0; } }
+  @keyframes firma-spillo { 0% { transform: translateY(-1.1em); opacity: 0; } 55% { transform: translateY(.04em); opacity: 1; } 75% { transform: translateY(-.07em); } 100% { transform: none; } }
+  @keyframes firma-ombra { 0% { opacity: 0; transform: scale(.3); } 55% { opacity: .25; transform: scale(1); } 100% { opacity: 0; } }
+  @keyframes firma-onda { from { opacity: .8; transform: scale(.4); } to { opacity: 0; transform: scale(2.2); } }
+</style>

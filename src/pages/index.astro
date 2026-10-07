@@ -1,39 +1,301 @@
 ---
-// Home provvisoria (06/10/2026): la home vera arriva con la grafica del sito, con due proposte da scegliere.
+// La home (grafica A «Rivista», bozzetto design/home/a.html; specifiche/home-e-identita.md).
+// Dall'alto: apertura con la foto e «Quanto tempo hai?», come funziona, itinerari pronti, dove mangiare, perché fidarti,
+// le prossime città. Ogni numero viene dai dati, ricalcolato a ogni build: niente è scritto a mano.
 import Base from '../layouts/Base.astro';
 import Testo from '../components/Testo.astro';
-import Foto from '../components/Foto.astro';
-import { getTesti } from '../lib/testi';
-import { getCollection } from 'astro:content';
-import '../styles/itinerari.css';
+import Immagine from '../components/Immagine.astro';
+import { getTesti, type Blocco } from '../lib/testi';
+import { riempi } from '../lib/regole.mjs';
+import { LICENZE } from '../lib/foto';
+import { cittaNapoli, prontiNapoli, LINEE } from '../lib/itinerari/napoli';
+import { CITTA, linkPronto } from '../config/menu';
+import { SITO } from '../config/sito';
+import { CUCINE } from '../lib/locali';
+import { dataLunga } from '../lib/formato';
+import { ora } from '../lib/itinerari/date';
+import { getCollection, getEntry } from 'astro:content';
 
 const T = await getTesti('home');
-const tappe = await getCollection('tappe');
-const locali = await getCollection('locali');
+const C = await cittaNapoli();
+const napoli = CITTA[0];
+const fonti = await getCollection('fonti');
+
+const tappe = C.tappe.filter(t => !t.categoria && t.tipo === 'citta');
+const gite = C.tappe.filter(t => t.tipo === 'gita');
+const locali = C.tappe.filter(t => t.categoria === 'mangiare');
+const nome = (id: string) => C.tappe.find(t => t.id === id)!;
+
+// Un blocco dei testi con i numeri veri al posto di {tappe}, {locali}…
+const con = (b: string, valori: Record<string, string | number>): Blocco => { const x = T.b(b); return { ...x, html: riempi(`home#${b}`, x.html, valori) }; };
+
+// Gli itinerari pronti con la durata (non quello delle regate): tappe e minuti a piedi dal calcolo della build
+const pronti = (await prontiNapoli()).filter(p => p.durata && !p.evento).map(p => {
+  const voci = p.giorni.flatMap(g => g.voci);
+  return {
+    ...p,
+    numero: p.durata!.split(' ')[0],
+    nTappe: voci.filter(v => v.tipo === 'tappa').length,
+    minPiedi: voci.reduce((s, v) => s + (v.tipo === 'tratto' && !v.mezzi.length ? v.min : 0), 0)
+  };
+});
+if (pronti.some(p => !p.foto)) throw new Error('Ogni itinerario pronto della home vuole una «foto» in src/data/itinerari-pronti.yaml');
+
+// L'esempio di «Guarda quanto ci metti»: un tratto vero del primo giorno di «Due giorni a Napoli»
+const esempio = (() => {
+  const voci = pronti.find(p => p.id === 'due-giorni')?.giorni[0].voci ?? pronti[0].giorni[0].voci;
+  const i = voci.findIndex((v, k) => v.tipo === 'tappa' && voci[k + 1]?.tipo === 'tratto' && voci[k + 2]?.tipo === 'tappa' && k > 0);
+  const [a, t, b] = [voci[i], voci[i + 1], voci[i + 2]];
+  if (a?.tipo !== 'tappa' || t?.tipo !== 'tratto' || b?.tipo !== 'tappa') throw new Error('Home: manca un esempio di tratto tra due tappe');
+  const come = t.mezzi.length ? t.mezzi.map(m => LINEE[m] ?? m).join(' e ') : 'a piedi';
+  const metri = t.metri >= 1000 ? `${(t.metri / 1000).toFixed(1).replace('.', ',')} km` : `${Math.round(t.metri / 10) * 10} m`;
+  return { da: { ora: ora(a.inizio), nome: nome(a.id).breve }, a: { ora: ora(b.inizio), nome: nome(b.id).breve }, tratto: `${t.min} min ${come}`, metri };
+})();
+
+// Dove mangiare: le famiglie di locali, con quanti ce ne sono (stessi nomi dei filtri della pagina)
+const FAMIGLIE = ['pizza', 'napoletana', 'pesce', 'strada', 'dolci'];
+const famiglie = FAMIGLIE.map(k => ({ k, nome: CUCINE[k], n: locali.filter(l => l.cucina?.includes(k)).length })).filter(f => f.n > 0);
+
+// Le foto della pagina e i loro crediti (la foto grande li ha anche sopra)
+const FOTO_APERTURA = 'tp-spaccanapoli', FOTO_MANGIARE = 'tp-pignasecca';
+const credito = async (id: string) => {
+  const f = await getEntry('foto', id);
+  if (!f) throw new Error(`Foto "${id}" non trovata`);
+  return { id, autore: f.data.autore, autoreUrl: f.data.autoreUrl, licenza: f.data.licenza, licUrl: LICENZE[f.data.licenza], fonte: f.data.fonte, didascalia: f.data.didascalia };
+};
+const crediti = await Promise.all([FOTO_APERTURA, ...pronti.map(p => p.foto!), FOTO_MANGIARE].map(credito));
+const cr0 = crediti[0];
 ---
-<Base title="Itinerari in città" description={`Itinerari pronti o fatti da te, con i tempi a piedi e con i mezzi. Prima città: Napoli, con ${tappe.length} tappe e ${locali.length} locali.`}>
-  <div class="it-pagina">
-    <header class="it-testa">
-      <div class="it-wrap">
-        <h1>Itinerari in città</h1>
-        <Testo b={T.b('intro')} class="it-lead" />
+<Base title="Itinerari in città" description={`Itinerari a Napoli pronti o fatti da te, con i tempi veri a piedi, in metro, in funicolare e in autobus: ${tappe.length} tappe in città, ${gite.length} gite e ${locali.length} locali dove mangiare.`} home>
+  <div class="home">
+    <section class="apertura" aria-labelledby="h-home">
+      <Immagine id={FOTO_APERTURA} prima class="apertura__foto" widths={[480, 750, 1000]} sizes="100vw" posizione="50% 38%" />
+      <div class="dentro apertura__dentro">
+        <h1 id="h-home" class="titolone"><span>{napoli.nome},</span> <span>con i tempi veri.</span></h1>
+        <Testo b={T.b('apertura')} class="apertura__lead" />
+        <div class="tempo">
+          <h2 class="tempo__titolo" id="h-tempo">Quanto tempo hai?</h2>
+          <ul class="tempo__scelte" aria-labelledby="h-tempo">
+            {pronti.map(p => (
+              <li><a class="scelta" href={linkPronto(napoli, p.id)}><span class="scelta__n" aria-hidden="true">{p.numero}</span>{p.durata}</a></li>
+            ))}
+            <li><a class="scelta scelta--tuo" href={`${napoli.itinerari}#compositore`}>Fai da te</a></li>
+          </ul>
+        </div>
+        <p class="apertura__credito">Foto: {cr0.autoreUrl ? <a href={cr0.autoreUrl} rel="noopener">{cr0.autore}</a> : cr0.autore}, {cr0.licUrl ? <a href={cr0.licUrl} rel="noopener license">{cr0.licenza}</a> : cr0.licenza}</p>
       </div>
-    </header>
-    <section class="it-wrap home-citta" aria-labelledby="home-napoli-h">
-      <Foto id="tp-borgo-marinari" rapporto="3 / 2" prima sizes="(min-width: 900px) 640px, calc(100vw - 32px)" class="home-citta__foto" />
-      <h2 class="home-citta__nome" id="home-napoli-h"><a href="/napoli/">Napoli</a></h2>
-      <p class="home-citta__sotto">{tappe.length} tappe, {locali.length} locali dove mangiare</p>
-      <p class="home-azioni">
-        <a class="it-btn it-btn--primario" href="/napoli/itinerari/">Componi un itinerario</a>
-        <a class="it-btn" href="/napoli/dove-mangiare/">Dove mangiare</a>
-      </p>
     </section>
+
+    <section class="sezione dentro come" aria-labelledby="h-come">
+      <div class="come__intro">
+        <h2 id="h-come" class="serif sezione__titolo">Come funziona</h2>
+        <Testo b={T.b('come')} />
+      </div>
+      <div class="passi-box">
+        <svg class="passi__linea" viewBox="0 0 40 100" preserveAspectRatio="none" aria-hidden="true" focusable="false"><path pathLength="1" d="M20 2 C 36 22, 4 38, 20 52 S 36 82, 20 98" vector-effect="non-scaling-stroke" /></svg>
+        <ol class="passi">
+          <li class="passo"><h3 class="titolone">Scegli le tappe</h3><Testo b={con('passo-tappe', { tappe: tappe.length, gite: gite.length })} /></li>
+          <li class="passo"><h3 class="titolone">Guarda quanto ci metti</h3><Testo b={T.b('passo-tempi')} />
+            <p class="esempio">
+              <span class="esempio__ora">{esempio.da.ora}</span><span>{esempio.da.nome}</span>
+              <span class="esempio__tratto"><b>{esempio.tratto}</b>, {esempio.metri}</span>
+              <span class="esempio__ora">{esempio.a.ora}</span><span>{esempio.a.nome}</span>
+            </p>
+          </li>
+          <li class="passo"><h3 class="titolone">Leggi gli avvisi</h3><Testo b={T.b('passo-avvisi')} /></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="sezione sezione--pronti dentro" aria-labelledby="h-pronti">
+      <div class="pronti__testa">
+        <h2 id="h-pronti" class="serif sezione__titolo">Itinerari pronti</h2>
+        <a class="btn" href={`${napoli.itinerari}#compositore`}>Componi il tuo</a>
+      </div>
+      <ul class="carosello">
+        {pronti.map(p => (
+          <li>
+            <a class="scheda" href={linkPronto(napoli, p.id)}>
+              <span class="arco"><Immagine id={p.foto!} alt="" widths={[320, 480, 640]} sizes="(min-width: 900px) 17rem, min(78vw, 20rem)" /></span>
+              <span class="scheda__nome serif">{p.nome}</span>
+              <span class="scheda__dati"><span><b>{p.nTappe}</b> tappe</span> <span><b>{p.minPiedi}</b> min a piedi</span></span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="su-notte sezione mangiare-banda" aria-labelledby="h-mangiare">
+      <div class="dentro mangiare">
+        <div class="mangiare__foto"><Immagine id={FOTO_MANGIARE} widths={[360, 560, 720]} sizes="(min-width: 900px) 22rem, 70vw" /></div>
+        <div>
+          <h2 id="h-mangiare" class="serif sezione__titolo">Dove mangiare</h2>
+          <Testo b={con('mangiare', { locali: locali.length })} class="mangiare__testo" />
+          <ul class="famiglie">
+            {famiglie.map(f => <li><a href={`${napoli.mangiare}?cucina=${f.k}`}>{f.nome}<span>{f.n} locali</span></a></li>)}
+          </ul>
+          <a class="btn btn--chiaro mangiare__tutti" href={napoli.mangiare}>Tutti i locali</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="sezione dentro" aria-labelledby="h-fidarti">
+      <h2 id="h-fidarti" class="serif sezione__titolo">Perché fidarti</h2>
+      <div class="foglietti">
+        <Testo b={con('fidarti-fonti', { fonti: fonti.length })} class="foglietto" />
+        <Testo b={con('fidarti-data', { data: dataLunga(SITO.aggiornato) })} class="foglietto" />
+        <Testo b={T.b('fidarti-link')} class="foglietto" />
+        <Testo b={T.b('fidarti-rete')} class="foglietto" />
+      </div>
+    </section>
+
+    <div class="dentro">
+      <div class="citta-dopo">
+        <Testo b={T.b('prossime')} />
+        <span class="citta-dopo__linea" aria-hidden="true"></span>
+        <span class="citta-dopo__fermata" aria-hidden="true"></span>
+      </div>
+      <p class="crediti">
+        Foto di questa pagina, da Wikimedia Commons:
+        {crediti.map((c, i) => (
+          <>{i > 0 && '; '}{c.didascalia.replace(/\.$/, '')} di {c.autoreUrl ? <a href={c.autoreUrl} rel="noopener">{c.autore}</a> : c.autore} ({c.licUrl ? <a href={c.licUrl} rel="noopener license">{c.licenza}</a> : c.licenza}, <a href={c.fonte} rel="noopener">origine</a>)</>
+        ))}.
+      </p>
+    </div>
   </div>
 </Base>
+
 <style>
-  .home-citta { padding-block: 16px 48px; }
-  .home-citta :global(.home-citta__foto) { max-width: 40rem; }
-  .home-citta__nome { font-size: 2rem; margin: 16px 0 0; }
-  .home-citta__sotto { color: var(--it-ink-2); margin: 4px 0 0; }
-  .home-azioni { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+  /* ---------- base della pagina ---------- */
+  .home { color: var(--inchiostro); }
+  /* via gli stili di prima di global.css (margini, elenchi, colore dei link), con il peso più basso possibile */
+  :global(.home) :where(h1, h2, h3, p, ul, ol) { margin: 0; }
+  :global(.home) :where(ul, ol) { padding: 0; list-style: none; }
+  :global(.home) :where(li + li) { margin-top: 0; }
+  :global(.home) :where(a) { color: inherit; }
+  .home :global(.testo) { margin: 0; }
+  .home :global(.testo p) { margin: 0; max-width: 62ch; text-wrap: pretty; }
+  .dentro { width: 100%; max-width: var(--largo); margin-inline: auto; padding-inline: var(--lato); }
+  .sezione { padding-block: clamp(3.5rem, 10vw, 6.5rem); }
+  .titolone { font-family: var(--f-sans); font-weight: 800; font-stretch: 70%; letter-spacing: -.015em; line-height: .92; text-wrap: balance; }
+  .serif { font-family: var(--f-serif); font-weight: 600; font-optical-sizing: auto; letter-spacing: -.01em; line-height: 1.05; text-wrap: balance; }
+  .sezione__titolo { font-size: clamp(2rem, 7vw, 3.25rem); }
+
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: .5rem; min-height: 48px; padding: .75rem 1.375rem; border-radius: 999px; border: 1.5px solid var(--inchiostro); background: transparent; color: var(--inchiostro); font: 600 1rem/1.2 var(--f-sans); text-decoration: none; cursor: pointer;
+    transition: transform var(--m100) var(--entra), background-color var(--m150) var(--entra), color var(--m150) var(--entra); }
+  .btn:active { transform: scale(.97); }
+  @media (hover: hover) { .btn:hover { background: var(--inchiostro); color: var(--carta); } }
+  .btn--chiaro { border-color: var(--su-notte); color: var(--su-notte); }
+  @media (hover: hover) { .btn--chiaro:hover { background: var(--su-notte); color: var(--notte); } }
+
+  /* ---------- apertura: foto a tutto schermo, la promessa, «Quanto tempo hai?» ---------- */
+  .apertura { position: relative; isolation: isolate; display: flex; align-items: flex-end; min-height: min(100svh, 52rem); overflow: hidden; background: #1B2232; color: #FFFFFF; --anello: #F0BE3E; }
+  .apertura :global(.apertura__foto) { position: absolute; inset: 0; z-index: -2; width: 100%; height: 100%; object-fit: cover; }
+  .apertura::after { content: ''; position: absolute; inset: 0; z-index: -1; background: linear-gradient(180deg, rgba(8, 12, 22, .5) 0%, rgba(8, 12, 22, .12) 18%, rgba(8, 12, 22, .5) 40%, rgba(8, 12, 22, .86) 70%, rgba(8, 12, 22, .95) 100%); }
+  .apertura__dentro { display: grid; gap: 1.25rem; padding-block: calc(var(--head-h) + 3rem) 1.5rem; }
+  .apertura h1 { font-size: clamp(3.1rem, 15vw, 7.5rem); max-width: 11ch; text-shadow: 0 2px 24px rgba(0, 0, 0, .35); }
+  .apertura h1 span { display: block; }
+  .apertura :global(.apertura__lead p) { max-width: 34rem; font-size: 1.0625rem; line-height: 1.5; color: rgba(255, 255, 255, .9); }
+  .apertura__credito { font-size: .75rem; color: rgba(255, 255, 255, .72); }
+  .tempo { display: grid; gap: .75rem; padding-top: .25rem; }
+  .tempo__titolo { font: italic 500 1.375rem/1.1 var(--f-serif); letter-spacing: 0; }
+  .tempo__scelte { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .scelta { display: inline-flex; align-items: center; gap: .55rem; min-height: 48px; padding: .5rem 1.05rem .5rem .55rem; border-radius: 999px; background: #F3F1EC; color: #12182A; text-decoration: none; font-weight: 600; font-size: 1rem; line-height: 1;
+    transition: transform var(--m100) var(--entra), background-color var(--m150) var(--entra); }
+  .scelta:active { transform: scale(.96); }
+  @media (hover: hover) { .scelta:hover { background: #FFFFFF; } }
+  .scelta__n { width: 2.1rem; height: 2.1rem; display: grid; place-items: center; border-radius: 50%; background: #12182A; color: #FFFFFF; font-weight: 800; font-stretch: 75%; font-size: 1rem; }
+  .scelta--tuo { padding-left: 1.05rem; background: transparent; color: #FFFFFF; border: 1.5px solid rgba(255, 255, 255, .8); }
+  @media (hover: hover) { .scelta--tuo:hover { background: rgba(255, 255, 255, .12); } }
+  @media (prefers-reduced-motion: no-preference) {
+    .apertura :global(.apertura__foto) { animation: respira var(--m300) var(--entra) both; }
+    .apertura h1 span, .apertura :global(.apertura__lead), .tempo { animation: sali var(--m300) var(--entra) both; }
+    .apertura h1 span:nth-child(2) { animation-delay: 80ms; }
+    .apertura :global(.apertura__lead) { animation-delay: 160ms; }
+    .tempo { animation-delay: 220ms; }
+  }
+  @keyframes respira { from { transform: scale(1.04); } }
+  @keyframes sali { from { transform: translateY(10px); opacity: .01; } }
+
+  /* ---------- come funziona: tre passi lungo un percorso che si disegna ---------- */
+  .come { display: grid; gap: 2.5rem; }
+  @media (min-width: 900px) { .come { grid-template-columns: 1fr 1.3fr; align-items: start; gap: 4rem; } }
+  .come__intro { display: grid; gap: .75rem; max-width: 36rem; }
+  .passi-box { position: relative; }
+  .passi { position: relative; display: grid; gap: 2.25rem; padding-left: 3.25rem; counter-reset: passo; }
+  .passi__linea { position: absolute; left: 0; top: .2rem; width: 2.5rem; height: calc(100% - .4rem); overflow: visible; }
+  .passi__linea path { fill: none; stroke: var(--tufo); stroke-width: 3; stroke-linecap: round; }
+  .passo { position: relative; display: grid; gap: .35rem; counter-increment: passo; }
+  .passo::before { content: counter(passo); position: absolute; left: -3.25rem; top: -.1rem; width: 2.5rem; height: 2.5rem; display: grid; place-items: center; border-radius: 50%; background: var(--carta); border: 2px solid var(--inchiostro); font-weight: 800; font-stretch: 75%; font-size: 1.05rem; line-height: 1; }
+  .passo h3 { font-size: 1.625rem; }
+  .esempio { justify-self: start; display: grid; grid-template-columns: auto 1fr; align-items: center; gap: .15rem .75rem; max-width: 26rem; margin-top: .6rem; padding: .85rem 1rem; border-radius: 14px; background: var(--pietra); font-size: .95rem; font-variant-numeric: tabular-nums; }
+  .esempio__ora { font-weight: 700; }
+  .esempio__tratto { grid-column: 2; padding: .1rem 0 .1rem .65rem; margin-left: -.1rem; border-left: 3px dotted var(--tufo); color: var(--inchiostro-2); font-size: .875rem; }
+  .esempio__tratto b { color: var(--inchiostro); font-weight: 600; }
+  @media (prefers-reduced-motion: no-preference) {
+    @supports ((animation-timeline: view()) and (animation-range: entry)) {
+      .passi-box { view-timeline: --passi; }
+      .passi__linea path { stroke-dasharray: 1; stroke-dashoffset: 1; animation: traccia linear both; animation-timeline: --passi; animation-range: entry 20% cover 62%; }
+    }
+  }
+  @keyframes traccia { to { stroke-dashoffset: 0; } }
+
+  /* ---------- itinerari pronti: foto ad arco, di lato sul telefono ---------- */
+  .sezione--pronti { padding-top: 0; }
+  .pronti__testa { display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 1rem; margin-bottom: 1.75rem; }
+  .carosello { display: grid; grid-auto-flow: column; grid-auto-columns: min(78%, 20rem); gap: 1rem; overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+    margin-inline: calc(var(--lato) * -1); padding: 0 var(--lato) .75rem; scroll-padding-inline: var(--lato); scrollbar-width: thin; scrollbar-color: var(--riga) transparent; }
+  @media (min-width: 900px) { .carosello { grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); grid-auto-columns: auto; overflow: visible; margin-inline: 0; padding-inline: 0; } }
+  .carosello li { scroll-snap-align: start; }
+  .scheda { display: grid; gap: .65rem; text-decoration: none; border-radius: 14px; }
+  .arco { display: block; aspect-ratio: 3 / 4; overflow: hidden; border-radius: 999px 999px 14px 14px; background: var(--pietra); transition: transform var(--m100) var(--entra); }
+  .arco :global(img) { width: 100%; height: 100%; object-fit: cover; transition: transform var(--m300) var(--entra); }
+  @media (hover: hover) { .scheda:hover .arco :global(img) { transform: scale(1.03); } }
+  .scheda:active .arco { transform: scale(.985); }
+  .scheda__nome { font-size: 1.5rem; }
+  .scheda__dati { display: flex; flex-wrap: wrap; gap: .25rem .9rem; font-size: .9rem; color: var(--inchiostro-2); font-variant-numeric: tabular-nums; }
+  .scheda__dati b { color: var(--inchiostro); font-weight: 700; }
+
+  /* ---------- dove mangiare: banda notte e foto a rombo ---------- */
+  .su-notte { background: var(--notte); color: var(--su-notte); --anello: #F0BE3E; }
+  .mangiare-banda { margin-top: 5rem; }
+  .mangiare { display: grid; gap: 2rem; }
+  @media (min-width: 900px) { .mangiare-banda { margin-top: 0; } .mangiare { grid-template-columns: 1fr 1.1fr; align-items: center; gap: 4rem; } }
+  .mangiare__foto { width: min(70%, 18rem); aspect-ratio: 1; margin-top: -6.5rem; clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%); }
+  .mangiare__foto :global(img) { width: 100%; height: 100%; object-fit: cover; }
+  @media (min-width: 900px) { .mangiare__foto { width: 22rem; margin-top: 0; } }
+  .home :global(.mangiare__testo) { margin-top: .75rem; }
+  .home :global(.mangiare__testo p) { color: var(--su-notte-2); max-width: 32rem; }
+  .famiglie { margin-top: 1.25rem; border-top: 1px solid rgba(255, 255, 255, .16); }
+  .famiglie a { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: 56px; border-bottom: 1px solid rgba(255, 255, 255, .16); text-decoration: none; font-weight: 700; font-stretch: 80%; font-size: 1.25rem; line-height: 1.1; }
+  .famiglie span { font-weight: 500; font-stretch: 100%; font-size: .9rem; color: var(--su-notte-2); font-variant-numeric: tabular-nums; }
+  @media (hover: hover) { .famiglie a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 5px; } }
+  .mangiare__tutti { margin-top: 1.5rem; }
+
+  /* ---------- perché fidarti: foglietti appoggiati ---------- */
+  .foglietti { display: grid; max-width: 34rem; margin-top: 2rem; }
+  @media (min-width: 900px) { .foglietti { grid-template-columns: repeat(2, 1fr); max-width: none; gap: 1.25rem; } }
+  .foglietti :global(.foglietto) { margin: -.6rem 0 0; padding: 1.5rem 1.4rem; border-radius: 18px; background: var(--pietra); box-shadow: 0 1px 0 var(--riga); rotate: var(--r, -2deg); }
+  .foglietti :global(.foglietto:nth-child(2)) { --r: 1.6deg; background: var(--pietra-2); }
+  .foglietti :global(.foglietto:nth-child(3)) { --r: -1deg; }
+  .foglietti :global(.foglietto:nth-child(4)) { --r: 2.2deg; background: var(--pietra-2); }
+  @media (min-width: 900px) { .foglietti :global(.foglietto) { margin-top: 0; } }
+  .foglietti :global(.foglietto p:first-child) { font-weight: 700; font-stretch: 85%; font-size: 1.3rem; line-height: 1.25; font-variant-numeric: tabular-nums; }
+  .foglietti :global(.foglietto p + p) { margin-top: .5rem; font-size: .9rem; line-height: 1.4; color: var(--inchiostro-2); }
+  @media (prefers-reduced-motion: no-preference) {
+    @supports ((animation-timeline: view()) and (animation-range: entry)) {
+      .foglietti :global(.foglietto) { animation: appoggia linear both; animation-timeline: view(); animation-range: entry 0% entry 90%; }
+    }
+  }
+  @keyframes appoggia { from { rotate: 0deg; transform: translateY(14px); } }
+
+  /* ---------- le prossime città e i crediti delle foto ---------- */
+  .citta-dopo { display: flex; flex-wrap: wrap; align-items: center; gap: .75rem 1rem; padding-block: 2.5rem; border-top: 1px solid var(--riga); }
+  .citta-dopo__linea { flex: 1 1 6rem; height: 0; border-top: 3px dotted var(--riga); }
+  .citta-dopo__fermata { width: 1.1rem; height: 1.1rem; border-radius: 50%; border: 3px solid var(--inchiostro-2); }
+  .crediti { max-width: 72ch; padding-bottom: 1rem; font-size: .8125rem; line-height: 1.5; color: var(--inchiostro-2); }
+
+  /* ---------- tema scuro: un velo leggero sulle foto ---------- */
+  @media (prefers-color-scheme: dark) { :global(:root:not([data-theme="light"])) :is(.arco, .mangiare__foto) :global(img) { filter: brightness(.86); } }
+  :global(:root[data-theme="dark"]) :is(.arco, .mangiare__foto) :global(img) { filter: brightness(.86); }
 </style>

@@ -147,11 +147,25 @@ export function scenariPacco(C: Citta) {
 }
 
 // ---------- Itinerari pronti ----------
-export type Pronto = { id: string; nome: string; evento: boolean; it: Itinerario; giorni: ReturnType<typeof calcolaGiorno>[] };
+// durata: la scelta della home e del menu («½ giornata», «2 giorni»); foto: la copertina (id di src/data/foto.yaml)
+export type Pronto = { id: string; nome: string; durata?: string; foto?: string; evento: boolean; it: Itinerario; giorni: ReturnType<typeof calcolaGiorno>[] };
+type ProntoYaml = { id: string; nome: string; durata?: string; foto?: string; evento?: boolean; giorni: { inizio: string; fine: string; tappe: string[] }[] };
+const leggiPronti = () => yaml.load(fs.readFileSync(path.join(process.cwd(), 'src/data/itinerari-pronti.yaml'), 'utf8')) as ProntoYaml[];
+
+// Le scelte «Quanto tempo hai?» di home e menu: solo gli itinerari pronti con la durata (non quelli di un evento).
+// numero: la prima parola della durata («½», «2»), per il tondo. Legge solo il file, senza calcoli: va bene in ogni pagina.
+export type Scelta = { id: string; nome: string; durata: string; numero: string };
+let scelte: Scelta[] | null = null;
+export function scelteNapoli(): Scelta[] {
+  if (!scelte || import.meta.env.DEV) {
+    scelte = leggiPronti().filter(p => p.durata && !p.evento).map(p => ({ id: p.id, nome: p.nome, durata: p.durata!, numero: p.durata!.split(' ')[0] }));
+  }
+  return scelte;
+}
 
 export async function prontiNapoli(): Promise<Pronto[]> {
   const C = await cittaNapoli();
-  const dati = yaml.load(fs.readFileSync(path.join(process.cwd(), 'src/data/itinerari-pronti.yaml'), 'utf8')) as { id: string; nome: string; evento?: boolean; giorni: { inizio: string; fine: string; tappe: string[] }[] }[];
+  const dati = leggiPronti();
   const errori: string[] = [];
   const out: Pronto[] = [];
   for (const p of dati) {
@@ -177,7 +191,7 @@ export async function prontiNapoli(): Promise<Pronto[]> {
       if (o) errori.push(`${p.id}, giorno ${g + 1}: con l'ordine ${o.ordine.join(', ')} si risparmiano ${o.risparmio} minuti`);
     });
     const { data: _, ...senzaData } = it;
-    out.push({ id: p.id, nome: p.nome, evento: !!p.evento, it: senzaData, giorni: calcoli });
+    out.push({ id: p.id, nome: p.nome, durata: p.durata, foto: p.foto, evento: !!p.evento, it: senzaData, giorni: calcoli });
   }
   if (errori.length) throw new Error(`Itinerari pronti da sistemare (${errori.length}):\n- ${errori.join('\n- ')}`);
   return out;

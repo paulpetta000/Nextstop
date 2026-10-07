@@ -1029,7 +1029,7 @@ function avvia() {
 
   // ---------- itinerari pronti e gite dalla pagina ----------
   const vuotoTutto = (x: Itinerario) => x.giorni.every(g => !g.gita && !g.tappe.length);
-  function usaPronto(p: Pronto, data?: string) {
+  function usaPronto(p: Pronto, data?: string, subito = false) {
     const giorni = structuredClone(p.giorni);
     const x = it();
     if (vuotoTutto(x)) {
@@ -1045,11 +1045,12 @@ function avvia() {
     }
     giorno = 0; scelto = null;
     disegna();
-    vaiAlCompositore();
+    vaiAlCompositore(subito);
     annuncia(`Itinerario ${it().nome}: ${it().giorni.length} ${it().giorni.length === 1 ? 'giorno' : 'giorni'}`);
   }
-  function vaiAlCompositore() {
-    $('compositore').scrollIntoView({ behavior: movimentoRidotto() ? 'auto' : 'smooth', block: 'start' });
+  // subito: senza scorrere piano (quando la pagina si apre già con un itinerario scelto)
+  function vaiAlCompositore(subito = false) {
+    $('compositore').scrollIntoView({ behavior: subito || movimentoRidotto() ? 'auto' : 'smooth', block: 'start' });
     $('it-giorno-h').focus({ preventScroll: true });
   }
   // La giornata di regata vuole una data dei giorni di regata
@@ -1174,5 +1175,18 @@ function avvia() {
   new IntersectionObserver((v, o) => { if (v.some(x => x.isIntersecting)) { mappaVicina = true; o.disconnect(); if (largo.matches) disegnaMappa(); } }, { rootMargin: '200px' }).observe($('compositore'));
   largo.addEventListener('change', () => disegnaVista());
 
+  // ---------- un itinerario pronto scelto dalla home o dal menu (?pronto=<id>, letto dalla pagina prima delle statistiche) ----------
+  // Se sul telefono c'è già, con le stesse giornate, si riapre quello; altrimenti si carica come con «Apri nel compositore».
+  const chiesto = PRONTI.find(p => !p.evento && p.id === (window as Window & { prontoRichiesto?: string }).prontoRichiesto);
+  if (chiesto) {
+    const giornate = (x: Itinerario) => codifica({ ...x, nome: '', data: undefined, piedi: undefined });
+    const gia = A.elenco.find(i => giornate(i) === giornate(nuovoItinerario('', chiesto.giorni)));
+    if (gia) {
+      A.attivo = gia.id; giorno = 0; scelto = null;
+      salva(); disegna(); vaiAlCompositore(true);
+      toast(`Hai già questo itinerario: «${gia.nome}»`);
+    } else usaPronto(chiesto, undefined, true);
+    return;
+  }
   disegna();
 }

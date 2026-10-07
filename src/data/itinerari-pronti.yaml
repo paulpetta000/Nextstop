@@ -3,26 +3,36 @@
 # Le descrizioni stanno in src/testi/itinerari.yaml (blocco «pronto-<id>»).
 # La build ricalcola ogni giorno con i tempi veri (giorno feriale) e si ferma se un giorno non ci sta negli
 # orari, se una tappa risulta lontana dalle altre o se si arriva tardi alle regate (src/lib/itinerari/napoli.ts).
+# «durata»: la scelta della home e del menu («½ giornata», «2 giorni»): il numero è la prima parola.
+# «foto»: la copertina ad arco (id di src/data/foto.yaml). Senza durata (la giornata di regata) non va in home né nel menu.
 # «evento: true»: si propone solo con una data dei giorni di regata.
 
 - id: mezza-giornata
   nome: "Mezza giornata nel centro storico"
+  durata: "½ giornata"
+  foto: tp-santa-chiara
   giorni:
     - { inizio: "9:30", fine: "13:30", tappe: [sansevero, santa-chiara, spaccanapoli, tribunali] }
 
 - id: un-giorno
   nome: "Un giorno: dal Vomero al centro storico"
+  durata: "1 giorno"
+  foto: tp-san-martino
   giorni:
     - { inizio: "9:30", fine: "19:00", tappe: [sant-elmo, san-martino, pedamentina, spaccanapoli, tribunali, sansevero, santa-chiara, plebiscito] }
 
 - id: due-giorni
   nome: "Due giorni a Napoli"
+  durata: "2 giorni"
+  foto: vista-monte-echia
   giorni:
     - { inizio: "9:30", fine: "19:00", tappe: [mann, tribunali, sansevero, santa-chiara, spaccanapoli, san-lorenzo, duomo] }
     - { inizio: "9:30", fine: "19:00", tappe: [sant-elmo, san-martino, pedamentina, toledo, plebiscito, palazzo-reale, monte-echia, borgo-marinari] }
 
 - id: tre-giorni
   nome: "Tre giorni a Napoli"
+  durata: "3 giorni"
+  foto: tp-capodimonte
   giorni:
     - { inizio: "9:30", fine: "19:00", tappe: [mann, tribunali, sansevero, santa-chiara, spaccanapoli, san-lorenzo, duomo] }
     - { inizio: "9:30", fine: "19:00", tappe: [sant-elmo, san-martino, pedamentina, toledo, plebiscito, palazzo-reale, monte-echia, borgo-marinari] }

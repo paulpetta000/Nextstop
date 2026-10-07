@@ -1,0 +1,28 @@
+---
+// Una foto di src/data/foto.yaml senza didascalia, dentro una cornice disegnata dalla pagina (arco, rombo, apertura).
+// I crediti vanno scritti a parte, nella pagina (vicino alla foto o in fondo). AVIF e WebP, più larghezze.
+// alt: "" quando la foto accompagna un testo che dice già tutto (per esempio una scheda con il nome).
+import { Picture } from 'astro:assets';
+import { getEntry } from 'astro:content';
+
+interface Props { id: string; sizes: string; widths: number[]; prima?: boolean; alt?: string; class?: string; posizione?: string }
+const { id, sizes, widths, prima = false, alt, class: cls, posizione } = Astro.props;
+const f = await getEntry('foto', id);
+if (!f) throw new Error(`Foto "${id}" non trovata in src/data/foto.yaml`);
+const d = f.data;
+const w = widths.filter(x => x <= d.src.width);
+if (!w.length) w.push(d.src.width);
+---
+<Picture
+  src={d.src}
+  alt={alt ?? d.alt}
+  widths={w}
+  sizes={sizes}
+  formats={['avif', 'webp']}
+  quality={50}
+  loading={prima ? 'eager' : 'lazy'}
+  decoding={prima ? 'auto' : 'async'}
+  fetchpriority={prima ? 'high' : undefined}
+  class={cls}
+  style={posizione ? `object-position: ${posizione}` : undefined}
+/>

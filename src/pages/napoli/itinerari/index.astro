@@ -52,6 +52,9 @@ const json = JSON.stringify(pacco).replace(/</g, '\\u003c');
     try { if (/[#&]g=/.test(location.hash)) { window.itinerarioRicevuto = location.hash; history.replaceState(null, '', location.pathname + location.search); } } catch (e) {}
     // Un locale da aggiungere, dalla pagina «Dove mangiare» (?aggiungi=…): stessa cosa, prima delle statistiche
     try { if (/[?&]aggiungi=/.test(location.search)) { window.daAggiungere = location.search; history.replaceState(null, '', location.pathname + location.hash); } } catch (e) {}
+    // Un itinerario pronto scelto dalla home o dal menu (?pronto=…#pronto-…): lo carica il compositore. Tolgo anche il «#pronto-…»,
+    // che serve solo senza JavaScript (porta alla scheda dell'itinerario, più in basso)
+    try { var p = /[?&]pronto=([a-z0-9-]+)/.exec(location.search); if (p) { window.prontoRichiesto = p[1]; history.replaceState(null, '', location.pathname); } } catch (e) {}
   </script>
   <div class="it-pagina">
     <header class="it-testa">

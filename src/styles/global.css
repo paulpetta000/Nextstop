@@ -1,6 +1,85 @@
 /* ==========================================================================
-   Stile "Regata": strumenti di bordo e grafica da diretta TV.
-   Chiaro "vela" e scuro "strumenti", studiati uno per uno.
+   Grafica A «Rivista» (DESIGN.md, 07/10/2026): colori, caratteri e movimento nuovi qui sotto (--carta, --notte…),
+   usati da intestazione, menu, piè di pagina e home. Le altre pagine passano alla grafica nuova nella Fase 2:
+   fino ad allora usano ancora le variabili dello stile di prima (--bg, --ink, --accent…), più in basso.
+   ========================================================================== */
+
+/* Bodoni Moda (licenza OFL, public/fonts/LICENSE-Bodoni-Moda.txt): titoli dei racconti e delle sezioni.
+   Variabile solo nella grandezza ottica (asse opsz 6–96): le lettere grandi si fanno più sottili da sole. */
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('/fonts/bodoni-moda-600.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Bodoni Moda';
+  src: url('/fonts/bodoni-moda-500-corsivo.woff2') format('woff2');
+  font-weight: 500;
+  font-style: italic;
+  font-display: swap;
+}
+
+:root {
+  /* Colori della grafica A (DESIGN.md §2) */
+  --carta: #F7F6F2;
+  --pietra: #ECEAE4;
+  --pietra-2: #E1DED6;
+  --riga: #D6D2C8;
+  --inchiostro: #16181D;
+  --inchiostro-2: #575B65;
+  --notte: #142039;
+  --su-notte: #F3F1EC;
+  --su-notte-2: #B7BECC;
+  --tufo: #E0A51B;
+  --tufo-testo: #7A5600;
+  --avviso: #FBEFD0;
+  --su-avviso: #5E4300;
+  --chiuso: #A8231B;
+  --velo: rgba(10, 14, 26, .58);
+  /* anello del fuoco (tastiera): scuro sulla carta chiara, tufo sui fondi scuri (almeno 3:1) */
+  --anello: #16181D;
+  --f-serif: 'Bodoni Moda', 'Bodoni 72', Didot, Georgia, serif;
+  /* Movimento (DESIGN.md §6): durate e curve */
+  --m100: 100ms; --m150: 150ms; --m200: 200ms; --m300: 300ms;
+  --entra: cubic-bezier(.16, 1, .3, 1);
+  --esci: cubic-bezier(.7, 0, .84, 0);
+  --largo: 72rem;
+  --lato: 20px;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --carta: #0F1524; --pietra: #19223A; --pietra-2: #222D48; --riga: #2B3653;
+    --inchiostro: #EEF0F4; --inchiostro-2: #A8AFBD;
+    --notte: #080C17; --su-notte: #EEF0F4; --su-notte-2: #A8AFBD;
+    --tufo: #F0BE3E; --tufo-testo: #F0BE3E;
+    --avviso: #33290F; --su-avviso: #F6DA8E; --chiuso: #FF8F86;
+    --velo: rgba(4, 6, 12, .66);
+    --anello: #F0BE3E;
+  }
+}
+:root[data-theme="dark"] {
+  --carta: #0F1524; --pietra: #19223A; --pietra-2: #222D48; --riga: #2B3653;
+  --inchiostro: #EEF0F4; --inchiostro-2: #A8AFBD;
+  --notte: #080C17; --su-notte: #EEF0F4; --su-notte-2: #A8AFBD;
+  --tufo: #F0BE3E; --tufo-testo: #F0BE3E;
+  --avviso: #33290F; --su-avviso: #F6DA8E; --chiuso: #FF8F86;
+  --velo: rgba(4, 6, 12, .66);
+  --anello: #F0BE3E;
+}
+
+/* Passaggio tra le pagine: una dissolvenza breve (DESIGN.md §6). Con «riduci movimento» niente. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root) { animation: var(--m150) var(--esci) both vt-svanisci; }
+  ::view-transition-new(root) { animation: var(--m300) var(--entra) both vt-compari; }
+}
+@keyframes vt-svanisci { to { opacity: 0; } }
+@keyframes vt-compari { from { opacity: 0; } }
+
+/* ==========================================================================
+   Stile di prima ("Regata", da Napoli a Vela): resta per le pagine non ancora rifatte (Fase 2).
    ========================================================================== */
 
 @font-face {
@@ -76,7 +155,7 @@
   --r: 3px;
   --gutter: 16px;
   --max: 74rem;
-  --head-h: 56px;
+  --head-h: 64px;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -320,7 +399,7 @@ td.num, th.num { text-align: right; white-space: nowrap; }
 
 /* Stampa */
 @media print {
-  .site-head, .site-foot, .no-print { display: none !important; }
+  .testata, .menu, .piede, .no-print { display: none !important; }
   body { background: #fff; color: #000; }
   a { color: #000; }
 }
@@ -334,3 +413,8 @@ th[scope="row"] { background: none; text-transform: none; letter-spacing: 0; fon
 .icon-btn { width: 44px; height: 44px; display: grid; place-items: center; border: 0; background: transparent; color: var(--ink); border-radius: var(--r); cursor: pointer; }
 .icon-btn:hover { background: var(--bg-2); }
 .icon-btn:disabled { opacity: .35; cursor: default; }
+
+/* ---------- grafica A: pagine già rifatte (per ora la home) ---------- */
+body.su-carta { background: var(--carta); color: var(--inchiostro); }
+:is(.su-carta, .testata, .menu, .piede) :focus-visible { outline: 3px solid var(--anello); outline-offset: 3px; border-radius: 4px; }
+::selection { background: color-mix(in srgb, var(--tufo) 42%, transparent); }

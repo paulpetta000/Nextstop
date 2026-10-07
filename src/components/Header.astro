@@ -1,92 +1,128 @@
 ---
+// Testata e menu (DESIGN.md §5, specifiche/home-e-identita.md): marchio a sinistra, menu tondo a destra.
+// Sulla home sta sopra la foto (sopraFoto: testo bianco, marchio nella versione «foto»); nelle altre pagine è chiara e resta in alto.
+// Il menu è un popover: si apre con il tondo, si chiude con ×, Esc o un tocco fuori (lo fa il browser, senza script).
+// Per i browser senza popover c'è un rimedio in src/scripts/sito.ts.
 import Icon from './Icon.astro';
-import Logo from './Logo.astro';
-import { SITO } from '../config/sito';
-import { MENU } from '../config/menu';
+import Marchio from './Marchio.astro';
+import { CITTA, linkPronto } from '../config/menu';
+import { scelteNapoli } from '../lib/itinerari/napoli';
+
+interface Props { sopraFoto?: boolean }
+const { sopraFoto = false } = Astro.props;
 const path = Astro.url.pathname;
-const attivo = (m: (typeof MENU)[number]) => [m.href, ...(m.anche ?? [])].some(h => path.startsWith(h));
+const qui = (href: string) => (path === href ? 'page' : undefined);
+// Gli itinerari pronti di ogni città (oggi solo Napoli)
+const SCELTE: Record<string, ReturnType<typeof scelteNapoli>> = { napoli: scelteNapoli() };
+const principale = CITTA[0];
 ---
-<header class="site-head">
-  <div class="wrap site-head__in">
-    <a class="brand" href="/">
-      <Logo />
-      <span class="brand__txt">
-        <span class="brand__nome">{SITO.nome}</span>
-        <span class="brand__sotto">{SITO.sottotitolo}</span>
-      </span>
+<header class:list={['testata', { 'testata--foto': sopraFoto }]}>
+  <div class="testata__riga">
+    <a class="testata__marchio" href="/" aria-current={qui('/')}>
+      <Marchio dove={sopraFoto ? 'foto' : 'chiaro'} />
     </a>
-    <nav class="nav-desk" aria-label="Sezioni">
-      <ul>
-        {MENU.map(m => <li><a href={m.href} aria-current={attivo(m) ? 'page' : undefined}>{m.label}</a></li>)}
-      </ul>
+    <nav class="testata__sezioni" aria-label="Sezioni">
+      <a href={principale.itinerari} aria-current={qui(principale.itinerari)}>Itinerari a {principale.nome}</a>
+      <a href={principale.mangiare} aria-current={qui(principale.mangiare)}>Dove mangiare</a>
     </nav>
-    <div class="head-tools">
-      <button class="icon-btn" type="button" id="tema-btn" aria-label="Tema: automatico. Cambia tema" title="Cambia tema">
-        <span class="tema-ico tema-ico--auto"><Icon name="auto" size={22} /></span>
-        <span class="tema-ico tema-ico--light"><Icon name="sole" size={22} /></span>
-        <span class="tema-ico tema-ico--dark"><Icon name="luna" size={22} /></span>
-      </button>
-      <button class="icon-btn menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="menu-mob" aria-label="Apri il menu">
-        <span class="menu-ico menu-ico--open"><Icon name="menu" size={24} /></span>
-        <span class="menu-ico menu-ico--close"><Icon name="chiudi" size={24} /></span>
-      </button>
-    </div>
+    <button class="tondo" type="button" popovertarget="menu" aria-controls="menu" aria-label="Apri il menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10" /></svg>
+    </button>
   </div>
-  <nav class="nav-mob" id="menu-mob" aria-label="Menu" hidden>
-    <ul class="wrap">
-      {MENU.map((m, i) => (
-        <li>
-          <a href={m.href} aria-current={attivo(m) ? 'page' : undefined}>
-            <span class="nav-mob__n mono">{String(i + 1).padStart(2, '0')}</span>
-            <span><span class="nav-mob__t">{m.label}</span><span class="nav-mob__s">{m.sotto}</span></span>
-            <Icon name="freccia" size={20} />
-          </a>
-        </li>
-      ))}
-      <li class="nav-mob__extra">
-        <a href="/fonti/">Fonti e controlli</a>
-        <a href="/privacy/">Privacy</a>
-      </li>
-    </ul>
-  </nav>
 </header>
 
+<nav id="menu" class="menu" popover aria-label="Menu">
+  <div class="menu__testa">
+    <Marchio dove="scuro" />
+    <button class="tondo tondo--notte" type="button" popovertarget="menu" popovertargetaction="hide" aria-label="Chiudi il menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+  </div>
+  <div class="menu__corpo">
+    {CITTA.map((c, k) => (
+      <section class="menu__citta" aria-labelledby={`menu-${c.id}`} style={`--i:${k * 7}`}>
+        <h2 class="menu__nome" id={`menu-${c.id}`}>{c.nome}</h2>
+        <p class="menu__etichetta" id={`menu-${c.id}-pronti`}>Itinerari pronti</p>
+        <ul class="menu__scelte" aria-labelledby={`menu-${c.id}-pronti`}>
+          {(SCELTE[c.id] ?? []).map((s, i) => (
+            <li style={`--i:${k * 7 + i + 1}`}><a class="menu__scelta" href={linkPronto(c, s.id)}><span class="menu__n" aria-hidden="true">{s.numero}</span>{s.durata}</a></li>
+          ))}
+        </ul>
+        <ul class="menu__voci">
+          <li style={`--i:${k * 7 + 5}`}><a href={c.itinerari} aria-current={qui(c.itinerari)}>Componi il tuo</a></li>
+          <li style={`--i:${k * 7 + 6}`}><a href={c.mangiare} aria-current={qui(c.mangiare)}>Dove mangiare</a></li>
+        </ul>
+      </section>
+    ))}
+    <ul class="menu__piccoli">
+      <li><a href="/" aria-current={qui('/')}>Home</a></li>
+      <li><a href="/fonti/" aria-current={qui('/fonti/')}>Fonti e controlli</a></li>
+      <li><a href="/privacy/" aria-current={qui('/privacy/')}>Privacy</a></li>
+    </ul>
+    <button class="menu__tema" type="button" id="tema-btn">
+      <span class="tema-ico tema-ico--auto"><Icon name="auto" size={20} /></span>
+      <span class="tema-ico tema-ico--light"><Icon name="sole" size={20} /></span>
+      <span class="tema-ico tema-ico--dark"><Icon name="luna" size={20} /></span>
+      <span id="tema-nome">Tema: automatico</span>
+    </button>
+  </div>
+</nav>
+
 <style>
-  .site-head { position: sticky; top: 0; z-index: 50; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: saturate(1.4) blur(10px); -webkit-backdrop-filter: saturate(1.4) blur(10px); border-bottom: 1px solid var(--line); }
-  .site-head__in { height: var(--head-h); display: flex; align-items: center; gap: 1rem; }
-  .brand { display: inline-flex; align-items: center; gap: .6rem; color: var(--ink); text-decoration: none; min-width: 0; min-height: 44px; }
-  .brand :global(.logo-mark) { flex: none; }
-  .brand__txt { display: flex; flex-direction: column; line-height: 1; min-width: 0; }
-  .brand__nome { font-weight: 850; font-stretch: 68%; font-size: 1.12rem; letter-spacing: .01em; text-transform: uppercase; white-space: nowrap; }
-  .brand__sotto { font-family: var(--f-mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); margin-top: .22rem; white-space: nowrap; }
-  .nav-desk { display: none; margin-left: auto; }
-  .nav-desk ul { display: flex; gap: .25rem; list-style: none; margin: 0; padding: 0; }
-  .nav-desk li { margin: 0; }
-  .nav-desk a { display: block; padding: .5rem .8rem; color: var(--ink); text-decoration: none; font-weight: 700; font-stretch: 86%; border-radius: var(--r); position: relative; }
-  .nav-desk a:hover { background: var(--bg-2); }
-  .nav-desk a[aria-current="page"]::after { content: ''; position: absolute; left: .8rem; right: .8rem; bottom: -9px; height: 3px; background: var(--accent); }
-  .head-tools { margin-left: auto; display: flex; gap: .25rem; }
-  .icon-btn { width: 44px; height: 44px; display: grid; place-items: center; border: 0; background: transparent; color: var(--ink); border-radius: var(--r); cursor: pointer; }
-  .icon-btn:hover { background: var(--bg-2); }
-  .tema-ico, .menu-ico { display: none; line-height: 0; }
+  /* ---------- testata ---------- */
+  .testata { position: sticky; top: 0; z-index: 30; background: color-mix(in srgb, var(--carta) 94%, transparent); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); border-bottom: 1px solid var(--riga); color: var(--inchiostro); }
+  .testata__riga { display: flex; align-items: center; gap: 1rem; width: 100%; max-width: var(--largo); min-height: var(--head-h); margin-inline: auto; padding-inline: var(--lato); padding-top: env(safe-area-inset-top, 0px); }
+  .testata__marchio { display: inline-flex; align-items: center; min-height: 48px; margin-right: auto; color: inherit; text-decoration: none; border-radius: 8px; }
+  .testata__sezioni { display: none; gap: .25rem; }
+  .testata__sezioni a { position: relative; display: inline-flex; align-items: center; min-height: 44px; padding: 0 .85rem; border-radius: 999px; color: inherit; text-decoration: none; font-weight: 600; font-size: 1rem; transition: background-color var(--m150) var(--entra); }
+  .testata__sezioni a[aria-current="page"]::after { content: ''; position: absolute; left: 50%; bottom: 3px; width: 6px; height: 6px; margin-left: -3px; border-radius: 50%; background: var(--tufo); }
+  @media (hover: hover) { .testata__sezioni a:hover { background: color-mix(in srgb, currentColor 10%, transparent); } }
+  @media (min-width: 900px) { .testata__sezioni { display: flex; } }
+  .testata--foto { position: absolute; inset-inline: 0; top: 0; background: transparent; backdrop-filter: none; -webkit-backdrop-filter: none; border-bottom: 0; color: #FFFFFF; --anello: #F0BE3E; }
+
+  .tondo { flex: none; width: 48px; height: 48px; display: grid; place-items: center; padding: 0; border-radius: 50%; border: 1px solid var(--riga); background: var(--carta); color: var(--inchiostro); cursor: pointer; transition: transform var(--m100) var(--entra), background-color var(--m150) var(--entra); }
+  .tondo svg { width: 22px; height: 22px; }
+  .tondo:active { transform: scale(.94); }
+  .testata--foto .tondo { background: rgba(255, 255, 255, .16); border-color: rgba(255, 255, 255, .4); color: #FFFFFF; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); }
+  .tondo--notte { background: transparent; border-color: rgba(255, 255, 255, .28); color: var(--su-notte); }
+
+  /* ---------- menu: pannello blu notte da destra ---------- */
+  .menu { display: none; position: fixed; inset: 0 0 0 auto; width: min(24rem, 88vw); height: 100dvh; max-height: none; margin: 0; padding: 0; border: 0; overflow-y: auto; overscroll-behavior: contain;
+    background: var(--notte); color: var(--su-notte); --anello: #F0BE3E; flex-direction: column;
+    transform: translateX(100%); opacity: .6;
+    transition: transform var(--m200) var(--esci), opacity var(--m200) var(--esci), overlay var(--m200) allow-discrete, display var(--m200) allow-discrete; }
+  .menu:is(:popover-open, .aperto) { display: flex; transform: none; opacity: 1; transition-duration: var(--m300); transition-timing-function: var(--entra); }
+  /* browser senza popover: il menu sta sopra la pagina come un pannello (src/scripts/sito.ts) */
+  .menu.aperto { z-index: 60; box-shadow: -12px 0 40px rgba(5, 8, 15, .35); }
+  @starting-style { .menu:popover-open { transform: translateX(100%); opacity: .6; } }
+  .menu::backdrop { background: rgba(5, 8, 15, 0); transition: background-color var(--m300) var(--entra), overlay var(--m300) allow-discrete, display var(--m300) allow-discrete; }
+  .menu:popover-open::backdrop { background: rgba(5, 8, 15, .5); }
+  @starting-style { .menu:popover-open::backdrop { background: rgba(5, 8, 15, 0); } }
+
+  .menu__testa { display: flex; justify-content: space-between; align-items: center; gap: 1rem; min-height: var(--head-h); padding: env(safe-area-inset-top, 0px) var(--lato) 0; }
+  .menu__corpo { display: grid; gap: 1.75rem; padding: 1rem var(--lato) calc(2rem + env(safe-area-inset-bottom, 0px)); }
+  .menu ul { margin: 0; padding: 0; list-style: none; }
+  .menu li { margin: 0; }
+  .menu__citta { display: grid; gap: .75rem; }
+  .menu__nome { margin: 0; font: italic 500 1.375rem/1.1 var(--f-serif); color: var(--su-notte); letter-spacing: 0; }
+  .menu__etichetta { margin: .25rem 0 0; font-size: .875rem; color: var(--su-notte-2); }
+  .menu__scelte { display: flex; flex-wrap: wrap; gap: .5rem; }
+  .menu__scelta { display: inline-flex; align-items: center; gap: .5rem; min-height: 44px; padding: .35rem .95rem .35rem .4rem; border-radius: 999px; background: var(--su-notte); color: #12182A; text-decoration: none; font-weight: 600; font-size: .95rem; transition: transform var(--m100) var(--entra); }
+  .menu__scelta:active { transform: scale(.96); }
+  .menu__n { width: 1.9rem; height: 1.9rem; display: grid; place-items: center; border-radius: 50%; background: #12182A; color: #FFFFFF; font-weight: 800; font-stretch: 75%; font-size: .95rem; }
+  .menu__voci { display: grid; border-top: 1px solid rgba(255, 255, 255, .14); }
+  .menu__voci a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 56px; color: inherit; text-decoration: none; font-weight: 700; font-stretch: 72%; font-size: 1.625rem; line-height: 1.1; border-bottom: 1px solid rgba(255, 255, 255, .14); }
+  .menu a[aria-current="page"]::after { content: ''; flex: none; width: .55rem; height: .55rem; border-radius: 50%; background: var(--tufo); }
+  .menu__piccoli { display: grid; }
+  .menu__piccoli a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 44px; color: var(--su-notte-2); text-decoration: none; font-size: 1rem; }
+  @media (hover: hover) { .menu__voci a:hover, .menu__piccoli a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; } }
+  .menu__tema { justify-self: start; display: inline-flex; align-items: center; gap: .55rem; min-height: 44px; padding: .4rem 1rem .4rem .8rem; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .28); background: transparent; color: var(--su-notte); font: inherit; font-size: .95rem; cursor: pointer; }
+  .tema-ico { display: none; line-height: 0; }
   :global(html:not([data-theme])) .tema-ico--auto,
   :global(html[data-theme="light"]) .tema-ico--light,
   :global(html[data-theme="dark"]) .tema-ico--dark { display: block; }
-  .menu-btn[aria-expanded="false"] .menu-ico--open, .menu-btn[aria-expanded="true"] .menu-ico--close { display: block; }
-  .nav-mob { border-top: 1px solid var(--line); background: var(--bg); max-height: calc(100dvh - var(--head-h)); overflow-y: auto; }
-  .nav-mob ul { list-style: none; margin: 0; padding-block: .4rem 1.2rem; }
-  .nav-mob li { margin: 0; }
-  .nav-mob a { display: grid; grid-template-columns: 2.2rem 1fr auto; align-items: center; gap: .5rem; padding: .95rem 0; border-bottom: 1px solid var(--line); color: var(--ink); text-decoration: none; }
-  .nav-mob__n { color: var(--accent); font-size: .8rem; }
-  .nav-mob__t { display: block; font-weight: 800; font-stretch: 74%; font-size: 1.7rem; line-height: 1; }
-  .nav-mob__s { display: block; color: var(--ink-3); font-size: .9rem; margin-top: .25rem; }
-  .nav-mob__extra { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; padding-top: 1rem; }
-  .nav-mob__extra a { display: inline; padding: .4rem 0; border: 0; color: var(--sea); text-decoration: underline; font-size: .98rem; }
-  @media (min-width: 900px) {
-    .nav-desk { display: block; }
-    .head-tools { margin-left: .5rem; }
-    .menu-btn { display: none; }
-    .nav-mob { display: none !important; }
-  }
-  @media (max-width: 380px) { .brand__nome { font-size: 1rem; } }
+
+  /* le voci entrano una dopo l'altra (30 ms, al massimo 10) */
+  .menu li, .menu__nome, .menu__etichetta { transition: opacity var(--m300) var(--entra), transform var(--m300) var(--entra); transition-delay: calc(min(var(--i, 0), 10) * 30ms); }
+  @starting-style { .menu:popover-open :is(li, .menu__nome, .menu__etichetta) { opacity: 0; transform: translateX(16px); } }
 </style>

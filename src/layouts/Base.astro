@@ -3,6 +3,7 @@ import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITO } from '../config/sito';
+import { cssFirma } from '../lib/marchio.mjs';
 
 interface Props {
   title: string;
@@ -10,8 +11,10 @@ interface Props {
   og?: string;
   jsonld?: object[];
   noindex?: boolean;
+  // la home: testata sopra la foto, fondo «carta» della grafica nuova, marchio animato all'apertura
+  home?: boolean;
 }
-const { title, description, og, jsonld = [], noindex = false } = Astro.props;
+const { title, description, og, jsonld = [], noindex = false, home = false } = Astro.props;
 const path = Astro.url.pathname;
 const canonical = new URL(path, SITO.url).href;
 const fullTitle = path === '/' ? `${SITO.nome} · ${SITO.sottotitolo}` : `${title} · ${SITO.nome}`;
@@ -34,8 +37,8 @@ const ld = [
   <link rel="alternate" hreflang="it" href={canonical} />
   <link rel="alternate" hreflang="x-default" href={canonical} />
   {noindex && <meta name="robots" content="noindex" />}
-  <meta name="theme-color" content="#F3F6F7" media="(prefers-color-scheme: light)" />
-  <meta name="theme-color" content="#090D10" media="(prefers-color-scheme: dark)" />
+  <meta name="theme-color" content="#F7F6F2" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#0F1524" media="(prefers-color-scheme: dark)" />
   <link rel="preload" href="/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin />
   <slot name="head" />
   <!-- prima le icone che legge anche Google (ICO e PNG), poi la SVG per i browser -->
@@ -57,11 +60,18 @@ const ld = [
   <script is:inline>
     try { var t = localStorage.getItem('tema'); if (t === 'light' || t === 'dark') document.documentElement.dataset.theme = t; } catch (e) {}
   </script>
+  {home && (
+    <script is:inline>
+      // Il marchio si disegna una volta, all'apertura della home: non a ogni pagina e non a ogni ritorno nella stessa scheda
+      try { if (!sessionStorage.getItem('marchio-visto')) { document.documentElement.classList.add('marchio-anima'); sessionStorage.setItem('marchio-visto', '1'); } } catch (e) {}
+    </script>
+  )}
+  <style is:inline set:html={cssFirma()}></style>
   {ld.map(o => <script type="application/ld+json" set:html={JSON.stringify(o)} />)}
 </head>
-<body>
+<body class={home ? 'su-carta' : undefined}>
   <a class="skip" href="#contenuto">Vai al contenuto</a>
-  <Header />
+  <Header sopraFoto={home} />
   <main id="contenuto">
     <slot />
   </main>

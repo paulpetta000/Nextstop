@@ -160,5 +160,10 @@ function avvia() {
     $<HTMLSelectElement>('dm-piatto').value = ''; selGiorno.value = ''; campoOra.value = ''; dove.value = '';
     aggiorna();
   });
+  // una famiglia di locali scelta dalla home (?cucina=pizza): il filtro parte già premuto, poi l'indirizzo torna pulito
+  const daHome = new URLSearchParams(location.search).get('cucina');
+  const filtroHome = daHome ? form.querySelector<HTMLButtonElement>(`[data-cucina="${CSS.escape(daHome)}"]`) : null;
+  if (daHome && filtroHome) { cucine.add(daHome); filtroHome.setAttribute('aria-pressed', 'true'); }
+  if (daHome) history.replaceState(null, '', location.pathname + location.hash);
   aggiorna();
 }

@@ -134,3 +134,19 @@ export function frasiDaControllare(ps, voci = []) {
 // Lista nera della guida di stile (specifiche/stile-testi.md, punto 9): parole da brochure, cliché e fonti citate
 // dove non serve. La controlla npm test (test/testi.test.mjs), non la build.
 export const LISTA_NERA = /\b(?:perl[ae]|gioiell[oi]|angolo di paradiso|imperdibil[ei]|da non perdere|mozzafiato|suggestiv[oaie]|pittoresc[oaih]\w*|vibrant[ei]|incastonat\w*|tuffo nel passato|dove il tempo si è fermato|deliziosi?[oaie]?|squisit[oaie]|esplosione di sapori|leccarsi i baffi|eccellenz[ae]|tappa obbligata|splendida cornice|ambiente accogliente|tradizione e innovazione|a breve|prossimamente|secondo il locale)\b/i;
+
+// Numeri presi dai dati dentro un testo: nel file dei testi si scrive {tappe}, la pagina lo riempie con il numero vero
+// (nessun numero scritto a mano). Se manca un valore, o se un valore non è usato, la build si ferma.
+export const SEGNAPOSTO = /\{([a-z][a-z0-9-]*)\}/g;
+/** @param {string} chiave @param {string} testo @param {Record<string, string | number>} valori */
+export function riempi(chiave, testo, valori) {
+  const usati = new Set();
+  const fuori = testo.replace(SEGNAPOSTO, (_, k) => {
+    if (!(k in valori)) throw new Error(`${chiave}: il testo usa {${k}}, ma la pagina non gli dà un valore`);
+    usati.add(k);
+    return String(valori[k]);
+  });
+  const avanzati = Object.keys(valori).filter(k => !usati.has(k));
+  if (avanzati.length) throw new Error(`${chiave}: la pagina dà ${avanzati.map(k => `{${k}}`).join(', ')}, ma il testo non li usa`);
+  return fuori;
+}

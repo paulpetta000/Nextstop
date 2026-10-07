@@ -1,7 +1,7 @@
 // Le regole dei testi (src/lib/regole.mjs): parole di cautela, segni {?id}, firma, fonti deboli.
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { firma, cauteleDi, cautelaScheda, controllaSegni, confermataConFontiDeboli, nudo } from '../src/lib/regole.mjs';
+import { firma, cauteleDi, cautelaScheda, controllaSegni, confermataConFontiDeboli, nudo, riempi } from '../src/lib/regole.mjs';
 
 const scheda = (id, data) => [id, { id, data: { testo: 'Testo di prova della scheda', anno: 2027, storico: false, ...data } }];
 // Controlla una frase con le schede date e restituisce gli errori
@@ -131,4 +131,12 @@ test('cautela: un fatto del passato letto sui giornali può essere scritto come 
   assert.equal(errori(['È nella Guida Michelin 2025.'], scheda('a', { stato: 'stampa', storico: true })).length, 1);
   // una scheda mostrata così com'è (SchedaLocale) non prende l'asterisco
   assert.deepEqual(cautelaScheda({ id: 'a', data: { testo: 'È nella Guida Michelin 2025.', stato: 'stampa', storico: true, comeFatto: true } }), { segno: false });
+});
+
+test('segnaposto: i numeri presi dai dati entrano nel testo, e niente resta a metà', () => {
+  assert.equal(riempi('home#x', '{tappe} posti in città e {gite} gite', { tappe: 51, gite: 9 }), '51 posti in città e 9 gite');
+  assert.throws(() => riempi('home#x', '{tappe} posti', {}), /non gli dà un valore/);
+  assert.throws(() => riempi('home#x', 'nessun numero', { tappe: 51 }), /non li usa/);
+  // il segno delle informazioni non confermate non è un segnaposto
+  assert.equal(riempi('home#x', 'Dovrebbe{?cal-flotta}', {}), 'Dovrebbe{?cal-flotta}');
 });
