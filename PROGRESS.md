@@ -1,6 +1,6 @@
 # PROGRESS
 
-_Ultimo aggiornamento: 07/10/2026 (ricerca sulla storia dei luoghi; lista dei lavori di Enrico in `ROADMAP.md`, Fase 2)._
+_Ultimo aggiornamento: 08/10/2026 (agente «ricercatore»; ricerche su filtri dei locali e mappa; bozza della specifica del compositore)._
 
 ## Fase 1 in corso (ramo `grafica-home`, anche su GitHub dal 07/10/2026)
 - Specifica `specifiche/home-e-identita.md` approvata il 06/10/2026, con le aggiunte di Enrico: il compositore si rifà tutto (restano dati e calcoli), i **racconti** degli itinerari pronti (stile MUDD, per Google), il menu con le tre linee.
@@ -27,7 +27,7 @@ _Ultimo aggiornamento: 07/10/2026 (ricerca sulla storia dei luoghi; lista dei la
 3. Google Search Console: proprietà nuova per `nextstop-alpha.vercel.app` e invio di `/sitemap.xml`.
 
 ## Prossimi passi (in ordine: vedi `ROADMAP.md`)
-1. **Fase 2 · il compositore** (lista di Enrico del 07/10/2026 in `ROADMAP.md`): prima la specifica corta, poi un pezzo alla volta con **4 proposte** ciascuno (regola in `CLAUDE.md`). Opus, effort extra.
+1. **Fase 2 · il compositore**: bozza della specifica scritta l'08/10/2026 (`specifiche/compositore.md`, ramo `compositore`), **da approvare** con 3 domande per Enrico. Ricerche: `ricerca/2026-10-08-filtri-locali.md`, `ricerca/2026-10-08-mappa.md`. Poi un pezzo alla volta con **4 proposte** ciascuno, dalla pagina e barra. Opus, effort extra.
 2. **Home**: foto del portico, «Come funziona», «Perché fidarti», testi, fonti a scomparsa, crediti delle foto in fondo (stessa lista).
 3. **Fase 3 · racconti degli itinerari**: la ricerca sulla storia delle 15 tappe dei due giorni è fatta (07/10/2026, ramo `racconto-due-giorni`, `ricerca/storia-luoghi/`: 125 fatti da rileggere), poi le 4 pagine.
 4. **Città nuove**, **SEO** con claude-seo, `da-risolvere.md` (28 righe aperte): vedi `ROADMAP.md`.
@@ -42,6 +42,8 @@ _Ultimo aggiornamento: 07/10/2026 (ricerca sulla storia dei luoghi; lista dei la
 La guida di stile dei testi (`specifiche/stile-testi.md`) è nata per Napoli a Vela: per le città nuove va deciso chi è l'«amico del posto» del 25%.
 
 ## Note
+- **Agente `ricercatore`** (08/10/2026, `.claude/agents/ricercatore.md`): Sonnet, effort medio, ricerche sul web con le fonti, salva tutto in `ricerca/`. Si vede dalle sessioni nuove.
+- **Vercel Hobby è solo per uso non commerciale** (condizioni lette l'08/10/2026): con pubblicità o affiliazione servirebbe il piano Pro; le donazioni vanno bene.
 - Gli **id non si rinominano** (tappe, locali, schede): stanno nei link condivisi e nei telefoni.
 - Il blocco «Regate dal lungomare» resta per Napoli nei giorni di regata 2027 (`src/data/eventi.ts`, schede `cal-`): orari 2027 non ancora usciti.
 - Orari e prezzi delle tappe da ricontrollare entro il 30/04/2027; feed ANM da riscaricare a gennaio 2027 (`aggiornamenti/`).

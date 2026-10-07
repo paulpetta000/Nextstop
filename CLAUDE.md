@@ -70,7 +70,7 @@ e si sale solo se il risultato non è buono. Effort, dal più leggero: medio · 
 | Compito | Modello | Effort |
 |---|---|---|
 | Domande, un testo da correggere, modifiche di poche righe, commit e push, aggiornare `PROGRESS.md` | principale o Sonnet, fai da solo | medio |
-| Ricerche ripetitive (orari, prezzi, fonti di un gruppo di luoghi o locali) | agenti Sonnet in parallelo, uno per gruppo; il principale rilegge le fonti | medio–alto |
+| Ricerche ripetitive (orari, prezzi, fonti di un gruppo di luoghi o locali) e di confronto (come fanno altri siti) | agente `ricercatore` (Sonnet, effort medio, salva tutto in `ricerca/`), in parallelo, uno per gruppo; il principale rilegge le fonti | medio–alto |
 | Lavori meccanici (cercare, contare, estrarre, rinominare) | Haiku 4.5 (Enrico per ora preferisce non usarlo: usa Sonnet) | medio |
 | Revisione del codice, controlli su molte pagine, controlli finali, anteprima e pubblicazione | agente `revisore` o agente Sonnet (Enrico, 03/10/2026: i controlli si fanno con Sonnet) | alto |
 | Costruire una funzione nuova nel codice esistente (filtri, nuovo tipo di tappa, pagina, città nuova) | modello principale (Opus) | alto |
