@@ -2,7 +2,7 @@
 
 _Ultimo aggiornamento: 07/10/2026 (Fase 1: grafica A e marchio scelti, DESIGN.md scritto)._
 
-## Fase 1 in corso (ramo `grafica-home`, solo sul computer: non ancora su GitHub)
+## Fase 1 in corso (ramo `grafica-home`, anche su GitHub dal 07/10/2026)
 - Specifica `specifiche/home-e-identita.md` approvata il 06/10/2026, con le aggiunte di Enrico: il compositore si rifà tutto (restano dati e calcoli), i **racconti** degli itinerari pronti (stile MUDD, per Google), il menu con le tre linee.
 - **Grafica scelta: A «Rivista»** (07/10/2026): https://claude.ai/artifact/37yToKfDMfL87fHKvGQDE3 (sorgente `design/home/a.html`; la B «La linea» è salvata accanto).
 - **Marchio scelto: la soglia astratta** (07/10/2026), dopo sette giri tutti salvati in `design/logo/` (README con i link). La «o» del nome è un segnaposto; sopra le foto calde la versione ambra.
