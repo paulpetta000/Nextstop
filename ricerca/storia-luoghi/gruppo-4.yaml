@@ -1,0 +1,397 @@
+# Gruppo 4: dalla piazza al mare (plebiscito, palazzo-reale, monte-echia, borgo-marinari)
+# Ricerca del 2026-10-07. Ogni pagina e' stata aperta con WebFetch; le citazioni sono frasi
+# riportate dalla pagina (il testo letto passa da un riassuntore: le frasi chiave sono state
+# richieste una seconda volta "parola per parola" e coincidono). Citazioni in inglese = pagina in inglese.
+# Fonti gia' in fonti.yaml riusate: tp-comune-casteldellovo, tp-comune-echia.
+
+fonti:
+  # --- Piazza del Plebiscito, basilica, Galleria Umberto I ---
+  - id: st-plebiscito-italiait
+    titolo: "Piazza del Plebiscito"
+    editore: "Italia.it (portale ufficiale del turismo, ENIT)"
+    url: https://www.italia.it/it/campania/napoli/piazza-plebiscito
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-plebiscito-italiait-en
+    titolo: "Piazza del Plebiscito (versione inglese)"
+    editore: "Italia.it (portale ufficiale del turismo, ENIT)"
+    url: https://www.italia.it/en/campania/naples/piazza-del-plebiscito
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-plebiscito-fai
+    titolo: "Piazza Plebiscito"
+    editore: "FAI - Fondo per l'Ambiente Italiano (fondazione privata)"
+    url: https://fondoambiente.it/luoghi/piazza-plebiscito-napoli
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-plebiscito-dmo-basilica
+    titolo: "Church of San Francesco di Paola"
+    editore: "DMO Napoli (sito turistico del Comune di Napoli)"
+    url: https://dmo-napoli.inera.it/en/attraction/church-of-san-francesco-di-paola/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-napoli-treccani
+    titolo: "Napoli (Enciclopedia Italiana)"
+    editore: "Treccani"
+    url: https://www.treccani.it/enciclopedia/napoli_(Enciclopedia-Italiana)/
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-galleria-napoliforme-it
+    titolo: "Galleria Umberto I"
+    editore: "NapoliForMe, Citta' Metropolitana / Comune di Napoli"
+    url: https://napoliforme.comune.napoli.it/it/pois/-/poi/Galleria-Umberto-I
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-galleria-italiait
+    titolo: "Galleria Umberto I"
+    editore: "Italia.it (portale ufficiale del turismo, ENIT)"
+    url: https://www.italia.it/it/campania/napoli/galleria-umberto-i
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-galleria-discovercampania
+    titolo: "The Umberto I Gallery"
+    editore: "Discover Campania"
+    url: https://nuovo.discovercampania.it/en/explore-campania/territory/naples/go-see-naples/squares/1182-the-umberto-i-gallery
+    tipo: altro   # sito turistico regionale: non ho trovato scritto chi lo pubblica, quindi non lo do per ufficiale
+    controllato: 2026-10-07
+    letta: true
+  # --- Palazzo Reale ---
+  - id: st-palazzoreale-cultura
+    titolo: "Palazzo Reale di Napoli"
+    editore: "Ministero della cultura"
+    url: https://cultura.gov.it/luogo/palazzo-reale-di-napoli-1
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-palazzoreale-fai
+    titolo: "Palazzo Reale"
+    editore: "FAI - Fondo per l'Ambiente Italiano (fondazione privata)"
+    url: https://fondoambiente.it/luoghi/palazzo-reale-napoli
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-palazzoreale-opencampania
+    titolo: "Palazzo Reale di Napoli"
+    editore: "OpenCampania, i musei della Campania in rete (PON Cultura e Sviluppo FESR 2014-2020)"
+    url: https://cc-opencampania.inera.it/en/poi/Palazzo-Reale-Napoli/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  # --- Monte Echia e Castel dell'Ovo / Borgo Marinari ---
+  - id: st-echia-comune-cenni
+    titolo: "Cenni storici sulla citta'"
+    editore: "Comune di Napoli"
+    url: https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/cultura/cenni-storici-sulla-citta/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-echia-fai
+    titolo: "Borgo Santa Lucia e collina di Pizzofalcone"
+    editore: "FAI - Fondo per l'Ambiente Italiano (fondazione privata)"
+    url: https://fondoambiente.it/luoghi/monte-echia
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-echia-dmo-ascensore
+    titolo: "Monte Echia Lift and Belvedere"
+    editore: "DMO Napoli (sito turistico del Comune di Napoli)"
+    url: https://dmo-napoli.inera.it/en/attraction/monte-echia-lift-and-belvedere/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-castel-opencampania
+    titolo: "Castel dell'Ovo (Alle origini della citta' di Napoli)"
+    editore: "OpenCampania, i musei della Campania in rete (PON Cultura e Sviluppo FESR 2014-2020)"
+    url: https://cc-opencampania.inera.it/en/poi/Castel-dellOvo/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-castel-dmo
+    titolo: "Castel dell'Ovo"
+    editore: "DMO Napoli (sito turistico del Comune di Napoli)"
+    url: https://dmo-napoli.inera.it/en/attraction/castel-dellovo/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-borgo-dmo
+    titolo: "Borgo Marinari"
+    editore: "DMO Napoli (sito turistico del Comune di Napoli)"
+    url: https://dmo-napoli.inera.it/en/attraction/borgo-marinari/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-borgo-italiait
+    titolo: "Borgo Marinari"
+    editore: "Italia.it (portale ufficiale del turismo, ENIT)"
+    url: https://www.italia.it/en/campania/borgo-marinari
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+
+fatti:
+  # ================= plebiscito (piazza, basilica, Galleria Umberto I) =================
+  - id: st-plebiscito-nome
+    tappa: plebiscito
+    testo: "La piazza prese il nome attuale nel 1860, in onore del plebiscito (21 ottobre 1860) con cui il Regno delle Due Sicilie si unì al Regno d'Italia."
+    fonti: [st-plebiscito-italiait, st-plebiscito-italiait-en]
+    citazione: "Nel 1860, la piazza ha assunto la sua attuale denominazione in onore del plebiscito con cui il Regno delle Due Sicilie si univa al Regno d'Italia."
+    leggenda: false
+
+  - id: st-plebiscito-murat
+    tappa: plebiscito
+    testo: "Il grande portico della piazza fu fatto costruire nel 1809 da Gioacchino Murat. Pochi anni dopo fu completato al centro dalla basilica di San Francesco di Paola."
+    fonti: [st-plebiscito-fai]
+    citazione: "Il portico, fatto costruire nel 1809 da Gioacchino Murat, fu completato al centro, pochi anni più tardi, dalla monumentale basilica di S. Francesco di Paola"
+    leggenda: false
+
+  - id: st-plebiscito-voto
+    tappa: plebiscito
+    testo: "La basilica di San Francesco di Paola è un ex voto di re Ferdinando I, per ringraziare il santo di aver riavuto il regno dopo il decennio napoleonico. Davanti alla basilica creò il Foro ferdinandeo, oggi piazza del Plebiscito (1816)."
+    fonti: [st-napoli-treccani, st-plebiscito-dmo-basilica, st-plebiscito-fai]
+    citazione: "Ferdinando I, restaurata la monarchia, eresse ex-voto la monumentale basilica di S. Francesco di Paola, creandovi innanzi il Foro ferdinandeo, oggi Piazza Plebiscito (1816)."
+    leggenda: false
+
+  - id: st-plebiscito-basilica
+    tappa: plebiscito
+    testo: "L'architetto Pietro Bianchi si ispirò al Pantheon di Roma. Il grande colonnato semicircolare è di Leopoldo Laperuta; la cupola a cassettoni si alza per oltre 50 metri. Sul frontone si legge «FERDINANDUS I EX VOTO A MDCCCXVI»."
+    fonti: [st-plebiscito-dmo-basilica]
+    citazione: "The architect, Pietro Bianchi, was openly inspired by the magnificence of the Pantheon in Rome (EN)"
+    leggenda: false
+
+  - id: st-plebiscito-statue-equestri
+    tappa: plebiscito
+    testo: "Nei punti focali della piazza ellittica stanno due statue equestri in bronzo: quella di Carlo III di Borbone e quella di Ferdinando I."
+    fonti: [st-plebiscito-fai, st-plebiscito-italiait]
+    citazione: "Nei punti focali della piazza ellittica sono collocate le due statue equestri, in bronzo"
+    leggenda: false
+
+  - id: st-plebiscito-misure
+    tappa: plebiscito
+    testo: "Con i suoi 25mila metri quadrati è la piazza più grande di Napoli e una delle più grandi d'Italia; per secoli è stata il luogo simbolo della politica napoletana."
+    fonti: [st-plebiscito-italiait]
+    citazione: "Con i suoi 25mila metri quadrati, è stata il luogo simbolo della politica partenopea per secoli"
+    leggenda: false
+
+  - id: st-plebiscito-vesuvio
+    tappa: plebiscito
+    testo: "Dalla piazza si vede uno scorcio molto scenografico del Vesuvio, inquadrato tra il Palazzo Reale e il Palazzo della Prefettura."
+    fonti: [st-plebiscito-fai]
+    citazione: "Particolarmente scenografico è lo scorcio sul Vesuvio"
+    leggenda: false
+
+  - id: st-galleria-date
+    tappa: plebiscito
+    testo: "La Galleria Umberto I fu progettata e costruita tra il 1887 e il 1890, anno dell'inaugurazione (un'altra fonte scrive 1892). Prese il posto di un intrico di vicoli malsani e malfamati intorno al Teatro San Carlo."
+    fonti: [st-galleria-napoliforme-it, st-galleria-italiait]
+    citazione: "Progettata e costruita tra il 1887 e il 1890, anno dell'inaugurazione"
+    leggenda: false
+
+  - id: st-galleria-risanamento
+    tappa: plebiscito
+    testo: "Nacque dopo l'epidemia di colera del 1884, nel grande piano di risanamento della città. I lavori cominciarono con le demolizioni del vecchio quartiere malsano dal 1° maggio 1887."
+    fonti: [st-galleria-italiait, st-galleria-discovercampania]
+    citazione: "dopo l'epidemia di colera del 1884 | It began with the demolition of the old unhealthy buildings starting from May 1, 1887 (EN)"
+    leggenda: false
+
+  - id: st-galleria-progetto
+    tappa: plebiscito
+    testo: "Il progetto vincitore fu quello dell'ingegnere Emanuele Rocco, poi completato da Antonio Curri ed Ernesto Di Mauro; la volta di ferro e vetro è di Paolo Boubée. Fu pensata sul modello della galleria di Milano, aperta dieci anni prima."
+    fonti: [st-galleria-discovercampania, st-galleria-italiait]
+    citazione: "The competition between designers saw the idea of engineer Emmanuele Rocco prevail, then integrated by Antonio Curri and Ernesto Di Mauro. (EN)"
+    leggenda: false
+
+  - id: st-galleria-cupola
+    tappa: plebiscito
+    testo: "La cupola di vetro e ferro è alta 57 metri (un'altra fonte parla di un ottagono di 36 metri su cui poggia la cupola). Sul pavimento ci sono i segni zodiacali, con la rosa dei venti al centro."
+    fonti: [st-galleria-italiait, st-galleria-napoliforme-it]
+    citazione: "una cupola di vetro e ferro alta 57 metri | innalzata su un ottagono di 36 metri | il pavimento raffigura i segni zodiacali e al centro la rosa dei venti"
+    leggenda: false
+
+  - id: st-galleria-salone-margherita
+    tappa: plebiscito
+    testo: "Nella Galleria si apre il Salone Margherita, il più celebre caffè concerto della belle époque napoletana. Qui la ballerina Maria Campi inventò la «mossa»."
+    fonti: [st-galleria-napoliforme-it]
+    citazione: "come Maria Campi, sua l'invenzione della 'mossa'"
+    leggenda: false
+
+  # ================= palazzo-reale =================
+  - id: st-palazzoreale-fondazione
+    tappa: palazzo-reale
+    testo: "Il Palazzo Reale fu fondato nel 1600 come palazzo per il re di Spagna Filippo III, per iniziativa del viceré Fernando Ruiz de Castro, conte di Lemos. Lo progettò l'architetto Domenico Fontana."
+    fonti: [st-palazzoreale-cultura, st-palazzoreale-opencampania, st-palazzoreale-fai]
+    citazione: "fondato come palazzo del re di Spagna Filippo III d'Asburgo nell'anno 1600, per iniziativa del viceré Fernando Ruiz de Castro conte di Lemos"
+    leggenda: false
+
+  - id: st-palazzoreale-filippo-mai
+    tappa: palazzo-reale
+    testo: "Il palazzo doveva ospitare Filippo III in visita ufficiale a Napoli, ma la visita non ci fu mai. Così Napoli si ritrovò, quasi per caso, ad avere finalmente un Palazzo Reale."
+    fonti: [st-palazzoreale-fai]
+    citazione: "Ma Napoli si ritrovò, quasi per caso, ad avere finalmente un Palazzo Reale"
+    leggenda: false
+
+  - id: st-palazzoreale-1734
+    tappa: palazzo-reale
+    testo: "Nel 1734 Napoli diventò capitale di un regno autonomo con Carlo III di Borbone. Il palazzo fu ampliato verso il mare e poi verso il Vesuvio."
+    fonti: [st-palazzoreale-cultura]
+    citazione: "Quando Napoli nel 1734 divenne capitale di un regno autonomo con Carlo III di Borbone, il Palazzo fu ampliato sul versante del mare"
+    leggenda: false
+
+  - id: st-palazzoreale-incendio
+    tappa: palazzo-reale
+    testo: "Un incendio nelle stanze della Regina Madre, nel 1837, danneggiò la reggia. Sotto Ferdinando II l'architetto Gaetano Genovese la restaurò nel gusto neoclassico (lavori tra il 1838 e il 1858)."
+    fonti: [st-palazzoreale-cultura, st-palazzoreale-fai]
+    citazione: "L'architetto Gaetano Genovese fu incaricato di un restauro generale nel gusto neoclassico | dopo l'incendio del 1837"
+    leggenda: false
+
+  - id: st-palazzoreale-statue
+    tappa: palazzo-reale
+    testo: "Sulla facciata, in otto nicchie, stanno otto statue di re di Napoli, una per ogni dinastia, volute dai Savoia. Le nicchie sono del Settecento; le statue furono messe nell'ultimo decennio dell'Ottocento (nel 1888, per volere di Umberto I, dice la FAI). Ogni statua simboleggia una dinastia che ha governato Napoli."
+    fonti: [st-palazzoreale-cultura, st-palazzoreale-fai, st-plebiscito-italiait]
+    citazione: "Nell'ultimo decennio dell'Ottocento nelle nicchie settecentesche furono inserite le statue dei re di Napoli commissionate dai Savoia. | collocazione all'interno delle nicchie esterne è stata voluta da re Umberto I di Savoia nel 1888"
+    leggenda: false
+
+  - id: st-palazzoreale-otto-re
+    tappa: palazzo-reale
+    testo: "I re sono, in ordine cronologico: Ruggero il Normanno, Federico II di Svevia, Carlo I d'Angiò, Alfonso V d'Aragona, Carlo V d'Asburgo, Carlo III, Gioacchino Murat e Vittorio Emanuele II."
+    fonti: [st-palazzoreale-fai]
+    citazione: "Le statue sono posizionate in ordine cronologico"
+    leggenda: false
+
+  - id: st-palazzoreale-stato
+    tappa: palazzo-reale
+    testo: "Nel 1919 Vittorio Emanuele III di Savoia cedette il palazzo al Demanio dello Stato. Fu in gran parte destinato alla Biblioteca Nazionale, mentre l'ala antica divenne museo."
+    fonti: [st-palazzoreale-cultura]
+    citazione: "Fu ceduto al Demanio dello Stato da Vittorio Emanuele III di Savoia nel 1919"
+    leggenda: false
+
+  # ================= monte-echia =================
+  - id: st-echia-partenope
+    tappa: monte-echia
+    testo: "Sul promontorio di Monte Echia (oggi Pizzofalcone) e sull'isolotto di Megaride nacque Partenope, la prima città, poi detta Palepoli. Le fonti danno date diverse: IX secolo a.C. (Comune), VIII secolo a.C. (FAI, DMO), metà VII secolo a.C. (Comune, scheda del Castel dell'Ovo)."
+    fonti: [st-echia-comune-cenni, st-echia-fai, st-echia-dmo-ascensore, tp-comune-casteldellovo]
+    citazione: "Su cui sorse nell'VIII secolo a.C la sub-colonia cumana di Palaipolis o Partenope | La prima colonizzazione del territorio risale al IX a.C."
+    leggenda: false
+
+  - id: st-echia-neapolis
+    tappa: monte-echia
+    testo: "Partenope fu abbandonata e prese il nome di Palepoli, «città vecchia». Nel 475 a.C., grazie agli abitanti di Cuma, fu fondata Neapolis, la «città nuova», nella parte orientale della città originaria."
+    fonti: [st-echia-comune-cenni]
+    citazione: "Nel 475 a.C. grazie agli abitanti di Cuma fu fondata Neapolis (città nuova) nella parte orientale della città originaria."
+    leggenda: false
+
+  - id: st-echia-sirena
+    tappa: monte-echia
+    testo: "Secondo la leggenda, la sirena Partenope, morta per amore, approdò qui e diede origine al mito di fondazione della città. Il Comune scrive che «da qui si vedeva la Sirena Partenope». Altre versioni dicono che il suo corpo fu portato dalle onde alla foce del Sebeto."
+    fonti: [tp-comune-echia, st-borgo-dmo, st-napoli-treccani]
+    citazione: "Da qui si vedeva la Sirena Partenope e oggi si può ammirare tutta Napoli | dove pare si venerasse la tomba della leggendaria sirena Partenope"
+    leggenda: true
+
+  - id: st-echia-lucullo
+    tappa: monte-echia
+    testo: "Nel I secolo a.C., sotto il dominio romano, sull'isolotto di Megaride e sul Monte Echia fu costruita la celebre villa di Lucio Licinio Lucullo. Sul colle se ne vedono ancora i ruderi."
+    fonti: [tp-comune-casteldellovo, tp-comune-echia]
+    citazione: "Sull'isolotto e sul Monte Echia, nel I secolo a.C., durante la dominazione romana, fu costruita la celebre villa di Lucio Licinio Lucullo | sono ben visibili i ruderi della Villa di Licinio Lucullo"
+    leggenda: false
+
+  - id: st-echia-pizzofalcone
+    tappa: monte-echia
+    testo: "Il colle di Monte Echia era detto allora Pizzofalcone, e si abbellì di nuovi palazzi signorili."
+    fonti: [st-napoli-treccani]
+    citazione: "di nuovi palazzi magnatizî si abbelliva monte Echia, detto allora Pizzofalcone."
+    leggenda: false
+
+  - id: st-echia-ascensore
+    tappa: monte-echia
+    testo: "L'ascensore di Monte Echia è stato aperto al pubblico il 9 aprile 2024, quasi 18 anni dopo il progetto iniziale. Per il Comune il sito ha «un valore storico eccezionale essendo il luogo di fondazione della Città»."
+    fonti: [tp-comune-echia, st-echia-dmo-ascensore]
+    citazione: "Apre al pubblico il 9 aprile l'ascensore di Monte Echia, dopo quasi 18 anni dal suo progetto inziale"
+    leggenda: false
+
+  # ================= borgo-marinari (e Castel dell'Ovo) =================
+  - id: st-borgo-megaride
+    tappa: borgo-marinari
+    testo: "Il Borgo Marinari sta sull'isolotto di Megaride, la «vera culla di Neapolis». Qui, dice la leggenda, la sirena Partenope approdò e scelse questa roccia per morire d'amore."
+    fonti: [st-borgo-dmo, st-castel-dmo]
+    citazione: "It is the islet of Megaride, the true cradle of Neapolis. (EN)"
+    leggenda: true
+
+  - id: st-borgo-cumani
+    tappa: borgo-marinari
+    testo: "Su questo isolotto sbarcarono i Cumani, di origine greco-euboica, a metà del VII secolo a.C.; poi fondarono sul Monte Echia, alle spalle, Partenope. Nel 1949 se ne scoprì la necropoli in via Nicotera 10."
+    fonti: [tp-comune-casteldellovo]
+    citazione: "Su questo isolotto sbarcarono i Cumani (di origine greco-euboica) a metà VII secolo a.C."
+    leggenda: false
+
+  - id: st-borgo-monaci
+    tappa: borgo-marinari
+    testo: "Il borgo fu un villaggio di monaci basiliani, di cui resta la chiesa di San Salvatore. Poi il villaggio fu fortificato e si sviluppò attorno al piccolo porto."
+    fonti: [st-borgo-italiait]
+    citazione: "Once a settlement of Basilian monks, of which the Church of San Salvatore remains as a testimony today (EN)"
+    leggenda: false
+
+  - id: st-borgo-pescatori
+    tappa: borgo-marinari
+    testo: "Il borgo fu a lungo il rifugio al riparo dei pescatori, delle loro reti e delle loro famiglie; oggi è un porticciolo turistico dove le barche a vela stanno accanto ai gozzi tradizionali."
+    fonti: [st-borgo-dmo]
+    citazione: "Once, this was the sheltered refuge for fishermen, their nets, and their families (EN)"
+    leggenda: false
+
+  - id: st-borgo-contrabbando
+    tappa: borgo-marinari
+    testo: "Le attività del borgo erano la pesca e, fino agli anni Novanta, il contrabbando di sigarette, oggi del tutto scomparso."
+    fonti: [st-borgo-italiait]
+    citazione: "in particular fishing and, until the 1990s, cigarette smuggling, now completely eradicated (EN)"
+    leggenda: false
+
+  - id: st-castel-lucullo-romolo
+    tappa: borgo-marinari
+    testo: "Sull'isolotto c'era una dipendenza della villa di Lucullo, nel I secolo a.C. Nel 476 la villa fortificata (da Valentiniano III, all'inizio del V secolo) fu luogo d'esilio di Romolo Augusto, l'ultimo imperatore romano d'Occidente."
+    fonti: [st-castel-opencampania, st-castel-dmo, tp-comune-casteldellovo]
+    citazione: "luogo d'esilio dell'ultimo imperatore romano d'occidente, Romolo Augusto | Fortificata dall'Imperatore Valentiniano III all'inizio del V secolo"
+    leggenda: false
+
+  - id: st-castel-normanni
+    tappa: borgo-marinari
+    testo: "Il castello vero e proprio fu fatto costruire da Ruggero il Normanno nel 1140 (OpenCampania). Per Treccani c'era già un forte all'inizio del XII secolo, che i Normanni ingrandirono: da lì nacque Castel dell'Ovo."
+    fonti: [st-castel-opencampania, st-napoli-treccani]
+    citazione: "il castello vero e proprio fu fatto costruire da Ruggero il Normanno nel 1140 | Ivi sorse un forte, di cui si ha notizia al principio del sec. XII; accresciuto dai Normanni, divenne Castel dell'Ovo."
+    leggenda: false
+
+  - id: st-castel-uovo
+    tappa: borgo-marinari
+    testo: "Dice una leggenda napoletana che il poeta Virgilio nascose un uovo in una gabbia nei sotterranei del castello: da quell'uovo dipendevano il destino del castello e della città."
+    fonti: [tp-comune-casteldellovo, st-castel-dmo]
+    citazione: "Una delle più fantasiose leggende napoletane farebbe risalire il suo nome all'uovo che Virgilio avrebbe nascosto"
+    leggenda: true
+
+  - id: st-castel-giovanna
+    tappa: borgo-marinari
+    testo: "Ai tempi della regina Giovanna I il castello subì gravi danni per il crollo dell'arcone che unisce i due scogli (nel 1370, per OpenCampania, dopo un terremoto). La regina dovette dichiarare di aver sostituito l'uovo, per evitare il panico tra la gente."
+    fonti: [tp-comune-casteldellovo, st-castel-opencampania]
+    citazione: "Le cronache riportano che, al tempo della regina Giovanna I, il castello subì ingenti danni | nel 1370, quando la fortificazione subì un crollo a causa di un terremoto, la sovrana Giovanna I"
+    leggenda: true
+
+non_trovato:
+  - "Pagina di storia sul sito ufficiale palazzorealedinapoli.org: provate /it/storia/, /chi-siamo/, /sedi/palazzo-reale/ (aperte, ma senza storia: solo eventi, mostre e direzione) e /storia-del-palazzo-reale/ (404). La storia del Palazzo Reale viene quindi da cultura.gov.it (Ministero della cultura), OpenCampania e FAI."
+  - "Plebiscito del 21 ottobre 1860 sul sito del Comune di Napoli: non trovato (le pagine comune.napoli.it/flex/... danno 404; napoliforme per Plebiscito e Castel dell'Ovo e' vuota). Il 21 ottobre 1860 viene da italia.it (versione inglese); la versione italiana dice solo 1860."
+  - "Pagina storica del Comune su Monte Echia: provato la scheda e la pagina dell'ascensore (solo valore storico, ruderi di Lucullo, Partenope); la storia dei secoli viene da 'Cenni storici' del Comune, FAI e Treccani."
+  - "Storia di Borgo Marinari (quando e' nato il borgo di case sotto il castello): nessuna fonte ufficiale con data. La pagina del Comune sull'area pedonale (ZTL) non ha storia. Le fonti trovate parlano di monaci basiliani, pesca e contrabbando; la colmata a mare di fine Ottocento e' scritta solo su siti non ufficiali (non usata). Non trovato anche come e quando il piccolo porto prese il nome Borgo Marinari."
+  - "PDF non leggibili con WebFetch (binari): Agenzia del Demanio (Plebiscito e basilica), Touring Club (Santa Lucia, Monte Echia), D'Onofrio SIRIS 2017 (Universita' Orientale), Della Valle 'Neapolis.pdf' (unina: connessione rifiutata), serena.unina.it (certificato non valido). Non usati."
+  - "Pagine che dichiarano di non contenere la storia: Comune di Napoli, pagine /flex/cm/pages/ServeBLOB.php (404); napoliforme Plebiscito e Castel dell'Ovo (vuote); Treccani 'palazzo-reale-di-napoli', 'castel-dell-ovo' (restituiscono la home)."
+
+# ---- DUBBI da guardare nella rilettura ----
+dubbi:
+  - "Date diverse sulla nascita di Partenope: IX sec. a.C. (Comune, Cenni storici: mercanti anatolici e achei), VIII sec. a.C. (FAI, DMO, OpenCampania: Cumani), VII sec. a.C. (Treccani; Comune scheda Castel dell'Ovo: Cumani a meta' VII secolo). Meglio scrivere «quasi 2.500-3.000 anni fa» o riportare la discordanza."
+  - "Galleria Umberto I: inaugurata nel 1890 (NapoliForMe) o nel 1892 (Italia.it). Cupola: 'alta 57 metri' (Italia.it) o 'ottagono di 36 metri' (NapoliForMe): sono misure diverse, non e' detto che si contraddicano. Progettista: Emanuele Rocco (Italia.it, Discover Campania); NapoliForMe cita solo Francesco Paolo Boubée (la cupola)."
+  - "Castel dell'Ovo: Ruggero il Normanno 1140 (OpenCampania) contro 'forte noto al principio del sec. XII, accresciuto dai Normanni' (Treccani). Giovanna I: crollo nel 1370 solo per OpenCampania; Comune e FAI non danno l'anno."
+  - "Statue del Palazzo Reale: la FAI e napolimisteriosa.it dicono 1888 e voluta da Umberto I; il Ministero della cultura dice solo 'ultimo decennio dell'Ottocento'. La FAI scrive anche che non c'e' nessun Borbone, ma nella sua stessa lista c'e' Carlo III (di Borbone): frase NON usata. Alfonso e' 'V d'Aragona' per la FAI, 'I d'Aragona' per altri (stesso re)."
+  - "Statue equestri: italia.it (inglese) e FAI attribuiscono a Canova quella di Carlo III o di Ferdinando I; le due fonti non concordano su quale: dettaglio NON usato."
+  - "Sirena Partenope: DMO dice che approdo' e mori' sulla roccia di Megaride; Treccani (voce Partenope) dice che le onde riportarono il corpo alle foci del Sebeto; Comune: 'da qui (Monte Echia) si vedeva la Sirena'. E' una leggenda con piu' versioni."
+  - "I siti OpenCampania e DMO sono in inglese (le citazioni marcate EN lo sono). FAI e Treccani sono tipo 'altro' (non enti pubblici in senso stretto). Discover Campania: tipo 'altro' perche' non ho letto chi lo pubblica."

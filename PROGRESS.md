@@ -1,6 +1,6 @@
 # PROGRESS
 
-_Ultimo aggiornamento: 07/10/2026 (Fase 1: home nuova pubblicata su `main`)._
+_Ultimo aggiornamento: 07/10/2026 (ricerca sulla storia dei luoghi; lista dei lavori di Enrico in `ROADMAP.md`, Fase 2)._
 
 ## Fase 1 in corso (ramo `grafica-home`, anche su GitHub dal 07/10/2026)
 - Specifica `specifiche/home-e-identita.md` approvata il 06/10/2026, con le aggiunte di Enrico: il compositore si rifà tutto (restano dati e calcoli), i **racconti** degli itinerari pronti (stile MUDD, per Google), il menu con le tre linee.
@@ -27,11 +27,10 @@ _Ultimo aggiornamento: 07/10/2026 (Fase 1: home nuova pubblicata su `main`)._
 3. Google Search Console: proprietà nuova per `nextstop-alpha.vercel.app` e invio di `/sitemap.xml`.
 
 ## Prossimi passi (in ordine: vedi `ROADMAP.md`)
-1. **Grafica e home «wow»**: vedi «Fase 1 in corso» qui sopra. Modello Opus, effort extra.
-2. **Curare meglio gli itinerari di Napoli**: più itinerari pronti, con nomi, e le correzioni del trascinamento (`da-risolvere.md`).
-3. **Città nuove**: una specifica per città (tappe con fonti, tempi da OpenStreetMap, mezzi pubblici). Consiglio: Napoli perfetta più 1 o 2 città, poi si allarga.
-4. **SEO** con claude-seo (deciso per Napoli a Vela il 06/10/2026), quando la struttura è finita; pagine fisse per gli itinerari pronti (il compositore ha il contenuto dopo il «#», Google non lo vede).
-5. `da-risolvere.md`: 28 righe aperte (orari dei locali, premi da verificare, luoghi): una sessione di gruppo.
+1. **Fase 2 · il compositore** (lista di Enrico del 07/10/2026 in `ROADMAP.md`): prima la specifica corta, poi un pezzo alla volta con **4 proposte** ciascuno (regola in `CLAUDE.md`). Opus, effort extra.
+2. **Home**: foto del portico, «Come funziona», «Perché fidarti», testi, fonti a scomparsa, crediti delle foto in fondo (stessa lista).
+3. **Fase 3 · racconti degli itinerari**: la ricerca sulla storia delle 15 tappe dei due giorni è fatta (07/10/2026, ramo `racconto-due-giorni`, `ricerca/storia-luoghi/`: 125 fatti da rileggere), poi le 4 pagine.
+4. **Città nuove**, **SEO** con claude-seo, `da-risolvere.md` (28 righe aperte): vedi `ROADMAP.md`.
 
 ## Skill (06/10/2026)
 | Skill | Dove | Per cosa |

@@ -1,0 +1,381 @@
+# Gruppo 2 · centro antico: tribunali, spaccanapoli (con Gesù Nuovo e San Gregorio Armeno), san-lorenzo
+# Ricerca del 2026-10-07. Le pagine sono state aperte con WebFetch; lo strumento restituisce un riassunto della pagina,
+# quindi le «citazioni» sono le parole che lo strumento riporta tra virgolette: da riguardare sulla pagina prima di pubblicare.
+# I siti di laneapolissotterrata.it, whc.unesco.org e (a volte) gesunuovo.it rispondono 403 a WebFetch: vedi non_trovato.
+
+fonti:
+  # ---------- UNESCO e città greca ----------
+  - id: st-unesco-mic
+    titolo: "Historic Centre of Naples (scheda UNESCO del Ministero della cultura)"
+    editore: "Ministero della cultura, Unesco Beni Culturali"
+    url: https://unesco.cultura.gov.it/en/projects/historic-centre-of-naples/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-italia-centro
+    titolo: "Napoli, centro storico (Italia.it)"
+    editore: "ENIT, portale ufficiale del turismo italiano"
+    url: https://www.italia.it/it/campania/napoli/cosa-fare/napoli-centro-storico
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-treccani-neapolis
+    titolo: "Napoli (Enciclopedia dell'Arte Antica)"
+    editore: Treccani
+    url: https://www.treccani.it/enciclopedia/napoli_(Enciclopedia-dell'-Arte-Antica)/
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-fai-decumani
+    titolo: "I decumani di Napoli"
+    editore: "FAI - Fondo per l'Ambiente Italiano"
+    url: https://fondoambiente.it/luoghi/i-decumani
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-fai-tribunali
+    titolo: "Decumano Maggiore - via dei Tribunali"
+    editore: "FAI - Fondo per l'Ambiente Italiano"
+    url: https://fondoambiente.it/luoghi/via-dei-tribunali
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-discover-decumani
+    titolo: "I decumani"
+    editore: "Discover Campania (Regione Campania)"
+    url: https://discovercampania.it/esplora-la-campania/territorio/napoli/andare-vedere-napoli/i-decumani
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-discover-cardini
+    titolo: "Decumani and cardini have shaped Naples for twenty-six centuries"
+    editore: "Discover Campania (Regione Campania)"
+    url: https://discovercampania.it/en/explore-campania/territory/naples/go-see-naples/the-decumani/1189-decumani-and-cardini-have-shaped-naples-for-twenty-six-centuries
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-dmo-castelcapuano
+    titolo: "Castel Capuano"
+    editore: "DMO Napoli (destinazione turistica, Regione Campania)"
+    url: https://dmo-napoli.inera.it/en/attraction/castel-capuano/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+    nota: "Pagina in inglese, scritta per i turisti"
+
+  # ---------- Spaccanapoli, Gesù Nuovo, San Gregorio Armeno ----------
+  - id: st-comune-spaccanapoli
+    titolo: "Decumano inferiore - Spaccanapoli (Museo aperto «Le vie dell'arte»)"
+    editore: "Comune di Napoli"
+    url: https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/museo-aperto-le-vie-dellarte/decumano-inferiore-spaccanapoli/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-visitnaples-spaccanapoli
+    titolo: "Things to see in Naples: Spaccanapoli and the other two decumani"
+    editore: "visitnaples.eu"
+    url: https://visitnaples.eu/en/neapolitanity/walk-naples/things-to-see-in-naples-spaccanapoli-and-the-other-two-decumani-in-the-historical-center
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-gesunuovo-guida
+    titolo: "Breve guida artistica - La chiesa del Gesù Nuovo"
+    editore: "Chiesa del Gesù Nuovo (gesunuovo.it)"
+    url: http://www.gesunuovo.it/Italiano/It_chiesaGN.html
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-gesuiti-facciata
+    titolo: "Gesù nuovo: la facciata di diamanti torna a brillare"
+    editore: "Gesuiti.it (Compagnia di Gesù, Provincia euro-mediterranea)"
+    url: https://gesuiti.it/gesu-nuovo-la-facciata-di-diamanti-torna-a-brillare/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-fai-gesu
+    titolo: "Chiesa del Gesù Nuovo"
+    editore: "FAI - Fondo per l'Ambiente Italiano"
+    url: https://fondoambiente.it/luoghi/chiesa-del-gesu-nuovo
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-napolike-gesustoria
+    titolo: "Chiesa del Gesù Nuovo: storia, arte e storie del tempio barocco"
+    editore: Napolike
+    url: https://www.napolike.it/chiesa-gesu-nuovo-storia-arte-barocco
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+    nota: "Blog non ufficiale; sul Gesù Nuovo ha qualche dato diverso dal sito della chiesa (vedi dubbi)"
+  - id: st-arte-gesu
+    titolo: "Chiesa del Gesù Nuovo (guida d'arte di Napoli)"
+    editore: arte.it
+    url: https://arte.it/guida-arte/napoli/itinerario/itinerario-3-giorni-84/tappa-7
+    tipo: stampa
+    controllato: 2026-10-07
+    letta: true
+  - id: st-fai-sangregorio-via
+    titolo: "Via San Gregorio Armeno"
+    editore: "FAI - Fondo per l'Ambiente Italiano"
+    url: https://fondoambiente.it/luoghi/via-san-gregorio-armeno
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-fai-sangregorio-chiostro
+    titolo: "Chiostro di San Gregorio Armeno"
+    editore: "FAI - Fondo per l'Ambiente Italiano"
+    url: https://fondoambiente.it/luoghi/chiostro-di-san-gregorio-armeno
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-italia-sangregorio
+    titolo: "San Gregorio Armeno (Italia.it)"
+    editore: "ENIT, portale ufficiale del turismo italiano"
+    url: https://www.italia.it/it/campania/napoli/san-gregorio-armeno
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-treccani-presepe
+    titolo: "Presepe (Enciclopedia dei ragazzi)"
+    editore: Treccani
+    url: https://www.treccani.it/enciclopedia/presepe_(Enciclopedia-dei-ragazzi)/
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-treccani-presepio-lingua
+    titolo: "«Te piace 'o presebbio?». Il fascino intramontabile della Natività"
+    editore: "Treccani, Magazine"
+    url: https://www.treccani.it/magazine/lingua_italiana/articoli/percorsi/percorsi_518.html
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+
+  # ---------- San Lorenzo Maggiore ----------
+  - id: st-mic-sanlorenzo
+    titolo: "Area archeologica del Complesso di San Lorenzo Maggiore"
+    editore: "Ministero della cultura"
+    url: https://cultura.gov.it/luogo/area-archeologica-del-complesso-di-san-lorenzo-maggiore
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-scabec-sanlorenzo
+    titolo: "Complesso di San Lorenzo Maggiore (Area archeologica)"
+    editore: "Scabec, società della Regione Campania"
+    url: https://www.scabec.it/en/luoghi/complesso-di-san-lorenzo-maggiore
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-dmo-sanlorenzo
+    titolo: "Monumental Complex of San Lorenzo Maggiore"
+    editore: "DMO Napoli (destinazione turistica, Regione Campania)"
+    url: https://dmo-napoli.inera.it/en/attraction/monumental-complex-of-san-lorenzo-maggiore/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+    nota: "Riprende i testi del sito del complesso (laneapolissotterrata.it), che non si riesce ad aprire"
+  - id: st-arte-sanlorenzo
+    titolo: "Chiesa di San Lorenzo Maggiore (guida d'arte di Napoli)"
+    editore: arte.it
+    url: https://arte.it/guida-arte/napoli/itinerario/itinerario-2-giorni-83/tappa-3
+    tipo: stampa
+    controllato: 2026-10-07
+    letta: true
+  - id: st-museionline-sanlorenzo
+    titolo: "Scavi archeologici di San Lorenzo Maggiore"
+    editore: museionline.info
+    url: https://www.museionline.info/napoli-musei-e-monumenti/scavi-archeologici-di-san-lorenzo-maggiore
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+    nota: "Sito non ufficiale: date degli scavi poco chiare (vedi dubbi)"
+
+fatti:
+  # ================= tribunali =================
+  - id: st-tribunali-unesco
+    tappa: tribunali
+    testo: "Il centro storico di Napoli è patrimonio mondiale dell'UNESCO dal 1995, per i criteri (ii) e (iv). Il motivo principale è che il disegno a griglia della Neapolis greca si legge ancora oggi nella città."
+    fonti: [st-unesco-mic, st-italia-centro]
+    citazione: "The rectangular grid layout of the ancient Greek foundation of Neapolis is still discernible and has indeed continued to provide the basic form for the present-day urban fabric"
+    leggenda: false
+  - id: st-tribunali-fondazione
+    tappa: tribunali
+    testo: "Verso il 470 a.C. i Greci di Cuma, dopo aver respinto un assalto etrusco, fondarono Neapolis, la «città nuova», a est del porto di Partenope. Alla fondazione parteciparono anche i Siracusani."
+    fonti: [st-treccani-neapolis, st-unesco-mic]
+    citazione: "verso il 470, respinto l'assalto etrusco, i Greci di Cuma fondarono ad E del porto di Partenope una nuova città: Neapolis"
+    leggenda: false
+  - id: st-tribunali-datazione
+    tappa: tribunali
+    testo: "Le fonti non concordano sul momento: Treccani e UNESCO (scheda del Ministero) parlano di circa il 470 a.C.; FAI e Discover Campania dicono che i tre decumani furono creati «alla fine del sesto secolo avanti Cristo». Da scegliere con cautela (meglio «V secolo a.C.» o «circa 2.500 anni fa»)."
+    fonti: [st-fai-decumani, st-discover-cardini, st-treccani-neapolis]
+    citazione: "create in epoca greca, alla fine del sesto secolo avanti Cristo"
+    leggenda: false
+  - id: st-tribunali-greco
+    tappa: tribunali
+    testo: "Le strade dei Greci si chiamavano plateiai (le grandi, da est a ovest) e stenopoi (le piccole, da nord a sud): oggi le chiamiamo con i nomi romani decumani e cardini. I decumani sono tre: superiore, maggiore (via dei Tribunali) e inferiore (Spaccanapoli)."
+    fonti: [st-discover-decumani, st-fai-decumani]
+    citazione: "l'originario impianto a rete dei plateiai e degli stenopoi, più noti ai giorni nostri nella loro versione romana di decumani e cardini"
+    leggenda: false
+  - id: st-tribunali-nome
+    tappa: tribunali
+    testo: "La via si chiama dei Tribunali dal Cinquecento: il viceré spagnolo Don Pedro di Toledo scelse Castel Capuano (fondato nel 1160 da re Guglielmo I) come sede dei tribunali della città, e il castello restò sede della giustizia per quasi cinque secoli."
+    fonti: [st-fai-tribunali, st-dmo-castelcapuano]
+    citazione: "il castel Capuano, sin dagli inizi del XVI secolo, per volontà di Don Pedro di Toledo, assunse il ruolo di tribunale della città"
+    leggenda: false
+  - id: st-tribunali-agora
+    tappa: tribunali
+    testo: "Piazza San Gaetano, a metà di via dei Tribunali, sorge dove in epoca greca c'era l'agorà (la piazza civica) e dove i Romani costruirono poi il foro."
+    fonti: [st-fai-tribunali, st-scabec-sanlorenzo]
+    citazione: "piazza San Gaetano, la quale sorge sull'area in cui insisteva in epoca greca l'agorà della città, divenuta poi in epoca romana foro"
+    leggenda: false
+  - id: st-tribunali-greca-lingua
+    tappa: tribunali
+    testo: "Neapolis restò una città greca nella lingua e nei costumi anche in piena età imperiale romana, fino alla conquista bizantina."
+    fonti: [st-treccani-neapolis]
+    citazione: "Neapolis restò sino alla conquista bizantina città puramente greca, tramandando la lingua ed i costumi greci"
+    leggenda: false
+
+  # ================= spaccanapoli · Spaccanapoli =================
+  - id: st-spaccanapoli-nome
+    tappa: spaccanapoli
+    testo: "Spaccanapoli è il decumano inferiore, la strada diritta che «divide in due parti la città antica». Il nome viene dal verbo napoletano «spaccare», dividere."
+    fonti: [st-comune-spaccanapoli, st-visitnaples-spaccanapoli]
+    citazione: "divide in due parti la città antica"
+    leggenda: false
+  - id: st-spaccanapoli-vie
+    tappa: spaccanapoli
+    testo: "Da piazza del Gesù Nuovo la strada prosegue come via Benedetto Croce (con palazzo Filomarino, dove visse il filosofo) e via San Biagio dei Librai, così chiamata perché un tempo era la strada delle botteghe dei librai."
+    fonti: [st-comune-spaccanapoli]
+    citazione: "così denominata perchè un tempo era la strada delle botteghe dei librai"
+    leggenda: false
+  - id: st-spaccanapoli-toledo
+    tappa: spaccanapoli
+    testo: "Nel Cinquecento il viceré Don Pedro de Toledo fece allineare il decumano inferiore con una strada dei Quartieri Spagnoli, per facilitare gli spostamenti. Fonte turistica in inglese: da verificare su una fonte storica prima di usarlo."
+    fonti: [st-visitnaples-spaccanapoli]
+    citazione: "viceroy Don Pedro de Toledo aligned the Decumano with a road of Spanish Neighbourhoods to facilitate the transfers"
+    leggenda: false
+
+  # ================= spaccanapoli · Chiesa del Gesù Nuovo =================
+  - id: st-gesu-palazzo
+    tappa: spaccanapoli
+    testo: "La chiesa nacque dalla trasformazione del palazzo dei Sanseverino, principi di Salerno, costruito nel 1470 da Novello da San Lucano. Dopo la confisca dei beni di Ferrante Sanseverino i Gesuiti acquistarono il palazzo nel 1584."
+    fonti: [st-gesunuovo-guida, st-gesuiti-facciata]
+    citazione: "La chiesa nacque dalla trasformazione del palazzo dei Sanseverino, costruito nel 1470 da Novello da San Lucano"
+    leggenda: false
+  - id: st-gesu-facciata
+    tappa: spaccanapoli
+    testo: "L'architetto gesuita Giuseppe Valeriano tenne la facciata del palazzo, fatta di bugne (blocchi sporgenti) di piperno tagliate a punta di diamante. Per la guida della chiesa è un'apparecchiatura muraria unica a Napoli. La chiesa fu consacrata il 7 ottobre 1601."
+    fonti: [st-gesunuovo-guida, st-fai-gesu, st-arte-gesu]
+    citazione: "la facciata e i fianchi a bugnato 'a punta di diamante'"
+    leggenda: false
+  - id: st-gesu-segni
+    tappa: spaccanapoli
+    testo: "Sulle bugne ci sono segni incisi che a volte si leggono come messaggi esoterici o come una musica nascosta. Sono invece le firme degli scalpellini: servivano al capocantiere per contare le pietre lavorate e pagare ognuno."
+    fonti: [st-gesuiti-facciata, st-napolike-gesustoria]
+    citazione: "risultano essere semplicemente le firme e i codici di lavoro dei maestri scalpellini"
+    leggenda: false
+  - id: st-gesu-cupola
+    tappa: spaccanapoli
+    testo: "Nel terremoto del 1688 crollò la cupola affrescata da Lanfranco: dei suoi affreschi restano solo gli Evangelisti nei peducci. Nel 1786 fu sostituita da una copertura più semplice."
+    fonti: [st-arte-gesu, st-fai-gesu]
+    citazione: "crollò la cupola affrescata da Lanfranco"
+    leggenda: false
+
+  # ================= spaccanapoli · San Gregorio Armeno =================
+  - id: st-sangregorio-cardine
+    tappa: spaccanapoli
+    testo: "Via San Gregorio Armeno collega il decumano inferiore con quello superiore ed è uno dei cardini, le strade da nord a sud, dell'impianto greco-romano."
+    fonti: [st-fai-sangregorio-via]
+    citazione: "Collega il Decumano Inferiore con il Decumano Superiore, infatti è uno dei cardini dell'assetto urbanistico greco-romano"
+    leggenda: false
+  - id: st-sangregorio-settecento
+    tappa: spaccanapoli
+    testo: "I presepi napoletani raggiunsero il massimo splendore nel Settecento, grazie anche a Carlo III di Borbone (re di Napoli dal 1734 al 1759) e alla moglie Maria Amalia: orafi, ceramisti e scultori si misero a fare le statuine dei pastori."
+    fonti: [st-treccani-presepe, st-treccani-presepio-lingua]
+    citazione: "Carlo III di Borbone, re di Napoli dal 1734 al 1759, e di sua moglie Maria Amalia"
+    leggenda: false
+  - id: st-sangregorio-ottocento
+    tappa: spaccanapoli
+    testo: "Secondo Treccani fu nell'Ottocento che la produzione dei presepi si concentrò nel rione di San Gregorio Armeno. Italia.it dice invece, senza data precisa, che le statuine dei presepi nascono qui «intorno al Settecento»."
+    fonti: [st-treccani-presepio-lingua, st-italia-sangregorio]
+    citazione: "Nell'Ottocento la produzione si concentra nel rione di San Gregorio Armeno"
+    leggenda: false
+  - id: st-sangregorio-cerere
+    tappa: spaccanapoli
+    testo: "Si racconta che qui sorgesse un tempio della dea Cerere e che i fedeli portassero statuette di terracotta, da cui sarebbero nate le prime botteghe. Italia.it lo scrive come fatto, ma è una tradizione non provata nella pagina: dirlo come racconto."
+    fonti: [st-italia-sangregorio]
+    citazione: "Tempio della Dea Cerere"
+    leggenda: true
+  - id: st-sangregorio-monastero
+    tappa: spaccanapoli
+    testo: "Le reliquie di San Gregorio Armeno arrivarono a Napoli con le monache basiliane fuggite dalla guerra iconoclasta. La data di fondazione non è nota, ma il monastero esisteva già prima dell'XI secolo. Dopo il Concilio di Trento fu rifatto, e il chiostro ha una fontana barocca con le statue di Cristo e della Samaritana."
+    fonti: [st-fai-sangregorio-chiostro]
+    citazione: "La fondazione precisa rimane sconosciuta, ma fonti storiche indicano l'esistenza precedente all'XI secolo"
+    leggenda: false
+  - id: st-sangregorio-pastori
+    tappa: spaccanapoli
+    testo: "Oggi tra i pastori classici le botteghe espongono anche statuine di personaggi della televisione, del cinema e della cultura napoletana: Totò, Pino Daniele, Eduardo, Troisi."
+    fonti: [st-fai-sangregorio-via]
+    citazione: "pastori poco convenzionali, raffiguranti personaggi della televisione, del cinema e della cultura partenopea come Totò, Pino Daniele, Eduardo e Troisi"
+    leggenda: false
+
+  # ================= san-lorenzo =================
+  - id: st-sanlorenzo-strati
+    tappa: san-lorenzo
+    testo: "La basilica francescana sorge sul sito di un edificio sacro del VI secolo e di un antico macellum, il mercato romano. Sotto la chiesa, a circa 10 metri di profondità, si cammina nella Neapolis greca e romana."
+    fonti: [st-arte-sanlorenzo, st-scabec-sanlorenzo]
+    citazione: "sorge sul sito di un edificio sacro del VI secolo e di un antico 'macellum', il mercato di epoca romana"
+    leggenda: false
+  - id: st-sanlorenzo-agora
+    tappa: san-lorenzo
+    testo: "Già nel V secolo a.C. al centro dell'insediamento greco era stata disegnata una piazza su due livelli, l'agorà. L'area è ciò che resta del foro romano di Neapolis, sovrapposto all'agorà greca."
+    fonti: [st-mic-sanlorenzo, st-scabec-sanlorenzo, st-dmo-sanlorenzo]
+    citazione: "As early as the 5th century BC, a square had been designed in the centre of the Greco-Roman settlement"
+    leggenda: false
+  - id: st-sanlorenzo-macellum
+    tappa: san-lorenzo
+    testo: "Il macellum risale alla seconda metà del I secolo d.C.: uno spazio rettangolare con portici e botteghe, un cortile interno con pavimento a mosaico e al centro una tholos, un edificio circolare per la vendita del cibo. Si vedono nove tabernae (botteghe) e un criptoportico."
+    fonti: [st-mic-sanlorenzo, st-scabec-sanlorenzo]
+    citazione: "the macellum dates to the second half of the 1st century CE"
+    leggenda: false
+  - id: st-sanlorenzo-botteghe
+    tappa: san-lorenzo
+    testo: "Tra le botteghe del macellum si riconoscono la lavanderia, il forno e il tesoro della città (aerarium)."
+    fonti: [st-dmo-sanlorenzo]
+    citazione: "the laundry, the bakery, and the treasury (aerarium)"
+    leggenda: false
+  - id: st-sanlorenzo-alluvioni
+    tappa: san-lorenzo
+    testo: "Alla fine del V secolo d.C. il sito fu coperto da depositi alluvionali (fango portato dall'acqua). Così la città antica rimase sepolta e conservata sotto quella nuova."
+    fonti: [st-mic-sanlorenzo]
+    citazione: "Late Antiquity (5th century CE): The site was covered by alluvial deposits"
+    leggenda: false
+  - id: st-sanlorenzo-basilica
+    tappa: san-lorenzo
+    testo: "I lavori della basilica gotica cominciarono dopo il 1270, voluti da Carlo I d'Angiò; gli architetti francesi disegnarono l'abside poligonale con il deambulatorio diviso in cappelle."
+    fonti: [st-arte-sanlorenzo, st-scabec-sanlorenzo]
+    citazione: "l'abside poligonale con il deambulatorio diviso in cappelle"
+    leggenda: false
+  - id: st-sanlorenzo-boccaccio
+    tappa: san-lorenzo
+    testo: "Per tradizione qui, il Sabato Santo del 1334, il giovane Boccaccio vide per la prima volta «Fiammetta» (Maria d'Aquino, forse figlia di re Roberto). Petrarca nel 1346 visse nel convento accanto alla chiesa. L'incontro con Fiammetta è tradizione, non fatto provato."
+    fonti: [st-dmo-sanlorenzo, st-arte-sanlorenzo]
+    citazione: "a young Giovanni Boccaccio first laid eyes on 'Fiammetta' (Maria d'Aquino) during a Holy Saturday in 1334 (DMO); Petrarca resided in the adjoining convent in 1346 (arte.it)"
+    leggenda: true
+
+non_trovato:
+  - "Sito ufficiale del complesso (laneapolissotterrata.it, anche senza www, pagine /Home/Storia, /Home/DettaglioArticolo/3089 e /3148, versione /en/): WebFetch risponde sempre 403 Forbidden. Per i fatti di San Lorenzo ho usato Ministero della cultura, Scabec (Regione Campania) e la scheda DMO Napoli che riprende i testi del sito. Se la rilettura vuole proprio il sito ufficiale, va aperto a mano dal browser."
+  - "Scheda UNESCO originale (whc.unesco.org/en/list/726, /documents, /document/217862): 403 Forbidden. Ho usato la scheda UNESCO sul sito del Ministero della cultura (unesco.cultura.gov.it), che riporta anno, criteri e le frasi del criterio (ii) e (iv)."
+  - "gesunuovo.it (home): pagina quasi vuota. Ho usato la pagina «Breve guida artistica» (gesunuovo.it/Italiano/It_chiesaGN.html), che si è aperta."
+  - "Anno di fondazione di Neapolis oltre al 470 a.C.: fonti discordi (vedi dubbi); non ho trovato una fonte ufficiale che spieghi la differenza."
+  - "Fonte ufficiale (comune, ministero) sulla storia dei presepi di San Gregorio Armeno: non trovata. Ho usato Treccani e FAI; la pagina del Comune su via dei Tribunali (comune.napoli.it ... decumano-maggiore-via-dei-tribunali) dà 404 e la scheda IDPagina/17402 pure."
+  - "Anno di inizio delle botteghe di presepi in via San Gregorio Armeno: nessuna fonte letta lo dà con una data (Italia.it: «intorno al Settecento»; Treccani: concentrazione nell'Ottocento)."
+  - "Curiosità sul Gesù Nuovo come la bomba inesplosa del 1943 o la «partitura» nascosta nelle bugne: trovate solo su blog (whatsdownthatstreet.com) o come interpretazione smentita; non incluse."
+
+dubbi:
+  - "Gesù Nuovo, quando i Gesuiti presero il palazzo: sito della chiesa dice acquisito nel 1584 per 46.000 ducati dopo la confisca dei beni di Ferrante Sanseverino (rivolta del 1547); Napolike scrive che la confisca è legata alla «congiura dei baroni» e che la chiesa fu aperta al culto nel 1597; gesuiti.it scrive che nel 1597 la Compagnia acquisì l'edificio. Una ricerca (non una pagina aperta) parlava di 45.000 ducati. Uso il sito della chiesa: 1584, 46.000 ducati."
+  - "San Lorenzo Maggiore: FAI (pagina via dei Tribunali) la chiama «chiesa del XII secolo», mentre Ministero, Scabec e arte.it parlano di basilica gotica del Duecento, lavori dopo il 1270 con Carlo I d'Angiò. Uso Duecento/dopo il 1270."
+  - "Scavi di San Lorenzo: museionline.info dice «iniziati nel 1976» e poi «iniziati negli anni ottanta... conclusi nel maggio 2009»: si contraddice, non usato per le date degli scavi."
+  - "Date della fondazione di Neapolis: circa 470 a.C. (Treccani, UNESCO/Ministero) contro fine VI secolo a.C. (FAI, Discover Campania)."
+  - "Citazioni: le pagine sono state lette con WebFetch, che restituisce un riassunto con alcune frasi tra virgolette; le frasi in inglese (UNESCO, Scabec, DMO, Ministero) sono nella lingua della pagina. Le frasi in 'citazione' vanno riscontrate sulla pagina in fase di rilettura."
+  - "Tempio di Cerere a San Gregorio Armeno: Italia.it lo dà come fatto, altre pagine lo chiamano tempio di Cerere Attica o tradizione; segnato come leggenda."
+  - "Boccaccio e Fiammetta: tradizione, non fatto storico provato (arte.it: «forse Maria»; DMO: «according to tradition»). La data 1334 viene dal DMO; altre fonti citate dai motori di ricerca dicono 1331 o 1332 (non aperte)."

@@ -36,6 +36,8 @@ Rispondi in italiano semplice e spiega i termini tecnici.
 - Stato e prossimi passi: `PROGRESS.md` (corto).
 - Lavora su un ramo nuovo creato da `main`. Niente pubblicazione su `main` senza l'OK di Enrico: ogni rilascio parte solo dopo il suo OK, dopo l'anteprima di Vercel (link e immagini su telefono, tema chiaro e scuro).
 - **Una funzione nuova parte dal problema di chi visita il sito**: scrivi quale problema risolve e perché non basta migliorare una funzione che c'è già. Se non lo sai dire, non si costruisce.
+- **Design: sempre 4 proposte** (Enrico, 07/10/2026). Ogni pezzo di grafica da fare o rifare (una sezione della home, la scheda della tappa, la barra di ricerca, il compositore…) si propone in **4 versioni molto diverse tra loro**, all'inizio con campo libero, curate e professionali. Enrico dice cosa va e cosa no; da quello che va si fanno altre 4 proposte, fino alla scelta. Un pezzo alla volta.
+- **Ricerche: si salva tutto** (Enrico, 07/10/2026). Tutti i fatti e le fonti trovati dagli agenti restano nel progetto (`ricerca/`), anche quelli che non si usano subito.
 - Per una funzione nuova e grande (per esempio una città nuova) scrivi prima una **specifica** corta in `specifiche/` (obiettivo, regole, casi limite, controlli da fare, compiti da spuntare)
   e fala approvare, poi costruisci. Per le piccole modifiche non serve.
 - Alla fine di un blocco fermati, mostra cosa c'è da rivedere e aspetta l'OK.

@@ -1,0 +1,381 @@
+# Gruppo 3 - il Vomero e la discesa (sant-elmo, san-martino, pedamentina, toledo)
+# Ricerca del 2026-10-07. Le pagine sono state aperte con WebFetch; le citazioni sono
+# quelle restituite dal lettore di pagine (il testo e' riassunto dallo strumento: da
+# controllare a mano sulle pagine prima di pubblicare). Fonti gia' in fonti.yaml riusate:
+# tp-mic-santelmo, tp-mic-sanmartino, tp-comune-pedamentina, tp-anm-metroart-toledo.
+
+fonti:
+  # --- Sant'Elmo ---
+  - id: st-santelmo-opencampania
+    titolo: "Castel Sant'Elmo"
+    editore: "OpenCampania (i musei della Campania in rete, Ministero della Cultura)"
+    url: https://www.opencampania.it/en/poi/Castel-Sant-Elmo/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-santelmo-pnrr
+    titolo: "Napoli - Castel Sant'Elmo - Lavori di restauro, adeguamento funzionale, adeguamento impiantistico - Lotto 1"
+    editore: "Ministero della Cultura, Programmazione strategica"
+    url: https://programmazionestrategica.cultura.gov.it/progetto/napoli-castel-santelmo/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-santelmo-treccani-erasmo
+    titolo: "ERASMO, Santo"
+    editore: "Treccani, Enciclopedia Italiana"
+    url: https://www.treccani.it/enciclopedia/santo-erasmo_(Enciclopedia-Italiana)/
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-santelmo-treccani-napoli
+    titolo: "Napoli"
+    editore: "Treccani, Enciclopedia Italiana"
+    url: https://www.treccani.it/enciclopedia/napoli/
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-vomero-musei
+    titolo: "Musei nazionali del Vomero"
+    editore: "Direzione regionale Musei nazionali Campania, Ministero della Cultura"
+    url: https://museinazionalivomero.cultura.gov.it/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  # --- San Martino ---
+  - id: st-sanmartino-opencampania
+    titolo: "Certosa di San Martino"
+    editore: "OpenCampania (i musei della Campania in rete, Ministero della Cultura)"
+    url: https://cc-opencampania.inera.it/en/poi/Certosa-San-Martino/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-sanmartino-presepe
+    titolo: "Presepe Cuciniello (Certosa di San Martino, Sezione presepiale)"
+    editore: "OpenCampania (i musei della Campania in rete, Ministero della Cultura)"
+    url: https://www.opencampania.it/en/artworks/artwork/Presepe-Cucinello/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  # --- Pedamentina ---
+  - id: st-pedamentina-dmo
+    titolo: "The Pedamentina: Discovering Naples on Foot"
+    editore: "DMO Napoli (Comune di Napoli, Assessorato al Turismo)"
+    url: https://dmo-napoli.inera.it/en/article/the-pedamentina-discovering-naples-on-foot/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  # --- Toledo: strada, Quartieri, stazione ---
+  - id: st-toledo-comune-aneddoti
+    titolo: "Via, Toledo!"
+    editore: "Comune di Napoli (Lo storico palazzo comunale, Aneddoti e curiosita')"
+    url: https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/cultura/lo-storico-palazzo-comunale/aneddoti-e-curiosita/via-toledo/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-toledo-fai-via
+    titolo: "Via Toledo"
+    editore: "FAI - Fondo Ambiente Italiano"
+    url: https://fondoambiente.it/luoghi/via-toledo
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-toledo-touring-via
+    titolo: "Via Toledo"
+    editore: "Touring Club Italiano"
+    url: https://www.touringclub.it/destinazioni/napoli/vedere/136855-via-toledo
+    tipo: stampa
+    controllato: 2026-10-07
+    letta: true
+  - id: st-toledo-treccani-pedro
+    titolo: "TOLEDO, Pedro de, marchese di Villafranca, viceré di Napoli"
+    editore: "Treccani, Enciclopedia Italiana"
+    url: https://www.treccani.it/enciclopedia/toledo-pedro-de-marchese-di-villafranca-vicere-di-napoli_(Enciclopedia-Italiana)/
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-quartieri-fai
+    titolo: "Quartieri Spagnoli"
+    editore: "FAI - Fondo Ambiente Italiano"
+    url: https://fondoambiente.it/luoghi/quartieri-spagnoli
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-quartieri-italiait
+    titolo: "Quartieri Spagnoli"
+    editore: "italia.it (portale del turismo, ENIT)"
+    url: https://www.italia.it/it/campania/napoli/quartieri-spagnoli
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-toledo-porfesr
+    titolo: "Ancora un riconoscimento per la stazione Toledo della metropolitana di Napoli"
+    editore: "POR Campania FESR, Regione Campania"
+    url: https://porfesr.regione.campania.it/it/news/primo-piano/ancora-un-riconoscimento-per-la-stazione-toledo-della-metropolitana-di-napoli
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-toledo-censimento
+    titolo: "STAZIONE LINEA 1 MN TOLEDO - Scheda opera"
+    editore: "Ministero della Cultura, Censimento delle architetture italiane dal 1945 ad oggi"
+    url: http://censimentoarchitetturecontemporanee.cultura.gov.it/scheda-opera?id=438
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+
+fatti:
+  # ============ Castel Sant'Elmo (sant-elmo) ============
+  - id: st-santelmo-belforte
+    tappa: sant-elmo
+    testo: "Le prime notizie sul castello risalgono al 1275: era una residenza fortificata degli Angioini, chiamata Belforte."
+    fonti: [tp-mic-santelmo, st-santelmo-pnrr]
+    citazione: "Le prime notizie risalgono al 1275, quando era una residenza fortificata angioina, denominata Belforte"
+    leggenda: false
+  - id: st-santelmo-roberto
+    tappa: sant-elmo
+    testo: "Nel 1329 il re Roberto d'Angiò ordinò di ampliarlo e affidò i lavori a Tino di Camaino."
+    fonti: [tp-mic-santelmo]
+    citazione: "Nel 1329, Roberto d'Angiò ordinò l'ampliamento, affidando i lavori a Tino di Camaino"
+    leggenda: false
+  - id: st-santelmo-nome
+    tappa: sant-elmo
+    testo: "Il nome viene da Sant'Erasmo: sul colle c'era una cappella dedicata a lui, e dal 1329 si parla di castrum Sancti Erasmi. Erasmo è diventato Ermo e poi Elmo."
+    fonti: [st-santelmo-pnrr, st-santelmo-treccani-erasmo]
+    citazione: "sorge dal 1329 il castrum Sancti Erasmi, per la presenza di una cappella dedicata a Sant'Erasmo"
+    leggenda: false
+    nota: "Il passaggio Sant'Ermo poi Sant'Elmo e' nel testo del MiC (viceregno spagnolo: chiamato poi Sant'Ermo e poi Sant'Elmo); Treccani: conserva il ricordo del santo nel nome del suo castello (Castel S. Elmo). Controllare la formulazione prima di scrivere."
+  - id: st-santelmo-stella
+    tappa: sant-elmo
+    testo: "La pianta a stella a sei punte è del Cinquecento: la volle il viceré Pedro de Toledo e la ricostruzione durò dal 1537 al 1547. Il progetto è dell'ingegnere militare spagnolo Pedro Luis Escrivà."
+    fonti: [tp-mic-santelmo, st-santelmo-opencampania]
+    citazione: "L'attuale configurazione con l'impianto stellare a sei punte si deve invece alla ricostruzione cinquecentesca, voluta, tra il 1537 e il 1547, da Don Pedro de Toledo"
+    leggenda: false
+  - id: st-santelmo-escriva
+    tappa: sant-elmo
+    testo: "Escrivà descrisse il monte come aspro e frastagliato, e molti pensavano che un castello lassù fosse quasi impossibile da costruire."
+    fonti: [st-santelmo-opencampania]
+    citazione: "rugged and jagged ... practically impossible that it could be built"
+    leggenda: false
+    nota: "Pagina OpenCampania in inglese: la citazione e' la traduzione inglese; l'originale di Escrivà non e' stato letto. Da riverificare sulla pagina prima di usarlo."
+  - id: st-santelmo-prigione
+    tappa: sant-elmo
+    testo: "Fu una prigione: ci furono rinchiusi Tommaso Campanella, accusato di eresia, e più tardi i patrioti della rivoluzione napoletana del 1799. Restò carcere militare fino al 1952."
+    fonti: [tp-mic-santelmo]
+    citazione: "vi furono rinchiusi Tommaso Campanella, accusato di eresia, e più tardi i patrioti della rivoluzione napoletana del 1799"
+    leggenda: false
+  - id: st-santelmo-1799
+    tappa: sant-elmo
+    testo: "Durante la rivolta di Masaniello (1647) fu rifugio del viceré; nel 1799 fu il centro della rivoluzione che portò alla Repubblica napoletana, proclamata dai giacobini in Castel Sant'Elmo il 24 gennaio 1799."
+    fonti: [st-santelmo-opencampania, st-santelmo-treccani-napoli]
+    citazione: "proclamata dai giacobini a N. in Castel S. Elmo, il 24 gennaio 1799"
+    leggenda: false
+  - id: st-santelmo-esplosione
+    tappa: sant-elmo
+    testo: "Un'esplosione distrusse molti edifici sulla Piazza d'Armi: furono ricostruiti tra il 1599 e il 1610."
+    fonti: [st-santelmo-opencampania]
+    citazione: "Un'esplosione distrusse molti edifici sulla Piazza d'Armi, che vennero ricostruiti tra il 1599 e il 1610."
+    leggenda: false
+    nota: "Dal riassunto dello strumento della pagina inglese. Il motivo dell'esplosione (fulmine nel 1587) e' solo su Wikipedia inglese: non usato."
+  - id: st-santelmo-museo
+    tappa: sant-elmo
+    testo: "Dal 1976 ci furono grandi restauri; dal 2010 ospita il Museo Novecento. Oggi è sede anche della Direzione regionale Musei nazionali Campania."
+    fonti: [tp-mic-santelmo]
+    citazione: "A partire dal 1976 subì un imponente intervento di restauro ... il Museo Novecento, inaugurato nel 2010"
+    leggenda: false
+
+  # ============ Certosa e Museo di San Martino (san-martino) ============
+  - id: st-sanmartino-fondazione
+    tappa: san-martino
+    testo: "La Certosa fu fondata nel 1325 da Carlo di Calabria, figlio del re Roberto d'Angiò. Il progetto era di Tino di Camaino: restano i grandiosi sotterranei gotici."
+    fonti: [tp-mic-sanmartino]
+    citazione: "fondata nel 1325 da Carlo di Calabria, figlio di re Roberto d'Angiò ... i grandiosi sotterranei gotici"
+    leggenda: false
+  - id: st-sanmartino-fanzago
+    tappa: san-martino
+    testo: "Dal 1623 al 1656 l'architetto Cosimo Fanzago trasformò il monastero gotico in un capolavoro barocco."
+    fonti: [tp-mic-sanmartino, st-sanmartino-opencampania]
+    citazione: "protagonista assoluto, tra 1623 e 1656, dell'evoluzione in senso barocco della Chiesa"
+    leggenda: false
+    nota: "OpenCampania parla della Chiesa; cultura.gov.it dice 'dal 1623 al 1656' e parla del monastero intero. Citare cultura.gov.it."
+  - id: st-sanmartino-artisti
+    tappa: san-martino
+    testo: "Ci lavorarono pittori come Lanfranco, Ribera, Luca Giordano e Solimena, e scultori come Pietro Bernini e Giuseppe Sammartino."
+    fonti: [tp-mic-sanmartino]
+    citazione: "Giovanni Lanfranco, Jusepe de Ribera, Luca Giordano e Francesco Solimena ... Pietro Bernini e Giuseppe Sammartino"
+    leggenda: false
+  - id: st-sanmartino-chiostro
+    tappa: san-martino
+    testo: "Il Chiostro Grande, definito il cuore pulsante della vita monastica, fu ampliato dal 1581 da Giovanni Antonio Dosio e completato da Fanzago."
+    fonti: [tp-mic-sanmartino]
+    citazione: "cuore pulsante della vita monastica"
+    leggenda: false
+    nota: "La frase su Dosio dal 1581 e Fanzago e' riassunto dello strumento, non citazione diretta: riverificare."
+  - id: st-sanmartino-museo
+    tappa: san-martino
+    testo: "Nel 1866, con la soppressione degli ordini religiosi, la Certosa fu trasformata in museo per volontà di Giuseppe Fiorelli; aprì al pubblico nel 1867."
+    fonti: [tp-mic-sanmartino, st-sanmartino-opencampania]
+    citazione: "la Certosa viene trasformata in museo per volontà di Giuseppe Fiorelli"
+    leggenda: false
+    nota: "1866 (trasformazione) e 1867 (apertura al pubblico come Museo Nazionale) sono in due fonti, non in contrasto."
+  - id: st-sanmartino-cuciniello
+    tappa: san-martino
+    testo: "Il Presepe Cuciniello, inaugurato nel 1879, ha circa ottocento pezzi, disposti su uno scoglio diviso in tre scene: la Natività in un tempio romano in rovina, la taverna, l'annuncio ai pastori."
+    fonti: [tp-mic-sanmartino, st-sanmartino-presepe]
+    citazione: "Il celebre Presepe Cuciniello, inaugurato nel 1879, contiene circa ottocento pezzi"
+    leggenda: false
+  - id: st-sanmartino-luce
+    tappa: san-martino
+    testo: "Un impianto di luci simula l'alternarsi di alba, giorno, tramonto e notte. Michele Cuciniello (1825-1889), commediografo e architetto napoletano, lo donò al museo."
+    fonti: [st-sanmartino-presepe]
+    citazione: "L'opera è dotata di un impianto di illuminazione che simula l'alternarsi dell'alba, del giorno, del tramonto e della notte"
+    leggenda: false
+
+  # ============ Pedamentina (pedamentina) ============
+  - id: st-pedamentina-antica
+    tappa: pedamentina
+    testo: "Di tutte le strade pedonali che scendono dal Vomero verso il centro, la Pedamentina è probabilmente una delle più antiche."
+    fonti: [tp-comune-pedamentina]
+    citazione: "Di tutte le strade pedonali che scendono dal Vomero verso il centro della città, la Pedamentina è probabilmente una delle più antiche."
+    leggenda: false
+  - id: st-pedamentina-percorso
+    tappa: pedamentina
+    testo: "Parte dal largo San Martino, davanti alla Certosa, scende per rampe e tornanti fino a corso Vittorio Emanuele e prosegue idealmente con le scale di Montesanto."
+    fonti: [tp-comune-pedamentina]
+    citazione: "attraverso una serie di rampe e tornanti fino a Corso Vittorio Emanuele, proseguendo idealmente per le scale di Montesanto"
+    leggenda: false
+  - id: st-pedamentina-gradini
+    tappa: pedamentina
+    testo: "Ha 414 gradini."
+    fonti: [st-pedamentina-dmo]
+    citazione: "414 steps of wonder"
+    leggenda: false
+    nota: "Una sola fonte ufficiale (DMO Napoli, in inglese). Il Comune (tp-comune-pedamentina) non dà il numero. Siti turistici ripetono 414: nessuna seconda fonte buona letta."
+  - id: st-pedamentina-xiv
+    tappa: pedamentina
+    testo: "Fu costruita nel Trecento per collegare la Certosa alla città."
+    fonti: [st-pedamentina-dmo]
+    citazione: "Built in the 14th century to connect the Certosa to the city"
+    leggenda: false
+  - id: st-pedamentina-scorci
+    tappa: pedamentina
+    testo: "Scendendo si incontra una successione di scorci panoramici sul golfo."
+    fonti: [tp-comune-pedamentina]
+    citazione: "una successione di scorci panoramici mozzafiato"
+    leggenda: false
+
+  # ============ Via Toledo, Quartieri Spagnoli, stazione Toledo (toledo) ============
+  # La tappa 'toledo' ha tre pezzi (strada, Quartieri, stazione): piu' di 7 fatti per poter scegliere.
+  - id: st-toledo-1536
+    tappa: toledo
+    testo: "Via Toledo fu aperta nel 1536 dal viceré Don Pedro Alvarez de Toledo, marchese di Villafranca, come asse principale dell'espansione della città."
+    fonti: [st-toledo-comune-aneddoti, st-toledo-touring-via]
+    citazione: "era, infatti, il 1536 quando il viceré don Pedro Alvarez de Toledo, marchese di Villafranca, la inaugurò"
+    leggenda: false
+    nota: "DATE DIVERSE: il FAI (st-toledo-fai-via) dice 'tracciata nel 1540, resa percorribile nel '44 e completata nel '49'. Si puo' dire: aperta nel 1536 (Comune, Touring), lavori fino al 1549 (FAI)."
+  - id: st-toledo-chiavicone
+    tappa: toledo
+    testo: "Fu costruita anche per coprire il Chiavicone, la fogna a cielo aperto che raccoglieva acque e scarichi della collina del Vomero. Gli architetti furono Giovanni Benincasa e Ferdinando Manlio."
+    fonti: [st-toledo-fai-via]
+    citazione: "per ricoprire il famigerato 'Chiavicone', la fogna a cielo aperto che raccogliendo le acque ed i liquami della collina del Vomero"
+    leggenda: false
+    nota: "Solo FAI (tipo altro). Il Comune non ne parla."
+  - id: st-toledo-percorso
+    tappa: toledo
+    testo: "All'inizio andava da piazza Dante (allora piazza Mercatello) fino a piazza Trieste e Trento e al Plebiscito; oggi è lunga circa 2 km."
+    fonti: [st-toledo-fai-via, st-toledo-touring-via]
+    citazione: "andava dall'attuale piazza Dante (già pazza Mercatello) fino a Piazza Trieste e Trento e all'odierna Piazza del Plebiscito"
+    leggenda: false
+  - id: st-toledo-viaroma
+    tappa: toledo
+    testo: "Nel 1870 il sindaco Paolo Emilio Imbriani propose di chiamarla via Roma; si decise per «via Roma già via Toledo». In città girava la strofa «non mena a Roma ma mena ad Aversa». Il nome Toledo è tornato nel 1980."
+    fonti: [st-toledo-comune-aneddoti, st-toledo-fai-via]
+    citazione: "la strada si sarebbe chiamata 'via Roma già via Toledo'"
+    leggenda: false
+    nota: "Il 1980 (giunta Valenzi) e' solo nel FAI; la rima e' nel Comune."
+  - id: st-toledo-sfogliatella
+    tappa: toledo
+    testo: "Al numero 275 c'è una pasticceria dove si dice che ai primi dell'Ottocento sia stata perfezionata la sfogliatella napoletana."
+    fonti: [st-toledo-touring-via]
+    citazione: "si dice che qui sia stata perfezionata ai primi dell'800 la sfogliatella napoletana"
+    leggenda: true
+    nota: "'Si dice': dato non verificato. CLAUDE.md vieta loghi/nomi di aziende: la fonte fa il nome (Pintauro), valutare se citarlo."
+  - id: st-quartieri-soldati
+    tappa: toledo
+    testo: "I Quartieri Spagnoli nacquero nel Cinquecento: Don Pedro de Toledo li volle per ospitare i soldati spagnoli, incaricati di reprimere eventuali rivolte dei napoletani."
+    fonti: [st-quartieri-fai, st-quartieri-italiait]
+    citazione: "al fine di ospitare i suoi soldati che avevano il compito di reprimere eventuali ribellioni napoletane"
+    leggenda: false
+  - id: st-quartieri-truppe
+    tappa: toledo
+    testo: "I palazzi ospitavano anche le truppe spagnole dirette ad altri fronti di guerra, che facevano tappa a Napoli."
+    fonti: [st-quartieri-fai]
+    citazione: "le truppe spagnole dirette su altri fronti di guerra, che facevano tappa a Napoli"
+    leggenda: false
+  - id: st-quartieri-strade
+    tappa: toledo
+    testo: "Le strade dei Quartieri sono o parallele a via Toledo o salgono verso corso Vittorio Emanuele; l'origine spagnola resta nei nomi, come via Trinità degli Spagnoli."
+    fonti: [st-quartieri-fai]
+    citazione: "Le strade dei Quartieri Spagnoli sono o parallele a via Toledo o salgono in alto verso corso Vittorio Emanuele"
+    leggenda: false
+  - id: st-quartieri-montecalvario
+    tappa: toledo
+    testo: "Il quartiere è noto anche come Montecalvario, dal nome della chiesa di Santa Maria della Mercede a Montecalvario, fondata nel 1560."
+    fonti: [st-quartieri-italiait]
+    citazione: "noto anche come Montecalvario ... fondata nel 1560"
+    leggenda: false
+    nota: "Citazione abbreviata dal riassunto dello strumento: riverificare l'esatta frase sulla pagina."
+  - id: st-metro-tusquets
+    tappa: toledo
+    testo: "La stazione Toledo è dell'architetto catalano Oscar Tusquets Blanca; è stata inaugurata il 17 settembre 2012."
+    fonti: [st-toledo-porfesr, tp-anm-metroart-toledo, st-toledo-censimento]
+    citazione: "17 settembre 2012 ... Óscar Tusquets Blanca"
+    leggenda: false
+    nota: "DATE DIVERSE: Metroart/ANM e scheda MiC dicono solo '2012'; POR FESR dice 17 settembre 2012; Wikipedia (non usabile come fonte) dice 17 aprile 2012. Usare il 17 settembre solo con la fonte POR FESR. Citazione riassunta dallo strumento."
+  - id: st-metro-crater
+    tappa: toledo
+    testo: "Il «Crater de luz» è un grande cono che attraversa tutti i livelli e porta la luce dalla strada alla hall, 40 metri sottoterra."
+    fonti: [tp-anm-metroart-toledo]
+    citazione: "Un grande cono che attraversa in profondità tutti i livelli della stazione, collegando il piano della strada con la spettacolare hall costruita 40 metri sottoterra."
+    leggenda: false
+  - id: st-metro-colori
+    tappa: toledo
+    testo: "Scendendo il colore cambia: giallo caldo come il tufo, poi a quota 0, il livello del mare, i mosaici azzurri sempre più intensi man mano che si va in profondità."
+    fonti: [tp-anm-metroart-toledo]
+    citazione: "fino ad arrivare alla quota 0, il livello del mare, segnalato dal passaggio agli spettacolari mosaici di un azzurro che si fa sempre più intenso"
+    leggenda: false
+  - id: st-metro-mura
+    tappa: toledo
+    testo: "Al primo piano interrato si vedono i resti della cinta muraria di età aragonese."
+    fonti: [tp-anm-metroart-toledo]
+    citazione: "i resti della cinta muraria di età aragonese al primo piano interrato"
+    leggenda: false
+    nota: "Citazione riassunta dallo strumento (il testo dice che il progetto integra i resti): riverificare."
+  - id: st-metro-artisti
+    tappa: toledo
+    testo: "Nella stazione ci sono due grandi mosaici di William Kentridge e le opere di luce di Robert Wilson, oltre a opere di Toscani, Weiner, Cevoli e Neshat."
+    fonti: [tp-anm-metroart-toledo, st-toledo-censimento]
+    citazione: "un grande mosaico di Kentridge inaugura la compresenza in un unico spazio di valori appartenenti alla storia della città e all'espressione contemporanea"
+    leggenda: false
+  - id: st-metro-premi
+    tappa: toledo
+    testo: "Il 30 novembre 2012 il Daily Telegraph la definì «la più impressionante d'Europa»; il 4 febbraio 2014 la CNN la elesse «la più bella d'Europa»."
+    fonti: [st-toledo-porfesr]
+    citazione: "30 novembre 2012 - The Daily Telegraph: la più impressionante d'Europa; 4 febbraio 2014 - CNN: la più bella d'Europa"
+    leggenda: false
+    nota: "Notizia riportata da un sito regionale, non dai giornali stessi (Telegraph e CNN non letti). Scriverlo come fatto del passato letto sui giornali (comeFatto: true) o «secondo la Regione Campania»."
+  - id: st-metro-pozzo
+    tappa: toledo
+    testo: "Il pozzo a sezione ellittica che scende nella stazione è ispirato alle cave di tufo romane."
+    fonti: [st-toledo-censimento]
+    citazione: "pozzo rastremato a sezione ellittica, ispirato alle cave di tufo romane"
+    leggenda: false
+
+non_trovato:
+  - "Pedamentina: chi la costruì e quando esattamente. Il Comune di Napoli non dà né data né costruttori; DMO Napoli dice 'XIV secolo' senza costruttori. Napolike.it (sito turistico privato, nessuna fonte citata) attribuisce l'opera a 'Tino di Campione e Francesco de Vito' e dice che serviva a scopi difensivi per Sant'Elmo: DUBBIO (il nome 'Tino di Campione' sembra confuso con Tino di Camaino), non usato nei fatti."
+  - "Pedamentina: seconda fonte ufficiale per i 414 gradini (cercato su comune.napoli.it, cultura.gov.it, treccani; solo DMO Napoli, in inglese, lo dice)."
+  - "Pedamentina: leggende o aneddoti (cercato su DMO Napoli e comune.napoli.it: nessuno)."
+  - "Sant'Elmo: sito del museo (museinazionalivomero.cultura.gov.it) letto solo in home; storia estesa solo su cultura.gov.it. Date di eventi (terremoto 1456, fulmine alla polveriera 1587, Campanella 1604) presenti soltanto su Wikipedia inglese (pista, non usata)."
+  - "San Martino: museosanmartino.cultura.gov.it non raggiungibile (dominio inesistente); la pagina FAI della Certosa non dà storia. Nessuna fonte ufficiale letta su Napoleone, la soppressione murattiana o il panorama."
+  - "Via Toledo: la pagina del Comune IDPagina/5731 (ServeBLOB) dà 404; usata la versione articolo_tematico, che non parla di Chiavicone e architetti (quelli sono solo nel FAI)."
+  - "Quartieri Spagnoli: pagina NapoliForMe del Comune vuota; pagina Comune 'Guida di Napoli al femminile' (IDPagina/4700) 404; Treccani su Pedro de Toledo non nomina i Quartieri. Trovati solo FAI e italia.it. Un passo del Comune sulle caserme dopo l'apertura di via Toledo compare solo in un risultato di ricerca, non letto."
+  - "Stazione Toledo: il PDF del Comune (settembre 2012) è codificato e illeggibile; pagina Domus 403. Profondità: Metroart dice 40 m (hall); altre fonti non ufficiali (non lette per intero) dicono 38 m. Data di inaugurazione 17 settembre 2012 solo da POR FESR; Wikipedia dice 17 aprile."
+  - "Stazione Toledo: citazioni dirette di Telegraph e CNN non lette (solo il riassunto del sito regionale)."

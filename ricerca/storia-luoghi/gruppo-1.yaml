@@ -1,0 +1,343 @@
+# Ricerca fonti sulla storia dei luoghi, gruppo 1 (MANN, Sansevero, Santa Chiara, Duomo). Pagine aperte con WebFetch il 2026-10-07.
+# ATTENZIONE: WebFetch restituisce un riassunto fatto da un modello piccolo, non il testo grezzo. Le citazioni tra virgolette
+# sono quelle che WebFetch ha riportato come testo della pagina; date e nomi indicati in «nota» come «nel riassunto» NON sono
+# tra virgolette: da rileggere sulla pagina prima di pubblicare. Le fonti già in fonti.yaml sono riusate con il loro id (tp-italia-duomo).
+
+fonti:
+  # --- MANN ---
+  - id: st-mann-storia
+    titolo: "Storia del museo"
+    editore: "Museo Archeologico Nazionale di Napoli"
+    url: https://www.museoarcheologiconapoli.it/storia-del-museo/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-mann-mosaici
+    titolo: "Mosaici (collezione)"
+    editore: "Museo Archeologico Nazionale di Napoli"
+    url: https://www.museoarcheologiconapoli.it/portfolio-item/mosaici/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-mann-farnese
+    titolo: "Farnese (collezione)"
+    editore: "Museo Archeologico Nazionale di Napoli"
+    url: https://www.museoarcheologiconapoli.it/portfolio-item/farnese/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-mann-gabinetto
+    titolo: "Gabinetto Segreto (collezione)"
+    editore: "Museo Archeologico Nazionale di Napoli"
+    url: https://www.museoarcheologiconapoli.it/portfolio-item/gabinetto-segreto/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-mann-meridiana
+    titolo: "Salone della Meridiana"
+    editore: "Museo Archeologico Nazionale di Napoli"
+    url: https://www.museoarcheologiconapoli.it/salone-della-meridiana/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  # --- Sansevero ---
+  - id: st-sansevero-storia
+    titolo: "La Cappella, storia"
+    editore: "Museo Cappella Sansevero"
+    url: https://www.museosansevero.it/la-cappella-e-il-cristo-velato/la-cappella/storia
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-sansevero-biografia
+    titolo: "Raimondo di Sangro, biografia"
+    editore: "Museo Cappella Sansevero"
+    url: https://www.museosansevero.it/il-principe-di-sansevero/biografia
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-sansevero-statua
+    titolo: "Il Cristo velato, la statua"
+    editore: "Museo Cappella Sansevero"
+    url: https://www.museosansevero.it/la-cappella-e-il-cristo-velato/il-cristo-velato/la-statua
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-sansevero-velo
+    titolo: "Il Cristo velato, la leggenda del velo"
+    editore: "Museo Cappella Sansevero"
+    url: https://www.museosansevero.it/la-cappella-e-il-cristo-velato/il-cristo-velato/la-leggenda-del-velo
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-sansevero-macchine
+    titolo: "Le macchine anatomiche"
+    editore: "Museo Cappella Sansevero"
+    url: https://www.museosansevero.it/la-cappella-e-il-cristo-velato/le-macchine-anatomiche
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-sansevero-pavimento
+    titolo: "Il pavimento labirintico"
+    editore: "Museo Cappella Sansevero"
+    url: https://www.museosansevero.it/la-cappella-e-il-cristo-velato/la-cappella/pavimento-labirintico
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  # --- Santa Chiara ---
+  - id: st-santachiara-chiesa
+    titolo: "La chiesa"
+    editore: "Monastero di Santa Chiara"
+    url: https://www.monasterodisantachiara.it/home-statue-2/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-santachiara-chiostro
+    titolo: "Chiostro maiolicato"
+    editore: "Monastero di Santa Chiara"
+    url: https://www.monasterodisantachiara.it/chiostro-maiolicato/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-santachiara-sala-storia
+    titolo: "Sala della Storia"
+    editore: "Monastero di Santa Chiara"
+    url: https://www.monasterodisantachiara.it/sala-della-storia/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-santachiara-fai
+    titolo: "Monastero di Santa Chiara"
+    editore: "FAI - Fondo per l'Ambiente Italiano"
+    url: https://fondoambiente.it/luoghi/complesso-monumentale-di-santa-chiara-napoli
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  # --- Duomo e Tesoro ---
+  - id: st-duomo-sito
+    titolo: "Duomo di Napoli (sito della Cattedrale)"
+    editore: "Cattedrale di Napoli"
+    url: https://duomonapoli.it/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-duomo-fai
+    titolo: "Duomo di Santa Maria Assunta, Napoli"
+    editore: "FAI - Fondo per l'Ambiente Italiano"
+    url: https://fondoambiente.it/luoghi/duomo-di-santa-maria-assunta-napoli
+    tipo: altro
+    controllato: 2026-10-07
+    letta: true
+  - id: st-tesoro-home
+    titolo: "Museo del Tesoro di San Gennaro (home)"
+    editore: "Museo del Tesoro di San Gennaro"
+    url: https://tesorosangennaro.it/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+  - id: st-tesoro-capolavori
+    titolo: "I capolavori"
+    editore: "Museo del Tesoro di San Gennaro"
+    url: https://tesorosangennaro.it/i-capolavori/
+    tipo: ufficiale
+    controllato: 2026-10-07
+    letta: true
+
+fatti:
+  # ================= MANN =================
+  - id: st-mann-edificio
+    tappa: mann
+    testo: "Il palazzo nasce alla fine del Cinquecento come cavallerizza (scuderia con maneggio). Dal 1616 al 1777 ospita l'Università; dal 1777 inizia una lunga serie di lavori per trasformarlo in museo."
+    fonti: [st-mann-storia]
+    citazione: "sorto alla fine del 1500 con la destinazione di cavallerizza ... l'edificio fu interessato da una lunga fase di lavori di ristrutturazione"
+    leggenda: false
+    nota: "Le date 1616-1777 e gli architetti dei lavori (F. Fuga e P. Schiantarelli) sono nel riassunto di WebFetch, non tra virgolette: da rileggere."
+  - id: st-mann-borbone
+    tappa: mann
+    testo: "Carlo di Borbone, re di Napoli dal 1734, promuove gli scavi delle città sepolte dal Vesuvio nel 79 d.C.: a Ercolano dal 1738, a Pompei dal 1748. Porta a Napoli anche parte della collezione che aveva ereditato dalla madre, Elisabetta Farnese."
+    fonti: [st-mann-storia]
+    citazione: "promosse l'esplorazione delle città vesuviane sepolte dall'eruzione del 79 d.C. ... parte della ricca collezione ereditata dalla madre Elisabetta Farnese"
+    leggenda: false
+    nota: "Le date 1738 e 1748 sono nel riassunto, non tra virgolette. La pagina Farnese dice che il trasferimento a Napoli lo fece poi il figlio Ferdinando IV (parafrasi)."
+  - id: st-mann-nomi
+    tappa: mann
+    testo: "Nel 1816, dopo l'occupazione francese, diventa Real Museo Borbonico, un «museo universale». Dal 1860 è Museo Nazionale; dal 1957, con il trasferimento della Pinacoteca a Capodimonte, è il museo archeologico che conosciamo."
+    fonti: [st-mann-storia]
+    citazione: "Real Museo Borbonico ... Museo universale"
+    leggenda: false
+    nota: "Le date 1860 e 1957 sono nel riassunto, non tra virgolette: da rileggere."
+  - id: st-mann-alessandro
+    tappa: mann
+    testo: "Il Mosaico di Alessandro, con il trionfo di Alessandro Magno su Dario III di Persia, decorava il pavimento di una sala della Casa del Fauno a Pompei (scavata tra 1830 e 1832). È della fine del II secolo a.C. e usa più di un milione di tessere."
+    fonti: [st-mann-mosaici]
+    citazione: "il celebre mosaico con il trionfo di Alessandro il Grande su Dario III di Persia ... più di un milione di tessere"
+    leggenda: false
+    nota: "Date 1830-1832 e «fine del II sec. a.C.» sono nel riassunto, non tra virgolette."
+  - id: st-mann-farnese-statue
+    tappa: mann
+    testo: "Il Toro Farnese e l'Ercole Farnese, tra i pezzi più celebri della collezione, vennero trovati negli scavi delle Terme di Caracalla a Roma, iniziati nel 1545. La collezione Farnese era iniziata da papa Paolo III nel 1534."
+    fonti: [st-mann-farnese]
+    citazione: "forse la più celebre tra le collezioni romane di antichità"
+    leggenda: false
+    nota: "Citazione non provata per i dettagli: i dati (1545, Terme di Caracalla, 1534) vengono dal riassunto di WebFetch, da rileggere sulla pagina."
+  - id: st-mann-gabinetto
+    tappa: mann
+    testo: "Il Gabinetto Segreto raccoglie circa 250 reperti a soggetto erotico, per lo più da Pompei ed Ercolano. Per anni fu censurato e tenuto separato dal resto; è aperto al pubblico in modo definitivo dal 2000."
+    fonti: [st-mann-gabinetto]
+    citazione: "circa 250 reperti a soggetto erotico ... definitivamente aperta al pubblico nel 2000"
+    leggenda: false
+  - id: st-mann-meridiana
+    tappa: mann
+    testo: "Nel Salone della Meridiana, una meridiana costruita nel 1791 dall'architetto Pompeo Schiantarelli e dall'astronomo Giuseppe Casella funziona ancora oggi. Faceva parte di un progetto di osservatorio astronomico poi abbandonato (ne fu costruito uno a Capodimonte, nel 1812-1819)."
+    fonti: [st-mann-meridiana]
+    citazione: "ancora oggi perfettamente funzionante"
+    leggenda: false
+    nota: "Nomi e date nel riassunto, solo la citazione è tra virgolette."
+
+  # ================= SANSEVERO =================
+  - id: st-sansevero-leggenda-origine
+    tappa: sansevero
+    testo: "Secondo la «Napoli Sacra» di Cesare d'Engenio Caracciolo (1623), verso il 1590 un uomo ingiustamente accusato vide comparire un'immagine della Madonna sul muro del giardino del palazzo di Sangro; liberato, mantenne la promessa di donare una lampada d'argento."
+    fonti: [st-sansevero-storia]
+    citazione: "Cesare d'Engenio Caracciolo, Napoli Sacra (1623), verso il 1590"
+    leggenda: true
+    nota: "Il museo la presenta come racconto tramandato dalla guida del 1623. Citazione non letterale (parafrasi di WebFetch)."
+  - id: st-sansevero-1613
+    tappa: sansevero
+    testo: "Giovan Francesco di Sangro, duca di Torremaggiore, fece costruire una piccola cappella, Santa Maria della Pietà (la «Pietatella»). Il figlio Alessandro, patriarca di Alessandria, la trasformò in tempio di famiglia: un'iscrizione sulla porta lo destina a sepolcro per sé e per i suoi nel 1613."
+    fonti: [st-sansevero-storia]
+    citazione: "Alessandro di Sangro patriarca di Alessandria destinò questo tempio ... a sepolcro per sé e per i suoi nell'anno del Signore 1613"
+    leggenda: false
+  - id: st-sansevero-raimondo
+    tappa: sansevero
+    testo: "Raimondo di Sangro, settimo principe di Sansevero (Torremaggiore 1710 - Napoli 1771), eredita il titolo a sedici anni, nel 1726. Dagli anni Quaranta del Settecento riorganizza la cappella con pittori e scultori famosi e ne cura il progetto iconografico fino alla morte. Inventore e scrittore, la sua «Lettera Apologetica» (1751) finì nell'elenco dei libri proibiti dalla Chiesa."
+    fonti: [st-sansevero-biografia, st-sansevero-storia]
+    citazione: "Torremaggiore 1710 – Napoli 1771 ... progetto iconografico della sua Cappella"
+    leggenda: false
+    nota: "Il 1726, la Lettera Apologetica 1751 e l'Indice sono nel riassunto, non tra virgolette: da rileggere."
+  - id: st-sansevero-cristo-velato
+    tappa: sansevero
+    testo: "Il Cristo velato è del 1753, opera di Giuseppe Sanmartino. L'incarico era stato dato ad Antonio Corradini, che morì nel 1752 lasciando solo un bozzetto in terracotta. Il principe voleva una statua a grandezza naturale di Cristo morto, coperto da un sudario trasparente scolpito nello stesso blocco di marmo."
+    fonti: [st-sansevero-statua]
+    citazione: "una statua di marmo scolpita a grandezza naturale, rappresentante Nostro Signore Gesù Cristo morto, coperto da un sudario trasparente realizzato dallo stesso blocco della statua"
+    leggenda: false
+  - id: st-sansevero-velo-leggenda
+    tappa: sansevero
+    testo: "Per più di 250 anni si è creduto che il velo fosse frutto di un processo alchemico del principe. Il museo spiega che è un errore: l'opera è tutta di marmo, da un unico blocco, e una ricevuta del 1752 parla di «statua di Nostro Signore morto coperta da un velo ancor di marmo»."
+    fonti: [st-sansevero-velo]
+    citazione: "il Cristo velato è un'opera interamente in marmo, ricavata da un unico blocco di pietra"
+    leggenda: true
+    nota: "Leggenda smentita dalla fonte: da scrivere come «si è creduto, ma è marmo»."
+  - id: st-sansevero-macchine
+    tappa: sansevero
+    testo: "Nella Cavea sotterranea ci sono due «macchine anatomiche», uno scheletro d'uomo e uno di donna con il sistema di vene e arterie quasi intatto, opera del medico palermitano Giuseppe Salerno. Il principe comprò la prima nel 1756 e gliene commissionò una seconda. Il museo precisa che l'apparato circolatorio è una ricostruzione, fatta con cera d'api e coloranti, e non vasi veri «metallizzati»."
+    fonti: [st-sansevero-macchine]
+    citazione: "scheletri di un uomo e di una donna in posizione eretta, con il sistema arterovenoso quasi perfettamente integro"
+    leggenda: false
+    nota: "Date 1756-1764 e cera d'api: nel riassunto, non tra virgolette. La voce della «metallizzazione» è una leggenda smentita dal museo."
+  - id: st-sansevero-pavimento
+    tappa: sansevero
+    testo: "Il pavimento originale, a labirinto, fu eseguito da Francesco Celebrano su idea del principe, dalla metà degli anni Sessanta del Settecento al 1771. Dopo un crollo nel 1889 fu sostituito con cotto napoletano giallo e azzurro. Frammenti del pavimento originale si vedono ancora vicino alla tomba di Raimondo, nella Cavea e in sacrestia."
+    fonti: [st-sansevero-pavimento, st-sansevero-storia]
+    citazione: "difficile e intralciata"
+    leggenda: false
+    nota: "Citazione letterale solo per il commento del principe; date e nomi nel riassunto. La pagina «storia» dice che il pavimento fu completato nel 1901 con piastrelle napoletane."
+
+  # ================= SANTA CHIARA =================
+  - id: st-santachiara-fondazione
+    tappa: santa-chiara
+    testo: "Il complesso fu costruito su commissione di re Roberto d'Angiò e della moglie Sancia di Maiorca tra il 1310 e il 1328: un monastero per le Clarisse e un convento per i frati francescani."
+    fonti: [st-santachiara-fai, st-santachiara-sala-storia]
+    citazione: "fu costruito su commissione di Roberto d'Angiò e di sua moglie Sancia di Maiorca tra il 1310 ed il 1328"
+    leggenda: false
+    nota: "Le date sono del FAI (tipo altro); il sito del monastero cita «re Roberto e la sua seconda moglie Sancia» senza date. Da cercare conferma ufficiale delle date."
+  - id: st-santachiara-chiesa-1340
+    tappa: santa-chiara
+    testo: "La chiesa fu aperta al culto nel 1340. È in stile gotico provenzale, con facciata a larga cuspide, una sola navata e dieci cappelle per lato. L'architetto, secondo il FAI, fu Gagliardo Primario."
+    fonti: [st-santachiara-chiesa, st-santachiara-fai]
+    citazione: "La chiesa fu aperta al culto nel 1340"
+    leggenda: false
+    nota: "Il nome di Gagliardo Primario è nel riassunto del FAI, non tra virgolette."
+  - id: st-santachiara-tomba
+    tappa: santa-chiara
+    testo: "Nel presbiterio c'è la tomba di re Roberto, opera dei fratelli Bertini, definita il più grande monumento funebre del Medioevo italiano per dimensioni. Vi sono anche le tombe di Carlo di Calabria e Maria di Valois, scolpite da Tino di Camaino."
+    fonti: [st-santachiara-chiesa, st-santachiara-fai]
+    citazione: "il più grande monumento funebre per dimensioni del medioevo italiano"
+    leggenda: false
+  - id: st-santachiara-1943
+    tappa: santa-chiara
+    testo: "Nel 1742 Domenico Antonio Vaccaro rifece la chiesa in forme barocche. Il 4 agosto 1943 un bombardamento aereo la distrusse quasi del tutto; Mario Zampino la ricostruì com'era in origine, in forme gotiche, e fu riaperta al culto il 4 agosto 1953."
+    fonti: [st-santachiara-chiesa]
+    citazione: "Il 4 agosto del 1943 la chiesa venne quasi del tutto distrutta da un bombardamento aereo ... il 4 agosto del 1953, la chiesa fu riaperta al culto"
+    leggenda: false
+    nota: "Il FAI parla di un «incendio» del 1943; il sito del monastero di bombardamento aereo. Qui seguiamo il sito del monastero."
+  - id: st-santachiara-chiostro
+    tappa: santa-chiara
+    testo: "Il chiostro maiolicato fu rifatto da Domenico Antonio Vaccaro per volere della regina Maria Amalia di Sassonia: tenne il perimetro del Trecento e trasformò il centro in un giardino barocco. Ci sono 64 pilastri rivestiti di maioliche e panchine con scene popolari, agresti, marinare e mitologiche."
+    fonti: [st-santachiara-chiostro]
+    citazione: "scene popolari, agresti, marinare e mitologiche ... per volere della regina Maria Amalia di Sassonia"
+    leggenda: false
+    nota: "Il numero 64 è nel riassunto, non tra virgolette: da rileggere."
+  - id: st-santachiara-maestri
+    tappa: santa-chiara
+    testo: "Le maioliche furono eseguite da Donato e Giuseppe Massa, in azzurro, giallo e verde, accordati ad agrumi e viti del giardino. Il monastero conserva ancora gli ultimi due dei 142 vasi di maiolica voluti dal Vaccaro."
+    fonti: [st-santachiara-chiostro, st-santachiara-sala-storia]
+    citazione: "gli ultimi due vasi maiolicati dei 142 voluti dal Vaccaro a completamento della decorazione settecentesca del chiostro"
+    leggenda: false
+
+  # ================= DUOMO =================
+  - id: st-duomo-fondazione
+    tappa: duomo
+    testo: "Secondo il sito della Cattedrale, il Duomo fu fondato nel 1272 dal re Carlo I d'Angiò e completato nel 1313 sotto Roberto d'Angiò; nel 1314 fu dedicato all'Assunta dall'arcivescovo Umberto d'Ormont."
+    fonti: [st-duomo-sito]
+    citazione: "Il Duomo di Napoli fu fondato nel 1272 dal re Carlo I d'Angiò e completato nel 1313 sotto il regno di Roberto d'Angiò."
+    leggenda: false
+    nota: "DATE DIVERSE: il FAI scrive 1294 (vedi fatto successivo). L'anno 1314 e il nome dell'arcivescovo sono nel riassunto, non tra virgolette."
+  - id: st-duomo-1294
+    tappa: duomo
+    testo: "Il FAI, invece, scrive che la costruzione fu voluta da Carlo d'Angiò nel 1294. Le fonti non concordano sull'anno d'inizio (1272 o 1294): meglio dire solo «fine Duecento» e «completato nel 1313»."
+    fonti: [st-duomo-fai, st-duomo-sito, tp-italia-duomo]
+    citazione: "L'edificazione della Cattedrale fu voluta da Carlo d'Angiò nel 1294, nel luogo dove sorgevano due antiche basiliche: Santa Restituta e la Stefania."
+    leggenda: false
+    nota: "italia.it (tp-italia-duomo) dice: «edificata per volere di Carlo I (o Carlo II d'Angiò) nel XIII secolo»."
+  - id: st-duomo-basiliche
+    tappa: duomo
+    testo: "Il Duomo sorge dove c'erano due antiche basiliche: la Stefania, demolita del tutto, e Santa Restituta, ridotta a cappella laterale (è ancora dentro la cattedrale)."
+    fonti: [st-duomo-fai]
+    citazione: "nel luogo dove sorgevano due antiche basiliche: Santa Restituta e la Stefania"
+    leggenda: false
+  - id: st-duomo-terremoto
+    tappa: duomo
+    testo: "La facciata angioina e il campanile furono distrutti dal terremoto del 1349 e la facciata fu rifatta in stile gotico."
+    fonti: [st-duomo-fai]
+    citazione: "La facciata angioina, distrutta insieme al campanile dal terremoto del 1349, fu ricostruita in stile gotico."
+    leggenda: false
+  - id: st-duomo-cappella-tesoro
+    tappa: duomo
+    testo: "La Cappella del Tesoro di San Gennaro è un ringraziamento al santo per la salvezza dalla peste del 1527 (un voto della città). Fu costruita a partire dal 1608: il sito del Duomo scrive «fino al 1637», il sito del Tesoro «fino al 1646»; il progetto è di Francesco Grimaldi."
+    fonti: [st-duomo-sito, st-tesoro-home]
+    citazione: "La Cappella barocca è stata costruita tra il 1608 e il 1637, come ringraziamento al Santo per la salvezza dalla pestilenza del 1527."
+    leggenda: false
+    nota: "DATE DIVERSE: 1637 (duomonapoli.it) contro 1646 (tesorosangennaro.it, riassunto di WebFetch: constructed between 1608-1646, designed by Francesco Grimaldi). Il busto reliquiario fu trasferito nella nuova cappella nel 1646 (st-tesoro-capolavori)."
+  - id: st-tesoro-mitra
+    tappa: duomo
+    testo: "La mitra di San Gennaro, commissionata nel 1712 all'orafo Matteo Treglia, ha 3326 diamanti, 198 smeraldi e 168 rubini e pesa 18 kg. Nella cappella c'è anche la più grande raccolta al mondo di busti d'argento: 54."
+    fonti: [st-tesoro-capolavori]
+    citazione: "incorpora 3326 diamanti, 198 smeraldi e 168 rubini, con un peso totale di ben 18 kg!"
+    leggenda: false
+    nota: "Il 1712 e Treglia sono nel riassunto; la frase dei 54 busti: La Cappella vanta la più grande raccolta al mondo di busti in argento, con 54 effigi."
+  - id: st-tesoro-miracolo
+    tappa: duomo
+    testo: "Le ampolle con il sangue di San Gennaro sono conservate nella cassaforte dietro l'altare maggiore della Cappella del Tesoro. Il miracolo della liquefazione si celebra tre volte l'anno, come atto di devozione popolare."
+    fonti: [st-tesoro-capolavori, st-duomo-sito]
+    citazione: "il busto reliquiario e le ampolle che contengono il sangue miracoloso"
+    leggenda: true
+    nota: "Il miracolo è un fatto di fede, non verificabile: scrivere «secondo la tradizione» o «i napoletani credono». Le tre date (19 settembre, sabato prima della prima domenica di maggio, 16 dicembre) NON sono state lette su una pagina ufficiale."
+
+non_trovato:
+  - "Date ufficiali delle tre liquefazioni di San Gennaro (19 settembre, sabato prima della prima domenica di maggio, 16 dicembre): le ho viste solo nel riassunto di un motore di ricerca (quotidiani), non aperte e lette. Provato: duomonapoli.it (non le riporta), tesorosangennaro.it/i-capolavori (dice solo tre volte l'anno), chiesadinapoli.it (pagina sbagliata, notizia del 2009)."
+  - "Pagina ufficiale del Duomo con la storia dettagliata: la ricerca ha trovato solo la frase di sintesi sulla home. Provato duomonapoli.it/en, duomonapoli.it, chiesadinapoli.it/duomo-di-napoli/ (pagina non pertinente), italia.it (tp-italia-duomo). La tradizione del tempio di Apollo dove sorge il Duomo è solo su italia.it (Sorto sull'antico tempio di Apollo): dubbia, non usarla come fatto."
+  - "Pagina del Comune di Napoli sulla Cappella del Tesoro (comune.napoli.it ... IDPagina/10837): HTTP 404. Il voto del 13 gennaio 1527 davanti a un notaio è solo nei riassunti del motore di ricerca (probabilmente da Wikipedia): non usato."
+  - "Data di fondazione di Santa Chiara (1310-1328) solo dal FAI (tipo altro). Provato monasterodisantachiara.it (home, sala della storia, chiesa, chiostro, affreschi): nessuna data di fondazione. Non provati: Treccani, UNESCO (il centro storico di Napoli è Patrimonio UNESCO), pagine di università."
+  - "MANN: la pagina /it/il-museo/storia/ dà 404 (quella giusta è /storia-del-museo/). Nessuna pagina ufficiale dedicata a Toro Farnese ed Ercole Farnese, solo la scheda della collezione Farnese. Non provata: cultura.gov.it per il MANN (esiste già tp-mic-mann in fonti.yaml, non riletta qui)."
+  - "Treccani e UNESCO non consultati per nessun luogo del gruppo (ho dato la precedenza ai siti dei luoghi)."
+  - "AVVERTENZA GENERALE: WebFetch dà riassunti di un modello piccolo. Le virgolette nelle citazioni sono quelle riportate da WebFetch; date e nomi indicati in nota come nel riassunto non sono tra virgolette e vanno controllati aprendo la pagina."
