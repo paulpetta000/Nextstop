@@ -3,3 +3,9 @@ dist
 .astro
 .vercel
 .claude/launch.json
+
+# Bozzetti del compositore: la copia con doctype serve solo per le immagini in locale
+design/compositore/giro-*/proposte-locale.html
+# Immagini PNG da telefono e computer (si rifanno con foto.cjs) e pagine dei giri 2-5 (si rifanno con genera.mjs; quelle pubblicate sono su claude.ai)
+design/compositore/giro-*/immagini/*.png
+design/compositore/giro-[2-9]/proposte.html

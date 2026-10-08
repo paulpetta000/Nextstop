@@ -1,6 +1,6 @@
 # PROGRESS
 
-_Ultimo aggiornamento: 08/10/2026 (agente «ricercatore»; ricerche su filtri dei locali e mappa; bozza della specifica del compositore)._
+_Ultimo aggiornamento: 08/10/2026 (compositore, pezzo 1 scelto: C e D; ramo `compositore-pagina`)._
 
 ## Fase 1 in corso (ramo `grafica-home`, anche su GitHub dal 07/10/2026)
 - Specifica `specifiche/home-e-identita.md` approvata il 06/10/2026, con le aggiunte di Enrico: il compositore si rifà tutto (restano dati e calcoli), i **racconti** degli itinerari pronti (stile MUDD, per Google), il menu con le tre linee.
@@ -27,7 +27,16 @@ _Ultimo aggiornamento: 08/10/2026 (agente «ricercatore»; ricerche su filtri de
 3. Google Search Console (08/10/2026): proprietà verificata con il file `public/googlee54aa324270bde6d.html` (**non cancellarlo**); Vercel Analytics attivo. Da fare: inviare `sitemap.xml` e «Richiedi indicizzazione» della home, se la quota giornaliera lo permette (ritentare dal 09/10).
 
 ## Prossimi passi (in ordine: vedi `ROADMAP.md`)
-1. **Fase 2 · il compositore**: specifica **approvata l'08/10/2026** (`specifiche/compositore.md`; mappa **in sospeso**: Enrico vuole capire cosa cambia senza l'uso offline). Ricerche in `ricerca/2026-10-08-*.md`. Prossimo: **pezzo 1, pagina e barra del compositore, 4 proposte**, su un ramo nuovo da `main`. Opus, effort extra.
+1. **Fase 2 · il compositore**: specifica **approvata l'08/10/2026** (`specifiche/compositore.md`; mappa **in sospeso**: Enrico vuole capire cosa cambia senza l'uso offline). Ricerche in `ricerca/2026-10-08-*.md`.
+   **Pezzo 1 (ramo `compositore-pagina`, `design/compositore/README.md`)**: giro 1 (A, B, C, D) https://claude.ai/artifact/RZjEC51fAQRN2hF3oGekdg; Enrico: B no, A sì, C e D da migliorare, due astratte in più, «Aggiungi» con tutte le tappe.
+   Giro 2 (A, C, D, E, F) https://claude.ai/artifact/DM5hwnNeoTEfxcXQBR7KVp: E ed F no; via l'arco di pietra.
+   Giro 3 (A, C, D, G) https://claude.ai/artifact/TakbK2ZMUwn2mZFYuQmo3w: mappa che si muove, percorso in fila, Elimina, 4 ricerche.
+   Giro 4 (A, C, D, G) https://claude.ai/artifact/8Kx3ZmzRGZVk3RKmS3zVZ3: giorni da sfogliare col dito, scheda subito, 3 «Salva» e 3 loghi scuri.
+   Giro 5 (A, C, D) https://claude.ai/artifact/UgWbAVT1hHeR7GCUQnVHxu: cambio di giorno senza tremolio (misurato con le pellicole), in C testata che scorre via e giorni fissi in alto, pause e margini con il tempo del giorno, chiusure solo con la data, tutte le tappe sulla mappa (piccole foto), Rinomina, salvataggio che resta; seconda versione con «Aggiungi» nella stessa schermata, orme di D nel verso giusto.
+   **Pezzo 1 scelto (08/10/2026): C e D**, chi visita passa dall'una all'altra; ricerca di A; logo scuro ambra; «Salva»: ognuna il suo (C il segnaposto, D il timbro) se Enrico non dice altro. Aggiunte nella specifica §9 («per il resto va bene»). Tutto in `design/compositore/README.md`.
+   **Prossimo: pezzo 2, la scheda della tappa con «visitato»** (4 proposte dentro C e D), sessione nuova, Opus, effort extra. Poi 3 ricerca, 4 salva e rileggi; la costruzione nel sito parte dopo le scelte.
+   **Home da rivedere**: l'arco di pietra (portico di piperno) non piace a Enrico, nemmeno nella home (08/10/2026).
+   Mappa: le strade piccole della zona dei due giorni pesano 213 KB (79 KB compressi): dato per la decisione della mappa (pezzo 5).
 2. **Home**: foto del portico, «Come funziona», «Perché fidarti», testi, fonti a scomparsa, crediti delle foto in fondo (stessa lista).
 3. **Fase 3 · racconti degli itinerari**: la ricerca sulla storia delle 15 tappe dei due giorni è fatta (07/10/2026, ramo `racconto-due-giorni`, `ricerca/storia-luoghi/`: 125 fatti da rileggere), poi le 4 pagine.
 4. **Città nuove**, **SEO** con claude-seo, `da-risolvere.md` (28 righe aperte): vedi `ROADMAP.md`.

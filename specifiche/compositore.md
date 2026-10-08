@@ -102,6 +102,23 @@ Il nostro campo `cucina` mescola tutto: oggi «Carne» mostra **11 locali** (anc
 - Con 2 bracerie e 1 friggitoria il filtro è povero: **si cercano altri locali di questi tipi** (Enrico, 08/10/2026). Ricerche dell'08/10/2026: `ricerca/2026-10-08-locali-bracerie.md`, `ricerca/2026-10-08-locali-friggitorie.md`; i locali scelti entrano con le stesse regole dei 32 di oggi (orari, fonti, tempi ricalcolati).
 - **Entrano** (Enrico, 08/10/2026): Barbeqool, Colantuono's Steak and Grill, Granfuoco Braceria, Friggitoria Vomero, Da Rosetta. Un premio **non** è obbligatorio («scelta nostra», la scheda lo dice). Gli orari che i siti non scrivono li verifica Enrico a mano: `da-verificare/orari-locali.md`.
 
+### 9. Aggiunte di Enrico dal giro 5 delle proposte (08/10/2026; Enrico: «per il resto va bene»)
+**Pezzo 1 scelto (08/10/2026): C «Mappa prima» e D «Le pagine»**, con la ricerca di A e il logo scuro ambra
+(`design/compositore/README.md`, giro 5).
+- **Pause e margini**. *Problema*: la giornata calcolata va da una tappa all'altra senza fermarsi: niente pranzo, niente caffè; l'ora di
+  fine è troppo ottimista e chi la segue arriva tardi. *Perché non basta* la riga «Qui puoi fermarti a mangiare» (sezione 7): propone un
+  locale ma non tiene il tempo. **Cosa fa**: la pausa pranzo c'è già (un'ora, dopo la tappa dove si mangia o quella che finisce più vicino
+  alle 13); si cambiano durata e posto, si toglie, si aggiungono caffè e riposo; un **margine** di 0, 5, 10 o 15 minuti dopo ogni tratto
+  (foto, code, passo lento). La pagina mostra la **fine stimata**, il tempo **a piedi** separato dal tempo **in tutto** e quello che
+  **resta** (o di quanto sfori). Le pause entrano nel calcolo (`calcolo.ts`), nel link condiviso e nei test; i minuti a piedi restano veri.
+  Caso limite: una pausa non va mai dopo l'ultima tappa; con la pausa che fa sforare l'ora di fine vale l'avviso «piena».
+- **«Chiuso il martedì» solo con la data**: senza data è un'informazione del luogo (sta nella scheda), non un avviso nella giornata.
+- **Salvato vuol dire salvato**: resta anche chiudendo la pagina; il nome si cambia con **Rinomina** nei tre puntini di «I miei itinerari»
+  (non subito dopo «Salva»).
+- **Tutte le tappe sulla mappa**: un tasto le mostra (nel giorno vuoto si vedono subito); un punto apre la scheda con «Aggiungi al giorno».
+- **La vista la sceglie chi visita**: Enrico sceglie due proposte; nella pagina un interruttore fa passare dall'una all'altra
+  (la scelta resta sul telefono). *Problema*: chi pianifica sul divano preferisce l'elenco, chi è per strada la mappa.
+
 ## Come si lavora: 4 proposte per pezzo
 - Un pezzo alla volta, ognuno con **4 proposte molto diverse** (regola di Enrico, 07/10/2026), con i dati veri, in chiaro e in scuro, telefono (320 e 390 px) e computer.
   Pagine private su claude.ai da guardare sul telefono, con le animazioni vere. Enrico dice cosa va → 4 proposte nuove → fino alla scelta.
