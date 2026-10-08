@@ -24,7 +24,7 @@ _Ultimo aggiornamento: 08/10/2026 (agente «ricercatore»; ricerche su filtri de
 ## Cosa fa Enrico adesso
 1. Verificare gli **orari dei 5 locali nuovi** (3 bracerie, 2 friggitorie: OK di Enrico, 08/10/2026) e mandarli a Claude: `da-verificare/orari-locali.md`.
 2. Decidere l'email del sito (oggi è quella di Napoli a Vela, in `src/config/sito.ts`).
-3. Google Search Console: proprietà nuova per `nextstop-alpha.vercel.app` e invio di `/sitemap.xml`.
+3. Google Search Console (08/10/2026): proprietà verificata con il file `public/googlee54aa324270bde6d.html` (**non cancellarlo**); Vercel Analytics attivo. Da fare: inviare `sitemap.xml` e «Richiedi indicizzazione» della home, se la quota giornaliera lo permette (ritentare dal 09/10).
 
 ## Prossimi passi (in ordine: vedi `ROADMAP.md`)
 1. **Fase 2 · il compositore**: specifica **approvata l'08/10/2026** (`specifiche/compositore.md`; mappa **in sospeso**: Enrico vuole capire cosa cambia senza l'uso offline). Ricerche in `ricerca/2026-10-08-*.md`. Prossimo: **pezzo 1, pagina e barra del compositore, 4 proposte**, su un ramo nuovo da `main`. Opus, effort extra.
