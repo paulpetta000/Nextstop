@@ -171,16 +171,71 @@ const DATI = {
   }
 };
 
-const sicuro = o => JSON.stringify(o).replace(/</g, '\\u003c');
 const leggi = f => fs.readFileSync(path.join(GIRO, f), 'utf8');
+
+// ---------- pezzo 2 (la scheda della tappa): il calcolo vero dentro la pagina, le schede e le fonti ----------
+// Se app.js usa CALCOLO, la pagina rifà da sola i giorni (spostare, togliere, «visitato», oggi): le stesse funzioni
+// del sito (src/lib/itinerari/), il pacco della città della build e i percorsi tra le tappe in città (giorno feriale).
+let CALCOLO_JS = '';
+if (leggi('app.js').includes('CALCOLO')) {
+  const r = await build({
+    stdin: {
+      contents: `export { spacchetta } from './src/lib/itinerari/pacco';
+                 export { calcolaGiorno, ordinePiuCorto } from './src/lib/itinerari/calcolo';
+                 export { nuovoItinerario, codifica } from './src/lib/itinerari/link';`,
+      resolveDir: RADICE, loader: 'ts'
+    },
+    bundle: true, format: 'iife', globalName: 'CALCOLO', platform: 'browser', minify: true, write: false, logLevel: 'error'
+  });
+  CALCOLO_JS = r.outputFiles[0].text;
+  const citta = C.tappe.filter(t => t.tipo === 'citta' && !t.categoria);
+  DATI.pacco = { ...pacco, tappe: pacco.tappe.filter(t => t.tipo === 'citta' && !t.categoria).map(t => ({ ...t, foto: undefined })) };
+  DATI.pronto = P.giorni;
+  // percorsi della mappa tra tutte le tappe in città (feriale) e, a piedi, dentro le tappe lunghe (Spaccanapoli, Toledo…)
+  const punti = [...new Set(citta.flatMap(t => [t.p, t.pf].filter(x => x != null && x >= 0)))];
+  const perc = { feriale: {}, piedi: {} };
+  for (const a of punti) for (const b of punti) { const x = PERCORSI.scenari.feriale[a]?.[b]; if (typeof x === 'string' && x) (perc.feriale[a] ??= {})[b] = x; }
+  for (const t of citta) if (t.pf != null && t.pf >= 0) for (const [a, b] of [[t.p, t.pf], [t.pf, t.p]]) { const x = PERCORSI.scenari.piedi[a]?.[b]; if (typeof x === 'string' && x) (perc.piedi[a] ??= {})[b] = x; }
+  DATI.percorsi = perc;
+  // la scheda vera (src/components/itinerari/Scheda.astro, dalla build): testo, in breve, orari, biglietti, come arrivare;
+  // dalla foto della build solo il testo alternativo e il credito
+  const fatti = leggiYaml('src/data/fatti.yaml'), fonti = leggiYaml('src/data/fonti.yaml');
+  const testo = s => s.replace(/<[^>]+>/g, '').replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
+  for (const t of citta) {
+    if (!DATI.tappe[t.id]) continue;
+    const a = html.indexOf(`<template id="it-t-${t.id}">`), b = html.indexOf('</template>', a);
+    if (a < 0) throw new Error(`Scheda di ${t.id} non trovata nella build`);
+    const s = html.slice(a, b);
+    const alt = /<img [^>]*alt="([^"]*)"/.exec(s)?.[1];
+    const credito = /<span class="foto__cr"[^>]*>([\s\S]*?)<\/span><\/figcaption>/.exec(s)?.[1];
+    const corpo = s.replace(/<figure[\s\S]*?<\/figure>/, '');
+    const sezioni = [...corpo.matchAll(/<h3 class="it-sch__h">([\s\S]*?)<\/h3><p>([\s\S]*?)<\/p>/g)].map(m => ({ titolo: testo(m[1]), testo: testo(m[2].replace(/<sup[\s\S]*?<\/sup>/g, '')), segno: /cautela/.test(m[2]) }));
+    // le fonti: quelle delle schede usate (orari, prezzi, viaggio, testo) e quelle del testo
+    const tY = tappeYaml.find(x => x.id === t.id), tT = testiTappe[t.id] ?? {};
+    const idFatti = [tY.orari, tY.prezzi, tY.viaggio, ...(tT.usa ?? [])].filter(Boolean);
+    const usati = idFatti.map(id => fatti.find(f => f.id === id)).filter(Boolean);
+    const idFonti = [...new Set([...usati.flatMap(f => f.fonti ?? []), ...(tT.fonti ?? []), tY.durataFonte].filter(Boolean))];
+    DATI.tappe[t.id].scheda = {
+      alt: alt ? testo(alt) : '', credito: credito ? testo(credito) : '',
+      testo: [...corpo.matchAll(/<div class="testo it-sch__testo">([\s\S]*?)<\/div>/g)].map(m => [...m[1].matchAll(/<p>([\s\S]*?)<\/p>/g)].map(p => testo(p[1]))).flat(),
+      breve: testo(/<p class="it-sch__breve">([\s\S]*?)<\/p>/.exec(corpo)?.[1] ?? ''),
+      sezioni,
+      fonti: idFonti.map(id => fonti.find(f => f.id === id)).filter(Boolean).map(f => ({ titolo: f.titolo, editore: f.editore, url: f.url, tipo: f.tipo })),
+      controllato: usati.map(f => f.controllato).filter(Boolean).map(String).sort()[0] ?? null
+    };
+    Object.assign(DATI.tappe[t.id], { momento: t.momento, bambini: t.bambini, gradini: t.gradini ?? null, reversibile: t.reversibile, fine: t.fine ?? null });
+  }
+}
+
+const sicuro = o => JSON.stringify(o).replace(/</g, '\\u003c');
 // sostituzioni con una funzione: nel codice ci sono «$» che replace() altrimenti interpreta
 const pagina = leggi('modello.html')
   .replace('/*FONT*/', () => `@font-face{font-family:"Archivo";src:url(${FONT.archivo}) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
 @font-face{font-family:"Bodoni Moda";src:url(${FONT.bodoni}) format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:"Bodoni Moda";src:url(${FONT.bodoniCorsivo}) format("woff2");font-weight:500;font-style:italic;font-display:swap}`)
-  .replace('/*STILE*/', () => leggi('stile.css'))
+  .replace('/*STILE*/', () => leggi('stile.css') + (fs.existsSync(path.join(GIRO, 'pezzo2.css')) ? `\n${leggi('pezzo2.css')}` : ''))
   .replace('/*APP*/', () => leggi('app.js'))
-  .replace('<!--DATI-->', () => `<script>window.DATI=${sicuro(DATI)};window.FOTO=${sicuro(FOTO)};window.MAPPA=${sicuro(MAPPA)};window.STRADE=${sicuro(STRADE)};${leggi('app.js').includes('PORTICO') ? `window.PORTICO=${sicuro(PORTICO)};` : ''}</script>`);
+  .replace('<!--DATI-->', () => `<script>window.DATI=${sicuro(DATI)};window.FOTO=${sicuro(FOTO)};window.MAPPA=${sicuro(MAPPA)};window.STRADE=${sicuro(STRADE)};${leggi('app.js').includes('PORTICO') ? `window.PORTICO=${sicuro(PORTICO)};` : ''}</script>${CALCOLO_JS ? `<script>${CALCOLO_JS.replace(/<\/script/gi, '<\\/script')}</script>` : ''}`);
 fs.writeFileSync(path.join(GIRO, 'proposte.html'), pagina);
 fs.writeFileSync(path.join(GIRO, 'proposte-locale.html'), `<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"></head><body>${pagina}</body></html>`);
 console.log(`${path.basename(GIRO)}/proposte.html: ${(pagina.length / 1024 / 1024).toFixed(2)} MB · tappe da aggiungere ${CITTA.length} · foto ${Object.keys(FOTO).length} · dati ${(sicuro(DATI).length / 1024).toFixed(0)} KB`);

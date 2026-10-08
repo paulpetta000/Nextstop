@@ -1,7 +1,44 @@
-# Compositore, pezzo 1: pagina e barra
+# Compositore: le proposte grafiche
 
 Proposte con i dati veri di «Due giorni a Napoli»: orari, tempi a piedi e percorsi calcolati dal sito (giorno feriale), foto e
-caratteri del sito. Regola di Enrico: 4 proposte molto diverse per pezzo, si itera su quello che va. Specifica: `specifiche/compositore.md` (sezione 1).
+caratteri del sito. Regola di Enrico: 4 proposte molto diverse per pezzo, si itera su quello che va. Specifica: `specifiche/compositore.md`.
+
+# Pezzo 2: la scheda della tappa e «visitato»
+
+Specifica §2 e §5. Le 4 proposte vivono dentro le due viste scelte nel pezzo 1 (C «Mappa prima» e D «Le pagine»): nella striscia
+in alto si sceglie la proposta (1-4) e la vista (C o D). Cartella `scheda-giro-1/` (`app.js`, `stile.css` del pezzo 1, `pezzo2.css`).
+
+## Giro 1 (09/10/2026) · https://claude.ai/artifact/38QAViDs5yfqnqyehLvMdP
+| | La scheda | «Visitata» | Spostare e togliere |
+|---|---|---|---|
+| **1 · Il foglio** | sale a metà schermo (in C la mappa resta sopra e vola sulla tappa; un altro segno sulla mappa cambia la scheda); si tira su per leggere tutto; di lato la tappa prima o dopo, con il tratto a piedi in basso | il numero della tappa è una piccola porta: un tocco e le soglie si chiudono | maniglia a destra (trascini o frecce); nella scheda «Sposta nel giorno 2» e «Togli» |
+| **2 · La riga si apre** | si allarga sul posto: la foto cresce dalla miniatura, i tratti prima e dopo restano; orari, biglietti, come arrivare e fonti si aprono con un tocco | scorri la riga a destra: sotto «Visitata», la soglia si chiude mentre trascini | scorri a sinistra: «Togli»; tieni premuta e trascini; nella riga aperta «Sposta»: prima, dopo, altro giorno |
+| **3 · A tutta pagina** | pagina intera come una rivista: la foto vola dalla riga, nome grande sulla foto, capolettera, «Da sapere» in un foglietto, fonti aperte; in fondo «Prossima tappa» con i minuti a piedi (la pagina gira) | il sigillo sul bordo della foto | «Modifica il giorno»: «−» e maniglie su tutte le tappe, poi «Fatto» |
+| **4 · In cammino** | le schede di tutto il giorno una accanto all'altra, tra una e l'altra il tratto a piedi; in cima i puntini delle tappe | il pallino (in D il timbro con l'ora); «2 di 7 visitate»; la strada fatta si colora: la linea in C, le orme in D, il percorso sulla mappa | i tre puntini su ogni tappa: segna, su, giù, altro giorno, apri, togli; oppure tieni premuta e trascini |
+
+In tutte: **«visitata» è la soglia del marchio che si chiude** (le sei porte entrano una dentro l'altra, poi la spunta; in tema scuro
+color ambra; con «riduci movimento» solo una dissolvenza: `immagini/visitata-fotogrammi.jpg`); si toglie con un altro tocco; sulla mappa
+le visitate hanno la spunta. Vale sugli itinerari salvati (la prova parte salvata; senza «Salva» la scheda propone di salvare).
+**Calcolo vero**: la pagina usa le funzioni del sito (`src/lib/itinerari/`, messe dentro da `genera.mjs`) con i percorsi tra tutte le tappe
+in città: spostando, togliendo o aggiungendo una tappa orari e percorsi si ricalcolano davvero (prima i giri avevano solo i giorni già calcolati).
+**«Oggi»** (pannello Idea): il giorno 1 è oggi alle 12:10; le tappe visitate vanno in cima e gli orari ripartono da adesso, come fa il sito.
+**La scheda**: foto con il credito, quando, «Da visitare», in breve (visita, chiusura, prenotazione, ingresso, al chiuso, momento), il testo
+della tappa, orari, biglietti, come arrivare (le schede vere della build) e le **fonti** di quella tappa con la data del controllo.
+Senza foto con licenza libera (Cappella Sansevero) un riquadro con la soglia. «Annulla» dopo ogni «Togli» e «Sposta nel giorno».
+Tastiera e lettori di schermo: frecce su e giù sulla maniglia, «Sposta» nella riga aperta, Su e Giù nel menu, frecce tra le schede in fila (4).
+Le storie dei luoghi non ci sono ancora (arrivano con i racconti, Fase 3): la scheda usa il testo di oggi.
+
+Controlli del giro 1 (09/10/2026): axe pulito in 80 controlli (C e D, 4 proposte, telefono e computer, chiaro e scuro, schede aperte, menu,
+«Modifica»); nessuno scorrimento di lato a 320 e 390 px (anche a scheda aperta); nessun errore nella pagina; prove dei gesti col mouse
+(`prove/gesti.cjs`) e col dito simulato (`prove/dito.cjs`): trascinare, scorrere la riga, tenere premuto, tirare su e giù il foglio, sfogliare le
+schede, menu, «Modifica», «oggi», «Annulla». Trovato e corretto: col mouse, trascinare sopra una foto avviava il trascinamento dell'immagine.
+Limite noto: in D, proposta 2, partendo da una cartolina il dito la scorre (visitata o togli) e non cambia giorno: si cambia giorno dal titolo,
+dalle orme o con «1 / 2».
+
+Rifare: `npm run build`, poi `node design/compositore/genera.mjs scheda-giro-1`; con il server «compositore» acceso, gli script in
+`scheda-giro-1/prove/` (immagini: `foto.cjs <cartella immagini> 1,2,3,4 light,dark`, poi `fogli.cjs <cartella> 1,2,3,4 light,dark`).
+
+# Pezzo 1: pagina e barra
 
 ## Giro 5 (08/10/2026) · https://claude.ai/artifact/UgWbAVT1hHeR7GCUQnVHxu
 Cosa ha detto Enrico del giro 4: via G; cambiando giorno col dito la pagina «trema» (deve essere fluida); in C la testata

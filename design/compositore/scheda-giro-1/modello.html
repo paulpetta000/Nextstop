@@ -1,0 +1,34 @@
+<title>Scheda della tappa</title>
+<meta name="description" content="Compositore, pezzo 2, giro 1: quattro proposte per la scheda della tappa e «visitato», dentro le viste C e D, con i dati veri di «Due giorni a Napoli».">
+<style>
+/*FONT*/
+/*STILE*/
+</style>
+<header id="prova" aria-label="Scegli la proposta e la vista">
+  <div class="p-scelte" role="group" aria-label="Proposta">
+    <button type="button" data-q="1" aria-pressed="true"><span class="vh">Proposta </span>1</button>
+    <button type="button" data-q="2" aria-pressed="false"><span class="vh">Proposta </span>2</button>
+    <button type="button" data-q="3" aria-pressed="false"><span class="vh">Proposta </span>3</button>
+    <button type="button" data-q="4" aria-pressed="false"><span class="vh">Proposta </span>4</button>
+  </div>
+  <span class="p-sep" aria-hidden="true"></span>
+  <div class="p-scelte p-viste" role="group" aria-label="Vista">
+    <button type="button" data-p="c" aria-pressed="true"><span class="vh">Vista </span>C</button>
+    <button type="button" data-p="d" aria-pressed="false"><span class="vh">Vista </span>D</button>
+  </div>
+  <span class="p-nome" id="p-nome"></span>
+  <button type="button" class="p-info" popovertarget="idea">Idea</button>
+  <button type="button" class="p-tema" id="p-tema"></button>
+</header>
+<div id="idea" popover></div>
+<main id="app"></main>
+<dialog id="foglio" aria-labelledby="f-titolo"></dialog>
+<dialog id="scheda" aria-labelledby="sch-t"></dialog>
+<section id="menu-tappa" popover aria-label="Azioni per la tappa"></section>
+<div id="toast" role="status" aria-live="polite"></div>
+<p id="annuncio" class="vh" aria-live="polite"></p>
+<p id="aiuto-maniglia" hidden>Trascina per spostare la tappa, oppure usa le frecce su e giù.</p>
+<!--DATI-->
+<script>
+/*APP*/
+</script>
