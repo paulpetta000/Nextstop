@@ -144,7 +144,7 @@ Sul runner, in ordine:
 3. `npm run build` (telemetria Astro disabilitata).
 4. `npm run check:links`, solo dopo una build riuscita.
 
-**Stato della verifica:** YAML, permessi, trigger, ordine e sintassi Bash controllati localmente; test/build/link eseguiti su Windows con dipendenze già presenti. Nessuna installazione locale e nessuna esecuzione GitHub dichiarata: la prima PR richiede autorizzazione al push e deve verificare su Ubuntu anche l'installazione senza script di `esbuild`/`sharp` (binari Linux presenti nel lockfile). Non abilitare script indiscriminatamente se quella verifica fallisce. Non serve creare token personali o fornire segreti Vercel.
+**Stato della verifica:** YAML, permessi, trigger, ordine e sintassi Bash controllati localmente; test/build/link eseguiti su Windows con dipendenze già presenti. Il 09/10/2026 la [prima esecuzione su GitHub](https://github.com/paulpetta000/Nextstop/actions/runs/37976226763), nella [PR #1](https://github.com/paulpetta000/Nextstop/pull/1), ha superato anche l'installazione senza script su Ubuntu 24.04 con Node 22.23.3: 55/55 test, build e 888 link validi. I binari Linux di `esbuild`/`sharp` funzionano con questa installazione. Nessuna installazione locale; non serve creare token personali o fornire segreti Vercel.
 
 ## Altro
 
