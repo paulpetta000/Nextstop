@@ -9,7 +9,7 @@
 // - i tempi calcolati per tappe diverse da quelle di oggi (una tappa nuova o spostata): vanno rifatti con
 //   node scripts/itinerari/costruisci.mjs <cartella>.
 import { getCollection, type CollectionEntry } from 'astro:content';
-import { createHash } from 'node:crypto';
+import { firmaPosizioni } from './itinerari/firma-posizioni.mjs';
 import { getFatti, type Fatto } from './fatti';
 import { getTesti, type Blocco } from './testi';
 import tempi from '../data/tempi-tappe.json';
@@ -29,10 +29,9 @@ export const ZONE = {
   dintorni: 'Caserta, Sorrento e dintorni'
 } as const;
 
-// Impronta delle posizioni delle tappe in città, in ordine di id: la stessa formula è in scripts/itinerari/costruisci.mjs
+export { firmaPosizioni };
+
 let avvisoBus = false;
-export const firmaPosizioni = (tappe: { id: string; lat: number; lon: number; fine?: { lat: number; lon: number } }[]) =>
-  createHash('sha1').update(JSON.stringify([...tappe].sort((a, b) => a.id.localeCompare(b.id)).map(t => [t.id, t.lat, t.lon, t.fine ? [t.fine.lat, t.fine.lon] : null]))).digest('hex').slice(0, 12);
 
 let cache: Promise<Tappa[]> | null = null;
 export function getTappe(): Promise<Tappa[]> {

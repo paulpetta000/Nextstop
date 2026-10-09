@@ -125,6 +125,7 @@ Una scheda `confermato` che ha **solo** fonti `enciclopedia`, `blog` o `altro` f
 - le **date in italiano** di `src/lib/formato.ts`, in cinque fusi orari (`test/date.test.mjs`);
 - la **memoria degli itinerari** oltre il cinquantesimo, l'itinerario attivo, storage disabilitato/pieno e archivi corrotti (`test/memoria-itinerari.test.mjs`);
 - i **link degli itinerari**: andata/ritorno, gite, sanitizzazione, limiti e compatibilità dei link vecchi (`test/link-itinerari.test.mjs`);
+- la **firma delle posizioni**, condivisa dalla build e dal generatore in `src/lib/itinerari/firma-posizioni.mjs`: compatibilità con il formato precedente, ordine dei punti, ingressi e arrivi cambiati (`test/firma-posizioni.test.mjs`). Solo Node, senza rigenerare i dati;
 - i **calcoli degli itinerari**: orari e totali, giornata piena, scenari di calendario, apertura dei locali, ripartenza dal vivo e bus con partenze valide/mancanti/esaurite (`test/calcolo-itinerari.test.mjs`). Casi sintetici, senza rete o dati utente;
 - gli **spostamenti delle tappe**: destinazione piena, gruppi senza spazio, limiti, ordine e preparazione senza mutare l'originale (`test/spostamenti-itinerari.test.mjs`). I casi che perdevano dati sono stati riprodotti prima delle correzioni del Blocco 1.
 

@@ -11,7 +11,7 @@ Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [re
 | Compositore: stato e interazioni | `src/scripts/itinerari/app.ts`, `memoria.ts`, `trascina.ts` | `src/pages/napoli/itinerari/index.astro`, [specifica](../specifiche/compositore.md) nella parte pertinente |
 | Calcoli, spostamenti e link | `src/lib/itinerari/calcolo.ts`, `spostamenti.ts`, `link.ts`, `date.ts`, `tipi.ts` | Test corrispondenti in `test/`; `napoli.ts` fornisce i dati della città |
 | Mappa e percorsi | `src/scripts/itinerari/mappa.ts`, `scripts/mappa/` | [README · Itinerari](../README.md#itinerari); JSON solo per il caso riprodotto |
-| Bus e rinnovo dati | [Aggiornamenti](../aggiornamenti/README.md), `scripts/itinerari/` | [Specifica bus](../specifiche/bus-orari-veri.md); dati/fonti del caso |
+| Bus e rinnovo dati | [Aggiornamenti](../aggiornamenti/README.md), `scripts/itinerari/` | [Specifica bus](../specifiche/bus-orari-veri.md); `src/lib/itinerari/firma-posizioni.mjs` condivisa con la build; dati/fonti del caso |
 | Dati, fonti, testi e firme | [README · Informazioni](../README.md#dove-sono-le-informazioni), `src/lib/regole.mjs`, `test/dati.test.mjs`, `test/testi.test.mjs` | [Guida dei testi](../specifiche/stile-testi.md), solo schede e YAML coinvolti |
 | Build e uso offline | `astro.config.mjs`, `integrations/`, `scripts/check-links.mjs` | `src/scripts/sito.ts`, `public/manifest.webmanifest`; preservare il service worker |
 | Interfaccia e bozzetti, come attività approvata | [DESIGN](../DESIGN.md), [indice specifiche](../specifiche/README.md) | Solo il README del pezzo di `design/` e la skill pertinente |
