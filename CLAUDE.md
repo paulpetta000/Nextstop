@@ -44,6 +44,7 @@ Rispondi in italiano semplice e spiega i termini tecnici.
 - Prima di dire «fatto»: `npm test` verde, build senza errori e `check:links` pulito. Prima di un'anteprima anche: axe in chiaro e scuro, Lighthouse su telefono (almeno 95), nessuno scorrimento orizzontale a 320 e 390 px, «riduci movimento», nessun errore in console.
 - Aggiorna `PROGRESS.md` a fine lavoro, in poche righe.
 - I commit si firmano come quelli di prima (autore `Claude <noreply@anthropic.com>`): sul computer di Enrico git non ha un nome impostato, quindi si passa con `git -c user.name=… -c user.email=…`, senza cambiare le impostazioni.
+- **Anche Codex** (Enrico, 08/10/2026): Codex legge `AGENTS.md`, che rimanda a questo file. Le regole si scrivono **solo qui**. Le skill per Codex sono la copia di `.claude/skills/` in `.agents/skills/`: se ne cambi una, ricopiala. Un solo assistente alla volta sullo stesso ramo, con un commit prima di passare all'altro.
 
 ## Guidare Enrico passo passo (regola di Enrico, 03/10/2026)
 Enrico costruisce il sito **con te**, e vuole che sia tu a dirgli cosa fare a ogni passaggio, in italiano semplice e **con il telefono in mano**:
