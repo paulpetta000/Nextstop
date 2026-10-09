@@ -1,6 +1,14 @@
 # PROGRESS
 
-_Ultimo aggiornamento: 08/10/2026 (agente «ricercatore»; ricerche su filtri dei locali e mappa; bozza della specifica del compositore)._
+_Ultimo aggiornamento: 09/10/2026 (manutenzione, Blocco 1; ramo `codex/manutenzione-blocco-1`)._
+
+## Manutenzione · Blocco 1 completato, in attesa di approvazione
+- Ramo creato da `main`; conservate senza modifiche le istruzioni e skill Codex di `compositore-pagina`. Le proposte grafiche e il loro stato più recente restano in quel ramo, da continuare con Claude: non sono un rilascio del sito.
+- Prima delle correzioni: riprodotti nei test il taglio dell'archivio a 50 itinerari e la perdita di tappe spostate verso un giorno senza spazio (3 test rossi, 5 casi compatibili verdi).
+- Corretto `memoria.ts`: riaprire e risalvare conserva tutti gli itinerari validi e quello attivo. Lo spostamento controlla prima lo spazio per l'intero gruppo; se non basta, lascia tutto al suo posto e avvisa. La sola preparazione dello spostamento è isolata in `src/lib/itinerari/spostamenti.ts`, senza riscrivere il compositore.
+- Verifiche: `npm test` 36/36 (9 nuovi), build riuscita, `check:links` 888 link senza errori; prova isolata delle funzioni reali della pagina su dati fittizi: nessun salvataggio quando il giorno è pieno, spostamento valido e «Annulla» funzionanti. Quattro import con `.ts` necessari ai test, compatibili con la configurazione Astro e la build.
+- Nessuna dipendenza installata, nessun dato utente o contenuto modificato, nessun push o deploy. `main` e `compositore-pagina` invariati. Restano gli avvisi già presenti sulle fonti; i dati eventualmente già persi prima della correzione non vengono recuperati.
+- Fermarsi qui. Il Blocco 2 (documentazione e contesto AI) richiede l'OK di Enrico; nessuna ottimizzazione dei documenti è iniziata.
 
 ## Fase 1 in corso (ramo `grafica-home`, anche su GitHub dal 07/10/2026)
 - Specifica `specifiche/home-e-identita.md` approvata il 06/10/2026, con le aggiunte di Enrico: il compositore si rifà tutto (restano dati e calcoli), i **racconti** degli itinerari pronti (stile MUDD, per Google), il menu con le tre linee.

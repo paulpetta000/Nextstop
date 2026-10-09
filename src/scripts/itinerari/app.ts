@@ -8,6 +8,7 @@ import { codifica, decodifica, nuovoItinerario, giornoVuoto, uguali, MAX_GIORNI,
 import { dataLunga, dataBreve, ora, durata, durataParole, piuGiorni, giornoSettimana, NOMI_GIORNI, ilGiorno, dataValida, minutiDa } from '../../lib/itinerari/date';
 import { icona } from '../../lib/itinerari/icone';
 import { leggi, scrivi, quandoCambia, type Archivio } from './memoria';
+import { preparaSpostamento } from '../../lib/itinerari/spostamenti';
 import { trascinabile } from './trascina';
 import type { Avviso, Giorno, Itinerario, Risultato, Voce } from '../../lib/itinerari/tipi';
 
@@ -476,15 +477,12 @@ function avvia() {
   }
   // Mette delle tappe in un altro giorno (o in un giorno nuovo, se serve) e passa a quel giorno
   function spostaInGiorno(ids: string[], dest: number) {
-    const x = it();
-    if (dest >= x.giorni.length && x.giorni.length >= MAX_GIORNI) { toast(`Al massimo ${MAX_GIORNI} giorni`); return; }
-    const da = giorno;
-    cambia(y => {
-      if (dest >= y.giorni.length) { y.giorni.push(giornoVuoto(y.giorni[da].inizio, y.giorni[da].fine)); dest = y.giorni.length - 1; }
-      if (y.giorni[dest].gita) { y.giorni.splice(dest, 0, giornoVuoto(y.giorni[da].inizio, y.giorni[da].fine)); }
-      y.giorni[da].tappe = y.giorni[da].tappe.filter(t => !ids.includes(t));
-      y.giorni[dest].tappe = [...y.giorni[dest].tappe.filter(t => !ids.includes(t)), ...ids].slice(0, MAX_TAPPE);
-    }, { annulla: `${ids.length === 1 ? maiuscola(breve(ids[0])) + ' è' : 'Le tappe sono'} nel giorno ${dest + 1}` });
+    const spostamento = preparaSpostamento(it(), giorno, dest, ids);
+    if (spostamento === 'limite-giorni') { toast(`Al massimo ${MAX_GIORNI} giorni`); return; }
+    if (spostamento === 'limite-tappe') { toast(`Al massimo ${MAX_TAPPE} tappe in un giorno`); return; }
+    cambia(y => { y.giorni = spostamento.giorni; }, {
+      annulla: `${ids.length === 1 ? maiuscola(breve(ids[0])) + ' è' : 'Le tappe sono'} nel giorno ${spostamento.destinazione + 1}`
+    });
   }
   function aggiungiTappa(id: string) {
     const x = it();

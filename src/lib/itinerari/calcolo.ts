@@ -1,6 +1,6 @@
 // Calcolo di una giornata: orari, spostamenti, avvisi e ordine più corto. Funzioni pure, senza DOM:
 // le usa la pagina (src/scripts/itinerari/) e la build, che controlla gli itinerari pronti.
-import { giornoSettimana, tipoGiorno, piuGiorni } from './date';
+import { giornoSettimana, tipoGiorno, piuGiorni } from './date.ts';
 import type { Adesso, Avviso, Citta, Corsa, Giorno, Itinerario, Risultato, Scenario, Tappa, Vivo, Voce } from './tipi';
 import type { GiornoSettimana } from './date';
 
