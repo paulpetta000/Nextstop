@@ -2,7 +2,15 @@
 
 Sito statico in [Astro](https://astro.build), pubblicato su Vercel. Nato il 06/10/2026 dagli itinerari di Napoli a Vela (`specifiche/sito-itinerari-separazione.md`).
 
+## Documentazione e assistenti
+
+- [AGENTS.md](AGENTS.md): istruzioni Codex; [CLAUDE.md](CLAUDE.md): istruzioni Claude Code. Entrambi usano le [regole comuni](docs/REGOLE.md) e lo [stato corrente](PROGRESS.md).
+- [Indice delle letture](docs/README.md): scegli moduli e documenti pertinenti; contiene inventario delle skill, rimandi allo storico e distinzione fra manutenzione e proposte grafiche.
+- Qui restano comandi, struttura e procedure per sviluppatori. [ROADMAP](ROADMAP.md) per lavori futuri, [specifiche](specifiche/README.md) per vincoli approvati, [DESIGN](DESIGN.md) solo per l'interfaccia.
+
 ## Comandi
+
+Node >=22.12. L'installazione serve alla prima preparazione autorizzata, non a ogni sessione AI; su questo computer vedi [ambiente locale](docs/AMBIENTE-LOCALE.md).
 
 ```sh
 npm install
@@ -114,9 +122,11 @@ Una scheda `confermato` che ha **solo** fonti `enciclopedia`, `blog` o `altro` f
 - la **firma**: che `src/testi/firme.json` corrisponda alle schede di oggi;
 - le **date** delle schede e delle fonti (niente nel futuro, «ricontrollare» dopo «controllato») e i tipi di fonte (`test/dati.test.mjs`);
 - il **controllo dei link**, provato su un sito finto (`test/link.test.mjs`);
-- le **date in italiano** di `src/lib/formato.ts`, in cinque fusi orari (`test/date.test.mjs`).
+- le **date in italiano** di `src/lib/formato.ts`, in cinque fusi orari (`test/date.test.mjs`);
+- la **memoria degli itinerari** oltre il cinquantesimo, l'itinerario attivo e la compatibilità degli archivi piccoli (`test/memoria-itinerari.test.mjs`);
+- gli **spostamenti delle tappe**: destinazione piena, gruppi senza spazio, limiti, ordine e preparazione senza mutare l'originale (`test/spostamenti-itinerari.test.mjs`). I casi che perdevano dati sono stati riprodotti prima delle correzioni del Blocco 1.
 
-I test non fermano la pubblicazione su Vercel: si eseguono prima di dire «fatto», insieme a build e `check:links`.
+I test non fermano la pubblicazione su Vercel; la CI sulle pull request è prevista nel Blocco 3, ancora da approvare. Esecuzione durante il lavoro e a fine blocco secondo le [regole comuni](docs/REGOLE.md#verifiche-e-letture), senza ripetere la build per sole modifiche documentali.
 
 ## Altro
 

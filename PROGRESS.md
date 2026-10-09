@@ -1,57 +1,26 @@
-# PROGRESS
+# PROGRESS · stato attuale
 
-_Ultimo aggiornamento: 09/10/2026 (manutenzione, Blocco 1; ramo `codex/manutenzione-blocco-1`)._
+_Aggiornato il 09/10/2026. Ramo di manutenzione: `codex/manutenzione-blocco-1`, creato da `main`._
 
-## Manutenzione · Blocco 1 completato, in attesa di approvazione
-- Ramo creato da `main`; conservate senza modifiche le istruzioni e skill Codex di `compositore-pagina`. Le proposte grafiche e il loro stato più recente restano in quel ramo, da continuare con Claude: non sono un rilascio del sito.
-- Prima delle correzioni: riprodotti nei test il taglio dell'archivio a 50 itinerari e la perdita di tappe spostate verso un giorno senza spazio (3 test rossi, 5 casi compatibili verdi).
-- Corretto `memoria.ts`: riaprire e risalvare conserva tutti gli itinerari validi e quello attivo. Lo spostamento controlla prima lo spazio per l'intero gruppo; se non basta, lascia tutto al suo posto e avvisa. La sola preparazione dello spostamento è isolata in `src/lib/itinerari/spostamenti.ts`, senza riscrivere il compositore.
-- Verifiche: `npm test` 36/36 (9 nuovi), build riuscita, `check:links` 888 link senza errori; prova isolata delle funzioni reali della pagina su dati fittizi: nessun salvataggio quando il giorno è pieno, spostamento valido e «Annulla» funzionanti. Quattro import con `.ts` necessari ai test, compatibili con la configurazione Astro e la build.
-- Nessuna dipendenza installata, nessun dato utente o contenuto modificato, nessun push o deploy. `main` e `compositore-pagina` invariati. Restano gli avvisi già presenti sulle fonti; i dati eventualmente già persi prima della correzione non vengono recuperati.
-- Fermarsi qui. Il Blocco 2 (documentazione e contesto AI) richiede l'OK di Enrico; nessuna ottimizzazione dei documenti è iniziata.
+## Manutenzione approvata
 
-## Fase 1 in corso (ramo `grafica-home`, anche su GitHub dal 07/10/2026)
-- Specifica `specifiche/home-e-identita.md` approvata il 06/10/2026, con le aggiunte di Enrico: il compositore si rifà tutto (restano dati e calcoli), i **racconti** degli itinerari pronti (stile MUDD, per Google), il menu con le tre linee.
-- **Grafica scelta: A «Rivista»** (07/10/2026): https://claude.ai/artifact/37yToKfDMfL87fHKvGQDE3 (sorgente `design/home/a.html`; la B «La linea» è salvata accanto).
-- **Marchio scelto: la soglia astratta** (07/10/2026), dopo sette giri tutti salvati in `design/logo/` (README con i link). La «o» del nome è un segnaposto; sopra le foto calde la versione ambra.
-  Su Google l'icona resta ferma (Google mostra solo immagini fisse); l'animazione vive sul sito.
-- **`DESIGN.md`** scritto: colori, caratteri, forme, componenti, movimento, marchio. Da decidere vedendo l'anteprima: accento del sito giallo tufo o pervinca del marchio.
-- **Costruzione (07/10/2026), sul ramo `grafica-home`**: home nuova (`src/pages/index.astro`, testi in `src/testi/home.yaml` con i numeri dai dati: `riempi` in `src/lib/regole.mjs`), testata con menu a popover, piè di pagina blu notte, marchio animato (`Marchio.astro`, `src/lib/marchio.mjs`), icone e anteprime nuove, Bodoni Moda, `?pronto=` nel compositore, `?cucina=` in «Dove mangiare». Corretto un errore vecchio: su computer «Aggiungi» da «Dove mangiare» bloccava il compositore.
-- **Secondo giro con Enrico (07/10/2026, «più profondità, più movimento, premium»)**: portico di piperno al posto delle foto ad arco (`Campata.astro`, `src/lib/portico.mjs`, pietra da `scripts/pietra.mjs`), con prospettiva che si muove scorrendo e nebbia color pietra intorno; rombo a tre piani con il Borgo Marinari (via il fruttivendolo) e il titolo sulla punta; «Quanto tempo hai?» come fascia con i numeri in Bodoni; la foto in alto scende più piano delle parole.
-- Controlli del 07/10/2026: `npm test` 27/27, build ok, `check:links` puliti; **Lighthouse da telefono** (in locale, senza compressione): home 96, itinerari 94, dove mangiare 95, fonti 99; accessibilità, buone pratiche e SEO 100 ovunque; **axe** zero problemi in chiaro e scuro (home, menu, itinerari, dove mangiare); CLS 0; nessuno scorrimento di lato a 320 e 390 px. Strumenti in `C:UsersWindows11	oolscontrolli` (vedi `CLAUDE.md`).
-- **Pubblicata su `main` il 07/10/2026** (OK di Enrico). Da decidere guardando il sito: accento giallo tufo o pervinca; pietra più chiara o più scura.
+- **Blocco 1 completato** (`c00723e`): conservazione di oltre 50 itinerari e blocco degli spostamenti senza spazio, con test scritti prima delle correzioni. Verifiche del Blocco 1: 36/36 test, build riuscita, 888 link validi; prova isolata di salvataggio e «Annulla». Dati già persi non recuperabili con queste correzioni.
+- **Blocco 2 approvato e completato**: `AGENTS.md` specifico Codex, `CLAUDE.md` con istruzioni Claude conservate, regole comuni in `docs/REGOLE.md`, letture per compito in `docs/README.md`, strumenti locali separati. Verificati 52 riferimenti documentali, snapshot integrali, conservazione esatta della sezione modelli/agenti Claude e delle istruzioni locali, `git diff --check`. Nessuna modifica eseguibile rispetto al Blocco 1: suite/build/link del sito non ripetuti.
+- **Fermarsi qui:** il prossimo è il Blocco 3, test essenziali e GitHub Actions leggero sulle PR verso `main`, con build/test/link, senza agenti AI, deploy o E2E pesanti. Non iniziare senza un nuovo OK di Enrico.
+- Dopo: Blocco 4 refactoring mirato senza riscrivere il compositore; Blocco 5 codice dimostrato inutilizzato e pulizia finale. Ogni blocco richiede il proprio OK.
+- `main` e `compositore-pagina` invariati; nessun push, merge, deploy o dipendenza nuova. Restano gli avvisi sulle fonti già osservati nel Blocco 1, fuori da questa manutenzione.
 
-## Dove siamo
-- **06/10/2026: il sito è nato** separando gli itinerari da Napoli a Vela (`specifiche/sito-itinerari-separazione.md`, approvata da Enrico).
-  Dentro: il compositore `/napoli/itinerari/`, «Dove mangiare» `/napoli/dove-mangiare/`, 60 tappe (51 in città e 9 gite), 32 locali, 212 schede, 204 fonti, 54 foto, orari dei bus ANM (validi fino al 31/12/2026).
-- Itinerari e «Dove mangiare» **funzionano come su Napoli a Vela** (stile «Orario»). Tolti dai testi i due link alla Coppa (collegamento a senso unico).
-- **Provvisori**: la home, la pagina `/napoli/`, il logo (piastrella gialla con il segno di una fermata), i colori di intestazione e piè di pagina (ancora quelli di Napoli a Vela). Si rifanno con la grafica.
-- Controlli del 06/10/2026 sul computer di Enrico: `npm test` 26/26, build ok (11 pagine), `check:links` 781 link senza errori, immagini da telefono in chiaro e scuro, nessuno scorrimento orizzontale a 390 px.
-- **Online dal 06/10/2026** su https://nextstop-alpha.vercel.app (repository `paulpetta000/Nextstop`, privato). Le fasi dei lavori sono in `ROADMAP.md`.
+## Sito e proposte sono separati
 
-## Cosa fa Enrico adesso
-1. Verificare gli **orari dei 5 locali nuovi** (3 bracerie, 2 friggitorie: OK di Enrico, 08/10/2026) e mandarli a Claude: `da-verificare/orari-locali.md`.
-2. Decidere l'email del sito (oggi è quella di Napoli a Vela, in `src/config/sito.ts`).
-3. Google Search Console (08/10/2026): proprietà verificata con il file `public/googlee54aa324270bde6d.html` (**non cancellarlo**); Vercel Analytics attivo. Da fare: inviare `sitemap.xml` e «Richiedi indicizzazione» della home, se la quota giornaliera lo permette (ritentare dal 09/10).
+- Il sito pubblicato nasce da `main`; home, marchio, menu e piè di pagina risultano pubblicati il 07/10 nello storico. Le note più vecchie che li chiamano «provvisori» descrivono il 06/10.
+- Le proposte del compositore sono sul ramo `compositore-pagina`, da valutare e continuare con Claude. Il pezzo 2, giro 1, attende il parere di Enrico. Scelte intermedie e prove nei bozzetti non costituiscono consenso a implementare o pubblicare.
+- Per quel lavoro leggi il `PROGRESS.md`, la specifica e la sola sezione pertinente di `design/compositore/README.md` **del ramo dei bozzetti**, come spiegato nell'[indice](docs/README.md#rami-e-proposte-grafiche). Non importarli nella manutenzione.
+- Le attività di prodotto restano nella [ROADMAP](ROADMAP.md), escluse dai blocchi correnti: SEO, grafica, funzioni e città nuove. Gli orari dei cinque locali sono ancora una verifica separata di Enrico in [da-verificare/orari-locali.md](da-verificare/orari-locali.md).
 
-## Prossimi passi (in ordine: vedi `ROADMAP.md`)
-1. **Fase 2 · il compositore**: specifica **approvata l'08/10/2026** (`specifiche/compositore.md`; mappa **in sospeso**: Enrico vuole capire cosa cambia senza l'uso offline). Ricerche in `ricerca/2026-10-08-*.md`. Prossimo: **pezzo 1, pagina e barra del compositore, 4 proposte**, su un ramo nuovo da `main`. Opus, effort extra.
-2. **Home**: foto del portico, «Come funziona», «Perché fidarti», testi, fonti a scomparsa, crediti delle foto in fondo (stessa lista).
-3. **Fase 3 · racconti degli itinerari**: la ricerca sulla storia delle 15 tappe dei due giorni è fatta (07/10/2026, ramo `racconto-due-giorni`, `ricerca/storia-luoghi/`: 125 fatti da rileggere), poi le 4 pagine.
-4. **Città nuove**, **SEO** con claude-seo, `da-risolvere.md` (28 righe aperte): vedi `ROADMAP.md`.
+## Riferimenti solo quando servono
 
-## Skill (06/10/2026)
-| Skill | Dove | Per cosa |
-|---|---|---|
-| frontend-design, modern-web-guidance, design-sito, stile-testi | nel progetto (`.claude/skills/`) | grafica, codice delle pagine, testi |
-| VectorLab UI/UX Skills, consistent-ui | sull'account di Enrico, **non copiate** nel progetto (scelta di Enrico, 06/10/2026); lette per intero il 06/10/2026: solo testo, nessun programma | controllo di coerenza e rifinitura |
-| claude-seo | da installare come plugin quando serve (leggere prima tutto il codice) | SEO |
+- [Indice delle letture e inventario skill/plugin](docs/README.md): moduli e specifiche per il compito. Per proseguire la manutenzione con test/CI bastano strumenti già presenti, in locale; non installare risorse aggiuntive.
+- [Ambiente locale](docs/AMBIENTE-LOCALE.md): Node portatile, strumenti e anteprime su questo computer.
+- [Stato storico prima del Blocco 2](docs/storico/2026-10-09-PROGRESS.md): cronologia completa, decisioni, note e lavori rimandati. [Istruzioni precedenti](docs/storico/2026-10-09-CLAUDE.md): snapshot di riferimento, non regole operative correnti.
 
-La guida di stile dei testi (`specifiche/stile-testi.md`) è nata per Napoli a Vela: per le città nuove va deciso chi è l'«amico del posto» del 25%.
-
-## Note
-- **Agente `ricercatore`** (08/10/2026, `.claude/agents/ricercatore.md`): Sonnet, effort medio, ricerche sul web con le fonti, salva tutto in `ricerca/`. Si vede dalle sessioni nuove.
-- **Vercel Hobby è solo per uso non commerciale** (condizioni lette l'08/10/2026): con pubblicità o affiliazione servirebbe il piano Pro; le donazioni vanno bene.
-- Gli **id non si rinominano** (tappe, locali, schede): stanno nei link condivisi e nei telefoni.
-- Il blocco «Regate dal lungomare» resta per Napoli nei giorni di regata 2027 (`src/data/eventi.ts`, schede `cal-`): orari 2027 non ancora usciti.
-- Orari e prezzi delle tappe da ricontrollare entro il 30/04/2027; feed ANM da riscaricare a gennaio 2027 (`aggiornamenti/`).
+Mantieni questo file breve: stato, ramo e prossimo blocco. Conserva nuovi resoconti estesi in `docs/storico/` e nuove decisioni nella specifica pertinente, senza sovrascrivere la storia.
