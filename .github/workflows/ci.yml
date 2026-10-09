@@ -1,0 +1,52 @@
+name: Controlli Nextstop
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  verifica:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      ASTRO_TELEMETRY_DISABLED: '1'
+    defaults:
+      run:
+        shell: bash
+    steps:
+      # Git e Node sono già sul runner: nessuna Action o script esterno da installare.
+      - name: Leggi il commit di prova della pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          git init --quiet
+          git remote add origin "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git"
+          auth="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
+          printf '::add-mask::%s\n' "$auth"
+          git -c "http.extraheader=AUTHORIZATION: basic $auth" fetch --no-tags --depth=1 origin "$GITHUB_REF"
+          git checkout --detach --quiet FETCH_HEAD
+
+      - name: Verifica Node già disponibile
+        run: |
+          node --version
+          npm --version
+          node --input-type=module --eval "const [major, minor] = process.versions.node.split('.').map(Number); if (major < 22 || (major === 22 && minor < 12)) throw new Error('Serve Node >=22.12');"
+
+      - name: Installa solo le dipendenze bloccate, senza script automatici
+        run: npm ci --ignore-scripts --no-audit --no-fund
+
+      - name: Test
+        run: npm test
+
+      - name: Build
+        run: npm run build
+
+      - name: Link interni
+        run: npm run check:links

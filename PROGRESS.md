@@ -5,9 +5,10 @@ _Aggiornato il 09/10/2026. Ramo di manutenzione: `codex/manutenzione-blocco-1`, 
 ## Manutenzione approvata
 
 - **Blocco 1 completato** (`c00723e`): conservazione di oltre 50 itinerari e blocco degli spostamenti senza spazio, con test scritti prima delle correzioni. Verifiche del Blocco 1: 36/36 test, build riuscita, 888 link validi; prova isolata di salvataggio e «Annulla». Dati già persi non recuperabili con queste correzioni.
-- **Blocco 2 approvato e completato**: `AGENTS.md` specifico Codex, `CLAUDE.md` con istruzioni Claude conservate, regole comuni in `docs/REGOLE.md`, letture per compito in `docs/README.md`, strumenti locali separati. Verificati 52 riferimenti documentali, snapshot integrali, conservazione esatta della sezione modelli/agenti Claude e delle istruzioni locali, `git diff --check`. Nessuna modifica eseguibile rispetto al Blocco 1: suite/build/link del sito non ripetuti.
-- **Fermarsi qui:** il prossimo è il Blocco 3, test essenziali e GitHub Actions leggero sulle PR verso `main`, con build/test/link, senza agenti AI, deploy o E2E pesanti. Non iniziare senza un nuovo OK di Enrico.
-- Dopo: Blocco 4 refactoring mirato senza riscrivere il compositore; Blocco 5 codice dimostrato inutilizzato e pulizia finale. Ogni blocco richiede il proprio OK.
+- **Blocco 2 completato** (`6740645`): istruzioni Codex/Claude separate, regole comuni, letture per compito, stato breve e ambiente locale; 52 riferimenti verificati, storico e istruzioni specifiche conservati. Solo documentazione, suite/build del Blocco 1 non ripetuti.
+- **Blocco 3 approvato e completato localmente**: 17 test nuovi su link/sanitizzazione, calcoli, locali, bus e storage; 53/53 test (runner circa 0,8 s), build riuscita (6,24 s), 888 link validi. Workflow PR verso `main`, un job Ubuntu, sola lettura, timeout/cancellazione, test/build/link senza agenti, deploy o E2E. YAML e sintassi Bash verificati; codice del sito e lockfile invariati.
+- **CI ancora da eseguire su GitHub**: nessun push/PR effettuato; l'installazione `npm ci --ignore-scripts` e i binari nativi Linux vanno validati nella prima PR autorizzata. Dettagli e fonti nel [README · GitHub Actions](README.md#github-actions--controlli-delle-pull-request). Nessuna dipendenza installata su questo computer.
+- **Fermarsi qui:** il prossimo è il Blocco 4, refactoring mirato senza riscrivere il compositore. Non iniziare senza un nuovo OK di Enrico. Poi Blocco 5, codice dimostrato inutilizzato e pulizia finale, con il proprio OK.
 - `main` e `compositore-pagina` invariati; nessun push, merge, deploy o dipendenza nuova. Restano gli avvisi sulle fonti già osservati nel Blocco 1, fuori da questa manutenzione.
 
 ## Sito e proposte sono separati

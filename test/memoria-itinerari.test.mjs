@@ -40,3 +40,31 @@ test('memoria: gli archivi piccoli e il ripiego su un id attivo inesistente rest
   scrivi({ attivo: 'assente', elenco });
   assert.deepEqual(leggi(C), { attivo: elenco[0].id, elenco });
 });
+
+test('memoria: storage disabilitato viene segnalato senza propagare l’errore', t => {
+  archivioFinto(t);
+  t.mock.method(localStorage, 'getItem', () => { throw new Error('Storage disabilitato'); });
+  t.mock.method(localStorage, 'setItem', () => { throw new Error('Quota esaurita'); });
+  assert.equal(leggi(C), null);
+  assert.equal(scrivi({ attivo: 'viaggio0', elenco: [itinerario(0)] }), false);
+});
+
+test('memoria: una scrittura rifiutata non sostituisce l’archivio salvato', t => {
+  const dati = archivioFinto(t);
+  const originale = { attivo: 'viaggio0', elenco: [itinerario(0)] };
+  assert.equal(scrivi(originale), true);
+  const salvato = dati.get('itinerari-v1');
+  t.mock.method(localStorage, 'setItem', () => { throw new Error('Quota esaurita'); });
+  assert.equal(scrivi({ attivo: 'viaggio1', elenco: [itinerario(1)] }), false);
+  assert.equal(dati.get('itinerari-v1'), salvato);
+  assert.deepEqual(leggi(C), originale);
+});
+
+test('memoria: archivio vuoto o JSON corrotto restituisce null', t => {
+  const dati = archivioFinto(t);
+  assert.equal(leggi(C), null);
+  for (const json of ['{', '{"elenco":{}}', '{"elenco":[]}']) {
+    dati.set('itinerari-v1', json);
+    assert.equal(leggi(C), null);
+  }
+});

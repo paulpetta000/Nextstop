@@ -123,10 +123,27 @@ Una scheda `confermato` che ha **solo** fonti `enciclopedia`, `blog` o `altro` f
 - le **date** delle schede e delle fonti (niente nel futuro, «ricontrollare» dopo «controllato») e i tipi di fonte (`test/dati.test.mjs`);
 - il **controllo dei link**, provato su un sito finto (`test/link.test.mjs`);
 - le **date in italiano** di `src/lib/formato.ts`, in cinque fusi orari (`test/date.test.mjs`);
-- la **memoria degli itinerari** oltre il cinquantesimo, l'itinerario attivo e la compatibilità degli archivi piccoli (`test/memoria-itinerari.test.mjs`);
+- la **memoria degli itinerari** oltre il cinquantesimo, l'itinerario attivo, storage disabilitato/pieno e archivi corrotti (`test/memoria-itinerari.test.mjs`);
+- i **link degli itinerari**: andata/ritorno, gite, sanitizzazione, limiti e compatibilità dei link vecchi (`test/link-itinerari.test.mjs`);
+- i **calcoli degli itinerari**: orari e totali, giornata piena, scenari di calendario, apertura dei locali, ripartenza dal vivo e bus con partenze valide/mancanti/esaurite (`test/calcolo-itinerari.test.mjs`). Casi sintetici, senza rete o dati utente;
 - gli **spostamenti delle tappe**: destinazione piena, gruppi senza spazio, limiti, ordine e preparazione senza mutare l'originale (`test/spostamenti-itinerari.test.mjs`). I casi che perdevano dati sono stati riprodotti prima delle correzioni del Blocco 1.
 
-I test non fermano la pubblicazione su Vercel; la CI sulle pull request è prevista nel Blocco 3, ancora da approvare. Esecuzione durante il lavoro e a fine blocco secondo le [regole comuni](docs/REGOLE.md#verifiche-e-letture), senza ripetere la build per sole modifiche documentali.
+Esecuzione durante il lavoro e a fine blocco secondo le [regole comuni](docs/REGOLE.md#verifiche-e-letture), senza ripetere la build per sole modifiche documentali. Il workflow seguente verifica le pull request, senza gestire la pubblicazione su Vercel.
+
+## GitHub Actions · controlli delle pull request
+
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) è preparato sul ramo di manutenzione: solo PR verso `main`, un job Ubuntu 24.04, permessi `contents: read`, limite di 15 minuti e cancellazione delle esecuzioni superate per la stessa PR. Nessun agente AI, deploy, merge automatico o E2E pesante. Non salta i cambiamenti a documenti, YAML o dati.
+
+Per riusare gli strumenti del runner e non introdurre Actions esterne, poche righe di Git leggono il commit di prova della PR; il token di lettura è usato solo in quel passo e non salvato nella configurazione Git. Git e Node >=22.12 sono [già presenti nel runner Ubuntu 24.04](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md) (verificato il 09/10/2026); il workflow controlla la versione disponibile, senza fissare una patch o installare un runtime aggiuntivo.
+
+Sul runner, in ordine:
+
+1. `npm ci --ignore-scripts --no-audit --no-fund`: installa le sole dipendenze già fissate nel lockfile; [disabilita gli script automatici di installazione](https://docs.npmjs.com/cli/v11/commands/npm-ci/#ignore-scripts), senza introdurre pacchetti nel progetto.
+2. `npm test`.
+3. `npm run build` (telemetria Astro disabilitata).
+4. `npm run check:links`, solo dopo una build riuscita.
+
+**Stato della verifica:** YAML, permessi, trigger, ordine e sintassi Bash controllati localmente; test/build/link eseguiti su Windows con dipendenze già presenti. Nessuna installazione locale e nessuna esecuzione GitHub dichiarata: la prima PR richiede autorizzazione al push e deve verificare su Ubuntu anche l'installazione senza script di `esbuild`/`sharp` (binari Linux presenti nel lockfile). Non abilitare script indiscriminatamente se quella verifica fallisce. Non serve creare token personali o fornire segreti Vercel.
 
 ## Altro
 

@@ -7,6 +7,7 @@ Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [re
 | Compito | Dove entrare | Approfondimento solo se necessario |
 |---|---|---|
 | Avvio, comandi e struttura | [README del progetto](../README.md#comandi), `package.json` | [Ambiente locale](AMBIENTE-LOCALE.md) per questo computer |
+| Test e CI | [README · Test](../README.md#test), [GitHub Actions](../README.md#github-actions--controlli-delle-pull-request), `test/`, `.github/workflows/ci.yml` | Solo i test del modulo; la prima esecuzione Ubuntu resta da verificare in PR |
 | Compositore: stato e interazioni | `src/scripts/itinerari/app.ts`, `memoria.ts`, `trascina.ts` | `src/pages/napoli/itinerari/index.astro`, [specifica](../specifiche/compositore.md) nella parte pertinente |
 | Calcoli, spostamenti e link | `src/lib/itinerari/calcolo.ts`, `spostamenti.ts`, `link.ts`, `date.ts`, `tipi.ts` | Test corrispondenti in `test/`; `napoli.ts` fornisce i dati della città |
 | Mappa e percorsi | `src/scripts/itinerari/mappa.ts`, `scripts/mappa/` | [README · Itinerari](../README.md#itinerari); JSON solo per il caso riprodotto |
