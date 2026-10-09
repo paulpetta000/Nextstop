@@ -3,3 +3,8 @@ dist
 .astro
 .vercel
 .claude/launch.json
+
+# Configurazione locale; il modello senza segreti può essere versionato.
+.env
+.env.*
+!.env.example
