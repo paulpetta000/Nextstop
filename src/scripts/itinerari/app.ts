@@ -5,7 +5,7 @@ import { spacchetta, spacchettaVivo, aggiungiScenari, type Pacco, type PaccoVivo
 import { calcolaGiorno, ordinePiuCorto, tappaDi, dataDelGiorno, minuti, scenarioDi, orarioLocale } from '../../lib/itinerari/calcolo';
 import type { Adesso } from '../../lib/itinerari/tipi';
 import { codifica, decodifica, nuovoItinerario, giornoVuoto, uguali, MAX_GIORNI, MAX_TAPPE, MAX_NOME } from '../../lib/itinerari/link';
-import { dataLunga, dataBreve, ora, durata, durataParole, piuGiorni, giornoSettimana, NOMI_GIORNI, ilGiorno, dataValida, minutiDa } from '../../lib/itinerari/date';
+import { dataLunga, dataBreve, ora, durata, durataParole, piuGiorni, giornoSettimana, ilGiorno, dataValida, minutiDa } from '../../lib/itinerari/date';
 import { icona } from '../../lib/itinerari/icone';
 import { leggi, scrivi, quandoCambia, type Archivio } from './memoria';
 import { preparaSpostamento } from '../../lib/itinerari/spostamenti';

@@ -79,8 +79,3 @@ async function carica(): Promise<Tappa[]> {
   if (errori.length) throw new Error(`Itinerari da sistemare (${errori.length}):\n- ${errori.join('\n- ')}`);
   return tappe;
 }
-
-// Per la build: carica tutto e fa tutti i controlli, senza creare pagine
-export async function controllaTappe() {
-  await getTappe();
-}
