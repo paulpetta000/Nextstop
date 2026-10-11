@@ -2,6 +2,8 @@
 import '../styles/global.css';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import HomeTestata from '../components/home/Testata.astro';
+import HomePiede from '../components/home/Piede.astro';
 import { SITO } from '../config/sito';
 import { cssFirma } from '../lib/marchio.mjs';
 
@@ -13,8 +15,9 @@ interface Props {
   noindex?: boolean;
   // la home: testata sopra la foto, fondo «carta» della grafica nuova, marchio animato all'apertura
   home?: boolean;
+  orizzonte?: boolean;
 }
-const { title, description, og, jsonld = [], noindex = false, home = false } = Astro.props;
+const { title, description, og, jsonld = [], noindex = false, home = false, orizzonte = false } = Astro.props;
 const path = Astro.url.pathname;
 const canonical = new URL(path, SITO.url).href;
 const fullTitle = path === '/' ? `${SITO.nome} · ${SITO.sottotitolo}` : `${title} · ${SITO.nome}`;
@@ -69,13 +72,13 @@ const ld = [
   <style is:inline set:html={cssFirma()}></style>
   {ld.map(o => <script type="application/ld+json" set:html={JSON.stringify(o)} />)}
 </head>
-<body class={home ? 'su-carta' : undefined}>
+<body class={orizzonte ? 'g5 v-o4' : home ? 'su-carta' : undefined}>
   <a class="skip" href="#contenuto">Vai al contenuto</a>
-  <Header sopraFoto={home} />
+  {orizzonte ? <HomeTestata /> : <Header sopraFoto={home} />}
   <main id="contenuto">
     <slot />
   </main>
-  <Footer />
+  {orizzonte ? <HomePiede /> : <Footer />}
   <script>
     import '../scripts/sito';
   </script>
