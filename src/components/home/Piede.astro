@@ -1,0 +1,14 @@
+---
+import Marchio from '../Marchio.astro';
+import {getEntry} from 'astro:content';
+import {LICENZE} from '../../lib/foto';
+import {TRASPARENZA} from '../../config/menu';
+const ids=['tp-san-martino','vista-monte-echia','via-partenope','tp-santa-chiara'];
+const foto=await Promise.all(ids.map(async id=>{const f=await getEntry('foto',id);if(!f)throw new Error(id);return f.data;}));
+---
+<footer class="site-footer">
+ <div class="wrap footer-main"><a href="/"><Marchio /></a><p>Il prossimo posto.<br />Il tuo modo di arrivarci.</p><a class="text-link" href="#inizio">Torna su <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15m-6-6 6 6-6 6"/></svg></a></div>
+ <nav class="wrap legal" aria-label="Informazioni">{TRASPARENZA.map(t=><a href={t.href}>{t.label}</a>)}</nav>
+ <p class="wrap footer-note">Sito indipendente di itinerari. Prima di partire, controlla orari e prezzi sui siti dei luoghi. Mappe: © i contributori di <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>.</p>
+ <details class="wrap credits"><summary>Fotografie e licenze</summary><ul>{foto.map(f=><li>{f.didascalia} <a href={f.autoreUrl}>{f.autore}</a>. <a href={LICENZE[f.licenza]} rel="license">{f.licenza}</a>. <a href={f.fonte}>Originale</a>. Ridimensionamento, conversione AVIF/WebP e ritaglio secondo il riquadro, senza alterare il soggetto.</li>)}</ul><p>Archivo: SIL Open Font License, conservata con il font nel sito.</p></details>
+</footer>

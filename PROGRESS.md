@@ -1,6 +1,10 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 09/10/2026. Ramo di manutenzione: `codex/manutenzione-blocco-1`, creato da `main`._
+_Aggiornato il 11/10/2026. Ramo di manutenzione: `codex/manutenzione-blocco-1`, creato da `main`._
+
+## Home O4 · rilascio autorizzato
+
+Enrico ha autorizzato integrazione in main e pubblicazione di O4 l’11/10/2026. La home reale è preparata nel ramo dedicato `codex/home-o4`, da main, con tempi e fonti del progetto. 55/55 test, build e 874 link validi, otto scansioni axe senza violazioni, Lighthouse mobile 97. [Resoconto e immagini da telefono](docs/storico/2026-10-11-home-o4.md). Rilascio tramite PR e integrazione Git Vercel, dopo verifica dell’anteprima. Proposte conservate in `codex/proposte-home-napoli`; ramo e proposte di Claude intatti. Il problema preesistente del compositore resta rimandato.
 
 ## Manutenzione approvata
 

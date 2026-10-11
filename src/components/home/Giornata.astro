@@ -1,0 +1,14 @@
+---
+import {ora} from '../../lib/itinerari/date';
+import type {Risultato,Citta} from '../../lib/itinerari/tipi';
+interface Props{risultato:Risultato;citta:Citta;variante:string;nascosta?:boolean}
+const {risultato:d,citta:C,variante,nascosta=false}=Astro.props;
+const nome=(id:string)=>C.tappe.find(t=>t.id===id)!.breve;
+const piedi=d.voci.reduce((s,v)=>s+(v.tipo==='tratto'&&!v.mezzi.length?v.min:0),0);
+const momenti=['sant-elmo','pedamentina','spaccanapoli','plebiscito'].map(id=>d.voci.find(v=>v.tipo==='tappa'&&v.id===id)!);
+---
+<div class="day-version" data-day-version={variante} data-count={d.n} data-walk={piedi} data-end={ora(d.fine)} hidden={nascosta}>
+ <details class="day-complete"><summary>Leggi tutte le {d.n} tappe e gli orari</summary><ol class="day-line">{d.voci.map(v=>v.tipo==='tappa'?<li class="day-stop"><time datetime={ora(v.inizio).padStart(5,'0')}>{ora(v.inizio)}</time><div><h4>{nome(v.id)}</h4><p>{v.fine-v.inizio} min sul posto{v.id==='sansevero'&&' · prenotazione obbligatoria'}</p></div></li>:<li class="day-transfer"><span>{v.min} min a piedi · {v.metri} m</span></li>)}</ol></details>
+ <div class="day-preview"><p class="glimpse-label">Quattro momenti del percorso</p><ol class="day-glimpse" aria-label="Quattro momenti della giornata">{momenti.map(v=>v.tipo==='tappa'&&<li><time datetime={ora(v.inizio).padStart(5,'0')}>{ora(v.inizio)}</time><span>{nome(v.id)}</span></li>)}</ol></div>
+ <p class="day-total">Tempi indicativi: {Math.floor(d.visite/60)} h {String(d.visite%60).padStart(2,'0')} min di visite + {piedi} min a piedi. Pause escluse.</p>
+</div>
