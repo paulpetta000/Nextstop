@@ -72,6 +72,8 @@ Spiegare il metodo reale: competenza, validità e aggiornamento, non «vince sem
 
 Foto: rimandare ai crediti esistenti senza spostarli o impoverirli. OpenStreetMap resta attribuito vicino alla mappa. Non trasformare l'elenco fotografico o i file delle licenze in fonti di fatti, né attribuire gli scatti a Wikimedia al posto degli autori.
 
+Chiarimento di Enrico durante l'audit del 12/10/2026: anche i percorsi verso crediti, foto e licenze devono restare autonomi da Napoli a Vela, senza rinvii al vecchio sito. Enrico mantiene temporaneamente la casella già configurata `napoliavela.guida@gmail.com` e creerà personalmente quella nuova: eccezione esplicita per il contatto, nessun indirizzo inventato. Le regate e l'esclusione dei nove documenti restano come approvato.
+
 ## Design e interazione
 
 Seguire [DESIGN](../DESIGN.md), `design-sito`, `frontend-design` e `stile-testi`. Telefono per primo, chiaro/scuro, caratteri già disponibili, titoli e spazi coerenti, documenti distinguibili e focus evidente. Una gerarchia editoriale leggibile, con poca decorazione; niente loghi degli editori o nuove foto necessarie.
@@ -128,5 +130,6 @@ GPT-6-luna / Low solo per formattazione o estrazione semplice su decisioni già 
 - [x] Enrico approva la D rifinita del giro 4 il 12/10/2026; rifinitura visiva e movimento della ricerca annotati come lavoro futuro.
 - [x] Enrico autorizza il solo Blocco 4, con quattro proposte isolate di `/fonti/`, senza installazioni, deleghe o integrazione.
 - [x] Quattro proposte della pagina generale con campione reale e 195 fonti, controlli e immagini locali.
+- [x] Audit critico di A, C e D richiesto da Enrico, con [quattro interventi proposti e prove](../ricerca/2026-10-12-fonti-pagina-revisione-critica.md); B esclusa dall'audit. Nessun intervento applicato o nuova direzione approvata.
 - [ ] Enrico sceglie la direzione della pagina generale; eventuale rifinitura successiva da autorizzare.
 - [ ] Blocco 5, integrazione e completamento mirato; Blocco 6, revisione e rilascio. Non avviati, ciascun blocco richiede il suo OK.
