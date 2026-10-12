@@ -1,0 +1,92 @@
+[
+  {
+    "key": "a",
+    "theme": "light",
+    "scenario": 195,
+    "performance": 86,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2407.721701456334,
+    "cls": 0,
+    "warnings": [
+      "The tested device appears to have a slower CPU than  Lighthouse expects. This can negatively affect your performance score. Learn more about [calibrating an appropriate CPU slowdown multiplier](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md#cpu-throttling)."
+    ]
+  },
+  {
+    "key": "a",
+    "theme": "dark",
+    "scenario": 195,
+    "performance": 93,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2407.793024970576,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "b",
+    "theme": "light",
+    "scenario": 195,
+    "performance": 91,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2406.984602880897,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "b",
+    "theme": "dark",
+    "scenario": 195,
+    "performance": 88,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2405.7815,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "c",
+    "theme": "light",
+    "scenario": 195,
+    "performance": 92,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2410.7020918134986,
+    "cls": 0.001171319893344054,
+    "warnings": []
+  },
+  {
+    "key": "c",
+    "theme": "dark",
+    "scenario": 195,
+    "performance": 92,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2406.6467641218624,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "d",
+    "theme": "light",
+    "scenario": 195,
+    "performance": 91,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2407.286185828754,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "d",
+    "theme": "dark",
+    "scenario": 195,
+    "performance": 91,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2405.303375693191,
+    "cls": 0,
+    "warnings": []
+  }
+]

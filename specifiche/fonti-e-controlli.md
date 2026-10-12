@@ -10,6 +10,8 @@ _Preferenza successiva di Enrico: D, per i gruppi in riquadri. Richiesti la rimo
 
 _Seguito: rifinitura completa della [D, giro 4](../design/fonti/giro-4/README.md), autorizzata e poi approvata da Enrico il 12/10/2026. Prova con un lettore esterno esclusa per sua scelta. Aspetto e movimento della ricerca già presente restano una [rifinitura da fare](../ricerca/2026-10-12-fonti-d-rifiniture.md#rifiniture-ancora-da-fare), senza una nuova cartella o voce nella roadmap. Blocco 4 prossimo da autorizzare; nessuna integrazione o pubblicazione implicita._
 
+_Seguito del 12/10/2026: Enrico autorizza il solo Blocco 4. [Quattro proposte isolate della pagina generale](../design/fonti/pagina-generale/giro-1/README.md), coordinate con la D approvata e con movimento distinto; [controlli e limiti](../docs/storico/2026-10-12-fonti-blocco-4.md). Consigliata A Atlante, scelta ancora da ricevere. Nessuna modifica alla D, nuova verifica generale, integrazione o pubblicazione._
+
 ## Obiettivo e problema
 
 Chi legge un itinerario deve poter verificare un'informazione aprendo le fonti in fondo alla pagina e toccando il documento originale. All'inizio del Blocco 1 gli elenchi interamente aperti arrivavano a 185 fonti negli itinerari e 84 in Dove mangiare; il registro generale comprendeva anche fonti dell'evento ereditato da Napoli a Vela. Nel Blocco 2 i documenti delle regate sono stati esclusi, ma resta da costruire il componente compatto. Non basta cambiare il testo introduttivo: servono criteri di pertinenza, collegamenti precisi e un componente comune.
@@ -124,4 +126,7 @@ GPT-6-luna / Low solo per formattazione o estrazione semplice su decisioni già 
 - [x] Enrico preferisce D e autorizza la rifinitura completa del piano; esclude la prova con un lettore esterno.
 - [x] D rifinita in prototipi isolati, con controlli e resoconto del [giro 4](../design/fonti/giro-4/README.md).
 - [x] Enrico approva la D rifinita del giro 4 il 12/10/2026; rifinitura visiva e movimento della ricerca annotati come lavoro futuro.
-- [ ] Blocco 4: quattro proposte della pagina generale, da autorizzare nella nuova sessione. Integrazione e rilascio non avviati; ciascun blocco richiede il suo OK.
+- [x] Enrico autorizza il solo Blocco 4, con quattro proposte isolate di `/fonti/`, senza installazioni, deleghe o integrazione.
+- [x] Quattro proposte della pagina generale con campione reale e 195 fonti, controlli e immagini locali.
+- [ ] Enrico sceglie la direzione della pagina generale; eventuale rifinitura successiva da autorizzare.
+- [ ] Blocco 5, integrazione e completamento mirato; Blocco 6, revisione e rilascio. Non avviati, ciascun blocco richiede il suo OK.
