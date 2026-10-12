@@ -1,0 +1,678 @@
+{
+  "checks": [
+    {
+      "key": "a",
+      "scenario": "",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-lungo",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-lungo",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-lungo",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-breve",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-breve",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-breve",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-vuoto",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-vuoto",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-vuoto",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-lungo",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-lungo",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-lungo",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-breve",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-breve",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-breve",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-vuoto",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-vuoto",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "a",
+      "scenario": "-vuoto",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-lungo",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-lungo",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-lungo",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-breve",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-breve",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-breve",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-vuoto",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-vuoto",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-vuoto",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-lungo",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-lungo",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-lungo",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-breve",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-breve",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-breve",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-vuoto",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-vuoto",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "b",
+      "scenario": "-vuoto",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-lungo",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-lungo",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-lungo",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-breve",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-breve",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-breve",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-vuoto",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-vuoto",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-vuoto",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-lungo",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-lungo",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-lungo",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-breve",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-breve",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-breve",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-vuoto",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-vuoto",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "c",
+      "scenario": "-vuoto",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-lungo",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-lungo",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-lungo",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-breve",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-breve",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-breve",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-vuoto",
+      "theme": "light",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-vuoto",
+      "theme": "light",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-vuoto",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-lungo",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-lungo",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-lungo",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-breve",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-breve",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-breve",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-vuoto",
+      "theme": "dark",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-vuoto",
+      "theme": "dark",
+      "width": 390,
+      "overflow": false
+    },
+    {
+      "key": "d",
+      "scenario": "-vuoto",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    }
+  ],
+  "axeExtra": 8,
+  "failures": []
+}

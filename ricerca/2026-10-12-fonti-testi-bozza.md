@@ -2,6 +2,8 @@
 
 _12/10/2026, Blocco 2. Testi da rivedere prima dei bozzetti e dell'integrazione. Solo informazioni di viaggio di Nextstop: nessun testo sulle regate. [Specifica approvata](../specifiche/fonti-e-controlli.md) · [Verifiche e limiti](2026-10-12-fonti-verifiche-prioritarie.md)._
 
+_Enrico approva questa bozza il 12/10/2026 e autorizza il solo Blocco 3: [quattro proposte del pannello](../design/fonti/giro-1/README.md). I testi restano non integrati nelle pagine del sito; la data iniziale sopra documenta la consegna del Blocco 2._
+
 La parte «Testo proposto» è la bozza destinata al visitatore; le note successive sono istruzioni editoriali interne, non contenuti da mostrare sul sito. Le procedure proposte e le diciture dei pannelli diventeranno effettive con l'implementazione approvata. Questa bozza non dichiara che tutte le fonti siano state ricontrollate oggi.
 
 ## Testo proposto per `/fonti/`
@@ -91,4 +93,4 @@ Nessuna frase generica «Tutto controllato oggi» o «Fonti ufficiali, quindi in
 
 ## Stato
 
-Bozza pronta per la revisione di Enrico; non integrata in `src/testi/` o nelle pagine. Il design del blocco fonti e della pagina generale è il lavoro successivo, con quattro proposte per pezzo e nuova autorizzazione.
+Bozza approvata da Enrico il 12/10/2026; non integrata in `src/testi/` o nelle pagine. Le quattro proposte isolate del blocco fonti sono preparate nel Blocco 3, in attesa della scelta. La progettazione della pagina generale resta un blocco successivo da autorizzare.

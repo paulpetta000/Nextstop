@@ -2,13 +2,15 @@
 
 _Aggiornato il 12/10/2026. Blocco fonti sul ramo `codex/fonti-specifica`, creato da `main`._
 
-## Fonti · specifica approvata e Blocco 2
+## Fonti · quattro proposte del Blocco 3, in attesa della scelta
 
 - **Blocco 1 completato e specifica approvata da Enrico il 12/10/2026:** [specifica](specifiche/fonti-e-controlli.md), [inventario storico](ricerca/2026-10-12-fonti-inventario.md) e [resoconto](ricerca/2026-10-12-fonti-blocco-1.md). Mappate 204 fonti e 212 schede; nessuna senza riferimenti dichiarati. Il documento della durata delle Catacombe resta da includere nel futuro blocco fonti.
 - Controlli documentali riusciti: inventario coerente con gli originali, 24 riferimenti locali validi, 26 hash degli input invariati, diff pulito; nessun codice/dato del sito modificato, nessuna verifica web nuova o data aggiornata, suite/build non ripetute. Nessun push, merge o deploy.
 - **Blocco 2 completato localmente:** [21 schede prioritarie esaminate, con prove e limiti](ricerca/2026-10-12-fonti-verifiche-prioritarie.md) e [bozza dei testi](ricerca/2026-10-12-fonti-testi-bozza.md). Enrico ha richiesto di eliminare le fonti delle regate dagli elenchi pubblici di Nextstop: nove documenti esclusi da archivio/footer/conteggio home, 195 fonti pubbliche. Record interni, schede, date, firme, calendario e comportamento delle regate conservati; nessuna eccezione per link agli organizzatori.
 - Verifiche attuali: test scritti prima della modifica, **58/58**, build riuscita, **874 link interni validi**. HTML di 12 pagine: nessun link ai nove documenti o a americascup.com, tutte le 195 fonti di viaggio presenti; 12 hash dei dati/testi/modulo eventi invariati. Nessun redesign, push, merge o deploy. Problemi editoriali di Donn'Anna/Pintauro e prove parziali documentati, non applicati alle schede.
-- Prossimo: Enrico rivede la bozza dei testi; poi, con nuovo OK, quattro proposte del blocco apribile (GPT-6.1-sol / High, locale). Nessuna ulteriore decisione sulle regate richiesta.
+- **Blocco 3 autorizzato da Enrico dopo l’approvazione dei testi e completato localmente:** [quattro prototipi isolati](design/fonti/giro-1/README.md), A margine di rivista, B indice dei luoghi, C informazione e prova, D quaderno. Consigliata B. Casi con 12 esempi reali, 180 documenti degli itinerari, una e zero fonti; aperto/chiuso, telefono/desktop e chiaro/scuro. Nessuna integrazione nel sito o progettazione della pagina generale.
+- Verifiche: **58/58**, build riuscita, **874 link validi**; 280 combinazioni senza overflow, 124 scansioni axe pulite, Lighthouse mobile **100** su tutte le proposte in entrambi i temi. Tastiera, movimento ridotto, assenza di JS e ritorno con stato fittizio provati. 197 input del sito identici; differenze di hash negli artefatti precedenti e nell’output ricostruito registrate senza ripristini nel [resoconto](docs/storico/2026-10-12-fonti-blocco-3.md). Le cartelle di design già presenti restano fuori dal commit del blocco.
+- **Prossimo: Enrico sceglie A/B/C/D o indica cosa combinare.** Rifinitura locale con gli strumenti presenti, GPT-6.1-sol / Medium; poi nuovo OK per la pagina generale. Nessuna ulteriore decisione sulle regate richiesta, nessun push, merge o deploy.
 
 ## Home O4 · rilascio autorizzato
 

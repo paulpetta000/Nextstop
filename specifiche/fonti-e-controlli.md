@@ -2,6 +2,8 @@
 
 _Specifica approvata da Enrico il 12/10/2026. Blocco 2 autorizzato: verifiche prioritarie e bozza dei testi. Precisazione successiva dello stesso giorno: eliminare le fonti delle regate dagli elenchi pubblici di Nextstop, senza cambiare calendario o comportamento dell'evento. Ramo `codex/fonti-specifica`, da `main`._
 
+_Seguito del 12/10/2026: Enrico approva la bozza dei testi e autorizza il solo Blocco 3. [Quattro proposte isolate](../design/fonti/giro-1/README.md) e [verifiche](../docs/storico/2026-10-12-fonti-blocco-3.md) preparate localmente; scelta ancora da ricevere. La pagina generale `/fonti/` resta successiva._
+
 ## Obiettivo e problema
 
 Chi legge un itinerario deve poter verificare un'informazione aprendo le fonti in fondo alla pagina e toccando il documento originale. All'inizio del Blocco 1 gli elenchi interamente aperti arrivavano a 185 fonti negli itinerari e 84 in Dove mangiare; il registro generale comprendeva anche fonti dell'evento ereditato da Napoli a Vela. Nel Blocco 2 i documenti delle regate sono stati esclusi, ma resta da costruire il componente compatto. Non basta cambiare il testo introduttivo: servono criteri di pertinenza, collegamenti precisi e un componente comune.
@@ -111,4 +113,6 @@ GPT-6-luna / Low solo per formattazione o estrazione semplice su decisioni già 
 - [x] Enrico autorizza il Blocco 2 e chiarisce che le fonti delle regate vanno escluse, senza intervenire sull'evento.
 - [x] Rimozione dei nove documenti dagli elenchi pubblici e dal conteggio della home, con test prima della correzione.
 - [x] Verifiche prioritarie e bozza editoriale preparate; evidenze parziali e problemi registrati.
-- [ ] Enrico rivede la bozza e autorizza le quattro proposte del blocco fonti. Nessun redesign o rilascio avviato.
+- [x] Enrico approva la bozza e autorizza le quattro proposte del blocco fonti, solo Blocco 3.
+- [x] Quattro proposte isolate, esempi reali e verifiche locali del Blocco 3.
+- [ ] Enrico sceglie la proposta da rifinire. Pagina generale, integrazione e rilascio non avviati.
