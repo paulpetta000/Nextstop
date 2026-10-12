@@ -1,6 +1,12 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 11/10/2026. Ramo di manutenzione: `codex/manutenzione-blocco-1`, creato da `main`._
+_Aggiornato il 12/10/2026. Blocco fonti sul ramo `codex/fonti-specifica`, creato da `main`._
+
+## Fonti · specifica e inventario
+
+- **Solo Blocco 1 autorizzato e completato localmente:** [specifica da approvare](specifiche/fonti-e-controlli.md), [inventario completo](ricerca/2026-10-12-fonti-inventario.md) e [resoconto](ricerca/2026-10-12-fonti-blocco-1.md). 204 fonti e 212 schede mappate: 195 fonti pertinenti ai dati/testi di viaggio, 9 al confine con l'evento; nessuna senza riferimenti dichiarati. Lacuna delle fonti di durata: il documento delle Catacombe manca nel footer itinerari.
+- Controlli documentali riusciti: inventario coerente con gli originali, 24 riferimenti locali validi, 26 hash degli input invariati, diff pulito; nessun codice/dato del sito modificato, nessuna verifica web nuova o data aggiornata, suite/build non ripetute. Nessun push, merge o deploy.
+- Prossimo: Enrico rivede la specifica e decide come gestire i link documentali dell'evento rispetto al vincolo «senza link alla Coppa». Poi, con nuovo OK, verifica prioritaria delle fonti e bozza dei testi (GPT-6.1-sol / Medium, locale + web). Design e implementazione non avviati.
 
 ## Home O4 · rilascio autorizzato
 
