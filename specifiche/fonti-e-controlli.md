@@ -6,6 +6,8 @@ _Seguito del 12/10/2026: Enrico approva la bozza dei testi e autorizza il solo B
 
 _Rifinitura successiva autorizzata il 12/10/2026: [secondo giro delle quattro alternative](../design/fonti/giro-2/README.md), con ricerca locale e sintesi del campione già documentato. [Esiti](../docs/storico/2026-10-12-fonti-giro-2.md). Nessuna nuova verifica generale delle 195 fonti o integrazione; primo giro conservato, scelta ancora da ricevere._
 
+_Preferenza successiva di Enrico: D, per i gruppi in riquadri. Richiesti la rimozione della dicitura interna «Scopo da verificare» e un elenco ampliato delle rifiniture. [Copia aggiornata](../design/fonti/giro-3/README.md) e [piano unico](../ricerca/2026-10-12-fonti-d-rifiniture.md). La rimozione della dicitura non cancella limiti reali o completa automaticamente le descrizioni mancanti. Gli altri interventi restano proposte; nessuna autorizzazione implicita alla pagina generale o all'integrazione._
+
 ## Obiettivo e problema
 
 Chi legge un itinerario deve poter verificare un'informazione aprendo le fonti in fondo alla pagina e toccando il documento originale. All'inizio del Blocco 1 gli elenchi interamente aperti arrivavano a 185 fonti negli itinerari e 84 in Dove mangiare; il registro generale comprendeva anche fonti dell'evento ereditato da Napoli a Vela. Nel Blocco 2 i documenti delle regate sono stati esclusi, ma resta da costruire il componente compatto. Non basta cambiare il testo introduttivo: servono criteri di pertinenza, collegamenti precisi e un componente comune.

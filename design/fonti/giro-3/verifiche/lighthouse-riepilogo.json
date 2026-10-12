@@ -1,0 +1,22 @@
+[
+  {
+    "key": "d",
+    "theme": "light",
+    "performance": 99,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1808.4998,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "d",
+    "theme": "dark",
+    "performance": 99,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1808.5918,
+    "cls": 0,
+    "warnings": []
+  }
+]

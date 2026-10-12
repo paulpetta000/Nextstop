@@ -2,7 +2,7 @@
 
 _Aggiornato il 12/10/2026. Blocco fonti sul ramo `codex/fonti-specifica`, creato da `main`._
 
-## Fonti · quattro proposte del Blocco 3, in attesa della scelta
+## Fonti · preferenza D e piano di rifinitura
 
 - **Blocco 1 completato e specifica approvata da Enrico il 12/10/2026:** [specifica](specifiche/fonti-e-controlli.md), [inventario storico](ricerca/2026-10-12-fonti-inventario.md) e [resoconto](ricerca/2026-10-12-fonti-blocco-1.md). Mappate 204 fonti e 212 schede; nessuna senza riferimenti dichiarati. Il documento della durata delle Catacombe resta da includere nel futuro blocco fonti.
 - Controlli documentali riusciti: inventario coerente con gli originali, 24 riferimenti locali validi, 26 hash degli input invariati, diff pulito; nessun codice/dato del sito modificato, nessuna verifica web nuova o data aggiornata, suite/build non ripetute. Nessun push, merge o deploy.
@@ -13,7 +13,9 @@ _Aggiornato il 12/10/2026. Blocco fonti sul ramo `codex/fonti-specifica`, creato
 - **Revisione critica richiesta da Enrico:** [tutte e quattro le proposte confrontate](ricerca/2026-10-12-fonti-revisione-critica.md), con 16 misure su telefono/desktop e riferimenti web primari. Principali problemi: etichette generiche, note ripetute, 87 gruppi nell'indice lungo e fonti condivise collocate sotto un solo luogo. Proposta di rifinitura: chiarezza di C, sobrietà di A e orientamento di B; D per pagine brevi. Nessun prototipo o dato modificato, nessuna proposta selezionata; controlli eseguibili del Blocco 3 non ripetuti.
 - **Secondo giro autorizzato da Enrico e completato:** [quattro alternative rifinite](design/fonti/giro-2/README.md), con sintesi dei 12 esempi, ricerca locale, fonti condivise trovabili da ogni luogo e indice alfabetico leggero in B. Consigliata **C**. Primo giro conservato; nessuna integrazione o nuova verifica generale delle 195 fonti. Nel caso lungo restano 171 scopi da completare, esplicitamente segnalati.
 - Verifiche del giro 2: **58/58**, build riuscita, **874 link validi**; 280 combinazioni, 158 scansioni axe pulite, 32 compiti di ricerca, Lighthouse mobile **99–100** nei due temi, tastiera/movimento ridotto/senza JS/ritorno provati. Foglio unico di D corretto dopo la prova del problema, **8/8** casi conformi. **197 input e 317 file di design precedenti identici**. [Resoconto, immagini e limiti](docs/storico/2026-10-12-fonti-giro-2.md).
-- **Prossimo: Enrico sceglie A/B/C/D o indica una rifinitura.** Lavoro locale con gli strumenti presenti, GPT-6.1-sol / High per la struttura e Medium per applicarla; poi nuovo OK per pagina generale e integrazione. Nessuna ulteriore decisione sulle regate richiesta, nessun push, merge o deploy.
+- **Enrico esprime preferenza per D**, per i gruppi in riquadri, e richiede la rimozione di «Scopo da verificare» e altri miglioramenti da aggiungere all'elenco precedente. [Piano unico con 12 punti](ricerca/2026-10-12-fonti-d-rifiniture.md); [copia aggiornata di D](design/fonti/giro-3/README.md) senza la dicitura interna, con documenti, date e cautele conservati. Primo e secondo giro identici. Gli altri interventi sono proposti, non applicati; nessuna nuova verifica generale o integrazione.
+- Verifiche del giro 3: **58/58**, build riuscita, **874 link validi**; 42 combinazioni/axe pulite, ricerca/tastiera/movimento ridotto/senza JS, Lighthouse mobile **99** nei due temi. **197 input e 484 file dei design precedenti identici**; nessuna fonte, data, descrizione esistente o cautela cambiata.
+- **Prossimo: valutare il piano e rifinire D nel blocco successivo.** Lavoro locale con gli strumenti presenti, GPT-6.1-sol / High per la struttura e Medium per applicarla; nuovo OK per pagina generale e integrazione. Nessuna ulteriore decisione sulle regate richiesta, nessun push, merge o deploy.
 
 ## Home O4 · rilascio autorizzato
 
