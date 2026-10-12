@@ -1,5 +1,6 @@
 import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
 import { confermataConFontiDeboli } from './regole.mjs';
+import { fontiDiNextstop } from './fonti-nextstop.mjs';
 
 // Nel sito degli itinerari tutte le schede sono in elenco (a Napoli a Vela quelle «tp-» restavano fuori finché la pagina non era online)
 export const soloItinerari = (_id: string) => false;
@@ -15,6 +16,11 @@ const avvisatiComeFatto = new Set<string>();
 export async function tutteLeFonti() {
   if (!cacheFonti) cacheFonti = new Map((await getCollection('fonti')).map(f => [f.id, f]));
   return cacheFonti;
+}
+
+// Registro pubblico del sito: i riferimenti delle regate restano solo interni.
+export async function tutteLeFontiNextstop() {
+  return fontiDiNextstop((await tutteLeFonti()).values());
 }
 
 // Restituisce le schede richieste, con le fonti già risolte.
@@ -70,7 +76,7 @@ export function fontiDi(fatti: Iterable<Fatto>, extra: Fonte[] = []): Fonte[] {
   for (const f of fatti) for (const s of f.fontiRisolte) m.set(s.id, s);
   for (const s of extra) m.set(s.id, s);
   const peso = { ufficiale: 0, dati: 1, stampa: 2, enciclopedia: 3, blog: 4, altro: 5 } as const;
-  return [...m.values()].sort((a, b) => peso[a.data.tipo] - peso[b.data.tipo] || a.data.editore.localeCompare(b.data.editore));
+  return fontiDiNextstop(m.values()).sort((a, b) => peso[a.data.tipo] - peso[b.data.tipo] || a.data.editore.localeCompare(b.data.editore));
 }
 
 // Data di controllo più vecchia tra schede e fonti: tutto è stato controllato almeno da quel giorno

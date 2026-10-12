@@ -1,14 +1,16 @@
 # Fonti e controlli · specifica
 
-_Bozza da approvare, 12/10/2026. Enrico ha autorizzato solo il Blocco 1: specifica e inventario. Ramo `codex/fonti-specifica`, da `main`._
+_Specifica approvata da Enrico il 12/10/2026. Blocco 2 autorizzato: verifiche prioritarie e bozza dei testi. Precisazione successiva dello stesso giorno: eliminare le fonti delle regate dagli elenchi pubblici di Nextstop, senza cambiare calendario o comportamento dell'evento. Ramo `codex/fonti-specifica`, da `main`._
 
 ## Obiettivo e problema
 
-Chi legge un itinerario deve poter verificare un'informazione aprendo le fonti in fondo alla pagina e toccando il documento originale. Oggi gli elenchi restano interamente aperti, arrivano a 185 fonti negli itinerari e 84 in Dove mangiare; l'elenco generale comprende anche fonti dell'evento ereditato da Napoli a Vela. Non basta cambiare il testo introduttivo: servono criteri di pertinenza, collegamenti precisi e un componente comune compatto.
+Chi legge un itinerario deve poter verificare un'informazione aprendo le fonti in fondo alla pagina e toccando il documento originale. All'inizio del Blocco 1 gli elenchi interamente aperti arrivavano a 185 fonti negli itinerari e 84 in Dove mangiare; il registro generale comprendeva anche fonti dell'evento ereditato da Napoli a Vela. Nel Blocco 2 i documenti delle regate sono stati esclusi, ma resta da costruire il componente compatto. Non basta cambiare il testo introduttivo: servono criteri di pertinenza, collegamenti precisi e un componente comune.
 
 Due elementi coordinati: `/fonti/` spiega metodo e registro; il blocco «Fonti di questa pagina» permette la verifica dal contenuto letto. Un solo registro, senza liste mantenute a mano in più pagine.
 
 [Inventario completo](../ricerca/2026-10-12-fonti-inventario.md), [catene e hash degli input](../ricerca/2026-10-12-fonti-inventario.json), [decisioni e limiti del Blocco 1](../ricerca/2026-10-12-fonti-blocco-1.md).
+
+Seguito: [verifiche prioritarie del Blocco 2](../ricerca/2026-10-12-fonti-verifiche-prioritarie.md) e [bozza editoriale](../ricerca/2026-10-12-fonti-testi-bozza.md). L'inventario del Blocco 1 resta uno snapshot storico; il registro pubblico ora contiene 195 fonti, le altre nove restano solo risolvibili internamente.
 
 ## Requisiti espressi da Enrico
 
@@ -23,6 +25,8 @@ Due elementi coordinati: `/fonti/` spiega metodo e registro; il blocco «Fonti d
 Il Blocco 1 modifica solo documentazione e produce l'inventario. Restano invariati sito, registri eseguibili, date, stati, schede, firme, immagini e licenze. Nessuna verifica web nuova di orari o prezzi, nessuna installazione, push, merge o pubblicazione.
 
 Dopo approvazione: registro delle fonti, pagina `/fonti/`, componente comune, fonti dirette/durate e conteggi derivati nelle pagine coinvolte. Le modifiche più ampie alle regole legate al 2027 richiedono una proposta con casi e test; non sostituire automaticamente anni o stati. Le pagine legali mantengono attribuzioni e contatti configurati; nessun cambio di casella email implicito.
+
+**Precisazione di Enrico, 12/10/2026:** il lavoro riguarda Nextstop e le informazioni di viaggio. Nessuna ricerca, aggiornamento o revisione delle regate. Nove documenti delle regate sono esclusi da `/fonti/`, dai footer delle pagine e dal conteggio della home. I record interni sono conservati per non spezzare riferimenti e firme delle schede esistenti: non sono fonti pubbliche di Nextstop. Nessuna eccezione per link documentali alla Coppa. Questa rimozione è autorizzata direttamente e precede il futuro redesign, che resta da valutare.
 
 Conservare URL pubblici, ID di tappe/locali/fonti, collegamenti condivisi, dati salvati, uso offline, privacy e controlli editoriali. Esclusione dal registro pubblico e cancellazione di dati sono decisioni diverse: archiviare prima di qualsiasi rimozione approvata. Fonte e fatto vanno valutati separatamente.
 
@@ -52,7 +56,7 @@ Negli itinerari il contenuto cambia sul telefono: l'elenco attuale riguarda tutt
 
 Ordine proposto: apertura breve; criteri di scelta e controllo; date/validità/stime/cautele; registro per argomento; collegamenti a crediti di foto, mappe e dati; segnalazione di una correzione tramite contatto già configurato.
 
-Registro per luoghi e visite, locali e cucina, trasporti, mappe e dati, storia e cultura; eventi pertinenti solo dopo la decisione sul confine. Gruppi apribili indipendentemente con indice. Se una fonte è condivisa tra argomenti, un record canonico e collegamenti coerenti; conteggiare fonti uniche. Le categorie sono proposta editoriale, non classificazione verificata delle 204 voci. Ricerca/filtri solo se la prova dei bozzetti ne dimostra la necessità.
+Registro per luoghi e visite, locali e cucina, trasporti, mappe e dati, storia e cultura. Le regate sono escluse dal registro pubblico. Gruppi apribili indipendentemente con indice. Se una fonte è condivisa tra argomenti, un record canonico e collegamenti coerenti; conteggiare fonti uniche. Le categorie sono proposta editoriale, non classificazione verificata delle 195 voci pubbliche. Ricerca/filtri solo se la prova dei bozzetti ne dimostra la necessità.
 
 Spiegare il metodo reale: competenza, validità e aggiornamento, non «vince sempre la fonte più recente». Tipo della fonte e conferma del fatto restano distinti. Non promettere che tutte le schede hanno una scadenza: 46 non hanno `ricontrollare`. Le stime nostre sono dichiarate e collegate al metodo, non presentate come tempi reali garantiti. Rispettare le eccezioni approvate per `storico` e `comeFatto`.
 
@@ -62,13 +66,13 @@ Foto: rimandare ai crediti esistenti senza spostarli o impoverirli. OpenStreetMa
 
 Seguire [DESIGN](../DESIGN.md), `design-sito`, `frontend-design` e `stile-testi`. Telefono per primo, chiaro/scuro, caratteri già disponibili, titoli e spazi coerenti, documenti distinguibili e focus evidente. Una gerarchia editoriale leggibile, con poca decorazione; niente loghi degli editori o nuove foto necessarie.
 
-Quattro proposte per il blocco fonti, un pezzo alla volta; scelta e rifinitura, poi quattro proposte per la pagina generale. Contenuti realistici: 185 fonti negli itinerari, 84 nei locali, poche fonti, titoli lunghi, note e download. Mostrare aperto/chiuso a telefono e desktop. Le proposte non autorizzano l'integrazione.
+Quattro proposte per il blocco fonti, un pezzo alla volta; scelta e rifinitura, poi quattro proposte per la pagina generale. Contenuti realistici: elenco molto lungo degli itinerari (180 fonti dopo l'esclusione), 84 nei locali, poche fonti, titoli lunghi, note e download. Mostrare aperto/chiuso a telefono e desktop. Le proposte non autorizzano l'integrazione.
 
 ## Decisioni da risolvere prima dell'implementazione
 
 | Decisione | Evidenza e proposta |
 |---|---|
-| Fonti dell'evento | Nove fonti sostengono le 13 schede di calendario/orari/lungomare/trasporti. Proporre un'eccezione esplicita per link documentali agli organizzatori, oppure ridefinire l'evento con fonti adeguate. Il vincolo attuale «senza link alla Coppa» resta in vigore: non eliminarlo o derogarlo implicitamente. |
+| Fonti dell'evento · risolta | Enrico le esclude dagli elenchi pubblici di Nextstop. Nessuna eccezione per gli organizzatori; calendario e comportamento dell'evento conservati. La precedente proposta di deroga è ritirata. |
 | Informazioni datate al 2027 | Separare contenuti ancora pertinenti e metodo generale. Ogni variazione del modello di cautela va approvata, con test e rilettura; niente cambio globale dell'anno predefinito in questo blocco. |
 | Unità di consultazione | Nei pannelli lunghi raggruppare per luogo/locale; nell'archivio per argomento. Le etichette «Documenta» si completano dopo verifica dei documenti. |
 | Verifiche pendenti | Fonte EAV con `letta: false`, 19 schede `comeFatto`, una confermata con sole fonti deboli: mantenere i limiti visibili e dare priorità alla lettura originale. |
@@ -90,7 +94,7 @@ Le indicazioni modello/effort sono raccomandazioni operative, selezionate da Enr
 | Blocco | Materiali e strumenti | Modello / effort | Consegna e pausa |
 |---|---|---|---|
 | 1 · Specifica e inventario | Repository, Git, Node portatile e js-yaml già installato; analisi statica | GPT-6.1-sol / Medium | Questo documento, inventario completo e resoconto; Enrico rivede la bozza |
-| 2 · Fonti e metodo | Inventario, documenti originali sul web, skill stile-testi quando si scrive; casi evento prima di rimozioni | GPT-6.1-sol / Medium | Verifiche prioritarie, decisioni di pertinenza, etichette e bozza dei testi; OK prima di cambiare dati |
+| 2 · Fonti e metodo | Inventario, documenti originali sul web, stile-testi; rimozione pubblica delle fonti delle regate autorizzata separatamente da Enrico | GPT-6.1-sol / Medium | Verifiche prioritarie, etichette e bozza; nessuna modifica di fatti, date e stati; OK sui testi prima del design |
 | 3 · Blocco fonti | Specifica/testi, design-sito e frontend-design; strumenti web già presenti secondo le regole di revisione | GPT-6.1-sol / High per proposte, Medium per rifinitura | Quattro proposte, scelta e prove; OK sul pezzo |
 | 4 · Pagina generale | Blocco scelto, registro, testi verificati; stesse skill di design | GPT-6.1-sol / High per proposte, Medium per rifinitura | Quattro proposte e direzione scelta; OK sul pezzo |
 | 5 · Integrazione | Astro/componenti esistenti, test riproduttivi, nessuna nuova dipendenza implicita | GPT-6.1-sol / Medium | Codice/dati approvati, test/build/link e prove; OK sull'anteprima |
@@ -103,5 +107,8 @@ GPT-6-luna / Low solo per formattazione o estrazione semplice su decisioni già 
 - [x] Autorizzazione di Enrico al solo Blocco 1.
 - [x] Inventario di fonti, schede, usi diretti, durate e calendario.
 - [x] Bozza della specifica e registro delle decisioni aperte.
-- [ ] Enrico approva o corregge la specifica; decide come trattare i link documentali dell'evento.
-- [ ] Autorizzazione del Blocco 2; nessun blocco successivo avviato.
+- [x] Enrico approva la specifica il 12/10/2026.
+- [x] Enrico autorizza il Blocco 2 e chiarisce che le fonti delle regate vanno escluse, senza intervenire sull'evento.
+- [x] Rimozione dei nove documenti dagli elenchi pubblici e dal conteggio della home, con test prima della correzione.
+- [x] Verifiche prioritarie e bozza editoriale preparate; evidenze parziali e problemi registrati.
+- [ ] Enrico rivede la bozza e autorizza le quattro proposte del blocco fonti. Nessun redesign o rilascio avviato.

@@ -2,11 +2,13 @@
 
 _Aggiornato il 12/10/2026. Blocco fonti sul ramo `codex/fonti-specifica`, creato da `main`._
 
-## Fonti · specifica e inventario
+## Fonti · specifica approvata e Blocco 2
 
-- **Solo Blocco 1 autorizzato e completato localmente:** [specifica da approvare](specifiche/fonti-e-controlli.md), [inventario completo](ricerca/2026-10-12-fonti-inventario.md) e [resoconto](ricerca/2026-10-12-fonti-blocco-1.md). 204 fonti e 212 schede mappate: 195 fonti pertinenti ai dati/testi di viaggio, 9 al confine con l'evento; nessuna senza riferimenti dichiarati. Lacuna delle fonti di durata: il documento delle Catacombe manca nel footer itinerari.
+- **Blocco 1 completato e specifica approvata da Enrico il 12/10/2026:** [specifica](specifiche/fonti-e-controlli.md), [inventario storico](ricerca/2026-10-12-fonti-inventario.md) e [resoconto](ricerca/2026-10-12-fonti-blocco-1.md). Mappate 204 fonti e 212 schede; nessuna senza riferimenti dichiarati. Il documento della durata delle Catacombe resta da includere nel futuro blocco fonti.
 - Controlli documentali riusciti: inventario coerente con gli originali, 24 riferimenti locali validi, 26 hash degli input invariati, diff pulito; nessun codice/dato del sito modificato, nessuna verifica web nuova o data aggiornata, suite/build non ripetute. Nessun push, merge o deploy.
-- Prossimo: Enrico rivede la specifica e decide come gestire i link documentali dell'evento rispetto al vincolo «senza link alla Coppa». Poi, con nuovo OK, verifica prioritaria delle fonti e bozza dei testi (GPT-6.1-sol / Medium, locale + web). Design e implementazione non avviati.
+- **Blocco 2 completato localmente:** [21 schede prioritarie esaminate, con prove e limiti](ricerca/2026-10-12-fonti-verifiche-prioritarie.md) e [bozza dei testi](ricerca/2026-10-12-fonti-testi-bozza.md). Enrico ha richiesto di eliminare le fonti delle regate dagli elenchi pubblici di Nextstop: nove documenti esclusi da archivio/footer/conteggio home, 195 fonti pubbliche. Record interni, schede, date, firme, calendario e comportamento delle regate conservati; nessuna eccezione per link agli organizzatori.
+- Verifiche attuali: test scritti prima della modifica, **58/58**, build riuscita, **874 link interni validi**. HTML di 12 pagine: nessun link ai nove documenti o a americascup.com, tutte le 195 fonti di viaggio presenti; 12 hash dei dati/testi/modulo eventi invariati. Nessun redesign, push, merge o deploy. Problemi editoriali di Donn'Anna/Pintauro e prove parziali documentati, non applicati alle schede.
+- Prossimo: Enrico rivede la bozza dei testi; poi, con nuovo OK, quattro proposte del blocco apribile (GPT-6.1-sol / High, locale). Nessuna ulteriore decisione sulle regate richiesta.
 
 ## Home O4 · rilascio autorizzato
 
