@@ -119,4 +119,6 @@ GPT-6-luna / Low solo per formattazione o estrazione semplice su decisioni già 
 - [x] Verifiche prioritarie e bozza editoriale preparate; evidenze parziali e problemi registrati.
 - [x] Enrico approva la bozza e autorizza le quattro proposte del blocco fonti, solo Blocco 3.
 - [x] Quattro proposte isolate, esempi reali e verifiche locali del Blocco 3.
-- [ ] Enrico sceglie la proposta da rifinire. Pagina generale, integrazione e rilascio non avviati.
+- [x] Enrico preferisce D e autorizza la rifinitura completa del piano; esclude la prova con un lettore esterno.
+- [x] D rifinita in prototipi isolati, con controlli e resoconto del [giro 4](../design/fonti/giro-4/README.md).
+- [ ] Enrico valuta e approva la D rifinita. Pagina generale, integrazione e rilascio non avviati; ciascun blocco richiede il suo OK.
