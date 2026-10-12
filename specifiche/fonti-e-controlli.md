@@ -76,6 +76,8 @@ Chiarimento di Enrico durante l'audit del 12/10/2026: anche i percorsi verso cre
 
 Enrico approva i quattro interventi dell'audit e conferma i tre comportamenti della ricerca generale: campo che si attiva al tocco/focus, transizione del conteggio e dei risultati durante la digitazione, ritorno accompagnato all'elenco quando si cancella. Applicazione in [copie isolate di A, C e D, giro 2](../design/fonti/pagina-generale/giro-2/README.md); B e giri precedenti conservati. Il campo resta stabile mentre si scrive, movimento ridotto con cambi immediati. I crediti sono mostrati in un'anteprima locale; pagina legale e sito non integrati. La D approvata del giro 4 è il pannello a fondo pagina: sua ricerca e rifinitura futura restano separate dalla D della pagina generale.
 
+**Decisione successiva del 12/10/2026:** Enrico interrompe la nuova rifinitura della barra perché non gli piace; tentativo conservato separatamente e anteprime riportate a `be89e9f`. Nessun ulteriore lavoro sull'aspetto o sul movimento della ricerca nel Blocco 5. Enrico sceglie **A · Atlante, giro 2**, per la pagina generale, insieme alla D giro 4 per i pannelli. Integrare il registro completo da 195 fonti, non il campione di 14 esempi; i conteggi degli argomenti riguardano documenti, non numero di luoghi. Richiesto il prompt per avviare il Blocco 5 in una nuova sessione locale; questo blocco e il rilascio non sono eseguiti nella sessione della scelta.
+
 ## Design e interazione
 
 Seguire [DESIGN](../DESIGN.md), `design-sito`, `frontend-design` e `stile-testi`. Telefono per primo, chiaro/scuro, caratteri già disponibili, titoli e spazi coerenti, documenti distinguibili e focus evidente. Una gerarchia editoriale leggibile, con poca decorazione; niente loghi degli editori o nuove foto necessarie.
@@ -134,5 +136,5 @@ GPT-6-luna / Low solo per formattazione o estrazione semplice su decisioni già 
 - [x] Quattro proposte della pagina generale con campione reale e 195 fonti, controlli e immagini locali.
 - [x] Audit critico di A, C e D richiesto da Enrico, con [quattro interventi proposti e prove](../ricerca/2026-10-12-fonti-pagina-revisione-critica.md); B esclusa dall'audit. Nessun intervento applicato o nuova direzione approvata.
 - [x] Enrico approva i quattro interventi e i tre movimenti della ricerca generale; rifinitura isolata A/C/D nel giro 2, senza scelta definitiva o integrazione.
-- [ ] Enrico sceglie la direzione della pagina generale; eventuale rifinitura successiva da autorizzare.
+- [x] Enrico sceglie A · Atlante del giro 2 per la pagina generale; interrompe ulteriori rifiniture della ricerca. Registro completo da integrare con D giro 4 nel Blocco 5.
 - [ ] Blocco 5, integrazione e completamento mirato; Blocco 6, revisione e rilascio. Non avviati, ciascun blocco richiede il suo OK.

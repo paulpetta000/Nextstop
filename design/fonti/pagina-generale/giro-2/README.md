@@ -1,5 +1,13 @@
 # Pagina generale Fonti · giro 2, A/C/D e ricerca con movimento
 
+## Ricerca: intervento interrotto
+
+12 ottobre 2026, dopo `be89e9f`: Enrico giudica troppo poco visibile la prima rifinitura e poi interrompe il nuovo tentativo perché non gli piace. **La nuova barra non è approvata; nessun ulteriore lavoro sulla ricerca.** Le anteprime A/C/D sono riportate alla versione già committata `be89e9f`, con le migliorie dell'audit conservate.
+
+Tentativo archiviato nella [patch dei quattro file](verifiche/ricerca-non-approvata.patch) e nelle immagini `verifiche/ricerca-prima-*` / `ricerca-dopo-*`. Il [confronto](verifiche/ricerca-prima-dopo.png) mostra il disegno respinto, non un'anteprima da approvare. Controlli già terminati prima dell'interruzione: [29 test mirati](verifiche/test-rifinitura.log), [58 test del sito](verifiche/test-sito-rifinitura.log), [build](verifiche/build-rifinitura.log), [874 link interni](verifiche/link-sito-rifinitura.log), 120 combinazioni UI/20 axe e 48 casi di movimento senza errori. Lighthouse del nuovo tentativo non eseguita; valgono per le anteprime ripristinate le misure del giro già concluso riportate sotto. Nessuna nuova verifica degli originali.
+
+**Scelta successiva esplicita di Enrico: A · Atlante.** Il [campione A](a.html) contiene 14 esempi, di cui due fonti per Visite e sette per Cucina; il [registro completo A](a-lungo.html) contiene 195 documenti unici: 94 Visite, 69 Cucina, 17 Trasporti, 1 Mappe, 14 Cultura. Questi numeri contano fonti, non luoghi. Nel Blocco 5 usare il registro completo insieme alla D del pannello approvato. Il blocco verrà avviato nella nuova sessione; nessuna integrazione o pubblicazione eseguita qui.
+
 12 ottobre 2026. Enrico approva i quattro interventi dell'[audit](../../../../ricerca/2026-10-12-fonti-pagina-revisione-critica.md) e conferma i tre comportamenti della ricerca: attivazione del campo, cambio di conteggio/risultati, ritorno all'elenco. Nuove copie isolate di **A, C e D**; B e il giro 1 conservati. Nessuna direzione generale ancora selezionata per l'integrazione. **La D del pannello a fondo pagina, giro 4, è un altro pezzo e resta invariata**, compreso il suo intervento futuro sulla ricerca.
 
 ## Disegno e movimento

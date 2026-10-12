@@ -44,4 +44,6 @@ Limiti: Chrome con viewport simulati, non prova su telefono fisico/Safari/lettor
 
 ## Seguito
 
+**Decisione finale della sessione:** Enrico interrompe il nuovo tentativo della ricerca e sceglie **A · Atlante** per la pagina generale. Il tentativo non approvato è conservato come patch e immagini nel [README del giro](../../design/fonti/pagina-generale/giro-2/README.md#ricerca-intervento-interrotto); codice, HTML e immagini delle anteprime ripristinati alla versione `be89e9f`. I rapporti del tentativo sono distinti in `risultati-rifinitura.json` e `movimento-rifinitura.json`, senza sostituire quelli del giro approvato per la scelta. Blocco 5 da avviare in nuova sessione locale con il registro completo da 195 fonti e D giro 4, senza ulteriori rifiniture della ricerca; nessuna integrazione, push, merge o pubblicazione in questa sessione.
+
 Enrico valuta il giro 2 e sceglie A, C o D per la pagina generale; A resta consigliata. Integrazione, completamento mirato delle descrizioni e aggiornamento reale dei crediti nel Blocco 5, da autorizzare separatamente. Rifinitura della ricerca del pannello D conservata nel suo piano successivo. Strumenti locali attuali sufficienti; GPT-6.1-sol / High per scelta e rifinitura, Medium per applicare decisioni fissate. Si termina con commit locale e pausa per la scelta.
