@@ -1,0 +1,30 @@
+✔ categorie: sette documenti di trasporto, campione e registro coerenti (590.5419ms)
+✔ registro: 195 fonti uniche con tipo conservato (0.6177ms)
+✔ a: ricerca per argomento sul registro completo (1200.5495ms)
+✔ a: frase con congiunzione orienta alla fonte condivisa di Nennella (927.7956ms)
+✔ a: cancellare la ricerca ripristina i due pannelli manuali (1012.5779ms)
+✔ a: indice indica Mappe dopo il salto (990.1014ms)
+✔ a: focus visibile nel ritorno con Shift+Tab a viewport basso (827.7272ms)
+✔ a: frammento malformato non interrompe la navigazione (731.3057ms)
+✔ c: ricerca per argomento sul registro completo (896.2276ms)
+✔ c: frase con congiunzione orienta alla fonte condivisa di Nennella (714.7777ms)
+✔ c: cancellare la ricerca ripristina i due pannelli manuali (958.4569ms)
+✔ c: indice indica Mappe dopo il salto (787.1178ms)
+✔ c: focus visibile nel ritorno con Shift+Tab a viewport basso (839.9101ms)
+✔ c: frammento malformato non interrompe la navigazione (729.8631ms)
+✔ d: ricerca per argomento sul registro completo (796.4557ms)
+✔ d: frase con congiunzione orienta alla fonte condivisa di Nennella (795.7389ms)
+✔ d: cancellare la ricerca ripristina i due pannelli manuali (883.7139ms)
+✔ d: indice indica Mappe dopo il salto (1061.2156ms)
+✔ d: focus visibile nel ritorno con Shift+Tab a viewport basso (1060.7291ms)
+✔ d: frammento malformato non interrompe la navigazione (931.1422ms)
+✔ crediti: 54 foto, licenze e Bodoni raggiungibili dentro Nextstop (1253.1753ms)
+✔ navigazione locale senza richieste agli editori (0.3533ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 22
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 18735.5208

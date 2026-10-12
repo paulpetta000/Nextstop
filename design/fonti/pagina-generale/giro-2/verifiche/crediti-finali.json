@@ -1,0 +1,38 @@
+{
+  "rows": [
+    {
+      "width": 375,
+      "theme": "light",
+      "overflow": false,
+      "headerLink": "none",
+      "photos": 54,
+      "violations": []
+    },
+    {
+      "width": 375,
+      "theme": "dark",
+      "overflow": false,
+      "headerLink": "none",
+      "photos": 54,
+      "violations": []
+    },
+    {
+      "width": 1280,
+      "theme": "light",
+      "overflow": false,
+      "headerLink": "flex",
+      "photos": 54,
+      "violations": []
+    },
+    {
+      "width": 1280,
+      "theme": "dark",
+      "overflow": false,
+      "headerLink": "flex",
+      "photos": 54,
+      "violations": []
+    }
+  ],
+  "external": [],
+  "errors": []
+}

@@ -74,6 +74,8 @@ Foto: rimandare ai crediti esistenti senza spostarli o impoverirli. OpenStreetMa
 
 Chiarimento di Enrico durante l'audit del 12/10/2026: anche i percorsi verso crediti, foto e licenze devono restare autonomi da Napoli a Vela, senza rinvii al vecchio sito. Enrico mantiene temporaneamente la casella già configurata `napoliavela.guida@gmail.com` e creerà personalmente quella nuova: eccezione esplicita per il contatto, nessun indirizzo inventato. Le regate e l'esclusione dei nove documenti restano come approvato.
 
+Enrico approva i quattro interventi dell'audit e conferma i tre comportamenti della ricerca generale: campo che si attiva al tocco/focus, transizione del conteggio e dei risultati durante la digitazione, ritorno accompagnato all'elenco quando si cancella. Applicazione in [copie isolate di A, C e D, giro 2](../design/fonti/pagina-generale/giro-2/README.md); B e giri precedenti conservati. Il campo resta stabile mentre si scrive, movimento ridotto con cambi immediati. I crediti sono mostrati in un'anteprima locale; pagina legale e sito non integrati. La D approvata del giro 4 è il pannello a fondo pagina: sua ricerca e rifinitura futura restano separate dalla D della pagina generale.
+
 ## Design e interazione
 
 Seguire [DESIGN](../DESIGN.md), `design-sito`, `frontend-design` e `stile-testi`. Telefono per primo, chiaro/scuro, caratteri già disponibili, titoli e spazi coerenti, documenti distinguibili e focus evidente. Una gerarchia editoriale leggibile, con poca decorazione; niente loghi degli editori o nuove foto necessarie.
@@ -131,5 +133,6 @@ GPT-6-luna / Low solo per formattazione o estrazione semplice su decisioni già 
 - [x] Enrico autorizza il solo Blocco 4, con quattro proposte isolate di `/fonti/`, senza installazioni, deleghe o integrazione.
 - [x] Quattro proposte della pagina generale con campione reale e 195 fonti, controlli e immagini locali.
 - [x] Audit critico di A, C e D richiesto da Enrico, con [quattro interventi proposti e prove](../ricerca/2026-10-12-fonti-pagina-revisione-critica.md); B esclusa dall'audit. Nessun intervento applicato o nuova direzione approvata.
+- [x] Enrico approva i quattro interventi e i tre movimenti della ricerca generale; rifinitura isolata A/C/D nel giro 2, senza scelta definitiva o integrazione.
 - [ ] Enrico sceglie la direzione della pagina generale; eventuale rifinitura successiva da autorizzare.
 - [ ] Blocco 5, integrazione e completamento mirato; Blocco 6, revisione e rilascio. Non avviati, ciascun blocco richiede il suo OK.
