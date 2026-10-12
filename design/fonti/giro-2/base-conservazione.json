@@ -1,0 +1,2058 @@
+{
+  "astro.config.mjs": {
+    "hash": "409bc89e35803641c7ac244b474d1f8921aaa5281a8fba346ceaf238c91255fc",
+    "modifiedAt": "2026-10-06T18:20:12.456Z"
+  },
+  "integrations/service-worker.mjs": {
+    "hash": "1d14013617b20b9e37949c792a8d0af64f1d11cbdb4991556d9e7e807090e127",
+    "modifiedAt": "2026-10-06T18:00:26.292Z"
+  },
+  "integrations/sw-template.js": {
+    "hash": "f97d0aaf8673c85b96301aa1f267994bf06c961e8b1deb2769ecaf1e54091fe4",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "package-lock.json": {
+    "hash": "84eb93e4db0736e7513423216891aa404e5a8481e80bdd6f7883ccddd6c4b09c",
+    "modifiedAt": "2026-10-06T17:58:17.136Z"
+  },
+  "package.json": {
+    "hash": "7e76d241c1125690cd5e87991066f4d3f893bdae6bb2398bfbc72616088ed990",
+    "modifiedAt": "2026-10-06T17:57:37.311Z"
+  },
+  "public/favicon.ico": {
+    "hash": "27752f38d9ab3cd2687eeae2940068287956c7523136f68a2077a13b47b2660f",
+    "modifiedAt": "2026-10-07T11:39:33.136Z"
+  },
+  "public/favicon.svg": {
+    "hash": "77704c69a30f6f926ccef450b0a310e4a87ccda375e69c6b246ae9efe9369bc8",
+    "modifiedAt": "2026-10-07T11:39:33.137Z"
+  },
+  "public/fonts/LICENSE-Archivo.txt": {
+    "hash": "77c3cfe81377394282e63d62daeadeb60daad1d4830cffacf8e0ee18d5fe57bd",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "public/fonts/LICENSE-Barlow.txt": {
+    "hash": "a7aa8c035fa135a40c5cc13e27fb5c268bf2b5928681e90f2c04513ac857c550",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "public/fonts/LICENSE-Bodoni-Moda.txt": {
+    "hash": "a863ff3ed4397d985b29f9733dc805aff0cf9f2ac4734b65c2d22a41b53402c7",
+    "modifiedAt": "2026-10-07T11:39:33.137Z"
+  },
+  "public/fonts/LICENSE-IBM-Plex-Mono.txt": {
+    "hash": "03b9b5ee8909a33418aaebfa6a807da48c6edebdde79b5b026258a2463e2919b",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "public/fonts/archivo-var.woff2": {
+    "hash": "5cf3eef22bcea4635d2f7751b00eedaeac3588a39b7202c487d7e41a9546613b",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "public/fonts/barlow-400.woff2": {
+    "hash": "b0a8ad37ac45f5fb22ced461576db72e44e295107aad7a9c8a7a4bad728fd03b",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "public/fonts/barlow-600.woff2": {
+    "hash": "4b52ddd4836b592df0e4832b8286956883cdc651b015126bdd18f184b7f90cc3",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "public/fonts/barlow-semi-condensed-600.woff2": {
+    "hash": "f158417e9207b5362f9b71a2fe779ce5bb836ad972f38445c3163af39d2c998d",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "public/fonts/bodoni-moda-500-corsivo.woff2": {
+    "hash": "bde8aa143c1edf7fdd3030888495163045172959f9754b7ef236a48fa2b81281",
+    "modifiedAt": "2026-10-07T11:39:33.138Z"
+  },
+  "public/fonts/bodoni-moda-600.woff2": {
+    "hash": "0ec24641ccbcf25a4079dc93859e7ac714da752beb767da5773ffc27f24913ce",
+    "modifiedAt": "2026-10-07T11:39:33.138Z"
+  },
+  "public/fonts/ibm-plex-mono-500.woff2": {
+    "hash": "01d285447409c8a588692162439a038b8cbd7871309ee20267b0d2d91c6e8e22",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "public/fonts/ibm-plex-mono-600.woff2": {
+    "hash": "0d1f0b8d0722224e32e9f28261bdc86c79115be73444ae5eceb73976a1bcdf83",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "public/googlee54aa324270bde6d.html": {
+    "hash": "126a0753bef3caf1c3ecb3a269555076d5f1887c4040a1e19e353eedbe622396",
+    "modifiedAt": "2026-10-08T00:07:49.291Z"
+  },
+  "public/icons/apple-touch-icon.png": {
+    "hash": "1d97bd8f024a38d084ea1b50cb18f1dd6c63c238b517358eaed38eb2dc60016b",
+    "modifiedAt": "2026-10-07T11:39:33.139Z"
+  },
+  "public/icons/favicon-96.png": {
+    "hash": "360d40f0143af24e51577c430595e7a2d4f37bbcbd75f8d76356c4f7f3af9137",
+    "modifiedAt": "2026-10-07T11:39:33.139Z"
+  },
+  "public/icons/icon-192.png": {
+    "hash": "a8bb4a45969b07e736b2d65e4becf57e6d121d10c42d48b9e322974229f28b2a",
+    "modifiedAt": "2026-10-07T11:39:33.140Z"
+  },
+  "public/icons/icon-512.png": {
+    "hash": "1def0d506c725da40b4f4e1e34257efdca1707090a5f70bb0092a2539bcc4452",
+    "modifiedAt": "2026-10-07T11:39:33.140Z"
+  },
+  "public/icons/icon-maskable-512.png": {
+    "hash": "71e9f64c552c9d0ac7459bc671367a071c725fe714761ab7422271a56ee46989",
+    "modifiedAt": "2026-10-07T11:39:33.141Z"
+  },
+  "public/manifest.webmanifest": {
+    "hash": "4b71c432cdca15a7459b94a3a5143f7333ae14563db7fd50724d344a73bda976",
+    "modifiedAt": "2026-10-07T11:39:33.141Z"
+  },
+  "public/robots.txt": {
+    "hash": "b4d27a7b1c61cdc42453b4cc327b101ad235b5479c18c2ab960cf466d253920e",
+    "modifiedAt": "2026-10-06T18:19:57.615Z"
+  },
+  "scripts/check-links.mjs": {
+    "hash": "d3a461dbe8a049246019d154832c4d8956f4c84374b0776b4d6e29fe920109e2",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "scripts/font/barlow.mjs": {
+    "hash": "1d847d4cebba7e42aacf16187a207b35902fd6d705767868ffcc299ab47a6313",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "scripts/font/prepara.py": {
+    "hash": "f272fece8ae73e280d6328d0547da3a3d77f9ca3fad5dbf36898c66cb87e8bcc",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "scripts/icone.mjs": {
+    "hash": "e0c47a203d3eac7c53e9d24690287b4197d92d3ef5114e02061719883b6b05e6",
+    "modifiedAt": "2026-10-07T11:39:33.142Z"
+  },
+  "scripts/itinerari/costruisci.mjs": {
+    "hash": "615e90efdbddd10b2d624e5194c040c1421b0b92624df1a9589c1e52146fbb5e",
+    "modifiedAt": "2026-10-09T17:03:29.684Z"
+  },
+  "scripts/itinerari/gtfs.mjs": {
+    "hash": "17f63583285e522d0838ee01174e50ad57d7e457eece8aeb1c89d7b49ddbe909",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "scripts/itinerari/scarica.mjs": {
+    "hash": "0f9491f524888d86b97a1699bd9c905438a7ff047ab116b5ff0b08d2a2905b9a",
+    "modifiedAt": "2026-10-06T18:00:14.916Z"
+  },
+  "scripts/lib/firme.mjs": {
+    "hash": "227d87d92580b995b1aba174cde62a2686a477cf243d3d362a61688b303cb49f",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "scripts/lib/link-interni.mjs": {
+    "hash": "466a2f6cabbea6d097ff8d1581a0a7acdbb2e1555009fa2fbaff15220854f322",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "scripts/mappa/costruisci.mjs": {
+    "hash": "1bcd09589d2deb9f11dee2cc9819222604f4a1b3636aeac30afa1b4f925d6115",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "scripts/mappa/osm.mjs": {
+    "hash": "7c3026bb9b92f8ca7dc6bbb89db1ab8e9caf96b559a6951eba8717e33f4c532a",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "scripts/mappa/riquadro.mjs": {
+    "hash": "44f9c2235b2ffa8acdbbd08d29a5458588d1e04a3cdfb0e7eb09ee9029149ba1",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "scripts/mappa/scarica.mjs": {
+    "hash": "4612d57048ca31a3fcd9f913656948c313d1da760b467b1d36a3fc43b1ea8078",
+    "modifiedAt": "2026-10-06T18:00:14.916Z"
+  },
+  "scripts/pietra.mjs": {
+    "hash": "fbe24842d188c5f690beb4aa18685897e8252d6908e2562737f2ff0b1e3f68d7",
+    "modifiedAt": "2026-10-07T11:39:33.142Z"
+  },
+  "scripts/testi-firma.mjs": {
+    "hash": "e5f25acf3c1d4763b3645d0497575492db3f0e0efd9f7b4ff85be84c4b18ea22",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/floridiana-viale.jpg": {
+    "hash": "0050a141c6f182ff85606e95e4b44102556f739e3e1b4064ea3d6387706ef56d",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-borgo-marinari.jpg": {
+    "hash": "953b2a50ced618a9620e03134b0f7c8227b0fe7020c8bc795d0cd5a5936b2f23",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-camaldoli.jpg": {
+    "hash": "01546ba7063e37f5c9ef85358f598b9076503ff4b449ac32c9a60c043505e425",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-capodimonte.jpg": {
+    "hash": "a1af2d2a891879b7123bc990fa054c426dec7b9caf5fcc74377424d5e8934e5d",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-capri.jpg": {
+    "hash": "219d5c15f7952a4f7b6f495186a8e59fba23b8e2e0b9481c88a0a21832a427d1",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-carbonara.jpg": {
+    "hash": "9c0f3034f0453d97448bedb84cef15f940f6ec7648e6f594537e39183950db0e",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-caserta.jpg": {
+    "hash": "9bee668d675a6fa48375c1723bea71d958047b3dbd2a9eab024ccebf4186a27d",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-castel-nuovo.jpg": {
+    "hash": "e5ddcee0b207efa23c5ec36f42df5fd78bb85805dab47c03d6db8e3a3c51990e",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-catacombe.jpg": {
+    "hash": "8259bbf019a786c6d41ef0f988ea5fb899101195b61e224019aee0d808589f51",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-citta-scienza.jpg": {
+    "hash": "9a934e35895b0440cffdb764a63c9d9cab88001d6a09662e1512f4e2258ff2ed",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-dadom.jpg": {
+    "hash": "d33139480397a8ebefca3559ec951125bc8f1c7864c1a2a0b5560f00bff051ee",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-donn-anna.jpg": {
+    "hash": "9e5c3ef0f864535eeab94f4a9c2253ebb4f125ca9e16548ec1475bade977e966",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-duomo.jpg": {
+    "hash": "dd83fc4813c8acb6e32c1d83dd06251f6a1f40c308ec0461da52d36ad4415112",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-ercolano.jpg": {
+    "hash": "3b275e4898e10e381f46fa5cb3ce4ea8349d83e78c478941e0ef404cfe2f90d7",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-filangieri.jpg": {
+    "hash": "2c65c74dcf1f5f9afef916fb7fcd13ac94e08a1f0e5a000162cecbb3d9304e72",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-fontanelle.jpg": {
+    "hash": "83f70ff518fc49300ce1e589966fc9e617cf9a561381a3be7cfd3b6c05394970",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-gaiola.jpg": {
+    "hash": "61b138f2932b736b55478fba6d62e80f51ded9575b014f716d0f0ab0d7f7dbf1",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-galleria-borbonica.jpg": {
+    "hash": "be2cbf49331aea0e8662aa9665a41b500b8838d0b123b34803bb9d13422a60e5",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-girolamini.jpg": {
+    "hash": "67340a6cc920fe86410ae2de54c2c6edbc1242ab70eacedd6ad0bd5d665b4647",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-ischia.jpg": {
+    "hash": "31b6121b4532ab697f2860054165d08f7d9d88afe1d8fc19eeff760a76cccbc7",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-madre.jpg": {
+    "hash": "c2f1dda991868234a40ae205948db2b6f90d59f4e55098beab7504684d701d14",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-mann.jpg": {
+    "hash": "7995469cbfca84eee3eeb827be7f9689a68934d801a0504901768f3c8e6c5cee",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-marechiaro.jpg": {
+    "hash": "135188b8e3aff2fb8eaf697c8cc48342038d21efbba91471c65bca8fdba62056",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-mostra-oltremare.jpg": {
+    "hash": "efb00f49f0f0eaf41c717d664a380743b36ab9c616e0052f421bb53bffebcb74",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-napoli-sotterranea.jpg": {
+    "hash": "5043627e69927aed9c5cbcacd5aead3a331e5b8e64d25aadda2966ddfcca8249",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-orto-botanico.jpg": {
+    "hash": "8f8e3874844e2ab1f684f510d7393c0a91077cc955c62fa033cbfba45af033c7",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-palazzo-reale.jpg": {
+    "hash": "b051643a3c9d791e361cb1853c903efe3b120be93f369070a96c71658bb38e8d",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-parco-virgiliano.jpg": {
+    "hash": "a28fc3957272dc2f8dd96e54368b60edda09acb3a73e1e1cdaa5aeed8707d777",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-pietrarsa.jpg": {
+    "hash": "41a5ce18bd5dd0e8a12b5166d73899e09be08ea0d65f6b2b04f3ebce5a3b637f",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-pignasecca.jpg": {
+    "hash": "d4eeac0f758a0aaf94ee75babc2b793ada257dc1c75e9a66229c939a352eb464",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-pio-monte.jpg": {
+    "hash": "2ba90101288f925e75a1a160c49c9a264aad3b102da80c6831c29fb3cb855d41",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-plebiscito.jpg": {
+    "hash": "cfa8c5ac6449ca330d38339bc250ffad3d17e6bcca26496040a7de653dfa8da0",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-poggio.jpg": {
+    "hash": "eaa8e01f8c08926f3afef38cd68d98b6bd9b3922ea7ebac04e4fa222aef1d293",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-pompei.jpg": {
+    "hash": "67f07ee3fdfc52ab5b4b3fffcee3922dec5e4dbd2de2084ba04c5bdba10798a5",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-porta-nolana.jpg": {
+    "hash": "ab06771020aa6d0943dae8fe473b33042181f350e8c46c0591ad3e9fa5cbfb9a",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-procida.jpg": {
+    "hash": "1089fc6d75ea0497366cc6d4f6c0bd13c8b7d92b932f48d5b25893985007f157",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-purgatorio.jpg": {
+    "hash": "909417c729326f2916ef6465dc928aa45579f079bee0fd5c0886b2b2058df618",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-san-carlo.jpg": {
+    "hash": "aeabcbcc841dce64665ed197381d8afd224aca773f1920fcbdad98290dc6fab6",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-san-domenico.jpg": {
+    "hash": "25226edf6695f6a65bb7d88a7ded3840dd4878c10243cc45af624d9cbcb571c5",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-san-lorenzo.jpg": {
+    "hash": "64a54a5d401c4ada07f0250063f06b070912764b79c524218c6d88a86afab96f",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-san-martino.jpg": {
+    "hash": "7a5b17f4a0f3d05a0c726b7db31eb1f1d0e34aef89d9e32b2acb17f3eb36b7bc",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-sanita.jpg": {
+    "hash": "c6a57ec4d8a9003198969a3ecf8ba65f8a6bf5bdc96a1bb795db9cc6341af7b5",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-sant-elmo.jpg": {
+    "hash": "83414a0db8394628aa14b5a6a0ac9bf073088543944d39735c2cf7213a656c25",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-santa-chiara.jpg": {
+    "hash": "db7f14d8810580800e4ae2ac68860ac97c6fac9ccefb21cc2a6c276ebe85d41c",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-sorrento.jpg": {
+    "hash": "b5bea99c9a3485741fe9a3e19c1324382ae863023bc3aa44c9578d340f97f9bc",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-spaccanapoli.jpg": {
+    "hash": "bc92016193664aa99abf18d1434a0b543a7d9105af0a38318acc2a040ccce50a",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-toledo.jpg": {
+    "hash": "9b5ae7b10ac158e482bdffaa1b1ef1ee1f9801d6f832d92a31ddbe219c5e45bf",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-tribunali.jpg": {
+    "hash": "cf46086e0facbaeafc02321c842f70c59e18edec69af0067e4015ce981b6e460",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-ventaglieri.jpg": {
+    "hash": "5ceb6e240c503025f7cbc9d716fe3fda741c52576e9b3b4a31db73a64e621aa1",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-vesuvio.jpg": {
+    "hash": "3566dc8bfcaa8a03449be25647ad36aa4df09ac5337416aafd60fc41f056f4c3",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-villa-pignatelli.jpg": {
+    "hash": "2d28ec200f253bf2e0558c6f9c129a356c2f733605c7c695d328087e27eecdea",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/tp-virgilio.jpg": {
+    "hash": "27ebc92a141b50ca7c95578aac0ed91526a58338a4a2ec01eb767bde938a7bbb",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/via-partenope.jpg": {
+    "hash": "d4f6acf765cfa31d9feb9851cc2048d411abe93f74553c3d2287badaee0df80a",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/foto/vista-monte-echia.jpg": {
+    "hash": "33e0758007aec2b8156df0688cf9ec349b1e72b6e83eeeed50468156501a1d6c",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/assets/pietra/piperno.webp": {
+    "hash": "4abb2376c23973b2dcd49d1962f01f26c1b8d07b45a68cea51296f91182c4328",
+    "modifiedAt": "2026-10-07T11:39:33.144Z"
+  },
+  "src/components/Campata.astro": {
+    "hash": "055855197b69142d97213683a1a2c0b92728df380475beb286cc198c272aeaef",
+    "modifiedAt": "2026-10-07T11:39:33.144Z"
+  },
+  "src/components/FontiPagina.astro": {
+    "hash": "93a2bded7e7ccb1ba2bd10894476e956b8dcf386e4312e4e5326cfc216b49800",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/components/Footer.astro": {
+    "hash": "6e6821a8639b8b6bd3e241bf9a98e5c060edb321c1fdea291a1785fabc760a2d",
+    "modifiedAt": "2026-10-07T11:39:33.144Z"
+  },
+  "src/components/Foto.astro": {
+    "hash": "0ad52fae483799ea9e1e6353aea84392ac18e7e38c2c55c5894543c7cd342437",
+    "modifiedAt": "2026-10-07T11:39:33.145Z"
+  },
+  "src/components/Header.astro": {
+    "hash": "4bb8786697e78dd20bee1311d73d2840428b226606446d973d7abcb436951829",
+    "modifiedAt": "2026-10-07T11:39:33.145Z"
+  },
+  "src/components/Icon.astro": {
+    "hash": "786cf2a613b0efb419f05c357a105335e5fd8cdd9f105f2b5c4260225319e585",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/components/Illustrazione.astro": {
+    "hash": "5c9cc6980ff61b4e1b42498a9d090f881165e5696c5edac9dee8ee36272f0bd1",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/components/Immagine.astro": {
+    "hash": "016a68209f54ffdfab0365a3eb2ba3945bc4c5d8535919ea8e05564af125137f",
+    "modifiedAt": "2026-10-07T11:39:33.145Z"
+  },
+  "src/components/Marchio.astro": {
+    "hash": "0183e446d6c8bb05ed25986d38a255b14d69d3fadb9a72bf9f50e054fc6bd4ec",
+    "modifiedAt": "2026-10-07T11:39:33.146Z"
+  },
+  "src/components/PageHead.astro": {
+    "hash": "73c306c9d72b3adf5f22772fb45ed67d3d55c95ef2caa00059fd08bc438d6936",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/components/Testo.astro": {
+    "hash": "822c7b740c86bb747957670cc6c7b9fdc3ea658758f80b0236c3d7b479803e45",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/components/home/Giornata.astro": {
+    "hash": "04c6b7c90b5fa2ce96bf3b588f207eafa9a291e2ccb42ee0b163da00064670a8",
+    "modifiedAt": "2026-10-12T10:35:39.658Z"
+  },
+  "src/components/home/Piede.astro": {
+    "hash": "6ba11bc38da7063459cf10956e8ff62fb63d435a88bfbf4990d1908a515da33d",
+    "modifiedAt": "2026-10-12T10:35:39.660Z"
+  },
+  "src/components/home/Testata.astro": {
+    "hash": "d2131190af02f95b4e3c756d5d2708aeafa135be321db8847ec5a7a97bf6d24f",
+    "modifiedAt": "2026-10-12T10:35:39.661Z"
+  },
+  "src/components/itinerari/Scheda.astro": {
+    "hash": "ea3b64ccb939f1c4913b486c11a0647da893313c33c42e5019748b3f73706680",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/components/itinerari/SchedaLocale.astro": {
+    "hash": "dc4af827f3e633f58ddaf4a4f7ee0d542512bc594c33a1f0b26d5c35e5e50166",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/config/menu.ts": {
+    "hash": "9d7499a4d598ba67067aae893c3cad27f2ce451d4dcc058d7bc221c412e69b70",
+    "modifiedAt": "2026-10-07T11:39:33.146Z"
+  },
+  "src/config/sito.ts": {
+    "hash": "7f35da9aec2da68c2ac0eaafa3e2c1d8eee2813c1986fb04fe910d8c47219493",
+    "modifiedAt": "2026-10-06T18:19:57.655Z"
+  },
+  "src/content.config.ts": {
+    "hash": "e177745718f927129b20177d08d5f410be762c50c5039af87576e2eb9982eb04",
+    "modifiedAt": "2026-10-06T17:55:41.683Z"
+  },
+  "src/data/eventi.ts": {
+    "hash": "8fe5d321a24ad65a3cd9093686224560c172e86b8c907a8a482c0db8f06663da",
+    "modifiedAt": "2026-10-09T17:44:13.687Z"
+  },
+  "src/data/fatti.yaml": {
+    "hash": "25aeaab80f7c7b33c45d367e59ccd30a04dfbd6eb276919e93c96d20f7cb61d0",
+    "modifiedAt": "2026-10-06T18:02:59.688Z"
+  },
+  "src/data/fonti.yaml": {
+    "hash": "fabdb9f899fbbc4cdf2d8130324b80494b011d0427e33c5a3e5240162f5ba865",
+    "modifiedAt": "2026-10-06T18:02:59.697Z"
+  },
+  "src/data/foto.yaml": {
+    "hash": "d39de1593bb004873f4046dca4ee1082a0749024354c06e562b0b53cefc4144b",
+    "modifiedAt": "2026-10-06T18:02:59.698Z"
+  },
+  "src/data/itinerari-pronti.yaml": {
+    "hash": "12d109a49cee908cd4bc1ab1db4517a4bb3f880645865f3429ab5ecc3aa2e700",
+    "modifiedAt": "2026-10-07T11:39:33.147Z"
+  },
+  "src/data/linee-bus.json": {
+    "hash": "cce843161f71b81c28c1ee2d220fe03d16a5e177e49675e366830b742469271e",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/data/locali.yaml": {
+    "hash": "2b0d2179c698a95b4cf19c2a0c784d5dd203daa15b27d025ced873b563e72294",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/data/luoghi.yaml": {
+    "hash": "96a1b2eef653c5b3a07f5a554e1f80d285508ac0b5bf38fe057ba15e2d0ac980",
+    "modifiedAt": "2026-10-06T17:55:25.074Z"
+  },
+  "src/data/mappa.json": {
+    "hash": "7f9dd8e11e8fb23d4ae49cc0c1fbc18f43cdffc31da55d580a77f8ca6bf14827",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/data/pagine.ts": {
+    "hash": "469e5fd4891369989862ca12a6d71bfbf7cb10299e18fe935c3514246959af0f",
+    "modifiedAt": "2026-10-06T17:58:39.103Z"
+  },
+  "src/data/partenze-bus.json": {
+    "hash": "280cc8f96bff3c41c58c0ebf287312698a57b49a57541ac79c1300ae02266fea",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/data/percorsi-alternativi.json": {
+    "hash": "3294f4eab4f38da9fcb0f84e88180bf44ef31a8eb3163cef32dd5a50523feb5e",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/data/percorsi-tappe.json": {
+    "hash": "714ad5e3a6091887eee26894a03ed89094727790d9b31ea4d6be6bc05c771739",
+    "modifiedAt": "2026-10-09T17:51:35.118Z"
+  },
+  "src/data/tappe.yaml": {
+    "hash": "d9b61d89ba8c5154ceaf3aefa61257e5f76b2af650dd2fe5e97c1520064988a8",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/data/tempi-tappe.json": {
+    "hash": "a4a753d2d5c41dceff299ceab4ae3fa61b5460606faf19214f27e2a936021465",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/layouts/Base.astro": {
+    "hash": "3f6638f018535c9f727e58675d17322b1027c6afe8ca92d4fa21e1674ec34781",
+    "modifiedAt": "2026-10-12T10:35:39.661Z"
+  },
+  "src/lib/fatti.ts": {
+    "hash": "e69457e86bddef4faa6b75a3188d0ce664b1cf23e80458d9471396b43fc82f0d",
+    "modifiedAt": "2026-10-12T11:00:50.288Z"
+  },
+  "src/lib/fonti-nextstop.mjs": {
+    "hash": "6e0da6c93c3c13b780cacafc59a4a6e6ff2e9d86650ff91aa84ba96addbd067c",
+    "modifiedAt": "2026-10-12T11:00:50.060Z"
+  },
+  "src/lib/formato.ts": {
+    "hash": "91f6241a14768dc1cda586034e88a35f830c2e8e0dc1b3f6ed8e3da064725184",
+    "modifiedAt": "2026-10-09T17:42:29.650Z"
+  },
+  "src/lib/foto.ts": {
+    "hash": "aa756d7c38ccf2f7d14a60245783dd7506a6633445f02744b4c80396758c09f1",
+    "modifiedAt": "2026-10-07T11:39:33.148Z"
+  },
+  "src/lib/itinerari/calcolo.ts": {
+    "hash": "0643126362e3e9957416b9d1070622bb813b11de226950a10fc6eb0e29a5a2af",
+    "modifiedAt": "2026-10-09T17:42:30.036Z"
+  },
+  "src/lib/itinerari/date.ts": {
+    "hash": "95e765e07cfced2a703e15d8c4c269b764013847e2927f2b12738603d187e425",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/lib/itinerari/firma-posizioni.mjs": {
+    "hash": "b2a031eb3100d9972617a0f5d7c5e680c8fc6f61ee2a3d3a1100bc5ba130d7b0",
+    "modifiedAt": "2026-10-09T17:03:28.976Z"
+  },
+  "src/lib/itinerari/icone.ts": {
+    "hash": "7e5b9d1b7cea6b0e779cf953295fc91a8f3db0f3ae579a567a7a278e155c68c8",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/lib/itinerari/link.ts": {
+    "hash": "d9f001f5573080da74dd52011a8b5fa800796e43a24ccce103559322ce23cca2",
+    "modifiedAt": "2026-10-09T15:13:12.086Z"
+  },
+  "src/lib/itinerari/napoli.ts": {
+    "hash": "e48cb5ac0d9775c9507a4d2ea15f614395a952ebc393a60b1a677f8953e9a1a8",
+    "modifiedAt": "2026-10-07T11:39:33.148Z"
+  },
+  "src/lib/itinerari/pacco.ts": {
+    "hash": "e44292be47fd4e5304959ff741a35f790d14cb356b4b6b6ad763e5b928389113",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/lib/itinerari/spostamenti.ts": {
+    "hash": "9fd60ef4fac3b4f365377b7e53498be82502f93eb01d6d60b4cca53ac6c3c551",
+    "modifiedAt": "2026-10-09T15:14:55.458Z"
+  },
+  "src/lib/itinerari/tipi.ts": {
+    "hash": "239dbb61fb5c28978265b1e876812f7fcc71fa5132eb73451e0ced9cc12edf92",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/lib/locali.ts": {
+    "hash": "890e2305d99715e690b1f7319a20d5172ad1ba1e101291a738e826cf2886c5a6",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/lib/marchio.mjs": {
+    "hash": "bea895e8b6ab2229a11e250fc5aeb38d8e78bab16e4614c761dfed2040b444a6",
+    "modifiedAt": "2026-10-07T11:39:33.149Z"
+  },
+  "src/lib/portico.mjs": {
+    "hash": "cd9c51a77ac8e5c2c34c4dcbf7982741c618872a78eedf812d366142125a2ca7",
+    "modifiedAt": "2026-10-07T11:39:33.149Z"
+  },
+  "src/lib/regole.mjs": {
+    "hash": "4589511bcdeda616030aef48605f3ac0b4c09158409aef6f839db752a5c0d7b4",
+    "modifiedAt": "2026-10-07T11:39:33.150Z"
+  },
+  "src/lib/tappe.ts": {
+    "hash": "8365c1a5f0a13c24e0832d4b5784313cd0f6ad5631e28192163ddf063ae2f50f",
+    "modifiedAt": "2026-10-09T17:44:13.891Z"
+  },
+  "src/lib/testi.ts": {
+    "hash": "462a4fb3bba690774a59e70bd1fb82945aba7fda3225444459d0f0a2a4849d6c",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/pages/404.astro": {
+    "hash": "99bfa6f1800e86f479433bc7dea0644d2dafa9f5c3adfd8abd2accef540f1a65",
+    "modifiedAt": "2026-10-06T18:00:14.914Z"
+  },
+  "src/pages/accessibilita.astro": {
+    "hash": "e6744c0301d55bf1f40151071ee575e179f9213788834a2fff0eec5b31a9fa2f",
+    "modifiedAt": "2026-10-06T18:02:07.976Z"
+  },
+  "src/pages/fonti.astro": {
+    "hash": "5e9d2288df5746172e865be6e02b08f575f442e9681fe4f45f35a939111eae97",
+    "modifiedAt": "2026-10-12T11:00:50.496Z"
+  },
+  "src/pages/index.astro": {
+    "hash": "95e39cd212fc19548029ff8866098be6d36a89a877e47733f9a5c7b8e44be1c3",
+    "modifiedAt": "2026-10-12T11:00:50.754Z"
+  },
+  "src/pages/napoli/dove-mangiare/index.astro": {
+    "hash": "a79cb57ac0c598e7a22c58646d3ce2f1a94fa550f75d610987eda60554b888ff",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/pages/napoli/index.astro": {
+    "hash": "1d461329dcafd3d422db00a420603457d8f69dc13d1f94decf82118ca8fb9940",
+    "modifiedAt": "2026-10-06T18:02:44.761Z"
+  },
+  "src/pages/napoli/itinerari/index.astro": {
+    "hash": "0ffd2e0c86cc0aa6823952e6e27fe8babe632c538276fe14c849bbb5f208339b",
+    "modifiedAt": "2026-10-07T11:39:33.152Z"
+  },
+  "src/pages/napoli/itinerari/mappa.json.ts": {
+    "hash": "dfc003bb22d67b01456fbc310f93efdcd51abe6d7b39a77943a89231df6810f3",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/pages/napoli/itinerari/partenze.json.ts": {
+    "hash": "32073a6b1297b98013a481a3c9c94a07702b568c498dfe944aa2044274dc8d1a",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/pages/napoli/itinerari/percorsi-alternativi.json.ts": {
+    "hash": "966cf71e2cfddc2ec6bf463101541538fbeabd96b8d85661646ba6621bfdcdb7",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/pages/napoli/itinerari/percorsi.json.ts": {
+    "hash": "aba99853fe13b0a729cb497c26211b71766482a4cf65274f200058a0d685a460",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/pages/napoli/itinerari/scenari.json.ts": {
+    "hash": "2fbed2f1025c682233c00f50f49b827704271ea21392ec9837d18f3e1c334299",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/pages/note-legali.astro": {
+    "hash": "85b6c0931d951ccc7bbd980ae100fd9642ddc7d7fe9e0074f535893e7f512952",
+    "modifiedAt": "2026-10-06T18:01:38.096Z"
+  },
+  "src/pages/offline.astro": {
+    "hash": "eae9369bcded0eaffa6799062c9885e7a548d4b377a5b4ef6e5bae2876ded586",
+    "modifiedAt": "2026-10-06T18:00:26.215Z"
+  },
+  "src/pages/og/[slug].png.ts": {
+    "hash": "a786feaa669623d88776da608d38903fb4c42c45aac971d4a00cea530308ef00",
+    "modifiedAt": "2026-10-07T11:39:33.152Z"
+  },
+  "src/pages/privacy.astro": {
+    "hash": "0a60f6506041c498d046861ae11331557efe9005aa887eca954531766657131c",
+    "modifiedAt": "2026-10-06T18:01:00.155Z"
+  },
+  "src/pages/sitemap.xml.ts": {
+    "hash": "3e1c21c2807ab81d32f0523486e046a7325a92c184053954d4b9dbcafa6a41a2",
+    "modifiedAt": "2026-10-06T18:00:14.914Z"
+  },
+  "src/pages/termini.astro": {
+    "hash": "d79fa2c1842c05dc74b4a610f6c63232c7b5309c331d619580a7e2aa993ccf6a",
+    "modifiedAt": "2026-10-06T18:01:37.983Z"
+  },
+  "src/scripts/dove-mangiare.ts": {
+    "hash": "d083380a484b563abb049b5aa8fdd949f1aeb78f979dc9a10dc4138267498d85",
+    "modifiedAt": "2026-10-07T11:39:33.153Z"
+  },
+  "src/scripts/home-o4.js": {
+    "hash": "acf6f4720150a1bd7ec27f5e1b012d4ea7cbfa1e932f9c45ad2ff0339c4a31b3",
+    "modifiedAt": "2026-10-12T10:35:39.663Z"
+  },
+  "src/scripts/itinerari/app.ts": {
+    "hash": "e4dfbd74c989c4a010c4b1eae790766dd1382fc973dfaf1ef8f3e20b49d109b2",
+    "modifiedAt": "2026-10-09T17:42:30.238Z"
+  },
+  "src/scripts/itinerari/mappa.ts": {
+    "hash": "65148636da0634a2e640e93b19e25fb9fd971e96635b1b34e4c108e1d04e1d46",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/scripts/itinerari/memoria.ts": {
+    "hash": "32a96035c43503f185d609e954ce8917367f553cde240d4381d1f2b5d10f60bc",
+    "modifiedAt": "2026-10-09T15:14:55.306Z"
+  },
+  "src/scripts/itinerari/trascina.ts": {
+    "hash": "121274e974620e389261bdbd8b83bf12fc6e4e50e0ccf626959d3c344ca3fc8e",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/scripts/sito.ts": {
+    "hash": "ee6c337cf700fb61921bfa759beefd3a8ed6c80a9bd949d7b452da2c69e77dca",
+    "modifiedAt": "2026-10-07T11:39:33.155Z"
+  },
+  "src/styles/global.css": {
+    "hash": "ff3c4b1a47253c420e9201f3a30cf1c940761eb3d1e081cdcbf58ffe20db629b",
+    "modifiedAt": "2026-10-07T11:39:33.155Z"
+  },
+  "src/styles/home-o4.css": {
+    "hash": "9abbfdc5a5083c37f93be5fd6f68479851b425cd05fd47dea68a136521fe2b86",
+    "modifiedAt": "2026-10-12T10:35:39.663Z"
+  },
+  "src/styles/itinerari.css": {
+    "hash": "cc1eee231bd543eb67a780fdb91fc2c502c2a733dc39149e042e2f52e6cf8284",
+    "modifiedAt": "2026-10-06T18:07:31.240Z"
+  },
+  "src/testi/dove-mangiare.yaml": {
+    "hash": "1e2c0de4fdf2e3eb7920f89091240971582682886a34de27988a68da896c5a40",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/testi/firme.json": {
+    "hash": "447a41f87f9f5bc71fbcbd08728e3ec71d0f3243f2a3d969f698491f83887e94",
+    "modifiedAt": "2026-10-06T18:05:40.359Z"
+  },
+  "src/testi/home.yaml": {
+    "hash": "9171ec4667527c1187667c18ac7f987d048048082d0858496b20e0c8bce70a34",
+    "modifiedAt": "2026-10-07T11:39:33.156Z"
+  },
+  "src/testi/itinerari.yaml": {
+    "hash": "f7bac9703cb920cf86049435dd2975715c392012111aefd9bb76f1cb3b1fdf0c",
+    "modifiedAt": "2026-10-06T18:02:59.545Z"
+  },
+  "src/testi/locali.yaml": {
+    "hash": "61ac1e9ba5b08831317550ef3a03f647c3ea8dcbf8441b47bb0312e788b05f73",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "src/testi/napoli.yaml": {
+    "hash": "65b01fe2d9f5b96144248b9b4f436a9d0d7f9a067c4203c0dafb093d46107e6d",
+    "modifiedAt": "2026-10-06T18:02:44.686Z"
+  },
+  "src/testi/tappe.yaml": {
+    "hash": "4c61d8de03cd94a0cdc2bfa71c38f03330b599c0c01bb4be2af04d62da7baed4",
+    "modifiedAt": "2026-10-06T18:05:32.822Z"
+  },
+  "test/calcolo-itinerari.test.mjs": {
+    "hash": "ffdec250378af8be6a94ac495bc0a110486aecaf77723a6407337462201b174e",
+    "modifiedAt": "2026-10-09T15:43:27.265Z"
+  },
+  "test/date.test.mjs": {
+    "hash": "0aa7ee2cd1e17e13267cf913bc945061414ca1a1ae257c396b60b2f2bb830122",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "test/dati.test.mjs": {
+    "hash": "e022631db7b3f2564c3777a1fabb52b6d004955797b224d5d70051458af4b964",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "test/firma-posizioni.test.mjs": {
+    "hash": "0990d2425146d4745803fb13509778b20d71f4c138803feb27dc9b00d777cfba",
+    "modifiedAt": "2026-10-09T17:03:30.625Z"
+  },
+  "test/fonti-nextstop.test.mjs": {
+    "hash": "80d9b4bb0a333be08ce3941a2b6beca4a71af5c5b83b888a3d3951218a24b6c6",
+    "modifiedAt": "2026-10-12T11:00:13.582Z"
+  },
+  "test/link-itinerari.test.mjs": {
+    "hash": "2c29279d433fa73204e2405d0347e44fe975f995e8084c66f63e8c7c2c4ce794",
+    "modifiedAt": "2026-10-09T15:43:26.744Z"
+  },
+  "test/link.test.mjs": {
+    "hash": "14c59396736cb661257488fe55c4e6657328471396a08716dc486583e40e5ee6",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "test/memoria-itinerari.test.mjs": {
+    "hash": "7240cd4e29377f388d558befad1923bc83ae6445fd7e62fb56974a54bef72f55",
+    "modifiedAt": "2026-10-09T15:43:27.793Z"
+  },
+  "test/regole.test.mjs": {
+    "hash": "126d00247e642561cb168aae1a516e9c012848c8200ccbda2cce8976df2d1263",
+    "modifiedAt": "2026-10-07T11:39:33.156Z"
+  },
+  "test/spostamenti-itinerari.test.mjs": {
+    "hash": "9abdc80c503e3a63addf3e8e6c5d9a5ba118a60a38d8de62b3406ec867230606",
+    "modifiedAt": "2026-10-09T15:14:55.862Z"
+  },
+  "test/testi.test.mjs": {
+    "hash": "1cf6490b41f9e358b85c46b74a1e5fe2d8c5e333c013bb8f97c104a06fdcae31",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/compositore/giro-1/proposte-locale.html": {
+    "hash": "d05bd2a637387e821777869307349cd381421d409041f4776b0851d987d3b697",
+    "modifiedAt": "2026-10-08T00:47:30.257Z"
+  },
+  "design/compositore/giro-2/proposte-locale.html": {
+    "hash": "7e20c8c576a55d21c43c4150be3374305e7102a5ce70b0984fa28141cf5d09e7",
+    "modifiedAt": "2026-10-08T10:23:52.079Z"
+  },
+  "design/compositore/giro-2/proposte.html": {
+    "hash": "326659222ac5b9821ea5375f2a9a39ee6571fa2ad27de1c2795aef6db32cd9e3",
+    "modifiedAt": "2026-10-08T10:23:52.079Z"
+  },
+  "design/compositore/giro-3/proposte-locale.html": {
+    "hash": "20ca72c7504f43191d571baecee95f5a178319ef4b70ffc135e11409a5bf0f97",
+    "modifiedAt": "2026-10-08T11:20:40.351Z"
+  },
+  "design/compositore/giro-3/proposte.html": {
+    "hash": "75205c735aeadfdbc86628db4a133356904f80e1908dd16a3a8e119d8f671cca",
+    "modifiedAt": "2026-10-08T11:20:40.344Z"
+  },
+  "design/compositore/giro-4/proposte-locale.html": {
+    "hash": "90b180127c3d67beb82ce2ffaa8e96503f727de7ba2f67e55e94a809cd112f9b",
+    "modifiedAt": "2026-10-08T16:04:57.814Z"
+  },
+  "design/compositore/giro-4/proposte.html": {
+    "hash": "4ea5a64be94d27a85c4f3c93d7564ad58265898fe0536bb8a8c4684a94f40175",
+    "modifiedAt": "2026-10-08T16:04:57.797Z"
+  },
+  "design/compositore/giro-5/immagini/a-giu-dark.png": {
+    "hash": "e66f7877348511c3d97ac94bd50d6312f6a03c201097ceac71c3540876d93daf",
+    "modifiedAt": "2026-10-08T19:58:04.361Z"
+  },
+  "design/compositore/giro-5/immagini/a-giu-light.png": {
+    "hash": "b549c5138df6a3b8640138cd261a0946e78c3e1324dabee1c864c6618258c57a",
+    "modifiedAt": "2026-10-08T19:57:59.518Z"
+  },
+  "design/compositore/giro-5/immagini/a-pc-dark.png": {
+    "hash": "c304de1c3c8adbaa6c028bcdb0822d9f284b31c4c6ecc7d79e6e8e6c652ba001",
+    "modifiedAt": "2026-10-08T19:58:06.462Z"
+  },
+  "design/compositore/giro-5/immagini/a-pc-light.png": {
+    "hash": "1136c76ed0e023bb7b075990251b881dbb9d4cce07f9ada9accf9c9ec0d42035",
+    "modifiedAt": "2026-10-08T19:58:00.851Z"
+  },
+  "design/compositore/giro-5/immagini/a-tel-dark.png": {
+    "hash": "6f7a5eb5d6303c7f904c3c64dd2a3a51352ba4430da8832049cacd63bf7126c8",
+    "modifiedAt": "2026-10-08T19:58:03.550Z"
+  },
+  "design/compositore/giro-5/immagini/a-tel-light.png": {
+    "hash": "20515aa8b7b76baac210ede7fa941862d9ab5f4ad10945621f24f115a6cae788",
+    "modifiedAt": "2026-10-08T19:57:59.026Z"
+  },
+  "design/compositore/giro-5/immagini/c-giu-dark.png": {
+    "hash": "a46e06c7f782dbe72222cdb16efc14a229ad8f5d13acda4581a214eea37319e3",
+    "modifiedAt": "2026-10-08T19:58:16.510Z"
+  },
+  "design/compositore/giro-5/immagini/c-giu-light.png": {
+    "hash": "8560a5a97712f942c6987b7747a5a408161bd33414a74b3fd8913c3d79ef6674",
+    "modifiedAt": "2026-10-08T19:58:10.822Z"
+  },
+  "design/compositore/giro-5/immagini/c-pc-dark.png": {
+    "hash": "537d580d32cb541dd2ac903841a2dd3b0d61a9a8748a32a602c149561ba840c9",
+    "modifiedAt": "2026-10-08T19:58:18.414Z"
+  },
+  "design/compositore/giro-5/immagini/c-pc-light.png": {
+    "hash": "a99177e2466b889f5991da10d290c34df4d828cd2e3bec93d7ac1dfddbcde0d7",
+    "modifiedAt": "2026-10-08T19:58:12.953Z"
+  },
+  "design/compositore/giro-5/immagini/c-pc-passaggio-del-mouse.png": {
+    "hash": "e4eea711dac6dd1551481f1901cae1bd2e3ec44334e0f3d874ba4f14f05b731b",
+    "modifiedAt": "2026-10-08T19:58:29.255Z"
+  },
+  "design/compositore/giro-5/immagini/c-tel-dark.png": {
+    "hash": "14feafcedf7a2f786270b4e47383073de672cc567a7afe30fff84704e935776d",
+    "modifiedAt": "2026-10-08T19:58:15.911Z"
+  },
+  "design/compositore/giro-5/immagini/c-tel-light.png": {
+    "hash": "f80c33fca4be6206bdcd2735180c11782c548a43fcadd8c0adfdc527017cd08d",
+    "modifiedAt": "2026-10-08T19:58:10.050Z"
+  },
+  "design/compositore/giro-5/immagini/d-giu-dark.png": {
+    "hash": "a543382e71574b279f79e9aa9dde2bf25e51184d8c106c8d0852a8022f1387ad",
+    "modifiedAt": "2026-10-08T19:58:25.294Z"
+  },
+  "design/compositore/giro-5/immagini/d-giu-light.png": {
+    "hash": "50811ae85058cbc6e48a9d62a3434240aa78c27c539c5775bb6dfe59b96f0f41",
+    "modifiedAt": "2026-10-08T19:58:21.912Z"
+  },
+  "design/compositore/giro-5/immagini/d-pc-dark.png": {
+    "hash": "aa34451691b990f88c263b68fdca64d7333de55b164966006776c6d6294b98e8",
+    "modifiedAt": "2026-10-08T19:58:26.456Z"
+  },
+  "design/compositore/giro-5/immagini/d-pc-light.png": {
+    "hash": "d48a67740f292c26588c503bd20335c000eb1ea521691c90abfe7ef612d940cd",
+    "modifiedAt": "2026-10-08T19:58:23.033Z"
+  },
+  "design/compositore/giro-5/immagini/d-tel-dark.png": {
+    "hash": "e9ff5a97066b8ef4bee5eb69a63e373f0802251e7792022d483f6c247a74b3c0",
+    "modifiedAt": "2026-10-08T19:58:24.732Z"
+  },
+  "design/compositore/giro-5/immagini/d-tel-light.png": {
+    "hash": "3bb3ccaa6c0a86462c753d0e23a9265e558b92117903b149e4be9e0b8f668968",
+    "modifiedAt": "2026-10-08T19:58:21.295Z"
+  },
+  "design/compositore/giro-5/proposte-locale.html": {
+    "hash": "1465ecce1590d0feb99299b1fe4a50c707a090f3636ceb6c833030d7f2c85fdc",
+    "modifiedAt": "2026-10-08T19:59:01.655Z"
+  },
+  "design/compositore/giro-5/proposte.html": {
+    "hash": "297dd12b5774e1f79261879b223357ca2486477ea1c8cbbed2cdde38bad1082e",
+    "modifiedAt": "2026-10-08T19:59:01.623Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/pc-q1-c.png": {
+    "hash": "cf84a3e5c23db7e95c27008f30601590c2cf0310be95e6dbb824ffae9627d6f3",
+    "modifiedAt": "2026-10-08T22:15:01.261Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/pc-q1-d.png": {
+    "hash": "665c0f0771e6edf2dae8f7957a585c66fd0cbc140dad48682862f5c1cff79cf1",
+    "modifiedAt": "2026-10-08T22:15:03.353Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/pc-q2-c.png": {
+    "hash": "9984fd4d5cb88172aed2c3feacee2ab3e89a2ddbafbbc54fe9f5018c8f3e760b",
+    "modifiedAt": "2026-10-08T22:15:05.333Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/pc-q2-d.png": {
+    "hash": "7d10d05e3569c205b15d9c4bd990d9257ec5fc1cf94ba9c4b9207e11e4774cc8",
+    "modifiedAt": "2026-10-08T22:15:07.455Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/pc-q3-c.png": {
+    "hash": "10ecc432213fd4036ede2bc198890ad5c1171930486906759d3aad88e8f9d6e9",
+    "modifiedAt": "2026-10-08T22:15:09.608Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/pc-q3-d.png": {
+    "hash": "710deab94705f78f3e44c8e6e3c91e9f0c171566040bcd000fe1a62ee09ab279",
+    "modifiedAt": "2026-10-08T22:15:11.806Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/pc-q4-c.png": {
+    "hash": "79fb12790beab52f705f9f79ca36aefba891fb5f110d4120fab47bc43add1e0b",
+    "modifiedAt": "2026-10-08T22:15:13.830Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/pc-q4-d.png": {
+    "hash": "e64131f3b3fa1835ed518735b177ab2f8a051180b9ce5591430549ac11a0115b",
+    "modifiedAt": "2026-10-08T22:15:15.982Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q1-c-giorno-dark.png": {
+    "hash": "6c2436cf3f6b693fc55c82dc7c49342ce639f68d5d99810ae0d9440e82588650",
+    "modifiedAt": "2026-10-08T22:00:33.358Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q1-c-giorno-light.png": {
+    "hash": "f3814f438324aca1d076a1a0cf5d6a46248baf69207dac0dfd2ddfd3144b6a50",
+    "modifiedAt": "2026-10-08T21:59:57.817Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q1-c-scheda-dark.png": {
+    "hash": "5749ed0c34cffc167ac07dad895009254e26cad532775e59500edd31f2f0f2fb",
+    "modifiedAt": "2026-10-08T22:00:34.979Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q1-c-scheda-light.png": {
+    "hash": "6b439689f5abc9409b9cf8c344b66c959d2671ad06f78d2efe508c981abfce98",
+    "modifiedAt": "2026-10-08T21:59:59.403Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q1-c-sotto-dark.png": {
+    "hash": "75c1facbd0ce7e21751e0580f4a0b84ba85d39c5b82d1e131f59c76e5c5221a2",
+    "modifiedAt": "2026-10-08T22:00:36.247Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q1-c-sotto-light.png": {
+    "hash": "c560b4423cba8d0d3e9e879328988c575215887fc7fb01b698177a83cb33c8c4",
+    "modifiedAt": "2026-10-08T22:00:00.960Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q1-d-giorno-dark.png": {
+    "hash": "a0193fe875e708233f12f63406c20e01955368f60fc763611f0dc03382a71cb2",
+    "modifiedAt": "2026-10-08T22:00:37.939Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q1-d-giorno-light.png": {
+    "hash": "11d5c37798bdf650c4f6e81a55c83773e00dbf7506f75f6da891f2f1cf408945",
+    "modifiedAt": "2026-10-08T22:00:03.044Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q1-d-scheda-dark.png": {
+    "hash": "ab68526376b5dd74e83b08704bd6520a8c410f8ffbe0924b6e93e958a3e455c5",
+    "modifiedAt": "2026-10-08T22:00:39.892Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q1-d-scheda-light.png": {
+    "hash": "f80c1e56fa870f3509c6a5f8ec1cd2370d5524f042f09d5539cd96a2a840c0e7",
+    "modifiedAt": "2026-10-08T22:00:04.631Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q1-d-sotto-dark.png": {
+    "hash": "98d17fd3e91c777906ee1dbda51a064bd9c65e34efac90496be0bf3c75dac333",
+    "modifiedAt": "2026-10-08T22:00:40.759Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q1-d-sotto-light.png": {
+    "hash": "f6dcd2f655e9a6b03268cef1015d64b46f8509eef3d3ca8ee4cb3f0d73458de9",
+    "modifiedAt": "2026-10-08T22:00:05.537Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q2-c-giorno-dark.png": {
+    "hash": "f9727985d3ce431d7aa387d5250e458b8b1e7aaa953ee1bca080137c289b7295",
+    "modifiedAt": "2026-10-08T22:00:42.338Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q2-c-giorno-light.png": {
+    "hash": "0297f92dd339874a7d5fe2a5a6f836e6f4b50739316fbebdc5db04f4f3493409",
+    "modifiedAt": "2026-10-08T22:00:07.109Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q2-c-scheda-dark.png": {
+    "hash": "c4f63242a0f069c55ab6ea659a49b851b93aefb75168c983cc749f25be7fb9f2",
+    "modifiedAt": "2026-10-08T22:00:43.926Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q2-c-scheda-light.png": {
+    "hash": "3a7970ed6a02bea5a94e084e22b52828a0052c5d8e0f853b18e206b86c4835cd",
+    "modifiedAt": "2026-10-08T22:00:08.575Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q2-c-sotto-dark.png": {
+    "hash": "6f6bed425283d9ee523aa48c46d63951c1e5b45e9714a74eaa86df34baa7fba3",
+    "modifiedAt": "2026-10-08T22:00:44.863Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q2-c-sotto-light.png": {
+    "hash": "3615b6cd2aabd43ddaaf4c80f173427a803a86b15eb3f37b25d32cc6bbe69ed5",
+    "modifiedAt": "2026-10-08T22:00:09.411Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q2-d-giorno-dark.png": {
+    "hash": "ae13bce0bedd88ad7b95c041ab625f681c460a0f5cb231ca2cf397440d32820d",
+    "modifiedAt": "2026-10-08T22:00:47.207Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q2-d-giorno-light.png": {
+    "hash": "1e7d9766b80ad6798e97038213611162e892603e75967772694405bd8486b375",
+    "modifiedAt": "2026-10-08T22:00:10.815Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q2-d-scheda-dark.png": {
+    "hash": "a595eb2858875cbd322397db2c02f6bf492cdcf39b9e144f560199668b38e42e",
+    "modifiedAt": "2026-10-08T22:00:48.730Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q2-d-scheda-light.png": {
+    "hash": "8e49c423f6d0d1cdd0ed5b13b19d9cf4a9d8878129cc6506a38f1304eff4e55e",
+    "modifiedAt": "2026-10-08T22:00:12.495Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q2-d-sotto-dark.png": {
+    "hash": "a26aa1cb61c786039228a5d727c30ae7c9d779c61e89d5bc36cdc1456c511724",
+    "modifiedAt": "2026-10-08T22:00:49.704Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q2-d-sotto-light.png": {
+    "hash": "81914cf57c7da20622d6cc4a11954b45f3d6e0a6ce385927ecf01513f9d7c8a9",
+    "modifiedAt": "2026-10-08T22:00:13.407Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q3-c-giorno-dark.png": {
+    "hash": "4251b34cbeab26ee0c3c0009bb03eef6d18dce4cc44f7aba9e835b80330399af",
+    "modifiedAt": "2026-10-08T22:00:51.436Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q3-c-giorno-light.png": {
+    "hash": "ccc7f02da6d726f8e3d7668ec3885cf2144e6fa04dcc48051f1fcaeca65c74b7",
+    "modifiedAt": "2026-10-08T22:00:14.739Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q3-c-scheda-dark.png": {
+    "hash": "f0658be7eb37d570ee43aa6ebce76335164fdecff0e6080acd2a18038632e792",
+    "modifiedAt": "2026-10-08T22:00:53.079Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q3-c-scheda-light.png": {
+    "hash": "6cf1b7981db68de6c68b6e5d7ed485a2bbc4711099100621513c4129aa0ea7a6",
+    "modifiedAt": "2026-10-08T22:00:16.747Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q3-c-sotto-dark.png": {
+    "hash": "5b2079d83f6724849c8dbc535b0e150a14c6a389f786b82186c8814a9c2be665",
+    "modifiedAt": "2026-10-08T22:00:54.350Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q3-c-sotto-light.png": {
+    "hash": "44262154c1f94e02cf3ff5d1cfc4febbb5b1c413963f14c12ce99b53ca2a9b2e",
+    "modifiedAt": "2026-10-08T22:00:18.472Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q3-d-giorno-dark.png": {
+    "hash": "78167ccd119f5effe507e7a2c51af151549db4dcf4d233d74376142745295f41",
+    "modifiedAt": "2026-10-08T22:00:56.141Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q3-d-giorno-light.png": {
+    "hash": "c4532eb0dc841e0efcc5538f95ff68ce1ee7d06f69d244274057546ee50abcd8",
+    "modifiedAt": "2026-10-08T22:00:20.743Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q3-d-scheda-dark.png": {
+    "hash": "d295cd09c8c2da0e2d3e36a15a167b5c85bad619b1f5490bc981585750856675",
+    "modifiedAt": "2026-10-08T22:00:57.831Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q3-d-scheda-light.png": {
+    "hash": "97827f7682cfabd7e0140e052f91d194d936e936f665a4c0afddee3bfcd03427",
+    "modifiedAt": "2026-10-08T22:00:22.428Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q3-d-sotto-dark.png": {
+    "hash": "9a6e8cbfad17b28b663d1b3152c377e143baf8a2d62a067379c88dec4c116afa",
+    "modifiedAt": "2026-10-08T22:00:59.025Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q3-d-sotto-light.png": {
+    "hash": "472166e13e7ffef9d124b3347274e6024f8d26311926d20d03eb1269b9319868",
+    "modifiedAt": "2026-10-08T22:00:23.630Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q4-c-giorno-dark.png": {
+    "hash": "b883a51e9d42876fe4126b690cbdefc2a493ad1e9b2720a281ebbfb95de4a6a4",
+    "modifiedAt": "2026-10-08T22:01:00.323Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q4-c-giorno-light.png": {
+    "hash": "17375b08dd327d0fdbfce2316c71dde9dd8b0bd649638fb8f2b5031ba241a929",
+    "modifiedAt": "2026-10-08T22:00:25.213Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q4-c-scheda-dark.png": {
+    "hash": "7a81fbf1e8c9ad8a52a9cde39767b3d542ee2ac8181e9546848b97b584916fd2",
+    "modifiedAt": "2026-10-08T22:01:02.195Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q4-c-scheda-light.png": {
+    "hash": "533a7c9842f6685687309caf17ba588baf88b84f21e8e31a7a3830a240665240",
+    "modifiedAt": "2026-10-08T22:00:26.862Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q4-c-sotto-dark.png": {
+    "hash": "7f0f7a547b1f41bb2ab04f85dcdf47a605081ff52753dc5524b13ecf56b81ea7",
+    "modifiedAt": "2026-10-08T22:01:03.140Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q4-c-sotto-light.png": {
+    "hash": "3df592e9d75bed789250dd41e6caf6d3dc889efb71ba70b11a380933cee30742",
+    "modifiedAt": "2026-10-08T22:00:27.730Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q4-d-giorno-dark.png": {
+    "hash": "86176fb7bb09fade7aaecb95b88d9b254478375059086a692df8f9158cb46063",
+    "modifiedAt": "2026-10-08T22:01:04.987Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q4-d-giorno-light.png": {
+    "hash": "74f2f80181678a12808b21499533df750a8141ca4a8315e0784f78bf020705ac",
+    "modifiedAt": "2026-10-08T22:00:29.572Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q4-d-scheda-dark.png": {
+    "hash": "6602c25b5d9a451a4477b355fc9f94e3965a773def2b048263a1e9c36863d16d",
+    "modifiedAt": "2026-10-08T22:01:06.535Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q4-d-scheda-light.png": {
+    "hash": "22a45de616a6396c5d1227ac68e3b814ab558b064948a2eced224e921282c001",
+    "modifiedAt": "2026-10-08T22:00:31.103Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q4-d-sotto-dark.png": {
+    "hash": "0daa28b5431e8e867cceff80d4c762eb346c74512272f124f021d3d1033fa7c4",
+    "modifiedAt": "2026-10-08T22:01:07.446Z"
+  },
+  "design/compositore/scheda-giro-1/immagini/q4-d-sotto-light.png": {
+    "hash": "3e5d89763e948734e2c2e70a9964de1d8b041427777cc5a68e16be283f1558e0",
+    "modifiedAt": "2026-10-08T22:00:32.039Z"
+  },
+  "design/compositore/scheda-giro-1/proposte-locale.html": {
+    "hash": "9b4c9530e3e627e0253c4368d586282f6857d3634e91384b5c44cec80b5544cf",
+    "modifiedAt": "2026-10-08T22:17:14.009Z"
+  },
+  "design/compositore/scheda-giro-1/proposte.html": {
+    "hash": "adeb6fb0a3c46b2666d76a0927d1a4c0a330d61bee2ddbe33ea0902c851a9219",
+    "modifiedAt": "2026-10-08T22:17:13.998Z"
+  },
+  "design/fonti/giro-1/a-breve.html": {
+    "hash": "40e574d29def927e5681ba395580d6556720a81c921efe6277f0e1ad5258534d",
+    "modifiedAt": "2026-10-12T13:06:53.573Z"
+  },
+  "design/fonti/giro-1/a-lungo.html": {
+    "hash": "8084bca68e7ff2d4f8d2b0cc16421baedb07e7ea719fa17c1485189e6abac5c7",
+    "modifiedAt": "2026-10-12T13:06:53.572Z"
+  },
+  "design/fonti/giro-1/a-vuoto.html": {
+    "hash": "cbc7e5b2bdb28cac42c34eabc57cc9ec6ab8e15bf0326192d3cd548b9d1f6174",
+    "modifiedAt": "2026-10-12T13:06:53.573Z"
+  },
+  "design/fonti/giro-1/a.html": {
+    "hash": "5dbcdc13988b1f7601012ede5179619e01fc26c8c83bb6a59a82d5cabd66e241",
+    "modifiedAt": "2026-10-12T13:06:53.557Z"
+  },
+  "design/fonti/giro-1/b-breve.html": {
+    "hash": "f04f75bc1f2d2041fa56e02a978254ec26e66784eb0dc55cf44901189a77df81",
+    "modifiedAt": "2026-10-12T13:06:53.594Z"
+  },
+  "design/fonti/giro-1/b-lungo.html": {
+    "hash": "345761a6dd041836b1e779d493ec340bfc683c0b51cef8677f0a1a766d0d7c51",
+    "modifiedAt": "2026-10-12T13:06:53.593Z"
+  },
+  "design/fonti/giro-1/b-vuoto.html": {
+    "hash": "f074d927b56858fe0c6c144e85989150f8e76e7878b48f4a350711e6b41f46df",
+    "modifiedAt": "2026-10-12T13:06:53.594Z"
+  },
+  "design/fonti/giro-1/b.html": {
+    "hash": "d07796ca127b6a7de958e73b8b27f0df880e656dc687fbfe439cea5c61e73adb",
+    "modifiedAt": "2026-10-12T13:06:53.573Z"
+  },
+  "design/fonti/giro-1/base-conservazione.json": {
+    "hash": "3cc5a310c8c695239855a9089c5bff0068e1e7347cb9d7f84fe4f423e8855492",
+    "modifiedAt": "2026-10-12T12:00:32.665Z"
+  },
+  "design/fonti/giro-1/c-breve.html": {
+    "hash": "eec750f7ce8bc5c8dbc554cb6057e4fe6d8d702eb308df6587398b1f49eb9308",
+    "modifiedAt": "2026-10-12T13:06:53.606Z"
+  },
+  "design/fonti/giro-1/c-lungo.html": {
+    "hash": "a8999adc5334a6fad87f45b528b530775fe64334749e3f7be9e446de8cacd225",
+    "modifiedAt": "2026-10-12T13:06:53.606Z"
+  },
+  "design/fonti/giro-1/c-vuoto.html": {
+    "hash": "0a499f77b8b81bab83c0a756091a294a474c8e6eebd6540539631ffbf636923a",
+    "modifiedAt": "2026-10-12T13:06:53.606Z"
+  },
+  "design/fonti/giro-1/c.html": {
+    "hash": "34a59c106736c3ac3f0639f856f0bea3508759532432ba08ae167870485f467c",
+    "modifiedAt": "2026-10-12T13:06:53.595Z"
+  },
+  "design/fonti/giro-1/confronto.html": {
+    "hash": "2effe8d9c3dce64c8a18dfc71ca7cf76c930fc98227ed638dfa309c144bee191",
+    "modifiedAt": "2026-10-12T13:06:53.633Z"
+  },
+  "design/fonti/giro-1/d-breve.html": {
+    "hash": "fab546bc8923f71b5b2267fe8d8f5d637ef72ee62d8f14ac9404445433db25c2",
+    "modifiedAt": "2026-10-12T13:06:53.631Z"
+  },
+  "design/fonti/giro-1/d-lungo.html": {
+    "hash": "15b6e73fe958172a7eae397d75c94a2d6ca1d9689519312ffec493560c749f80",
+    "modifiedAt": "2026-10-12T13:06:53.631Z"
+  },
+  "design/fonti/giro-1/d-vuoto.html": {
+    "hash": "3310835c57c3158086e45e9867cef3af544ed6cfba4367d064082c2d2387f82c",
+    "modifiedAt": "2026-10-12T13:06:53.632Z"
+  },
+  "design/fonti/giro-1/d.html": {
+    "hash": "a9a568f09047daef08652b121a150a879f8069feb5d310fd8d86dddcebd07eef",
+    "modifiedAt": "2026-10-12T13:06:53.606Z"
+  },
+  "design/fonti/giro-1/esempi.mjs": {
+    "hash": "0be33d6e4b7565efa3cb175d7d2df07a69b6990562022072768ece7241a3329d",
+    "modifiedAt": "2026-10-12T12:58:34.206Z"
+  },
+  "design/fonti/giro-1/fixture-lungo.json": {
+    "hash": "6e4a8a2bcbc2e239f9d74c1f95015c125455cfe1260021e32e5dea2303ed2d6f",
+    "modifiedAt": "2026-10-12T13:06:53.634Z"
+  },
+  "design/fonti/giro-1/fotografa.mjs": {
+    "hash": "3e746b12553bed2752e19ef6318d797da33fe22f5beb17ac6d553ad658062499",
+    "modifiedAt": "2026-10-12T13:00:42.865Z"
+  },
+  "design/fonti/giro-1/genera.mjs": {
+    "hash": "e625af343f88aeb3748dd906eb9625cb5420bc63e63c48e4307a899cf457a64a",
+    "modifiedAt": "2026-10-12T13:02:51.166Z"
+  },
+  "design/fonti/giro-1/index.html": {
+    "hash": "854e5ffb1ed05075a3565e026f3340b0236c1c85ec767b05846f402bf663e8e9",
+    "modifiedAt": "2026-10-12T13:06:53.632Z"
+  },
+  "design/fonti/giro-1/lighthouse.mjs": {
+    "hash": "f384ab83072fa29c4ecb364d5eedc23ee9dffa6f11d207f32cd340e765feae2b",
+    "modifiedAt": "2026-10-12T12:56:38.935Z"
+  },
+  "design/fonti/giro-1/prototipi.css": {
+    "hash": "662a63dc75283cd1018ee37c6ed0cdeaf004693a9540b96bc4092dad96011f67",
+    "modifiedAt": "2026-10-12T13:03:37.972Z"
+  },
+  "design/fonti/giro-1/prototipi.js": {
+    "hash": "2eed1d1642f7c6277153ced2586e7506744f4e72cc6b77c066a942989bb202ec",
+    "modifiedAt": "2026-10-12T13:02:51.299Z"
+  },
+  "design/fonti/giro-1/README.md": {
+    "hash": "7f0b0fb10e495bd0e1e03b3e5eda3c6d253c9ba7c877816791c9f2fb3c8bffaf",
+    "modifiedAt": "2026-10-12T13:09:17.886Z"
+  },
+  "design/fonti/giro-1/serve.mjs": {
+    "hash": "cbc4fd64bc4e08f594e1326243ab9a5837e4a1d78d146902d6caedadb156d351",
+    "modifiedAt": "2026-10-12T11:59:36.790Z"
+  },
+  "design/fonti/giro-1/verifica.mjs": {
+    "hash": "74ac2fb078af2f70d3b682c40416a179846fe7f31db74d071a4e0a47647ac134",
+    "modifiedAt": "2026-10-12T12:55:05.668Z"
+  },
+  "design/fonti/giro-1/verifiche/a-1280-dark-aperto.png": {
+    "hash": "bb35f1c5895df0677b693349765141dd3bbb81e26ef316db9f434a675e57e28e",
+    "modifiedAt": "2026-10-12T13:05:32.090Z"
+  },
+  "design/fonti/giro-1/verifiche/a-1280-dark-chiuso.png": {
+    "hash": "f650cf3c0ae55a9016b2a77176e906a92c311127ef6fe0be5873da6f425f8cce",
+    "modifiedAt": "2026-10-12T13:05:31.876Z"
+  },
+  "design/fonti/giro-1/verifiche/a-1280-light-aperto.png": {
+    "hash": "0d23a71414bc9077f7f4ef16c4889dbd91fffd2a478e54199c206699e18b2072",
+    "modifiedAt": "2026-10-12T13:05:30.424Z"
+  },
+  "design/fonti/giro-1/verifiche/a-1280-light-chiuso.png": {
+    "hash": "25a14a25799fd74147381b81c33efa3741e398e245681afb8c0cb325153caa19",
+    "modifiedAt": "2026-10-12T13:05:30.221Z"
+  },
+  "design/fonti/giro-1/verifiche/a-375-dark-aperto.png": {
+    "hash": "c81a480efd709923244558b4ab7fb5e2077e212a09a57e1623bb801aa9b817d9",
+    "modifiedAt": "2026-10-12T13:05:31.230Z"
+  },
+  "design/fonti/giro-1/verifiche/a-375-dark-chiuso.png": {
+    "hash": "357bfb8da01e8f31aa302fdb34a14b44cba9c2e4e7c729ec2d4e7e24c4fd9a93",
+    "modifiedAt": "2026-10-12T13:05:31.137Z"
+  },
+  "design/fonti/giro-1/verifiche/a-375-light-aperto.png": {
+    "hash": "a22667f8abbc43ee0695dbacf793f721d57f7e06bb86a792488fd2a769a3c701",
+    "modifiedAt": "2026-10-12T13:05:29.630Z"
+  },
+  "design/fonti/giro-1/verifiche/a-375-light-chiuso.png": {
+    "hash": "ad21608ea1f6ab51492bc8abb853fe98ab3b0049122f1e67c1ec6c3ebb8d0d1b",
+    "modifiedAt": "2026-10-12T13:05:29.502Z"
+  },
+  "design/fonti/giro-1/verifiche/a-390-dark-aperto.png": {
+    "hash": "8df083a56656eec3b4f998e3133494451aa02f0a4c4b0fdef22b976a42111c4e",
+    "modifiedAt": "2026-10-12T13:05:31.661Z"
+  },
+  "design/fonti/giro-1/verifiche/a-390-dark-chiuso.png": {
+    "hash": "f80e01ab4cb9b750f8bd548d12170ce01ec95bfe1a9ae3313c096ec775041f60",
+    "modifiedAt": "2026-10-12T13:05:31.444Z"
+  },
+  "design/fonti/giro-1/verifiche/a-390-dark-pannello.png": {
+    "hash": "eb2b59f66bdc15fb77a736501ac7539b0e7bd1031fb151b5b6ad3a6dab5cb387",
+    "modifiedAt": "2026-10-12T13:06:34.686Z"
+  },
+  "design/fonti/giro-1/verifiche/a-390-light-aperto.png": {
+    "hash": "115a7e93a5509b1dad9cda55ddf68f2ebdcd2560a13af881fde9065800154052",
+    "modifiedAt": "2026-10-12T13:05:30.033Z"
+  },
+  "design/fonti/giro-1/verifiche/a-390-light-chiuso.png": {
+    "hash": "5507fe61d7291b9f779792398b1e1de24a28870e38ad0bf8087ee9d2ddf307e0",
+    "modifiedAt": "2026-10-12T13:05:29.826Z"
+  },
+  "design/fonti/giro-1/verifiche/a-390-light-pannello.png": {
+    "hash": "b317bc2004cf2fbb48333ee657417dc8b4cb664c931edd80a08dd1d7373b7bdc",
+    "modifiedAt": "2026-10-12T13:06:32.037Z"
+  },
+  "design/fonti/giro-1/verifiche/b-1280-dark-aperto.png": {
+    "hash": "13e7ce83cd4812248193b24ef31ec4517f0f9089c1310e86e6933942ad37c3af",
+    "modifiedAt": "2026-10-12T13:05:47.036Z"
+  },
+  "design/fonti/giro-1/verifiche/b-1280-dark-chiuso.png": {
+    "hash": "50dbb86c2d0641a8ec34ba280d7ed6a00ba74848fe4f308b5acb6c01db4eeff3",
+    "modifiedAt": "2026-10-12T13:05:46.697Z"
+  },
+  "design/fonti/giro-1/verifiche/b-1280-light-aperto.png": {
+    "hash": "9d0e4e659274abd60039b7a8ca2c6c83bf3aeb7294efe15a79cde918f81ccd26",
+    "modifiedAt": "2026-10-12T13:05:45.130Z"
+  },
+  "design/fonti/giro-1/verifiche/b-1280-light-chiuso.png": {
+    "hash": "ddd54f15313c34faf09fc8e2738e363cebcd66a4edfdc844842729f64e928614",
+    "modifiedAt": "2026-10-12T13:05:44.868Z"
+  },
+  "design/fonti/giro-1/verifiche/b-375-dark-aperto.png": {
+    "hash": "30c59adb9c118a3f9ca39e47f779a98ed6948a8c43c93dc70df5cea5a85f378b",
+    "modifiedAt": "2026-10-12T13:05:46.041Z"
+  },
+  "design/fonti/giro-1/verifiche/b-375-dark-chiuso.png": {
+    "hash": "5707fef645f6225a14e6ff989383185641d01051565911bfe6c7ba537d7312da",
+    "modifiedAt": "2026-10-12T13:05:45.949Z"
+  },
+  "design/fonti/giro-1/verifiche/b-375-light-aperto.png": {
+    "hash": "225c2fd75d97af70a05205eee99c068b29bb59bf2b28cd70c1df868150490bba",
+    "modifiedAt": "2026-10-12T13:05:44.182Z"
+  },
+  "design/fonti/giro-1/verifiche/b-375-light-chiuso.png": {
+    "hash": "653ae1615537f833e1ac836e2d3ba6797cc5cd1b9b473d6d35cc1e57adfb9ee7",
+    "modifiedAt": "2026-10-12T13:05:44.066Z"
+  },
+  "design/fonti/giro-1/verifiche/b-390-dark-aperto.png": {
+    "hash": "8adc325b541cd105293ba888ed948ba074980f62f33abb7003e898736d58326c",
+    "modifiedAt": "2026-10-12T13:05:46.483Z"
+  },
+  "design/fonti/giro-1/verifiche/b-390-dark-chiuso.png": {
+    "hash": "cfab69082a9b6982f1b41529ea766e514b860f85f0ce0dfcccd8ff92c5b3b350",
+    "modifiedAt": "2026-10-12T13:05:46.231Z"
+  },
+  "design/fonti/giro-1/verifiche/b-390-dark-pannello.png": {
+    "hash": "f4bf87e3b017d86b0753b0cdc28a733688c9457608d2ae7d3d94d434d1fd77f5",
+    "modifiedAt": "2026-10-12T13:06:40.200Z"
+  },
+  "design/fonti/giro-1/verifiche/b-390-light-aperto.png": {
+    "hash": "7e1eac8b1474595dd14e85aa92b93d12c0c32bcd2ffa750ce4dd0c585a0b1038",
+    "modifiedAt": "2026-10-12T13:05:44.663Z"
+  },
+  "design/fonti/giro-1/verifiche/b-390-light-chiuso.png": {
+    "hash": "166cffa54c8d4d7094df03d864be8761b88f3f012bc2509c16aede0de57ce9f4",
+    "modifiedAt": "2026-10-12T13:05:44.426Z"
+  },
+  "design/fonti/giro-1/verifiche/b-390-light-pannello.png": {
+    "hash": "58d7ce486826548e0373b5fe93f6116ca4a886cd47a2f0c5817563270864c656",
+    "modifiedAt": "2026-10-12T13:06:37.517Z"
+  },
+  "design/fonti/giro-1/verifiche/build.log": {
+    "hash": "e4846db5f0d4cb5d244787ee057087919f1d682bac90abd7a3e9bcacc0ee51b2",
+    "modifiedAt": "2026-10-12T13:16:47.680Z"
+  },
+  "design/fonti/giro-1/verifiche/c-1280-dark-aperto.png": {
+    "hash": "a7d0a94bd3c884ca9a7f29e05cc744138cd38061d3f2b21169e8617f479f5ce6",
+    "modifiedAt": "2026-10-12T13:06:03.149Z"
+  },
+  "design/fonti/giro-1/verifiche/c-1280-dark-chiuso.png": {
+    "hash": "ebe50386372f99bf01afc898f20a6d7952f18cb6d1a99c384023cda516997750",
+    "modifiedAt": "2026-10-12T13:06:02.926Z"
+  },
+  "design/fonti/giro-1/verifiche/c-1280-light-aperto.png": {
+    "hash": "a6f675879fbbd80a2c84fd864fe9ac8013804e8f74390a5b859da89f50d9be3d",
+    "modifiedAt": "2026-10-12T13:06:01.543Z"
+  },
+  "design/fonti/giro-1/verifiche/c-1280-light-chiuso.png": {
+    "hash": "4560a98dcac9fe82216497e49287f09bd3a23c802965265cfea86332df79284b",
+    "modifiedAt": "2026-10-12T13:06:01.342Z"
+  },
+  "design/fonti/giro-1/verifiche/c-375-dark-aperto.png": {
+    "hash": "76f9ec71a3befe3d5e6a7ad2c54e6991f6a5a4e0eead90d43b504565ba0fff10",
+    "modifiedAt": "2026-10-12T13:06:02.371Z"
+  },
+  "design/fonti/giro-1/verifiche/c-375-dark-chiuso.png": {
+    "hash": "3165caf41a71a1c4e5db7ec226724799d843ac38964b3fd481611399a4ebddc2",
+    "modifiedAt": "2026-10-12T13:06:02.264Z"
+  },
+  "design/fonti/giro-1/verifiche/c-375-light-aperto.png": {
+    "hash": "c14f8f060720f782a345cc18083030ba156ea2fc5d65f3b3edb3a9b733df2bcf",
+    "modifiedAt": "2026-10-12T13:06:00.756Z"
+  },
+  "design/fonti/giro-1/verifiche/c-375-light-chiuso.png": {
+    "hash": "1daa157a4fb7b1d5a07ebd73ee70ab64a40a8e949053ec4c142d7dcf4e9b83cf",
+    "modifiedAt": "2026-10-12T13:06:00.651Z"
+  },
+  "design/fonti/giro-1/verifiche/c-390-dark-aperto.png": {
+    "hash": "bf14d8c37000fa01112605be8187aa9c96ec391f81a0778dd585ee500eb7195b",
+    "modifiedAt": "2026-10-12T13:06:02.738Z"
+  },
+  "design/fonti/giro-1/verifiche/c-390-dark-chiuso.png": {
+    "hash": "20ef292bfb804b927569347fc5866764e3e6f4480c84fb732ed49734a5f47ec8",
+    "modifiedAt": "2026-10-12T13:06:02.546Z"
+  },
+  "design/fonti/giro-1/verifiche/c-390-dark-pannello.png": {
+    "hash": "309c10df46156acac3e8c36982c0023ead8a4580317100fe976bb493c3b3cc88",
+    "modifiedAt": "2026-10-12T13:06:45.927Z"
+  },
+  "design/fonti/giro-1/verifiche/c-390-light-aperto.png": {
+    "hash": "4ec7c3626f143ea8b685512f336865c4911fe617c01061e849c2acb733372a26",
+    "modifiedAt": "2026-10-12T13:06:01.159Z"
+  },
+  "design/fonti/giro-1/verifiche/c-390-light-chiuso.png": {
+    "hash": "4993865a81463f60420b635bbf936daa5cb9168efd038d1a8fdde76d7bce4887",
+    "modifiedAt": "2026-10-12T13:06:00.953Z"
+  },
+  "design/fonti/giro-1/verifiche/c-390-light-pannello.png": {
+    "hash": "5b3b581d8bda6a6e660c4a085df84b9b573d39c491c7e1febd9a64d0f1e00246",
+    "modifiedAt": "2026-10-12T13:06:42.928Z"
+  },
+  "design/fonti/giro-1/verifiche/check-links.log": {
+    "hash": "cf5ebdd4629305be2154a4b251b9d3db7080c775dd362becc00b0b5b42cc3f1d",
+    "modifiedAt": "2026-10-12T12:51:51.955Z"
+  },
+  "design/fonti/giro-1/verifiche/confronto-telefono-dark.png": {
+    "hash": "f62cdf8932608f8c3549824f1d13547526185f4ccc18f736c16f8b4ff45e36b9",
+    "modifiedAt": "2026-10-12T13:06:53.373Z"
+  },
+  "design/fonti/giro-1/verifiche/confronto-telefono-light.png": {
+    "hash": "fada13f958efc92273d2315d348cdaa8af8632000e4bec6507648091f35ddd02",
+    "modifiedAt": "2026-10-12T13:06:53.325Z"
+  },
+  "design/fonti/giro-1/verifiche/conservazione.json": {
+    "hash": "ffc892f1bbb48deba0f10355b62b5abe3e621d2cbb4a1c818934d56dafae1114",
+    "modifiedAt": "2026-10-12T13:06:54.073Z"
+  },
+  "design/fonti/giro-1/verifiche/d-1280-dark-aperto.png": {
+    "hash": "9873a3fa6bce4523b59e7e8ce6c01ba484a71880a457c2a24b5f06a014db9f9b",
+    "modifiedAt": "2026-10-12T13:06:16.020Z"
+  },
+  "design/fonti/giro-1/verifiche/d-1280-dark-chiuso.png": {
+    "hash": "687bc0d484be2ef6d2430f304018f7ba3d244a00ac6f640d205acd89ea570a2a",
+    "modifiedAt": "2026-10-12T13:06:15.819Z"
+  },
+  "design/fonti/giro-1/verifiche/d-1280-light-aperto.png": {
+    "hash": "6c8825922022e80191282e9bc6fd61e2f130dbf8c3d140f5d54488d728ae6d35",
+    "modifiedAt": "2026-10-12T13:06:14.418Z"
+  },
+  "design/fonti/giro-1/verifiche/d-1280-light-chiuso.png": {
+    "hash": "c029a11605ea101d0802e4d5edfe499b657da9501028c95844f1c94b863b3f94",
+    "modifiedAt": "2026-10-12T13:06:14.212Z"
+  },
+  "design/fonti/giro-1/verifiche/d-375-dark-aperto.png": {
+    "hash": "0baf7ba65b4fccf1711b24dd411b63bca6bfa89cdaf4a1bd95824fdc2b493c5f",
+    "modifiedAt": "2026-10-12T13:06:15.233Z"
+  },
+  "design/fonti/giro-1/verifiche/d-375-dark-chiuso.png": {
+    "hash": "455722dbad2bdcf82e6840581af21375f96de7431f5376df49597f2f8365b634",
+    "modifiedAt": "2026-10-12T13:06:15.135Z"
+  },
+  "design/fonti/giro-1/verifiche/d-375-light-aperto.png": {
+    "hash": "6d7d94e2d5698bf6cb85a47c16f67b6575b710400deffdc965d966bf9429638d",
+    "modifiedAt": "2026-10-12T13:06:13.645Z"
+  },
+  "design/fonti/giro-1/verifiche/d-375-light-chiuso.png": {
+    "hash": "01b89dbd6caf4e3f60bd57301bc76660a7c25a970f8024f6db3458545cb59a1f",
+    "modifiedAt": "2026-10-12T13:06:13.541Z"
+  },
+  "design/fonti/giro-1/verifiche/d-390-dark-aperto.png": {
+    "hash": "1479fbc761cbce85b3ad178b5b1dbd6230c041368489dcd5103528eacce05a89",
+    "modifiedAt": "2026-10-12T13:06:15.634Z"
+  },
+  "design/fonti/giro-1/verifiche/d-390-dark-chiuso.png": {
+    "hash": "cfab69082a9b6982f1b41529ea766e514b860f85f0ce0dfcccd8ff92c5b3b350",
+    "modifiedAt": "2026-10-12T13:06:15.431Z"
+  },
+  "design/fonti/giro-1/verifiche/d-390-dark-pannello.png": {
+    "hash": "7faf126bdd8f8420886e63e1f8718269a82b95e3840bbcb856cacf7edfe99b2d",
+    "modifiedAt": "2026-10-12T13:06:51.305Z"
+  },
+  "design/fonti/giro-1/verifiche/d-390-light-aperto.png": {
+    "hash": "9416c159c66f59784093817c40a5933dd874a33ed70b517a3e870910f1f92045",
+    "modifiedAt": "2026-10-12T13:06:14.051Z"
+  },
+  "design/fonti/giro-1/verifiche/d-390-light-chiuso.png": {
+    "hash": "166cffa54c8d4d7094df03d864be8761b88f3f012bc2509c16aede0de57ce9f4",
+    "modifiedAt": "2026-10-12T13:06:13.834Z"
+  },
+  "design/fonti/giro-1/verifiche/d-390-light-pannello.png": {
+    "hash": "3118a6cbce9d51423d1fea84f9f282846805c9aabd97319b65260776a9cfa680",
+    "modifiedAt": "2026-10-12T13:06:48.617Z"
+  },
+  "design/fonti/giro-1/verifiche/lighthouse-a-dark.json": {
+    "hash": "25dbd6ed6d3a1e1f277b5b7143f43fdd297de879707fce8f4a1e3cd4afd93d78",
+    "modifiedAt": "2026-10-12T13:03:16.744Z"
+  },
+  "design/fonti/giro-1/verifiche/lighthouse-a-light.json": {
+    "hash": "d87cb169a6be70527346ff4308e2e2ae274946198c8a9ab288c9da20201bec72",
+    "modifiedAt": "2026-10-12T13:03:04.229Z"
+  },
+  "design/fonti/giro-1/verifiche/lighthouse-b-dark.json": {
+    "hash": "1f2c16753aef1aa5beb25e1ed32068e2c8a4cccbaead7263626347df8d3cb0e0",
+    "modifiedAt": "2026-10-12T13:03:41.936Z"
+  },
+  "design/fonti/giro-1/verifiche/lighthouse-b-light.json": {
+    "hash": "81baf90843c1ba42c8adf42d9267d0a5b46008b599198508f5eac69391fa9556",
+    "modifiedAt": "2026-10-12T13:03:29.173Z"
+  },
+  "design/fonti/giro-1/verifiche/lighthouse-c-dark.json": {
+    "hash": "46366f0eccdcc76c36c8d393709a57f2357ae5140f027ec15346ae38e1b6ab7b",
+    "modifiedAt": "2026-10-12T13:04:07.664Z"
+  },
+  "design/fonti/giro-1/verifiche/lighthouse-c-light.json": {
+    "hash": "495e89bc6c3e0ac0c16198e0803b04cee4c1d7084b636b140f8e80c31cce1cd5",
+    "modifiedAt": "2026-10-12T13:03:54.674Z"
+  },
+  "design/fonti/giro-1/verifiche/lighthouse-d-dark.json": {
+    "hash": "1c24b7d642584546716c72ec18e72f4afaef1520ec43d469c7315702967e3c49",
+    "modifiedAt": "2026-10-12T13:04:32.738Z"
+  },
+  "design/fonti/giro-1/verifiche/lighthouse-d-light.json": {
+    "hash": "c5df7dc67d63b1a0dd2e4479e43f9e3a24a9553d636892ba2b09373c28529d36",
+    "modifiedAt": "2026-10-12T13:04:20.336Z"
+  },
+  "design/fonti/giro-1/verifiche/lighthouse-riepilogo.json": {
+    "hash": "b727e8477b10e5fde04486413ffa4d1ea976e3bef071514f3efceb61881748c3",
+    "modifiedAt": "2026-10-12T13:04:35.743Z"
+  },
+  "design/fonti/giro-1/verifiche/note-finali.json": {
+    "hash": "c6bde7f9d2de110984e0202be3d365494c0946567c654899c312e47e089e5c07",
+    "modifiedAt": "2026-10-12T13:06:53.433Z"
+  },
+  "design/fonti/giro-1/verifiche/npm-test.log": {
+    "hash": "e1ac9fb382b8a0bd0712b415bf4a082822eadf51a233dc4b8bd4379e098360b3",
+    "modifiedAt": "2026-10-12T12:50:54.446Z"
+  },
+  "design/fonti/giro-1/verifiche/qa-finale.log": {
+    "hash": "b651cbf0f30e3142da79f6e3aab75fd7dd5b22d446bc0e8ec70bdab27c7062a7",
+    "modifiedAt": "2026-10-12T13:06:29.862Z"
+  },
+  "design/fonti/giro-1/verifiche/qa-riproduzione.log": {
+    "hash": "11d4b69659f8a4c1142d332badb15ae718a3d695c29c218caef436877473c4d0",
+    "modifiedAt": "2026-10-12T12:56:23.778Z"
+  },
+  "design/fonti/giro-1/verifiche/risultati.json": {
+    "hash": "7306b61cd07d10b003dab1c3cf769547c042a7bdc1aa1b5b7b62b5238fff953d",
+    "modifiedAt": "2026-10-12T13:06:29.660Z"
+  },
+  "design/home/a.html": {
+    "hash": "a0d524d33da1299e343ef681607900a9a2a0e4d711550b268461c14e3b6ab236",
+    "modifiedAt": "2026-10-07T11:39:33.071Z"
+  },
+  "design/home/b.html": {
+    "hash": "c972e0f6be531685564e0d7fee82dc62fb5f95cb4b652f95bb7fc0fd385a610a",
+    "modifiedAt": "2026-10-07T11:39:33.072Z"
+  },
+  "design/home/dati.json": {
+    "hash": "30f983fe4869d4441becb29e140bae61d50c4adf9587e55b32dab7b8e0d136c8",
+    "modifiedAt": "2026-10-07T11:39:33.072Z"
+  },
+  "design/home/dati.mjs": {
+    "hash": "4e80916663919c3d493af286c26947778bbf6eff685822e1d86ca740e44c691f",
+    "modifiedAt": "2026-10-07T11:39:33.073Z"
+  },
+  "design/home/genera.mjs": {
+    "hash": "ca474d1bfeebfd4e7d8a126007eca08d38836304588cc61b9f0fc8b4a0c97182",
+    "modifiedAt": "2026-10-07T11:39:33.073Z"
+  },
+  "design/home/immagini/confronto-chiaro.jpg": {
+    "hash": "90fcbbf2903925a4b5c686d99659b28e15b1e054916a5014d2dcbb7a2413f9a0",
+    "modifiedAt": "2026-10-07T11:39:33.077Z"
+  },
+  "design/home/immagini/confronto-scuro.jpg": {
+    "hash": "2e64904e258d012bece689cfd775cdb3b94cc6605b13f80351639eef14f6c0ec",
+    "modifiedAt": "2026-10-07T11:39:33.079Z"
+  },
+  "design/home/immagini/home-costruita-1.jpg": {
+    "hash": "e08e7b89b7fd5c246963a1e86c3d7f012a9da4c5a88f429a28a512860f5376c4",
+    "modifiedAt": "2026-10-07T11:39:33.082Z"
+  },
+  "design/home/immagini/home-costruita-2.jpg": {
+    "hash": "9506cb769b686234453b645969a7145504cf8614fc2bf959afd264e271956299",
+    "modifiedAt": "2026-10-07T11:39:33.084Z"
+  },
+  "design/home/proposta-a.html": {
+    "hash": "aacd412491a07507a7addb68287d6b07ca002b5531a48da54bb44a9027eb23f7",
+    "modifiedAt": "2026-10-07T11:39:33.099Z"
+  },
+  "design/home/proposta-b.html": {
+    "hash": "1f724a34e9dbc9e4074172013521b0d4413c66760889aa40c7e84f9da1bbba35",
+    "modifiedAt": "2026-10-07T11:39:33.106Z"
+  },
+  "design/home/servi.mjs": {
+    "hash": "1cae2fb4b24c8bc1997ed4cfb2471780f36e9b6a0f85f1c35fd7b81c936ea551",
+    "modifiedAt": "2026-10-07T11:39:33.106Z"
+  },
+  "design/home/telefono.html": {
+    "hash": "840b6dfaa63c4c6b0ea98c4e052bb2328cd027e93f6f72e231d2a30bb4aa9e31",
+    "modifiedAt": "2026-10-07T11:39:33.107Z"
+  },
+  "design/home-napoli/anteprima-error.log": {
+    "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "modifiedAt": "2026-10-10T17:27:16.843Z"
+  },
+  "design/home-napoli/anteprima-output.log": {
+    "hash": "de13d36eec626fcd6b4c17d26d1a3c1012c6e954d62da2afe18bf660361617b2",
+    "modifiedAt": "2026-10-11T08:02:36.719Z"
+  },
+  "design/home-napoli/commit-messaggio.txt": {
+    "hash": "81afad9bf9b753a6b670f472cf8f9bf5019ea4e2def33bac83d36a56262ac456",
+    "modifiedAt": "2026-10-10T22:30:49.137Z"
+  },
+  "design/home-napoli/lighthouse-a-light.json": {
+    "hash": "ac634e43d0cee1904095486d3ac595f46adfc5421b4523edca3f82dab1817039",
+    "modifiedAt": "2026-10-09T22:49:10.922Z"
+  },
+  "design/home-napoli/progetto-build.log": {
+    "hash": "ae6a0e296e5e28115c4b317948fdd61120aee46d663510a244b433b0a51619b1",
+    "modifiedAt": "2026-10-10T23:12:37.379Z"
+  },
+  "design/home-napoli/progetto-check-links.log": {
+    "hash": "a24f0f11bcaceee7d86e3275975419f1fd0abb1aa38eaccda78da8743d5f36a0",
+    "modifiedAt": "2026-10-10T23:12:37.868Z"
+  },
+  "design/home-napoli/progetto-test.log": {
+    "hash": "470384794f2b9b56e269d9529e9edb967039b3fb0639f43dae8d0720cfcd1bb1",
+    "modifiedAt": "2026-10-10T23:11:20.001Z"
+  },
+  "design/home-napoli/rapporti/a3-indice.jpg": {
+    "hash": "4bddc14425b852185fef65311bef505e90c31924269ec9862e532731b56ebf86",
+    "modifiedAt": "2026-10-10T22:20:14.929Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-a-dark.json": {
+    "hash": "2f8d4617a2048327a0c36b8e69ef150ab5136012fac0b1bb9fde86df732dd61e",
+    "modifiedAt": "2026-10-09T23:30:00.949Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-a-light.json": {
+    "hash": "a760708a749f1c77c48ef5079fc6ebbfaef4cbf79ccaabcdd1f82ab0a4206166",
+    "modifiedAt": "2026-10-09T23:29:48.644Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-a2-dark.json": {
+    "hash": "d4cae83b1444119c2d9715da6722163fdc9718d312f74cd4cf838df78cfb71b7",
+    "modifiedAt": "2026-10-10T18:31:27.940Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-a2-light.json": {
+    "hash": "a6782462c1003169dee61bea002b82e2baa57e54388e68d4601f5e4fca9b49ba",
+    "modifiedAt": "2026-10-10T18:31:15.924Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-a3-dark.json": {
+    "hash": "c011cf5e5c81b1cd85907991c80ee972e346c96cc59f84d0cb72876b283035c1",
+    "modifiedAt": "2026-10-10T22:22:14.937Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-a3-light.json": {
+    "hash": "e27246c70e4c49e6d9a0fa55c2e35b81db2d4d80e3ac4f9f52cc048984f39fed",
+    "modifiedAt": "2026-10-10T22:22:02.481Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-b-dark.json": {
+    "hash": "24103a6c7a4012e1cb11d5c438d68a0c6fc289ab36c7ce6bb0980026b623b7fb",
+    "modifiedAt": "2026-10-09T23:30:26.145Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-b-light.json": {
+    "hash": "45d5f1ccecbaee9f0d53a605a99476a68bc55c9d1377a50399294c1e7f83759d",
+    "modifiedAt": "2026-10-09T23:30:13.476Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-b2-dark.json": {
+    "hash": "2fead5106464f97a8c7eccad855726059131055658de730558b6c3eb56c8305b",
+    "modifiedAt": "2026-10-10T18:31:51.868Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-b2-light.json": {
+    "hash": "97116f53bc5ffad2357e1c968910376fb70cdee64ee4490443c221b047003b57",
+    "modifiedAt": "2026-10-10T18:31:40.016Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-b3-dark.json": {
+    "hash": "9cdf8b9d24c9910758b106641e8dc5514a6b85f8688335d1d981f2b3c256aefb",
+    "modifiedAt": "2026-10-10T22:22:39.957Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-b3-light.json": {
+    "hash": "eb30013135bfc0b261fad07e2b712dbfe9dab0b360c21808ea6f0039529e8a08",
+    "modifiedAt": "2026-10-10T22:22:27.449Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-c-dark.json": {
+    "hash": "318e01dbbf28dbc1bcfcebb4ad1cdce237639252ba7ae8e833104a8513778880",
+    "modifiedAt": "2026-10-09T23:39:39.940Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-c-light.json": {
+    "hash": "f8c72ad73e57d5616cdf12a1bc60ded14874c9cd8d6503ca201ed4782bccd414",
+    "modifiedAt": "2026-10-09T23:38:25.093Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-d-dark.json": {
+    "hash": "3b26111bdd31442fbd351b4afe832d69eae64ac14c6ac9112b6a0d8d6a9a3f61",
+    "modifiedAt": "2026-10-09T23:43:34.839Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-d-light.json": {
+    "hash": "ba7b5def74136fd52bcf7df3ff885a670e48f182c034f169323a19bada3787f9",
+    "modifiedAt": "2026-10-09T23:43:22.059Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-e-dark.json": {
+    "hash": "8efe5eab53c2befa3e3ee478f54aa0f72b8fea4ae33387f98cba1f5ca20c79c1",
+    "modifiedAt": "2026-10-09T23:31:41.414Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-e-light.json": {
+    "hash": "e9ab5ee8a468129462cf70ea63859a4879dce3c4036ff3bdf4a1991e78bf71f6",
+    "modifiedAt": "2026-10-09T23:31:29.106Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-f-dark.json": {
+    "hash": "42e46d479eacb0484d4b50539bef336eaffd62318528330cd7165a7d1d661762",
+    "modifiedAt": "2026-10-09T23:32:06.577Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-f-light.json": {
+    "hash": "65489dde32ca5be9c6292036e0c505e53f5afafbcc6fecbd3feb7c9eead46adb",
+    "modifiedAt": "2026-10-09T23:31:53.885Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-g-dark.json": {
+    "hash": "3a87787d9dafa0a5cd7aed9ea3f456cdf712a1641bd47883e79a0a3c150cf377",
+    "modifiedAt": "2026-10-09T23:47:17.174Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-g-light.json": {
+    "hash": "48fcd28053e925624480ca885766cb3275b924c9400bac71a913cee0397c95c6",
+    "modifiedAt": "2026-10-09T23:45:21.686Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-h-dark.json": {
+    "hash": "8b84921b49161cb52dd28908835de73d9799db9d18be1e392d549b06b11c9a28",
+    "modifiedAt": "2026-10-09T23:32:55.837Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-h-light.json": {
+    "hash": "9b321e2436486ff1c09eefc5f96a5810049fbc6c349c00d3b031bffe429749ce",
+    "modifiedAt": "2026-10-09T23:32:43.579Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-i-dark.json": {
+    "hash": "4809f046762436bafa7ff633fabe499ba50d653af9590f1a6b0c4383d5a89c3d",
+    "modifiedAt": "2026-10-10T15:39:50.246Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-i-light.json": {
+    "hash": "87866571c4760b1ceb6e90735b903b6338e51b31d42fa193c0adba02b1946e07",
+    "modifiedAt": "2026-10-10T15:39:37.560Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-j-dark.json": {
+    "hash": "5e4ccaad9376736fd30a34ebb42301a8dac6f84da2f9e06c56411d8c875708aa",
+    "modifiedAt": "2026-10-10T15:40:18.663Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-j-light.json": {
+    "hash": "e7826e9a9bf50e002490f58f54fafacf8c84ec46661384ebf2e3af63b2dca9e0",
+    "modifiedAt": "2026-10-10T15:40:03.707Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-k-dark.json": {
+    "hash": "67418c56c61e2acc99993eddea6c6b3cabd937252039b6d23361864ce08f46ea",
+    "modifiedAt": "2026-10-10T15:40:48.519Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-k-light.json": {
+    "hash": "b82320dcd68bd60f4cae4c19cc0fcca1fba6579bbc7ee9906a5c6489bb4ef6b9",
+    "modifiedAt": "2026-10-10T15:40:33.879Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-l-dark.json": {
+    "hash": "5866277a72c9ab41dc5f297d02322b5a1dd954e9db676211f18ee75a8c6737ee",
+    "modifiedAt": "2026-10-10T15:41:16.226Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-l-light.json": {
+    "hash": "6191af16c243577315d906ce4e45f4c52178c0125fe22a097e3e1a081f09a102",
+    "modifiedAt": "2026-10-10T15:41:02.827Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-m-dark.json": {
+    "hash": "e172243f8c70c94853c83db5bcee64078a6214dd6bedec8f5c7a71d7a92bb2a7",
+    "modifiedAt": "2026-10-10T15:41:41.838Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-m-light.json": {
+    "hash": "7e01ac3aec0755eb3eb8ba7d817873d23cea26707c7ae9e37b867f4e43ba47aa",
+    "modifiedAt": "2026-10-10T15:41:28.948Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-n-dark.json": {
+    "hash": "36afe8f572f36e8a8eb86fd3a70579817fdceb473076c40c12121c53697cc3e0",
+    "modifiedAt": "2026-10-10T15:42:07.764Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-n-light.json": {
+    "hash": "8761efb2acb6caf54aee2b06ce6fd5a84a207122821557f6f9eefdb4cbe05dc0",
+    "modifiedAt": "2026-10-10T15:41:54.882Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-o-dark.json": {
+    "hash": "f0d17cfd4e690b237f01c47c07e7b3b917a477c2226fd78d3c5720aa95f24198",
+    "modifiedAt": "2026-10-10T17:39:28.375Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-o-light.json": {
+    "hash": "9359089e3cd8e2e87896e8f504d43d8b16efd719a09b807200155a447b31e5b0",
+    "modifiedAt": "2026-10-10T17:39:16.292Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-o2-dark.json": {
+    "hash": "07ae4c49919f56cd5940faba948b7d1a759dd34407200233fed0b39ded668d88",
+    "modifiedAt": "2026-10-10T18:31:04.056Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-o2-light.json": {
+    "hash": "f7e56c11f1af49c873523147371a53d3e47e2dc1d667a4a0fdebc47babd51f5a",
+    "modifiedAt": "2026-10-10T18:30:52.153Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-o3-dark.json": {
+    "hash": "2b009d420cf2c5a1d280376240b04662a8bac358cd41b371943975e195b521fa",
+    "modifiedAt": "2026-10-10T22:21:50.025Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-o3-light.json": {
+    "hash": "2b63b37bc847a130fff091a1c4bd83aeb9cf7b3a2c46dda6e347d5f529139d48",
+    "modifiedAt": "2026-10-10T22:21:37.790Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-o4-dark.json": {
+    "hash": "bca715d3afddec08476b5592afd14a80cad2a4a48c27b3062d782b4c4086a59b",
+    "modifiedAt": "2026-10-10T23:16:42.738Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-o4-light.json": {
+    "hash": "a3bfd830b64e0c858c1cc85ec065f40fa2e1e8032ff509568b113fbeaef84be1",
+    "modifiedAt": "2026-10-10T23:16:29.581Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-p-dark.json": {
+    "hash": "193e439d5921a0ec7b33bf22b4df96f62780616874535b3a7b60268ed867f439",
+    "modifiedAt": "2026-10-10T17:40:16.686Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-p-light.json": {
+    "hash": "126ea79b22b66b46de7b6891f372a1abd23dbb4070afce68dcf6daba279acc6c",
+    "modifiedAt": "2026-10-10T17:39:40.902Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-q-dark.json": {
+    "hash": "195264ad5be6da8588fad00fc9f3f78223838401524f62c88d2d41805a899987",
+    "modifiedAt": "2026-10-10T17:40:40.219Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-q-light.json": {
+    "hash": "96d7dd7d0a710cb7a405f51e5db709dc1edd047f763e70081c62fcb13856495e",
+    "modifiedAt": "2026-10-10T17:40:28.466Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-r-dark.json": {
+    "hash": "ce3fc1bb0e86238211ba8253bb3aba357e9e53a637760e6d04f6869fdb00bfb5",
+    "modifiedAt": "2026-10-10T17:44:17.633Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-r-light.json": {
+    "hash": "400d2319ee3df44776d37ab4bbc19304afcc1ab524209b6ff6984a66f75704b9",
+    "modifiedAt": "2026-10-10T17:44:05.667Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-s-dark.json": {
+    "hash": "6b5dc5a6be0bbe4a484b40537a17bbe226a8ae492853751104036fc5b5247da1",
+    "modifiedAt": "2026-10-10T17:41:27.343Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-s-light.json": {
+    "hash": "c7ff3951dde78a77fb60fbf01a587d24841e175cf0641938624b655fff2915f9",
+    "modifiedAt": "2026-10-10T17:41:15.393Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-t-dark.json": {
+    "hash": "34cee0ec9042bc3a8fdee1ccc0b16fc6492d21793de51e1599cbb27c08a99b7e",
+    "modifiedAt": "2026-10-10T17:41:51.004Z"
+  },
+  "design/home-napoli/rapporti/lighthouse-t-light.json": {
+    "hash": "9c312247c06cc52b67e293a51ac97d254f435c3b759ae56071b5ee0939b20b47",
+    "modifiedAt": "2026-10-10T17:41:39.137Z"
+  },
+  "design/home-napoli/rapporti/o4-zoom.jpg": {
+    "hash": "6dd329b29df23eb2230ec6170b1686fe1ccfee39892410fdf612f5bd79dafb0a",
+    "modifiedAt": "2026-10-10T23:16:06.336Z"
+  },
+  "design/home-napoli/rapporti/primo-giro-5.json": {
+    "hash": "88f3d4d423ab52504db7235a73cda2a7fb300561389f9a787d38e24e0da79e76",
+    "modifiedAt": "2026-10-10T22:17:13.481Z"
+  },
+  "design/home-napoli/rapporti/ux1280.jpg": {
+    "hash": "c8e9ff001c5ed54fde8dca4f1541f91df5f5e3fe90de6f0a9da2ad3d15f9599a",
+    "modifiedAt": "2026-10-10T22:19:45.583Z"
+  },
+  "design/home-napoli/rapporti/ux375.jpg": {
+    "hash": "47ab626c2448bc6d6c0940c014b2412bf43eabf844b87f0d944d6e916de6b334",
+    "modifiedAt": "2026-10-10T22:19:45.540Z"
+  },
+  "design/home-napoli/rapporti/verifiche-giro-4-prima-contrasto.json": {
+    "hash": "5c21499e4a479ddd033ff16f95b3696b4194c43cbcd116a3b385b39da919da18",
+    "modifiedAt": "2026-10-10T18:27:07.417Z"
+  },
+  "design/home-napoli/verifica.log": {
+    "hash": "25d58fef64753061e260271d3f9455466323a61438d23ec8438c18887a823034",
+    "modifiedAt": "2026-10-09T22:49:00.323Z"
+  },
+  "design/ispirazioni/mudd-1-apertura.jpg": {
+    "hash": "eaef7a565714e033a339e6b398a27943d799de9b6810bb061657f82f67dbe3e0",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/ispirazioni/mudd-2-schede-e-informazioni.jpg": {
+    "hash": "11434e3f8b88f6b75c860dbabfabeb7cc2680ccad8b12c3a5f32e335ab19f1eb",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/ispirazioni/mudd-3-immagine-a-rombo.jpg": {
+    "hash": "8eb7f575b31b60548eb005f2942881b759a949a291e843303cc1767c9d45ee51",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/ispirazioni/mudd-4-immagine-a-infinito.jpg": {
+    "hash": "2a724b503766495846933dd1ec2cc6c800589b4d76d66e8308690b92705f13e2",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/ispirazioni/mudd-5-rombo-su-mappa.jpg": {
+    "hash": "5a0e3677350b2fb423bdaebfc24a0231bec7788962a2e719247f59cb893af73b",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/ispirazioni/mudd-6-elenco-a-fisarmonica.jpg": {
+    "hash": "69d8378b4c45e58b53d80dd7abe40c2a21c058119704ce74ba33d60a7af91e67",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/ispirazioni/README.md": {
+    "hash": "65894190d7173b6f461e4d01d41d39e83b02fe312dcb9db534b40be5d98b134d",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/itinerari/foto.cjs": {
+    "hash": "47f424a8399ff7a2de0156d74d018d9688f1bfa11b7d799bd91f02e77213fcbb",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/itinerari/genera.mjs": {
+    "hash": "3d8b646fd3b03f35d2a1ef7cbdf030bb533cb0512313f7954aeed42123f5b75a",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/itinerari/percorsi.json": {
+    "hash": "6d1e8b4e884225c2764056d262d30a953843e1e28b3463ffb693f4f9faae86dd",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/itinerari/proposta-a.html": {
+    "hash": "1c555d7b8b49fb7f62e33556c0c21e8b850a715560f9a7c67b6982061f583acc",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/itinerari/proposta-b.html": {
+    "hash": "2c4083d204ea728e0681db58d41f14e51ba1acc7e3ad137515733e1ac13b0553",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "design/logo/genera-marchio.mjs": {
+    "hash": "9a6af39f97e7fd6bb85d3708f7f50e89c95a1f8ccd714493e71a0c658d312989",
+    "modifiedAt": "2026-10-07T11:39:33.108Z"
+  },
+  "design/logo/genera.mjs": {
+    "hash": "d5a7acc920b23c71d7bd9f2eee346717ecb937fa3436ffb7efa7475ce3043c9d",
+    "modifiedAt": "2026-10-07T11:39:33.108Z"
+  },
+  "design/logo/immagini/loghi-2.jpg": {
+    "hash": "5db5ce8bcf63cee520e14a9c7f58295e2968bac1591664ecd3535a92f20e37b3",
+    "modifiedAt": "2026-10-07T11:39:33.109Z"
+  },
+  "design/logo/immagini/loghi-3.jpg": {
+    "hash": "657995039dc5987fd73e486a9c959d252232eeb2bf0f40ab97c3da92a257e8fe",
+    "modifiedAt": "2026-10-07T11:39:33.111Z"
+  },
+  "design/logo/immagini/loghi-4-colori.jpg": {
+    "hash": "feb3131baab57c8a3c5124201f7a4425adf1a3a0604547b534a68a8118abbbd5",
+    "modifiedAt": "2026-10-07T11:39:33.112Z"
+  },
+  "design/logo/immagini/loghi-5.jpg": {
+    "hash": "b24fbd6cd7f6650806c5e6db6a6e16af0ce640d77d6df7dcc2babbf67029eb55",
+    "modifiedAt": "2026-10-07T11:39:33.114Z"
+  },
+  "design/logo/immagini/loghi-6.jpg": {
+    "hash": "a3c53f8f0b2c9ce9c7f4377cfe7ffd68464b84eee7d2fc5a02eb3c588524ffbb",
+    "modifiedAt": "2026-10-07T11:39:33.115Z"
+  },
+  "design/logo/immagini/loghi-7.jpg": {
+    "hash": "fc80a85b2216c8bc8a6fb13d02ac80fec263b3d1a7fa38b55a841ec791a06372",
+    "modifiedAt": "2026-10-07T11:39:33.119Z"
+  },
+  "design/logo/immagini/loghi-chiaro.jpg": {
+    "hash": "531d07d3f66301748605439c88bfbe8beebb8c1608486cb32eb2561e41425b06",
+    "modifiedAt": "2026-10-07T11:39:33.121Z"
+  },
+  "design/logo/loghi-2.html": {
+    "hash": "74c1ffba4cfbb89b38c587e46781f224732fffed28f148f65cbbc64f9012a908",
+    "modifiedAt": "2026-10-07T11:39:33.122Z"
+  },
+  "design/logo/loghi-3-pagina.html": {
+    "hash": "ff69628e63592ded9be8590b14ec89f235e98fa7607ecd803b8537d822978d02",
+    "modifiedAt": "2026-10-07T11:39:33.124Z"
+  },
+  "design/logo/loghi-3.html": {
+    "hash": "fa3add0395a7bcb5b0fd94ff3f546046315ea7e19b838f5f8a3ad4ee8ac61af5",
+    "modifiedAt": "2026-10-07T11:39:33.124Z"
+  },
+  "design/logo/loghi-4-pagina.html": {
+    "hash": "2f27e72db81cd71a9988f40dd92a476618ec811e0a76ac5db727352083339600",
+    "modifiedAt": "2026-10-07T11:39:33.124Z"
+  },
+  "design/logo/loghi-4.html": {
+    "hash": "e486050370b2188253e33b7be08f91439459def2f6acc5492e8bb2e9a1618a05",
+    "modifiedAt": "2026-10-07T11:39:33.126Z"
+  },
+  "design/logo/loghi-5-pagina.html": {
+    "hash": "dbeb4d7511691fa0b7d22109bdc0124cb2ff3b856a382e7953a01ebe6a07616f",
+    "modifiedAt": "2026-10-07T11:39:33.126Z"
+  },
+  "design/logo/loghi-5.html": {
+    "hash": "9afdeb827d8ad4ad3358a209da2b5b8fafbfc7a5c62170f37d9afedcccb65495",
+    "modifiedAt": "2026-10-07T11:39:33.126Z"
+  },
+  "design/logo/loghi-6.html": {
+    "hash": "6754159be9a4d84547f3c87292968668440a5e7ffa0fa62a388e27bb0f14b1a1",
+    "modifiedAt": "2026-10-07T11:39:33.127Z"
+  },
+  "design/logo/loghi-7-pagina.html": {
+    "hash": "894be9891a77af9229edc51f6b4ddd6d6f36fdb09212983573fbedc8a5d556ff",
+    "modifiedAt": "2026-10-07T11:39:33.127Z"
+  },
+  "design/logo/loghi-7.html": {
+    "hash": "af7d9850ada27c34be3107a51c0a88104c6faacaba956d8a6f88e614c23608d0",
+    "modifiedAt": "2026-10-07T11:39:33.128Z"
+  },
+  "design/logo/loghi-pagina.html": {
+    "hash": "6012dd91f15f332db76bed286cfbbcd1c4588affefc44ba33aaaa6150252e872",
+    "modifiedAt": "2026-10-07T11:39:33.129Z"
+  },
+  "design/logo/loghi.html": {
+    "hash": "2a68626b8c2aed7392413e38413626483c232458b7ef413fe724cd8434574980",
+    "modifiedAt": "2026-10-07T11:39:33.129Z"
+  },
+  "design/logo/marchio.mjs": {
+    "hash": "70774b12daade422d1027b3b21db6b4e699704222123ea4bbe3938d6f5c00a14",
+    "modifiedAt": "2026-10-07T11:39:33.130Z"
+  },
+  "design/logo/README.md": {
+    "hash": "c9502d225ab8e2d134656dd23c6b5898b94ffd1fbb5e63b1e9710160601b493c",
+    "modifiedAt": "2026-10-07T11:39:33.107Z"
+  },
+  "design/logo/scelto/icona-16.png": {
+    "hash": "e1f31bcda444e5f9ab686addecb32a38c75e5df163be7244bd5684c3bce70f89",
+    "modifiedAt": "2026-10-07T11:39:33.130Z"
+  },
+  "design/logo/scelto/icona-180.png": {
+    "hash": "1d97bd8f024a38d084ea1b50cb18f1dd6c63c238b517358eaed38eb2dc60016b",
+    "modifiedAt": "2026-10-07T11:39:33.130Z"
+  },
+  "design/logo/scelto/icona-192.png": {
+    "hash": "a8bb4a45969b07e736b2d65e4becf57e6d121d10c42d48b9e322974229f28b2a",
+    "modifiedAt": "2026-10-07T11:39:33.131Z"
+  },
+  "design/logo/scelto/icona-32.png": {
+    "hash": "4d5a440758e1c19e3c4b4d246b604eff95d964e5dcfd4b3840e0f6e53fa3ba40",
+    "modifiedAt": "2026-10-07T11:39:33.131Z"
+  },
+  "design/logo/scelto/icona-48.png": {
+    "hash": "8a8be192f59cd04a1bef2f5c54940241a47b979b2990066f5fc3e679e9354963",
+    "modifiedAt": "2026-10-07T11:39:33.132Z"
+  },
+  "design/logo/scelto/icona-512.png": {
+    "hash": "1def0d506c725da40b4f4e1e34257efdca1707090a5f70bb0092a2539bcc4452",
+    "modifiedAt": "2026-10-07T11:39:33.132Z"
+  },
+  "design/logo/scelto/icona-quadrata.svg": {
+    "hash": "36c227448ea6157a2bf097af3283d1a17f2a252dfaa107db5175b5422213542a",
+    "modifiedAt": "2026-10-07T11:39:33.133Z"
+  },
+  "design/logo/scelto/icona.svg": {
+    "hash": "28d5315742ae376e1c7efb1f9ad00b7676401f58bba2c979b8b27bfec6de9f8a",
+    "modifiedAt": "2026-10-07T11:39:33.133Z"
+  },
+  "design/logo/scelto/segno-chiaro.svg": {
+    "hash": "06a00b7ddb06cd57ea8d9d090c3c58ba47c68133a54c51ef4b4cd52cf416dbbc",
+    "modifiedAt": "2026-10-07T11:39:33.133Z"
+  },
+  "design/logo/scelto/segno-foto.svg": {
+    "hash": "75c0d3ad167d3f3b18e3398ee27d9f1820ac67313139b79412b6ee94dd270c0a",
+    "modifiedAt": "2026-10-07T11:39:33.134Z"
+  },
+  "design/logo/scelto/segno-scuro.svg": {
+    "hash": "b97d8520101081dd0cf463aff254c2c32bbdd7e4d56862b854b94c870eebb2c4",
+    "modifiedAt": "2026-10-07T11:39:33.136Z"
+  }
+}

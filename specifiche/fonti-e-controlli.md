@@ -4,6 +4,8 @@ _Specifica approvata da Enrico il 12/10/2026. Blocco 2 autorizzato: verifiche pr
 
 _Seguito del 12/10/2026: Enrico approva la bozza dei testi e autorizza il solo Blocco 3. [Quattro proposte isolate](../design/fonti/giro-1/README.md) e [verifiche](../docs/storico/2026-10-12-fonti-blocco-3.md) preparate localmente; scelta ancora da ricevere. La pagina generale `/fonti/` resta successiva._
 
+_Rifinitura successiva autorizzata il 12/10/2026: [secondo giro delle quattro alternative](../design/fonti/giro-2/README.md), con ricerca locale e sintesi del campione già documentato. [Esiti](../docs/storico/2026-10-12-fonti-giro-2.md). Nessuna nuova verifica generale delle 195 fonti o integrazione; primo giro conservato, scelta ancora da ricevere._
+
 ## Obiettivo e problema
 
 Chi legge un itinerario deve poter verificare un'informazione aprendo le fonti in fondo alla pagina e toccando il documento originale. All'inizio del Blocco 1 gli elenchi interamente aperti arrivavano a 185 fonti negli itinerari e 84 in Dove mangiare; il registro generale comprendeva anche fonti dell'evento ereditato da Napoli a Vela. Nel Blocco 2 i documenti delle regate sono stati esclusi, ma resta da costruire il componente compatto. Non basta cambiare il testo introduttivo: servono criteri di pertinenza, collegamenti precisi e un componente comune.

@@ -1,0 +1,82 @@
+[
+  {
+    "key": "a",
+    "theme": "light",
+    "performance": 99,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1805.3118,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "a",
+    "theme": "dark",
+    "performance": 99,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1805.4721,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "b",
+    "theme": "light",
+    "performance": 99,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1804.4353,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "b",
+    "theme": "dark",
+    "performance": 99,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1803.8565,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "c",
+    "theme": "light",
+    "performance": 100,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1805.1528,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "c",
+    "theme": "dark",
+    "performance": 99,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1803.7221,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "d",
+    "theme": "light",
+    "performance": 99,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1803.0661,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "d",
+    "theme": "dark",
+    "performance": 100,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1770.1788999999999,
+    "cls": 0,
+    "warnings": []
+  }
+]
