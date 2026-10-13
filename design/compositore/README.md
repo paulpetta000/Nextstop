@@ -8,6 +8,24 @@ caratteri del sito. Regola di Enrico: 4 proposte molto diverse per pezzo, si ite
 Specifica §2 e §5. Le 4 proposte vivono dentro le due viste scelte nel pezzo 1 (C «Mappa prima» e D «Le pagine»): nella striscia
 in alto si sceglie la proposta (1-4) e la vista (C o D). Cartella `scheda-giro-1/` (`app.js`, `stile.css` del pezzo 1, `pezzo2.css`).
 
+## Giro 2 (13/10/2026) · https://claude.ai/artifact/Sdp8yvNnR36Di763TcZdR6
+**Scelta di Enrico sul giro 1**: la scheda si apre come nella 1 (il foglio); «visitata» nella giornata come nella 1 (la porta con il
+numero, senza aprire la scheda); spostare e togliere come nella 1 (maniglia; nella scheda «Sposta nel giorno 2» e «Togli»). Dentro la
+scheda niente rettangolo «Da visitare»: un **timbro tondo sul bordo della foto**, come il sigillo della 3, con la foto a tutta larghezza.
+Una pagina sola (cartella `scheda-giro-2/`, nata da `prove/ritocca-giro2.cjs`); in alto si sceglie il timbro (1-3) e la vista:
+- **Timbro 1 · il sigillo**: cerchio con il bordo a trattini, che diventa pieno; dentro la soglia che si chiude e «visitata».
+- **Timbro 2 · il timbro postale**: giro di parole «Napoli · Nextstop», appena accennato da visitare; visitata si stampa con il giorno («13 ott»).
+- **Timbro 3 · la medaglia del marchio**: si riempie di blu notte (ambra scuro in tema scuro) dal centro e le soglie si chiudono.
+
+Altre richieste: **«C'è un ordine più corto»** come nel prototipo di oggi (`ordinePiuCorto` del sito: almeno 3 tappe e 5 minuti in meno,
+la prima tappa resta) ma nello stile nuovo: in C un riquadro bordato sopra le tappe, in D un foglietto come le cartoline; «Usa questo
+ordine» (con «Annulla») o «Lascia così» (resta nascosto finché l'ordine non cambia). **Barra del tempo in tema chiaro** senza blu notte
+né nero: visite in pervinca chiaro (D celeste maiolica), cammino blu, pause verde (D terracotta).
+Controlli: axe pulito (48 controlli: 3 timbri, C e D, telefono e computer, chiaro e scuro, scheda aperta); nessuno scorrimento di lato a
+320 e 390 px; gesti della 1 e «oggi» rifatti (`prove/*-2.cjs`, porta 4333); immagini `immagini/timbri-*.jpg`, `consiglio-*.jpg`.
+Lavoro fatto nella copia `C:\Users\Windows11\Documents\nextstop-compositore` (worktree del ramo `compositore-pagina`), perché nella
+cartella `nextstop` c'era un lavoro di Codex non salvato.
+
 ## Giro 1 (09/10/2026) · https://claude.ai/artifact/38QAViDs5yfqnqyehLvMdP
 | | La scheda | «Visitata» | Spostare e togliere |
 |---|---|---|---|
