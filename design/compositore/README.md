@@ -10,6 +10,8 @@ stazioni e porti sì). Quattro proposte dentro C e D: nella striscia in alto si 
 `partenza-giro-1/` (nata da `ricerca-giro-2/`, più `partenza.css` e `alloggi.json`).
 
 ## Giro 1 (14/10/2026) · https://claude.ai/artifact/VsuPUwPwehrh6jC3UnMhCi
+**Scelta di Enrico (14/10/2026): la 2, «Sulla mappa», ma il pezzo va in stand-by.** Non lo convince ancora: si riprende più avanti con
+le fermate di autobus, metro e treni e le linee vicine al punto (percorso vero con i mezzi), e quando esce avrà la scritta «beta» (specifica §10).
 | | Dove si chiede | Come si sceglie il punto |
 |---|---|---|
 | **1 · Il biglietto** | in cima al giorno un biglietto vuoto «Da dove parti?»; scelto il punto si «stampa»: l'ora in cui esci e da dove (in D di carta, in Bodoni) | un foglio con tre schede: Sulla mappa (la mappa si sposta sotto il segno fermo al centro; si cerca una via o un hotel), Dove sono, Stazioni e tappe |

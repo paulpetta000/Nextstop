@@ -154,6 +154,13 @@ Il nostro campo `cucina` mescola tutto: oggi «Carne» mostra **11 locali** (anc
   (la scelta resta sul telefono). *Problema*: chi pianifica sul divano preferisce l'elenco, chi è per strada la mappa.
 
 ### 10. Da dove parti? (pezzo nuovo, Enrico 13/10/2026; approvato lo stesso giorno)
+**In stand-by (Enrico, 14/10/2026)**: dal giro 1 sceglie la **proposta 2 «Sulla mappa»** (il segno della partenza da trascinare),
+ma non lo convince ancora: si fa **più avanti, in una specifica a parte**, fuori dai pezzi di adesso. Quando si costruisce:
+- esce con la scritta **«beta»**, perché chi visita capisca che non è completo;
+- prima va arricchito: le **fermate di autobus, metro, funicolari e treni** vicine al punto (non solo le tappe), con le **linee**;
+  la fermata più vicina e da lì quella più vicina alla prima tappa, cioè un percorso vero con i mezzi dal punto, non una stima;
+- l'ordine migliore conta **il giro intero** (anche partire dalla tappa 4, più lontana, se così il giro è più corto): la prova del
+  giro 1 lo fa già, provando tutti gli ordini con il primo tratto compreso.
 *Problema*: oggi la giornata comincia dalla prima tappa alle 9:30, come se ci dormissi dentro. Chi dorme a Chiaia e mette per prima la
 Sanità non sa quanto ci mette ad arrivarci, e «C'è un ordine più corto» tiene ferma la prima tappa, che spesso è solo la prima aggiunta.
 *Perché non basta migliorare l'ordine più corto*: senza sapere da dove parti non può scegliere la prima tappa né dire quando ci arrivi.
@@ -273,7 +280,7 @@ hanno tempi stimati (il ricalcolo dei tempi veri si fa nella costruzione).
 - [ ] Pezzo 2 · scheda della tappa e «visitato»: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 3 · ricerca: grafica scelta il 13/10/2026 (file di cartoline, segno 4: `design/compositore/README.md`); le parole chiave nei dati vengono con la riscrittura dei testi delle tappe.
 - [x] Enrico approva la sezione 10 «Da dove parti?» e il pezzo «Salva» ridotto (13/10/2026: punto tuo tutto dal sito, stazioni e porti sì, niente «Tutti i giorni», partenza facoltativa, la domanda è «Da dove parti?»).
-- [ ] Pezzo 4 · «Da dove parti?»: 4 proposte → scelta → costruzione.
+- [ ] Pezzo 4 · «Da dove parti?»: **in stand-by** (Enrico, 14/10/2026). Scelta la proposta 2 «Sulla mappa»; si riprende più avanti, con le fermate e le linee e la scritta «beta» (sezione 10).
 - [ ] Pezzo 5 · «Salva» com'è nelle prove: solo costruzione (niente vista separata, niente «Tutti i giorni»).
 - [ ] Pezzo 6 · mappa (dopo la decisione di Enrico: con o senza uso offline).
 - [ ] Pezzo 7 · mangiare nella giornata.
