@@ -1,0 +1,1430 @@
+{
+  "rows": [
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 195
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 181
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 84
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "light",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "light",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "light",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "light",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "dark",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "dark",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "dark",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "dark",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "documents": 0
+    }
+  ],
+  "scans": [
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "dark",
+      "violations": []
+    }
+  ],
+  "behavior": [
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-nennella",
+            "lc-nennella-domande"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-gesu-vecchio",
+            "lc-gesu-vecchio-home",
+            "lc-gesu-vecchio-menu"
+          ]
+        },
+        {
+          "term": "pintauro",
+          "ids": [
+            "sdg-pintauro-2026",
+            "lc-pintauro"
+          ]
+        },
+        {
+          "term": "2025",
+          "ids": [
+            "tp-comune-casteldellovo",
+            "tp-cittascienza-estate-2025",
+            "tp-mercati-municipalita2",
+            "tp-mic-leopardi-day-2025",
+            "tp-pompei-tariffe",
+            "tp-sorrento-centro",
+            "sdg-michelin-2025-pizzerie",
+            "sdg-bib-2025",
+            "sdg-slowfood-2025"
+          ]
+        },
+        {
+          "term": "nessun documento 123456",
+          "ids": []
+        }
+      ],
+      "returned": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "tag": "BUTTON",
+          "text": "Cancella la ricerca",
+          "top": 596.09375,
+          "bottom": 640.09375
+        },
+        {
+          "tag": "A",
+          "text": "Torna alla ricerca",
+          "top": 596.09375,
+          "bottom": 640.09375
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "Locali e cucina3 documenti",
+          "top": 665.09375,
+          "bottom": 753.09375
+        },
+        {
+          "tag": "A",
+          "text": "Where to eat pasta, potatoes, and provola in Naples. The 8 best restaurants",
+          "top": 416.75,
+          "bottom": 518.75
+        },
+        {
+          "tag": "A",
+          "text": "Pagina registrata della fonte",
+          "top": 636.5,
+          "bottom": 651.5
+        },
+        {
+          "tag": "A",
+          "text": "Sedi e orari",
+          "top": 775.40625,
+          "bottom": 819.40625
+        },
+        {
+          "tag": "A",
+          "text": "Domande frequenti: prenotazione",
+          "top": 445.6875,
+          "bottom": 489.6875
+        },
+        {
+          "tag": "A",
+          "text": "Leggi crediti e licenze ",
+          "top": 796.15625,
+          "bottom": 844.15625
+        }
+      ]
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-nennella",
+            "lc-nennella-domande"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-gesu-vecchio",
+            "lc-gesu-vecchio-home",
+            "lc-gesu-vecchio-menu"
+          ]
+        },
+        {
+          "term": "pintauro",
+          "ids": [
+            "sdg-pintauro-2026",
+            "lc-pintauro"
+          ]
+        },
+        {
+          "term": "2025",
+          "ids": [
+            "tp-comune-casteldellovo",
+            "tp-cittascienza-estate-2025",
+            "tp-mercati-municipalita2",
+            "tp-mic-leopardi-day-2025",
+            "tp-pompei-tariffe",
+            "tp-sorrento-centro",
+            "sdg-michelin-2025-pizzerie",
+            "sdg-bib-2025",
+            "sdg-slowfood-2025"
+          ]
+        },
+        {
+          "term": "nessun documento 123456",
+          "ids": []
+        }
+      ],
+      "returned": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "tag": "BUTTON",
+          "text": "Cancella la ricerca",
+          "top": 596.09375,
+          "bottom": 640.09375
+        },
+        {
+          "tag": "A",
+          "text": "Torna alla ricerca",
+          "top": 596.09375,
+          "bottom": 640.09375
+        },
+        {
+          "tag": "SUMMARY",
+          "text": "Locali e cucina3 documenti",
+          "top": 665.09375,
+          "bottom": 753.09375
+        },
+        {
+          "tag": "A",
+          "text": "Where to eat pasta, potatoes, and provola in Naples. The 8 best restaurants",
+          "top": 416.75,
+          "bottom": 518.75
+        },
+        {
+          "tag": "A",
+          "text": "Pagina registrata della fonte",
+          "top": 636.5,
+          "bottom": 651.5
+        },
+        {
+          "tag": "A",
+          "text": "Sedi e orari",
+          "top": 775.40625,
+          "bottom": 819.40625
+        },
+        {
+          "tag": "A",
+          "text": "Domande frequenti: prenotazione",
+          "top": 445.6875,
+          "bottom": 489.6875
+        },
+        {
+          "tag": "A",
+          "text": "Leggi crediti e licenze ",
+          "top": 796.15625,
+          "bottom": 844.15625
+        }
+      ]
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-nennella",
+            "lc-nennella-domande"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-gesu-vecchio",
+            "lc-gesu-vecchio-home",
+            "lc-gesu-vecchio-menu"
+          ]
+        },
+        {
+          "term": "pintauro",
+          "ids": [
+            "sdg-pintauro-2026",
+            "lc-pintauro"
+          ]
+        },
+        {
+          "term": "2025",
+          "ids": [
+            "sdg-michelin-2025-pizzerie",
+            "sdg-bib-2025",
+            "tp-cittascienza-estate-2025",
+            "sdg-slowfood-2025",
+            "tp-mic-leopardi-day-2025"
+          ]
+        },
+        {
+          "term": "nessun documento 123456",
+          "ids": []
+        }
+      ],
+      "returned": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "tag": "BUTTON",
+          "text": "Mostra tutte",
+          "top": 135.75,
+          "bottom": 179.75
+        },
+        {
+          "tag": "A",
+          "text": "Where to eat pasta, potatoes, and provola in Naples. The 8 best restaurants",
+          "top": 488.171875,
+          "bottom": 606.171875
+        },
+        {
+          "tag": "A",
+          "text": "Pagina registrata della fonte",
+          "top": 703.921875,
+          "bottom": 718.921875
+        },
+        {
+          "tag": "A",
+          "text": "Sedi e orari",
+          "top": 486.34375,
+          "bottom": 530.34375
+        },
+        {
+          "tag": "A",
+          "text": "Domande frequenti: prenotazione",
+          "top": 681.9375,
+          "bottom": 725.9375
+        },
+        {
+          "tag": "A",
+          "text": "Come scegliamo e controlliamo le fonti ",
+          "top": 438,
+          "bottom": 482
+        },
+        {
+          "tag": "A",
+          "text": "Torna alla ricerca",
+          "top": 533.375,
+          "bottom": 577.375
+        },
+        {
+          "tag": "A",
+          "text": "nextstpitinerari in cittàNextstop",
+          "top": 704.765625,
+          "bottom": 752.765625
+        }
+      ]
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-nennella",
+            "lc-nennella-domande"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-gesu-vecchio",
+            "lc-gesu-vecchio-home",
+            "lc-gesu-vecchio-menu"
+          ]
+        },
+        {
+          "term": "pintauro",
+          "ids": [
+            "sdg-pintauro-2026",
+            "lc-pintauro"
+          ]
+        },
+        {
+          "term": "2025",
+          "ids": [
+            "sdg-michelin-2025-pizzerie",
+            "sdg-bib-2025",
+            "tp-cittascienza-estate-2025",
+            "sdg-slowfood-2025",
+            "tp-mic-leopardi-day-2025"
+          ]
+        },
+        {
+          "term": "nessun documento 123456",
+          "ids": []
+        }
+      ],
+      "returned": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "tag": "BUTTON",
+          "text": "Mostra tutte",
+          "top": 135.75,
+          "bottom": 179.75
+        },
+        {
+          "tag": "A",
+          "text": "Where to eat pasta, potatoes, and provola in Naples. The 8 best restaurants",
+          "top": 488.171875,
+          "bottom": 606.171875
+        },
+        {
+          "tag": "A",
+          "text": "Pagina registrata della fonte",
+          "top": 703.921875,
+          "bottom": 718.921875
+        },
+        {
+          "tag": "A",
+          "text": "Sedi e orari",
+          "top": 486.34375,
+          "bottom": 530.34375
+        },
+        {
+          "tag": "A",
+          "text": "Domande frequenti: prenotazione",
+          "top": 681.9375,
+          "bottom": 725.9375
+        },
+        {
+          "tag": "A",
+          "text": "Come scegliamo e controlliamo le fonti ",
+          "top": 438,
+          "bottom": 482
+        },
+        {
+          "tag": "A",
+          "text": "Torna alla ricerca",
+          "top": 533.375,
+          "bottom": 577.375
+        },
+        {
+          "tag": "A",
+          "text": "nextstpitinerari in cittàNextstop",
+          "top": 704.765625,
+          "bottom": 752.765625
+        }
+      ]
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-nennella",
+            "lc-nennella-domande"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-gesu-vecchio",
+            "lc-gesu-vecchio-home",
+            "lc-gesu-vecchio-menu"
+          ]
+        },
+        {
+          "term": "pintauro",
+          "ids": [
+            "sdg-pintauro-2026",
+            "lc-pintauro"
+          ]
+        },
+        {
+          "term": "2025",
+          "ids": [
+            "sdg-michelin-2025-pizzerie",
+            "sdg-bib-2025",
+            "sdg-slowfood-2025"
+          ]
+        },
+        {
+          "term": "nessun documento 123456",
+          "ids": []
+        }
+      ],
+      "returned": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "tag": "BUTTON",
+          "text": "Mostra tutte",
+          "top": 181.25,
+          "bottom": 225.25
+        },
+        {
+          "tag": "A",
+          "text": "Where to eat pasta, potatoes, and provola in Naples. The 8 best restaurants",
+          "top": 448.609375,
+          "bottom": 566.609375
+        },
+        {
+          "tag": "A",
+          "text": "Pagina registrata della fonte",
+          "top": 664.359375,
+          "bottom": 679.359375
+        },
+        {
+          "tag": "A",
+          "text": "Sedi e orari",
+          "top": 799.78125,
+          "bottom": 843.78125
+        },
+        {
+          "tag": "A",
+          "text": "Domande frequenti: prenotazione",
+          "top": 486.375,
+          "bottom": 530.375
+        },
+        {
+          "tag": "A",
+          "text": "Come scegliamo e controlliamo le fonti ",
+          "top": 657.4375,
+          "bottom": 701.4375
+        },
+        {
+          "tag": "A",
+          "text": "Torna alla ricerca",
+          "top": 752.8125,
+          "bottom": 796.8125
+        },
+        {
+          "tag": "A",
+          "text": "nextstpitinerari in cittàNextstop",
+          "top": 436.203125,
+          "bottom": 484.203125
+        }
+      ]
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-nennella",
+            "lc-nennella-domande"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-gesu-vecchio",
+            "lc-gesu-vecchio-home",
+            "lc-gesu-vecchio-menu"
+          ]
+        },
+        {
+          "term": "pintauro",
+          "ids": [
+            "sdg-pintauro-2026",
+            "lc-pintauro"
+          ]
+        },
+        {
+          "term": "2025",
+          "ids": [
+            "sdg-michelin-2025-pizzerie",
+            "sdg-bib-2025",
+            "sdg-slowfood-2025"
+          ]
+        },
+        {
+          "term": "nessun documento 123456",
+          "ids": []
+        }
+      ],
+      "returned": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "tag": "BUTTON",
+          "text": "Mostra tutte",
+          "top": 181.25,
+          "bottom": 225.25
+        },
+        {
+          "tag": "A",
+          "text": "Where to eat pasta, potatoes, and provola in Naples. The 8 best restaurants",
+          "top": 448.609375,
+          "bottom": 566.609375
+        },
+        {
+          "tag": "A",
+          "text": "Pagina registrata della fonte",
+          "top": 664.359375,
+          "bottom": 679.359375
+        },
+        {
+          "tag": "A",
+          "text": "Sedi e orari",
+          "top": 799.78125,
+          "bottom": 843.78125
+        },
+        {
+          "tag": "A",
+          "text": "Domande frequenti: prenotazione",
+          "top": 486.375,
+          "bottom": 530.375
+        },
+        {
+          "tag": "A",
+          "text": "Come scegliamo e controlliamo le fonti ",
+          "top": 657.4375,
+          "bottom": 701.4375
+        },
+        {
+          "tag": "A",
+          "text": "Torna alla ricerca",
+          "top": 752.8125,
+          "bottom": 796.8125
+        },
+        {
+          "tag": "A",
+          "text": "nextstpitinerari in cittàNextstop",
+          "top": 436.203125,
+          "bottom": 484.203125
+        }
+      ]
+    },
+    {
+      "path": "/fonti/",
+      "nojs": 195
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "nojs": 181
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "nojs": 84
+    }
+  ],
+  "errors": [
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Access to resource at 'http://127.0.0.1:4322/favicon.svg' from origin 'https://www.gamberorossointernational.com' has been blocked by CORS policy: Permission was denied for this request to access the `loopback` address space."
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Access to resource at 'http://127.0.0.1:4322/favicon.svg' from origin 'https://www.gamberorossointernational.com' has been blocked by CORS policy: Permission was denied for this request to access the `loopback` address space."
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "url": "http://127.0.0.1:4322/napoli/itinerari/",
+      "message": "Cannot read properties of undefined (reading 'id')"
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Access to resource at 'http://127.0.0.1:4322/favicon.svg' from origin 'https://www.gamberorossointernational.com' has been blocked by CORS policy: Permission was denied for this request to access the `loopback` address space."
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Cannot read properties of undefined (reading 'id')"
+    },
+    {
+      "url": "http://127.0.0.1:4322/napoli/itinerari/",
+      "message": "Cannot read properties of undefined (reading 'id')"
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Access to resource at 'http://127.0.0.1:4322/favicon.svg' from origin 'https://www.gamberorossointernational.com' has been blocked by CORS policy: Permission was denied for this request to access the `loopback` address space."
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Cannot read properties of undefined (reading 'id')"
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Access to resource at 'http://127.0.0.1:4322/favicon.svg' from origin 'https://www.gamberorossointernational.com' has been blocked by CORS policy: Permission was denied for this request to access the `loopback` address space."
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Access to resource at 'http://127.0.0.1:4322/favicon.svg' from origin 'https://www.gamberorossointernational.com' has been blocked by CORS policy: Permission was denied for this request to access the `loopback` address space."
+    },
+    {
+      "url": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "message": "Failed to load resource: net::ERR_FAILED"
+    }
+  ],
+  "external": [
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMTEuOTkgMkM2LjQ3IDIgMiA2LjQ4IDIgMTJzNC40NyAxMCA5Ljk5IDEwQzE3LjUyIDIyIDIyIDE3LjUyIDIyIDEyUzE3LjUyIDIgMTEuOTkgMnpNMTIgMjBjLTQuNDIgMC04LTMuNTgtOC04czMuNTgtOCA4LTggOCAzLjU4IDggOC0zLjU4IDgtOCA4eiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48cGF0aCBmaWxsPSJXaW5kb3dUZXh0IiBkPSJNMTIuNSA3SDExdjZsNS4yNSAzLjE1Ljc1LTEuMjMtNC41LTIuNjd6Ii8+PC9zdmc+",
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNCIgaGVpZ2h0PSIxNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTEuOTkgMkM2LjQ3IDIgMiA2LjQ4IDIgMTJzNC40NyAxMCA5Ljk5IDEwQzE3LjUyIDIyIDIyIDE3LjUyIDIyIDEyUzE3LjUyIDIgMTEuOTkgMnpNMTIgMjBjLTQuNDIgMC04LTMuNTgtOC04czMuNTgtOCA4LTggOCAzLjU4IDggOC0zLjU4IDgtOCA4eiIvPjxwYXRoIGQ9Ik0wIDBoMjR2MjRIMHoiIGZpbGw9Im5vbmUiLz48cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMTIuNSA3SDExdjZsNS4yNSAzLjE1Ljc1LTEuMjMtNC41LTIuNjd6Ii8+PC9zdmc+"
+  ]
+}

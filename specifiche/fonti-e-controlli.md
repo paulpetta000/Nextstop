@@ -137,4 +137,6 @@ GPT-6-luna / Low solo per formattazione o estrazione semplice su decisioni già 
 - [x] Audit critico di A, C e D richiesto da Enrico, con [quattro interventi proposti e prove](../ricerca/2026-10-12-fonti-pagina-revisione-critica.md); B esclusa dall'audit. Nessun intervento applicato o nuova direzione approvata.
 - [x] Enrico approva i quattro interventi e i tre movimenti della ricerca generale; rifinitura isolata A/C/D nel giro 2, senza scelta definitiva o integrazione.
 - [x] Enrico sceglie A · Atlante del giro 2 per la pagina generale; interrompe ulteriori rifiniture della ricerca. Registro completo da integrare con D giro 4 nel Blocco 5.
-- [ ] Blocco 5, integrazione e completamento mirato; Blocco 6, revisione e rilascio. Non avviati, ciascun blocco richiede il suo OK.
+- [x] Enrico autorizza il solo Blocco 5: integrazione locale di A completa e D, metadati condivisi, descrizioni e durate. [Resoconto del 13 ottobre](../docs/storico/2026-10-13-fonti-blocco-5.md).
+- [ ] Accettazione tecnica del Blocco 5: gli itinerari non raggiungono ancora Lighthouse mobile 95; risultati e variabilità documentati. Attendere la valutazione di Enrico prima di ampliare il lavoro.
+- [ ] Blocco 6, revisione e rilascio: non avviato e non autorizzato; push, merge su main e deploy richiedono consenso esplicito.

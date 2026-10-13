@@ -1,0 +1,19 @@
+{ padding: '16px', font: '"Bodoni Moda", serif' }
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Il ritorno senza JavaScript deve raggiungere un elemento visibile
+
+false !== true
+
+    at file:///C:/Users/Windows11/Documents/nextstop/scripts/fonti-controllo-stile.mjs:13:9 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.21.0

@@ -1,0 +1,35 @@
+✔ registro completo: 195 documenti, metadati presenti, originali e date conservati (2.9341ms)
+✔ originali diretti: PDF EAV e download ANM, URL registrati ancora disponibili (0.3163ms)
+✔ una fonte condivisa resta unica anche con schede e durata della stessa pagina (0.5061ms)
+✖ nel gruppo del locale le informazioni pratiche precedono la storia (13.3674ms)
+ℹ tests 4
+ℹ suites 0
+ℹ pass 3
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 53.2798
+
+✖ failing tests:
+
+test at test\fonti-registro.test.mjs:38:1
+✖ nel gruppo del locale le informazioni pratiche precedono la storia (13.3674ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(ids.indexOf('lc-cantinella-menu')<ids.indexOf('lc-cantinella-home'))
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/test/fonti-registro.test.mjs:40:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

@@ -1,0 +1,17 @@
+{ padding: '16px', font: '"Bodoni Moda", serif' }
+{ sourceTop: 91.84375, railBottom: 158.6875 }
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Il rinvio ANM deve mostrare la fonte sotto la fascia della ricerca
+    at file:///C:/Users/Windows11/Documents/nextstop/scripts/fonti-controllo-stile.mjs:20:27 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}
+
+Node.js v24.21.0
