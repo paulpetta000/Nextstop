@@ -9,6 +9,7 @@ Specifica §2 e §5. Le 4 proposte vivono dentro le due viste scelte nel pezzo 1
 in alto si sceglie la proposta (1-4) e la vista (C o D). Cartella `scheda-giro-1/` (`app.js`, `stile.css` del pezzo 1, `pezzo2.css`).
 
 ## Giro 2 (13/10/2026) · https://claude.ai/artifact/Sdp8yvNnR36Di763TcZdR6
+**Pezzo 2 scelto (13/10/2026): timbro 2, il timbro postale con il giorno della visita.** Il resto del giro 2 va bene così (consiglio dell'ordine più corto, barra del tempo).
 **Scelta di Enrico sul giro 1**: la scheda si apre come nella 1 (il foglio); «visitata» nella giornata come nella 1 (la porta con il
 numero, senza aprire la scheda); spostare e togliere come nella 1 (maniglia; nella scheda «Sposta nel giorno 2» e «Togli»). Dentro la
 scheda niente rettangolo «Da visitare»: un **timbro tondo sul bordo della foto**, come il sigillo della 3, con la foto a tutta larghezza.
