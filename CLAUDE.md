@@ -10,13 +10,14 @@ Sito statico Astro 7, Node >=22.12, in italiano. Enrico lavora anche con Codex.
 
 ## Modelli, effort e agenti
 Obiettivo di Enrico: **efficienza**. Il risultato deve essere ottimo, ma senza spendere più del necessario. Regola: si parte dal livello più basso che può bastare
-e si sale solo se il risultato non è buono. Effort, dal più leggero: medio · alto · extra · max. **L'effort basso non si usa mai.** Costo, dal più leggero: Haiku 4.5 · Sonnet · Opus.
+e si sale solo se il risultato non è buono. Effort, dal più leggero: medio · alto · extra · max. **L'effort basso non si usa mai.** Costo, dal più leggero: Haiku 5.5 · Sonnet · Opus.
 
 | Compito | Modello | Effort |
 |---|---|---|
 | Domande, un testo da correggere, modifiche di poche righe, commit e push, aggiornare `PROGRESS.md` | principale o Sonnet, fai da solo | medio |
 | Ricerche ripetitive (orari, prezzi, fonti di un gruppo di luoghi o locali) e di confronto (come fanno altri siti) | agente `ricercatore` (Sonnet, effort medio, salva tutto in `ricerca/`), in parallelo, uno per gruppo; il principale rilegge le fonti | medio–alto |
-| Lavori meccanici (cercare, contare, estrarre, rinominare) | Haiku 4.5 (Enrico per ora preferisce non usarlo: usa Sonnet) | medio |
+| Lavori meccanici (cercare, contare, estrarre, rinominare, copiare file, confrontare elenchi) | agente Haiku 5.5 (Enrico, 13/10/2026: ora si usa) | medio |
+| Lanciare comandi e riferire l'esito (test, build, `check:links`, immagini a 320 e 390 px), senza giudicare la grafica | agente Haiku 5.5; se qualcosa è rosso, il principale (o Sonnet) capisce perché | medio |
 | Revisione del codice, controlli su molte pagine, controlli finali, anteprima e pubblicazione | agente `revisore` o agente Sonnet (Enrico, 03/10/2026: i controlli si fanno con Sonnet) | alto |
 | Costruire una funzione nuova nel codice esistente (filtri, nuovo tipo di tappa, pagina, città nuova) | modello principale (Opus) | alto |
 | Grafica, struttura dei dati, specifiche, scelte difficili da cambiare dopo | Opus | extra |
@@ -24,7 +25,7 @@ e si sale solo se il risultato non è buono. Effort, dal più leggero: medio · 
 
 - **Controlli e pubblicazione con Sonnet** (Enrico, 03/10/2026): la coda di un blocco (test, `check:links`, push, anteprima di Vercel, immagini) si affida a un agente con modello Sonnet e istruzioni complete; il modello principale rilegge il risultato.
 - **Scala di salita sui fallimenti** (deciso da Enrico il 03/10/2026). Il modello leggero **finisce tutto il suo lavoro**: non si interrompe al primo problema.
-  I casi falliti si raccolgono e si ritentano **in blocco** con un livello più forte, che parte sapendo cosa è già stato provato: Sonnet → Opus alto. Un tentativo per livello.
+  I casi falliti si raccolgono e si ritentano **in blocco** con un livello più forte, che parte sapendo cosa è già stato provato: Haiku → Sonnet → Opus alto. Un tentativo per livello.
   - Al lancio di un agente si sceglie il **modello**, non l'effort; l'effort per agente si può fissare solo nel file dell'agente (`.claude/agents/*.md`, riga `effort:`).
   - Gli agenti devono scrivere «NON TROVATO» con cosa hanno provato. **Mai inventare**: vale la regola «niente senza fonte».
   - Prima di salire, capisci perché ha fallito. Se la cosa non esiste, il sito è bloccato o manca la fonte, **non salire**: scarta il caso o segnalalo a Enrico. Sali solo se ha cercato male o ragionato male.
@@ -34,6 +35,7 @@ e si sale solo se il risultato non è buono. Effort, dal più leggero: medio · 
   - Il modello principale controlla sempre tutti i dati delicati (orari, prezzi, fonti) e un campione del resto.
   Per le decisioni di struttura conta più il modello dell'effort: un Opus a effort medio vale più di un Sonnet a max.
 - **Max** solo quando alto ed extra non bastano o quando la scelta è costosa da correggere: non è il livello normale.
+- **Haiku 5.5 no** per: ricerche con fonti (orari, prezzi, parole chiave: restano a Sonnet, che inventa meno), testi del sito, grafica, revisione del codice, controlli finali prima di un'anteprima (Sonnet, regola del 03/10/2026).
 - **Fai da solo** quando il lavoro è di poche righe: un agente parte da zero e deve rileggere il contesto, quindi per poco costa di più.
 - Più agenti insieme solo se i lavori sono davvero indipendenti. Chiedi sempre risposte corte (elenchi con le fonti, non spiegazioni).
 - Il modello principale rilegge sempre il lavoro di un agente prima di darlo per buono.
