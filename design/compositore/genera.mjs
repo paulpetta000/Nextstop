@@ -211,7 +211,7 @@ if (leggi('app.js').includes('CALCOLO')) {
   const r = await build({
     stdin: {
       contents: `export { spacchetta } from './src/lib/itinerari/pacco';
-                 export { calcolaGiorno, ordinePiuCorto } from './src/lib/itinerari/calcolo';
+                 export { calcolaGiorno, ordinePiuCorto, minuti, orarioLocale, scenarioDi } from './src/lib/itinerari/calcolo';
                  export { nuovoItinerario, codifica } from './src/lib/itinerari/link';`,
       resolveDir: RADICE, loader: 'ts'
     },
@@ -304,7 +304,7 @@ const pagina = leggi('modello.html')
   .replace('/*FONT*/', () => `@font-face{font-family:"Archivo";src:url(${FONT.archivo}) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
 @font-face{font-family:"Bodoni Moda";src:url(${FONT.bodoni}) format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:"Bodoni Moda";src:url(${FONT.bodoniCorsivo}) format("woff2");font-weight:500;font-style:italic;font-display:swap}`)
-  .replace('/*STILE*/', () => leggi('stile.css') + (fs.existsSync(path.join(GIRO, 'pezzo2.css')) ? `\n${leggi('pezzo2.css')}` : '') + (fs.existsSync(path.join(GIRO, 'ricerca.css')) ? `\n${leggi('ricerca.css')}` : '') + (fs.existsSync(path.join(GIRO, 'partenza.css')) ? `\n${leggi('partenza.css')}` : ''))
+  .replace('/*STILE*/', () => leggi('stile.css') + (fs.existsSync(path.join(GIRO, 'pezzo2.css')) ? `\n${leggi('pezzo2.css')}` : '') + (fs.existsSync(path.join(GIRO, 'ricerca.css')) ? `\n${leggi('ricerca.css')}` : '') + (fs.existsSync(path.join(GIRO, 'partenza.css')) ? `\n${leggi('partenza.css')}` : '') + (fs.existsSync(path.join(GIRO, 'mangiare.css')) ? `\n${leggi('mangiare.css')}` : ''))
   .replace('/*APP*/', () => leggi('app.js'))
   .replace('<!--DATI-->', () => `<script>window.DATI=${sicuro(DATI)};window.FOTO=${sicuro(FOTO)};window.MAPPA=${sicuro(MAPPA)};window.STRADE=${sicuro(STRADE)};${PEZZI ? `window.PEZZI=${sicuro(PEZZI)};` : ''}${leggi('app.js').includes('PORTICO') ? `window.PORTICO=${sicuro(PORTICO)};` : ''}</script>${CALCOLO_JS ? `<script>${CALCOLO_JS.replace(/<\/script/gi, '<\\/script')}</script>` : ''}`);
 fs.writeFileSync(path.join(GIRO, 'proposte.html'), pagina);
