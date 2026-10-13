@@ -42,6 +42,12 @@ Prima della correzione, il nuovo test `manifest-preview.test.mjs` fallisce: manc
 
 Le prove locali del Blocco 6 sono state lette e riscontrate nei riepiloghi (70 test, 880 link, 80 combinazioni, otto axe e 18 Lighthouse almeno 95); mantengono condizioni, variabilità e limiti storici. Nessuna nuova lettura editoriale, nessuna data delle fonti aggiornata, nessun controllo su telefono fisico o con lettori esterni. I link interni validi non dimostrano il contenuto o la raggiungibilità odierna dei documenti esterni. Produzione non esaminata né pubblicata.
 
-## Pausa richiesta
+## Pausa al termine dell’anteprima
 
 PR in bozza e anteprima disponibili; nessun merge o deploy di produzione. **Non raccomandato il rilascio finché la riserva Lighthouse cloud resta sotto 95.** Enrico valuta risultati e limiti prima dell’OK finale; un eventuale seguito resta locale, con gli strumenti esistenti e confronto controllato delle condizioni, senza nuove dipendenze, deleghe o rifiniture della ricerca.
+
+## Autorizzazione successiva a main
+
+Il 13/10/2026, dopo il resoconto e la comunicazione dei risultati sotto soglia, Enrico chiede esplicitamente di fare il commit e pubblicare su `main`. Richiede di procedere con l’integrazione della PR #3 e rimanda le riserve a una propria revisione con Claude. Questa decisione supera il precedente divieto di merge e consente la pubblicazione automatica dell’integrazione Git Vercel esistente. Nessuna delega a Claude eseguita da Codex.
+
+La riserva Lighthouse cloud resta **7/18 misure almeno 95** nelle condizioni già documentate: l’autorizzazione non cambia i punteggi né equivale a una nuova verifica delle prestazioni. Il commit della decisione contiene solo documentazione; input applicativi invariati. Prima dell’integrazione verificare la CI della testa effettiva; usare il vincolo SHA nel merge. Stato dell’integrazione, commit su main e deployment nella [PR #3](https://github.com/paulpetta000/Nextstop/pull/3) e nel resoconto consegnato in chat.
