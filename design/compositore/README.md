@@ -3,6 +3,21 @@
 Proposte con i dati veri di «Due giorni a Napoli»: orari, tempi a piedi e percorsi calcolati dal sito (giorno feriale), foto e
 caratteri del sito. Regola di Enrico: 4 proposte molto diverse per pezzo, si itera su quello che va. Specifica: `specifiche/compositore.md`.
 
+# Pezzo 6: la mappa (strada A, anche senza rete)
+
+Specifica §6 (deciso il 14/10/2026). Cartella `mappa-giro-1/` (nata da `ricerca-giro-2/`, segno 4 fisso). Numeri: `ricerca/2026-10-14-mappa-peso.md`.
+
+## Prima prova (14/10/2026) · https://claude.ai/artifact/DoCdKadtBTAMXDHaYZhZoT
+Nella striscia in alto: **Prima** (strade piccole solo nella zona dei due giorni, `strade.json`) o **A pezzi** (tutta la città), la
+vista C o D, e **Pezzi** (bordi dei pezzi, peso di ognuno e quanti ne ha scaricati la mappa). Le strade di tutta la mappa sono in
+59 pezzi da 1,28 km (`pezzi-256/`, pubblicati accanto alla pagina): la mappa scarica solo quelli dove guardi (da 0,45 px ogni 5 m in su),
+una volta sola. Nomi: sempre le 332 vie principali (`pezzi-256/nomi-principali.json`, dentro la pagina) e, nel colore del percorso e appena
+sopra la linea, le vie dove passa il percorso del giorno (trovate con i nomi dei pezzi: tratti di almeno 120 m). Aspetta l'OK di Enrico.
+Controlli: nessun errore della pagina (solo l'icona del server di prova), nessuno scorrimento di lato a 320 e 390 px, C e D in chiaro e scuro.
+Immagini: `mappa-giro-1/immagini/*.jpg` (giorno, centro con i bordi, Mergellina prima e dopo).
+Rifare: con il JSON di Overpass (query nella ricerca) `node design/compositore/mappa-giro-1/pezzi.mjs <file> 256`, poi
+`node design/compositore/genera.mjs mappa-giro-1`; con il server acceso `node design/compositore/mappa-giro-1/prove/foto.cjs <cartella> light,dark <porta>`.
+
 # Pezzo 4: «Da dove parti?»
 
 Specifica §10 (approvata il 13/10/2026: facoltativo; la domanda è «Da dove parti?», mai «Dove dormi?»; un punto tuo tutto dal sito;

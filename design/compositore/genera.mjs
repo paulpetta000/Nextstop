@@ -288,6 +288,16 @@ if (leggi('app.js').includes('PARTENZA')) {
   DATI.partenza = { stazioni, alloggi, vie, fonteAlloggi: A.fonte, metriUnita: +((BOX.e - BOX.w) * 111320 * Math.cos((BOX.n + BOX.s) / 2 * Math.PI / 180) / MAPPA.w).toFixed(3) };
 }
 
+// ---------- pezzo 6 (prova, mappa-giro-1): l'indice dei pezzi della mappa, il loro peso compresso e i nomi delle vie principali ----------
+// I pezzi restano file a parte (pezzi-256/*.json, pubblicati accanto alla pagina): la pagina li scarica solo dove si guarda.
+let PEZZI = null;
+if (fs.existsSync(path.join(GIRO, 'pezzi-256/indice.json'))) {
+  const zlib = await import('node:zlib');
+  const I = JSON.parse(leggi('pezzi-256/indice.json'));
+  const pesi = Object.fromEntries(I.pezzi.map(k => [k, zlib.brotliCompressSync(leggi(`pezzi-256/${k}.json`)).length]));
+  PEZZI = { ...I, pesi, principali: JSON.parse(leggi('pezzi-256/nomi-principali.json')) };
+}
+
 const sicuro = o => JSON.stringify(o).replace(/</g, '\\u003c');
 // sostituzioni con una funzione: nel codice ci sono «$» che replace() altrimenti interpreta
 const pagina = leggi('modello.html')
@@ -296,7 +306,7 @@ const pagina = leggi('modello.html')
 @font-face{font-family:"Bodoni Moda";src:url(${FONT.bodoniCorsivo}) format("woff2");font-weight:500;font-style:italic;font-display:swap}`)
   .replace('/*STILE*/', () => leggi('stile.css') + (fs.existsSync(path.join(GIRO, 'pezzo2.css')) ? `\n${leggi('pezzo2.css')}` : '') + (fs.existsSync(path.join(GIRO, 'ricerca.css')) ? `\n${leggi('ricerca.css')}` : '') + (fs.existsSync(path.join(GIRO, 'partenza.css')) ? `\n${leggi('partenza.css')}` : ''))
   .replace('/*APP*/', () => leggi('app.js'))
-  .replace('<!--DATI-->', () => `<script>window.DATI=${sicuro(DATI)};window.FOTO=${sicuro(FOTO)};window.MAPPA=${sicuro(MAPPA)};window.STRADE=${sicuro(STRADE)};${leggi('app.js').includes('PORTICO') ? `window.PORTICO=${sicuro(PORTICO)};` : ''}</script>${CALCOLO_JS ? `<script>${CALCOLO_JS.replace(/<\/script/gi, '<\\/script')}</script>` : ''}`);
+  .replace('<!--DATI-->', () => `<script>window.DATI=${sicuro(DATI)};window.FOTO=${sicuro(FOTO)};window.MAPPA=${sicuro(MAPPA)};window.STRADE=${sicuro(STRADE)};${PEZZI ? `window.PEZZI=${sicuro(PEZZI)};` : ''}${leggi('app.js').includes('PORTICO') ? `window.PORTICO=${sicuro(PORTICO)};` : ''}</script>${CALCOLO_JS ? `<script>${CALCOLO_JS.replace(/<\/script/gi, '<\\/script')}</script>` : ''}`);
 fs.writeFileSync(path.join(GIRO, 'proposte.html'), pagina);
 fs.writeFileSync(path.join(GIRO, 'proposte-locale.html'), `<!doctype html><html lang="it"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"></head><body>${pagina}</body></html>`);
 console.log(`${path.basename(GIRO)}/proposte.html: ${(pagina.length / 1024 / 1024).toFixed(2)} MB · tappe da aggiungere ${CITTA.length} · foto ${Object.keys(FOTO).length} · dati ${(sicuro(DATI).length / 1024).toFixed(0)} KB`);

@@ -1,0 +1,253 @@
+{
+  "fonte": "OpenStreetMap (ODbL), dati del 2026-10-13T23:02:27Z",
+  "riquadro": {
+    "w": 14.135,
+    "e": 14.29,
+    "s": 40.786,
+    "n": 40.874
+  },
+  "lato_pezzo_m": 640,
+  "vie_lette": 13595,
+  "scartate_tunnel_marciapiedi_parcheggi": 10730,
+  "punti_osm": 92125,
+  "punti_dopo_semplificazione": 47081,
+  "mappa_di_oggi": {
+    "grezzo_KB": 120.6,
+    "gzip_KB": 48,
+    "brotli_KB": 33.8
+  },
+  "tutta_la_mappa_in_un_file": {
+    "come_la_prova_di_oggi": {
+      "grezzo_KB": 569.2,
+      "gzip_KB": 223,
+      "brotli_KB": 175.1
+    },
+    "numeri_corti_relativi": {
+      "grezzo_KB": 407.6,
+      "gzip_KB": 164.8,
+      "brotli_KB": 148.4
+    }
+  },
+  "per_classe": {
+    "grandi": {
+      "vie": 1731,
+      "km": 235,
+      "assoluto": 77.7,
+      "relativo": 56,
+      "relativo_gzip": 22.9,
+      "relativo_brotli": 20.5
+    },
+    "medie": {
+      "vie": 2987,
+      "km": 429,
+      "assoluto": 141.5,
+      "relativo": 102.6,
+      "relativo_gzip": 42.3,
+      "relativo_brotli": 38
+    },
+    "pedonali": {
+      "vie": 896,
+      "km": 39,
+      "assoluto": 25.8,
+      "relativo": 19,
+      "relativo_gzip": 8.1,
+      "relativo_brotli": 7.1
+    },
+    "vicoli": {
+      "vie": 6818,
+      "km": 533,
+      "assoluto": 290.4,
+      "relativo": 205.1,
+      "relativo_gzip": 83.3,
+      "relativo_brotli": 75
+    },
+    "scale": {
+      "vie": 1163,
+      "km": 22,
+      "assoluto": 33.8,
+      "relativo": 24.8,
+      "relativo_gzip": 10.5,
+      "relativo_brotli": 9.1
+    }
+  },
+  "nomi": {
+    "vie_con_nome": 2556,
+    "etichette_nei_pezzi": 2451,
+    "principali": 332,
+    "file_principali": {
+      "grezzo_KB": 31.8,
+      "gzip_KB": 13.7,
+      "brotli_KB": 12.1
+    }
+  },
+  "pezzi": {
+    "griglia": "21 × 16",
+    "con_strade": 216,
+    "totale_grezzo_KB": 647.2,
+    "totale_gzip_KB": 286.8,
+    "totale_brotli_KB": 258.2,
+    "totale_brotli_senza_nomi_KB": 188,
+    "brotli_KB": {
+      "min": 0,
+      "mediana": 1,
+      "max": 4.8
+    },
+    "piu_pesanti": [
+      {
+        "pezzo": "14_4",
+        "brotli_KB": 4.8,
+        "grezzo_KB": 13.7,
+        "nomi": 56
+      },
+      {
+        "pezzo": "16_4",
+        "brotli_KB": 4.4,
+        "grezzo_KB": 12.4,
+        "nomi": 89
+      },
+      {
+        "pezzo": "15_5",
+        "brotli_KB": 4.3,
+        "grezzo_KB": 11.9,
+        "nomi": 76
+      },
+      {
+        "pezzo": "14_5",
+        "brotli_KB": 4.3,
+        "grezzo_KB": 11.9,
+        "nomi": 68
+      },
+      {
+        "pezzo": "17_3",
+        "brotli_KB": 3.5,
+        "grezzo_KB": 9.7,
+        "nomi": 63
+      }
+    ]
+  },
+  "viste": {
+    "Centro storico (Duomo)": {
+      "telefono, quando compaiono i vicoli (1,4 px ogni 5 m)": {
+        "pezzi": 9,
+        "brotli_KB": 28.4,
+        "gzip_KB": 32,
+        "larghezza_m": 1393
+      },
+      "telefono, più vicino (3 px ogni 5 m)": {
+        "pezzi": 4,
+        "brotli_KB": 14.1,
+        "gzip_KB": 15.9,
+        "larghezza_m": 650
+      },
+      "computer (800 × 600 px, 1,4)": {
+        "pezzi": 20,
+        "brotli_KB": 54.4,
+        "gzip_KB": 61.2,
+        "larghezza_m": 2857
+      }
+    },
+    "Plebiscito": {
+      "telefono, quando compaiono i vicoli (1,4 px ogni 5 m)": {
+        "pezzi": 12,
+        "brotli_KB": 24.8,
+        "gzip_KB": 27.8,
+        "larghezza_m": 1393
+      },
+      "telefono, più vicino (3 px ogni 5 m)": {
+        "pezzi": 4,
+        "brotli_KB": 8.6,
+        "gzip_KB": 9.6,
+        "larghezza_m": 650
+      },
+      "computer (800 × 600 px, 1,4)": {
+        "pezzi": 26,
+        "brotli_KB": 52.4,
+        "gzip_KB": 58.9,
+        "larghezza_m": 2857
+      }
+    },
+    "Chiaia": {
+      "telefono, quando compaiono i vicoli (1,4 px ogni 5 m)": {
+        "pezzi": 9,
+        "brotli_KB": 20.9,
+        "gzip_KB": 23.4,
+        "larghezza_m": 1393
+      },
+      "telefono, più vicino (3 px ogni 5 m)": {
+        "pezzi": 4,
+        "brotli_KB": 9.1,
+        "gzip_KB": 10.2,
+        "larghezza_m": 650
+      },
+      "computer (800 × 600 px, 1,4)": {
+        "pezzi": 18,
+        "brotli_KB": 35,
+        "gzip_KB": 39.1,
+        "larghezza_m": 2857
+      }
+    },
+    "Vomero (Sant'Elmo)": {
+      "telefono, quando compaiono i vicoli (1,4 px ogni 5 m)": {
+        "pezzi": 9,
+        "brotli_KB": 26.2,
+        "gzip_KB": 29.5,
+        "larghezza_m": 1393
+      },
+      "telefono, più vicino (3 px ogni 5 m)": {
+        "pezzi": 4,
+        "brotli_KB": 14.1,
+        "gzip_KB": 15.9,
+        "larghezza_m": 650
+      },
+      "computer (800 × 600 px, 1,4)": {
+        "pezzi": 20,
+        "brotli_KB": 54.3,
+        "gzip_KB": 61,
+        "larghezza_m": 2857
+      }
+    },
+    "Posillipo": {
+      "telefono, quando compaiono i vicoli (1,4 px ogni 5 m)": {
+        "pezzi": 7,
+        "brotli_KB": 4.4,
+        "gzip_KB": 4.7,
+        "larghezza_m": 1393
+      },
+      "telefono, più vicino (3 px ogni 5 m)": {
+        "pezzi": 4,
+        "brotli_KB": 2.7,
+        "gzip_KB": 3,
+        "larghezza_m": 650
+      },
+      "computer (800 × 600 px, 1,4)": {
+        "pezzi": 19,
+        "brotli_KB": 20.7,
+        "gzip_KB": 22.9,
+        "larghezza_m": 2857
+      }
+    }
+  },
+  "due_livelli": {
+    "livello1": {
+      "grezzo_KB": 331.9,
+      "gzip_KB": 129.9,
+      "brotli_KB": 108.6
+    },
+    "livello2": {
+      "pezzi": 215,
+      "totale_grezzo_KB": 289.1,
+      "totale_brotli_KB": 125.1,
+      "brotli_KB": {
+        "mediana": 0.5,
+        "max": 3.3
+      }
+    },
+    "viste_telefono_1_4": {
+      "Centro storico (Duomo)": "9 pezzi, 13.5 KB",
+      "Plebiscito": "12 pezzi, 13 KB",
+      "Chiaia": "9 pezzi, 10.9 KB",
+      "Vomero (Sant'Elmo)": "9 pezzi, 13.5 KB",
+      "Posillipo": "7 pezzi, 2.6 KB"
+    }
+  }
+}

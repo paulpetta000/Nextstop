@@ -24,3 +24,9 @@ design/compositore/ricerca-giro-*/immagini/*.png
 design/compositore/partenza-giro-*/proposte.html
 design/compositore/partenza-giro-*/proposte-locale.html
 design/compositore/partenza-giro-*/immagini/*.png
+design/compositore/mappa-giro-*/proposte.html
+design/compositore/mappa-giro-*/proposte-locale.html
+design/compositore/mappa-giro-*/immagini/*.png
+# misure in più di pezzi.mjs (due livelli): si rifanno con lo script
+design/compositore/mappa-giro-*/vicini-*/
+design/compositore/mappa-giro-*/livello1.json
