@@ -1,0 +1,626 @@
+{
+  "files": 154,
+  "changed": [],
+  "initial": [
+    {
+      "file": "design/compositore/giro-1/proposte-locale.html",
+      "hash": "D05BD2A637387E821777869307349CD381421D409041F4776B0851D987D3B697"
+    },
+    {
+      "file": "design/compositore/giro-2/proposte-locale.html",
+      "hash": "7E20C8C576A55D21C43C4150BE3374305E7102A5CE70B0984FA28141CF5D09E7"
+    },
+    {
+      "file": "design/compositore/giro-2/proposte.html",
+      "hash": "326659222AC5B9821EA5375F2A9A39EE6571FA2AD27DE1C2795AEF6DB32CD9E3"
+    },
+    {
+      "file": "design/compositore/giro-3/proposte-locale.html",
+      "hash": "20CA72C7504F43191D571BAECEE95F5A178319EF4B70FFC135E11409A5BF0F97"
+    },
+    {
+      "file": "design/compositore/giro-3/proposte.html",
+      "hash": "9C38E3B65A5A8DFFA67F8F8FAC00F97BF5D4ED7C96D34EECD50E64E7852E6214"
+    },
+    {
+      "file": "design/compositore/giro-4/proposte-locale.html",
+      "hash": "90B180127C3D67BEB82CE2FFAA8E96503F727DE7BA2F67E55E94A809CD112F9B"
+    },
+    {
+      "file": "design/compositore/giro-4/proposte.html",
+      "hash": "4EA5A64BE94D27A85C4F3C93D7564AD58265898FE0536BB8A8C4684A94F40175"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/a-giu-dark.png",
+      "hash": "E66F7877348511C3D97AC94BD50D6312F6A03C201097CEAC71C3540876D93DAF"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/a-giu-light.png",
+      "hash": "B549C5138DF6A3B8640138CD261A0946E78C3E1324DABEE1C864C6618258C57A"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/a-pc-dark.png",
+      "hash": "C304DE1C3C8ADBAA6C028BCDB0822D9F284B31C4C6ECC7D79E6E8E6C652BA001"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/a-pc-light.png",
+      "hash": "1136C76ED0E023BB7B075990251B881DBB9D4CCE07F9ADA9ACCF9C9EC0D42035"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/a-tel-dark.png",
+      "hash": "6F7A5EB5D6303C7F904C3C64DD2A3A51352BA4430DA8832049CACD63BF7126C8"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/a-tel-light.png",
+      "hash": "20515AA8B7B76BAAC210EDE7FA941862D9AB5F4AD10945621F24F115A6CAE788"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/c-giu-dark.png",
+      "hash": "A46E06C7F782DBE72222CDB16EFC14A229AD8F5D13ACDA4581A214EEA37319E3"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/c-giu-light.png",
+      "hash": "8560A5A97712F942C6987B7747A5A408161BD33414A74B3FD8913C3D79EF6674"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/c-pc-dark.png",
+      "hash": "537D580D32CB541DD2AC903841A2DD3B0D61A9A8748A32A602C149561BA840C9"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/c-pc-light.png",
+      "hash": "A99177E2466B889F5991DA10D290C34DF4D828CD2E3BEC93D7AC1DFDDBCDE0D7"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/c-pc-passaggio-del-mouse.png",
+      "hash": "E4EEA711DAC6DD1551481F1901CAE1BD2E3EC44334E0F3D874BA4F14F05B731B"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/c-tel-dark.png",
+      "hash": "14FEAFCEDF7A2F786270B4E47383073DE672CC567A7AFE30FFF84704E935776D"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/c-tel-light.png",
+      "hash": "F80C33FCA4BE6206BDCD2735180C11782C548A43FCADD8C0ADFDC527017CD08D"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/d-giu-dark.png",
+      "hash": "A543382E71574B279F79E9AA9DDE2BF25E51184D8C106C8D0852A8022F1387AD"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/d-giu-light.png",
+      "hash": "50811AE85058CBC6E48A9D62A3434240AA78C27C539C5775BB6DFE59B96F0F41"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/d-pc-dark.png",
+      "hash": "AA34451691B990F88C263B68FDCA64D7333DE55B164966006776C6D6294B98E8"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/d-pc-light.png",
+      "hash": "D48A67740F292C26588C503BD20335C000EB1EA521691C90ABFE7EF612D940CD"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/d-tel-dark.png",
+      "hash": "E9FF5A97066B8EF4BEE5EB69A63E373F0802251E7792022D483F6C247A74B3C0"
+    },
+    {
+      "file": "design/compositore/giro-5/immagini/d-tel-light.png",
+      "hash": "3BB3CCAA6C0A86462C753D0E23A9265E558B92117903B149E4BE9E0B8F668968"
+    },
+    {
+      "file": "design/compositore/giro-5/proposte-locale.html",
+      "hash": "1465ECCE1590D0FEB99299B1FE4A50C707A090F3636CEB6C833030D7F2C85FDC"
+    },
+    {
+      "file": "design/compositore/giro-5/proposte.html",
+      "hash": "297DD12B5774E1F79261879B223357CA2486477EA1C8CBBED2CDDE38BAD1082E"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/pc-q1-c.png",
+      "hash": "CF84A3E5C23DB7E95C27008F30601590C2CF0310BE95E6DBB824FFAE9627D6F3"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/pc-q1-d.png",
+      "hash": "665C0F0771E6EDF2DAE8F7957A585C66FD0CBC140DAD48682862F5C1CFF79CF1"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/pc-q2-c.png",
+      "hash": "9984FD4D5CB88172AED2C3FEACEE2AB3E89A2DDBAFBBC54FE9F5018C8F3E760B"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/pc-q2-d.png",
+      "hash": "7D10D05E3569C205B15D9C4BD990D9257EC5FC1CF94BA9C4B9207E11E4774CC8"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/pc-q3-c.png",
+      "hash": "10ECC432213FD4036EDE2BC198890AD5C1171930486906759D3AAD88E8F9D6E9"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/pc-q3-d.png",
+      "hash": "710DEAB94705F78F3E44C8E6E3C91E9F0C171566040BCD000FE1A62EE09AB279"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/pc-q4-c.png",
+      "hash": "79FB12790BEAB52F705F9F79CA36AEFBA891FB5F110D4120FAB47BC43ADD1E0B"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/pc-q4-d.png",
+      "hash": "E64131F3B3FA1835ED518735B177AB2F8A051180B9CE5591430549AC11A0115B"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q1-c-giorno-dark.png",
+      "hash": "6C2436CF3F6B693FC55C82DC7C49342CE639F68D5D99810AE0D9440E82588650"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q1-c-giorno-light.png",
+      "hash": "F3814F438324ACA1D076A1A0CF5D6A46248BAF69207DAC0DFD2DDFD3144B6A50"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q1-c-scheda-dark.png",
+      "hash": "5749ED0C34CFFC167AC07DAD895009254E26CAD532775E59500EDD31F2F0F2FB"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q1-c-scheda-light.png",
+      "hash": "6B439689F5ABC9409B9CF8C344B66C959D2671AD06F78D2EFE508C981ABFCE98"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q1-c-sotto-dark.png",
+      "hash": "75C1FACBD0CE7E21751E0580F4A0B84BA85D39C5B82D1E131F59C76E5C5221A2"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q1-c-sotto-light.png",
+      "hash": "C560B4423CBA8D0D3E9E879328988C575215887FC7FB01B698177A83CB33C8C4"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q1-d-giorno-dark.png",
+      "hash": "A0193FE875E708233F12F63406C20E01955368F60FC763611F0DC03382A71CB2"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q1-d-giorno-light.png",
+      "hash": "11D5C37798BDF650C4F6E81A55C83773E00DBF7506F75F6DA891F2F1CF408945"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q1-d-scheda-dark.png",
+      "hash": "AB68526376B5DD74E83B08704BD6520A8C410F8FFBE0924B6E93E958A3E455C5"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q1-d-scheda-light.png",
+      "hash": "F80C1E56FA870F3509C6A5F8EC1CD2370D5524F042F09D5539CD96A2A840C0E7"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q1-d-sotto-dark.png",
+      "hash": "98D17FD3E91C777906EE1DBDA51A064BD9C65E34EFAC90496BE0BF3C75DAC333"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q1-d-sotto-light.png",
+      "hash": "F6DCD2F655E9A6B03268CEF1015D64B46F8509EEF3D3CA8EE4CB3F0D73458DE9"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q2-c-giorno-dark.png",
+      "hash": "F9727985D3CE431D7AA387D5250E458B8B1E7AAA953EE1BCA080137C289B7295"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q2-c-giorno-light.png",
+      "hash": "0297F92DD339874A7D5FE2A5A6F836E6F4B50739316FBEBDC5DB04F4F3493409"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q2-c-scheda-dark.png",
+      "hash": "C4F63242A0F069C55AB6EA659A49B851B93AEFB75168C983CC749F25BE7FB9F2"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q2-c-scheda-light.png",
+      "hash": "3A7970ED6A02BEA5A94E084E22B52828A0052C5D8E0F853B18E206B86C4835CD"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q2-c-sotto-dark.png",
+      "hash": "6F6BED425283D9EE523AA48C46D63951C1E5B45E9714A74EAA86DF34BAA7FBA3"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q2-c-sotto-light.png",
+      "hash": "3615B6CD2AABD43DDAAF4C80F173427A803A86B15EB3F37B25D32CC6BBE69ED5"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q2-d-giorno-dark.png",
+      "hash": "AE13BCE0BEDD88AD7B95C041AB625F681C460A0F5CB231CA2CF397440D32820D"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q2-d-giorno-light.png",
+      "hash": "1E7D9766B80AD6798E97038213611162E892603E75967772694405BD8486B375"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q2-d-scheda-dark.png",
+      "hash": "A595EB2858875CBD322397DB2C02F6BF492CDCF39B9E144F560199668B38E42E"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q2-d-scheda-light.png",
+      "hash": "8E49C423F6D0D1CDD0ED5B13B19D9CF4A9D8878129CC6506A38F1304EFF4E55E"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q2-d-sotto-dark.png",
+      "hash": "A26AA1CB61C786039228A5D727C30AE7C9D779C61E89D5BC36CDC1456C511724"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q2-d-sotto-light.png",
+      "hash": "81914CF57C7DA20622D6CC4A11954B45F3D6E0A6CE385927ECF01513F9D7C8A9"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q3-c-giorno-dark.png",
+      "hash": "4251B34CBEAB26EE0C3C0009BB03EEF6D18DCE4CC44F7ABA9E835B80330399AF"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q3-c-giorno-light.png",
+      "hash": "CCC7F02DA6D726F8E3D7668EC3885CF2144E6FA04DCC48051F1FCAECA65C74B7"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q3-c-scheda-dark.png",
+      "hash": "F0658BE7EB37D570EE43AA6EBCE76335164FDECFF0E6080ACD2A18038632E792"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q3-c-scheda-light.png",
+      "hash": "6CF1B7981DB68DE6C68B6E5D7ED485A2BBC4711099100621513C4129AA0EA7A6"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q3-c-sotto-dark.png",
+      "hash": "5B2079D83F6724849C8DBC535B0E150A14C6A389F786B82186C8814A9C2BE665"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q3-c-sotto-light.png",
+      "hash": "44262154C1F94E02CF3FF5D1CFC4FEBBB5B1C413963F14C12CE99B53CA2A9B2E"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q3-d-giorno-dark.png",
+      "hash": "78167CCD119F5EFFE507E7A2C51AF151549DB4DCF4D233D74376142745295F41"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q3-d-giorno-light.png",
+      "hash": "C4532EB0DC841E0EFCC5538F95FF68CE1EE7D06F69D244274057546EE50ABCD8"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q3-d-scheda-dark.png",
+      "hash": "D295CD09C8C2DA0E2D3E36A15A167B5C85BAD619B1F5490BC981585750856675"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q3-d-scheda-light.png",
+      "hash": "97827F7682CFABD7E0140E052F91D194D936E936F665A4C0AFDDEE3BFCD03427"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q3-d-sotto-dark.png",
+      "hash": "9A6E8CBFAD17B28B663D1B3152C377E143BAF8A2D62A067379C88DEC4C116AFA"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q3-d-sotto-light.png",
+      "hash": "472166E13E7FFEF9D124B3347274E6024F8D26311926D20D03EB1269B9319868"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q4-c-giorno-dark.png",
+      "hash": "B883A51E9D42876FE4126B690CBDEFC2A493AD1E9B2720A281EBBFB95DE4A6A4"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q4-c-giorno-light.png",
+      "hash": "17375B08DD327D0FDBFCE2316C71DDE9DD8B0BD649638FB8F2B5031BA241A929"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q4-c-scheda-dark.png",
+      "hash": "7A81FBF1E8C9AD8A52A9CDE39767B3D542EE2AC8181E9546848B97B584916FD2"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q4-c-scheda-light.png",
+      "hash": "533A7C9842F6685687309CAF17BA588BAF88B84F21E8E31A7A3830A240665240"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q4-c-sotto-dark.png",
+      "hash": "7F0F7A547B1F41BB2AB04F85DCDF47A605081FF52753DC5524B13ECF56B81EA7"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q4-c-sotto-light.png",
+      "hash": "3DF592E9D75BED789250DD41E6CAF6D3DC889EFB71BA70B11A380933CEE30742"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q4-d-giorno-dark.png",
+      "hash": "86176FB7BB09FADE7AAECB95B88D9B254478375059086A692DF8F9158CB46063"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q4-d-giorno-light.png",
+      "hash": "74F2F80181678A12808B21499533DF750A8141CA4A8315E0784F78BF020705AC"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q4-d-scheda-dark.png",
+      "hash": "6602C25B5D9A451A4477B355FC9F94E3965A773DEF2B048263A1E9C36863D16D"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q4-d-scheda-light.png",
+      "hash": "22A45DE616A6396C5D1227AC68E3B814AB558B064948A2ECED224E921282C001"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q4-d-sotto-dark.png",
+      "hash": "0DAA28B5431E8E867CCEFF80D4C762EB346C74512272F124F021D3D1033FA7C4"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/immagini/q4-d-sotto-light.png",
+      "hash": "3E5D89763E948734E2C2E70A9964DE1D8B041427777CC5A68E16BE283F1558E0"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/proposte-locale.html",
+      "hash": "9B4C9530E3E627E0253C4368D586282F6857D3634E91384B5C44CEC80B5544CF"
+    },
+    {
+      "file": "design/compositore/scheda-giro-1/proposte.html",
+      "hash": "ADEB6FB0A3C46B2666D76A0927D1A4C0A330D61BEE2DDBE33EA0902C851A9219"
+    },
+    {
+      "file": "design/home-napoli/anteprima-error.log",
+      "hash": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855"
+    },
+    {
+      "file": "design/home-napoli/anteprima-output.log",
+      "hash": "DE13D36EEC626FCD6B4C17D26D1A3C1012C6E954D62DA2AFE18BF660361617B2"
+    },
+    {
+      "file": "design/home-napoli/commit-messaggio.txt",
+      "hash": "81AFAD9BF9B753A6B670F472CF8F9BF5019EA4E2DEF33BAC83D36A56262AC456"
+    },
+    {
+      "file": "design/home-napoli/lighthouse-a-light.json",
+      "hash": "AC634E43D0CEE1904095486D3AC595F46ADFC5421B4523EDCA3F82DAB1817039"
+    },
+    {
+      "file": "design/home-napoli/progetto-build.log",
+      "hash": "AE6A0E296E5E28115C4B317948FDD61120AEE46D663510A244B433B0A51619B1"
+    },
+    {
+      "file": "design/home-napoli/progetto-check-links.log",
+      "hash": "A24F0F11BCACEEE7D86E3275975419F1FD0ABB1AA38EACCDA78DA8743D5F36A0"
+    },
+    {
+      "file": "design/home-napoli/progetto-test.log",
+      "hash": "470384794F2B9B56E269D9529E9EDB967039B3FB0639F43DAE8D0720CFCD1BB1"
+    },
+    {
+      "file": "design/home-napoli/rapporti/a3-indice.jpg",
+      "hash": "4BDDC14425B852185FEF65311BEF505E90C31924269EC9862E532731B56EBF86"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-a-dark.json",
+      "hash": "2F8D4617A2048327A0C36B8E69EF150AB5136012FAC0B1BB9FDE86DF732DD61E"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-a-light.json",
+      "hash": "A760708A749F1C77C48EF5079FC6EBBFAEF4CBF79CCAABCDD1F82AB0A4206166"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-a2-dark.json",
+      "hash": "D4CAE83B1444119C2D9715DA6722163FDC9718D312F74CD4CF838DF78CFB71B7"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-a2-light.json",
+      "hash": "A6782462C1003169DEE61BEA002B82E2BAA57E54388E68D4601F5E4FCA9B49BA"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-a3-dark.json",
+      "hash": "C011CF5E5C81B1CD85907991C80EE972E346C96CC59F84D0CB72876B283035C1"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-a3-light.json",
+      "hash": "E27246C70E4C49E6D9A0FA55C2E35B81DB2D4D80E3AC4F9F52CC048984F39FED"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-b-dark.json",
+      "hash": "24103A6C7A4012E1CB11D5C438D68A0C6FC289AB36C7CE6BB0980026B623B7FB"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-b-light.json",
+      "hash": "45D5F1CCECBAEE9F0D53A605A99476A68BC55C9D1377A50399294C1E7F83759D"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-b2-dark.json",
+      "hash": "2FEAD5106464F97A8C7ECCAD855726059131055658DE730558B6C3EB56C8305B"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-b2-light.json",
+      "hash": "97116F53BC5FFAD2357E1C968910376FB70CDEE64EE4490443C221B047003B57"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-b3-dark.json",
+      "hash": "9CDF8B9D24C9910758B106641E8DC5514A6B85F8688335D1D981F2B3C256AEFB"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-b3-light.json",
+      "hash": "EB30013135BFC0B261FAD07E2B712DBFE9DAB0B360C21808EA6F0039529E8A08"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-c-dark.json",
+      "hash": "318E01DBBF28DBC1BCFCEBB4AD1CDCE237639252BA7AE8E833104A8513778880"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-c-light.json",
+      "hash": "F8C72AD73E57D5616CDF12A1BC60DED14874C9CD8D6503CA201ED4782BCCD414"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-d-dark.json",
+      "hash": "3B26111BDD31442FBD351B4AFE832D69EAE64AC14C6AC9112B6A0D8D6A9A3F61"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-d-light.json",
+      "hash": "BA7B5DEF74136FD52BCF7DF3FF885A670E48F182C034F169323A19BADA3787F9"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-e-dark.json",
+      "hash": "8EFE5EAB53C2BEFA3E3EE478F54AA0F72B8FEA4AE33387F98CBA1F5CA20C79C1"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-e-light.json",
+      "hash": "E9AB5EE8A468129462CF70EA63859A4879DCE3C4036FF3BDF4A1991E78BF71F6"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-f-dark.json",
+      "hash": "42E46D479EACB0484D4B50539BEF336EAFFD62318528330CD7165A7D1D661762"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-f-light.json",
+      "hash": "65489DDE32CA5BE9C6292036E0C505E53F5AFAFBCC6FECBD3FEB7C9EEAD46ADB"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-g-dark.json",
+      "hash": "3A87787D9DAFA0A5CD7AED9EA3F456CDF712A1641BD47883E79A0A3C150CF377"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-g-light.json",
+      "hash": "48FCD28053E925624480CA885766CB3275B924C9400BAC71A913CEE0397C95C6"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-h-dark.json",
+      "hash": "8B84921B49161CB52DD28908835DE73D9799DB9D18BE1E392D549B06B11C9A28"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-h-light.json",
+      "hash": "9B321E2436486FF1C09EEFC5F96A5810049FBC6C349C00D3B031BFFE429749CE"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-i-dark.json",
+      "hash": "4809F046762436BAFA7FF633FABE499BA50D653AF9590F1A6B0C4383D5A89C3D"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-i-light.json",
+      "hash": "87866571C4760B1CEB6E90735B903B6338E51B31D42FA193C0ADBA02B1946E07"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-j-dark.json",
+      "hash": "5E4CCAAD9376736FD30A34EBB42301A8DAC6F84DA2F9E06C56411D8C875708AA"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-j-light.json",
+      "hash": "E7826E9A9BF50E002490F58F54FAFACF8C84EC46661384EBF2E3AF63B2DCA9E0"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-k-dark.json",
+      "hash": "67418C56C61E2ACC99993EDDEA6C6B3CABD937252039B6D23361864CE08F46EA"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-k-light.json",
+      "hash": "B82320DCD68BD60F4CAE4C19CC0FCCA1FBA6579BBC7EE9906A5C6489BB4EF6B9"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-l-dark.json",
+      "hash": "5866277A72C9AB41DC5F297D02322B5A1DD954E9DB676211F18EE75A8C6737EE"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-l-light.json",
+      "hash": "6191AF16C243577315D906CE4E45F4C52178C0125FE22A097E3E1A081F09A102"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-m-dark.json",
+      "hash": "E172243F8C70C94853C83DB5BCEE64078A6214DD6BEDEC8F5C7A71D7A92BB2A7"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-m-light.json",
+      "hash": "7E01AC3AEC0755EB3EB8BA7D817873D23CEA26707C7AE9E37B867F4E43BA47AA"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-n-dark.json",
+      "hash": "36AFE8F572F36E8A8EB86FD3A70579817FDCEB473076C40C12121C53697CC3E0"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-n-light.json",
+      "hash": "8761EFB2ACB6CAF54AEE2B06CE6FD5A84A207122821557F6F9EEFDB4CBE05DC0"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-o-dark.json",
+      "hash": "F0D17CFD4E690B237F01C47C07E7B3B917A477C2226FD78D3C5720AA95F24198"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-o-light.json",
+      "hash": "9359089E3CD8E2E87896E8F504D43D8B16EFD719A09B807200155A447B31E5B0"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-o2-dark.json",
+      "hash": "821AE22C19B0CE1487E07772D6AE6895809F6CC3882211015F0CB07BBDEB435A"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-o2-light.json",
+      "hash": "F7E56C11F1AF49C873523147371A53D3E47E2DC1D667A4A0FDEBC47BABD51F5A"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-o3-dark.json",
+      "hash": "2B009D420CF2C5A1D280376240B04662A8BAC358CD41B371943975E195B521FA"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-o3-light.json",
+      "hash": "2B63B37BC847A130FFF091A1C4BD83AEB9CF7B3A2C46DDA6E347D5F529139D48"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-o4-dark.json",
+      "hash": "BCA715D3AFDDEC08476B5592AFD14A80CAD2A4A48C27B3062D782B4C4086A59B"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-o4-light.json",
+      "hash": "A3BFD830B64E0C858C1CC85EC065F40FA2E1E8032FF509568B113FBEAEF84BE1"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-p-dark.json",
+      "hash": "193E439D5921A0EC7B33BF22B4DF96F62780616874535B3A7B60268ED867F439"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-p-light.json",
+      "hash": "126EA79B22B66B46DE7B6891F372A1ABD23DBB4070AFCE68DCF6DABA279ACC6C"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-q-dark.json",
+      "hash": "195264AD5BE6DA8588FAD00FC9F3F78223838401524F62C88D2D41805A899987"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-q-light.json",
+      "hash": "96D7DD7D0A710CB7A405F51E5DB709DC1EDD047F763E70081C62FCB13856495E"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-r-dark.json",
+      "hash": "CE3FC1BB0E86238211BA8253BB3ABA357E9E53A637760E6D04F6869FDB00BFB5"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-r-light.json",
+      "hash": "400D2319EE3DF44776D37AB4BBC19304AFCC1AB524209B6FF6984A66F75704B9"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-s-dark.json",
+      "hash": "6B5DC5A6BE0BBE4A484B40537A17BBE226A8AE492853751104036FC5B5247DA1"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-s-light.json",
+      "hash": "C7FF3951DDE78A77FB60FBF01A587D24841E175CF0641938624B655FFF2915F9"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-t-dark.json",
+      "hash": "34CEE0EC9042BC3A8FDEE1CCC0B16FC6492D21793DE51E1599CBB27C08A99B7E"
+    },
+    {
+      "file": "design/home-napoli/rapporti/lighthouse-t-light.json",
+      "hash": "9C312247C06CC52B67E293A51AC97D254F435C3B759AE56071B5EE0939B20B47"
+    },
+    {
+      "file": "design/home-napoli/rapporti/o4-zoom.jpg",
+      "hash": "6DD329B29DF23EB2230EC6170B1686FE1CCFEE39892410FDF612F5BD79DAFB0A"
+    },
+    {
+      "file": "design/home-napoli/rapporti/primo-giro-5.json",
+      "hash": "88F3D4D423AB52504DB7235A73CDA2A7FB300561389F9A787D38E24E0DA79E76"
+    },
+    {
+      "file": "design/home-napoli/rapporti/ux1280.jpg",
+      "hash": "C8E9FF001C5ED54FDE8DCA4F1541F91DF5F5E3FE90DE6F0A9DA2AD3D15F9599A"
+    },
+    {
+      "file": "design/home-napoli/rapporti/ux375.jpg",
+      "hash": "47AB626C2448BC6D6C0940C014B2412BF43EABF844B87F0D944D6E916DE6B334"
+    },
+    {
+      "file": "design/home-napoli/rapporti/verifiche-giro-4-prima-contrasto.json",
+      "hash": "5C21499E4A479DDD033FF16F95B3696B4194C43CBCD116A3B385B39DA919DA18"
+    },
+    {
+      "file": "design/home-napoli/verifica.log",
+      "hash": "25D58FEF64753061E260271D3F9455466323A61438D23EC8438C18887A823034"
+    }
+  ],
+  "trackedChanges": [
+    "src/layouts/Base.astro",
+    "test/manifest-preview.test.mjs"
+  ]
+}

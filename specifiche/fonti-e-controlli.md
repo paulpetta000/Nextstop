@@ -140,4 +140,6 @@ GPT-6-luna / Low solo per formattazione o estrazione semplice su decisioni già 
 - [x] Enrico autorizza il solo Blocco 5: integrazione locale di A completa e D, metadati condivisi, descrizioni e durate. [Resoconto del 13 ottobre](../docs/storico/2026-10-13-fonti-blocco-5.md).
 - [x] Enrico approva l'integrazione visiva del Blocco 5 e autorizza il solo Blocco 6 per revisione, correzioni e verifiche locali il 13/10/2026.
 - [x] Riserve tecniche locali chiuse nel Blocco 6: errore del compositore riprodotto prima della correzione e Lighthouse mobile almeno 95 in tutte le 18 misure definitive; [risultati, condizioni e limiti](../docs/storico/2026-10-13-fonti-blocco-6.md).
-- [ ] Approvazione della revisione locale e successiva autorizzazione al rilascio; push, merge su main e deploy non autorizzati.
+- [x] Enrico approva il Blocco 6 locale il 13/10/2026 e autorizza push, PR e anteprima.
+- [x] PR #3, CI e anteprima verificate, con manifest corretto dopo test riproduttivo; [resoconto e riserva Lighthouse cloud](../docs/storico/2026-10-13-fonti-rilascio-anteprima.md).
+- [ ] Chiusura della riserva prestazionale cloud e OK finale di Enrico; merge su main e produzione non autorizzati.
