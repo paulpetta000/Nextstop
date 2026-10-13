@@ -2,7 +2,15 @@
 
 Sito statico in [Astro](https://astro.build), pubblicato su Vercel. Nato il 06/10/2026 dagli itinerari di Napoli a Vela (`specifiche/sito-itinerari-separazione.md`).
 
+## Documentazione e assistenti
+
+- [AGENTS.md](AGENTS.md): istruzioni Codex; [CLAUDE.md](CLAUDE.md): istruzioni Claude Code. Entrambi usano le [regole comuni](docs/REGOLE.md) e lo [stato corrente](PROGRESS.md).
+- [Indice delle letture](docs/README.md): scegli moduli e documenti pertinenti; contiene inventario delle skill, rimandi allo storico e distinzione fra manutenzione e proposte grafiche.
+- Qui restano comandi, struttura e procedure per sviluppatori. [ROADMAP](ROADMAP.md) per lavori futuri, [specifiche](specifiche/README.md) per vincoli approvati, [DESIGN](DESIGN.md) solo per l'interfaccia.
+
 ## Comandi
+
+Node >=22.12. L'installazione serve alla prima preparazione autorizzata, non a ogni sessione AI; su questo computer vedi [ambiente locale](docs/AMBIENTE-LOCALE.md).
 
 ```sh
 npm install
@@ -114,9 +122,29 @@ Una scheda `confermato` che ha **solo** fonti `enciclopedia`, `blog` o `altro` f
 - la **firma**: che `src/testi/firme.json` corrisponda alle schede di oggi;
 - le **date** delle schede e delle fonti (niente nel futuro, «ricontrollare» dopo «controllato») e i tipi di fonte (`test/dati.test.mjs`);
 - il **controllo dei link**, provato su un sito finto (`test/link.test.mjs`);
-- le **date in italiano** di `src/lib/formato.ts`, in cinque fusi orari (`test/date.test.mjs`).
+- le **date in italiano** di `src/lib/formato.ts`, in cinque fusi orari (`test/date.test.mjs`);
+- la **memoria degli itinerari** oltre il cinquantesimo, l'itinerario attivo, storage disabilitato/pieno e archivi corrotti (`test/memoria-itinerari.test.mjs`);
+- i **link degli itinerari**: andata/ritorno, gite, sanitizzazione, limiti e compatibilità dei link vecchi (`test/link-itinerari.test.mjs`);
+- la **firma delle posizioni**, condivisa dalla build e dal generatore in `src/lib/itinerari/firma-posizioni.mjs`: compatibilità con il formato precedente, ordine dei punti, ingressi e arrivi cambiati (`test/firma-posizioni.test.mjs`). Solo Node, senza rigenerare i dati;
+- i **calcoli degli itinerari**: orari e totali, giornata piena, scenari di calendario, apertura dei locali, ripartenza dal vivo e bus con partenze valide/mancanti/esaurite (`test/calcolo-itinerari.test.mjs`). Casi sintetici, senza rete o dati utente;
+- gli **spostamenti delle tappe**: destinazione piena, gruppi senza spazio, limiti, ordine e preparazione senza mutare l'originale (`test/spostamenti-itinerari.test.mjs`). I casi che perdevano dati sono stati riprodotti prima delle correzioni del Blocco 1.
 
-I test non fermano la pubblicazione su Vercel: si eseguono prima di dire «fatto», insieme a build e `check:links`.
+Esecuzione durante il lavoro e a fine blocco secondo le [regole comuni](docs/REGOLE.md#verifiche-e-letture), senza ripetere la build per sole modifiche documentali. Il workflow seguente verifica le pull request, senza gestire la pubblicazione su Vercel.
+
+## GitHub Actions · controlli delle pull request
+
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) è preparato sul ramo di manutenzione: solo PR verso `main`, un job Ubuntu 24.04, permessi `contents: read`, limite di 15 minuti e cancellazione delle esecuzioni superate per la stessa PR. Nessun agente AI, deploy, merge automatico o E2E pesante. Non salta i cambiamenti a documenti, YAML o dati.
+
+Per riusare gli strumenti del runner e non introdurre Actions esterne, poche righe di Git leggono il commit di prova della PR; il token di lettura è usato solo in quel passo e non salvato nella configurazione Git. Git e Node >=22.12 sono [già presenti nel runner Ubuntu 24.04](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md) (verificato il 09/10/2026); il workflow controlla la versione disponibile, senza fissare una patch o installare un runtime aggiuntivo.
+
+Sul runner, in ordine:
+
+1. `npm ci --ignore-scripts --no-audit --no-fund`: installa le sole dipendenze già fissate nel lockfile; [disabilita gli script automatici di installazione](https://docs.npmjs.com/cli/v11/commands/npm-ci/#ignore-scripts), senza introdurre pacchetti nel progetto.
+2. `npm test`.
+3. `npm run build` (telemetria Astro disabilitata).
+4. `npm run check:links`, solo dopo una build riuscita.
+
+**Stato della verifica:** YAML, permessi, trigger, ordine e sintassi Bash controllati localmente; test/build/link eseguiti su Windows con dipendenze già presenti. Il 09/10/2026 la [prima esecuzione su GitHub](https://github.com/paulpetta000/Nextstop/actions/runs/37976226763), nella [PR #1](https://github.com/paulpetta000/Nextstop/pull/1), ha superato anche l'installazione senza script su Ubuntu 24.04 con Node 22.23.3: 55/55 test, build e 888 link validi. I binari Linux di `esbuild`/`sharp` funzionano con questa installazione. Nessuna installazione locale; non serve creare token personali o fornire segreti Vercel.
 
 ## Altro
 

@@ -1,0 +1,13 @@
+✔ registro completo: 195 documenti, metadati presenti, originali e date conservati (3.0303ms)
+✔ originali diretti: PDF EAV e download ANM, URL registrati ancora disponibili (0.4407ms)
+✔ una fonte condivisa resta unica anche con schede e durata della stessa pagina (0.6525ms)
+✔ nel gruppo del locale le informazioni pratiche precedono la storia (7.9636ms)
+✔ la ricerca approvata trova i biglietti di Sansevero anche con costo al singolare (0.33ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 46.3714

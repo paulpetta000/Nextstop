@@ -1,0 +1,37 @@
+✔ il locale cercato prevale sulle congiunzioni della frase (9.8925ms)
+✔ accenti e nome composto identificano Gesù Vecchio (0.3794ms)
+✔ una congiunzione da sola non elegge un luogo (1.4213ms)
+✖ due luoghi ugualmente pertinenti conservano l’elenco senza preferenza (1.8645ms)
+✔ nome con apostrofo e ricerca parziale restano utilizzabili (0.7252ms)
+✔ i sinonimi già previsti restano coerenti (0.4095ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 156.5478
+
+✖ failing tests:
+
+test at design\fonti\pagina-generale\giro-2\ricerca.test.mjs:8:1
+✖ due luoghi ugualmente pertinenti conservano l’elenco senza preferenza (1.8645ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  'Ischia' !== null
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/ricerca.test.mjs:8:89)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 'Ischia',
+    expected: null,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

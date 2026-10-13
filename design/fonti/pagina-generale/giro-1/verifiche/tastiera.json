@@ -1,0 +1,113 @@
+{
+  "rows": [],
+  "scans": [],
+  "tasks": [],
+  "behavior": [
+    {
+      "key": "a",
+      "keyboard": true,
+      "reducedMotion": [],
+      "normalMotion": [
+        {
+          "name": "atlas-back",
+          "iterations": 1
+        },
+        {
+          "name": "atlas-middle",
+          "iterations": 1
+        },
+        {
+          "name": "atlas-front",
+          "iterations": 1
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "nojs": {
+        "count": 195,
+        "visible": 195
+      }
+    },
+    {
+      "key": "b",
+      "keyboard": true,
+      "reducedMotion": [],
+      "normalMotion": [
+        {
+          "name": "book-fan",
+          "iterations": 1
+        },
+        {
+          "name": "book-fan",
+          "iterations": 1
+        },
+        {
+          "name": "book-fan",
+          "iterations": 1
+        },
+        {
+          "name": "book-fan",
+          "iterations": 1
+        },
+        {
+          "name": "book-fan",
+          "iterations": 1
+        },
+        {
+          "name": "sheet-settle",
+          "iterations": 1
+        }
+      ]
+    },
+    {
+      "key": "b",
+      "nojs": {
+        "count": 195,
+        "visible": 195
+      }
+    },
+    {
+      "key": "c",
+      "keyboard": true,
+      "reducedMotion": [],
+      "normalMotion": [
+        {
+          "name": "path-draw",
+          "iterations": 1
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "nojs": {
+        "count": 195,
+        "visible": 195
+      }
+    },
+    {
+      "key": "d",
+      "keyboard": true,
+      "reducedMotion": [],
+      "normalMotion": [
+        {
+          "name": "folio-back",
+          "iterations": 1
+        },
+        {
+          "name": "folio-front",
+          "iterations": 1
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "nojs": {
+        "count": 195,
+        "visible": 195
+      }
+    }
+  ],
+  "external": [],
+  "failures": []
+}

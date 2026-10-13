@@ -1,0 +1,36 @@
+✔ registro completo: 195 documenti, metadati presenti, originali e date conservati (4.7996ms)
+✔ originali diretti: PDF EAV e download ANM, URL registrati ancora disponibili (0.5376ms)
+✔ una fonte condivisa resta unica anche con schede e durata della stessa pagina (1.9852ms)
+✔ nel gruppo del locale le informazioni pratiche precedono la storia (9.0621ms)
+✖ la ricerca approvata trova i biglietti di Sansevero anche con costo al singolare (4.2122ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 4
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 157.0944
+
+✖ failing tests:
+
+test at test\fonti-registro.test.mjs:44:1
+✖ la ricerca approvata trova i biglietti di Sansevero anche con costo al singolare (4.2122ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(corpus.includes(equivalente(normalizza('costo'))))
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/test/fonti-registro.test.mjs:47:9)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

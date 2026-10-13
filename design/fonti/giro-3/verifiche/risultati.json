@@ -1,0 +1,308 @@
+{
+  "rows": [
+    {
+      "name": "d.html",
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d.html",
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d.html",
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d.html",
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d.html",
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d.html",
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d.html",
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d.html",
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d.html",
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d.html",
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d.html",
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d.html",
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-lungo.html",
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-lungo.html",
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-lungo.html",
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-lungo.html",
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-lungo.html",
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-lungo.html",
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-lungo.html",
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-lungo.html",
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-lungo.html",
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-lungo.html",
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-lungo.html",
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-lungo.html",
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-breve.html",
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-breve.html",
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-breve.html",
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-breve.html",
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-breve.html",
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-breve.html",
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-breve.html",
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-breve.html",
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-breve.html",
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-breve.html",
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-breve.html",
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-breve.html",
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "axe": []
+    },
+    {
+      "name": "d-vuoto.html",
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-vuoto.html",
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-vuoto.html",
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-vuoto.html",
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-vuoto.html",
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "axe": []
+    },
+    {
+      "name": "d-vuoto.html",
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "axe": []
+    }
+  ],
+  "documentsPreserved": true,
+  "sourceCounts": [
+    12,
+    180,
+    1,
+    0
+  ],
+  "keyboardSearchAndNoJS": true,
+  "errors": [],
+  "requests": []
+}

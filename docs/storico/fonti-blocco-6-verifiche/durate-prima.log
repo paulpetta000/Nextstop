@@ -1,0 +1,34 @@
+✔ registro completo: 195 documenti, metadati presenti, originali e date conservati (3.2609ms)
+✔ originali diretti: PDF EAV e download ANM, URL registrati ancora disponibili (0.3905ms)
+✔ una fonte condivisa resta unica anche con schede e durata della stessa pagina (0.666ms)
+✔ nel gruppo del locale le informazioni pratiche precedono la storia (9.8941ms)
+✔ la ricerca approvata trova i biglietti di Sansevero anche con costo al singolare (0.4427ms)
+✖ ogni durata attribuita al gestore è riconoscibile nella descrizione del documento (7.8662ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 5
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 174.4063
+
+✖ failing tests:
+
+test at test\fonti-registro.test.mjs:50:1
+✖ ogni durata attribuita al gestore è riconoscibile nella descrizione del documento (7.8662ms)
+  AssertionError [ERR_ASSERTION]: palazzo-reale: la durata deve essere trovabile dal testo visibile
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/test/fonti-registro.test.mjs:55:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'Orari e biglietti del Palazzo e accesso al giardino',
+    expected: /durata|tempo/i,
+    operator: 'match',
+    diff: 'simple'
+  }

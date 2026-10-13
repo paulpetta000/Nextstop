@@ -24,15 +24,4 @@ export function intervallo(a: string, b?: string) {
 
 export const giorniTra = (a: string | Date, b: string | Date) => Math.round((d(b).getTime() - d(a).getTime()) / 86400000);
 
-// Mini-formattazione per le risposte: [testo](/link/) e **grassetto**. Il resto viene scappato.
-export function testoRicco(s: string) {
-  const esc = s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
-  return esc
-    .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
-    .replace(/\[([^\]]+)\]\(([^)\s]+)\)/g, (_, t, u) => {
-      const esterno = /^https?:/.test(u);
-      return `<a href="${u}"${esterno ? ' rel="noopener"' : ''}>${t}</a>`;
-    });
-}
-
 export const numero = (n: number) => n.toLocaleString('it-IT');

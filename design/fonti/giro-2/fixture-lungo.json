@@ -1,0 +1,3436 @@
+[
+  {
+    "id": "osm",
+    "titolo": "OpenStreetMap",
+    "editore": "Collaboratori di OpenStreetMap (licenza ODbL)",
+    "url": "https://www.openstreetmap.org/copyright",
+    "formato": "",
+    "data": "2026-09-30",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Mappe e dati",
+    "luoghi": [
+      "Città della Scienza",
+      "Il belvedere di Sant'Antonio a Posillipo",
+      "Il belvedere di via Petrarca",
+      "Il lungomare: via Partenope, via Caracciolo e Villa Comunale",
+      "La Pedamentina, da San Martino in discesa",
+      "Marechiaro",
+      "Monte Echia, il belvedere di Pizzofalcone",
+      "Piazza del Plebiscito e Galleria Umberto I",
+      "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+      "Via dei Tribunali: pizza e cibo di strada",
+      "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli"
+    ],
+    "area": "Mappe e dati",
+    "scopo": "Costa, strade, stazioni e punti panoramici della mappa",
+    "scopoDisponibile": true,
+    "avvertenza": "Dati cartografici, licenza ODbL; non documenta gli orari di apertura.",
+    "cautela": false,
+    "prova": "src/data/fonti.yaml · osm"
+  },
+  {
+    "id": "tp-italia-duomo",
+    "titolo": "Duomo di Napoli",
+    "editore": "Ministero del Turismo (italia.it)",
+    "url": "https://www.italia.it/it/campania/napoli/duomo",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Duomo e Tesoro di San Gennaro",
+    "luoghi": [
+      "Duomo e Tesoro di San Gennaro"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-tesoro-info",
+    "titolo": "Info e tariffe",
+    "editore": "Museo del Tesoro di San Gennaro",
+    "url": "https://tesorosangennaro.it/info-e-tariffe/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Duomo e Tesoro di San Gennaro",
+    "luoghi": [
+      "Duomo e Tesoro di San Gennaro"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-tesoro-faq",
+    "titolo": "FAQ",
+    "editore": "Museo del Tesoro di San Gennaro",
+    "url": "https://tesorosangennaro.it/faq/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Duomo e Tesoro di San Gennaro",
+    "luoghi": [
+      "Duomo e Tesoro di San Gennaro"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-sansevero-orari",
+    "titolo": "Orari e tariffe",
+    "editore": "Museo Cappella Sansevero",
+    "url": "https://www.museosansevero.it/organizza-la-tua-visita/orari-e-tariffe",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Cappella Sansevero",
+    "luoghi": [
+      "Cappella Sansevero"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-sansevero-accesso",
+    "titolo": "Modalità di accesso",
+    "editore": "Museo Cappella Sansevero",
+    "url": "https://www.museosansevero.it/organizza-la-tua-visita/modalita-di-accesso",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Cappella Sansevero",
+    "luoghi": [
+      "Cappella Sansevero"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-sansevero-accessibilita",
+    "titolo": "Accessibilità",
+    "editore": "Museo Cappella Sansevero",
+    "url": "https://www.museosansevero.it/organizza-la-tua-visita/accessibilita",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Cappella Sansevero",
+    "luoghi": [
+      "Cappella Sansevero"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-santachiara-orari",
+    "titolo": "Orari",
+    "editore": "Monastero di Santa Chiara",
+    "url": "https://www.monasterodisantachiara.it/orari/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Santa Chiara e il chiostro maiolicato",
+    "luoghi": [
+      "Santa Chiara e il chiostro maiolicato"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-santachiara-faq",
+    "titolo": "FAQ",
+    "editore": "Monastero di Santa Chiara",
+    "url": "https://www.monasterodisantachiara.it/faq/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Santa Chiara e il chiostro maiolicato",
+    "luoghi": [
+      "Santa Chiara e il chiostro maiolicato"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-napolike-gesu",
+    "titolo": "Chiesa del Gesù Nuovo",
+    "editore": "Napolike",
+    "url": "https://www.napolike.it/chiesa-del-gesu-nuovo-napoli",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+    "luoghi": [
+      "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-napolike-sangregorio",
+    "titolo": "Chiesa di San Gregorio Armeno",
+    "editore": "Napolike",
+    "url": "https://www.napolike.it/point/chiesa-san-gregorio-armeno-napoli",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+    "luoghi": [
+      "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-piomonte",
+    "titolo": "Info e orari",
+    "editore": "Pio Monte della Misericordia",
+    "url": "https://piomontedellamisericordia.it/info-e-orari/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pio Monte della Misericordia",
+    "luoghi": [
+      "Pio Monte della Misericordia"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-piomonte-caravaggio",
+    "titolo": "Caravaggio",
+    "editore": "Pio Monte della Misericordia",
+    "url": "https://piomontedellamisericordia.it/caravaggio/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pio Monte della Misericordia",
+    "luoghi": [
+      "Pio Monte della Misericordia"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-mann-orari",
+    "titolo": "Orari e biglietti",
+    "editore": "Museo Archeologico Nazionale di Napoli",
+    "url": "https://www.museoarcheologiconapoli.it/orari-e-biglietti/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Museo Archeologico Nazionale",
+    "luoghi": [
+      "Museo Archeologico Nazionale"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-mic-mann",
+    "titolo": "Museo Archeologico Nazionale di Napoli",
+    "editore": "Ministero della Cultura",
+    "url": "https://cultura.gov.it/luogo/museo-archeologico-nazionale-di-napoli-1",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Museo Archeologico Nazionale",
+    "luoghi": [
+      "Museo Archeologico Nazionale"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-sanlorenzo",
+    "titolo": "Info visite",
+    "editore": "La Neapolis Sotterrata (San Lorenzo Maggiore)",
+    "url": "https://www.laneapolissotterrata.it/Home/InfoVisite",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "San Lorenzo Maggiore e gli scavi",
+    "luoghi": [
+      "San Lorenzo Maggiore e gli scavi"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-sotterranea-orari",
+    "titolo": "Orari",
+    "editore": "Napoli Sotterranea",
+    "url": "https://www.napolisotterranea.org/orari/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Napoli Sotterranea",
+    "luoghi": [
+      "Napoli Sotterranea"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-sotterranea-faq",
+    "titolo": "FAQ",
+    "editore": "Napoli Sotterranea",
+    "url": "https://www.napolisotterranea.org/faq/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Napoli Sotterranea",
+    "luoghi": [
+      "Napoli Sotterranea"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-madre",
+    "titolo": "Visita",
+    "editore": "Museo Madre",
+    "url": "https://www.madrenapoli.it/visita/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Museo Madre",
+    "luoghi": [
+      "Museo Madre"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-catacombe",
+    "titolo": "Pianifica la visita",
+    "editore": "Catacombe di Napoli",
+    "url": "https://catacombedinapoli.it/it/pianifica-visita-guidata-napoli/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Catacombe di San Gennaro",
+    "luoghi": [
+      "Catacombe di San Gennaro"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-catacombe-basilica",
+    "titolo": "Basilica di Santa Maria della Sanità",
+    "editore": "Catacombe di Napoli",
+    "url": "https://catacombedinapoli.it/it/luoghi/basilica-di-santa-maria-sanita-napoli/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Rione Sanità e Basilica della Sanità",
+    "luoghi": [
+      "Rione Sanità e Basilica della Sanità"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-fontanelle",
+    "titolo": "Pianifica la visita",
+    "editore": "Cimitero delle Fontanelle",
+    "url": "https://cimiterodellefontanelle.it/pianifica-visita/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Cimitero delle Fontanelle",
+    "luoghi": [
+      "Cimitero delle Fontanelle"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-comune-fontanelle",
+    "titolo": "Il Cimitero delle Fontanelle riapre per sempre",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/novita/il-cimitero-delle-fontanelle-riapre-per-sempre/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Cimitero delle Fontanelle",
+    "luoghi": [
+      "Cimitero delle Fontanelle"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-capodimonte-orari",
+    "titolo": "Orari",
+    "editore": "Museo e Real Bosco di Capodimonte",
+    "url": "https://capodimonte.cultura.gov.it/orari/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Museo e Real Bosco di Capodimonte",
+    "luoghi": [
+      "Museo e Real Bosco di Capodimonte"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-capodimonte-biglietti",
+    "titolo": "Biglietti",
+    "editore": "Museo e Real Bosco di Capodimonte",
+    "url": "https://capodimonte.cultura.gov.it/biglietti/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Museo e Real Bosco di Capodimonte",
+    "luoghi": [
+      "Museo e Real Bosco di Capodimonte"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-mic-sanmartino",
+    "titolo": "Certosa e Museo di San Martino",
+    "editore": "Ministero della Cultura",
+    "url": "https://cultura.gov.it/luogo/certosa-e-museo-di-san-martino",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Certosa e Museo di San Martino",
+    "luoghi": [
+      "Certosa e Museo di San Martino"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-mic-santelmo",
+    "titolo": "Castel Sant'Elmo e Museo del Novecento a Napoli",
+    "editore": "Ministero della Cultura",
+    "url": "https://cultura.gov.it/luogo/castel-sant-elmo-e-museo-del-novecento-a-napoli",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Castel Sant'Elmo",
+    "luoghi": [
+      "Castel Sant'Elmo"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-mic-floridiana",
+    "titolo": "Museo della Ceramica Duca di Martina in Villa Floridiana",
+    "editore": "Ministero della Cultura",
+    "url": "https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Villa Floridiana e il museo della ceramica",
+    "luoghi": [
+      "Villa Floridiana e il museo della ceramica"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-comune-pedamentina",
+    "titolo": "Dalla Pedamentina a Spaccanapoli",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/turismo/turismo-sostenibile/percorsi-a-piedi/dalla-pedamentina-a-spaccanapoli/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "La Pedamentina, da San Martino in discesa",
+    "luoghi": [
+      "La Pedamentina, da San Martino in discesa"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-anm-ascensori",
+    "titolo": "Ascensori",
+    "editore": "ANM, Azienda Napoletana Mobilità",
+    "url": "https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=320",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Rione Sanità e Basilica della Sanità",
+    "luoghi": [
+      "Rione Sanità e Basilica della Sanità"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-palazzoreale-info",
+    "titolo": "Informazioni per la visita",
+    "editore": "Palazzo Reale di Napoli",
+    "url": "https://palazzorealedinapoli.org/informazioni-per-la-visita/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Palazzo Reale",
+    "luoghi": [
+      "Palazzo Reale"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-palazzoreale-restauri",
+    "titolo": "Inizio cantiere di restauro del Salone d'Ercole e modifica del percorso di visita dell'Appartamento di Etichetta",
+    "editore": "Palazzo Reale di Napoli",
+    "url": "https://palazzorealedinapoli.org/inizio-cantiere-di-restauro-del-salone-dercole-e-modifica-del-percorso-di-visita-dellappartamento-di-etichetta-da-giovedi-1ottobre/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Palazzo Reale",
+    "luoghi": [
+      "Palazzo Reale"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-sancarlo-visite",
+    "titolo": "Visite guidate",
+    "editore": "Teatro di San Carlo",
+    "url": "https://www.teatrosancarlo.it/visite-guidate/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Teatro di San Carlo",
+    "luoghi": [
+      "Teatro di San Carlo"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-comune-castelnuovo",
+    "titolo": "Maschio Angioino",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/maschioangioino",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Castel Nuovo (Maschio Angioino)",
+    "luoghi": [
+      "Castel Nuovo (Maschio Angioino)"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-napoliforme-galleria",
+    "titolo": "Galleria Umberto I",
+    "editore": "NapoliForMe, Comune di Napoli",
+    "url": "https://napoliforme.comune.napoli.it/en/pois/-/poi/Galleria-Umberto-I",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Piazza del Plebiscito e Galleria Umberto I",
+    "luoghi": [
+      "Piazza del Plebiscito e Galleria Umberto I"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-anm-metroart-toledo",
+    "titolo": "Toledo",
+    "editore": "ANM, Metroart",
+    "url": "https://metroart.anm.it/stazioni-arte/linea-1/toledo",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+    "luoghi": [
+      "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-borbonica-standard",
+    "titolo": "Percorso Standard",
+    "editore": "Galleria Borbonica",
+    "url": "https://www.galleriaborbonica.com/it/percorsi/standard",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Galleria Borbonica",
+    "luoghi": [
+      "Galleria Borbonica"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-borbonica-memorie",
+    "titolo": "Via delle Memorie",
+    "editore": "Galleria Borbonica",
+    "url": "https://www.galleriaborbonica.com/it/percorsi/via-delle-memorie",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Galleria Borbonica",
+    "luoghi": [
+      "Galleria Borbonica"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-borbonica-avventura",
+    "titolo": "Percorso Avventura",
+    "editore": "Galleria Borbonica",
+    "url": "https://www.galleriaborbonica.com/it/percorsi/avventura",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Galleria Borbonica",
+    "luoghi": [
+      "Galleria Borbonica"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-comune-casteldellovo",
+    "titolo": "Castel dell'Ovo",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/casteldellovo",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Borgo Marinari e Castel dell'Ovo",
+    "luoghi": [
+      "Borgo Marinari e Castel dell'Ovo"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-comune-borgomarinari",
+    "titolo": "Area pedonale di Borgo Marinari",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/area-pedonale-di-borgo-marinari/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Borgo Marinari e Castel dell'Ovo",
+    "luoghi": [
+      "Borgo Marinari e Castel dell'Ovo"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-anm-echia",
+    "titolo": "Ascensore di Monte Echia",
+    "editore": "ANM, Azienda Napoletana Mobilità",
+    "url": "https://www2.anm.it/index.php?option=com_content&task=view&id=4286&Itemid=314",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Monte Echia, il belvedere di Pizzofalcone",
+    "luoghi": [
+      "Monte Echia, il belvedere di Pizzofalcone"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-comune-echia",
+    "titolo": "Entra in funzione l'ascensore di Monte Echia",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/novita/entra-in-funzione-lascensore-di-monte-echia/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Monte Echia, il belvedere di Pizzofalcone",
+    "luoghi": [
+      "Monte Echia, il belvedere di Pizzofalcone"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-comune-villacomunale",
+    "titolo": "Villa Comunale",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/vivere-il-comune/luoghi/villa-comunale/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Il lungomare: via Partenope, via Caracciolo e Villa Comunale",
+    "luoghi": [
+      "Il lungomare: via Partenope, via Caracciolo e Villa Comunale"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-dadom-info",
+    "titolo": "Biglietteria: informazioni",
+    "editore": "DaDoM, Stazione Zoologica Anton Dohrn",
+    "url": "https://dadom.okticket.it/it/ticket/home/info",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Acquario e museo Darwin-Dohrn",
+    "luoghi": [
+      "Acquario e museo Darwin-Dohrn"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-dadom-tariffe",
+    "titolo": "Biglietto DaDoM",
+    "editore": "DaDoM, Stazione Zoologica Anton Dohrn",
+    "url": "https://dadom.okticket.it/it/biglietti/detail/236/biglietto-dadom",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Acquario e museo Darwin-Dohrn",
+    "luoghi": [
+      "Acquario e museo Darwin-Dohrn"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-mic-virgilio",
+    "titolo": "Parco e Tomba di Virgilio",
+    "editore": "Ministero della Cultura",
+    "url": "https://cultura.gov.it/luogo/Parco%20e%20Tomba%20di%20Virgilio",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Parco delle Tombe di Virgilio e Leopardi",
+    "luoghi": [
+      "Parco delle Tombe di Virgilio e Leopardi"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-musei-campania-virgilio",
+    "titolo": "Parco delle Tombe di Virgilio e Leopardi: temporanea chiusura di alcune aree del percorso di visita",
+    "editore": "Direzione regionale Musei nazionali Campania",
+    "url": "https://museicampania.cultura.gov.it/parco-delle-tombe-di-virgilio-e-leopardi-temporanea-chiusura-di-alcune-aree-del-percorso-di-visita/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Parco delle Tombe di Virgilio e Leopardi",
+    "luoghi": [
+      "Parco delle Tombe di Virgilio e Leopardi"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-mic-leopardi-day-2025",
+    "titolo": "Leopardi Day: un omaggio poetico e inclusivo a Giacomo Leopardi nel giorno della sua nascita",
+    "editore": "Ministero della Cultura",
+    "url": "https://cultura.gov.it/evento/leopardi-day-un-omaggio-poetico-e-inclusivo-a-giacomo-leopardi-nel-giorno-della-sua-nascita",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Parco delle Tombe di Virgilio e Leopardi",
+    "luoghi": [
+      "Parco delle Tombe di Virgilio e Leopardi"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-comune-ztl-marechiaro",
+    "titolo": "ZTL Marechiaro",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/ztl-marechiaro/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Marechiaro",
+    "luoghi": [
+      "Marechiaro"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-comune-virgiliano",
+    "titolo": "Parco Virgiliano",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-virgiliano/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Parco Virgiliano",
+    "luoghi": [
+      "Parco Virgiliano"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-comune-virgiliano-riapertura",
+    "titolo": "Parco Virgiliano, dal 27 giugno riapertura parziale al pubblico",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/novita/parco-virgiliano-dal-27-giugno-riapertura-parziale-al-pubblico/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Parco Virgiliano",
+    "luoghi": [
+      "Parco Virgiliano"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-gaiola-accesso",
+    "titolo": "Accesso",
+    "editore": "Area Marina Protetta Parco Sommerso di Gaiola",
+    "url": "https://www.areamarinaprotettagaiola.it/accesso",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Parco sommerso della Gaiola",
+    "luoghi": [
+      "Parco sommerso della Gaiola"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-gaiola-prenotazione",
+    "titolo": "Prenotazione estate",
+    "editore": "Area Marina Protetta Parco Sommerso di Gaiola",
+    "url": "https://www.areamarinaprotettagaiola.it/prenotazione-summer",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Parco sommerso della Gaiola",
+    "luoghi": [
+      "Parco sommerso della Gaiola"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-cittascienza-visita",
+    "titolo": "Organizza una visita",
+    "editore": "Città della Scienza",
+    "url": "https://www.cittadellascienza.it/organizza-una-visita/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Città della Scienza",
+    "luoghi": [
+      "Città della Scienza"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-cittascienza-biglietteria",
+    "titolo": "Biglietteria",
+    "editore": "Città della Scienza",
+    "url": "https://www.cittadellascienza.it/biglietteria/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Città della Scienza",
+    "luoghi": [
+      "Città della Scienza"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-cittascienza-faq",
+    "titolo": "Who we are: FAQ",
+    "editore": "Città della Scienza",
+    "url": "https://www.cittadellascienza.it/en/copia-di-copia-di-chi-siamo-en/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Città della Scienza",
+    "luoghi": [
+      "Città della Scienza"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-cittascienza-estate-2025",
+    "titolo": "Estate 2025 a Città della Scienza",
+    "editore": "Città della Scienza",
+    "url": "https://www.cittadellascienza.it/estate-2025-a-citta-della-scienza-14-giugno-28-settembre-2025/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Città della Scienza",
+    "luoghi": [
+      "Città della Scienza"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-pompei-orari",
+    "titolo": "Timetables and tickets",
+    "editore": "Parco Archeologico di Pompei",
+    "url": "https://pompeiisites.org/en/visiting-info/timetables-and-tickets/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pompei",
+    "luoghi": [
+      "Pompei"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-pompei-regolamento",
+    "titolo": "Regulations for visitors",
+    "editore": "Parco Archeologico di Pompei",
+    "url": "https://pompeiisites.org/en/visiting-info/regulations-for-visitors/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pompei",
+    "luoghi": [
+      "Pompei"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-pompei-tariffe",
+    "titolo": "Pompei si esplora con tutti i sensi: accessibilità e nuove tariffe di ingresso dal 12 gennaio",
+    "editore": "Parco Archeologico di Pompei",
+    "url": "https://pompeiisites.org/comunicati/pompei-si-esplora-con-tutti-i-sensi-accessibilita-e-nuove-tariffe-di-ingresso-dal-12-gennaio/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pompei",
+    "luoghi": [
+      "Pompei"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-ercolano-biglietti",
+    "titolo": "Tickets",
+    "editore": "Parco Archeologico di Ercolano",
+    "url": "https://ercolano.cultura.gov.it/tickets/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Ercolano",
+    "luoghi": [
+      "Ercolano"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-vesuvio-gran-cono",
+    "titolo": "The Great Cone of Vesuvius",
+    "editore": "Parco Nazionale del Vesuvio",
+    "url": "https://www.parconazionaledelvesuvio.it/en/visit-the-park/the-paths/the-great-cono-of-vesuvius/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Vesuvio, il Gran Cono",
+    "luoghi": [
+      "Vesuvio, il Gran Cono"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-eav-campania-express",
+    "titolo": "Orari e tariffe Campania Express (PDF)",
+    "editore": "EAV",
+    "url": "https://www.eavsrl.it/download/orari-e-tariffe-campania-express/",
+    "formato": "PDF",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "Ercolano",
+      "Pompei"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-eav-campania-express-sospeso",
+    "titolo": "Campania Express",
+    "editore": "EAV",
+    "url": "https://www.eavsrl.it/campania-express/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "Ercolano",
+      "Pompei",
+      "Sorrento"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "Sospensione del Campania Express · riscontro parziale",
+    "scopoDisponibile": true,
+    "avvertenza": "Pagina non consultata integralmente. Il riscontro viene dal solo risultato di ricerca.",
+    "cautela": true,
+    "prova": "E2"
+  },
+  {
+    "id": "tp-eav-808",
+    "titolo": "Orario bus 808 Pompei–Vesuvio",
+    "editore": "EAV",
+    "url": "https://www.eavsrl.it/download/808-pompei-vesuvio/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Vesuvio, il Gran Cono",
+    "luoghi": [
+      "Vesuvio, il Gran Cono"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-caremar-tariffe",
+    "titolo": "Tariffe",
+    "editore": "Caremar",
+    "url": "https://shop.caremar.it/it/tariffe/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "Capri",
+      "Ischia",
+      "Procida"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-caremar-partenze",
+    "titolo": "Prossime partenze",
+    "editore": "Caremar",
+    "url": "https://shop.caremar.it/it/prossime-partenze/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "Capri",
+      "Ischia",
+      "Procida"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-caremar-orari",
+    "titolo": "Orari",
+    "editore": "Caremar",
+    "url": "https://shop.caremar.it/it/orari/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "Capri",
+      "Ischia",
+      "Procida"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-capri-regolamento",
+    "titolo": "Regolamento di visita",
+    "editore": "Musei e Parchi archeologici di Capri",
+    "url": "https://museicapri.cultura.gov.it/it/regolamento-di-visita/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Capri",
+    "luoghi": [
+      "Capri"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-ischia-castello",
+    "titolo": "Castello Aragonese d'Ischia",
+    "editore": "Castello Aragonese d'Ischia",
+    "url": "https://www.castelloaragoneseischia.com/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Ischia",
+    "luoghi": [
+      "Ischia"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-anm-gtfs",
+    "titolo": "Orari programmati degli autobus (feed GTFS)",
+    "editore": "ANM, Azienda Napoletana Mobilità (dati aperti, licenza IODL 2.0)",
+    "url": "https://www.anm.it/google/google-transit.zip",
+    "formato": "Download ZIP",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Trasporti e dati",
+    "luoghi": [],
+    "area": "Spostamenti e dati",
+    "scopo": "Linee, fermate e orari degli autobus ANM",
+    "scopoDisponibile": true,
+    "avvertenza": "Validità registrata: 22 settembre–31 dicembre 2026. Orari programmati, senza deviazioni o lavori. Licenza IODL 2.0.",
+    "cautela": false,
+    "prova": "aggiornamenti/fonti-dati.yaml · anm-gtfs"
+  },
+  {
+    "id": "tp-anm-linea1",
+    "titolo": "Linea 1",
+    "editore": "ANM, Azienda Napoletana Mobilità",
+    "url": "https://www2.anm.it/index.php?option=com_content&task=view&id=71&Itemid=98",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Trasporti e dati",
+    "luoghi": [],
+    "area": "Spostamenti e dati",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-comune-linea6",
+    "titolo": "Linea 6 della metro: nei giorni feriali corse fino alle 21:10",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/novita/linea-6-della-metro-nei-giorni-feriali-corse-fino-alle-21-10/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Trasporti e dati",
+    "luoghi": [],
+    "area": "Spostamenti e dati",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-rfi-linea2",
+    "titolo": "Quadro orario Linea 2 (14 giugno–12 dicembre 2026)",
+    "editore": "RFI, Rete Ferroviaria Italiana",
+    "url": "https://prm.rfi.it/qo_prm/QO_Pdf.aspx?Tipo=P&lin=it&id=530",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Trasporti e dati",
+    "luoghi": [],
+    "area": "Spostamenti e dati",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-trenitalia-linea2",
+    "titolo": "Circolazione interrotta tra Napoli Campi Flegrei e Pozzuoli Solfatara",
+    "editore": "Trenitalia",
+    "url": "https://www.trenitalia.com/content/trenitalia/it/informazioni/lavori-programmati/20260621-circolazione-interrotta-tra-napoli-campi-flegrei-e-puzzuoli-solfatara.html",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Trasporti e dati",
+    "luoghi": [],
+    "area": "Spostamenti e dati",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-anm-centrale",
+    "titolo": "Funicolare Centrale",
+    "editore": "ANM, Azienda Napoletana Mobilità",
+    "url": "https://www2.anm.it/index.php?option=com_content&task=view&id=81&Itemid=98",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Trasporti e dati",
+    "luoghi": [],
+    "area": "Spostamenti e dati",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-anm-chiaia",
+    "titolo": "Funicolare di Chiaia",
+    "editore": "ANM, Azienda Napoletana Mobilità",
+    "url": "https://www2.anm.it/index.php?option=com_content&task=view&id=82&Itemid=98",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Trasporti e dati",
+    "luoghi": [],
+    "area": "Spostamenti e dati",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-anm-mergellina",
+    "titolo": "Funicolare di Mergellina",
+    "editore": "ANM, Azienda Napoletana Mobilità",
+    "url": "https://www2.anm.it/index.php?option=com_content&task=view&id=84&Itemid=98",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Il belvedere di Sant'Antonio a Posillipo",
+    "luoghi": [
+      "Il belvedere di Sant'Antonio a Posillipo"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-comune-montesanto",
+    "titolo": "15 maggio 2026: chiusura della funicolare di Montesanto per la manutenzione ventennale",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/novita/15-maggio-2026-chiusura-funicolare-montesanto-per-manutenzione-ventennale/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Trasporti e dati",
+    "luoghi": [],
+    "area": "Spostamenti e dati",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-eav-teleindicatori",
+    "titolo": "Orario treni: partenze e arrivi di Montesanto e Bagnoli (Cumana)",
+    "editore": "EAV",
+    "url": "https://orariotreni.eavsrl.it/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Trasporti e dati",
+    "luoghi": [],
+    "area": "Spostamenti e dati",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-copernicus-dem",
+    "titolo": "Copernicus DEM GLO-30 (modello del terreno a 30 m)",
+    "editore": "Agenzia Spaziale Europea, programma Copernicus",
+    "url": "https://registry.opendata.aws/copernicus-dem/",
+    "formato": "",
+    "data": "2026-10-02",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Trasporti e dati",
+    "luoghi": [],
+    "area": "Spostamenti e dati",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-doma-info",
+    "titolo": "Info e contatti",
+    "editore": "DOMA · San Domenico Maggiore (Opera San Domenico Maggiore Onlus)",
+    "url": "https://domasandomenicomaggiore.it/info-e-contatti/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "San Domenico Maggiore e le arche aragonesi",
+    "luoghi": [
+      "San Domenico Maggiore e le arche aragonesi"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-doma-biglietti",
+    "titolo": "Biglietteria",
+    "editore": "DOMA · San Domenico Maggiore (Opera San Domenico Maggiore Onlus)",
+    "url": "https://domasandomenicomaggiore.it/biglietteria/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "San Domenico Maggiore e le arche aragonesi",
+    "luoghi": [
+      "San Domenico Maggiore e le arche aragonesi"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-girolamini",
+    "titolo": "Apertura e orari dei servizi",
+    "editore": "Complesso monumentale dei Girolamini (Ministero della Cultura)",
+    "url": "https://girolamini.cultura.gov.it/apertura-e-orari-dei-servizi/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Girolamini, chiesa, museo e biblioteca",
+    "luoghi": [
+      "Girolamini, chiesa, museo e biblioteca"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-filangieri",
+    "titolo": "Museo Civico Gaetano Filangieri, pagina principale (orari)",
+    "editore": "Museo Civico Gaetano Filangieri",
+    "url": "https://www.museofilangieri.it/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Museo Filangieri",
+    "luoghi": [
+      "Museo Filangieri"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-purgatorio",
+    "titolo": "Orari, visite guidate e biglietti",
+    "editore": "Santa Maria delle Anime del Purgatorio ad Arco",
+    "url": "https://www.purgatorioadarco.it/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Purgatorio ad Arco, chiesa e ipogeo",
+    "luoghi": [
+      "Purgatorio ad Arco, chiesa e ipogeo"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-mudd-carbonara",
+    "titolo": "San Giovanni a Carbonara",
+    "editore": "MUDD · Museo Diocesano Diffuso di Napoli",
+    "url": "https://www.muddnapoli.it/en/luoghi/san-giovanni-a-carbonara/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "San Giovanni a Carbonara",
+    "luoghi": [
+      "San Giovanni a Carbonara"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-mudd-tetti",
+    "titolo": "Tetti della Cattedrale (Cathedral roofs)",
+    "editore": "MUDD · Museo Diocesano Diffuso di Napoli",
+    "url": "https://www.muddnapoli.it/en/luoghi/cathedral-roofs/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "I tetti del Duomo",
+    "luoghi": [
+      "I tetti del Duomo"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-tetti-italpress",
+    "titolo": "Napoli vista dai tetti del Duomo, inaugurato un nuovo percorso di visita",
+    "editore": "Italpress",
+    "url": "https://www.italpress.com/?p=664594",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "I tetti del Duomo",
+    "luoghi": [
+      "I tetti del Duomo"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-villa-pignatelli",
+    "titolo": "Villa Pignatelli: spazi espositivi e orari",
+    "editore": "Palazzo Reale di Napoli (Ministero della Cultura)",
+    "url": "https://palazzorealedinapoli.org/sedi/villa-pignatelli/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Villa Pignatelli, museo e giardino",
+    "luoghi": [
+      "Villa Pignatelli, museo e giardino"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-mercati-municipalita2",
+    "titolo": "I mercati di Napoli: Municipalità 2",
+    "editore": "Comune di Napoli, Servizio Mercati",
+    "url": "https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "Il mercato della Pignasecca",
+      "Il mercato di Porta Nolana"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-fai-donn-anna",
+    "titolo": "Palazzo Donn'Anna",
+    "editore": "FAI · Fondo per l'Ambiente Italiano (I Luoghi del Cuore)",
+    "url": "https://fondoambiente.it/luoghi/palazzo-donn-anna",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Palazzo Donn'Anna, da fuori",
+    "luoghi": [
+      "Palazzo Donn'Anna, da fuori"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-parco-camaldoli",
+    "titolo": "Parco dei Camaldoli",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "Parco dei Camaldoli",
+      "Parco del Poggio",
+      "Parco Mascagna"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-parco-poggio",
+    "titolo": "Parco del Poggio",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "Parco dei Camaldoli",
+      "Parco del Poggio",
+      "Parco Mascagna"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-parco-mascagna",
+    "titolo": "Parco Mascagna",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "Parco dei Camaldoli",
+      "Parco del Poggio",
+      "Parco Mascagna"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-parco-ventaglieri",
+    "titolo": "Parco Ventaglieri",
+    "editore": "Comune di Napoli",
+    "url": "https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-ventaglieri/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Parco dei Ventaglieri",
+    "luoghi": [
+      "Parco dei Ventaglieri"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-orto-botanico",
+    "titolo": "Giorni e orari di apertura",
+    "editore": "Orto Botanico di Napoli (Università Federico II)",
+    "url": "https://www.ortobotaniconapoli.it/it/visitare/giorni-e-orari-di-apertura.html",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Orto Botanico",
+    "luoghi": [
+      "Orto Botanico"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-mostra-oltremare",
+    "titolo": "Il parco",
+    "editore": "Mostra d'Oltremare",
+    "url": "https://mostradoltremare.it/il-parco/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Il parco della Mostra d'Oltremare",
+    "luoghi": [
+      "Il parco della Mostra d'Oltremare"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-caserta-orari",
+    "titolo": "Orari",
+    "editore": "Reggia di Caserta (Ministero della Cultura)",
+    "url": "https://reggiadicaserta.cultura.gov.it/orari/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Reggia di Caserta",
+    "luoghi": [
+      "Reggia di Caserta"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-caserta-biglietti",
+    "titolo": "Biglietti",
+    "editore": "Reggia di Caserta (Ministero della Cultura)",
+    "url": "https://reggiadicaserta.cultura.gov.it/biglietti/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Reggia di Caserta",
+    "luoghi": [
+      "Reggia di Caserta"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-caserta-arrivare",
+    "titolo": "Come raggiungerci",
+    "editore": "Reggia di Caserta (Ministero della Cultura)",
+    "url": "https://reggiadicaserta.cultura.gov.it/come-raggiungerci/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Reggia di Caserta",
+    "luoghi": [
+      "Reggia di Caserta"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-pietrarsa-tariffe",
+    "titolo": "Orari, tariffe e abbonamenti",
+    "editore": "Fondazione FS Italiane · Museo Nazionale Ferroviario di Pietrarsa",
+    "url": "https://www.fondazionefs.it/it/esplora-il-museo/tariffe-abbonamenti.html",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Museo ferroviario di Pietrarsa",
+    "luoghi": [
+      "Museo ferroviario di Pietrarsa"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-pietrarsa-arrivare",
+    "titolo": "Come arrivare",
+    "editore": "Fondazione FS Italiane · Museo Nazionale Ferroviario di Pietrarsa",
+    "url": "https://www.fondazionefs.it/it/esplora-il-museo/come-arrivare.html",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Museo ferroviario di Pietrarsa",
+    "luoghi": [
+      "Museo ferroviario di Pietrarsa"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-eav-l1-orario",
+    "titolo": "Orario ferrovia L1 Napoli–Sorrento, valido dal 1° ottobre 2026",
+    "editore": "EAV",
+    "url": "https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Sorrento",
+    "luoghi": [
+      "Sorrento"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "Orari Napoli–Sorrento · dal 1° ottobre 2026",
+    "scopoDisponibile": true,
+    "avvertenza": "Verifica parziale del PDF: tabella da controllare. La durata cambia con stazione e corsa; non è in tempo reale.",
+    "cautela": true,
+    "prova": "E1"
+  },
+  {
+    "id": "tp-sorrento-centro",
+    "titolo": "Il centro antico della città di Sorrento",
+    "editore": "Comune di Sorrento",
+    "url": "https://www.comune.sorrento.na.it/it/sezione/cultura-e-turismo/page/il-centro-antico-della-citta-di-sorrento",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Sorrento",
+    "luoghi": [
+      "Sorrento"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-correale",
+    "titolo": "Visita il museo",
+    "editore": "Museo Correale di Terranova",
+    "url": "https://www.museocorreale.it/visita-il-museo/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Sorrento",
+    "luoghi": [
+      "Sorrento"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-campolieto",
+    "titolo": "Villa Campolieto",
+    "editore": "Fondazione Ente Ville Vesuviane",
+    "url": "https://www.villevesuviane.net/le-ville/villa-campolieto/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Ercolano",
+    "luoghi": [
+      "Ercolano"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-villevesuviane-visite",
+    "titolo": "Visite e biglietti",
+    "editore": "Fondazione Ente Ville Vesuviane",
+    "url": "https://www.villevesuviane.net/visite/",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Ercolano",
+    "luoghi": [
+      "Ercolano"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "tp-pietrarsa-visita",
+    "titolo": "Visita Pietrarsa",
+    "editore": "Fondazione FS Italiane · Museo Nazionale Ferroviario di Pietrarsa",
+    "url": "https://www.fondazionefs.it/it/esplora-il-museo/visita-pietrarsa.html",
+    "formato": "",
+    "data": "2026-10-03",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Museo ferroviario di Pietrarsa",
+    "luoghi": [
+      "Museo ferroviario di Pietrarsa"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-da-michele",
+    "titolo": "Sede di Napoli: orari e prenotazioni",
+    "editore": "L'Antica Pizzeria da Michele",
+    "url": "https://www.damichele.net/sede-di-napoli/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "L'Antica Pizzeria da Michele",
+    "luoghi": [
+      "L'Antica Pizzeria da Michele"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-da-michele-menu",
+    "titolo": "Menu della sede di Napoli (PDF)",
+    "editore": "L'Antica Pizzeria da Michele",
+    "url": "https://www.damichele.net/menu/sede_napoli/menu%20Napoli.pdf",
+    "formato": "PDF",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "L'Antica Pizzeria da Michele",
+    "luoghi": [
+      "L'Antica Pizzeria da Michele"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-port-alba",
+    "titolo": "Sito ufficiale: storia, orari, piatti",
+    "editore": "Antica Pizzeria Port'Alba",
+    "url": "https://www.anticapizzeriaportalba.com/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Antica Pizzeria Port'Alba",
+    "luoghi": [
+      "Antica Pizzeria Port'Alba"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-di-matteo",
+    "titolo": "Sito ufficiale: orari e contatti",
+    "editore": "Antica Pizzeria Di Matteo",
+    "url": "https://anticapizzeriadimatteo.it/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Antica Pizzeria Di Matteo",
+    "luoghi": [
+      "Antica Pizzeria Di Matteo"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-di-matteo-menu",
+    "titolo": "Menu (PDF, luglio 2022)",
+    "editore": "Antica Pizzeria Di Matteo",
+    "url": "https://anticapizzeriadimatteo.it/wp-content/uploads/2022/07/Menu-Online-20072022.pdf",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Antica Pizzeria Di Matteo",
+    "luoghi": [
+      "Antica Pizzeria Di Matteo"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-chitarra",
+    "titolo": "Contatti e orari",
+    "editore": "Osteria La Chitarra",
+    "url": "https://www.osterialachitarra.it/contatti/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Osteria La Chitarra",
+    "luoghi": [
+      "Osteria La Chitarra"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-chitarra-menu",
+    "titolo": "Menu",
+    "editore": "Osteria La Chitarra",
+    "url": "https://www.osterialachitarra.it/menu/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Osteria La Chitarra",
+    "luoghi": [
+      "Osteria La Chitarra"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-chitarra-storia",
+    "titolo": "L'osteria",
+    "editore": "Osteria La Chitarra",
+    "url": "https://www.osterialachitarra.it/osteria/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Osteria La Chitarra",
+    "luoghi": [
+      "Osteria La Chitarra"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-gesu-vecchio",
+    "titolo": "I nostri contatti",
+    "editore": "La Locanda Gesù Vecchio",
+    "url": "https://www.lalocandagesuvecchionapoli.it/i-nostri-contatti/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "La Locanda Gesù Vecchio",
+    "luoghi": [
+      "La Locanda Gesù Vecchio"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-gesu-vecchio-home",
+    "titolo": "Sito ufficiale: prenotazione e turni",
+    "editore": "La Locanda Gesù Vecchio",
+    "url": "https://www.lalocandagesuvecchionapoli.it/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "La Locanda Gesù Vecchio",
+    "luoghi": [
+      "La Locanda Gesù Vecchio"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-gesu-vecchio-menu",
+    "titolo": "Menu di giugno 2026 (PDF)",
+    "editore": "La Locanda Gesù Vecchio",
+    "url": "https://www.lalocandagesuvecchionapoli.it/wp-content/uploads/2026/06/MENU-LOCANDA-GIUGNO-2026-1.pdf.pdf",
+    "formato": "PDF",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "La Locanda Gesù Vecchio",
+    "luoghi": [
+      "La Locanda Gesù Vecchio"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-di-costanzo",
+    "titolo": "Sito ufficiale: orari",
+    "editore": "Pasticceria Di Costanzo",
+    "url": "https://www.dicostanzopasticceria.it/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pasticceria Di Costanzo",
+    "luoghi": [
+      "Pasticceria Di Costanzo"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-brandi",
+    "titolo": "Information: orari e prenotazioni",
+    "editore": "Pizzeria Brandi",
+    "url": "https://pizzeriabrandi.com/information/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pizzeria Brandi",
+    "luoghi": [
+      "Pizzeria Brandi"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-brandi-home",
+    "titolo": "Sito ufficiale: la storia",
+    "editore": "Pizzeria Brandi",
+    "url": "https://pizzeriabrandi.com/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pizzeria Brandi",
+    "luoghi": [
+      "Pizzeria Brandi"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-zia-esterina",
+    "titolo": "Antica Pizza Fritta da Zia Esterina Sorbillo: sedi e orari",
+    "editore": "Gino Sorbillo",
+    "url": "https://www.sorbillo.it/antica-pizza-fritta-da-zia-esterina-sorbillo/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Antica Pizza Fritta da Zia Esterina Sorbillo",
+    "luoghi": [
+      "Antica Pizza Fritta da Zia Esterina Sorbillo"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-hosteria-toledo",
+    "titolo": "Sito ufficiale: orari e contatti",
+    "editore": "Hosteria Toledo",
+    "url": "https://www.hosteriatoledo.it/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Hosteria Toledo",
+    "luoghi": [
+      "Hosteria Toledo"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-hosteria-toledo-menu",
+    "titolo": "Menu (PDF caricato a maggio 2023)",
+    "editore": "Hosteria Toledo",
+    "url": "https://www.hosteriatoledo.it/wp-content/uploads/2023/05/HOSTERIA-TOLEDO-menu-A4-print.pdf",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Hosteria Toledo",
+    "luoghi": [
+      "Hosteria Toledo"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-gobbetto",
+    "titolo": "Contatti e orari",
+    "editore": "Osteria Il Gobbetto",
+    "url": "https://osteria-il-gobbetto3.webnode.it/contatti/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Osteria Il Gobbetto",
+    "luoghi": [
+      "Osteria Il Gobbetto"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-nennella",
+    "titolo": "Sedi e orari",
+    "editore": "Trattoria da Nennella",
+    "url": "https://www.trattorianennella.it/sedi/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Trattoria da Nennella",
+    "luoghi": [
+      "Trattoria da Nennella"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-nennella-domande",
+    "titolo": "Domande frequenti: prenotazione",
+    "editore": "Trattoria da Nennella",
+    "url": "https://www.trattorianennella.it/domande/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Trattoria da Nennella",
+    "luoghi": [
+      "Trattoria da Nennella"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-pintauro",
+    "titolo": "Contatti e orari",
+    "editore": "Pasticceria Pintauro",
+    "url": "https://www.pasticceriapintauro1785.it/contatti/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pasticceria Pintauro",
+    "luoghi": [
+      "Pasticceria Pintauro"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-cinquanta-kalo",
+    "titolo": "Info: orari e prenotazioni",
+    "editore": "50 Kalò",
+    "url": "https://50kalo.it/info.php",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "50 Kalò",
+    "luoghi": [
+      "50 Kalò"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-cinquanta-kalo-menu",
+    "titolo": "Menu di Napoli (PDF, file del luglio 2026)",
+    "editore": "50 Kalò",
+    "url": "https://50kalo.it/download/menu_napoli_2023.pdf",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "50 Kalò",
+    "luoghi": [
+      "50 Kalò"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-salvo",
+    "titolo": "Dove siamo: orari",
+    "editore": "Pizzeria Salvo",
+    "url": "https://www.pizzeriasalvo.it/dove-siamo/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pizzeria Salvo",
+    "luoghi": [
+      "Pizzeria Salvo"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-salvo-menu",
+    "titolo": "Menu dell'11 maggio 2026 (PDF)",
+    "editore": "Pizzeria Salvo",
+    "url": "https://www.pizzeriasalvo.it/wp-content/uploads/2026/06/Salvo_Menu_11_05_26.pdf",
+    "formato": "PDF",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pizzeria Salvo",
+    "luoghi": [
+      "Pizzeria Salvo"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-pignatelli",
+    "titolo": "Sito ufficiale: orari e prenotazioni",
+    "editore": "Ostaria Pignatelli",
+    "url": "https://www.ostariapignatelli.com/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Ostaria Pignatelli",
+    "luoghi": [
+      "Ostaria Pignatelli"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-pignatelli-menu",
+    "titolo": "Menu digitale: i primi",
+    "editore": "Ostaria Pignatelli (QuickerMenu)",
+    "url": "https://www.quickermenu.it/ostariapignatelli/i-primi/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Ostaria Pignatelli",
+    "luoghi": [
+      "Ostaria Pignatelli"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-cantinella",
+    "titolo": "Contatti e orari",
+    "editore": "La Cantinella",
+    "url": "https://lacantinella.it/contatti-ristorante-napoli/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "La Cantinella",
+    "luoghi": [
+      "La Cantinella"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-cantinella-home",
+    "titolo": "Sito ufficiale: la storia",
+    "editore": "La Cantinella",
+    "url": "https://lacantinella.it/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "La Cantinella",
+    "luoghi": [
+      "La Cantinella"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-cantinella-menu",
+    "titolo": "Menu (PDF)",
+    "editore": "La Cantinella",
+    "url": "https://lacantinella.it/wp-content/uploads/2025/09/Menu-tavoli.pdf",
+    "formato": "PDF",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "La Cantinella",
+    "luoghi": [
+      "La Cantinella"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-bersagliera",
+    "titolo": "Contatti e orari",
+    "editore": "La Bersagliera",
+    "url": "https://www.labersagliera.it/contatti/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "La Bersagliera",
+    "luoghi": [
+      "La Bersagliera"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-bersagliera-home",
+    "titolo": "Sito ufficiale: la storia",
+    "editore": "La Bersagliera",
+    "url": "https://www.labersagliera.it/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "La Bersagliera",
+    "luoghi": [
+      "La Bersagliera"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-scialuppa",
+    "titolo": "Sito ufficiale: orari e piatti",
+    "editore": "La Scialuppa",
+    "url": "https://www.lascialuppa.net/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "La Scialuppa",
+    "luoghi": [
+      "La Scialuppa"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-calabritto",
+    "titolo": "Contatti e orari",
+    "editore": "Terrazza Calabritto",
+    "url": "https://napoli.terrazzacalabritto.it/contatti/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Terrazza Calabritto",
+    "luoghi": [
+      "Terrazza Calabritto"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-calabritto-menu",
+    "titolo": "Menu",
+    "editore": "Terrazza Calabritto",
+    "url": "https://napoli.terrazzacalabritto.it/menu/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Terrazza Calabritto",
+    "luoghi": [
+      "Terrazza Calabritto"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-chalet-ciro",
+    "titolo": "Sede di Mergellina: orari",
+    "editore": "Chalet Ciro 1952",
+    "url": "https://www.chaletciro1952.com/sedi/mergellina/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Chalet Ciro",
+    "luoghi": [
+      "Chalet Ciro"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-chalet-ciro-storia",
+    "titolo": "La storia",
+    "editore": "Chalet Ciro 1952",
+    "url": "https://www.chaletciro1952.com/storia/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Chalet Ciro",
+    "luoghi": [
+      "Chalet Ciro"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-caffettiera",
+    "titolo": "Sito ufficiale: orari e prenotazioni",
+    "editore": "Gran Caffè La Caffettiera",
+    "url": "https://www.grancaffelacaffettiera.com/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Gran Caffè La Caffettiera",
+    "luoghi": [
+      "Gran Caffè La Caffettiera"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-gorizia",
+    "titolo": "Sito ufficiale: orari e contatti",
+    "editore": "Pizzeria Gorizia 1916",
+    "url": "https://www.gorizia1916.com/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pizzeria Gorizia 1916",
+    "luoghi": [
+      "Pizzeria Gorizia 1916"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-bellavia",
+    "titolo": "Contatti e orari",
+    "editore": "Pasticceria Bellavia",
+    "url": "https://www.bellaviavomero.it/contatti",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pasticceria Bellavia",
+    "luoghi": [
+      "Pasticceria Bellavia"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-bellavia-store",
+    "titolo": "Negozio online",
+    "editore": "Pasticceria Bellavia",
+    "url": "https://www.bellaviavomero.it/store",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pasticceria Bellavia",
+    "luoghi": [
+      "Pasticceria Bellavia"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-bellavia-storia",
+    "titolo": "La nostra storia",
+    "editore": "Pasticceria Bellavia",
+    "url": "https://www.bellaviavomero.it/la-nostra-storia",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pasticceria Bellavia",
+    "luoghi": [
+      "Pasticceria Bellavia"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-meatin",
+    "titolo": "Sito ufficiale: orari e menu",
+    "editore": "Meatin",
+    "url": "https://www.meatin.it/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Meatin",
+    "luoghi": [
+      "Meatin"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-starita",
+    "titolo": "Dove siamo: orari",
+    "editore": "Pizzerie Starita",
+    "url": "https://pizzeriestarita.it/dove-siamo/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pizzeria Starita a Materdei",
+    "luoghi": [
+      "Pizzeria Starita a Materdei"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-starita-menu",
+    "titolo": "Menu di Napoli (PDF, novembre 2024)",
+    "editore": "Pizzerie Starita",
+    "url": "https://pizzeriestarita.it/wp-content/uploads/2024/11/Starita_QR_Napoli_ITA.pdf",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pizzeria Starita a Materdei",
+    "luoghi": [
+      "Pizzeria Starita a Materdei"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-concettina",
+    "titolo": "Contatti e orari",
+    "editore": "Concettina ai Tre Santi",
+    "url": "https://www.concettinaaitresanti.com/contacts/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Concettina ai Tre Santi",
+    "luoghi": [
+      "Concettina ai Tre Santi"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-concettina-storia",
+    "titolo": "La storia",
+    "editore": "Concettina ai Tre Santi",
+    "url": "https://www.concettinaaitresanti.com/concettina/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Concettina ai Tre Santi",
+    "luoghi": [
+      "Concettina ai Tre Santi"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-poppella",
+    "titolo": "Punti vendita e orari",
+    "editore": "Pasticceria Poppella",
+    "url": "https://www.pasticceriapoppella.com/punti-vendita/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pasticceria Poppella",
+    "luoghi": [
+      "Pasticceria Poppella"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-poppella-storia",
+    "titolo": "La storia",
+    "editore": "Pasticceria Poppella",
+    "url": "https://www.pasticceriapoppella.com/storia/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pasticceria Poppella",
+    "luoghi": [
+      "Pasticceria Poppella"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-petrucci-posillipo",
+    "titolo": "Pizzeria Palazzo Petrucci a Posillipo",
+    "editore": "Palazzo Petrucci",
+    "url": "https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Palazzo Petrucci Pizzeria, Posillipo",
+    "luoghi": [
+      "Palazzo Petrucci Pizzeria, Posillipo"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-tufo",
+    "titolo": "Informazioni: orari della trattoria e dell'asporto",
+    "editore": "Tufò",
+    "url": "https://tufotrattoria.it/informazioni/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Tufò Trattoria",
+    "luoghi": [
+      "Tufò Trattoria"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-fenestella",
+    "titolo": "Contatti e orari",
+    "editore": "Ristorante 'A Fenestella",
+    "url": "https://www.ristoranteafenestella.it/contatti/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "'A Fenestella",
+    "luoghi": [
+      "'A Fenestella"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-fenestella-home",
+    "titolo": "Sito ufficiale: la storia",
+    "editore": "Ristorante 'A Fenestella",
+    "url": "https://www.ristoranteafenestella.it/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "'A Fenestella",
+    "luoghi": [
+      "'A Fenestella"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-cicciotto",
+    "titolo": "Cicciotto a Marechiaro dal 1942: orari",
+    "editore": "Cicciotto a Marechiaro",
+    "url": "https://www.trattoriadacicciotto.it/trattoria-da-cicciotto-a-marechiaro-dal-1942/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Cicciotto a Marechiaro",
+    "luoghi": [
+      "Cicciotto a Marechiaro"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-cicciotto-menu",
+    "titolo": "Menu della trattoria (PDF)",
+    "editore": "Cicciotto a Marechiaro",
+    "url": "https://www.trattoriadacicciotto.it/menu/menutrattoria.pdf",
+    "formato": "PDF",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Cicciotto a Marechiaro",
+    "luoghi": [
+      "Cicciotto a Marechiaro"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-macellegria",
+    "titolo": "Contatti e orari",
+    "editore": "Macellegria",
+    "url": "https://www.macellegria.it/contatti/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Macellegria",
+    "luoghi": [
+      "Macellegria"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "lc-macellegria-menu",
+    "titolo": "Menu",
+    "editore": "Macellegria",
+    "url": "https://www.macellegria.it/menu/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Macellegria",
+    "luoghi": [
+      "Macellegria"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "sdg-michelin-2025-pizzerie",
+    "titolo": "Quali sono le pizzerie nella Guida Michelin",
+    "editore": "Scatti di Gusto",
+    "url": "https://www.scattidigusto.it/quali-sono-le-pizzerie-nella-guida-michelin",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "50 Kalò",
+      "Concettina ai Tre Santi",
+      "L'Antica Pizzeria da Michele",
+      "Pizzeria Salvo"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "sky-50top-2026",
+    "titolo": "Migliori pizzerie d'Italia, la classifica 50 Top Pizza 2026",
+    "editore": "Sky TG24",
+    "url": "https://tg24.sky.it/lifestyle/2026/07/24/migliori-pizzerie-d-italia-classifica-2026",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "50 Kalò",
+      "Palazzo Petrucci Pizzeria, Posillipo",
+      "Pizzeria Gorizia 1916",
+      "Pizzeria Salvo"
+    ],
+    "area": "Luoghi e visite",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "sdg-bib-2025",
+    "titolo": "I 16 nuovi ristoranti Bib Gourmand della Guida Michelin 2025",
+    "editore": "Scatti di Gusto",
+    "url": "https://www.scattidigusto.it/i-16-nuovi-ristoranti-bib-gourmand-della-guida-michelin-2025",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Ostaria Pignatelli",
+    "luoghi": [
+      "Ostaria Pignatelli"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "sdg-pignatelli-2026",
+    "titolo": "Ostaria Pignatelli a Napoli: menu, prezzi, recensione",
+    "editore": "Scatti di Gusto",
+    "url": "https://www.scattidigusto.it/ostaria-pignatelli-a-napoli-menu-prezzi-recensione",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Ostaria Pignatelli",
+    "luoghi": [
+      "Ostaria Pignatelli"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "Genovese · recensione di gennaio 2026",
+    "scopoDisponibile": true,
+    "avvertenza": "Opinione della testata, non di Nextstop.",
+    "cautela": false,
+    "prova": "R2"
+  },
+  {
+    "id": "sdg-slowfood-2025",
+    "titolo": "Osterie Slow Food 2025: le Chiocciole",
+    "editore": "Scatti di Gusto",
+    "url": "https://www.scattidigusto.it/osterie-slow-food-2025-le-chiocciole-mangi-bene-spendi-poco",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Osteria La Chitarra",
+    "luoghi": [
+      "Osteria La Chitarra"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "gri-pasta-patate-2024",
+    "titolo": "Where to eat pasta, potatoes, and provola in Naples. The 8 best restaurants chosen by Gambero Rosso",
+    "editore": "Gambero Rosso International",
+    "url": "https://www.gamberorossointernational.com/?p=513457",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "La Locanda Gesù Vecchio",
+      "Trattoria da Nennella"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "Pasta, patate e provola · selezione del 2024",
+    "scopoDisponibile": true,
+    "avvertenza": "Giudizio della testata; non documenta prezzi o orari attuali.",
+    "cautela": false,
+    "prova": "G2"
+  },
+  {
+    "id": "gri-cuoppo-2024",
+    "titolo": "The best cuoppo in Naples: must-visit spots",
+    "editore": "Gambero Rosso International",
+    "url": "https://www.gamberorossointernational.com/news/the-best-cuoppo-in-naples-must-visit-spots/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Antica Pizzeria Di Matteo",
+    "luoghi": [
+      "Antica Pizzeria Di Matteo"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "gri-pizza-fritta-2023",
+    "titolo": "Where to eat the best pizza fritta in Naples",
+    "editore": "Gambero Rosso International",
+    "url": "https://gamberorossointernational.com/?p=481956",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Antica Pizza Fritta da Zia Esterina Sorbillo",
+    "luoghi": [
+      "Antica Pizza Fritta da Zia Esterina Sorbillo"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "napolitan-pasticcerie-2022",
+    "titolo": "Gambero Rosso: le migliori pasticcerie di Napoli sono sette",
+    "editore": "Napolitan.it",
+    "url": "https://napolitan.it/2022/05/17/119813/gambero-rosso-le-migliori-pasticcerie-napoli-sette-quali/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Fonti condivise",
+    "luoghi": [
+      "Pasticceria Di Costanzo",
+      "Pasticceria Poppella"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  },
+  {
+    "id": "sdg-pintauro-2026",
+    "titolo": "Pintauro, il tempio delle sfogliatelle riapre a Napoli",
+    "editore": "Scatti di Gusto",
+    "url": "https://www.scattidigusto.it/pintauro-tempio-di-sfogliatelle-riapre-a-napoli-nuova-storia",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pasticceria Pintauro",
+    "luoghi": [
+      "Pasticceria Pintauro"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "Riapertura annunciata per marzo 2026",
+    "scopoDisponibile": true,
+    "avvertenza": "Riapertura successiva da verificare: l’annuncio del 17 febbraio 2026 non prova che sia avvenuta.",
+    "cautela": true,
+    "prova": "R1"
+  },
+  {
+    "id": "sdg-cono-graffa",
+    "titolo": "Napoli: il cono graffa di Chalet Ciro a Mergellina",
+    "editore": "Scatti di Gusto",
+    "url": "https://www.scattidigusto.it/napoli-gelato-cono-graffa-chalet-ciro-mergellina",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Chalet Ciro",
+    "luoghi": [
+      "Chalet Ciro"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "Cono graffa · articolo del 2016",
+    "scopoDisponibile": true,
+    "avvertenza": "Aggiornato nel 2019; non verifica la disponibilità odierna.",
+    "cautela": false,
+    "prova": "R3"
+  },
+  {
+    "id": "stripes-tufo-2022",
+    "titolo": "Naples ragu and genovese: Tufò",
+    "editore": "Stars and Stripes",
+    "url": "https://www.stripes.com/living/europe_travel/after_hours/2022-12-29/naples-ragu-genovese-8416535.html",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Tufò Trattoria",
+    "luoghi": [
+      "Tufò Trattoria"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "Pasta e patate e genovese · recensione del 2022",
+    "scopoDisponibile": true,
+    "avvertenza": "Esperienza dell’autrice del 29 dicembre 2022; non verifica il servizio attuale.",
+    "cautela": false,
+    "prova": "R4"
+  },
+  {
+    "id": "lc-starita-home",
+    "titolo": "Sito ufficiale: «il rito della pizza dal 1901»",
+    "editore": "Pizzerie Starita",
+    "url": "https://pizzeriestarita.it/",
+    "formato": "",
+    "data": "2026-10-04",
+    "dataLabel": "Controllo registrato",
+    "gruppo": "Pizzeria Starita a Materdei",
+    "luoghi": [
+      "Pizzeria Starita a Materdei"
+    ],
+    "area": "Locali e cucina",
+    "scopo": "",
+    "scopoDisponibile": false,
+    "avvertenza": "",
+    "cautela": false,
+    "prova": "Collegamenti dichiarati nella fixture del giro 1"
+  }
+]

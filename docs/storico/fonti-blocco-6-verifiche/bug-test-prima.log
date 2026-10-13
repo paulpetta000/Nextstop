@@ -1,0 +1,50 @@
+✔ calcolo: giornata vuota senza visite, spostamenti o avvisi (2.9634ms)
+✖ dal vivo dopo la fine: una giornata vuota o tutta fatta non è piena (1.2437ms)
+✔ calcolo: visite e cammino determinano orari e tappe da spostare senza mutare il piano (0.7528ms)
+✔ calcolo: cambi di scenario al minuto previsto e opzione solo a piedi (0.1811ms)
+✔ locali: segnala apertura futura o chiusura durante il pasto, rispettando i confini (0.2246ms)
+✔ locali: senza data non dichiara chiuso se una fascia nota va bene; orari assenti non generano avvisi (0.1528ms)
+✔ bus: usa la prima partenza raggiungibile, includendo cammino e attesa (0.4156ms)
+✔ bus: dopo l’ultima corsa o senza dati per la corsa usa il percorso senza bus (0.3598ms)
+✔ bus: senza feed o con data fuori dal feed conserva i tempi medi (0.2899ms)
+✔ calcolo dal vivo: le tappe visitate restano senza orari e si riparte dall’ora indicata (0.4203ms)
+ℹ tests 10
+ℹ suites 0
+ℹ pass 9
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 146.038
+
+✖ failing tests:
+
+test at test\calcolo-itinerari.test.mjs:28:1
+✖ dal vivo dopo la fine: una giornata vuota o tutta fatta non è piena (1.2437ms)
+  AssertionError [ERR_ASSERTION]: Nessuna visita rimasta da finire oltre il limite
+  + actual - expected
+  
+  + [
+  +   {
+  +     daSpostare: [],
+  +     fine: 1200,
+  +     limite: 1080,
+  +     tipo: 'piena'
+  +   }
+  + ]
+  - []
+  
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/test/calcolo-itinerari.test.mjs:33:12)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:974:18)
+      at Test.postRun (node:internal/test_runner/test:1542:19)
+      at Test.run (node:internal/test_runner/test:1467:12)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: [ { tipo: 'piena', fine: 1200, limite: 1080, daSpostare: [] } ],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }

@@ -1,0 +1,62 @@
+[
+  {
+    "path": "/fonti/",
+    "theme": "light",
+    "performance": 98,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1955.9778,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "path": "/fonti/",
+    "theme": "dark",
+    "performance": 99,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1955.9142000000002,
+    "cls": 0.0008835533554293581,
+    "warnings": []
+  },
+  {
+    "path": "/napoli/itinerari/",
+    "theme": "light",
+    "performance": 92,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2871.909775,
+    "cls": 0.0001701260997527309,
+    "warnings": []
+  },
+  {
+    "path": "/napoli/itinerari/",
+    "theme": "dark",
+    "performance": 92,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2869.3659,
+    "cls": 0.0001701260997527309,
+    "warnings": []
+  },
+  {
+    "path": "/napoli/dove-mangiare/",
+    "theme": "light",
+    "performance": 95,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2556.6957,
+    "cls": 0.000616040559199931,
+    "warnings": []
+  },
+  {
+    "path": "/napoli/dove-mangiare/",
+    "theme": "dark",
+    "performance": 95,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2557.9873,
+    "cls": 0.000616040559199931,
+    "warnings": []
+  }
+]

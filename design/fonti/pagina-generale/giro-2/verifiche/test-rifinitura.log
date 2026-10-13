@@ -1,0 +1,37 @@
+✔ categorie: sette documenti di trasporto, campione e registro coerenti (508.8113ms)
+✔ registro: 195 fonti uniche con tipo conservato (0.4785ms)
+✔ a: ricerca per argomento sul registro completo (1147.2025ms)
+✔ a: frase con congiunzione orienta alla fonte condivisa di Nennella (981.7702ms)
+✔ a: cancellare la ricerca ripristina i due pannelli manuali (1015.5295ms)
+✔ a: indice indica Mappe dopo il salto (660.1967ms)
+✔ a: focus visibile nel ritorno con Shift+Tab a viewport basso (959.0181ms)
+✔ a: frammento malformato non interrompe la navigazione (614.872ms)
+✔ c: ricerca per argomento sul registro completo (816.7349ms)
+✔ c: frase con congiunzione orienta alla fonte condivisa di Nennella (657.0292ms)
+✔ c: cancellare la ricerca ripristina i due pannelli manuali (701.2748ms)
+✔ c: indice indica Mappe dopo il salto (711.8698ms)
+✔ c: focus visibile nel ritorno con Shift+Tab a viewport basso (860.2172ms)
+✔ c: frammento malformato non interrompe la navigazione (698.0775ms)
+✔ d: ricerca per argomento sul registro completo (849.0234ms)
+✔ d: frase con congiunzione orienta alla fonte condivisa di Nennella (779.6336ms)
+✔ d: cancellare la ricerca ripristina i due pannelli manuali (727.9845ms)
+✔ d: indice indica Mappe dopo il salto (734.1239ms)
+✔ d: focus visibile nel ritorno con Shift+Tab a viewport basso (890.3804ms)
+✔ d: frammento malformato non interrompe la navigazione (647.5216ms)
+✔ crediti: 54 foto, licenze e Bodoni raggiungibili dentro Nextstop (1008.7125ms)
+✔ navigazione locale senza richieste agli editori (0.3235ms)
+✔ crediti: navigazione compatta a 375px (697.3809ms)
+✔ il locale cercato prevale sulle congiunzioni della frase (1.223ms)
+✔ accenti e nome composto identificano Gesù Vecchio (0.2767ms)
+✔ una congiunzione da sola non elegge un luogo (0.9329ms)
+✔ due luoghi ugualmente pertinenti conservano l’elenco senza preferenza (0.2057ms)
+✔ nome con apostrofo e ricerca parziale restano utilizzabili (0.1624ms)
+✔ i sinonimi già previsti restano coerenti (0.1937ms)
+ℹ tests 29
+ℹ suites 0
+ℹ pass 29
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 17247.7902

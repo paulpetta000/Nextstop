@@ -1,0 +1,14 @@
+{
+  "combinazioni": 0,
+  "axe": 0,
+  "ricerche": 0,
+  "behavior": 8,
+  "external": 0,
+  "failures": [
+    "a: skip primo",
+    "a: movimento ridotto",
+    "b: skip primo",
+    "c: skip primo",
+    "d: skip primo"
+  ]
+}

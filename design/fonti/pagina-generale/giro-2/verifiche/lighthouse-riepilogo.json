@@ -1,0 +1,68 @@
+[
+  {
+    "key": "a",
+    "theme": "light",
+    "scenario": 195,
+    "performance": 97,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2477.7823802999046,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "a",
+    "theme": "dark",
+    "scenario": 195,
+    "performance": 96,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2553.6836311101706,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "c",
+    "theme": "light",
+    "scenario": 195,
+    "performance": 97,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2480.5870907167136,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "c",
+    "theme": "dark",
+    "scenario": 195,
+    "performance": 97,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2483.4928419635385,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "d",
+    "theme": "light",
+    "scenario": 195,
+    "performance": 97,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2479.209259400134,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "d",
+    "theme": "dark",
+    "scenario": 195,
+    "performance": 97,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2480.585332844813,
+    "cls": 0,
+    "warnings": []
+  }
+]

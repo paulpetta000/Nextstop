@@ -2,8 +2,8 @@
 // manda a nessun server. Esempio:
 //   #n=Due+giorni&d=2027-07-15&g=0930-1900.duomo.sansevero.tribunali&g=0930-1900.@pompei
 // n = nome, d = data del primo giorno, w = 1 solo a piedi, g = un giorno: orari, tappe (@ = gita).
-import { dataValida } from './date';
-import { tappaDi } from './calcolo';
+import { dataValida } from './date.ts';
+import { tappaDi } from './calcolo.ts';
 import type { Citta, Giorno, Itinerario } from './tipi';
 
 export const INIZIO = 9 * 60 + 30;

@@ -45,6 +45,8 @@ const json = JSON.stringify(pacco).replace(/</g, '\\u003c');
   <Fragment slot="head">
     <link rel="preload" href="/fonts/barlow-400.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="/fonts/barlow-semi-condensed-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/barlow-600.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/bodoni-moda-500-corsivo.woff2" as="font" type="font/woff2" crossorigin />
   </Fragment>
   <script is:inline>
     // Un itinerario ricevuto con un link: lo prendo e tolgo il «#…» dall'indirizzo prima di tutto il resto,
@@ -436,7 +438,7 @@ const json = JSON.stringify(pacco).replace(/</g, '\\u003c');
       </div>
     </section>
 
-    <FontiPagina testi={[T, TT, TL]} fatti={schedeMostrate} extra={[fonti.get('osm')!]} />
+    <FontiPagina testi={[T, TT, TL]} fatti={schedeMostrate} extra={[fonti.get('osm')!]} tappe={tappe} perimetro="Qui trovi le fonti delle tappe, dei locali e degli spostamenti disponibili in questa pagina, anche quando non sono nel viaggio che hai composto." />
   </div>
 </Base>
 

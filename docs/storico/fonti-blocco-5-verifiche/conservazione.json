@@ -1,0 +1,4086 @@
+{
+  "base": "c5a6fa7",
+  "files": 815,
+  "changes": [
+    "design/home/proposta-a.html"
+  ],
+  "rows": [
+    {
+      "file": "design/fonti/giro-1/README.md",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/a-breve.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/a-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/a-vuoto.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/a.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/b-breve.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/b-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/b-vuoto.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/b.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/base-conservazione.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/c-breve.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/c-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/c-vuoto.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/c.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/confronto.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/d-breve.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/d-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/d-vuoto.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/d.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/esempi.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/fixture-lungo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/fotografa.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/genera.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/index.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/lighthouse.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/prototipi.css",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/prototipi.js",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/serve.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifica.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-1280-dark-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-1280-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-1280-light-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-1280-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-375-dark-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-375-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-375-light-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-375-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-390-dark-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-390-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-390-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-390-light-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-390-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/a-390-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-1280-dark-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-1280-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-1280-light-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-1280-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-375-dark-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-375-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-375-light-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-375-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-390-dark-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-390-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-390-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-390-light-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-390-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/b-390-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/build.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-1280-dark-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-1280-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-1280-light-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-1280-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-375-dark-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-375-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-375-light-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-375-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-390-dark-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-390-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-390-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-390-light-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-390-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/c-390-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/check-links.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/confronto-telefono-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/confronto-telefono-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/conservazione.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-1280-dark-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-1280-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-1280-light-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-1280-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-375-dark-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-375-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-375-light-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-375-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-390-dark-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-390-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-390-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-390-light-aperto.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-390-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/d-390-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/lighthouse-a-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/lighthouse-a-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/lighthouse-b-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/lighthouse-b-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/lighthouse-c-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/lighthouse-c-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/lighthouse-d-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/lighthouse-d-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/lighthouse-riepilogo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/note-finali.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/npm-test.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/qa-finale.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/qa-riproduzione.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-1/verifiche/risultati.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/README.md",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/a-breve.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/a-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/a-vuoto.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/a.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/b-breve.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/b-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/b-vuoto.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/b.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/base-conservazione.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/c-breve.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/c-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/c-vuoto.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/c.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/confronto.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/conservazione.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/contenuti.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/controllo-documenti.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/d-breve.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/d-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/d-vuoto.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/d.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/fixture-lungo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/fotografa.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/genera.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/index.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/lighthouse.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/prototipi.css",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/prototipi.js",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/serve.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifica-breve.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifica.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-1280-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-1280-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-1280-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-1280-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-375-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-375-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-375-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-375-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-390-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-390-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-390-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-390-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-breve-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-breve-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-breve-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-breve-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-desktop-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-desktop-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-lungo-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-lungo-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-lungo-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-lungo-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-vuoto-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-vuoto-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-vuoto-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/a-vuoto-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-1280-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-1280-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-1280-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-1280-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-375-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-375-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-375-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-375-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-390-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-390-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-390-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-390-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-breve-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-breve-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-breve-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-breve-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-desktop-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-desktop-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-lungo-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-lungo-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-lungo-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-lungo-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-vuoto-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-vuoto-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-vuoto-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/b-vuoto-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/base-html.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/breve-dopo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/breve-prima.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/build.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-1280-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-1280-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-1280-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-1280-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-375-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-375-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-375-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-375-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-390-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-390-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-390-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-390-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-breve-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-breve-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-breve-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-breve-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-dark-napoli-sorrento.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-dark-nennella.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-dark-pintauro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-dark-slow-food.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-dark-zzzznessuna.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-desktop-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-desktop-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-light-napoli-sorrento.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-light-nennella.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-light-pintauro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-light-slow-food.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-light-zzzznessuna.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-lungo-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-lungo-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-lungo-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-lungo-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-vuoto-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-vuoto-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-vuoto-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/c-vuoto-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/confronto-telefono-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/confronto-telefono-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/conservazione.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-1280-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-1280-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-1280-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-1280-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-375-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-375-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-375-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-375-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-390-dark-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-390-dark-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-390-light-chiuso.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-390-light-pannello.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-breve-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-breve-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-breve-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-breve-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-desktop-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-desktop-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-lungo-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-lungo-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-lungo-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-lungo-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-vuoto-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-vuoto-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-vuoto-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/d-vuoto-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/documenti.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/lettura-visiva.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/lighthouse-a-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/lighthouse-a-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/lighthouse-b-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/lighthouse-b-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/lighthouse-c-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/lighthouse-c-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/lighthouse-d-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/lighthouse-d-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/lighthouse-riepilogo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/links.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/risultati.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-2/verifiche/test.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/README.md",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/base-conservazione.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/conservazione.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/controllo-documenti.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/d-breve.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/d-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/d-vuoto.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/d.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/genera.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/lighthouse.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/serve.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/verifica.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/build.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/conservazione.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/d-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/d-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/d-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/d-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/d-lungo-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/d-lungo-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/d-lungo-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/d-lungo-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/documenti.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/lighthouse-d-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/lighthouse-d-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/lighthouse-riepilogo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/links.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/risultati.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-3/verifiche/test.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/README.md",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/base-conservazione.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/conservazione.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/contenuti.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/d-breve.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/d-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/d-vuoto.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/d.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/fixture-lungo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/fotografa.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/genera.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/lighthouse.mjs",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/prototipi.css",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/prototipi.js",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/serve.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifica.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/build.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/conservazione.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/controllo-percorsi.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/controllo-percorsi.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/controllo-rapporto-precedente.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/controllo-rapporto-precedente.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-anm-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-breve-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-breve-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-breve-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-breve-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-breve-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-breve-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-chiuso-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-chiuso-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-chiuso-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-chiuso-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-chiuso-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-chiuso-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-condivisa-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-eav-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-lungo-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-lungo-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-lungo-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-lungo-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-lungo-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-lungo-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-pintauro-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-pintauro-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-ritorno-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-slow-food-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-telefono-due-temi.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-titolo-completo-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-vuoto-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-vuoto-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-vuoto-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-vuoto-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-vuoto-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/d-vuoto-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/documenti.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/documenti.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/lighthouse-d-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/lighthouse-d-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/lighthouse-d-lungo-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/lighthouse-d-lungo-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/lighthouse-primo-d-lungo-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/lighthouse-primo-riepilogo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/lighthouse-riepilogo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/links.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/risultati.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/giro-4/verifiche/test.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/README.md",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/a-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/a.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/b-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/b.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/base-conservazione.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/build-sito.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/c-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/c.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/conservazione.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/conservazione.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/contenuti.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/d-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/d.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/fotografa.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/genera.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/index.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/lighthouse.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/lighthouse.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/link-sito.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/movimento.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/movimento.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/prototipi.css",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/prototipi.js",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/riferimenti.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/riproduzione-skip.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/serve.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/tastiera.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/test-sito.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifica.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche-funzionali.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-195-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-195-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-anm-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-anm-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-eav-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-eav-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-nennella-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-nennella-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-pagina-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-pagina-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-pagina-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-pagina-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-pagina-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-pagina-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-pintauro-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-pintauro-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-registro-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-registro-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-registro-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-registro-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-registro-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-registro-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-slow food-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/a-slow food-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-195-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-195-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-anm-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-anm-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-eav-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-eav-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-nennella-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-nennella-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-pagina-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-pagina-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-pagina-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-pagina-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-pagina-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-pagina-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-pintauro-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-pintauro-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-registro-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-registro-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-registro-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-registro-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-registro-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-registro-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-slow food-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/b-slow food-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-195-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-195-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-anm-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-anm-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-eav-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-eav-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-nennella-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-nennella-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-pagina-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-pagina-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-pagina-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-pagina-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-pagina-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-pagina-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-pintauro-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-pintauro-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-registro-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-registro-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-registro-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-registro-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-registro-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-registro-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-slow food-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/c-slow food-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/conservazione.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-195-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-195-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-anm-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-anm-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-eav-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-eav-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-nennella-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-nennella-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-pagina-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-pagina-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-pagina-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-pagina-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-pagina-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-pagina-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-pintauro-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-pintauro-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-registro-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-registro-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-registro-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-registro-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-registro-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-registro-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-slow food-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/d-slow food-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/lighthouse-a-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/lighthouse-a-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/lighthouse-b-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/lighthouse-b-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/lighthouse-c-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/lighthouse-c-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/lighthouse-d-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/lighthouse-d-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/lighthouse-primo-riepilogo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/lighthouse-riepilogo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/movimento.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/quattro-registro-telefono.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/quattro-telefono.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/riferimenti.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/risultati-prima.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/risultati.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/tastiera-confine.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/tastiera-prima.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-1/verifiche/tastiera.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/README.md",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/a-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/a.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/c-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/c.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/categorie.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/contenuti.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/crediti-verifica.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/crediti.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/crediti.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/d-lungo.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/d.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/genera.mjs",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/index.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/lighthouse.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/movimento.mjs",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/prototipi.css",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/prototipi.js",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/regressioni.test.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/ricerca-confronto.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/ricerca.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/ricerca.test.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/riferimenti.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/serve.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifica.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/a-14-1280-dark-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/a-14-1280-light-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/a-14-375-dark-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/a-14-375-light-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/a-195-1280-dark-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/a-195-1280-light-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/a-195-375-dark-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/a-195-375-light-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/a-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/a-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/a-ricerca-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/a-ricerca-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/base-conservazione.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/build-rifinitura.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/build.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/c-14-1280-dark-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/c-14-1280-light-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/c-14-375-dark-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/c-14-375-light-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/c-195-1280-dark-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/c-195-1280-light-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/c-195-375-dark-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/c-195-375-light-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/c-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/c-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/c-ricerca-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/c-ricerca-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/conservazione.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/crediti-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/crediti-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/crediti-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/crediti-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/crediti-dopo.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/crediti-finali.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/crediti-prima.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/d-14-1280-dark-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/d-14-1280-light-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/d-14-375-dark-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/d-14-375-light-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/d-195-1280-dark-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/d-195-1280-light-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/d-195-375-dark-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/d-195-375-light-registro.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/d-390-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/d-390-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/d-ricerca-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/d-ricerca-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/index-1280-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/index-1280-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/index-375-dark.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/index-375-light.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-a-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-a-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-c-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-c-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-d-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-d-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-finali.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-primo-a-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-primo-a-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-primo-c-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-primo-c-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-primo-d-dark.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-primo-d-light.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-primo-riepilogo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-primo.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-riepilogo.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse-rifinitura.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/lighthouse.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/link-sito-rifinitura.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/link-sito.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-00.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-01.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-02.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-03.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-04.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-05.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-06.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-07.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-08.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-09.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-10.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-11.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-12.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-13.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-14.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-d-15.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento-rifinitura.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento.json",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/movimento.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/regressioni-dopo.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/regressioni-prima.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-dopo-1280-dark-attiva.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-dopo-1280-dark-riposo.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-dopo-1280-light-attiva.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-dopo-1280-light-riposo.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-dopo-390-dark-attiva.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-dopo-390-dark-riposo.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-dopo-390-light-attiva.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-dopo-390-light-riposo.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-dopo.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-non-approvata.patch",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-prima-1280-dark-attiva.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-prima-1280-dark-riposo.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-prima-1280-light-attiva.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-prima-1280-light-riposo.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-prima-390-dark-attiva.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-prima-390-dark-riposo.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-prima-390-light-attiva.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-prima-390-light-riposo.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-prima-dopo.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/ricerca-prima.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/riferimenti.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/risultati-rifinitura.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/risultati.json",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/test-finali.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/test-rifinitura.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/test-sito-rifinitura.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/test-sito.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/tre-aperture.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/tre-ricerca.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/verifica-prima.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/fonti/pagina-generale/giro-2/verifiche/verifica.log",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/home/a.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/home/b.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/home/dati.json",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/home/dati.mjs",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/home/genera.mjs",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/home/immagini/confronto-chiaro.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/home/immagini/confronto-scuro.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/home/immagini/home-costruita-1.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/home/immagini/home-costruita-2.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/home/proposta-a.html",
+      "exact": false,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/home/proposta-b.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/home/servi.mjs",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/home/telefono.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/ispirazioni/README.md",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/ispirazioni/mudd-1-apertura.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/ispirazioni/mudd-2-schede-e-informazioni.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/ispirazioni/mudd-3-immagine-a-rombo.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/ispirazioni/mudd-4-immagine-a-infinito.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/ispirazioni/mudd-5-rombo-su-mappa.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/ispirazioni/mudd-6-elenco-a-fisarmonica.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/itinerari/foto.cjs",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/itinerari/genera.mjs",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/itinerari/percorsi.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/itinerari/proposta-a.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/itinerari/proposta-b.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/README.md",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/genera-marchio.mjs",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/genera.mjs",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/immagini/loghi-2.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/immagini/loghi-3.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/immagini/loghi-4-colori.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/immagini/loghi-5.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/immagini/loghi-6.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/immagini/loghi-7.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/immagini/loghi-chiaro.jpg",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/loghi-2.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/loghi-3-pagina.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/loghi-3.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/loghi-4-pagina.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/loghi-4.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/loghi-5-pagina.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/loghi-5.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/loghi-6.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/loghi-7-pagina.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/loghi-7.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/loghi-pagina.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/loghi.html",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/marchio.mjs",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/scelto/icona-16.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/scelto/icona-180.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/scelto/icona-192.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/scelto/icona-32.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/scelto/icona-48.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/scelto/icona-512.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "design/logo/scelto/icona-quadrata.svg",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/scelto/icona.svg",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/scelto/segno-chiaro.svg",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/scelto/segno-foto.svg",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "design/logo/scelto/segno-scuro.svg",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "integrations/service-worker.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "integrations/sw-template.js",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "public/favicon.ico",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/favicon.svg",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "public/fonts/LICENSE-Archivo.txt",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "public/fonts/LICENSE-Barlow.txt",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "public/fonts/LICENSE-Bodoni-Moda.txt",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "public/fonts/LICENSE-IBM-Plex-Mono.txt",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "public/fonts/archivo-var.woff2",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/fonts/barlow-400.woff2",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/fonts/barlow-600.woff2",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/fonts/barlow-semi-condensed-600.woff2",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/fonts/bodoni-moda-500-corsivo.woff2",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/fonts/bodoni-moda-600.woff2",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/fonts/ibm-plex-mono-500.woff2",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/fonts/ibm-plex-mono-600.woff2",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/googlee54aa324270bde6d.html",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "public/icons/apple-touch-icon.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/icons/favicon-96.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/icons/icon-192.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/icons/icon-512.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/icons/icon-maskable-512.png",
+      "exact": true,
+      "textEquivalent": false
+    },
+    {
+      "file": "public/manifest.webmanifest",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "public/robots.txt",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/config/menu.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/config/sito.ts",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/eventi.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/fatti.yaml",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/fonti.yaml",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/foto.yaml",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/itinerari-pronti.yaml",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/linee-bus.json",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/locali.yaml",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/luoghi.yaml",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/mappa.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/pagine.ts",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/partenze-bus.json",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/percorsi-alternativi.json",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/percorsi-tappe.json",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/tappe.yaml",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/data/tempi-tappe.json",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/lib/itinerari/calcolo.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/lib/itinerari/date.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/lib/itinerari/firma-posizioni.mjs",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/lib/itinerari/icone.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/lib/itinerari/link.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/lib/itinerari/napoli.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/lib/itinerari/pacco.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/lib/itinerari/spostamenti.ts",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/lib/itinerari/tipi.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/lib/locali.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/lib/tappe.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/scripts/itinerari/app.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/scripts/itinerari/mappa.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/scripts/itinerari/memoria.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/scripts/itinerari/trascina.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/scripts/sito.ts",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/testi/dove-mangiare.yaml",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/testi/firme.json",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/testi/home.yaml",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/testi/itinerari.yaml",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/testi/locali.yaml",
+      "exact": false,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/testi/napoli.yaml",
+      "exact": true,
+      "textEquivalent": true
+    },
+    {
+      "file": "src/testi/tappe.yaml",
+      "exact": false,
+      "textEquivalent": true
+    }
+  ],
+  "archiveDocuments": 195,
+  "itinerariDocuments": 181
+}

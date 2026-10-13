@@ -16,3 +16,8 @@ design/compositore/scheda-giro-*/immagini/*.png
 design/compositore/ricerca-giro-*/proposte.html
 design/compositore/ricerca-giro-*/proposte-locale.html
 design/compositore/ricerca-giro-*/immagini/*.png
+
+# Configurazione locale; il modello senza segreti può essere versionato.
+.env
+.env.*
+!.env.example

@@ -1,7 +1,7 @@
 // Calcolo di una giornata: orari, spostamenti, avvisi e ordine più corto. Funzioni pure, senza DOM:
 // le usa la pagina (src/scripts/itinerari/) e la build, che controlla gli itinerari pronti.
-import { giornoSettimana, tipoGiorno, piuGiorni } from './date';
-import type { Adesso, Avviso, Citta, Corsa, Giorno, Itinerario, Risultato, Scenario, Tappa, Vivo, Voce } from './tipi';
+import { giornoSettimana, tipoGiorno, piuGiorni } from './date.ts';
+import type { Adesso, Avviso, Citta, Corsa, Itinerario, Risultato, Scenario, Tappa, Vivo, Voce } from './tipi';
 import type { GiornoSettimana } from './date';
 
 // Una tappa che allunga gli spostamenti di almeno tanti minuti (andata e ritorno) è «lontana dalle altre»
@@ -240,7 +240,7 @@ export function calcolaGiorno(C: Citta, it: Itinerario, g: number, adesso?: Ades
     if (e.ritardo) avvisi.push({ tipo: 'evento-tardi', ritardo: e.ritardo });
   }
   // la giornata non ci sta: si propongono le ultime tappe che finiscono oltre (l'evento resta dov'è)
-  if (t > G.fine) {
+  if (restano.length && t > G.fine) {
     const daSpostare = voci.filter((v): v is Extract<Voce, { tipo: 'tappa' }> => v.tipo === 'tappa' && !v.fatta && v.fine > G.fine && v.id !== C.evento?.id && !v.inCorso).map(v => v.id);
     avvisi.push({ tipo: 'piena', fine: t, limite: G.fine, daSpostare });
   }

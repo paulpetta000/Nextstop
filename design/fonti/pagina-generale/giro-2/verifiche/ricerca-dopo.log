@@ -1,0 +1,14 @@
+✔ il locale cercato prevale sulle congiunzioni della frase (0.9247ms)
+✔ accenti e nome composto identificano Gesù Vecchio (0.1317ms)
+✔ una congiunzione da sola non elegge un luogo (0.6803ms)
+✔ due luoghi ugualmente pertinenti conservano l’elenco senza preferenza (0.1413ms)
+✔ nome con apostrofo e ricerca parziale restano utilizzabili (0.1356ms)
+✔ i sinonimi già previsti restano coerenti (0.1603ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 6
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 84.2134

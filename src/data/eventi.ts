@@ -31,20 +31,3 @@ export const EVENTI: Evento[] = [
   { id: 'womens', gara: 'womens', titolo: "Women's America's Cup", breve: "Women's America's Cup", inizio: '2027-07-05', fine: '2027-07-09', chiave: "Women's", chi: 'tutte', testo: 'Equipaggi femminili su AC40.', fatto: 'cal-womens' },
   { id: 'match', gara: 'match', titolo: "America's Cup Match", breve: "America's Cup Match", inizio: '2027-07-10', fine: '2027-07-19', possibiliDal: '2027-07-12', chiave: 'Match', chi: 'match', condizionale: 'se vince la Louis Vuitton Cup', testo: 'Emirates Team New Zealand contro il vincitore della Louis Vuitton Cup. Vince chi arriva prima a 7.', fatto: 'cal-match' }
 ];
-
-export const GARE = {
-  lvc: { nome: 'Louis Vuitton Cup', breve: 'LV Cup' },
-  youth: { nome: "Youth America's Cup", breve: 'Youth' },
-  womens: { nome: "Women's America's Cup", breve: "Women's" },
-  match: { nome: "America's Cup Match", breve: 'Match' },
-  pausa: { nome: 'Pausa', breve: 'Pausa' }
-} as const;
-
-// Eventi a cui prende parte una squadra (per il calendario "segui la tua squadra")
-export function eventiDi(ruolo: 'defender' | 'challenger-of-record' | 'sfidante') {
-  return EVENTI.filter(e => {
-    if (e.chi === 'nessuno') return false;
-    if (ruolo === 'defender') return e.chi === 'tutte' ? true : e.chi === 'match';
-    return true;
-  }).map(e => ({ ...e, condizionale: ruolo === 'defender' && e.id === 'match' ? undefined : e.condizionale }));
-}

@@ -1,0 +1,482 @@
+[
+  {
+    "key": "a",
+    "theme": "light",
+    "width": 390,
+    "height": 420,
+    "steps": [
+      {
+        "text": "Mostra tutti i documenti",
+        "className": "",
+        "top": 351.65625,
+        "bottom": 395.65625,
+        "railTop": 313.96875,
+        "railBottom": 408.65625,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Torna alla ricerca",
+        "className": "",
+        "top": 351.65625,
+        "bottom": 395.65625,
+        "railTop": 313.96875,
+        "railBottom": 408.65625,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Locali e cucina1 documento",
+        "className": "",
+        "top": 331.65625,
+        "bottom": 419.65625,
+        "railTop": 235.96875,
+        "railBottom": 330.65625,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Gli 8 ristoranti scelti da Gambero RossoWhere to eat pasta, potatoes, and provola in Naples. The 8 best restaurants chosen by Gambero Rosso",
+        "className": "source-link",
+        "top": 196.375,
+        "bottom": 247.375,
+        "railTop": 0,
+        "railBottom": 94.6875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi il titolo completo",
+        "className": "",
+        "top": 247.375,
+        "bottom": 291.375,
+        "railTop": 0,
+        "railBottom": 94.6875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi crediti e licenze",
+        "className": "",
+        "top": 198.15625,
+        "bottom": 246.15625,
+        "railTop": -152.9375,
+        "railBottom": -58.25,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Segnala una correzione",
+        "className": "",
+        "top": 202.1875,
+        "bottom": 250.1875,
+        "railTop": -378.9375,
+        "railBottom": -284.25,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi la privacy",
+        "className": "",
+        "top": 351.875,
+        "bottom": 395.875,
+        "railTop": -378.9375,
+        "railBottom": -284.25,
+        "entirelyCovered": false
+      }
+    ]
+  },
+  {
+    "key": "a",
+    "theme": "dark",
+    "width": 390,
+    "height": 420,
+    "steps": [
+      {
+        "text": "Mostra tutti i documenti",
+        "className": "",
+        "top": 351.65625,
+        "bottom": 395.65625,
+        "railTop": 313.96875,
+        "railBottom": 408.65625,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Torna alla ricerca",
+        "className": "",
+        "top": 351.65625,
+        "bottom": 395.65625,
+        "railTop": 313.96875,
+        "railBottom": 408.65625,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Locali e cucina1 documento",
+        "className": "",
+        "top": 331.65625,
+        "bottom": 419.65625,
+        "railTop": 235.96875,
+        "railBottom": 330.65625,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Gli 8 ristoranti scelti da Gambero RossoWhere to eat pasta, potatoes, and provola in Naples. The 8 best restaurants chosen by Gambero Rosso",
+        "className": "source-link",
+        "top": 196.375,
+        "bottom": 247.375,
+        "railTop": 0,
+        "railBottom": 94.6875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi il titolo completo",
+        "className": "",
+        "top": 247.375,
+        "bottom": 291.375,
+        "railTop": 0,
+        "railBottom": 94.6875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi crediti e licenze",
+        "className": "",
+        "top": 198.15625,
+        "bottom": 246.15625,
+        "railTop": -152.9375,
+        "railBottom": -58.25,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Segnala una correzione",
+        "className": "",
+        "top": 202.1875,
+        "bottom": 250.1875,
+        "railTop": -378.9375,
+        "railBottom": -284.25,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi la privacy",
+        "className": "",
+        "top": 351.875,
+        "bottom": 395.875,
+        "railTop": -378.9375,
+        "railBottom": -284.25,
+        "entirelyCovered": false
+      }
+    ]
+  },
+  {
+    "key": "c",
+    "theme": "light",
+    "width": 390,
+    "height": 420,
+    "steps": [
+      {
+        "text": "Mostra tutti i documenti",
+        "className": "",
+        "top": 352.421875,
+        "bottom": 396.421875,
+        "railTop": 314.734375,
+        "railBottom": 409.421875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Torna alla ricerca",
+        "className": "",
+        "top": 352.421875,
+        "bottom": 396.421875,
+        "railTop": 314.734375,
+        "railBottom": 409.421875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Locali e cucina1 documento",
+        "className": "",
+        "top": 331.421875,
+        "bottom": 420.109375,
+        "railTop": 235.734375,
+        "railBottom": 330.421875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Gli 8 ristoranti scelti da Gambero RossoWhere to eat pasta, potatoes, and provola in Naples. The 8 best restaurants chosen by Gambero Rosso",
+        "className": "source-link",
+        "top": 196.828125,
+        "bottom": 247.828125,
+        "railTop": 0,
+        "railBottom": 94.6875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi il titolo completo",
+        "className": "",
+        "top": 247.828125,
+        "bottom": 291.828125,
+        "railTop": 0,
+        "railBottom": 94.6875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi crediti e licenze",
+        "className": "",
+        "top": 197.609375,
+        "bottom": 245.609375,
+        "railTop": -153.484375,
+        "railBottom": -58.796875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Segnala una correzione",
+        "className": "",
+        "top": 202.640625,
+        "bottom": 250.640625,
+        "railTop": -378.484375,
+        "railBottom": -283.796875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi la privacy",
+        "className": "",
+        "top": 352.328125,
+        "bottom": 396.328125,
+        "railTop": -378.484375,
+        "railBottom": -283.796875,
+        "entirelyCovered": false
+      }
+    ]
+  },
+  {
+    "key": "c",
+    "theme": "dark",
+    "width": 390,
+    "height": 420,
+    "steps": [
+      {
+        "text": "Mostra tutti i documenti",
+        "className": "",
+        "top": 352.421875,
+        "bottom": 396.421875,
+        "railTop": 314.734375,
+        "railBottom": 409.421875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Torna alla ricerca",
+        "className": "",
+        "top": 352.421875,
+        "bottom": 396.421875,
+        "railTop": 314.734375,
+        "railBottom": 409.421875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Locali e cucina1 documento",
+        "className": "",
+        "top": 331.421875,
+        "bottom": 420.109375,
+        "railTop": 235.734375,
+        "railBottom": 330.421875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Gli 8 ristoranti scelti da Gambero RossoWhere to eat pasta, potatoes, and provola in Naples. The 8 best restaurants chosen by Gambero Rosso",
+        "className": "source-link",
+        "top": 196.828125,
+        "bottom": 247.828125,
+        "railTop": 0,
+        "railBottom": 94.6875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi il titolo completo",
+        "className": "",
+        "top": 247.828125,
+        "bottom": 291.828125,
+        "railTop": 0,
+        "railBottom": 94.6875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi crediti e licenze",
+        "className": "",
+        "top": 197.609375,
+        "bottom": 245.609375,
+        "railTop": -153.484375,
+        "railBottom": -58.796875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Segnala una correzione",
+        "className": "",
+        "top": 202.640625,
+        "bottom": 250.640625,
+        "railTop": -378.484375,
+        "railBottom": -283.796875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi la privacy",
+        "className": "",
+        "top": 352.328125,
+        "bottom": 396.328125,
+        "railTop": -378.484375,
+        "railBottom": -283.796875,
+        "entirelyCovered": false
+      }
+    ]
+  },
+  {
+    "key": "d",
+    "theme": "light",
+    "width": 390,
+    "height": 420,
+    "steps": [
+      {
+        "text": "Mostra tutti i documenti",
+        "className": "",
+        "top": 335.28125,
+        "bottom": 379.28125,
+        "railTop": 297.59375,
+        "railBottom": 392.28125,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Torna alla ricerca",
+        "className": "",
+        "top": 335.28125,
+        "bottom": 379.28125,
+        "railTop": 297.59375,
+        "railBottom": 392.28125,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Locali e cucina1 documento",
+        "className": "",
+        "top": 332.28125,
+        "bottom": 420.28125,
+        "railTop": 236.59375,
+        "railBottom": 331.28125,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Gli 8 ristoranti scelti da Gambero RossoWhere to eat pasta, potatoes, and provola in Naples. The 8 best restaurants chosen by Gambero Rosso",
+        "className": "source-link",
+        "top": 196.5,
+        "bottom": 247.5,
+        "railTop": 0,
+        "railBottom": 94.6875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi il titolo completo",
+        "className": "",
+        "top": 247.5,
+        "bottom": 291.5,
+        "railTop": 0,
+        "railBottom": 94.6875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi crediti e licenze",
+        "className": "",
+        "top": 198.28125,
+        "bottom": 246.28125,
+        "railTop": -152.8125,
+        "railBottom": -58.125,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Segnala una correzione",
+        "className": "",
+        "top": 202.3125,
+        "bottom": 250.3125,
+        "railTop": -378.8125,
+        "railBottom": -284.125,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi la privacy",
+        "className": "",
+        "top": 352,
+        "bottom": 396,
+        "railTop": -378.8125,
+        "railBottom": -284.125,
+        "entirelyCovered": false
+      }
+    ]
+  },
+  {
+    "key": "d",
+    "theme": "dark",
+    "width": 390,
+    "height": 420,
+    "steps": [
+      {
+        "text": "Mostra tutti i documenti",
+        "className": "",
+        "top": 335.28125,
+        "bottom": 379.28125,
+        "railTop": 297.59375,
+        "railBottom": 392.28125,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Torna alla ricerca",
+        "className": "",
+        "top": 335.28125,
+        "bottom": 379.28125,
+        "railTop": 297.59375,
+        "railBottom": 392.28125,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Locali e cucina1 documento",
+        "className": "",
+        "top": 332.28125,
+        "bottom": 420.28125,
+        "railTop": 236.59375,
+        "railBottom": 331.28125,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Gli 8 ristoranti scelti da Gambero RossoWhere to eat pasta, potatoes, and provola in Naples. The 8 best restaurants chosen by Gambero Rosso",
+        "className": "source-link",
+        "top": 196.5,
+        "bottom": 247.5,
+        "railTop": 0,
+        "railBottom": 94.6875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi il titolo completo",
+        "className": "",
+        "top": 247.5,
+        "bottom": 291.5,
+        "railTop": 0,
+        "railBottom": 94.6875,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi crediti e licenze",
+        "className": "",
+        "top": 198.28125,
+        "bottom": 246.28125,
+        "railTop": -152.8125,
+        "railBottom": -58.125,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Segnala una correzione",
+        "className": "",
+        "top": 202.3125,
+        "bottom": 250.3125,
+        "railTop": -378.8125,
+        "railBottom": -284.125,
+        "entirelyCovered": false
+      },
+      {
+        "text": "Leggi la privacy",
+        "className": "",
+        "top": 352,
+        "bottom": 396,
+        "railTop": -378.8125,
+        "railBottom": -284.125,
+        "entirelyCovered": false
+      }
+    ]
+  }
+]

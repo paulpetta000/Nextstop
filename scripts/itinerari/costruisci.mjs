@@ -19,7 +19,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
-import { createHash } from 'node:crypto';
+import { firmaPosizioni } from '../../src/lib/itinerari/firma-posizioni.mjs';
 import { lineeBus } from './gtfs.mjs';
 
 const RADICE = fileURLToPath(new URL('../../', import.meta.url));
@@ -516,7 +516,7 @@ const SCENARI = [
   { nome: 'piedi', mezzi: false, descrizione: 'solo a piedi' }
 ];
 // impronta delle posizioni: la build (src/lib/tappe.ts) controlla che i tempi siano stati fatti con le tappe di oggi
-const firma = createHash('sha1').update(JSON.stringify([...tappe].sort((a, b) => a.id.localeCompare(b.id)).map(t => [t.id, t.lat, t.lon, t.fine ? [t.fine.lat, t.fine.lon] : null]))).digest('hex').slice(0, 12);
+const firma = firmaPosizioni(tappe);
 const uscita = { generato: new Date().toISOString().slice(0, 10), firma, dati: { osm: osm.osm3s?.timestamp_osm_base, quote: 'Copernicus GLO-30', bus: { fonte: 'ANM, feed GTFS (IODL 2.0)', dal: GTFS.feed.dal, al: GTFS.feed.al, giorni: GTFS.date, preferenza: BUS.preferenza, accesso: BUS.accesso } }, parametri: PIEDI, linee: [...LINEE, ...BUSLINEE].map(({ id, nome, tipo, chiusa, fermate }) => ({ id, nome, ...(tipo ? { tipo } : {}), ...(chiusa ? { chiusa } : {}), fermate })), punti: punti.map(p => p.id), scenari: {} };
 const rapporto = [];
 const disegni = {};   // scenario -> righe di punti -> pezzi del percorso (per la mappa degli itinerari)

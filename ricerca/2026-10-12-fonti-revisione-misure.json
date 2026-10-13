@@ -1,0 +1,29 @@
+{
+  "data": "2026-10-12",
+  "ramo": "codex/fonti-specifica",
+  "commitPrototipi": "4d171bd",
+  "metodo": "Lettura del DOM renderizzato dei quattro prototipi, pannello aperto, browser Codex. Viewport 390 e 1280 px, altezza 844 px. Le parole contano soltanto il testo delle voci .source; l'ingombro comprende il pannello. Misure di impaginazione, non tempi o risultati di test con persone.",
+  "colonne": ["proposta", "fonti", "viewport", "gruppi", "altezzaPannello", "inizioPrimaFonte", "altezzaMediaVoce", "paroleVoci", "etichetteGeneriche"],
+  "misure": [
+    ["A", 12, 390, 3, 4881, 401, 333, 501, 0],
+    ["A", 12, 1280, 3, 3559, 284, 234, 501, 0],
+    ["B", 12, 390, 11, 5432, 526, 283, 473, 0],
+    ["B", 12, 1280, 11, 4250, 208, 218, 473, 0],
+    ["C", 12, 390, 3, 5240, 478, 354, 501, 0],
+    ["C", 12, 1280, 3, 3230, 395, 196, 489, 0],
+    ["D", 12, 390, 11, 6318, 743, 287, 473, 0],
+    ["D", 12, 1280, 11, 3215, 369, 226, 473, 0],
+    ["A", 180, 390, 3, 71451, 409, 392, 8983, 180],
+    ["A", 180, 1280, 3, 45721, 292, 250, 8983, 180],
+    ["B", 180, 390, 87, 73063, 526, 338, 8385, 180],
+    ["B", 180, 1280, 87, 52790, 208, 233, 8385, 180],
+    ["C", 180, 390, 3, 71070, 486, 389, 8983, 180],
+    ["C", 180, 1280, 3, 38984, 403, 212, 8803, 180],
+    ["D", 180, 390, 87, 78658, 627, 338, 8385, 180],
+    ["D", 180, 1280, 87, 39074, 513, 261, 8385, 180]
+  ],
+  "riscontriFixture": {
+    "osm": { "gruppo": "Città della Scienza", "area": "Luoghi e visite", "paroleNota": 184, "caratteriNota": 1289 },
+    "limite": "L'assegnazione al primo luogo collegato e la categoria derivata dagli ID sono regole del prototipo, non una classificazione editoriale verificata."
+  }
+}

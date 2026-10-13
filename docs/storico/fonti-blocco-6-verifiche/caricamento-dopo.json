@@ -1,0 +1,28 @@
+[
+  {
+    "state": "vuoto",
+    "before": {
+      "fonts": "loaded",
+      "fonti": "print"
+    },
+    "requests": [
+      "/napoli/itinerari/scenari.json",
+      "/napoli/itinerari/partenze.json"
+    ],
+    "same": true,
+    "errors": []
+  },
+  {
+    "state": "con-tappa",
+    "before": {
+      "fonts": "loaded",
+      "fonti": "print"
+    },
+    "requests": [
+      "/napoli/itinerari/scenari.json",
+      "/napoli/itinerari/partenze.json"
+    ],
+    "same": false,
+    "errors": []
+  }
+]

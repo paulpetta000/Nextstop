@@ -5,9 +5,10 @@ import { spacchetta, spacchettaVivo, aggiungiScenari, type Pacco, type PaccoVivo
 import { calcolaGiorno, ordinePiuCorto, tappaDi, dataDelGiorno, minuti, scenarioDi, orarioLocale } from '../../lib/itinerari/calcolo';
 import type { Adesso } from '../../lib/itinerari/tipi';
 import { codifica, decodifica, nuovoItinerario, giornoVuoto, uguali, MAX_GIORNI, MAX_TAPPE, MAX_NOME } from '../../lib/itinerari/link';
-import { dataLunga, dataBreve, ora, durata, durataParole, piuGiorni, giornoSettimana, NOMI_GIORNI, ilGiorno, dataValida, minutiDa } from '../../lib/itinerari/date';
+import { dataLunga, dataBreve, ora, durata, durataParole, piuGiorni, giornoSettimana, ilGiorno, dataValida, minutiDa } from '../../lib/itinerari/date';
 import { icona } from '../../lib/itinerari/icone';
 import { leggi, scrivi, quandoCambia, type Archivio } from './memoria';
+import { preparaSpostamento } from '../../lib/itinerari/spostamenti';
 import { trascinabile } from './trascina';
 import type { Avviso, Giorno, Itinerario, Risultato, Voce } from '../../lib/itinerari/tipi';
 
@@ -125,19 +126,30 @@ function avvia() {
   setInterval(aggiornaDalVivo, 30000);
   document.addEventListener('visibilitychange', () => { curaPosizione(); if (document.visibilityState === 'visible') aggiornaDalVivo(); });
   // i tempi di sabato, domenica, festivi e «solo a piedi» arrivano dopo l'apertura (e restano salvati per l'uso senza rete)
-  fetch('/napoli/itinerari/scenari.json').then(r => (r.ok ? r.json() : null)).then((p: PaccoScenari | null) => {
-    if (!p) return;
-    aggiungiScenari(C, p);
-    memoOrdine.clear();
-    if (occupato()) setTimeout(() => disegna(), 5000); else disegna();
-  }).catch(() => { /* senza, per questi giorni valgono i tempi del feriale */ });
-  // gli orari veri dei bus arrivano dopo (e restano salvati per l'uso senza rete)
-  fetch('/napoli/itinerari/partenze.json').then(r => (r.ok ? r.json() : null)).then((p: PaccoVivo | null) => {
-    if (!p) return;
-    C.vivo = spacchettaVivo(p);
-    memoOrdine.clear();
-    if (occupato()) setTimeout(() => disegna(), 5000); else disegna();
-  }).catch(() => { /* senza orari veri resta l'attesa media */ });
+  const caricaSpostamenti = () => {
+    fetch('/napoli/itinerari/scenari.json', { priority: 'low' }).then(r => (r.ok ? r.json() : null)).then((p: PaccoScenari | null) => {
+      if (!p) return;
+      aggiungiScenari(C, p);
+      memoOrdine.clear();
+      // I dati sono disponibili al prossimo gesto; una giornata vuota non usa spostamenti.
+      if (!it().giorni[giorno].tappe.length && !$('it-pannello').hasAttribute('open')) return;
+      if (occupato()) setTimeout(() => disegna(), 5000); else disegna();
+    }).catch(() => { /* senza, per questi giorni valgono i tempi del feriale */ });
+    // gli orari veri dei bus arrivano dopo (e restano salvati per l'uso senza rete)
+    fetch('/napoli/itinerari/partenze.json', { priority: 'low' }).then(r => (r.ok ? r.json() : null)).then((p: PaccoVivo | null) => {
+      if (!p) return;
+      C.vivo = spacchettaVivo(p);
+      memoOrdine.clear();
+      if (!it().giorni[giorno].tappe.length && !$('it-pannello').hasAttribute('open')) return;
+      if (occupato()) setTimeout(() => disegna(), 5000); else disegna();
+    }).catch(() => { /* senza orari veri resta l'attesa media */ });
+  };
+  // Prima il disegno e i caratteri della pagina; poi i dati aggiuntivi e il
+  // ricalcolo già previsto. Nessun ritardo fisso o dipendenza dalla rete esterna.
+  Promise.all([
+    document.fonts?.ready ?? Promise.resolve(),
+    new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve())))
+  ]).then(caricaSpostamenti);
 
   function salva() {
     if (scrivi(A) || avvisatoMemoria) return;
@@ -476,15 +488,12 @@ function avvia() {
   }
   // Mette delle tappe in un altro giorno (o in un giorno nuovo, se serve) e passa a quel giorno
   function spostaInGiorno(ids: string[], dest: number) {
-    const x = it();
-    if (dest >= x.giorni.length && x.giorni.length >= MAX_GIORNI) { toast(`Al massimo ${MAX_GIORNI} giorni`); return; }
-    const da = giorno;
-    cambia(y => {
-      if (dest >= y.giorni.length) { y.giorni.push(giornoVuoto(y.giorni[da].inizio, y.giorni[da].fine)); dest = y.giorni.length - 1; }
-      if (y.giorni[dest].gita) { y.giorni.splice(dest, 0, giornoVuoto(y.giorni[da].inizio, y.giorni[da].fine)); }
-      y.giorni[da].tappe = y.giorni[da].tappe.filter(t => !ids.includes(t));
-      y.giorni[dest].tappe = [...y.giorni[dest].tappe.filter(t => !ids.includes(t)), ...ids].slice(0, MAX_TAPPE);
-    }, { annulla: `${ids.length === 1 ? maiuscola(breve(ids[0])) + ' è' : 'Le tappe sono'} nel giorno ${dest + 1}` });
+    const spostamento = preparaSpostamento(it(), giorno, dest, ids);
+    if (spostamento === 'limite-giorni') { toast(`Al massimo ${MAX_GIORNI} giorni`); return; }
+    if (spostamento === 'limite-tappe') { toast(`Al massimo ${MAX_TAPPE} tappe in un giorno`); return; }
+    cambia(y => { y.giorni = spostamento.giorni; }, {
+      annulla: `${ids.length === 1 ? maiuscola(breve(ids[0])) + ' è' : 'Le tappe sono'} nel giorno ${spostamento.destinazione + 1}`
+    });
   }
   function aggiungiTappa(id: string) {
     const x = it();

@@ -1,0 +1,3239 @@
+{
+  "documents": 195,
+  "pages": [
+    {
+      "name": "itinerari",
+      "count": 181,
+      "ids": [
+        "gri-cuoppo-2024",
+        "gri-pasta-patate-2024",
+        "gri-pizza-fritta-2023",
+        "lc-bellavia",
+        "lc-bellavia-store",
+        "lc-bellavia-storia",
+        "lc-bersagliera",
+        "lc-bersagliera-home",
+        "lc-brandi",
+        "lc-brandi-home",
+        "lc-caffettiera",
+        "lc-calabritto",
+        "lc-calabritto-menu",
+        "lc-cantinella",
+        "lc-cantinella-home",
+        "lc-cantinella-menu",
+        "lc-chalet-ciro",
+        "lc-chalet-ciro-storia",
+        "lc-chitarra",
+        "lc-chitarra-menu",
+        "lc-chitarra-storia",
+        "lc-cicciotto",
+        "lc-cicciotto-menu",
+        "lc-cinquanta-kalo",
+        "lc-cinquanta-kalo-menu",
+        "lc-concettina",
+        "lc-concettina-storia",
+        "lc-da-michele",
+        "lc-da-michele-menu",
+        "lc-di-costanzo",
+        "lc-di-matteo",
+        "lc-di-matteo-menu",
+        "lc-fenestella",
+        "lc-fenestella-home",
+        "lc-gesu-vecchio",
+        "lc-gesu-vecchio-home",
+        "lc-gesu-vecchio-menu",
+        "lc-gobbetto",
+        "lc-gorizia",
+        "lc-hosteria-toledo",
+        "lc-hosteria-toledo-menu",
+        "lc-macellegria",
+        "lc-macellegria-menu",
+        "lc-meatin",
+        "lc-nennella",
+        "lc-nennella-domande",
+        "lc-petrucci-posillipo",
+        "lc-pignatelli",
+        "lc-pignatelli-menu",
+        "lc-pintauro",
+        "lc-poppella",
+        "lc-poppella-storia",
+        "lc-port-alba",
+        "lc-salvo",
+        "lc-salvo-menu",
+        "lc-scialuppa",
+        "lc-starita",
+        "lc-starita-home",
+        "lc-starita-menu",
+        "lc-tufo",
+        "lc-zia-esterina",
+        "napolitan-pasticcerie-2022",
+        "osm",
+        "sdg-bib-2025",
+        "sdg-cono-graffa",
+        "sdg-michelin-2025-pizzerie",
+        "sdg-pignatelli-2026",
+        "sdg-pintauro-2026",
+        "sdg-slowfood-2025",
+        "sky-50top-2026",
+        "stripes-tufo-2022",
+        "tp-anm-ascensori",
+        "tp-anm-centrale",
+        "tp-anm-chiaia",
+        "tp-anm-echia",
+        "tp-anm-gtfs",
+        "tp-anm-linea1",
+        "tp-anm-mergellina",
+        "tp-anm-metroart-toledo",
+        "tp-borbonica-avventura",
+        "tp-borbonica-memorie",
+        "tp-borbonica-standard",
+        "tp-campolieto",
+        "tp-capodimonte-biglietti",
+        "tp-capodimonte-orari",
+        "tp-capri-regolamento",
+        "tp-caremar-orari",
+        "tp-caremar-partenze",
+        "tp-caremar-tariffe",
+        "tp-caserta-arrivare",
+        "tp-caserta-biglietti",
+        "tp-caserta-orari",
+        "tp-catacombe",
+        "tp-catacombe-basilica",
+        "tp-catacombe-sangennaro",
+        "tp-cittascienza-biglietteria",
+        "tp-cittascienza-estate-2025",
+        "tp-cittascienza-faq",
+        "tp-cittascienza-visita",
+        "tp-comune-borgomarinari",
+        "tp-comune-casteldellovo",
+        "tp-comune-castelnuovo",
+        "tp-comune-echia",
+        "tp-comune-fontanelle",
+        "tp-comune-linea6",
+        "tp-comune-montesanto",
+        "tp-comune-pedamentina",
+        "tp-comune-villacomunale",
+        "tp-comune-virgiliano",
+        "tp-comune-virgiliano-riapertura",
+        "tp-comune-ztl-marechiaro",
+        "tp-copernicus-dem",
+        "tp-correale",
+        "tp-dadom-info",
+        "tp-dadom-tariffe",
+        "tp-doma-biglietti",
+        "tp-doma-info",
+        "tp-eav-808",
+        "tp-eav-campania-express",
+        "tp-eav-campania-express-sospeso",
+        "tp-eav-l1-orario",
+        "tp-eav-teleindicatori",
+        "tp-ercolano-biglietti",
+        "tp-fai-donn-anna",
+        "tp-filangieri",
+        "tp-fontanelle",
+        "tp-gaiola-accesso",
+        "tp-gaiola-prenotazione",
+        "tp-girolamini",
+        "tp-ischia-castello",
+        "tp-italia-duomo",
+        "tp-madre",
+        "tp-mann-orari",
+        "tp-mercati-municipalita2",
+        "tp-mic-floridiana",
+        "tp-mic-leopardi-day-2025",
+        "tp-mic-mann",
+        "tp-mic-sanmartino",
+        "tp-mic-santelmo",
+        "tp-mic-virgilio",
+        "tp-mostra-oltremare",
+        "tp-mudd-carbonara",
+        "tp-mudd-tetti",
+        "tp-musei-campania-virgilio",
+        "tp-napoliforme-galleria",
+        "tp-napolike-gesu",
+        "tp-napolike-sangregorio",
+        "tp-orto-botanico",
+        "tp-palazzoreale-info",
+        "tp-palazzoreale-restauri",
+        "tp-parco-camaldoli",
+        "tp-parco-mascagna",
+        "tp-parco-poggio",
+        "tp-parco-ventaglieri",
+        "tp-pietrarsa-arrivare",
+        "tp-pietrarsa-tariffe",
+        "tp-pietrarsa-visita",
+        "tp-piomonte",
+        "tp-piomonte-caravaggio",
+        "tp-pompei-orari",
+        "tp-pompei-regolamento",
+        "tp-pompei-tariffe",
+        "tp-purgatorio",
+        "tp-rfi-linea2",
+        "tp-sancarlo-visite",
+        "tp-sanlorenzo",
+        "tp-sansevero-accessibilita",
+        "tp-sansevero-accesso",
+        "tp-sansevero-orari",
+        "tp-santachiara-faq",
+        "tp-santachiara-orari",
+        "tp-sorrento-centro",
+        "tp-sotterranea-faq",
+        "tp-sotterranea-orari",
+        "tp-tesoro-faq",
+        "tp-tesoro-info",
+        "tp-tetti-italpress",
+        "tp-trenitalia-linea2",
+        "tp-vesuvio-gran-cono",
+        "tp-villa-pignatelli",
+        "tp-villevesuviane-visite"
+      ]
+    },
+    {
+      "name": "dove-mangiare",
+      "count": 84,
+      "ids": [
+        "gri-cuoppo-2024",
+        "gri-pasta-patate-2024",
+        "gri-pizza-fritta-2023",
+        "lc-bellavia",
+        "lc-bellavia-store",
+        "lc-bellavia-storia",
+        "lc-bersagliera",
+        "lc-bersagliera-home",
+        "lc-brandi",
+        "lc-brandi-home",
+        "lc-caffettiera",
+        "lc-calabritto",
+        "lc-calabritto-menu",
+        "lc-cantinella",
+        "lc-cantinella-home",
+        "lc-cantinella-menu",
+        "lc-chalet-ciro",
+        "lc-chalet-ciro-storia",
+        "lc-chitarra",
+        "lc-chitarra-menu",
+        "lc-chitarra-storia",
+        "lc-cicciotto",
+        "lc-cicciotto-menu",
+        "lc-cinquanta-kalo",
+        "lc-cinquanta-kalo-menu",
+        "lc-concettina",
+        "lc-concettina-storia",
+        "lc-da-michele",
+        "lc-da-michele-menu",
+        "lc-di-costanzo",
+        "lc-di-matteo",
+        "lc-di-matteo-menu",
+        "lc-fenestella",
+        "lc-fenestella-home",
+        "lc-gesu-vecchio",
+        "lc-gesu-vecchio-home",
+        "lc-gesu-vecchio-menu",
+        "lc-gobbetto",
+        "lc-gorizia",
+        "lc-hosteria-toledo",
+        "lc-hosteria-toledo-menu",
+        "lc-macellegria",
+        "lc-macellegria-menu",
+        "lc-meatin",
+        "lc-nennella",
+        "lc-nennella-domande",
+        "lc-petrucci-posillipo",
+        "lc-pignatelli",
+        "lc-pignatelli-menu",
+        "lc-pintauro",
+        "lc-poppella",
+        "lc-poppella-storia",
+        "lc-port-alba",
+        "lc-salvo",
+        "lc-salvo-menu",
+        "lc-scialuppa",
+        "lc-starita",
+        "lc-starita-home",
+        "lc-starita-menu",
+        "lc-tufo",
+        "lc-zia-esterina",
+        "napolitan-pasticcerie-2022",
+        "sdg-bib-2025",
+        "sdg-cono-graffa",
+        "sdg-michelin-2025-pizzerie",
+        "sdg-pignatelli-2026",
+        "sdg-pintauro-2026",
+        "sdg-slowfood-2025",
+        "sky-50top-2026",
+        "stripes-tufo-2022",
+        "wiki-baba",
+        "wiki-baccala",
+        "wiki-frittatina",
+        "wiki-frittura",
+        "wiki-genovese",
+        "wiki-margherita",
+        "wiki-marinara",
+        "wiki-parmigiana",
+        "wiki-pasta-patate",
+        "wiki-pastiera",
+        "wiki-pizza-fritta",
+        "wiki-ragu",
+        "wiki-sfogliatella",
+        "wiki-vongole"
+      ]
+    }
+  ],
+  "relations": [
+    {
+      "id": "osm",
+      "descrizione": "Costa, strade, stazioni e punti panoramici della mappa",
+      "luoghi": [
+        "Città della Scienza",
+        "Il belvedere di Sant'Antonio a Posillipo",
+        "Il belvedere di via Petrarca",
+        "Il lungomare: via Partenope, via Caracciolo e Villa Comunale",
+        "La Pedamentina, da San Martino in discesa",
+        "Marechiaro",
+        "Monte Echia, il belvedere di Pizzofalcone",
+        "Piazza del Plebiscito e Galleria Umberto I",
+        "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+        "Via dei Tribunali: pizza e cibo di strada",
+        "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli"
+      ],
+      "schede": [
+        "tp-belvedere-orari",
+        "tp-echia-orari",
+        "tp-lungomare-orari",
+        "tp-pedamentina-orari",
+        "tp-plebiscito-orari",
+        "tp-spaccanapoli-orari",
+        "tp-toledo-orari",
+        "tp-tribunali-orari"
+      ],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi",
+        "tappe.yaml#citta-scienza",
+        "tappe.yaml#lungomare",
+        "tappe.yaml#marechiaro",
+        "tappe.yaml#pedamentina"
+      ],
+      "avviso": "Dati cartografici, non orari di apertura.",
+      "lettura": null
+    },
+    {
+      "id": "tp-italia-duomo",
+      "descrizione": "Orari del Duomo",
+      "luoghi": [
+        "Duomo e Tesoro di San Gennaro"
+      ],
+      "schede": [
+        "tp-duomo-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-tesoro-info",
+      "descrizione": "Biglietti e riduzioni del Museo del Tesoro",
+      "luoghi": [
+        "Duomo e Tesoro di San Gennaro"
+      ],
+      "schede": [
+        "tp-duomo-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-tesoro-faq",
+      "descrizione": "Orari, durata con audioguida e validità del biglietto",
+      "luoghi": [
+        "Duomo e Tesoro di San Gennaro"
+      ],
+      "schede": [
+        "tp-duomo-orari",
+        "tp-tesoro-durata"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-sansevero-orari",
+      "descrizione": "Orari, biglietti e acquisto online",
+      "luoghi": [
+        "Cappella Sansevero"
+      ],
+      "schede": [
+        "tp-sansevero-orari",
+        "tp-sansevero-prenota",
+        "tp-sansevero-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-sansevero-accesso",
+      "descrizione": "Prenotazione e regole della visita",
+      "luoghi": [
+        "Cappella Sansevero"
+      ],
+      "schede": [
+        "tp-sansevero-prenota",
+        "tp-sansevero-regole"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-sansevero-accessibilita",
+      "descrizione": "Accessibilità della navata e della Cavea",
+      "luoghi": [
+        "Cappella Sansevero"
+      ],
+      "schede": [
+        "tp-sansevero-regole"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-santachiara-orari",
+      "descrizione": "Orari e biglietti di chiostro, museo e basilica",
+      "luoghi": [
+        "Santa Chiara e il chiostro maiolicato"
+      ],
+      "schede": [
+        "tp-santachiara-orari",
+        "tp-santachiara-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-santachiara-faq",
+      "descrizione": "Durata indicata per la visita al complesso",
+      "luoghi": [
+        "Santa Chiara e il chiostro maiolicato"
+      ],
+      "schede": [],
+      "durate": [
+        "santa-chiara"
+      ],
+      "testi": [
+        "tappe.yaml#santa-chiara"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-napolike-gesu",
+      "descrizione": "Orari segnalati per la chiesa del Gesù Nuovo",
+      "luoghi": [
+        "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno"
+      ],
+      "schede": [
+        "tp-spaccanapoli-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Orari segnalati da una guida, senza conferma del gestore.",
+      "lettura": null
+    },
+    {
+      "id": "tp-napolike-sangregorio",
+      "descrizione": "Orari segnalati per il chiostro di San Gregorio Armeno",
+      "luoghi": [
+        "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno"
+      ],
+      "schede": [
+        "tp-spaccanapoli-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Orari segnalati da una guida, senza conferma del gestore.",
+      "lettura": null
+    },
+    {
+      "id": "tp-piomonte",
+      "descrizione": "Orari e biglietti del Pio Monte della Misericordia",
+      "luoghi": [
+        "Pio Monte della Misericordia"
+      ],
+      "schede": [
+        "tp-piomonte-orari",
+        "tp-piomonte-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-piomonte-caravaggio",
+      "descrizione": "Le Sette opere di Misericordia di Caravaggio",
+      "luoghi": [
+        "Pio Monte della Misericordia"
+      ],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "tappe.yaml#pio-monte"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-mann-orari",
+      "descrizione": "Orari, biglietti e aperture delle collezioni",
+      "luoghi": [
+        "Museo Archeologico Nazionale"
+      ],
+      "schede": [
+        "tp-mann-orari",
+        "tp-mann-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-mic-mann",
+      "descrizione": "Orari e informazioni sul Museo Archeologico",
+      "luoghi": [
+        "Museo Archeologico Nazionale"
+      ],
+      "schede": [
+        "tp-mann-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-sanlorenzo",
+      "descrizione": "Orari, biglietti e visite guidate",
+      "luoghi": [
+        "San Lorenzo Maggiore e gli scavi"
+      ],
+      "schede": [
+        "tp-sanlorenzo-orari",
+        "tp-sanlorenzo-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "tappe.yaml#san-lorenzo"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-sotterranea-orari",
+      "descrizione": "Orari delle visite guidate e prenotazione",
+      "luoghi": [
+        "Napoli Sotterranea"
+      ],
+      "schede": [
+        "tp-sotterranea-orari",
+        "tp-sotterranea-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-sotterranea-faq",
+      "descrizione": "Durata, gradini e accessibilità del percorso",
+      "luoghi": [
+        "Napoli Sotterranea"
+      ],
+      "schede": [
+        "tp-sotterranea-orari",
+        "tp-sotterranea-prezzi",
+        "tp-sotterranea-visita"
+      ],
+      "durate": [
+        "napoli-sotterranea"
+      ],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-madre",
+      "descrizione": "Orari e biglietti del Museo Madre",
+      "luoghi": [
+        "Museo Madre"
+      ],
+      "schede": [
+        "tp-madre-orari",
+        "tp-madre-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "tappe.yaml#madre"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-catacombe",
+      "descrizione": "Orari, biglietti, prenotazione e condizioni di accesso",
+      "luoghi": [
+        "Catacombe di San Gennaro"
+      ],
+      "schede": [
+        "tp-catacombe-note",
+        "tp-catacombe-orari",
+        "tp-catacombe-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-catacombe-sangennaro",
+      "descrizione": "Durata della visita",
+      "luoghi": [
+        "Catacombe di San Gennaro"
+      ],
+      "schede": [],
+      "durate": [
+        "catacombe"
+      ],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-catacombe-basilica",
+      "descrizione": "Orari della Basilica di Santa Maria della Sanità",
+      "luoghi": [
+        "Rione Sanità e Basilica della Sanità"
+      ],
+      "schede": [
+        "tp-sanita-orari"
+      ],
+      "durate": [],
+      "testi": [
+        "tappe.yaml#sanita"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-fontanelle",
+      "descrizione": "Orari, durata massima e prenotazione della visita",
+      "luoghi": [
+        "Cimitero delle Fontanelle"
+      ],
+      "schede": [
+        "tp-fontanelle-orari",
+        "tp-fontanelle-prezzi"
+      ],
+      "durate": [
+        "fontanelle"
+      ],
+      "testi": [
+        "tappe.yaml#fontanelle"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-comune-fontanelle",
+      "descrizione": "Riapertura e agevolazioni per i residenti",
+      "luoghi": [
+        "Cimitero delle Fontanelle"
+      ],
+      "schede": [
+        "tp-fontanelle-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-capodimonte-orari",
+      "descrizione": "Orari del museo e del Real Bosco",
+      "luoghi": [
+        "Museo e Real Bosco di Capodimonte"
+      ],
+      "schede": [
+        "tp-capodimonte-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-capodimonte-biglietti",
+      "descrizione": "Biglietti, riduzioni e validità giornaliera",
+      "luoghi": [
+        "Museo e Real Bosco di Capodimonte"
+      ],
+      "schede": [
+        "tp-capodimonte-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-mic-sanmartino",
+      "descrizione": "Orari e biglietti della Certosa e del museo",
+      "luoghi": [
+        "Certosa e Museo di San Martino"
+      ],
+      "schede": [
+        "tp-sanmartino-orari",
+        "tp-sanmartino-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-mic-santelmo",
+      "descrizione": "Orari del castello e del Museo del Novecento; biglietti",
+      "luoghi": [
+        "Castel Sant'Elmo"
+      ],
+      "schede": [
+        "tp-santelmo-orari",
+        "tp-santelmo-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-mic-floridiana",
+      "descrizione": "Orari del parco e biglietti del Museo Duca di Martina",
+      "luoghi": [
+        "Villa Floridiana e il museo della ceramica"
+      ],
+      "schede": [
+        "tp-floridiana-orari",
+        "tp-floridiana-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-comune-pedamentina",
+      "descrizione": "Percorso della scala tra San Martino e il centro",
+      "luoghi": [
+        "La Pedamentina, da San Martino in discesa"
+      ],
+      "schede": [
+        "tp-pedamentina-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-anm-ascensori",
+      "descrizione": "Orari degli ascensori, compreso quello della Sanità",
+      "luoghi": [
+        "Rione Sanità e Basilica della Sanità"
+      ],
+      "schede": [
+        "tp-sanita-orari"
+      ],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-palazzoreale-info",
+      "descrizione": "Orari, biglietti, durata della visita e accesso al giardino",
+      "luoghi": [
+        "Palazzo Reale"
+      ],
+      "schede": [
+        "tp-palazzoreale-orari",
+        "tp-palazzoreale-prezzi"
+      ],
+      "durate": [
+        "palazzo-reale"
+      ],
+      "testi": [
+        "tappe.yaml#palazzo-reale"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-palazzoreale-restauri",
+      "descrizione": "Chiusure di alcune sale dal 1° ottobre 2026",
+      "luoghi": [
+        "Palazzo Reale"
+      ],
+      "schede": [
+        "tp-palazzoreale-restauri"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-sancarlo-visite",
+      "descrizione": "Orari, durata e biglietti delle visite guidate",
+      "luoghi": [
+        "Teatro di San Carlo"
+      ],
+      "schede": [
+        "tp-sancarlo-orari",
+        "tp-sancarlo-prezzi"
+      ],
+      "durate": [
+        "san-carlo"
+      ],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-comune-castelnuovo",
+      "descrizione": "Orari e biglietti di Castel Nuovo",
+      "luoghi": [
+        "Castel Nuovo (Maschio Angioino)"
+      ],
+      "schede": [
+        "tp-castelnuovo-orari",
+        "tp-castelnuovo-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "tappe.yaml#castel-nuovo"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-napoliforme-galleria",
+      "descrizione": "Orari della Galleria Umberto I",
+      "luoghi": [
+        "Piazza del Plebiscito e Galleria Umberto I"
+      ],
+      "schede": [
+        "tp-plebiscito-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-anm-metroart-toledo",
+      "descrizione": "Stazione Toledo e accesso alla metro",
+      "luoghi": [
+        "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli"
+      ],
+      "schede": [
+        "tp-toledo-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-borbonica-standard",
+      "descrizione": "Orari, durata e biglietti del percorso Standard",
+      "luoghi": [
+        "Galleria Borbonica"
+      ],
+      "schede": [
+        "tp-borbonica-orari",
+        "tp-borbonica-prezzi"
+      ],
+      "durate": [
+        "galleria-borbonica"
+      ],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-borbonica-memorie",
+      "descrizione": "Orari, durata e biglietti di Via delle Memorie",
+      "luoghi": [
+        "Galleria Borbonica"
+      ],
+      "schede": [
+        "tp-borbonica-orari",
+        "tp-borbonica-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-borbonica-avventura",
+      "descrizione": "Orari, durata, biglietti ed età minima del percorso Avventura",
+      "luoghi": [
+        "Galleria Borbonica"
+      ],
+      "schede": [
+        "tp-borbonica-orari",
+        "tp-borbonica-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-comune-casteldellovo",
+      "descrizione": "Chiusura del castello per lavori",
+      "luoghi": [
+        "Borgo Marinari e Castel dell'Ovo"
+      ],
+      "schede": [
+        "tp-borgo-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-comune-borgomarinari",
+      "descrizione": "Area pedonale del Borgo Marinari",
+      "luoghi": [
+        "Borgo Marinari e Castel dell'Ovo"
+      ],
+      "schede": [
+        "tp-borgo-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-anm-echia",
+      "descrizione": "Orari e tariffa dell’ascensore di Monte Echia",
+      "luoghi": [
+        "Monte Echia, il belvedere di Pizzofalcone"
+      ],
+      "schede": [
+        "tp-echia-orari",
+        "tp-echia-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-comune-echia",
+      "descrizione": "Accesso al belvedere e tutela archeologica",
+      "luoghi": [
+        "Monte Echia, il belvedere di Pizzofalcone"
+      ],
+      "schede": [
+        "tp-echia-prezzi",
+        "tp-echia-recinzione"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-comune-villacomunale",
+      "descrizione": "Orari stagionali della Villa Comunale",
+      "luoghi": [
+        "Il lungomare: via Partenope, via Caracciolo e Villa Comunale"
+      ],
+      "schede": [
+        "tp-lungomare-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-dadom-info",
+      "descrizione": "Orari e condizioni del biglietto online",
+      "luoghi": [
+        "Acquario e museo Darwin-Dohrn"
+      ],
+      "schede": [
+        "tp-dadom-orari",
+        "tp-dadom-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-dadom-tariffe",
+      "descrizione": "Biglietto unico per museo e acquario; riduzioni",
+      "luoghi": [
+        "Acquario e museo Darwin-Dohrn"
+      ],
+      "schede": [
+        "tp-dadom-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-mic-virgilio",
+      "descrizione": "Orari e percorso del Parco delle Tombe",
+      "luoghi": [
+        "Parco delle Tombe di Virgilio e Leopardi"
+      ],
+      "schede": [
+        "tp-virgilio-orari",
+        "tp-virgilio-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-musei-campania-virgilio",
+      "descrizione": "Chiusura di alcune aree dal 12 settembre 2026",
+      "luoghi": [
+        "Parco delle Tombe di Virgilio e Leopardi"
+      ],
+      "schede": [
+        "tp-virgilio-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-mic-leopardi-day-2025",
+      "descrizione": "Ingresso gratuito indicato per il parco nel 2025",
+      "luoghi": [
+        "Parco delle Tombe di Virgilio e Leopardi"
+      ],
+      "schede": [
+        "tp-virgilio-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Pagina di un evento del 2025: non conferma il prezzo attuale.",
+      "lettura": null
+    },
+    {
+      "id": "tp-comune-ztl-marechiaro",
+      "descrizione": "ZTL e taxi collettivo nell’estate 2026",
+      "luoghi": [
+        "Marechiaro"
+      ],
+      "schede": [
+        "tp-marechiaro-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-comune-virgiliano",
+      "descrizione": "Orari stagionali del Parco Virgiliano",
+      "luoghi": [
+        "Parco Virgiliano"
+      ],
+      "schede": [
+        "tp-virgiliano-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-comune-virgiliano-riapertura",
+      "descrizione": "Riapertura parziale dal 27 giugno 2026",
+      "luoghi": [
+        "Parco Virgiliano"
+      ],
+      "schede": [
+        "tp-virgiliano-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-gaiola-accesso",
+      "descrizione": "Turni estivi e condizioni di accesso",
+      "luoghi": [
+        "Parco sommerso della Gaiola"
+      ],
+      "schede": [
+        "tp-gaiola-orari",
+        "tp-gaiola-prenota"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-gaiola-prenotazione",
+      "descrizione": "Prenotazione estiva, documenti e servizi gratuiti",
+      "luoghi": [
+        "Parco sommerso della Gaiola"
+      ],
+      "schede": [
+        "tp-gaiola-orari",
+        "tp-gaiola-prenota",
+        "tp-gaiola-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-cittascienza-visita",
+      "descrizione": "Orari della visita dal 22 febbraio al 31 maggio 2027",
+      "luoghi": [
+        "Città della Scienza"
+      ],
+      "schede": [
+        "tp-cittascienza-estate",
+        "tp-cittascienza-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-cittascienza-biglietteria",
+      "descrizione": "Biglietti, riduzioni e planetario",
+      "luoghi": [
+        "Città della Scienza"
+      ],
+      "schede": [
+        "tp-cittascienza-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-cittascienza-faq",
+      "descrizione": "Durata indicata per la visita al museo",
+      "luoghi": [
+        "Città della Scienza"
+      ],
+      "schede": [],
+      "durate": [
+        "citta-scienza"
+      ],
+      "testi": [
+        "tappe.yaml#citta-scienza"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-cittascienza-estate-2025",
+      "descrizione": "Orario ridotto dell’estate 2025",
+      "luoghi": [
+        "Città della Scienza"
+      ],
+      "schede": [
+        "tp-cittascienza-estate"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Orario dell’estate 2025; non documenta quello dell’estate 2027.",
+      "lettura": null
+    },
+    {
+      "id": "tp-pompei-orari",
+      "descrizione": "Orari stagionali, biglietti e limite degli ingressi",
+      "luoghi": [
+        "Pompei"
+      ],
+      "schede": [
+        "tp-pompei-biglietti",
+        "tp-pompei-orari",
+        "tp-pompei-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-pompei-regolamento",
+      "descrizione": "Biglietti nominativi e regole di accesso",
+      "luoghi": [
+        "Pompei"
+      ],
+      "schede": [
+        "tp-pompei-biglietti"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-pompei-tariffe",
+      "descrizione": "Tariffe e tipologie dei percorsi di visita",
+      "luoghi": [
+        "Pompei"
+      ],
+      "schede": [
+        "tp-pompei-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-ercolano-biglietti",
+      "descrizione": "Orari stagionali, biglietti e gratuità",
+      "luoghi": [
+        "Ercolano"
+      ],
+      "schede": [
+        "tp-ercolano-orari",
+        "tp-ercolano-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-vesuvio-gran-cono",
+      "descrizione": "Sentiero del Gran Cono, orari e biglietti online",
+      "luoghi": [
+        "Vesuvio, il Gran Cono"
+      ],
+      "schede": [
+        "tp-vesuvio-orari",
+        "tp-vesuvio-prezzi",
+        "tp-vesuvio-viaggio"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "La pagina indica due prezzi diversi, 11,68 € e 10 €. Con allerta arancione o rossa il sentiero chiude.",
+      "lettura": null
+    },
+    {
+      "id": "tp-eav-campania-express",
+      "descrizione": "Tempi e tariffe del Campania Express prima della sospensione",
+      "luoghi": [
+        "Ercolano",
+        "Pompei"
+      ],
+      "schede": [
+        "tp-ercolano-viaggio",
+        "tp-pompei-viaggio"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Il servizio è sospeso dal 1° ottobre 2026. Questi tempi non sono gli orari del servizio ordinario.",
+      "lettura": null
+    },
+    {
+      "id": "tp-eav-campania-express-sospeso",
+      "descrizione": "Sospensione dal 1° ottobre 2026 · riscontro parziale",
+      "luoghi": [
+        "Ercolano",
+        "Pompei",
+        "Sorrento"
+      ],
+      "schede": [
+        "tp-ercolano-viaggio",
+        "tp-pompei-viaggio",
+        "tp-sorrento-viaggio"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Pagina non consultata integralmente: il riscontro viene dal solo risultato di ricerca.",
+      "lettura": {
+        "data": "2026-10-12",
+        "label": "Consultazione tentata"
+      }
+    },
+    {
+      "id": "tp-eav-808",
+      "descrizione": "Orari programmati del bus Pompei–Vesuvio",
+      "luoghi": [
+        "Vesuvio, il Gran Cono"
+      ],
+      "schede": [
+        "tp-vesuvio-viaggio"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-caremar-tariffe",
+      "descrizione": "Tariffe dei collegamenti con Capri, Ischia e Procida",
+      "luoghi": [
+        "Capri",
+        "Ischia",
+        "Procida"
+      ],
+      "schede": [
+        "tp-capri-viaggio",
+        "tp-ischia-viaggio",
+        "tp-procida-viaggio"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-caremar-partenze",
+      "descrizione": "Partenze e tempi dei collegamenti con le isole",
+      "luoghi": [
+        "Capri",
+        "Ischia",
+        "Procida"
+      ],
+      "schede": [
+        "tp-capri-viaggio",
+        "tp-ischia-viaggio",
+        "tp-procida-viaggio"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-caremar-orari",
+      "descrizione": "Pagina degli orari dei traghetti",
+      "luoghi": [
+        "Capri",
+        "Ischia",
+        "Procida"
+      ],
+      "schede": [
+        "tp-isole-2027"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Al controllo del 2 ottobre 2026 la pagina mostrava «Aggiornamento in corso…». Gli orari estivi 2027 restano da pubblicare.",
+      "lettura": null
+    },
+    {
+      "id": "tp-capri-regolamento",
+      "descrizione": "Orari e biglietti di Grotta Azzurra, Villa Jovis e Certosa",
+      "luoghi": [
+        "Capri"
+      ],
+      "schede": [
+        "tp-capri-orari",
+        "tp-capri-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-ischia-castello",
+      "descrizione": "Orari e biglietti del Castello Aragonese",
+      "luoghi": [
+        "Ischia"
+      ],
+      "schede": [
+        "tp-ischia-orari",
+        "tp-ischia-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-anm-gtfs",
+      "descrizione": "Linee, fermate e orari programmati",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi"
+      ],
+      "avviso": "Validità registrata: 22 settembre–31 dicembre 2026. Non include deviazioni o lavori.",
+      "lettura": null
+    },
+    {
+      "id": "tp-anm-linea1",
+      "descrizione": "Orari e frequenze della metro Linea 1 per le stime di viaggio",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-comune-linea6",
+      "descrizione": "Prolungamento feriale del servizio della Linea 6",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-rfi-linea2",
+      "descrizione": "Orario della Linea 2 · 14 giugno–12 dicembre 2026",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-trenitalia-linea2",
+      "descrizione": "Interruzione tra Campi Flegrei e Pozzuoli Solfatara",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-anm-centrale",
+      "descrizione": "Orari della funicolare Centrale per le stime di viaggio",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-anm-chiaia",
+      "descrizione": "Orari della funicolare di Chiaia per le stime di viaggio",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-anm-mergellina",
+      "descrizione": "Orari della funicolare di Mergellina",
+      "luoghi": [
+        "Il belvedere di Sant'Antonio a Posillipo"
+      ],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi",
+        "tappe.yaml#sant-antonio-posillipo"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-comune-montesanto",
+      "descrizione": "Chiusura per manutenzione dal 15 maggio 2026",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-eav-teleindicatori",
+      "descrizione": "Partenze e arrivi della Cumana osservati il 2 ottobre 2026",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi"
+      ],
+      "avviso": "Osservazione del tabellone del 2 ottobre 2026 verso le 17; non è un orario valido per ogni giorno.",
+      "lettura": null
+    },
+    {
+      "id": "tp-copernicus-dem",
+      "descrizione": "Dislivelli del terreno per le stime dei percorsi a piedi",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "itinerari.yaml#tempi"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-doma-info",
+      "descrizione": "Orari delle visite a San Domenico Maggiore",
+      "luoghi": [
+        "San Domenico Maggiore e le arche aragonesi"
+      ],
+      "schede": [
+        "tp-sandomenico-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-doma-biglietti",
+      "descrizione": "Biglietti di sagrestia, tesoro e cripta",
+      "luoghi": [
+        "San Domenico Maggiore e le arche aragonesi"
+      ],
+      "schede": [
+        "tp-sandomenico-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-girolamini",
+      "descrizione": "Orari e biglietti distinti per Chiesa-Museo e Biblioteca",
+      "luoghi": [
+        "Girolamini, chiesa, museo e biblioteca"
+      ],
+      "schede": [
+        "tp-girolamini-orari",
+        "tp-girolamini-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-filangieri",
+      "descrizione": "Orari e biglietti del Museo Filangieri",
+      "luoghi": [
+        "Museo Filangieri"
+      ],
+      "schede": [
+        "tp-filangieri-orari",
+        "tp-filangieri-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "La pagina principale indica le 19:00, la biglietteria online le 18:00: controlla prima della visita.",
+      "lettura": null
+    },
+    {
+      "id": "tp-purgatorio",
+      "descrizione": "Orari e biglietti di chiesa, ipogeo e museo",
+      "luoghi": [
+        "Purgatorio ad Arco, chiesa e ipogeo"
+      ],
+      "schede": [
+        "tp-purgatorio-orari",
+        "tp-purgatorio-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-mudd-carbonara",
+      "descrizione": "Accesso alla chiesa e biglietto separato della Sagrestia Vasariana",
+      "luoghi": [
+        "San Giovanni a Carbonara"
+      ],
+      "schede": [
+        "tp-carbonara-orari"
+      ],
+      "durate": [],
+      "testi": [
+        "tappe.yaml#san-giovanni-a-carbonara"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-mudd-tetti",
+      "descrizione": "Orari, prenotazione e accessibilità dei tetti del Duomo",
+      "luoghi": [
+        "I tetti del Duomo"
+      ],
+      "schede": [
+        "tp-tetti-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-tetti-italpress",
+      "descrizione": "Tariffe riportate all’inaugurazione di marzo 2026",
+      "luoghi": [
+        "I tetti del Duomo"
+      ],
+      "schede": [
+        "tp-tetti-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-villa-pignatelli",
+      "descrizione": "Orari di museo e giardino; chiusura del Museo delle Carrozze",
+      "luoghi": [
+        "Villa Pignatelli, museo e giardino"
+      ],
+      "schede": [
+        "tp-pignatelli-orari",
+        "tp-pignatelli-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Il prezzo non è stato leggibile sulla pagina del Ministero al controllo del 3 ottobre 2026.",
+      "lettura": null
+    },
+    {
+      "id": "tp-mercati-municipalita2",
+      "descrizione": "Orari indicati per Pignasecca e Porta Nolana",
+      "luoghi": [
+        "Il mercato della Pignasecca",
+        "Il mercato di Porta Nolana"
+      ],
+      "schede": [
+        "tp-mercati-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "La pagina non specifica l’apertura domenicale dei mercati.",
+      "lettura": null
+    },
+    {
+      "id": "tp-fai-donn-anna",
+      "descrizione": "Uso privato e descrizione di Palazzo Donn’Anna",
+      "luoghi": [
+        "Palazzo Donn'Anna, da fuori"
+      ],
+      "schede": [
+        "tp-donnanna-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "La pagina descrive un uso privato; non documenta le condizioni di accesso alla sede della Fondazione De Felice.",
+      "lettura": null
+    },
+    {
+      "id": "tp-parco-camaldoli",
+      "descrizione": "Orari stagionali del Parco dei Camaldoli",
+      "luoghi": [
+        "Parco dei Camaldoli",
+        "Parco del Poggio",
+        "Parco Mascagna"
+      ],
+      "schede": [
+        "tp-parchi-orari"
+      ],
+      "durate": [],
+      "testi": [
+        "tappe.yaml#camaldoli"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-parco-poggio",
+      "descrizione": "Orari stagionali del Parco del Poggio",
+      "luoghi": [
+        "Parco dei Camaldoli",
+        "Parco del Poggio",
+        "Parco Mascagna"
+      ],
+      "schede": [
+        "tp-parchi-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-parco-mascagna",
+      "descrizione": "Orari stagionali del Parco Mascagna",
+      "luoghi": [
+        "Parco dei Camaldoli",
+        "Parco del Poggio",
+        "Parco Mascagna"
+      ],
+      "schede": [
+        "tp-parchi-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-parco-ventaglieri",
+      "descrizione": "Orari indicati nella pagina aggiornata a settembre 2024",
+      "luoghi": [
+        "Parco dei Ventaglieri"
+      ],
+      "schede": [
+        "tp-ventaglieri-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-orto-botanico",
+      "descrizione": "Giorni, orari e ingresso gratuito",
+      "luoghi": [
+        "Orto Botanico"
+      ],
+      "schede": [
+        "tp-orto-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-mostra-oltremare",
+      "descrizione": "Orari e costo dell’accesso al parco",
+      "luoghi": [
+        "Il parco della Mostra d'Oltremare"
+      ],
+      "schede": [
+        "tp-oltremare-orari",
+        "tp-oltremare-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "La stessa pagina dà due chiusure diverse: 18:00 nella versione desktop e 20:00 sul telefono.",
+      "lettura": null
+    },
+    {
+      "id": "tp-caserta-orari",
+      "descrizione": "Orari distinti di appartamenti, parco e Giardino Inglese",
+      "luoghi": [
+        "Reggia di Caserta"
+      ],
+      "schede": [
+        "tp-caserta-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-caserta-biglietti",
+      "descrizione": "Biglietti e riduzioni per la Reggia",
+      "luoghi": [
+        "Reggia di Caserta"
+      ],
+      "schede": [
+        "tp-caserta-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-caserta-arrivare",
+      "descrizione": "Accesso alla Reggia dalla stazione di Caserta",
+      "luoghi": [
+        "Reggia di Caserta"
+      ],
+      "schede": [
+        "tp-caserta-viaggio"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-pietrarsa-tariffe",
+      "descrizione": "Orari, chiusure di ottobre 2026 e biglietti",
+      "luoghi": [
+        "Museo ferroviario di Pietrarsa"
+      ],
+      "schede": [
+        "tp-pietrarsa-orari",
+        "tp-pietrarsa-prezzi",
+        "tp-pietrarsa-viaggio"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-pietrarsa-arrivare",
+      "descrizione": "Fermata ferroviaria e agevolazione per chi arriva in treno",
+      "luoghi": [
+        "Museo ferroviario di Pietrarsa"
+      ],
+      "schede": [
+        "tp-pietrarsa-viaggio"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-eav-l1-orario",
+      "descrizione": "Orari programmati · dal 1° ottobre 2026",
+      "luoghi": [
+        "Sorrento"
+      ],
+      "schede": [
+        "tp-sorrento-viaggio"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "PDF letto in forma testuale: la tabella non è stata controllata visivamente.",
+      "lettura": {
+        "data": "2026-10-12",
+        "label": "Lettura parziale"
+      }
+    },
+    {
+      "id": "tp-sorrento-centro",
+      "descrizione": "Descrizione del centro antico di Sorrento",
+      "luoghi": [
+        "Sorrento"
+      ],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "tappe.yaml#sorrento"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-correale",
+      "descrizione": "Orari, biglietti e avviso di chiusura del Museo Correale",
+      "luoghi": [
+        "Sorrento"
+      ],
+      "schede": [
+        "tp-correale-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "La pagina conserva un avviso di chiusura fino al 23 marzo 2026. Verifica l’apertura prima di andare.",
+      "lettura": null
+    },
+    {
+      "id": "tp-campolieto",
+      "descrizione": "Descrizione e visita di Villa Campolieto",
+      "luoghi": [
+        "Ercolano"
+      ],
+      "schede": [
+        "tp-campolieto"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-villevesuviane-visite",
+      "descrizione": "Orari e biglietti di Villa Campolieto",
+      "luoghi": [
+        "Ercolano"
+      ],
+      "schede": [
+        "tp-campolieto"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "tp-pietrarsa-visita",
+      "descrizione": "Descrizione del museo ferroviario e dei suoi spazi",
+      "luoghi": [
+        "Museo ferroviario di Pietrarsa"
+      ],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "tappe.yaml#pietrarsa"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-da-michele",
+      "descrizione": "Orari e assenza di prenotazioni nella sede di Napoli",
+      "luoghi": [
+        "L'Antica Pizzeria da Michele"
+      ],
+      "schede": [
+        "lc-da-michele-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-da-michele-menu",
+      "descrizione": "Prezzi del menu di Napoli e origine dichiarata dal locale",
+      "luoghi": [
+        "L'Antica Pizzeria da Michele"
+      ],
+      "schede": [
+        "lc-da-michele-perche",
+        "lc-da-michele-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#da-michele"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-port-alba",
+      "descrizione": "Orari, prenotazione, piatti e origine dichiarata dal locale",
+      "luoghi": [
+        "Antica Pizzeria Port'Alba"
+      ],
+      "schede": [
+        "lc-port-alba-orari",
+        "lc-port-alba-perche",
+        "lc-port-alba-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#port-alba"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-di-matteo",
+      "descrizione": "Orari pubblicati e storia della sede di via dei Tribunali",
+      "luoghi": [
+        "Antica Pizzeria Di Matteo"
+      ],
+      "schede": [
+        "lc-di-matteo-orari",
+        "lc-di-matteo-perche",
+        "lc-di-matteo-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "La pagina non indica né l’orario né la chiusura della domenica.",
+      "lettura": null
+    },
+    {
+      "id": "lc-di-matteo-menu",
+      "descrizione": "Prezzi del menu di luglio 2022 e storia del locale",
+      "luoghi": [
+        "Antica Pizzeria Di Matteo"
+      ],
+      "schede": [
+        "lc-di-matteo-perche",
+        "lc-di-matteo-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#di-matteo"
+      ],
+      "avviso": "Menu di luglio 2022: i prezzi di oggi possono essere diversi.",
+      "lettura": null
+    },
+    {
+      "id": "lc-chitarra",
+      "descrizione": "Orari serali e prenotazione per telefono o WhatsApp",
+      "luoghi": [
+        "Osteria La Chitarra"
+      ],
+      "schede": [
+        "lc-chitarra-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "La pagina indica due chiusure diverse: 23:00 e 23:30.",
+      "lettura": null
+    },
+    {
+      "id": "lc-chitarra-menu",
+      "descrizione": "Piatti e prezzi del menu",
+      "luoghi": [
+        "Osteria La Chitarra"
+      ],
+      "schede": [
+        "lc-chitarra-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#chitarra"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-chitarra-storia",
+      "descrizione": "Inaugurazione dell’osteria nel 1991",
+      "luoghi": [
+        "Osteria La Chitarra"
+      ],
+      "schede": [
+        "lc-chitarra-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-gesu-vecchio",
+      "descrizione": "Orari e turni serali del locale",
+      "luoghi": [
+        "La Locanda Gesù Vecchio"
+      ],
+      "schede": [
+        "lc-gesu-vecchio-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-gesu-vecchio-home",
+      "descrizione": "Prenotazione obbligatoria e turni",
+      "luoghi": [
+        "La Locanda Gesù Vecchio"
+      ],
+      "schede": [
+        "lc-gesu-vecchio-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-gesu-vecchio-menu",
+      "descrizione": "Piatti e prezzi del menu di giugno 2026",
+      "luoghi": [
+        "La Locanda Gesù Vecchio"
+      ],
+      "schede": [
+        "lc-gesu-vecchio-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#gesu-vecchio"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-di-costanzo",
+      "descrizione": "Orari della pasticceria",
+      "luoghi": [
+        "Pasticceria Di Costanzo"
+      ],
+      "schede": [
+        "lc-di-costanzo-orari"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#di-costanzo"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-brandi",
+      "descrizione": "Orari e prenotazione per telefono",
+      "luoghi": [
+        "Pizzeria Brandi"
+      ],
+      "schede": [
+        "lc-brandi-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-brandi-home",
+      "descrizione": "Racconto del locale sull’origine della pizza Margherita nel 1889",
+      "luoghi": [
+        "Pizzeria Brandi"
+      ],
+      "schede": [
+        "lc-brandi-perche"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#brandi"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-zia-esterina",
+      "descrizione": "Sede e orari di piazza Trieste e Trento",
+      "luoghi": [
+        "Antica Pizza Fritta da Zia Esterina Sorbillo"
+      ],
+      "schede": [
+        "lc-zia-esterina-orari"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#zia-esterina"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-hosteria-toledo",
+      "descrizione": "Orari e origine dichiarata nel 1951",
+      "luoghi": [
+        "Hosteria Toledo"
+      ],
+      "schede": [
+        "lc-hosteria-toledo-orari",
+        "lc-hosteria-toledo-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-hosteria-toledo-menu",
+      "descrizione": "Piatti e prezzi del menu caricato nel 2023",
+      "luoghi": [
+        "Hosteria Toledo"
+      ],
+      "schede": [
+        "lc-hosteria-toledo-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#hosteria-toledo"
+      ],
+      "avviso": "Menu caricato nel 2023: i prezzi di oggi possono essere diversi.",
+      "lettura": null
+    },
+    {
+      "id": "lc-gobbetto",
+      "descrizione": "Orari del pranzo e della cena",
+      "luoghi": [
+        "Osteria Il Gobbetto"
+      ],
+      "schede": [
+        "lc-gobbetto-orari",
+        "lc-gobbetto-perche"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#gobbetto"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-nennella",
+      "descrizione": "Orari e gestione dei posti con e senza prenotazione",
+      "luoghi": [
+        "Trattoria da Nennella"
+      ],
+      "schede": [
+        "lc-nennella-orari"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#nennella"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-nennella-domande",
+      "descrizione": "Prenotazione e lista per chi arriva senza",
+      "luoghi": [
+        "Trattoria da Nennella"
+      ],
+      "schede": [
+        "lc-nennella-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-pintauro",
+      "descrizione": "Orari e origine dichiarata nel 1785",
+      "luoghi": [
+        "Pasticceria Pintauro"
+      ],
+      "schede": [
+        "lc-pintauro-orari",
+        "lc-pintauro-perche"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#pintauro"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-cinquanta-kalo",
+      "descrizione": "Orari e assenza di prenotazioni",
+      "luoghi": [
+        "50 Kalò"
+      ],
+      "schede": [
+        "lc-cinquanta-kalo-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-cinquanta-kalo-menu",
+      "descrizione": "Prezzi del menu di Napoli · file di luglio 2026",
+      "luoghi": [
+        "50 Kalò"
+      ],
+      "schede": [
+        "lc-cinquanta-kalo-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#cinquanta-kalo"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-salvo",
+      "descrizione": "Orari e prenotazione online",
+      "luoghi": [
+        "Pizzeria Salvo"
+      ],
+      "schede": [
+        "lc-salvo-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-salvo-menu",
+      "descrizione": "Prezzi del menu dell’11 maggio 2026",
+      "luoghi": [
+        "Pizzeria Salvo"
+      ],
+      "schede": [
+        "lc-salvo-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#salvo"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-pignatelli",
+      "descrizione": "Orari e modalità di prenotazione",
+      "luoghi": [
+        "Ostaria Pignatelli"
+      ],
+      "schede": [
+        "lc-pignatelli-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-pignatelli-menu",
+      "descrizione": "Piatti e prezzi del menu digitale di gennaio 2026",
+      "luoghi": [
+        "Ostaria Pignatelli"
+      ],
+      "schede": [
+        "lc-pignatelli-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#pignatelli"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-cantinella",
+      "descrizione": "Orari del pranzo e della cena",
+      "luoghi": [
+        "La Cantinella"
+      ],
+      "schede": [
+        "lc-cantinella-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-cantinella-home",
+      "descrizione": "Origine negli anni Sessanta e gestione familiare",
+      "luoghi": [
+        "La Cantinella"
+      ],
+      "schede": [
+        "lc-cantinella-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-cantinella-menu",
+      "descrizione": "Piatti e prezzi del menu",
+      "luoghi": [
+        "La Cantinella"
+      ],
+      "schede": [
+        "lc-cantinella-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#cantinella"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-bersagliera",
+      "descrizione": "Orari e giorno di chiusura",
+      "luoghi": [
+        "La Bersagliera"
+      ],
+      "schede": [
+        "lc-bersagliera-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-bersagliera-home",
+      "descrizione": "Origine dichiarata nel 1919 al Borgo Marinari",
+      "luoghi": [
+        "La Bersagliera"
+      ],
+      "schede": [
+        "lc-bersagliera-perche"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#bersagliera"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-scialuppa",
+      "descrizione": "Orari del locale al Borgo Marinari",
+      "luoghi": [
+        "La Scialuppa"
+      ],
+      "schede": [
+        "lc-scialuppa-orari",
+        "lc-scialuppa-perche"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#scialuppa"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-calabritto",
+      "descrizione": "Orari distinti del pranzo e della cena",
+      "luoghi": [
+        "Terrazza Calabritto"
+      ],
+      "schede": [
+        "lc-calabritto-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-calabritto-menu",
+      "descrizione": "Piatti e prezzi del menu",
+      "luoghi": [
+        "Terrazza Calabritto"
+      ],
+      "schede": [
+        "lc-calabritto-perche",
+        "lc-calabritto-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#calabritto"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-chalet-ciro",
+      "descrizione": "Orari della sede di Mergellina",
+      "luoghi": [
+        "Chalet Ciro"
+      ],
+      "schede": [
+        "lc-chalet-ciro-orari"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#chalet-ciro"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-chalet-ciro-storia",
+      "descrizione": "Origine dichiarata nel 1952",
+      "luoghi": [
+        "Chalet Ciro"
+      ],
+      "schede": [
+        "lc-chalet-ciro-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-caffettiera",
+      "descrizione": "Orari e prenotazione per i gruppi",
+      "luoghi": [
+        "Gran Caffè La Caffettiera"
+      ],
+      "schede": [
+        "lc-caffettiera-orari",
+        "lc-caffettiera-perche"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#caffettiera"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-gorizia",
+      "descrizione": "Orari, prenotazione e origine dichiarata nel 1916",
+      "luoghi": [
+        "Pizzeria Gorizia 1916"
+      ],
+      "schede": [
+        "lc-gorizia-orari",
+        "lc-gorizia-perche"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#gorizia"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-bellavia",
+      "descrizione": "Orari della sede di Napoli",
+      "luoghi": [
+        "Pasticceria Bellavia"
+      ],
+      "schede": [
+        "lc-bellavia-orari"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#bellavia"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-bellavia-store",
+      "descrizione": "Prezzo della sfogliatella nel negozio online",
+      "luoghi": [
+        "Pasticceria Bellavia"
+      ],
+      "schede": [
+        "lc-bellavia-prezzi"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Prezzo online, distinto da quello al banco che non è pubblicato.",
+      "lettura": null
+    },
+    {
+      "id": "lc-bellavia-storia",
+      "descrizione": "Storia della famiglia e sede al Vomero",
+      "luoghi": [
+        "Pasticceria Bellavia"
+      ],
+      "schede": [
+        "lc-bellavia-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-meatin",
+      "descrizione": "Orari e prezzi del menu dell’estate 2026",
+      "luoghi": [
+        "Meatin"
+      ],
+      "schede": [
+        "lc-meatin-orari",
+        "lc-meatin-perche",
+        "lc-meatin-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#meatin"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-starita",
+      "descrizione": "Orari e assenza di prenotazioni",
+      "luoghi": [
+        "Pizzeria Starita a Materdei"
+      ],
+      "schede": [
+        "lc-starita-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-starita-menu",
+      "descrizione": "Prezzi del menu di Napoli di novembre 2024",
+      "luoghi": [
+        "Pizzeria Starita a Materdei"
+      ],
+      "schede": [
+        "lc-starita-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#starita"
+      ],
+      "avviso": "Menu di novembre 2024: i prezzi di oggi possono essere diversi.",
+      "lettura": null
+    },
+    {
+      "id": "lc-concettina",
+      "descrizione": "Orari del locale",
+      "luoghi": [
+        "Concettina ai Tre Santi"
+      ],
+      "schede": [
+        "lc-concettina-orari"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#concettina"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-concettina-storia",
+      "descrizione": "Origine dichiarata nel 1951",
+      "luoghi": [
+        "Concettina ai Tre Santi"
+      ],
+      "schede": [
+        "lc-concettina-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-poppella",
+      "descrizione": "Orari della sede di via Arena della Sanità",
+      "luoghi": [
+        "Pasticceria Poppella"
+      ],
+      "schede": [
+        "lc-poppella-orari"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#poppella"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-poppella-storia",
+      "descrizione": "Origine del marchio nel 1920",
+      "luoghi": [
+        "Pasticceria Poppella"
+      ],
+      "schede": [
+        "lc-poppella-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-petrucci-posillipo",
+      "descrizione": "Sede di Posillipo, orario serale e prezzi",
+      "luoghi": [
+        "Palazzo Petrucci Pizzeria, Posillipo"
+      ],
+      "schede": [
+        "lc-petrucci-posillipo-orari",
+        "lc-petrucci-posillipo-perche",
+        "lc-petrucci-posillipo-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#petrucci-posillipo"
+      ],
+      "avviso": "Il premio riportato per piazza San Domenico Maggiore non si estende automaticamente alla sede di Posillipo. L’ora di chiusura non è pubblicata.",
+      "lettura": null
+    },
+    {
+      "id": "lc-tufo",
+      "descrizione": "Orari della trattoria, distinti dall’asporto",
+      "luoghi": [
+        "Tufò Trattoria"
+      ],
+      "schede": [
+        "lc-tufo-orari",
+        "lc-tufo-perche"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#tufo"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-fenestella",
+      "descrizione": "Orari e giorno di chiusura",
+      "luoghi": [
+        "'A Fenestella"
+      ],
+      "schede": [
+        "lc-fenestella-orari"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-fenestella-home",
+      "descrizione": "Racconto del locale sulla finestra della canzone Marechiaro",
+      "luoghi": [
+        "'A Fenestella"
+      ],
+      "schede": [
+        "lc-fenestella-perche"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#fenestella"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-cicciotto",
+      "descrizione": "Orari e origine dichiarata nel 1942",
+      "luoghi": [
+        "Cicciotto a Marechiaro"
+      ],
+      "schede": [
+        "lc-cicciotto-orari",
+        "lc-cicciotto-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-cicciotto-menu",
+      "descrizione": "Piatti e prezzi del menu della trattoria",
+      "luoghi": [
+        "Cicciotto a Marechiaro"
+      ],
+      "schede": [
+        "lc-cicciotto-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#cicciotto"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-macellegria",
+      "descrizione": "Orario pubblicato per macelleria e braceria",
+      "luoghi": [
+        "Macellegria"
+      ],
+      "schede": [
+        "lc-macellegria-orari",
+        "lc-macellegria-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "lc-macellegria-menu",
+      "descrizione": "Piatti e prezzi di cucina e brace",
+      "luoghi": [
+        "Macellegria"
+      ],
+      "schede": [
+        "lc-macellegria-prezzi"
+      ],
+      "durate": [],
+      "testi": [
+        "locali.yaml#macellegria"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "sdg-michelin-2025-pizzerie",
+      "descrizione": "Pizzerie nell’edizione Michelin 2025 · resoconto della stampa",
+      "luoghi": [
+        "50 Kalò",
+        "Concettina ai Tre Santi",
+        "L'Antica Pizzeria da Michele",
+        "Pizzeria Salvo"
+      ],
+      "schede": [
+        "lc-cinquanta-kalo-perche",
+        "lc-concettina-perche",
+        "lc-da-michele-perche",
+        "lc-salvo-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Fonte secondaria dell’edizione 2025; una scheda attuale della guida non conferma da sola l’edizione storica.",
+      "lettura": null
+    },
+    {
+      "id": "sky-50top-2026",
+      "descrizione": "Posizioni nella classifica 50 Top Pizza Italia 2026 · resoconto della stampa",
+      "luoghi": [
+        "50 Kalò",
+        "Palazzo Petrucci Pizzeria, Posillipo",
+        "Pizzeria Gorizia 1916",
+        "Pizzeria Salvo"
+      ],
+      "schede": [
+        "lc-cinquanta-kalo-perche",
+        "lc-gorizia-perche",
+        "lc-petrucci-posillipo-perche",
+        "lc-salvo-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "La classifica scrive «Salvo – Napoli» senza indirizzo; il premio di Palazzo Petrucci riguarda piazza San Domenico Maggiore.",
+      "lettura": null
+    },
+    {
+      "id": "sdg-bib-2025",
+      "descrizione": "Bib Gourmand Michelin 2025 di Ostaria Pignatelli · resoconto della stampa",
+      "luoghi": [
+        "Ostaria Pignatelli"
+      ],
+      "schede": [
+        "lc-pignatelli-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Riconoscimento storico riportato dal giornale, da distinguere dalla scheda attuale della guida.",
+      "lettura": null
+    },
+    {
+      "id": "sdg-pignatelli-2026",
+      "descrizione": "Genovese · recensione di gennaio 2026",
+      "luoghi": [
+        "Ostaria Pignatelli"
+      ],
+      "schede": [
+        "lc-pignatelli-rinomato"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Opinione della testata, non di Nextstop.",
+      "lettura": {
+        "data": "2026-10-12",
+        "label": "Passaggio letto"
+      }
+    },
+    {
+      "id": "sdg-slowfood-2025",
+      "descrizione": "Chiocciola Slow Food 2025 di La Chitarra · resoconto della stampa",
+      "luoghi": [
+        "Osteria La Chitarra"
+      ],
+      "schede": [
+        "lc-chitarra-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Il riconoscimento riguarda l’edizione 2025, riportata dal giornale.",
+      "lettura": null
+    },
+    {
+      "id": "gri-pasta-patate-2024",
+      "descrizione": "Pasta, patate e provola · selezione del 2024",
+      "luoghi": [
+        "La Locanda Gesù Vecchio",
+        "Trattoria da Nennella"
+      ],
+      "schede": [
+        "lc-gesu-vecchio-perche",
+        "lc-nennella-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Giudizio della testata; non documenta prezzi o orari attuali.",
+      "lettura": {
+        "data": "2026-10-12",
+        "label": "Passaggio letto"
+      }
+    },
+    {
+      "id": "gri-cuoppo-2024",
+      "descrizione": "Cuoppo e fritti di Di Matteo · giudizio gastronomico del 2024",
+      "luoghi": [
+        "Antica Pizzeria Di Matteo"
+      ],
+      "schede": [
+        "lc-di-matteo-rinomato"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "gri-pizza-fritta-2023",
+      "descrizione": "Pizza fritta di Zia Esterina · selezione del 2023",
+      "luoghi": [
+        "Antica Pizza Fritta da Zia Esterina Sorbillo"
+      ],
+      "schede": [
+        "lc-zia-esterina-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "napolitan-pasticcerie-2022",
+      "descrizione": "Pasticcerie nell’edizione Gambero Rosso 2022 · resoconto della stampa",
+      "luoghi": [
+        "Pasticceria Di Costanzo",
+        "Pasticceria Poppella"
+      ],
+      "schede": [
+        "lc-di-costanzo-perche",
+        "lc-poppella-perche",
+        "lc-poppella-rinomato"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Resoconto secondario del 2022; l’originale Gambero Rosso non conferma il dettaglio sul fiocco di neve «all’estero».",
+      "lettura": null
+    },
+    {
+      "id": "sdg-pintauro-2026",
+      "descrizione": "Riapertura annunciata per marzo 2026",
+      "luoghi": [
+        "Pasticceria Pintauro"
+      ],
+      "schede": [
+        "lc-pintauro-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "L’annuncio del 17 febbraio 2026 non conferma che la riapertura sia avvenuta.",
+      "lettura": {
+        "data": "2026-10-12",
+        "label": "Passaggio letto"
+      }
+    },
+    {
+      "id": "sdg-cono-graffa",
+      "descrizione": "Cono graffa · articolo del 2016",
+      "luoghi": [
+        "Chalet Ciro"
+      ],
+      "schede": [
+        "lc-chalet-ciro-rinomato"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Aggiornato nel 2019; non verifica la disponibilità odierna.",
+      "lettura": {
+        "data": "2026-10-12",
+        "label": "Passaggio letto"
+      }
+    },
+    {
+      "id": "stripes-tufo-2022",
+      "descrizione": "Pasta e patate e genovese · recensione del 2022",
+      "luoghi": [
+        "Tufò Trattoria"
+      ],
+      "schede": [
+        "lc-tufo-rinomato"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "Esperienza dell’autrice del 29 dicembre 2022; non verifica il servizio attuale.",
+      "lettura": {
+        "data": "2026-10-12",
+        "label": "Passaggio letto"
+      }
+    },
+    {
+      "id": "lc-starita-home",
+      "descrizione": "Origine dichiarata nel 1901",
+      "luoghi": [
+        "Pizzeria Starita a Materdei"
+      ],
+      "schede": [
+        "lc-starita-perche"
+      ],
+      "durate": [],
+      "testi": [],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-margherita",
+      "descrizione": "Ingredienti e storia della pizza Margherita",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-margherita"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-marinara",
+      "descrizione": "Ingredienti della pizza marinara",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-marinara"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-pizza-fritta",
+      "descrizione": "Preparazione e ripieni della pizza fritta",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-pizza-fritta"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-frittatina",
+      "descrizione": "Frittata di pasta e frittatina napoletana",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-frittatina"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-genovese",
+      "descrizione": "Preparazione del sugo alla genovese",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-genovese"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-ragu",
+      "descrizione": "Preparazione del ragù napoletano",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-ragu"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-pasta-patate",
+      "descrizione": "Pasta e patate nella cucina napoletana",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-pasta-patate"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-vongole",
+      "descrizione": "Preparazione degli spaghetti alle vongole",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-vongole"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-frittura",
+      "descrizione": "Frittura di pesce",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-frittura"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-parmigiana",
+      "descrizione": "Preparazione della parmigiana",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-parmigiana"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-baccala",
+      "descrizione": "Baccalà e preparazioni in cucina",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-baccala"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-sfogliatella",
+      "descrizione": "Sfogliatella riccia e frolla",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-sfogliatella"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-baba",
+      "descrizione": "Babà e preparazione del dolce",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-baba"
+      ],
+      "avviso": "",
+      "lettura": null
+    },
+    {
+      "id": "wiki-pastiera",
+      "descrizione": "Ingredienti della pastiera napoletana",
+      "luoghi": [],
+      "schede": [],
+      "durate": [],
+      "testi": [
+        "dove-mangiare.yaml#piatto-pastiera"
+      ],
+      "avviso": "",
+      "lettura": null
+    }
+  ],
+  "direct": [
+    {
+      "id": "tp-eav-l1-orario",
+      "urlDocumento": "https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/?wpdmdl=58826&ind=1790769879961&filename=1790769827wpdm_ORARI-NAPOLI-SORRENTO_dal-1%C2%B0-ottobre-2026.pdf",
+      "urlRegistrato": "https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/",
+      "formato": "PDF",
+      "lettura": {
+        "data": "2026-10-12",
+        "label": "Lettura parziale"
+      },
+      "avviso": "PDF letto in forma testuale: la tabella non è stata controllata visivamente."
+    },
+    {
+      "id": "gri-pasta-patate-2024",
+      "urlDocumento": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
+      "urlRegistrato": "https://www.gamberorossointernational.com/?p=513457",
+      "formato": "",
+      "lettura": {
+        "data": "2026-10-12",
+        "label": "Passaggio letto"
+      },
+      "avviso": "Giudizio della testata; non documenta prezzi o orari attuali."
+    }
+  ],
+  "photos": 54,
+  "limits": "Relazioni e crediti verificati sui dati locali. Nessuna nuova lettura web o data di controllo."
+}

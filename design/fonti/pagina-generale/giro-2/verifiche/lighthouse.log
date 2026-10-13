@@ -1,0 +1,6 @@
+{"key":"a","theme":"light","scenario":195,"performance":92,"accessibility":100,"bestPractices":100,"lcp":2406.0446536456275,"cls":0,"warnings":[]}
+{"key":"a","theme":"dark","scenario":195,"performance":93,"accessibility":100,"bestPractices":100,"lcp":2487.034,"cls":0,"warnings":[]}
+{"key":"c","theme":"light","scenario":195,"performance":94,"accessibility":100,"bestPractices":100,"lcp":2481.961803854657,"cls":0,"warnings":[]}
+{"key":"c","theme":"dark","scenario":195,"performance":96,"accessibility":100,"bestPractices":100,"lcp":2555.2707454876554,"cls":0,"warnings":[]}
+{"key":"d","theme":"light","scenario":195,"performance":95,"accessibility":100,"bestPractices":100,"lcp":2483.793817896593,"cls":0,"warnings":[]}
+{"key":"d","theme":"dark","scenario":195,"performance":96,"accessibility":100,"bestPractices":100,"lcp":2482.305404466266,"cls":0,"warnings":[]}

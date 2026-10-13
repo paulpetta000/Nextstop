@@ -1,0 +1,92 @@
+// Ricerca e comandi locali. Nessuna rete, memoria persistente o statistica.
+const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
+// Equivalenze lessicali su parole già presenti: non sono nuove relazioni con i fatti.
+const searchNormalize = text => normalize(text).split(' ').map(word => /^(costo|costi|prezzo|prezzi|tariffa|tariffe)$/.test(word) ? 'costo' : /^bigliett[oi]$/.test(word) ? 'biglietto' : word).join(' ');
+const themeButton = document.querySelector('[data-theme-button]');
+if (themeButton) {
+  themeButton.disabled = false;
+  const media = matchMedia('(prefers-color-scheme: dark)');
+  const dark = () => document.documentElement.dataset.theme ? document.documentElement.dataset.theme === 'dark' : media.matches;
+  const sync = () => { themeButton.querySelector('span').textContent = dark() ? 'Usa tema chiaro' : 'Usa tema scuro'; };
+  themeButton.addEventListener('click', () => { document.documentElement.dataset.theme = dark() ? 'light' : 'dark'; sync(); });
+  media.addEventListener('change', sync); sync();
+}
+for (const button of document.querySelectorAll('[data-full-title]')) {
+  const source = button.closest('.source');
+  source.querySelector('.link-title').textContent = source.querySelector('.source-link').dataset.shortTitle;
+  button.hidden = false;
+  const original = document.getElementById(button.getAttribute('aria-controls'));
+  button.addEventListener('click', () => {
+    const open = button.getAttribute('aria-expanded') === 'true';
+    original.hidden = open;
+    button.setAttribute('aria-expanded', String(!open));
+    button.textContent = open ? 'Leggi il titolo completo' : 'Nascondi il titolo completo';
+  });
+}
+const tools = document.querySelector('.search-tools');
+if (tools) {
+  const input = tools.querySelector('input');
+  const disclosure = document.querySelector('.disclosure');
+  const rail = document.querySelector('.access-rail');
+  const action = rail.querySelector('[data-context-action]');
+  const status = rail.querySelector('[role=status]');
+  const sources = [...document.querySelectorAll('.source')].map(el => ({ el, words: searchNormalize(el.dataset.search), places: JSON.parse(el.dataset.places), context: el.querySelector('.source-context') }));
+  const groups = [...document.querySelectorAll('.group')];
+  let outside = false, announce;
+  const syncAction = () => {
+    const returning = outside && disclosure.open && rail.hasAttribute('data-long-list') && document.activeElement !== input;
+    action.dataset.mode = returning ? 'return' : 'reset';
+    action.textContent = returning ? 'Torna alla ricerca' : 'Mostra tutte';
+    action.hidden = !returning && !input.value.length;
+    rail.dataset.editing = String(document.activeElement === input);
+  };
+  const focusSearch = () => { input.scrollIntoView({ block: 'center', behavior: 'instant' }); input.focus({ preventScroll: true }); syncAction(); };
+  const filter = () => {
+    const terms = searchNormalize(input.value).split(' ').filter(Boolean);
+    let count = 0;
+    for (const { el, words, places, context } of sources) {
+      const found = terms.every(term => words.includes(term));
+      el.hidden = !found; count += Number(found);
+      if (context) {
+        const matched = places.filter(place => terms.length && terms.every(term => searchNormalize(place).includes(term)));
+        context.textContent = matched.length ? matched.join(' e ') : context.dataset.context;
+      }
+    }
+    for (const group of groups) {
+      const count = group.querySelectorAll('.source:not([hidden])').length;
+      group.hidden = count === 0;
+      const badge = group.querySelector('[data-group-count]');
+      if (badge) badge.textContent = `${count} ${count === 1 ? 'fonte' : 'fonti'}`;
+    }
+    document.querySelector('.no-results').hidden = count !== 0;
+    clearTimeout(announce);
+    announce = setTimeout(() => { status.textContent = terms.length ? `${count} ${count === 1 ? 'fonte trovata' : 'fonti trovate'} su ${sources.length}` : `${sources.length} fonti`; }, 180);
+    syncAction();
+  };
+  input.addEventListener('input', filter);
+  input.addEventListener('focus', syncAction);
+  input.addEventListener('blur', syncAction);
+  action.addEventListener('click', () => {
+    if (action.dataset.mode === 'reset') { input.value = ''; filter(); }
+    focusSearch();
+  });
+  if ('IntersectionObserver' in window && rail.hasAttribute('data-long-list')) {
+    const observer = new IntersectionObserver(entries => { outside = !entries[0].isIntersecting && entries[0].boundingClientRect.bottom < 0; syncAction(); });
+    observer.observe(input);
+    rail.dataset.sticky = 'true';
+  }
+  // Il collegamento in fondo rimane utilizzabile anche senza l'osservatore.
+  document.querySelector('.back-top').addEventListener('click', event => { event.preventDefault(); focusSearch(); });
+  addEventListener('pageshow', filter);
+  addEventListener('hashchange', () => {
+    let target;
+    try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { return; }
+    if (target?.closest('[hidden]')) { input.value = ''; filter(); target.scrollIntoView(); }
+    if (target === input) focusSearch();
+  });
+  disclosure.addEventListener('toggle', () => {
+    if (!disclosure.open) { input.value = ''; filter(); }
+    syncAction();
+  });
+  tools.hidden = false; rail.hidden = false; filter();
+}
