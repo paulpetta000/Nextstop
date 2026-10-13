@@ -2,7 +2,7 @@
 
 _Specifica dell'08/10/2026. **Approvata da Enrico l'08/10/2026**, con la mappa in sospeso (sezione 6). Ramo di lavoro: `compositore` (nato da `racconto-due-giorni`, che ha la lista di Enrico del 07/10/2026).
 Ricerche fatte per questa specifica: `ricerca/2026-10-08-filtri-locali.md`, `ricerca/2026-10-08-mappa.md`.
-**Aggiornata il 13/10/2026, da approvare**: pezzo «Salva» ridotto (sezione 4), pezzo nuovo «Da dove parti?» (sezione 10), pezzi rinumerati
+**Aggiornata il 13/10/2026 e approvata da Enrico lo stesso giorno**: pezzo «Salva» ridotto (sezione 4), pezzo nuovo «Da dove parti?» (sezione 10), pezzi rinumerati
 (ramo `compositore-pagina`). Ricerche: `ricerca/2026-10-13-stima-tempi-partenza.md`, `ricerca/2026-10-13-da-dove-parti.md`._
 
 Il compositore è la pagina `/napoli/itinerari/`. Deve far dire «wow, ci hanno speso tanto» (Enrico, 07/10/2026).
@@ -15,7 +15,7 @@ Il compositore è la pagina `/napoli/itinerari/`. Deve far dire «wow, ci hanno 
 | **Pagina e barra di navigazione** | Intestazione con nome, «I miei itinerari», «Condividi»; schede dei giorni; elenco e mappa uno sotto l'altro | Sembra un modulo da compilare, non un sito di viaggio curato; con 3 giorni e la mappa non si capisce dove sei | Manca un'idea di pagina: va ripensata insieme, poi gli altri pezzi ci entrano dentro |
 | **Scheda della tappa** | Tocchi la tappa, compare una fila «Su · Giù · Scheda · Togli» | Ogni azione costa due tocchi; i bottoni sembrano un pannello di controllo | Le azioni vanno ripensate (trascinare, scorrere, menu), non solo ridisegnate |
 | **Barra di ricerca** | Dentro «Aggiungi una tappa», solo «In città»; cerca nel nome e nella zona | Chi scrive «Cristo velato», «pizza» o «panorama» non trova niente; i locali e le gite non si cercano | Serve cercare anche in parole che non sono nel nome (opere, piatti, generi) |
-| **Salvare e rileggere** | L'itinerario si salva da solo sul telefono, senza dirlo; si vede un giorno alla volta | «È salvato? Dove lo ritrovo domani?»; la sera prima non c'è un modo per rileggerlo tutto | Salvare deve diventare un gesto visibile (fatto nelle prove); per rileggere basta, al massimo, «Tutti i giorni» nel compositore (13/10/2026) |
+| **Salvare e rileggere** | L'itinerario si salva da solo sul telefono, senza dirlo; si vede un giorno alla volta | «È salvato? Dove lo ritrovo domani?»; la sera prima non c'è un modo per rileggerlo tutto | Salvare deve diventare un gesto visibile (fatto nelle prove); per rileggere bastano i giorni del compositore (13/10/2026) |
 | **Da dove parti?** (13/10/2026) | La giornata comincia dalla prima tappa alle 9:30, come se ci dormissi dentro | Non sai quanto ci metti dall'hotel alla prima tappa; l'«ordine più corto» tiene ferma la prima tappa, che spesso è solo la prima aggiunta | Senza sapere da dove parti l'ordine più corto non può scegliere la prima tappa: serve un dato nuovo, il punto di partenza |
 | **Visitato / da visitare** | «Fatto» solo se il giorno è oggi (calcolo dal vivo) | In giro non puoi spuntare una tappa se il giorno non ha data; la sera non vedi cosa hai visto | Va su ogni tappa degli itinerari salvati, pronti e tuoi |
 | **Mappa** | Mappa nostra in SVG, solo strade grandi | Non si riconoscono i vicoli e le scale dove si cammina davvero | Servono molte più strade, e forse un altro modo di disegnarla (sotto) |
@@ -73,10 +73,8 @@ Fino ad allora la ricerca usa nomi, parole del sito e i testi di oggi. Due tipi 
   **Resta com'è nelle prove** (pezzo 1, giro 5: in C il segnaposto che cade, in D il timbro): niente altre proposte.
 - **Rete di sicurezza**: anche prima di «Salva» il lavoro non si perde (resta sul telefono come oggi), ma si vede scritto «Non ancora salvato».
 - **Niente vista separata** «tutto l'itinerario»: dopo «Salva» si resta nel compositore.
-- **Al massimo «Tutti i giorni» dentro il compositore** (da decidere): nella barra dei giorni, dopo l'ultimo, «Tutti»: i giorni uno sotto
-  l'altro, corti (ora, nome, tratto), con i numeri di ognuno e «3 tappe visitate su 15»; un tocco su una tappa apre la scheda, sul titolo
-  di un giorno porta a quel giorno; si sposta e si toglie come negli altri giorni. *Problema*: la sera prima si vuole rileggere tutto il
-  viaggio senza sfogliare i giorni.
+- **Niente «Tutti i giorni»** (Enrico, 13/10/2026): si rilegge sfogliando i giorni. Il pezzo 5 non ha proposte nuove: si costruisce
+  com'è nelle prove.
 - Un itinerario pronto aperto dalla home è una bozza finché non lo salvi.
 - Gli itinerari già sul telefono (salvati prima di oggi) diventano **salvati**: nessuno perde niente.
 - «Salva» salva **subito**, con un **nome proposto** («Napoli, 12–14 ottobre» se c'è la data, altrimenti «Napoli in 2 giorni»); il nome si cambia con un tocco (Enrico, 08/10/2026).
@@ -84,7 +82,7 @@ Fino ad allora la ricerca usa nomi, parole del sito e i testi di oggi. Due tipi 
 ### 5. Visitato / da visitare
 - Su **ogni tappa** di un itinerario salvato (pronto o tuo): «Da visitare» → tocco → «Visitato», con una piccola animazione nello stile del marchio (la soglia che si chiude). Si torna indietro con un altro tocco.
 - Se il giorno è **oggi** si ricalcolano gli orari da adesso (come fa oggi «Fatto»); negli altri casi la tappa si segna e basta, gli orari non cambiano.
-- In «Tutti i giorni» (se si fa) e in «I miei itinerari»: «3 tappe visitate su 15».
+- In «I miei itinerari»: «3 tappe visitate su 15».
 - Resta solo sul telefono (non va nel link condiviso), come oggi. Nei dati il campo `fatte` resta con questo nome: cambia solo la parola sulla pagina.
 - Con «riduci movimento» l'animazione diventa una dissolvenza.
 
@@ -155,17 +153,21 @@ Il nostro campo `cucina` mescola tutto: oggi «Carne» mostra **11 locali** (anc
 - **La vista la sceglie chi visita**: Enrico sceglie due proposte; nella pagina un interruttore fa passare dall'una all'altra
   (la scelta resta sul telefono). *Problema*: chi pianifica sul divano preferisce l'elenco, chi è per strada la mappa.
 
-### 10. Da dove parti? (pezzo nuovo, Enrico 13/10/2026; da approvare)
+### 10. Da dove parti? (pezzo nuovo, Enrico 13/10/2026; approvato lo stesso giorno)
 *Problema*: oggi la giornata comincia dalla prima tappa alle 9:30, come se ci dormissi dentro. Chi dorme a Chiaia e mette per prima la
 Sanità non sa quanto ci mette ad arrivarci, e «C'è un ordine più corto» tiene ferma la prima tappa, che spesso è solo la prima aggiunta.
 *Perché non basta migliorare l'ordine più corto*: senza sapere da dove parti non può scegliere la prima tappa né dire quando ci arrivi.
 
 **Cosa fa**
+- **È facoltativo** (Enrico, 13/10/2026): nessuno è obbligato a dire da dove parte o dove dorme. Senza partenza il compositore funziona
+  come oggi (la giornata parte dalla prima tappa); la riga non blocca niente, non torna a chiedere e non compare come avviso.
+  Si toglie con un tocco («Nessuna partenza»).
 - In cima a ogni giorno la riga **«Da dove parti?»**, con tre modi:
   1. **Il mio alloggio** (hotel, B&B, casa): si mette una volta e vale per tutti i giorni; un giorno si può cambiare (chi cambia hotel).
   2. **Dove sono**: la posizione del telefono, solo dopo un tocco (come oggi sulla mappa). Vale per adesso e non si salva, a meno di
      «Usalo come alloggio».
-  3. **Un punto dall'elenco**: una tappa o un locale della città («parto dal Duomo»): tempi veri. Se è una tappa del giorno, diventa la prima.
+  3. **Un punto dall'elenco**: una tappa o un locale della città («parto dal Duomo»), o una stazione o un porto (sotto): tempi veri.
+     Se è una tappa del giorno, diventa la prima.
 - **L'ordine migliore da lì**: scelto il punto, se un altro ordine fa risparmiare almeno 5 minuti si propone con la grafica del pezzo 2
   («C'è un ordine più corto da Hotel …: 18 minuti in meno» → «Usa questo ordine», con «Annulla», oppure «Lascia così»). Niente cambia da
   solo. Rispetto a oggi: anche la prima tappa può cambiare (resta fermo il punto di partenza); evento e locali restano dove sono; **un
@@ -184,18 +186,17 @@ Sanità non sa quanto ci mette ad arrivarci, e «C'è un ordine più corto» tie
 - **Lontano dalle tappe**: tra 500 e 800 m dalla più vicina «stima incerta»; oltre 800 m niente minuti («Sei lontano dalle nostre tappe:
   il primo tratto non lo sappiamo stimare») e l'ordine parte dalla tappa più vicina al punto. Il ritorno di «Torno lì» è sempre stimato.
 
-**Trovare l'alloggio** (da decidere; ricerca `ricerca/2026-10-13-da-dove-parti.md`). Su OpenStreetMap (13/10/2026) nel Comune ci sono
+**Trovare l'alloggio** (scelta di Enrico, 13/10/2026: tutto dal sito; ricerca `ricerca/2026-10-13-da-dove-parti.md`). Su OpenStreetMap (13/10/2026) nel Comune ci sono
 **441 alloggi** (188 hotel, 213 B&B e affittacamere, 17 ostelli, 23 case vacanza), 428 con il nome: l'elenco pesa circa 6 KB compressi.
 Ma le strutture extralberghiere censite dal Comune sarebbero **6.168** (dato 2024 in una nota della Regione, da rileggere nel PDF): chi
-dorme in un B&B **di solito non trova il suo nome**. Quindi la mappa e la via sono la strada normale, non un ripiego. Consiglio: **tutto dal
-sito, nessun servizio esterno**:
+dorme in un B&B **di solito non trova il suo nome**. Quindi la mappa e la via sono la strada normale, non un ripiego. **Tutto dal sito,
+nessun servizio esterno**:
 - **sulla mappa**: tocchi il punto o sposti il segnaposto (anche con i tasti freccia), oppure scegli la **via** dall'elenco delle vie di
   OpenStreetMap e poi lo sposti;
 - il **nome** dall'elenco degli alloggi di OpenStreetMap: file nostro con data e licenza ODbL, che si carica solo quando apri «Da dove parti?»;
 - «Dove sono», se sei già lì.
-- Alternativa: l'indirizzo con Nominatim (il servizio di OpenStreetMap), dopo un tocco. Più preciso, ma l'indirizzo dell'hotel va a un
-  server esterno; le sue regole vietano la ricerca mentre scrivi (si cerca solo premendo «Cerca»), chiedono al massimo una richiesta al
-  secondo, l'attribuzione e di non mandare dati personali. Servirebbero avviso, pagina Privacy e un interruttore per spegnerlo.
+- **Scartato**: l'indirizzo con Nominatim (il servizio di OpenStreetMap). Più preciso, ma l'indirizzo dell'hotel andrebbe a un server
+  esterno; le sue regole vietano la ricerca mentre scrivi, chiedono al massimo una richiesta al secondo e di non mandare dati personali.
 - Nessun link a siti di prenotazione e nessun giudizio sugli alloggi: l'elenco serve solo a trovare un punto.
 
 **Privacy**
@@ -210,19 +211,20 @@ sito, nessun servizio esterno**:
 - `calcolo.ts`: la giornata comincia con la voce «partenza» e il suo tratto (vero o stimato); l'ordine migliore riceve i minuti dal punto
   di partenza (e verso il punto, con «torno lì») invece di tenere ferma la prima tappa; la stima in un modulo suo
   (`src/lib/itinerari/stima.ts`), con i test. Niente pacchetti.
-- **Stazioni e porti** (da decidere): Napoli Centrale, Molo Beverello, Stazione Marittima, Montesanto, Mergellina come punti di sola
+- **Stazioni e porti** (sì, Enrico 13/10/2026): Napoli Centrale, Molo Beverello, Stazione Marittima, Montesanto, Mergellina come punti di sola
   partenza, con posizione da OpenStreetMap e tempi veri (ricalcolo di `tempi-tappe.json` con `scripts/itinerari/`). Utili il giorno
   dell'arrivo e per chi dorme vicino alla stazione.
 
 **Le 4 proposte** (dentro C e D, partendo da `design/compositore/ricerca-giro-2/`, con la stima vera): campo libero. Per esempio:
 1 · la riga di partenza come un biglietto in cima al giorno; 2 · la casetta sulla mappa che si trascina; 3 · la domanda prima della
-prima tappa, come primo passo; 4 · l'alloggio del viaggio nella barra dei giorni. In tutte: i tre modi, la proposta dell'ordine, tempi veri
-e stimati diversi a colpo d'occhio, «Torno lì», tema scuro, «riduci movimento».
+prima tappa, come primo passo; 4 · l'alloggio del viaggio nella barra dei giorni. In tutte: facoltativo e discreto, i tre modi, la proposta
+dell'ordine, tempi veri e stimati diversi a colpo d'occhio, «Torno lì», tema scuro, «riduci movimento». Nelle prove le stazioni e i porti
+hanno tempi stimati (il ricalcolo dei tempi veri si fa nella costruzione).
 
 ## Come si lavora: 4 proposte per pezzo
 - Un pezzo alla volta, ognuno con **4 proposte molto diverse** (regola di Enrico, 07/10/2026), con i dati veri, in chiaro e in scuro, telefono (320 e 390 px) e computer.
   Pagine private su claude.ai da guardare sul telefono, con le animazioni vere. Enrico dice cosa va → 4 proposte nuove → fino alla scelta.
-- **Ordine consigliato** (rinumerato il 13/10/2026: prima la mappa era il pezzo 5): 1 pagina e barra → 2 scheda della tappa (con «visitato») → 3 ricerca → 4 da dove parti? → 5 salva e «Tutti i giorni» → 6 mappa → 7 mangiare nella giornata → 8 filtri dei locali (anche nella pagina «Dove mangiare»).
+- **Ordine consigliato** (rinumerato il 13/10/2026: prima la mappa era il pezzo 5): 1 pagina e barra → 2 scheda della tappa (con «visitato») → 3 ricerca → 4 da dove parti? → 5 salva (com'è nelle prove) → 6 mappa → 7 mangiare nella giornata → 8 filtri dei locali (anche nella pagina «Dove mangiare»).
   Prima la pagina, perché gli altri pezzi ci vivono dentro.
 - Le proposte partono da `DESIGN.md` (Rivista, marchio, portico) ma possono allontanarsene: all'inizio campo libero.
 - Si costruisce un pezzo solo dopo la scelta di Enrico; ogni pezzo costruito ha i suoi test.
@@ -266,8 +268,9 @@ e stimati diversi a colpo d'occhio, «Torno lì», tema scuro, «riduci moviment
 - [ ] Pezzo 1 · pagina e barra: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 2 · scheda della tappa e «visitato»: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 3 · ricerca: grafica scelta il 13/10/2026 (file di cartoline, segno 4: `design/compositore/README.md`); le parole chiave nei dati vengono con la riscrittura dei testi delle tappe.
-- [ ] Pezzo 4 · «Da dove parti?»: Enrico approva la sezione 10 → 4 proposte → scelta → costruzione.
-- [ ] Pezzo 5 · «Salva» com'è nelle prove; «Tutti i giorni» se Enrico lo vuole (niente vista separata).
+- [x] Enrico approva la sezione 10 «Da dove parti?» e il pezzo «Salva» ridotto (13/10/2026: alloggio tutto dal sito, stazioni e porti sì, niente «Tutti i giorni», partenza facoltativa).
+- [ ] Pezzo 4 · «Da dove parti?»: 4 proposte → scelta → costruzione.
+- [ ] Pezzo 5 · «Salva» com'è nelle prove: solo costruzione (niente vista separata, niente «Tutti i giorni»).
 - [ ] Pezzo 6 · mappa (dopo la decisione di Enrico: con o senza uso offline).
 - [ ] Pezzo 7 · mangiare nella giornata.
 - [ ] Pezzo 8 · filtri dei locali (dati nuovi con le fonti, poi compositore e «Dove mangiare»).
