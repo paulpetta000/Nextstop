@@ -87,6 +87,11 @@ Fino ad allora la ricerca usa nomi, parole del sito e i testi di oggi. Due tipi 
 - Con «riduci movimento» l'animazione diventa una dissolvenza.
 
 ### 6. Mappa
+**Deciso da Enrico (14/10/2026)**: la mappa funziona **anche senza rete**; si usa la **strada A** (la mappa nostra, con vicoli, scale e
+vie pedonali di OpenStreetMap, su tutta la mappa, caricata a pezzi dove guardi); l'**aspetto resta quello delle prove C e D** (niente
+proposte nuove). **Nomi delle vie**: sempre quelli delle vie principali, e in più, ben visibili, quelli delle vie dove passa il percorso
+del giorno. Prima cosa: misurare il peso delle strade su tutta la mappa. Niente pacchetti, niente servizi esterni.
+
 **In sospeso** (Enrico, 08/10/2026): decide più avanti. Vuole capire cosa cambia togliendo l'uso senza rete, e se così si può usare una mappa più completa di OpenStreetMap.
 
 - **Senza la mappa offline** si perde solo la mappa: elenco, tempi e schede restano salvati sul telefono (service worker).
@@ -282,7 +287,7 @@ hanno tempi stimati (il ricalcolo dei tempi veri si fa nella costruzione).
 - [x] Enrico approva la sezione 10 «Da dove parti?» e il pezzo «Salva» ridotto (13/10/2026: punto tuo tutto dal sito, stazioni e porti sì, niente «Tutti i giorni», partenza facoltativa, la domanda è «Da dove parti?»).
 - [ ] Pezzo 4 · «Da dove parti?»: **in stand-by** (Enrico, 14/10/2026). Scelta la proposta 2 «Sulla mappa»; si riprende più avanti, con le fermate e le linee e la scritta «beta» (sezione 10).
 - [ ] Pezzo 5 · «Salva» com'è nelle prove: solo costruzione (niente vista separata, niente «Tutti i giorni»).
-- [ ] Pezzo 6 · mappa (dopo la decisione di Enrico: con o senza uso offline).
+- [ ] Pezzo 6 · mappa: deciso il 14/10/2026 (senza rete, strada A, aspetto delle prove, nomi delle vie principali e del percorso). Da costruire.
 - [ ] Pezzo 7 · mangiare nella giornata.
 - [ ] Pezzo 8 · filtri dei locali (dati nuovi con le fonti, poi compositore e «Dove mangiare»).
 - [ ] Controlli, anteprima di Vercel, OK di Enrico, poi `main`.
