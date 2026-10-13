@@ -173,6 +173,35 @@ const DATI = {
 
 const leggi = f => fs.readFileSync(path.join(GIRO, f), 'utf8');
 
+// ---------- pezzo 3 (la ricerca): anche locali e gite, con i testi in cui cercare ----------
+// Se app.js usa RICERCA: tutte le tappe del pacco (in città, gite, locali) entrano in DATI.tappe; ognuna porta le sue
+// «frasi»: il testo della tappa o del locale e le schede che usa (con le fonti), dove la prova cerca le parole.
+const RICERCA = leggi('app.js').includes('RICERCA');
+const localiYaml = leggiYaml('src/data/locali.yaml');
+const testiLocali = leggiYaml('src/testi/locali.yaml');
+if (RICERCA) {
+  for (const t of C.tappe) {
+    if (DATI.tappe[t.id] || t.id === C.evento?.id) continue;
+    const testi = t.categoria ? testiLocali : testiTappe;
+    DATI.tappe[t.id] = {
+      id: t.id, nome: t.nome, breve: t.breve, zona: C.zone[t.zona] ?? t.zona, durata: t.durata, chiuso: t.chiuso ?? [], ingresso: t.ingresso,
+      prenotazione: t.prenotazione, alChiuso: t.alChiuso, gradini: t.gradini ?? null, generi: t.generi ?? [], frase: primaFrase(testi[t.id]?.testo), xy: t.xy
+    };
+    const fy = tappeYaml.find(x => x.id === t.id)?.foto;
+    if (t.tipo === 'gita' && fy) {
+      const f = fotoYaml.find(x => x.id === fy);
+      const buf = await sharp(path.join(RADICE, 'src/data', f.src)).resize({ width: 560, withoutEnlargement: true }).jpeg({ quality: 60, mozjpeg: true }).toBuffer();
+      FOTO[t.id] = `data:image/jpeg;base64,${buf.toString('base64')}`;
+      crediti[t.id] = { autore: f.autore, licenza: f.licenza };
+    }
+  }
+  for (const t of C.tappe) {
+    const x = DATI.tappe[t.id];
+    if (!x) continue;
+    Object.assign(x, { tipo: t.tipo, categoria: t.categoria ?? null, cucina: t.cucina ?? [], piatti: t.piatti ?? [], fascia: t.fascia ?? 0, pasto: t.pasto ?? [], partenza: t.partenza ?? null });
+  }
+}
+
 // ---------- pezzo 2 (la scheda della tappa): il calcolo vero dentro la pagina, le schede e le fonti ----------
 // Se app.js usa CALCOLO, la pagina rifà da sola i giorni (spostare, togliere, «visitato», oggi): le stesse funzioni
 // del sito (src/lib/itinerari/), il pacco della città della build e i percorsi tra le tappe in città (giorno feriale).
@@ -188,8 +217,8 @@ if (leggi('app.js').includes('CALCOLO')) {
     bundle: true, format: 'iife', globalName: 'CALCOLO', platform: 'browser', minify: true, write: false, logLevel: 'error'
   });
   CALCOLO_JS = r.outputFiles[0].text;
-  const citta = C.tappe.filter(t => t.tipo === 'citta' && !t.categoria);
-  DATI.pacco = { ...pacco, tappe: pacco.tappe.filter(t => t.tipo === 'citta' && !t.categoria).map(t => ({ ...t, foto: undefined })) };
+  const citta = C.tappe.filter(t => t.tipo === 'citta' && (RICERCA || !t.categoria));
+  DATI.pacco = { ...pacco, tappe: pacco.tappe.filter(t => t.tipo === 'citta' && (RICERCA || !t.categoria)).map(t => ({ ...t, foto: undefined })) };
   DATI.pronto = P.giorni;
   // percorsi della mappa tra tutte le tappe in città (feriale) e, a piedi, dentro le tappe lunghe (Spaccanapoli, Toledo…)
   const punti = [...new Set(citta.flatMap(t => [t.p, t.pf].filter(x => x != null && x >= 0)))];
@@ -201,7 +230,7 @@ if (leggi('app.js').includes('CALCOLO')) {
   // dalla foto della build solo il testo alternativo e il credito
   const fatti = leggiYaml('src/data/fatti.yaml'), fonti = leggiYaml('src/data/fonti.yaml');
   const testo = s => s.replace(/<[^>]+>/g, '').replace(/&#39;/g, "'").replace(/&quot;/g, '"').replace(/&amp;/g, '&').replace(/\s+/g, ' ').trim();
-  for (const t of citta) {
+  for (const t of RICERCA ? C.tappe : citta) {
     if (!DATI.tappe[t.id]) continue;
     const a = html.indexOf(`<template id="it-t-${t.id}">`), b = html.indexOf('</template>', a);
     if (a < 0) throw new Error(`Scheda di ${t.id} non trovata nella build`);
@@ -211,8 +240,9 @@ if (leggi('app.js').includes('CALCOLO')) {
     const corpo = s.replace(/<figure[\s\S]*?<\/figure>/, '');
     const sezioni = [...corpo.matchAll(/<h3 class="it-sch__h">([\s\S]*?)<\/h3><p>([\s\S]*?)<\/p>/g)].map(m => ({ titolo: testo(m[1]), testo: testo(m[2].replace(/<sup[\s\S]*?<\/sup>/g, '')), segno: /cautela/.test(m[2]) }));
     // le fonti: quelle delle schede usate (orari, prezzi, viaggio, testo) e quelle del testo
-    const tY = tappeYaml.find(x => x.id === t.id), tT = testiTappe[t.id] ?? {};
-    const idFatti = [tY.orari, tY.prezzi, tY.viaggio, ...(tT.usa ?? [])].filter(Boolean);
+    const lY = localiYaml.find(x => x.id === t.id);
+    const tY = tappeYaml.find(x => x.id === t.id) ?? lY, tT = (lY ? testiLocali : testiTappe)[t.id] ?? {};
+    const idFatti = [tY.orari, tY.prezzi, tY.viaggio, tY.perche, tY.rinomatoPer?.scheda, ...(tT.usa ?? [])].filter(Boolean);
     const usati = idFatti.map(id => fatti.find(f => f.id === id)).filter(Boolean);
     const idFonti = [...new Set([...usati.flatMap(f => f.fonti ?? []), ...(tT.fonti ?? []), tY.durataFonte].filter(Boolean))];
     DATI.tappe[t.id].scheda = {
@@ -223,6 +253,15 @@ if (leggi('app.js').includes('CALCOLO')) {
       fonti: idFonti.map(id => fonti.find(f => f.id === id)).filter(Boolean).map(f => ({ titolo: f.titolo, editore: f.editore, url: f.url, tipo: f.tipo })),
       controllato: usati.map(f => f.controllato).filter(Boolean).map(String).sort()[0] ?? null
     };
+    // pezzo 3: le frasi dove cercare (il testo e le schede che usa, tranne gli orari), ognuna con chi l'ha scritta (la fonte)
+    if (RICERCA) {
+      const frasiDi = s => pulisci(s).split(/(?<=[.!?])\s+(?=[A-ZÀ-Ú«"])/).filter(x => x.length > 3);
+      const fonteDi = ids => ids.map(id => fonti.find(f => f.id === id)).filter(Boolean).map(f => f.editore)[0] ?? null;
+      DATI.tappe[t.id].frasi = [
+        ...frasiDi(tT.testo).map(x => ({ t: x, da: fonteDi(tT.fonti ?? []) ?? fonteDi(usati.flatMap(f => f.fonti ?? [])) })),
+        ...usati.filter(f => f.id !== tY.orari).flatMap(f => frasiDi(f.testo).map(x => ({ t: x, da: fonteDi(f.fonti ?? []) })))
+      ];
+    }
     Object.assign(DATI.tappe[t.id], { momento: t.momento, bambini: t.bambini, gradini: t.gradini ?? null, reversibile: t.reversibile, fine: t.fine ?? null });
   }
 }
@@ -233,7 +272,7 @@ const pagina = leggi('modello.html')
   .replace('/*FONT*/', () => `@font-face{font-family:"Archivo";src:url(${FONT.archivo}) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
 @font-face{font-family:"Bodoni Moda";src:url(${FONT.bodoni}) format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:"Bodoni Moda";src:url(${FONT.bodoniCorsivo}) format("woff2");font-weight:500;font-style:italic;font-display:swap}`)
-  .replace('/*STILE*/', () => leggi('stile.css') + (fs.existsSync(path.join(GIRO, 'pezzo2.css')) ? `\n${leggi('pezzo2.css')}` : ''))
+  .replace('/*STILE*/', () => leggi('stile.css') + (fs.existsSync(path.join(GIRO, 'pezzo2.css')) ? `\n${leggi('pezzo2.css')}` : '') + (fs.existsSync(path.join(GIRO, 'ricerca.css')) ? `\n${leggi('ricerca.css')}` : ''))
   .replace('/*APP*/', () => leggi('app.js'))
   .replace('<!--DATI-->', () => `<script>window.DATI=${sicuro(DATI)};window.FOTO=${sicuro(FOTO)};window.MAPPA=${sicuro(MAPPA)};window.STRADE=${sicuro(STRADE)};${leggi('app.js').includes('PORTICO') ? `window.PORTICO=${sicuro(PORTICO)};` : ''}</script>${CALCOLO_JS ? `<script>${CALCOLO_JS.replace(/<\/script/gi, '<\\/script')}</script>` : ''}`);
 fs.writeFileSync(path.join(GIRO, 'proposte.html'), pagina);

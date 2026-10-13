@@ -37,6 +37,30 @@ Il compositore è la pagina `/napoli/itinerari/`. Deve far dire «wow, ci hanno 
 - Le parole chiave sono dati (`tappe.yaml`, `locali.yaml`): ognuna deve trovarsi nella scheda o nel menu del luogo (la build lo controlla, come per gli orari).
 - Si apre con un'animazione breve; i risultati entrano uno dopo l'altro (Fase 1, «Movimento»).
 
+**Piano delle parole chiave (13/10/2026, da approvare).** Due tipi di parole:
+- **Parole del sito** (regola nostra, come le fasce di prezzo): sinonimi dei generi, delle cucine e dei piatti che abbiamo già
+  («belvedere, vista» → panorami; «pizzeria» → pizza; «sfogliatelle, riccia, frolla» → sfogliatella). Un file solo
+  (`src/data/sinonimi.yaml`), uguale per ogni città; non dicono niente di un luogo, quindi non servono fonti.
+- **Parole di un luogo** (`parole:` in `tappe.yaml` e `locali.yaml`, al massimo 8): opere, persone, soprannomi, cose da vedere
+  («Cristo velato», «Caravaggio», «Gambrinus»). **Ogni parola deve comparire in un testo con la fonte**: il testo della tappa o del
+  locale, le sue schede, oppure una scheda nuova `tp-<id>-parole` / `lc-<id>-parole` in `fatti.yaml` (testo, stato, fonti, data).
+  I piatti dei locali sono già dati con la fonte (il menu): non si ripetono.
+- **Controllo nella build** (`src/lib/tappe.ts`, `src/lib/locali.ts`, come per gli orari): la parola, senza accenti e maiuscole,
+  deve trovarsi in quei testi; se no la build si ferma («sansevero: "Cristo velato" non compare in nessuna scheda della tappa»).
+  Test nuovi: il controllo, e la ricerca («cristo velato» → Sansevero per primo; «sfogliatela» → le pasticcerie; «gesu» → Gesù Nuovo;
+  «panorama» → i panorami; una parola che non c'è → nessun risultato e la proposta «Togli i filtri»).
+- **Errori di battitura**: una lettera sbagliata, mancante, in più o scambiata con la vicina dalle 5 lettere in su, due dalle 9;
+  scritto da noi in `src/lib/itinerari/` (niente pacchetti). Ordine: nome, poi parola del luogo, poi genere o piatto; a parità, il più vicino.
+- Sulla pagina il risultato dice perché è uscito («per: Cristo velato»): anche per questo ogni parola deve avere la fonte.
+
+| Passo | Chi | Cosa |
+|---|---|---|
+| 1 | agente **Haiku** | dai testi e dalle schede di oggi (già con le fonti) tira fuori le parole candidate di 60 tappe e 32 locali (37 con i 5 nuovi) → `ricerca/2026-10-13-parole-chiave/candidati.md` |
+| 2 | 4 agenti **`ricercatore`** (Sonnet), insieme | centro storico · resto della città · gite · locali: le 3–8 cose che la gente cerca di ogni luogo, con fonte primaria (sito del luogo, ministero, museo) → `ricerca/2026-10-13-parole-chiave/<gruppo>.md`. Si riusa `ricerca/storia-luoghi/` (125 fatti) |
+| 3 | **Opus** (io) | rileggo le fonti (tutte quelle delicate, un campione del resto), scrivo le schede `-parole` e le liste `parole:`; i «NON TROVATO» in `da-risolvere.md` |
+| 4 | **Opus** | controllo nella build, sinonimi, ricerca e test; `npm run testi:firma` se cambia un testo |
+| 5 | agente **Haiku** | `npm test`, build, `check:links`, e riferisce |
+
 ### 4. Salvare e rileggere
 - **«Salva»** diventa un pulsante visibile. Salvare vuol dire: l'itinerario ha un nome ed entra in «I miei itinerari».
 - **Rete di sicurezza**: anche prima di «Salva» il lavoro non si perde (resta sul telefono come oggi), ma si vede scritto «Non ancora salvato».

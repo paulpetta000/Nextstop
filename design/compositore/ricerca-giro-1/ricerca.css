@@ -1,0 +1,135 @@
+/* Compositore, pezzo 3, giro 1: il riquadro dei risultati della ricerca, in tre proposte (1 l'indice, 2 le file di cartoline,
+   3 la frase trovata), dentro il foglio «Aggiungi» delle viste C e D. Colori dalle variabili di C e D (stile.css). */
+#foglio { --r-segno: color-mix(in srgb, var(--f-acc) 26%, transparent); }
+@media (prefers-color-scheme: dark) { :root.pc:not([data-theme="light"]) #foglio { --r-segno: color-mix(in srgb, var(--f-acc) 48%, transparent); } }
+:root.pc[data-theme="dark"] #foglio { --r-segno: color-mix(in srgb, var(--f-acc) 48%, transparent); }
+html.pd #foglio { --r-segno: #F3D98A; }
+@media (prefers-color-scheme: dark) { :root.pd:not([data-theme="light"]) #foglio { --r-segno: color-mix(in srgb, #E2B84A 38%, transparent); } }
+:root.pd[data-theme="dark"] #foglio { --r-segno: color-mix(in srgb, #E2B84A 38%, transparent); }
+
+/* la striscia grigia della prova, dentro il foglio (fuori dal disegno) */
+.p-dentro { display: inline-flex; align-items: center; justify-self: start; gap: 2px; padding: 3px 3px 3px 12px; border-radius: 12px; background: #25282D; color: #C5C8CF; font-size: 13.5px; }
+.p-dentro span[aria-hidden] { margin-right: 6px; }
+.p-dentro button { min-width: 40px; height: 40px; border-radius: 9px; font-weight: 650; color: #F4F4F5; }
+.p-dentro button[aria-pressed="true"] { background: #F4F4F5; color: #16181D; }
+.p-dentro :focus-visible { outline-color: #F4F4F5; }
+#prova .p-cerca { gap: 6px; }
+@media (max-width: 440px) { #prova .p-cerca span:not(.vh) { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; } }
+
+/* parti comuni */
+#f-elenco { min-width: 0; }
+.r { display: grid; grid-template-columns: minmax(0, 1fr); gap: 4px; }
+.r2-gruppo, .r3-schede { min-width: 0; }
+.r-conta { font-size: 14px; color: var(--ink2); }
+.r-segno { color: inherit; background: linear-gradient(var(--r-segno), var(--r-segno)) 0 88% / 100% .42em no-repeat; border-radius: 2px; }
+.r-gia { display: inline-flex; align-items: center; min-height: 32px; padding: 0 11px; border-radius: 999px; font-size: 13px; font-weight: 650; white-space: nowrap; background: var(--f-sup2); color: var(--ink2); }
+.r-piu { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; color: var(--f-acc); box-shadow: inset 0 0 0 1.5px currentColor; transition: background-color 200ms, color 200ms, transform 160ms var(--entra); }
+.r-piu:active { transform: scale(.94); }
+@media (hover: hover) { .r-piu:hover { background: var(--f-acc); color: var(--f-su-acc); } }
+.r-piu.f-piu--dentro { background: var(--stato-ok, #1F7A4A); color: #FFFFFF; box-shadow: none; }
+.r-nota { grid-column: 1 / -1; margin-top: 8px; padding: 10px 12px; border-radius: 12px; font-size: 14px; background: var(--avviso); color: var(--su-avviso); }
+.r-prova { display: grid; gap: 8px; }
+.r-prova p { font-size: 14px; font-weight: 600; color: var(--ink2); }
+.r-prova__l { display: flex; flex-wrap: wrap; gap: 6px; }
+.r-prova__l button { min-height: 36px; padding: 0 12px; border-radius: 999px; font-size: 14px; color: var(--ink); background: var(--f-sup2); }
+.r-vuoto { display: grid; gap: 10px; justify-items: start; padding: 8px 0; }
+.r-indietro { justify-self: start; display: inline-flex; align-items: center; gap: 4px; min-height: 44px; padding: 0 12px 0 6px; margin-bottom: -6px; border-radius: 999px; font-weight: 600; color: var(--f-acc); background: var(--f-sup2); }
+
+/* ---------- 1 · L'indice ---------- */
+.r1-gruppo + .r1-gruppo { margin-top: 18px; }
+.r1-gruppo h3 { position: sticky; top: 76px; z-index: 1; display: flex; align-items: center; gap: 8px; padding: 12px 0 8px; background: var(--f-sup); font: 600 19px/1.2 var(--f-titolo); border-bottom: 1.5px solid var(--ink); }
+.r1-gruppo h3 .ic { color: var(--f-acc); }
+.r1-n { margin-left: auto; font: 600 14px/1 "Archivo", system-ui, sans-serif; color: var(--ink2); }
+.r1-riga { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 12px 0; border-bottom: 1px solid var(--f-riga); }
+.r1-riga:last-child { border-bottom: 0; }
+.r1-apri { display: grid; gap: 3px; text-align: left; min-height: 44px; }
+.r1-apri b { font-weight: 600; font-size: 16.5px; line-height: 1.3; }
+.r1-perche { font-size: 14.5px; line-height: 1.45; color: var(--ink); opacity: .86; }
+.pd .r1-perche { font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-weight: 500; font-size: 15.5px; opacity: 1; }
+.r1-apri small { font-size: 13.5px; color: var(--ink2); }
+.pd .r1-gruppo h3 { border-bottom-color: var(--f-riga); border-bottom-width: 1px; }
+.pd .r1-riga { border-bottom-style: dashed; }
+
+/* ---------- 2 · Le file di cartoline ---------- */
+.r2-gruppo { --w: 156px; }
+.r2-gruppo + .r2-gruppo { margin-top: 14px; }
+.r2-gruppo h3 { display: flex; align-items: baseline; gap: 8px; margin: 4px 0 10px; font: 600 21px/1.2 var(--f-titolo); }
+.r2-n { font: 600 14px/1 "Archivo", system-ui, sans-serif; color: var(--ink2); }
+.r2-fila { display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 0 -20px; padding: 2px 20px 14px; scrollbar-width: none; overscroll-behavior-x: contain; }
+.r2-fila::-webkit-scrollbar { display: none; }
+.r2-fila:focus-visible { outline-offset: -3px; }
+.r2-carta { position: relative; flex: none; width: var(--w); scroll-snap-align: start; scroll-margin-left: 20px; }
+.r2-apri { display: block; width: 100%; text-align: left; }
+.r2-apri img, .r2-tipo { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 18px; background: var(--f-sup2); }
+.r2-tipo { display: grid; align-content: start; padding: 14px 14px 60px; background: color-mix(in srgb, var(--f-acc) 16%, var(--f-sup)); color: var(--ink); }
+.r2-tipo span { font: 700 21px/1.1 "Archivo", system-ui, sans-serif; letter-spacing: -.01em; text-wrap: balance; hyphens: auto; overflow-wrap: break-word; color: var(--f-acc); }
+.r2-t { display: grid; gap: 2px; margin-top: 8px; }
+.r2-t b { font-weight: 600; font-size: 15px; line-height: 1.25; }
+.r2-t small { font-size: 13px; color: var(--ink2); }
+.r2-cartellino { position: absolute; left: 8px; top: 8px; max-width: calc(100% - 16px); padding: 5px 9px; border-radius: 9px; background: var(--f-sup); color: var(--ink); font-size: 12.5px; font-weight: 600; line-height: 1.3; box-shadow: 0 6px 14px -8px rgba(0, 0, 0, .55); display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; pointer-events: none; }
+.r2-piu, .r2-carta > .r-gia { position: absolute; right: 8px; top: calc(var(--w) * 1.25 - 52px); }
+.r2-carta > .r-gia { top: calc(var(--w) * 1.25 - 42px); background: var(--f-sup); color: var(--ink); }
+.r2-piu { background: var(--f-sup); box-shadow: 0 6px 16px -8px rgba(0, 0, 0, .6); }
+/* D: cartoline con il bordo bianco, cartellino di carta un po' storto, il piatto in Bodoni corsivo */
+.pd .r2-apri img, .pd .r2-tipo { border-radius: 3px; border: 6px solid var(--carta); box-shadow: var(--ombra-cartolina); }
+.pd .r2-tipo { background: color-mix(in srgb, #C8643C 16%, var(--carta)); }
+.pd .r2-tipo span { font: italic 500 24px/1.08 "Bodoni Moda", Georgia, serif; color: #8A3A1C; }
+@media (prefers-color-scheme: dark) { :root.pd:not([data-theme="light"]) .r2-tipo span { color: #F0B79A; } }
+:root.pd[data-theme="dark"] .r2-tipo span { color: #F0B79A; }
+.pd .r2-cartellino { border-radius: 2px; rotate: -2.5deg; left: 4px; top: 12px; font-family: "Bodoni Moda", Georgia, serif; font-style: italic; font-weight: 500; font-size: 13.5px; box-shadow: 0 1px 2px rgba(40, 34, 20, .15), 0 8px 16px -10px rgba(40, 34, 20, .5); }
+.pd .r2-piu { top: calc(var(--w) * 1.25 - 58px); right: 14px; }
+.pd .r2-carta > .r-gia { top: calc(var(--w) * 1.25 - 46px); right: 14px; }
+@media (min-width: 400px) { .r2-gruppo { --w: 172px; } }
+
+/* ---------- 3 · La frase trovata ---------- */
+.r3-schede { display: flex; gap: 2px; overflow-x: auto; margin: 0 -20px 6px; padding: 0 20px; box-shadow: inset 0 -1px 0 var(--f-riga); scrollbar-width: none; }
+.r3-schede::-webkit-scrollbar { display: none; }
+.r3-schede button { flex: none; min-height: 44px; padding: 0 10px; font-weight: 600; font-size: 15px; color: var(--ink2); box-shadow: inset 0 -2.5px 0 transparent; transition: color 200ms, box-shadow 250ms var(--entra); }
+.r3-schede button .num { font-weight: 500; }
+.r3-schede button[aria-pressed="true"] { color: var(--ink); box-shadow: inset 0 -2.5px 0 var(--f-acc); }
+.r3-primo { display: grid; border-radius: 22px; overflow: hidden; background: var(--f-sup2); }
+.r3-foto { display: block; cursor: pointer; }
+.r3-img { display: block; width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.r3-img--senza { display: grid; align-items: end; aspect-ratio: 16 / 7; padding: 16px; background: color-mix(in srgb, var(--f-acc) 14%, var(--f-sup2)); color: var(--f-acc); text-align: left; }
+.r3-img--senza span { font: 700 clamp(28px, 9vw, 40px)/1.02 "Archivo", system-ui, sans-serif; letter-spacing: -.025em; text-wrap: balance; }
+.pd .r3-img--senza { background: color-mix(in srgb, #C8643C 16%, var(--carta)); color: #8A3A1C; }
+.pd .r3-img--senza span { font: italic 500 clamp(32px, 10vw, 44px)/1.02 "Bodoni Moda", Georgia, serif; }
+@media (prefers-color-scheme: dark) { :root.pd:not([data-theme="light"]) .r3-img--senza { color: #F0B79A; } }
+:root.pd[data-theme="dark"] .r3-img--senza { color: #F0B79A; }
+.r3-corpo { display: grid; gap: 8px; padding: 14px 16px 16px; }
+.r3-corpo h3 { font: 600 23px/1.15 var(--f-titolo); letter-spacing: -.01em; }
+.r3-corpo h3 button { text-align: left; }
+.r3-det { font-size: 14px; color: var(--ink2); }
+.r3-frase { margin: 4px 0 2px; display: grid; gap: 6px; }
+.r3-frase p { font: italic 500 19px/1.42 "Bodoni Moda", Georgia, serif; text-wrap: pretty; }
+.r3-frase footer { font-size: 13px; color: var(--ink2); }
+.r3-perche { font-size: 15px; color: var(--ink); }
+.r3-agg { justify-self: stretch; margin-top: 4px; }
+.r3-gia { display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--ink2); }
+.r3-altri { margin-top: 10px; }
+.r3-riga { display: grid; grid-template-columns: 56px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--f-riga); }
+.r3-riga:last-child { border-bottom: 0; }
+.r3-mini { width: 56px; height: 56px; border-radius: 14px; object-fit: cover; }
+.r3-mini--senza { display: grid; place-items: center; background: var(--f-sup2); color: var(--ink2); }
+.r3-apri { display: grid; gap: 2px; text-align: left; min-height: 44px; }
+.r3-apri b { font-weight: 600; line-height: 1.3; }
+.r3-apri small { font-size: 13.5px; color: var(--ink2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.pd .r3-primo { border-radius: 4px; background: var(--carta); box-shadow: var(--ombra-cartolina); padding: 8px 8px 0; }
+.pd .r3-img { border-radius: 2px; }
+.pd .r3-corpo { padding: 12px 8px 16px; }
+.pd .r3-mini { border-radius: 3px; border: 3px solid var(--carta); box-shadow: 0 1px 2px rgba(40, 34, 20, .12), 0 6px 12px -8px rgba(40, 34, 20, .5); }
+
+/* ---------- movimento: un momento per proposta (solo posizione, trasparenza e il segno che si disegna) ---------- */
+@media (prefers-reduced-motion: no-preference) {
+  .r1-riga.r-entra { animation: r-su 280ms var(--entra) both; animation-delay: calc(var(--i, 0) * 22ms); }
+  .r1-riga.r-entra .r-segno { animation: r-segno 420ms var(--entra) both; animation-delay: calc(140ms + var(--i, 0) * 22ms); }
+  /* si muove quello che c'è dentro la cartolina, non la cartolina: così la fila non si aggancia alla posizione spostata */
+  .r2-carta.r-entra > * { animation: r-lato 420ms var(--entra) both; animation-delay: calc(var(--i, 0) * 50ms); }
+  .r3-primo.r-entra { animation: r-sale 380ms var(--entra) both; }
+  .r3-primo.r-entra .r3-frase .r-segno { animation: r-segno 640ms var(--entra) both; animation-delay: 260ms; }
+  .r3-riga.r-entra { animation: r-su 280ms var(--entra) both; animation-delay: calc(120ms + var(--i, 0) * 26ms); }
+}
+@keyframes r-su { from { opacity: 0; translate: 0 6px; } }
+@keyframes r-lato { from { opacity: 0; translate: 28px 0; } }
+@keyframes r-sale { from { opacity: 0; translate: 0 14px; } }
+@keyframes r-segno { from { background-size: 0 .42em; } }

@@ -3,6 +3,35 @@
 Proposte con i dati veri di «Due giorni a Napoli»: orari, tempi a piedi e percorsi calcolati dal sito (giorno feriale), foto e
 caratteri del sito. Regola di Enrico: 4 proposte molto diverse per pezzo, si itera su quello che va. Specifica: `specifiche/compositore.md`.
 
+# Pezzo 3: la ricerca (il riquadro dei risultati)
+
+Specifica §3 (con il piano delle parole chiave). Tre proposte piccole, solo per il riquadro dei risultati, dentro C e D: nella striscia
+in alto si sceglie il riquadro (1-3) e la vista; «Cerca» apre il foglio «Aggiungi». Dentro il foglio la striscia grigia «Riquadro 1 2 3»
+cambia proposta senza perdere le parole. Il resto è quello scelto nei pezzi 1 e 2 (il foglio, timbro 2). Cartella `ricerca-giro-1/`
+(nata da `scheda-giro-2/`, più `ricerca.css`).
+
+## Giro 1 (13/10/2026) · https://claude.ai/artifact/Nzhni2i2SQLrYomVB8C3M2
+| | Il riquadro | Il movimento |
+|---|---|---|
+| **1 · L'indice** | solo parole, come l'indice di una guida: gruppi con il conto, il nome, sotto il pezzo di frase dove compare la parola (sottolineata come con l'evidenziatore), minuti a piedi, «+» | le righe salgono, poi l'evidenziatore si disegna sotto la parola |
+| **2 · Le file di cartoline** | un gruppo per fila, da scorrere di lato: foto grande con il cartellino della parola trovata; senza foto (Cappella Sansevero, i locali) la parola trovata scritta in grande | le cartoline entrano da destra, una dopo l'altra |
+| **3 · La frase trovata** | in alto le schede Tutto, Da vedere, Da mangiare, Gite; il risultato migliore in grande con la frase del nostro testo tra virgolette e la fonte («Dal nostro testo, fonte: Museo Cappella Sansevero»); sotto gli altri, piccoli | il riquadro sale, l'evidenziatore passa sulla frase |
+
+In tutte: **una ricerca sola** per 51 tappe, 32 locali e 9 gite, in gruppi (Da vedere, Da mangiare, Gite) ordinati dal gruppo più pertinente;
+nel gruppo prima il più pertinente, poi il più vicino (minuti a piedi veri, calcolati nella pagina). Cerca nei **nomi**, nelle **parole del
+sito** (sinonimi di generi, cucine e piatti: «belvedere», «pizzeria», «riccia») e nelle **frasi dei nostri testi**, che hanno già le fonti
+(nel sito vero diventano le `parole:` dei dati, controllate dalla build: piano nella specifica). Senza accenti («gesu»), con piccoli errori
+(«sfogliatela»: una lettera dalle 5 lettere in su, due dalle 9), e con l'inizio della parola mentre scrivi. Le tappe già nel viaggio dicono
+«Giorno 1»; le gite «un giorno intero» (in questa prova non si aggiungono: lo dice la pagina). Un tocco sul risultato apre la scheda, con
+«Torna ai risultati». Senza parole: «Prova a cercare» (Cristo velato, Caravaggio, sfogliatela, panorama, pizza fritta, gesu, Pompei,
+catacombe) e le tappe dalla più vicina come prima. Senza risultati: «Niente per …» e «Togli i filtri» o qualche ricerca da provare.
+Controlli (13/10/2026): axe pulito in 88 controlli (3 riquadri, C e D, telefono e computer, chiaro e scuro, tre ricerche, senza parole,
+nessun risultato); nessuno scorrimento di lato a 320 e 390 px; nessun errore nella pagina; prove a mano: gita, scheda e «Torna ai
+risultati», filtro e «Togli i filtri», «+» su un locale (entra nel giorno con i tempi veri). Trovato e corretto: la fila di cartoline si
+agganciava alla posizione spostata dall'animazione (ora si muove il contenuto della cartolina). Immagini: `ricerca-giro-1/immagini/*.jpg`.
+Rifare: `npm run build`, `node design/compositore/genera.mjs ricerca-giro-1`; con il server della copia acceso (porta 4333)
+`node design/compositore/ricerca-giro-1/prove/foto.cjs <cartella> light,dark` e `prove/axe.cjs`.
+
 # Pezzo 2: la scheda della tappa e «visitato»
 
 Specifica §2 e §5. Le 4 proposte vivono dentro le due viste scelte nel pezzo 1 (C «Mappa prima» e D «Le pagine»): nella striscia
