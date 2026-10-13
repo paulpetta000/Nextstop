@@ -94,7 +94,7 @@ del giorno. Prima cosa: misurare il peso delle strade su tutta la mappa. Niente 
 **Divisione scelta da Enrico (14/10/2026): proposta 1**, tutte le strade (grandi, medie, pedonali, vicoli, scale) e i nomi delle vie
 in pezzi quadrati da 1,28 km (59 pezzi, 224 KB compressi in tutto); con la mappa solo i nomi delle 332 vie principali (12 KB); i pezzi
 si scaricano da 0,45 px ogni 5 m in su, solo dove si guarda; senza rete restano quelli già visti e quelli delle tappe di un itinerario
-salvato. Bordi e KB dei pezzi solo nella prova, mai nel sito. Numeri in `ricerca/2026-10-14-mappa-peso.md`, prova in `design/compositore/mappa-giro-1/`.
+salvato. Bordi e KB dei pezzi solo nella prova, mai nel sito. Dati pronti il 14/10/2026 (`scripts/mappa/strade.mjs`, `src/lib/itinerari/strade.ts`); si collegano solo alla mappa del compositore nuovo, non a quella di oggi (Enrico). Numeri in `ricerca/2026-10-14-mappa-peso.md`, prova in `design/compositore/mappa-giro-1/`.
 
 **In sospeso** (Enrico, 08/10/2026): decide più avanti. Vuole capire cosa cambia togliendo l'uso senza rete, e se così si può usare una mappa più completa di OpenStreetMap.
 
