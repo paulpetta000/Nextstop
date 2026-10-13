@@ -187,7 +187,7 @@ Il nostro campo `cucina` mescola tutto: oggi «Carne» mostra **11 locali** (anc
 - [ ] Orari dei locali nuovi da Enrico (`da-verificare/orari-locali.md`), poi dati, schede e tempi tra le tappe.
 - [ ] Pezzo 1 · pagina e barra: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 2 · scheda della tappa e «visitato»: 4 proposte → scelta → costruzione.
-- [ ] Pezzo 3 · ricerca, con le parole chiave nei dati (ricerca con le fonti, agenti `ricercatore`).
+- [ ] Pezzo 3 · ricerca: grafica scelta il 13/10/2026 (file di cartoline, segno 4: `design/compositore/README.md`); le parole chiave nei dati vengono con la riscrittura dei testi delle tappe.
 - [ ] Pezzo 4 · «Salva» e vista «tutto l'itinerario».
 - [ ] Pezzo 5 · mappa (dopo la decisione di Enrico: con o senza uso offline).
 - [ ] Pezzo 6 · mangiare nella giornata.

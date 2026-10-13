@@ -11,6 +11,7 @@ cambia proposta senza perdere le parole. Il resto è quello scelto nei pezzi 1 e
 (nata da `scheda-giro-2/`, più `ricerca.css`).
 
 ## Giro 2 (13/10/2026) · https://claude.ai/artifact/5kY2dyNQPGiTsT2TcF4GGF
+**Pezzo 3 scelto (13/10/2026): il riquadro 2 (le file di cartoline) con il segno 4 (il corsivo).** Avviso in basso ancora −10% (3,6 secondi con «Annulla», 2,3 senza); il resto va bene.
 **Scelta di Enrico sul giro 1: il riquadro 2, le file di cartoline.** Cosa ha chiesto: l'avviso dopo «Aggiungi» dura troppo; l'avviso giallo
 nella giornata («Finisci alle 19:15…», col triangolo) deve avere una X, con un'animazione quando sparisce; cercando «Napoli» uscivano la Reggia
 di Caserta, Ercolano e tutti i locali (le frasi dicono «da Napoli Centrale»…); la sottolineatura della parola trovata non lo convince.
@@ -23,7 +24,7 @@ Cartella `ricerca-giro-2/`: in alto si sceglie il **segno** (1-4) e la vista; de
 
 In tutti: **«Napoli» solo nei nomi** (esce Napoli Sotterranea e basta); **errori di battitura solo se la parola scritta non c'è nei nostri
 testi** (prima «pizza» trovava anche «piazza»: Palazzo Reale, il Plebiscito…; «caravagio» e «sfogliatela» si trovano ancora); **l'avviso
-in basso** dura 4 secondi con «Annulla» (prima 7) e 2,6 senza (prima 4), e resta fermo se ci passi sopra o ci vai con la tastiera; **la X
+in basso** dura 3,6 secondi con «Annulla» (prima 7) e 2,3 senza (prima 4), e resta fermo se ci passi sopra o ci vai con la tastiera; **la X
 sull'avviso giallo**: il triangolo si richiude, il riquadro scivola a destra e lo spazio si chiude; l'avviso torna solo se la giornata cambia.
 Controlli: axe pulito in 112 controlli (4 segni, C e D, telefono e computer, chiaro e scuro); nessuno scorrimento di lato a 320 e 390 px;
 nessun errore nella pagina; immagini `ricerca-giro-2/immagini/*.jpg` (catacombe, Napoli, sfogliatela).

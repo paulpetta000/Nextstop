@@ -662,7 +662,7 @@
     void t.offsetWidth;
     t.classList.add('su');
     clearTimeout(tempoAvviso);
-    tempoAvviso = setTimeout(() => t.classList.remove('su'), azione ? 4000 : 2600);
+    tempoAvviso = setTimeout(() => t.classList.remove('su'), azione ? 3600 : 2340);
   }
   const chiudiAvviso = ms => { clearTimeout(tempoAvviso); tempoAvviso = setTimeout(() => $('#toast').classList.remove('su'), ms); };
   $('#toast').addEventListener('pointerenter', () => clearTimeout(tempoAvviso));
