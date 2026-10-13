@@ -1,0 +1,452 @@
+✖ categorie: sette documenti di trasporto, campione e registro coerenti (1095.6797ms)
+✖ registro: 195 fonti uniche con tipo conservato (2.4431ms)
+✖ a: ricerca per argomento sul registro completo (1068.5463ms)
+✖ a: frase con congiunzione orienta alla fonte condivisa di Nennella (718.0494ms)
+✖ a: cancellare la ricerca ripristina i due pannelli manuali (747.314ms)
+✖ a: indice indica Mappe dopo il salto (813.2785ms)
+✖ a: focus visibile nel ritorno con Shift+Tab a viewport basso (696.307ms)
+✖ a: frammento malformato non interrompe la navigazione (848.4225ms)
+✖ c: ricerca per argomento sul registro completo (636.1128ms)
+✖ c: frase con congiunzione orienta alla fonte condivisa di Nennella (872.3075ms)
+✖ c: cancellare la ricerca ripristina i due pannelli manuali (702.1297ms)
+✖ c: indice indica Mappe dopo il salto (772.4782ms)
+✖ c: focus visibile nel ritorno con Shift+Tab a viewport basso (680.2112ms)
+✖ c: frammento malformato non interrompe la navigazione (864.5439ms)
+✖ d: ricerca per argomento sul registro completo (655.3866ms)
+✖ d: frase con congiunzione orienta alla fonte condivisa di Nennella (668.9162ms)
+✖ d: cancellare la ricerca ripristina i due pannelli manuali (736.4263ms)
+✖ d: indice indica Mappe dopo il salto (676.0156ms)
+✖ d: focus visibile nel ritorno con Shift+Tab a viewport basso (711.1562ms)
+✖ d: frammento malformato non interrompe la navigazione (630.9971ms)
+✖ crediti: 54 foto, licenze e Bodoni raggiungibili dentro Nextstop (682.9143ms)
+✔ navigazione locale senza richieste agli editori (0.7196ms)
+ℹ tests 22
+ℹ suites 0
+ℹ pass 1
+ℹ fail 21
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16148.0597
+
+✖ failing tests:
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:18:1
+✖ categorie: sette documenti di trasporto, campione e registro coerenti (1095.6797ms)
+  AssertionError [ERR_ASSERTION]: tp-eav-campania-express
+  + actual - expected
+
+  + 'visite'
+  - 'trasporti'
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:19:39)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: 'visite',
+    expected: 'trasporti',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:22:1
+✖ registro: 195 fonti uniche con tipo conservato (2.4431ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + undefined
+  - 'ufficiale'
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:24:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1402:25)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'ufficiale',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:27:3
+✖ a: ricerca per argomento sul registro completo (1068.5463ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + []
+  - [
+  -   'tp-anm-centrale',
+  -   'tp-anm-chiaia',
+  -   'tp-anm-gtfs',
+  -   'tp-anm-linea1',
+  -   'tp-comune-linea6',
+  -   'tp-comune-montesanto',
+  -   'tp-copernicus-dem',
+  -   'tp-eav-teleindicatori',
+  -   'tp-rfi-linea2',
+  -   'tp-trenitalia-linea2'
+  - ]
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:29:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'tp-anm-centrale', 'tp-anm-chiaia', 'tp-anm-gtfs', 'tp-anm-linea1', 'tp-comune-linea6', 'tp-comune-montesanto', 'tp-copernicus-dem', 'tp-eav-teleindicatori', 'tp-rfi-linea2', 'tp-trenitalia-linea2' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:32:3
+✖ a: frase con congiunzione orienta alla fonte condivisa di Nennella (718.0494ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok((await page.$eval('[data-source-id="gri-pasta-patate-2024"] [data-context]',e=>e.textContent)).startsWith('Trattoria da Nennella'))
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:34:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:37:3
+✖ a: cancellare la ricerca ripristina i due pannelli manuali (747.314ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + []
+  - [
+  -   'argomento-cucina',
+  -   'argomento-trasporti'
+  - ]
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:40:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'argomento-cucina', 'argomento-trasporti' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:44:3
+✖ a: indice indica Mappe dopo il salto (813.2785ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  null !== 'location'
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:46:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: 'location',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:49:3
+✖ a: focus visibile nel ritorno con Shift+Tab a viewport basso (696.307ms)
+  AssertionError [ERR_ASSERTION]: {"link":true,"top":24.375,"bottom":75.375,"railBottom":94.6875,"height":420}
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:55:38)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:57:3
+✖ a: frammento malformato non interrompe la navigazione (848.4225ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + [
+  +   'URI malformed\ndecodeURIComponent (<anonymous>)'
+  + ]
+  - []
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:58:85)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:27:3
+✖ c: ricerca per argomento sul registro completo (636.1128ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + []
+  - [
+  -   'tp-anm-centrale',
+  -   'tp-anm-chiaia',
+  -   'tp-anm-gtfs',
+  -   'tp-anm-linea1',
+  -   'tp-comune-linea6',
+  -   'tp-comune-montesanto',
+  -   'tp-copernicus-dem',
+  -   'tp-eav-teleindicatori',
+  -   'tp-rfi-linea2',
+  -   'tp-trenitalia-linea2'
+  - ]
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:29:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'tp-anm-centrale', 'tp-anm-chiaia', 'tp-anm-gtfs', 'tp-anm-linea1', 'tp-comune-linea6', 'tp-comune-montesanto', 'tp-copernicus-dem', 'tp-eav-teleindicatori', 'tp-rfi-linea2', 'tp-trenitalia-linea2' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:32:3
+✖ c: frase con congiunzione orienta alla fonte condivisa di Nennella (872.3075ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok((await page.$eval('[data-source-id="gri-pasta-patate-2024"] [data-context]',e=>e.textContent)).startsWith('Trattoria da Nennella'))
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:34:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:37:3
+✖ c: cancellare la ricerca ripristina i due pannelli manuali (702.1297ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + []
+  - [
+  -   'argomento-cucina',
+  -   'argomento-trasporti'
+  - ]
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:40:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'argomento-cucina', 'argomento-trasporti' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:44:3
+✖ c: indice indica Mappe dopo il salto (772.4782ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  null !== 'location'
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:46:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: 'location',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:49:3
+✖ c: focus visibile nel ritorno con Shift+Tab a viewport basso (680.2112ms)
+  AssertionError [ERR_ASSERTION]: {"link":true,"top":23.828125,"bottom":74.828125,"railBottom":94.6875,"height":420}
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:55:38)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:57:3
+✖ c: frammento malformato non interrompe la navigazione (864.5439ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + [
+  +   'URI malformed\ndecodeURIComponent (<anonymous>)'
+  + ]
+  - []
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:58:85)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:27:3
+✖ d: ricerca per argomento sul registro completo (655.3866ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + []
+  - [
+  -   'tp-anm-centrale',
+  -   'tp-anm-chiaia',
+  -   'tp-anm-gtfs',
+  -   'tp-anm-linea1',
+  -   'tp-comune-linea6',
+  -   'tp-comune-montesanto',
+  -   'tp-copernicus-dem',
+  -   'tp-eav-teleindicatori',
+  -   'tp-rfi-linea2',
+  -   'tp-trenitalia-linea2'
+  - ]
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:29:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'tp-anm-centrale', 'tp-anm-chiaia', 'tp-anm-gtfs', 'tp-anm-linea1', 'tp-comune-linea6', 'tp-comune-montesanto', 'tp-copernicus-dem', 'tp-eav-teleindicatori', 'tp-rfi-linea2', 'tp-trenitalia-linea2' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:32:3
+✖ d: frase con congiunzione orienta alla fonte condivisa di Nennella (668.9162ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok((await page.$eval('[data-source-id="gri-pasta-patate-2024"] [data-context]',e=>e.textContent)).startsWith('Trattoria da Nennella'))
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:34:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:37:3
+✖ d: cancellare la ricerca ripristina i due pannelli manuali (736.4263ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + []
+  - [
+  -   'argomento-cucina',
+  -   'argomento-trasporti'
+  - ]
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:40:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [ 'argomento-cucina', 'argomento-trasporti' ],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:44:3
+✖ d: indice indica Mappe dopo il salto (676.0156ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+  null !== 'location'
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:46:12)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: null,
+    expected: 'location',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:49:3
+✖ d: focus visibile nel ritorno con Shift+Tab a viewport basso (711.1562ms)
+  AssertionError [ERR_ASSERTION]: {"link":true,"top":23.5,"bottom":74.5,"railBottom":94.6875,"height":420}
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:55:38)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:57:3
+✖ d: frammento malformato non interrompe la navigazione (630.9971ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
+  + actual - expected
+
+  + [
+  +   'URI malformed\ndecodeURIComponent (<anonymous>)'
+  + ]
+  - []
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:58:85)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: [],
+    expected: [],
+    operator: 'deepStrictEqual',
+    diff: 'simple'
+  }
+
+test at design\fonti\pagina-generale\giro-2\regressioni.test.mjs:61:1
+✖ crediti: 54 foto, licenze e Bodoni raggiungibili dentro Nextstop (682.9143ms)
+  AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+    assert.ok(page.url().includes('#foto'))
+
+      at TestContext.<anonymous> (file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/regressioni.test.mjs:63:10)
+      at async Test.run (node:internal/test_runner/test:1409:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:974:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: false,
+    expected: true,
+    operator: '==',
+    diff: 'simple'
+  }

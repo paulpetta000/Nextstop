@@ -1,0 +1,28 @@
+---
+import { slugFonte, argomenti } from '../../lib/fonti-registro.mjs';
+import { dataLunga } from '../../lib/formato';
+const { fonte:s, prefisso='', contesto=true } = Astro.props;
+const id = prefisso + 'fonte-' + slugFonte(s.id);
+const full=s.titoloOriginale;
+const short=s.titoloBreve||full;
+const luoghi=s.luoghi;
+const tipo={ufficiale:'Pubblicata dal gestore o dall’ente',stampa:'Stampa',enciclopedia:'Enciclopedia',dati:'Dati aperti',blog:'Blog e guide',altro:'Altra fonte'};
+---
+<li class="source" id={id} data-source-id={s.id} data-topic={argomenti.find(t=>t.id===s.categoria)?.nome} data-keywords={s.parole.length?s.parole.join(' '):undefined} data-places={JSON.stringify(luoghi)}>
+  {contesto && <p class="source-context" data-context={luoghi.join(' / ')}>{luoghi.length?luoghi.join(' / '):s.editore}</p>}
+  <p class="purpose">{s.descrizione}</p>
+  {s.avviso && <p class="limit" id={`${id}-limite`}>{s.avviso}</p>}
+  <a class="source-link" href={s.urlDocumento||s.url} aria-describedby={s.avviso?`${id}-limite`:undefined}>
+    <span><span class="short-title">{short}</span>{short!==full && <span class="nojs-title">{full}</span>}</span>
+    {s.formato && <span class="format">{s.formato==='ZIP'?'Download ZIP':s.formato}</span>}
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 18 18 6M6 6h12v12"/></svg>
+  </a>
+  {short!==full && <details class="full-title"><summary>Leggi il titolo completo</summary><p>{full}</p></details>}
+  <p class="meta"><span>{s.editore} · {tipo[s.tipo]}{s.lingua && ` · ${s.lingua}`}</span>
+    <span>{s.dataLabel} · <time datetime={s.data}>{dataLunga(new Date(s.data))}</time></span>
+    {s.lettura && <span>{s.lettura.label} · <time datetime={s.lettura.data}>{dataLunga(new Date(s.lettura.data))}</time></span>}
+    {s.pubblicato && <span>Pubblicato · <time datetime={s.pubblicato}>{dataLunga(new Date(s.pubblicato))}</time></span>}
+  </p>
+  {s.urlDocumento && <p class="source-note"><a href={s.url}>Pagina registrata della fonte</a></p>}
+  {s.nota && <p class="source-note">{s.nota}</p>}
+</li>

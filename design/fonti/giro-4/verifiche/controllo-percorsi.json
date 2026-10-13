@@ -1,0 +1,30 @@
+{
+  "path": "src/data/percorsi-alternativi.json",
+  "before": {
+    "hash": "7d13da62d7bdc40695bc2718fd353cc5734233eeaeade9650b655ee9c52bbbe4",
+    "modifiedAt": "2026-10-06T16:34:01.000Z"
+  },
+  "headSha256": "d372bc6486066bfc38fc25bfe0c24466b0c69e2d0ce48287651f79b8f6f13102",
+  "reads": [
+    {
+      "sha256": "3294f4eab4f38da9fcb0f84e88180bf44ef31a8eb3163cef32dd5a50523feb5e",
+      "equalsHead": false,
+      "normalizedLF": "d372bc6486066bfc38fc25bfe0c24466b0c69e2d0ce48287651f79b8f6f13102",
+      "normalizedCRLF": "3294f4eab4f38da9fcb0f84e88180bf44ef31a8eb3163cef32dd5a50523feb5e"
+    },
+    {
+      "sha256": "3294f4eab4f38da9fcb0f84e88180bf44ef31a8eb3163cef32dd5a50523feb5e",
+      "equalsHead": false,
+      "normalizedLF": "d372bc6486066bfc38fc25bfe0c24466b0c69e2d0ce48287651f79b8f6f13102",
+      "normalizedCRLF": "3294f4eab4f38da9fcb0f84e88180bf44ef31a8eb3163cef32dd5a50523feb5e"
+    },
+    {
+      "sha256": "3294f4eab4f38da9fcb0f84e88180bf44ef31a8eb3163cef32dd5a50523feb5e",
+      "equalsHead": false,
+      "normalizedLF": "d372bc6486066bfc38fc25bfe0c24466b0c69e2d0ce48287651f79b8f6f13102",
+      "normalizedCRLF": "3294f4eab4f38da9fcb0f84e88180bf44ef31a8eb3163cef32dd5a50523feb5e"
+    }
+  ],
+  "modifiedAt": "2026-10-06T16:34:01.000Z",
+  "gitDiff": ""
+}

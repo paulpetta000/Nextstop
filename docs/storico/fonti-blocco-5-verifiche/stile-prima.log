@@ -1,0 +1,22 @@
+{
+  padding: '0px',
+  font: '"Barlow Semi Condensed", "Barlow SC Riserva", Barlow, system-ui, sans-serif'
+}
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+
+'0px' !== '16px'
+
+    at file:///C:/Users/Windows11/Documents/nextstop/scripts/fonti-controllo-stile.mjs:9:28 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: '0px',
+  expected: '16px',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.21.0

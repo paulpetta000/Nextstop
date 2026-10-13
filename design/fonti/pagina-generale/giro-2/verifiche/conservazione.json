@@ -1,0 +1,26 @@
+{
+  "checked": 1286,
+  "siteInputs": 166,
+  "previousDesignFiles": 757,
+  "changed": [
+    "design/home/proposta-a.html",
+    "design/home-napoli/rapporti/lighthouse-o2-dark.json"
+  ],
+  "previousFontiFiles": 544,
+  "discrepancies": [
+    {
+      "path": "design/home/proposta-a.html",
+      "before": "aacd412491a07507a7addb68287d6b07ca002b5531a48da54bb44a9027eb23f7",
+      "after": "1d8412e9fa705ceaedb86c9ac1f8b265dfce6cc2db36b72b7747d690298bd369",
+      "modified": "2026-10-07T11:39:33.099Z",
+      "size": 2237775
+    },
+    {
+      "path": "design/home-napoli/rapporti/lighthouse-o2-dark.json",
+      "before": "07ae4c49919f56cd5940faba948b7d1a759dd34407200233fed0b39ded668d88",
+      "after": "821ae22c19b0ce1487e07772d6ae6895809f6cc3882211015f0cb07bbdeb435a",
+      "modified": "2026-10-10T18:31:04.056Z",
+      "size": 727834
+    }
+  ]
+}

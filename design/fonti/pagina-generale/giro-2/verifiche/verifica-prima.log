@@ -1,0 +1,46 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   'https://www.gamberorossointernational.com/favicon.ico',
++   'https://www.gamberorossointernational.com/favicon.ico',
++   'https://www.gamberorossointernational.com/favicon.ico',
++   'https://www.gamberorossointernational.com/favicon.ico',
++   'https://www.gamberorossointernational.com/favicon.ico',
++   'https://www.gamberorossointernational.com/favicon.ico',
++   'https://www.gamberorossointernational.com/favicon.ico',
++   'https://www.gamberorossointernational.com/favicon.ico',
++   'https://www.gamberorossointernational.com/favicon.ico',
++   'https://www.gamberorossointernational.com/favicon.ico',
++   'https://www.gamberorossointernational.com/favicon.ico',
++   'https://www.gamberorossointernational.com/favicon.ico'
++ ]
+- []
+
+    at file:///C:/Users/Windows11/Documents/nextstop/design/fonti/pagina-generale/giro-2/verifica.mjs:65:10 {
+  generatedMessage: true,
+  code: 'ERR_ASSERTION',
+  actual: [
+    'https://www.gamberorossointernational.com/favicon.ico',
+    'https://www.gamberorossointernational.com/favicon.ico',
+    'https://www.gamberorossointernational.com/favicon.ico',
+    'https://www.gamberorossointernational.com/favicon.ico',
+    'https://www.gamberorossointernational.com/favicon.ico',
+    'https://www.gamberorossointernational.com/favicon.ico',
+    'https://www.gamberorossointernational.com/favicon.ico',
+    'https://www.gamberorossointernational.com/favicon.ico',
+    'https://www.gamberorossointernational.com/favicon.ico',
+    'https://www.gamberorossointernational.com/favicon.ico',
+    'https://www.gamberorossointernational.com/favicon.ico',
+    'https://www.gamberorossointernational.com/favicon.ico'
+  ],
+  expected: [],
+  operator: 'deepStrictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.21.0

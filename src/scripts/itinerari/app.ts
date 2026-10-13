@@ -126,19 +126,30 @@ function avvia() {
   setInterval(aggiornaDalVivo, 30000);
   document.addEventListener('visibilitychange', () => { curaPosizione(); if (document.visibilityState === 'visible') aggiornaDalVivo(); });
   // i tempi di sabato, domenica, festivi e «solo a piedi» arrivano dopo l'apertura (e restano salvati per l'uso senza rete)
-  fetch('/napoli/itinerari/scenari.json').then(r => (r.ok ? r.json() : null)).then((p: PaccoScenari | null) => {
-    if (!p) return;
-    aggiungiScenari(C, p);
-    memoOrdine.clear();
-    if (occupato()) setTimeout(() => disegna(), 5000); else disegna();
-  }).catch(() => { /* senza, per questi giorni valgono i tempi del feriale */ });
-  // gli orari veri dei bus arrivano dopo (e restano salvati per l'uso senza rete)
-  fetch('/napoli/itinerari/partenze.json').then(r => (r.ok ? r.json() : null)).then((p: PaccoVivo | null) => {
-    if (!p) return;
-    C.vivo = spacchettaVivo(p);
-    memoOrdine.clear();
-    if (occupato()) setTimeout(() => disegna(), 5000); else disegna();
-  }).catch(() => { /* senza orari veri resta l'attesa media */ });
+  const caricaSpostamenti = () => {
+    fetch('/napoli/itinerari/scenari.json', { priority: 'low' }).then(r => (r.ok ? r.json() : null)).then((p: PaccoScenari | null) => {
+      if (!p) return;
+      aggiungiScenari(C, p);
+      memoOrdine.clear();
+      // I dati sono disponibili al prossimo gesto; una giornata vuota non usa spostamenti.
+      if (!it().giorni[giorno].tappe.length && !$('it-pannello').hasAttribute('open')) return;
+      if (occupato()) setTimeout(() => disegna(), 5000); else disegna();
+    }).catch(() => { /* senza, per questi giorni valgono i tempi del feriale */ });
+    // gli orari veri dei bus arrivano dopo (e restano salvati per l'uso senza rete)
+    fetch('/napoli/itinerari/partenze.json', { priority: 'low' }).then(r => (r.ok ? r.json() : null)).then((p: PaccoVivo | null) => {
+      if (!p) return;
+      C.vivo = spacchettaVivo(p);
+      memoOrdine.clear();
+      if (!it().giorni[giorno].tappe.length && !$('it-pannello').hasAttribute('open')) return;
+      if (occupato()) setTimeout(() => disegna(), 5000); else disegna();
+    }).catch(() => { /* senza orari veri resta l'attesa media */ });
+  };
+  // Prima il disegno e i caratteri della pagina; poi i dati aggiuntivi e il
+  // ricalcolo già previsto. Nessun ritardo fisso o dipendenza dalla rete esterna.
+  Promise.all([
+    document.fonts?.ready ?? Promise.resolve(),
+    new Promise<void>(resolve => requestAnimationFrame(() => requestAnimationFrame(() => resolve())))
+  ]).then(caricaSpostamenti);
 
   function salva() {
     if (scrivi(A) || avvisatoMemoria) return;

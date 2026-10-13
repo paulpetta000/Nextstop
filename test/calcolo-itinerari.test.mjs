@@ -25,6 +25,26 @@ test('calcolo: giornata vuota senza visite, spostamenti o avvisi', () => {
   assert.deepEqual(r.avvisi, []);
 });
 
+test('dal vivo dopo la fine: una giornata vuota o tutta fatta non è piena', () => {
+  for (const g of [{ tappe: [] }, { fatte: ['a', 'b'] }]) {
+    const x = viaggio(g);
+    const prima = structuredClone(x);
+    const r = calcolaGiorno(citta(), x, 0, { data: x.data, ora: 1200 });
+    assert.deepEqual(r.avvisi, [], 'Nessuna visita rimasta da finire oltre il limite');
+    assert.equal(r.visite, 0);
+    assert.equal(r.spostamenti, 0);
+    assert.equal(r.tutteFatte, g.fatte ? true : undefined);
+    assert.deepEqual(x, prima);
+  }
+});
+
+test('dal vivo dopo la fine: le visite ancora da fare restano oltre il limite',()=>{
+ const x=viaggio({fatte:['a']});
+ const r=calcolaGiorno(citta(),x,0,{data:x.data,ora:1200});
+ assert.deepEqual(r.avvisi,[{tipo:'piena',fine:1240,limite:1080,daSpostare:['b']}]);
+ assert.equal(r.tutteFatte,undefined);
+});
+
 test('calcolo: visite e cammino determinano orari e tappe da spostare senza mutare il piano', () => {
   const x = viaggio({ fine: 660 });
   const prima = structuredClone(x);

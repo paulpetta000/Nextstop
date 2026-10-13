@@ -1,0 +1,90 @@
+[
+  {
+    "key": "a",
+    "theme": "light",
+    "scenario": 195,
+    "performance": 97,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2404.647737797939,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "a",
+    "theme": "dark",
+    "scenario": 195,
+    "performance": 96,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2406.0527383166655,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "b",
+    "theme": "light",
+    "scenario": 195,
+    "performance": 96,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2406.7492535646247,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "b",
+    "theme": "dark",
+    "scenario": 195,
+    "performance": 96,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2405.915799346015,
+    "cls": 0.01524294119923823,
+    "warnings": []
+  },
+  {
+    "key": "c",
+    "theme": "light",
+    "scenario": 195,
+    "performance": 96,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2404.2033827579726,
+    "cls": 0.001161429531162288,
+    "warnings": []
+  },
+  {
+    "key": "c",
+    "theme": "dark",
+    "scenario": 195,
+    "performance": 96,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2407.510640305535,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "d",
+    "theme": "light",
+    "scenario": 195,
+    "performance": 98,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2254.5668123648966,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "d",
+    "theme": "dark",
+    "scenario": 195,
+    "performance": 98,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2255.356504488922,
+    "cls": 0,
+    "warnings": []
+  }
+]

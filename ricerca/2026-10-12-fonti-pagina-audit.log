@@ -1,0 +1,25 @@
+{
+  "layouts": 24,
+  "scenarios": 175,
+  "external": 0,
+  "errors": [
+    "URI malformed\ndecodeURIComponent (<anonymous>)"
+  ],
+  "credits": [
+    {
+      "url": "http://127.0.0.1:4347/note-legali/",
+      "title": "Note legali · Nextstop",
+      "oldProjectVisible": true,
+      "oldOccurrences": [
+        "lare del sito: Enrico Licenziati · napoliavela.guida@gmail.com."
+      ],
+      "photoHeading": "",
+      "photoCount": 54,
+      "photoHosts": [
+        "commons.wikimedia.org"
+      ],
+      "bodoniMention": false,
+      "oldProjectLinks": []
+    }
+  ]
+}

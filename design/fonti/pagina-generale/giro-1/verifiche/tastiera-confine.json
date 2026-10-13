@@ -1,0 +1,78 @@
+[
+  {
+    "key": "a",
+    "width": 375,
+    "sequentialTab": true,
+    "focused": {
+      "id": "tp-catacombe-sangennaro",
+      "rect": {
+        "x": 54,
+        "y": 718.546875,
+        "width": 267,
+        "height": 44,
+        "top": 718.546875,
+        "right": 321,
+        "bottom": 762.546875,
+        "left": 54
+      },
+      "focus": "3px"
+    }
+  },
+  {
+    "key": "b",
+    "width": 375,
+    "sequentialTab": true,
+    "focused": {
+      "id": "tp-catacombe-sangennaro",
+      "rect": {
+        "x": 54,
+        "y": 717.890625,
+        "width": 267,
+        "height": 44,
+        "top": 717.890625,
+        "right": 321,
+        "bottom": 761.890625,
+        "left": 54
+      },
+      "focus": "3px"
+    }
+  },
+  {
+    "key": "c",
+    "width": 375,
+    "sequentialTab": true,
+    "focused": {
+      "id": "tp-catacombe-sangennaro",
+      "rect": {
+        "x": 54,
+        "y": 735,
+        "width": 267,
+        "height": 44,
+        "top": 735,
+        "right": 321,
+        "bottom": 779,
+        "left": 54
+      },
+      "focus": "3px"
+    }
+  },
+  {
+    "key": "d",
+    "width": 375,
+    "sequentialTab": true,
+    "focused": {
+      "id": "tp-catacombe-sangennaro",
+      "rect": {
+        "x": 54,
+        "y": 755.828125,
+        "width": 267,
+        "height": 44,
+        "top": 755.828125,
+        "right": 321,
+        "bottom": 799.828125,
+        "left": 54
+      },
+      "focus": "3px"
+    }
+  }
+]

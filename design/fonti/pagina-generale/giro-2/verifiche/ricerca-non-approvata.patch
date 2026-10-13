@@ -1,0 +1,111 @@
+diff --git a/design/fonti/pagina-generale/giro-2/genera.mjs b/design/fonti/pagina-generale/giro-2/genera.mjs
+index 30ce431..53bf6c3 100644
+--- a/design/fonti/pagina-generale/giro-2/genera.mjs
++++ b/design/fonti/pagina-generale/giro-2/genera.mjs
+@@ -34,7 +34,7 @@ function topicPanel(t,list,key){
+   return `<details class="topic" id="argomento-${t.id}"${t.id==='visite'&&list.length<=14?' open':''}><summary><h3>${t.nome}</h3><span class="topic-count" data-count>${items.length} ${items.length===1?'documento':'documenti'}</span><span class="topic-toggle">${chevron}</span></summary><div class="topic-body"><p class="topic-intro">${t.intro}</p>${t.id==='mappe'&&anm?`<p class="cross-reference">I dati degli autobus sono tra i trasporti. <a href="#fonte-${slug(anm.id)}" data-jump>Apri il documento ANM</a>.</p>`:''}${content}${relatedLinks}</div></details>`;
+ }
+ function directory(list,key,long){
+-  return `<section class="directory wrap" id="registro" aria-labelledby="registro-titolo"><div class="directory-head"><h2 id="registro-titolo">Consulta le fonti</h2><p>${long?'195 fonti uniche nel registro pubblico.':'Qui vedi 14 esempi reali; il registro pubblico conta 195 fonti uniche.'} Scegli un argomento o cerca un luogo.</p></div><div class="directory-layout"><div class="index-side">${index(list)}<p class="index-note">Un documento condiviso compare una volta. Lo trovi cercando ciascuno dei luoghi collegati.</p></div><div class="register-content"><div class="search-box"><label for="cerca-fonti">Cerca un luogo, un argomento o un editore</label><div class="search-field"><svg class="search-symbol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg><input type="search" id="cerca-fonti" autocomplete="off" placeholder="Per esempio: Catacombe, Nennella, EAV" aria-describedby="search-help" disabled></div><p id="search-help">La ricerca resta su questa pagina. Per aprire i documenti esterni serve una connessione.</p></div><div class="results-rail"><p role="status" aria-atomic="true" data-status><span>${list.length} documenti nell’elenco</span></p><button data-reset hidden>Cancella la ricerca</button><a href="#cerca-fonti" data-return>Torna alla ricerca</a></div><noscript><p>La ricerca richiede JavaScript. Puoi aprire gli argomenti e consultare tutti i documenti qui sotto.</p></noscript><div class="empty" hidden><h3>Nessun documento trovato</h3><p>Prova un altro nome oppure torna all’elenco completo.</p><button data-empty-reset>Cancella la ricerca</button></div><div class="topics" style="--estimated-topic-height:${long?504:1100}px">${argomenti.map(t=>topicPanel(t,list,key)).join('')}</div></div></div></section>`;
++  return `<section class="directory wrap" id="registro" aria-labelledby="registro-titolo"><div class="directory-head"><h2 id="registro-titolo">Consulta le fonti</h2><p>${long?'195 fonti uniche nel registro pubblico.':'Qui vedi 14 esempi reali; il registro pubblico conta 195 fonti uniche.'} Scegli un argomento o cerca un luogo.</p></div><div class="directory-layout"><div class="index-side">${index(list)}<p class="index-note">Un documento condiviso compare una volta. Lo trovi cercando ciascuno dei luoghi collegati.</p></div><div class="register-content"><div class="search-box"><label for="cerca-fonti">Cerca un luogo, un argomento o un editore</label><div class="search-field"><span class="search-stamp" aria-hidden="true"><svg class="search-symbol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></span><kbd class="search-shortcut" aria-hidden="true">/</kbd><input type="search" id="cerca-fonti" autocomplete="off" placeholder="Per esempio: Catacombe, Nennella, EAV" aria-describedby="search-help" disabled></div><p id="search-help">La ricerca resta su questa pagina. Per aprire i documenti esterni serve una connessione.</p></div><div class="results-rail"><p role="status" aria-atomic="true" data-status><span><strong data-result-count>${list.length}</strong><span data-result-label> documenti nell’elenco</span></span></p><button data-reset hidden>Cancella la ricerca</button><a href="#cerca-fonti" data-return>Torna alla ricerca</a></div><noscript><p>La ricerca richiede JavaScript. Puoi aprire gli argomenti e consultare tutti i documenti qui sotto.</p></noscript><div class="empty" hidden><h3>Nessun documento trovato</h3><p>Prova un altro nome oppure torna all’elenco completo.</p><button data-empty-reset>Cancella la ricerca</button></div><div class="topics" style="--estimated-topic-height:${long?504:1100}px">${argomenti.map(t=>topicPanel(t,list,key)).join('')}</div></div></div></section>`;
+ }
+ const tail=`<section class="tail wrap" aria-labelledby="altro-titolo"><h2 id="altro-titolo">Anche le immagini hanno una fonte.</h2><div><p>Trovi autori delle fotografie e licenze nelle note legali. L’attribuzione della mappa resta anche vicino alla mappa.</p><a href="crediti.html#foto">Leggi crediti e licenze ${arrow}</a></div><div><h3>Hai trovato qualcosa da correggere?</h3><p>Un orario diverso o un collegamento che non si apre: indica il luogo, la pagina e, se disponibile, il documento aggiornato.</p><a href="mailto:${esc(email)}">Segnala una correzione ${arrow}</a></div></section><footer><div class="wrap"><span>nextstop · itinerari in città</span><a href="/privacy/">Leggi la privacy</a><a href="#contenuto">Torna all’inizio</a></div></footer>`;
+ for(const key of Object.keys(names)) for(const long of [false,true]){
+diff --git a/design/fonti/pagina-generale/giro-2/movimento.mjs b/design/fonti/pagina-generale/giro-2/movimento.mjs
+index 99524ee..d1c3b26 100644
+--- a/design/fonti/pagina-generale/giro-2/movimento.mjs
++++ b/design/fonti/pagina-generale/giro-2/movimento.mjs
+@@ -49,8 +49,8 @@ try{
+       await page.evaluate(()=>document.querySelector('#cerca-fonti').blur());
+       await page.focus('#cerca-fonti');
+       const capture=async selector=>{
+-        for(const time of [0,50,100,150,200]){
+-          await page.$eval(selector,(e,time)=>e.getAnimations({subtree:true}).forEach(a=>{a.pause();a.currentTime=Math.min(time,Number(a.effect.getTiming().duration)||200);}),time);
++        for(const time of [0,75,150,225,300]){
++          await page.$eval(selector,(e,time)=>e.getAnimations({subtree:true}).forEach(a=>{a.pause();a.currentTime=Math.min(time,Number(a.effect.getTiming().duration)||300);}),time);
+           assert.equal((await inspect()).overflow,false);frames.push(await page.screenshot());
+         }
+         await page.$eval(selector,e=>e.getAnimations({subtree:true}).forEach(a=>a.cancel()));
+diff --git a/design/fonti/pagina-generale/giro-2/prototipi.css b/design/fonti/pagina-generale/giro-2/prototipi.css
+index a80cfe3..ce2b7e6 100644
+--- a/design/fonti/pagina-generale/giro-2/prototipi.css
++++ b/design/fonti/pagina-generale/giro-2/prototipi.css
+@@ -107,15 +107,26 @@ footer{background:var(--notte);color:var(--su-notte);padding:24px 0;font-size:14
+   .gallery-grid{grid-template-columns:1fr 1fr;gap:16px}.gallery article{padding:12px}.gallery article h2{font-size:22px}.gallery article a{font-size:15px}.gallery main{padding-top:32px}
+ }
+ @media(min-width:768px) and (max-width:1279px){.hero{gap:32px}.directory-layout{grid-template-columns:200px minmax(0,1fr);gap:32px}.variant-c .directory-layout{gap:32px}.variant-b .hero{padding:32px}.variant-b .source{grid-template-columns:1fr 1.25fr;gap:16px}.place-grid{grid-template-columns:1fr}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+-/* La ricerca si attiva come una riga del quaderno: spazio del campo sempre fisso. */
+-.search-field{position:relative;isolation:isolate;margin-bottom:12px}
+-.search-box .search-field input{min-height:52px;padding-left:48px}
+-.search-symbol{position:absolute;left:16px;top:14px;width:24px;height:24px;pointer-events:none;color:var(--inchiostro-2)}
+-.search-field::after{content:'';position:absolute;left:24px;right:24px;bottom:-6px;height:2px;background:var(--tufo-testo);transform:scaleX(0);transform-origin:left;opacity:0;pointer-events:none}
++/* Una scheda del quaderno: cambia il disegno, poi risponde al gesto.
++   Lo spazio del campo e il punto di digitazione restano fissi. */
++.search-box label{margin-bottom:16px}
++.search-field{position:relative;isolation:isolate;margin-bottom:20px}
++.search-box .search-field input{position:relative;z-index:1;min-height:72px;padding:16px 64px 16px 72px;border-radius:12px;font-size:20px;border-color:var(--inchiostro-2)}
++.search-field::before{content:'';position:absolute;inset:0 12px;border-radius:12px;background:var(--tufo);transform:translateY(4px) scaleX(.98);opacity:.35;pointer-events:none}
++.search-field::after{content:'';position:absolute;z-index:2;left:16px;right:16px;bottom:0;height:3px;background:var(--tufo-testo);transform:scaleX(0);transform-origin:left;opacity:0;pointer-events:none}
++.search-stamp{position:absolute;z-index:2;left:12px;top:14px;display:grid;place-items:center;width:44px;height:44px;background:var(--notte);color:var(--su-notte);border-radius:10px;pointer-events:none}
++.search-symbol{width:24px;height:24px}
++.search-shortcut{position:absolute;z-index:2;right:24px;top:24px;display:grid;place-items:center;width:24px;height:24px;border:1px solid var(--riga);border-radius:4px;color:var(--inchiostro-2);font:400 14px Archivo,sans-serif;pointer-events:none}
++.search-field:focus-within::before,.search-box[data-query=true] .search-field::before{transform:translateY(10px) scaleX(1);opacity:1}
+ .search-field:focus-within::after,.search-box[data-query=true] .search-field::after{transform:scaleX(1);opacity:1}
+-.search-field:focus-within .search-symbol{color:var(--tufo-testo);transform:translate(2px,-2px)}
++.search-field:focus-within .search-stamp{background:var(--tufo);color:var(--inchiostro);transform:translateY(-4px)}
++:root[data-theme=dark] .search-field:focus-within .search-stamp{color:var(--notte)}
++@media(prefers-color-scheme:dark){:root:not([data-theme=light]) .search-field:focus-within .search-stamp{color:var(--notte)}}
++.search-field:focus-within .search-symbol{transform:rotate(-18deg) scale(1.12)}
+ .search-field:focus-within input{border-color:var(--tufo-testo)}
+-.results-rail [data-status] span{display:inline-block}
++.search-box[data-query=true] .search-shortcut{visibility:hidden}
++.results-rail [data-status]>span{display:inline-flex;align-items:baseline;gap:8px;font-size:14px}
++.results-rail [data-result-count]{font-size:28px;font-weight:600;line-height:1.25;letter-spacing:-.03em}
+ html{scroll-padding-top:var(--rail-clearance,120px)}
+ .source,.topic,.source-link,.topic>summary,.full-title summary{scroll-margin-top:16px}
+ .related{margin-top:16px;border-top:1px solid var(--riga);padding-top:8px}
+@@ -123,8 +134,9 @@ html{scroll-padding-top:var(--rail-clearance,120px)}
+ .related ul{padding-left:20px;margin:8px 0 0}.related li{margin-top:4px}
+ .credits-page main{padding-block:48px}.credits-page h1{font-size:clamp(3rem,6vw,5rem);margin-bottom:24px}.credits-page section{margin-top:40px}.credits-page h2{margin-bottom:16px;scroll-margin-top:24px}.credits-page li{margin-bottom:16px;overflow-wrap:anywhere}.credits-page main a{display:inline-flex;align-items:center;min-height:44px}.credits-page .crediti{padding-left:24px;max-width:75ch}
+ @media(prefers-reduced-motion:no-preference){
+-  .search-symbol{transition:transform var(--m200) var(--entra)}
+-  .search-field::after{transition:transform var(--m200) var(--entra),opacity var(--m150) var(--entra)}
++  .search-stamp,.search-symbol{transition:transform var(--m300) var(--entra)}
++  .search-field::before,.search-field::after{transition:transform var(--m300) var(--entra),opacity var(--m150) var(--entra)}
+   .search-field:not(:focus-within)::after{transition-timing-function:var(--esci)}
+ }
+-@media(prefers-reduced-motion:reduce){.search-symbol,.search-field::after{transition:none}.search-field:focus-within .search-symbol{transform:none}}
++@media(max-width:767px){.search-box .search-field input{min-height:64px;padding:12px 16px 12px 64px;font-size:17px}.search-stamp{left:8px;top:10px}.search-shortcut{display:none}.results-rail [data-result-count]{font-size:24px}}
++@media(prefers-reduced-motion:reduce){.search-stamp,.search-symbol,.search-field::before,.search-field::after{transition:none}.search-field:focus-within .search-stamp,.search-field:focus-within .search-symbol{transform:none}}
+diff --git a/design/fonti/pagina-generale/giro-2/prototipi.js b/design/fonti/pagina-generale/giro-2/prototipi.js
+index 7664f90..bf01f69 100644
+--- a/design/fonti/pagina-generale/giro-2/prototipi.js
++++ b/design/fonti/pagina-generale/giro-2/prototipi.js
+@@ -13,6 +13,8 @@ function initRegistro(){
+   const panels=[...document.querySelectorAll('.topic')];
+   const status=document.querySelector('[data-status]');
+   const statusText=status.querySelector('span');
++  const resultCount=status.querySelector('[data-result-count]');
++  const resultLabel=status.querySelector('[data-result-label]');
+   const reset=document.querySelector('[data-reset]');
+   const empty=document.querySelector('.empty');
+   const rail=document.querySelector('.results-rail');
+@@ -53,14 +55,15 @@ function initRegistro(){
+       panel.querySelectorAll('.place-group').forEach(g=>g.hidden=![...g.querySelectorAll('.source')].some(s=>!s.hidden));
+     }
+     if(restoring)beforeSearch=null;
+-    statusText.textContent=query?`${count} ${count===1?'documento trovato':'documenti trovati'} su ${sources.length}`:`${sources.length} documenti nell’elenco`;
++    resultCount.textContent=query?count:sources.length;
++    resultLabel.textContent=query?` ${count===1?'documento trovato':'documenti trovati'} su ${sources.length}`:' documenti nell’elenco';
+     reset.hidden=!query;empty.hidden=count>0;searchBox.dataset.query=String(!!query);
+     if(query)activeTopic(null);
+     document.querySelectorAll('.cross-reference').forEach(p=>p.hidden=!!query);
+     store();
+     if(motion){
+-      animate(statusText,[{transform:'translateY(6px)'},{transform:'translateY(0)'}],'--m150','fonti-conteggio');
+-      animate(count?topics:empty,[{opacity:.92,transform:`translateY(${query?8:-8}px)`},{opacity:1,transform:'translateY(0)'}],'--m200',query?'fonti-risultati':'fonti-ritorno');
++      animate(statusText,[{opacity:.4,transform:`translateY(${query?16:-16}px)`},{opacity:1,transform:'translateY(0)'}],'--m300','fonti-conteggio');
++      animate(count?topics:empty,[{opacity:.55,transform:`translateY(${query?24:-24}px)`},{opacity:1,transform:'translateY(0)'}],'--m300',query?'fonti-risultati':'fonti-ritorno');
+     }
+   };
+   input.addEventListener('compositionstart',()=>{composing=true;});

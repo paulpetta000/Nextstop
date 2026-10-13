@@ -1,0 +1,27 @@
+{
+  "rows": [
+    {
+      "theme": "light",
+      "saved": true,
+      "ids": [
+        "tp-catacombe",
+        "tp-catacombe-sangennaro",
+        "tp-catacombe-basilica"
+      ],
+      "style": "all"
+    },
+    {
+      "theme": "dark",
+      "saved": true,
+      "ids": [
+        "tp-catacombe",
+        "tp-catacombe-sangennaro",
+        "tp-catacombe-basilica"
+      ],
+      "style": "all"
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "registration": "Esplicita su HTTP locale, stesso SW della build"
+}

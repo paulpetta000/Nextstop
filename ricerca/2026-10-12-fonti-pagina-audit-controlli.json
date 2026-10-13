@@ -1,0 +1,10 @@
+{
+  "referenceFiles": [
+    "PROGRESS.md",
+    "specifiche/fonti-e-controlli.md",
+    "ricerca/2026-10-12-fonti-pagina-revisione-critica.md"
+  ],
+  "checked": 55,
+  "broken": [],
+  "buildTestsRepeated": false
+}

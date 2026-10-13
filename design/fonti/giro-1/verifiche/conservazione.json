@@ -1,0 +1,35 @@
+{
+  "counts": {
+    "input": 197,
+    "design": 213,
+    "build": 588
+  },
+  "identical": 994,
+  "differences": [
+    {
+      "path": "design/compositore/giro-5/immagini/d-tel-dark.png",
+      "before": "e9ff5a97066b8ef4bee5eb69a63e373f0802251e7792022d483f6c247a74b3c0",
+      "after": "69d25b580884541333ecad54d1e64e6f8598fdcf533070438970a560cfe9ff63",
+      "modifiedAt": "2026-10-08T19:58:24.732Z"
+    },
+    {
+      "path": "design/home-napoli/rapporti/lighthouse-o3-dark.json",
+      "before": "a9000d393db42018d94450dab187e5462755f60d24c413490d326be52e655560",
+      "after": "2b009d420cf2c5a1d280376240b04662a8bac358cd41b371943975e195b521fa",
+      "modifiedAt": "2026-10-10T22:21:50.025Z"
+    },
+    {
+      "path": "dist/napoli/itinerari/percorsi-alternativi.json",
+      "before": "602ae799de6277065f27449bc2befd01e59c4b3cd39b148ffd1bfb91610c0b46",
+      "after": "1522c76dffa8ba22964334ef61d0ac7e79b8b22a9df980ccb76d09ddaea54776",
+      "modifiedAt": "2026-10-12T12:51:47.928Z"
+    },
+    {
+      "path": "dist/_astro/tp-ventaglieri.IhSdgtBR_ZbK40R.jpg",
+      "before": "7594b672636701042df7ed45d3601bf4f8784e61a932801777d149d4281ed990",
+      "after": "bc942ee5278c4a245f69c4226cdeec3e7c5f04082340ed0f86572237a1172960",
+      "modifiedAt": "2026-10-06T18:05:00.097Z"
+    }
+  ],
+  "outputMatchesExistingRoute": true
+}

@@ -1,0 +1,48 @@
+{
+  "layouts": 80,
+  "axe": [
+    {
+      "path": "/fonti/",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "/fonti/",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "path": "/note-legali/",
+      "theme": "dark",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "external": [],
+  "behavior": 16
+}

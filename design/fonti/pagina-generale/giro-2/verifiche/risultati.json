@@ -1,0 +1,3090 @@
+{
+  "rows": [
+    {
+      "key": "a",
+      "long": false,
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "light",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "light",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "light",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "light",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "dark",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "dark",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "dark",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "dark",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "light",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "light",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "light",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "light",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "dark",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "dark",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "dark",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "dark",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "light",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "light",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "light",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "light",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "dark",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "dark",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "dark",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "dark",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "light",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "light",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "light",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "light",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "dark",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "dark",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "dark",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "dark",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "light",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "light",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "light",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "light",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "dark",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "dark",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "dark",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "dark",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 14
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "light",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "light",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "light",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "light",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "light",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "light",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "light",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "light",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "light",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "light",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "dark",
+      "width": 320,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "dark",
+      "width": 320,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "dark",
+      "width": 375,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "dark",
+      "width": 375,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "dark",
+      "width": 390,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "dark",
+      "width": 390,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "dark",
+      "width": 768,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "dark",
+      "width": 768,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "dark",
+      "width": 1280,
+      "open": false,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "dark",
+      "width": 1280,
+      "open": true,
+      "overflow": false,
+      "duplicates": [],
+      "smallTargets": [],
+      "primarySize": "17px",
+      "count": 195
+    }
+  ],
+  "scans": [
+    {
+      "key": "a",
+      "long": false,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "file": "crediti.html",
+      "theme": "light",
+      "width": 375,
+      "violations": []
+    },
+    {
+      "file": "crediti.html",
+      "theme": "light",
+      "width": 1280,
+      "violations": []
+    },
+    {
+      "file": "crediti.html",
+      "theme": "dark",
+      "width": 375,
+      "violations": []
+    },
+    {
+      "file": "crediti.html",
+      "theme": "dark",
+      "width": 1280,
+      "violations": []
+    },
+    {
+      "file": "index.html",
+      "theme": "light",
+      "width": 375,
+      "violations": []
+    },
+    {
+      "file": "index.html",
+      "theme": "light",
+      "width": 1280,
+      "violations": []
+    },
+    {
+      "file": "index.html",
+      "theme": "dark",
+      "width": 375,
+      "violations": []
+    },
+    {
+      "file": "index.html",
+      "theme": "dark",
+      "width": 1280,
+      "violations": []
+    }
+  ],
+  "behavior": [
+    {
+      "key": "a",
+      "long": false,
+      "theme": "light",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024"
+          ]
+        },
+        {
+          "term": "catacombe",
+          "ids": [
+            "tp-catacombe-sangennaro"
+          ]
+        },
+        {
+          "term": "eav",
+          "ids": [
+            "tp-eav-l1-orario",
+            "tp-eav-campania-express-sospeso"
+          ]
+        },
+        {
+          "term": "anm",
+          "ids": [
+            "tp-anm-gtfs"
+          ]
+        },
+        {
+          "term": "mappe e dati",
+          "ids": [
+            "osm"
+          ]
+        }
+      ],
+      "returnQuery": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "name": "Cancella la ricerca",
+          "top": 613.65625,
+          "bottom": 657.65625,
+          "covered": false
+        },
+        {
+          "name": "Torna alla ricerca",
+          "top": 613.65625,
+          "bottom": 657.65625,
+          "covered": false
+        },
+        {
+          "name": "Locali e cucina1 documento",
+          "top": 682.65625,
+          "bottom": 770.65625,
+          "covered": false
+        },
+        {
+          "name": "Gli 8 ristoranti scelti da Gambero RossoWhere to eat pasta, ",
+          "top": 460.375,
+          "bottom": 511.375,
+          "covered": false
+        },
+        {
+          "name": "Leggi il titolo completo",
+          "top": 511.375,
+          "bottom": 555.375,
+          "covered": false
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "theme": "dark",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024"
+          ]
+        },
+        {
+          "term": "catacombe",
+          "ids": [
+            "tp-catacombe-sangennaro"
+          ]
+        },
+        {
+          "term": "eav",
+          "ids": [
+            "tp-eav-l1-orario",
+            "tp-eav-campania-express-sospeso"
+          ]
+        },
+        {
+          "term": "anm",
+          "ids": [
+            "tp-anm-gtfs"
+          ]
+        },
+        {
+          "term": "mappe e dati",
+          "ids": [
+            "osm"
+          ]
+        }
+      ],
+      "returnQuery": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "name": "Cancella la ricerca",
+          "top": 613.65625,
+          "bottom": 657.65625,
+          "covered": false
+        },
+        {
+          "name": "Torna alla ricerca",
+          "top": 613.65625,
+          "bottom": 657.65625,
+          "covered": false
+        },
+        {
+          "name": "Locali e cucina1 documento",
+          "top": 682.65625,
+          "bottom": 770.65625,
+          "covered": false
+        },
+        {
+          "name": "Gli 8 ristoranti scelti da Gambero RossoWhere to eat pasta, ",
+          "top": 460.375,
+          "bottom": 511.375,
+          "covered": false
+        },
+        {
+          "name": "Leggi il titolo completo",
+          "top": 511.375,
+          "bottom": 555.375,
+          "covered": false
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "light",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-nennella",
+            "lc-nennella-domande"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-gesu-vecchio",
+            "lc-gesu-vecchio-home",
+            "lc-gesu-vecchio-menu"
+          ]
+        },
+        {
+          "term": "catacombe",
+          "ids": [
+            "tp-catacombe-sangennaro",
+            "tp-catacombe",
+            "tp-catacombe-basilica"
+          ]
+        },
+        {
+          "term": "eav",
+          "ids": [
+            "tp-eav-l1-orario",
+            "tp-eav-campania-express-sospeso",
+            "tp-eav-campania-express",
+            "tp-eav-teleindicatori",
+            "tp-eav-808"
+          ]
+        },
+        {
+          "term": "anm",
+          "ids": [
+            "tp-anm-mergellina",
+            "tp-anm-echia",
+            "tp-anm-ascensori",
+            "tp-anm-metroart-toledo",
+            "tp-anm-gtfs",
+            "tp-anm-centrale",
+            "tp-anm-chiaia",
+            "tp-anm-linea1"
+          ]
+        },
+        {
+          "term": "mappe e dati",
+          "ids": [
+            "osm"
+          ]
+        }
+      ],
+      "returnQuery": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "name": "Cancella la ricerca",
+          "top": 613.3125,
+          "bottom": 657.3125,
+          "covered": false
+        },
+        {
+          "name": "Torna alla ricerca",
+          "top": 613.3125,
+          "bottom": 657.3125,
+          "covered": false
+        },
+        {
+          "name": "Locali e cucina3 documenti",
+          "top": 682.3125,
+          "bottom": 770.3125,
+          "covered": false
+        },
+        {
+          "name": "Where to eat pasta, potatoes, and provola in Naples. The 8 b",
+          "top": 434.03125,
+          "bottom": 536.03125,
+          "covered": false
+        },
+        {
+          "name": "Sedi e orari",
+          "top": 675.78125,
+          "bottom": 719.78125,
+          "covered": false
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "theme": "dark",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-nennella",
+            "lc-nennella-domande"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-gesu-vecchio",
+            "lc-gesu-vecchio-home",
+            "lc-gesu-vecchio-menu"
+          ]
+        },
+        {
+          "term": "catacombe",
+          "ids": [
+            "tp-catacombe-sangennaro",
+            "tp-catacombe",
+            "tp-catacombe-basilica"
+          ]
+        },
+        {
+          "term": "eav",
+          "ids": [
+            "tp-eav-l1-orario",
+            "tp-eav-campania-express-sospeso",
+            "tp-eav-campania-express",
+            "tp-eav-teleindicatori",
+            "tp-eav-808"
+          ]
+        },
+        {
+          "term": "anm",
+          "ids": [
+            "tp-anm-mergellina",
+            "tp-anm-echia",
+            "tp-anm-ascensori",
+            "tp-anm-metroart-toledo",
+            "tp-anm-gtfs",
+            "tp-anm-centrale",
+            "tp-anm-chiaia",
+            "tp-anm-linea1"
+          ]
+        },
+        {
+          "term": "mappe e dati",
+          "ids": [
+            "osm"
+          ]
+        }
+      ],
+      "returnQuery": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "name": "Cancella la ricerca",
+          "top": 613.3125,
+          "bottom": 657.3125,
+          "covered": false
+        },
+        {
+          "name": "Torna alla ricerca",
+          "top": 613.3125,
+          "bottom": 657.3125,
+          "covered": false
+        },
+        {
+          "name": "Locali e cucina3 documenti",
+          "top": 682.3125,
+          "bottom": 770.3125,
+          "covered": false
+        },
+        {
+          "name": "Where to eat pasta, potatoes, and provola in Naples. The 8 b",
+          "top": 434.03125,
+          "bottom": 536.03125,
+          "covered": false
+        },
+        {
+          "name": "Sedi e orari",
+          "top": 675.78125,
+          "bottom": 719.78125,
+          "covered": false
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "light",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024"
+          ]
+        },
+        {
+          "term": "catacombe",
+          "ids": [
+            "tp-catacombe-sangennaro"
+          ]
+        },
+        {
+          "term": "eav",
+          "ids": [
+            "tp-eav-l1-orario",
+            "tp-eav-campania-express-sospeso"
+          ]
+        },
+        {
+          "term": "anm",
+          "ids": [
+            "tp-anm-gtfs"
+          ]
+        },
+        {
+          "term": "mappe e dati",
+          "ids": [
+            "osm"
+          ]
+        }
+      ],
+      "returnQuery": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "name": "Cancella la ricerca",
+          "top": 613.421875,
+          "bottom": 657.421875,
+          "covered": false
+        },
+        {
+          "name": "Torna alla ricerca",
+          "top": 613.421875,
+          "bottom": 657.421875,
+          "covered": false
+        },
+        {
+          "name": "Locali e cucina1 documento",
+          "top": 682.421875,
+          "bottom": 771.109375,
+          "covered": false
+        },
+        {
+          "name": "Gli 8 ristoranti scelti da Gambero RossoWhere to eat pasta, ",
+          "top": 459.828125,
+          "bottom": 510.828125,
+          "covered": false
+        },
+        {
+          "name": "Leggi il titolo completo",
+          "top": 510.828125,
+          "bottom": 554.828125,
+          "covered": false
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "theme": "dark",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024"
+          ]
+        },
+        {
+          "term": "catacombe",
+          "ids": [
+            "tp-catacombe-sangennaro"
+          ]
+        },
+        {
+          "term": "eav",
+          "ids": [
+            "tp-eav-l1-orario",
+            "tp-eav-campania-express-sospeso"
+          ]
+        },
+        {
+          "term": "anm",
+          "ids": [
+            "tp-anm-gtfs"
+          ]
+        },
+        {
+          "term": "mappe e dati",
+          "ids": [
+            "osm"
+          ]
+        }
+      ],
+      "returnQuery": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "name": "Cancella la ricerca",
+          "top": 613.421875,
+          "bottom": 657.421875,
+          "covered": false
+        },
+        {
+          "name": "Torna alla ricerca",
+          "top": 613.421875,
+          "bottom": 657.421875,
+          "covered": false
+        },
+        {
+          "name": "Locali e cucina1 documento",
+          "top": 682.421875,
+          "bottom": 771.109375,
+          "covered": false
+        },
+        {
+          "name": "Gli 8 ristoranti scelti da Gambero RossoWhere to eat pasta, ",
+          "top": 459.828125,
+          "bottom": 510.828125,
+          "covered": false
+        },
+        {
+          "name": "Leggi il titolo completo",
+          "top": 510.828125,
+          "bottom": 554.828125,
+          "covered": false
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "light",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-nennella",
+            "lc-nennella-domande"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-gesu-vecchio",
+            "lc-gesu-vecchio-home",
+            "lc-gesu-vecchio-menu"
+          ]
+        },
+        {
+          "term": "catacombe",
+          "ids": [
+            "tp-catacombe-sangennaro",
+            "tp-catacombe",
+            "tp-catacombe-basilica"
+          ]
+        },
+        {
+          "term": "eav",
+          "ids": [
+            "tp-eav-l1-orario",
+            "tp-eav-campania-express-sospeso",
+            "tp-eav-campania-express",
+            "tp-eav-teleindicatori",
+            "tp-eav-808"
+          ]
+        },
+        {
+          "term": "anm",
+          "ids": [
+            "tp-anm-mergellina",
+            "tp-anm-echia",
+            "tp-anm-ascensori",
+            "tp-anm-metroart-toledo",
+            "tp-anm-gtfs",
+            "tp-anm-centrale",
+            "tp-anm-chiaia",
+            "tp-anm-linea1"
+          ]
+        },
+        {
+          "term": "mappe e dati",
+          "ids": [
+            "osm"
+          ]
+        }
+      ],
+      "returnQuery": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "name": "Cancella la ricerca",
+          "top": 613.078125,
+          "bottom": 657.078125,
+          "covered": false
+        },
+        {
+          "name": "Torna alla ricerca",
+          "top": 613.078125,
+          "bottom": 657.078125,
+          "covered": false
+        },
+        {
+          "name": "Locali e cucina3 documenti",
+          "top": 682.078125,
+          "bottom": 770.765625,
+          "covered": false
+        },
+        {
+          "name": "Where to eat pasta, potatoes, and provola in Naples. The 8 b",
+          "top": 434.484375,
+          "bottom": 536.484375,
+          "covered": false
+        },
+        {
+          "name": "Sedi e orari",
+          "top": 676.234375,
+          "bottom": 720.234375,
+          "covered": false
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "theme": "dark",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-nennella",
+            "lc-nennella-domande"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-gesu-vecchio",
+            "lc-gesu-vecchio-home",
+            "lc-gesu-vecchio-menu"
+          ]
+        },
+        {
+          "term": "catacombe",
+          "ids": [
+            "tp-catacombe-sangennaro",
+            "tp-catacombe",
+            "tp-catacombe-basilica"
+          ]
+        },
+        {
+          "term": "eav",
+          "ids": [
+            "tp-eav-l1-orario",
+            "tp-eav-campania-express-sospeso",
+            "tp-eav-campania-express",
+            "tp-eav-teleindicatori",
+            "tp-eav-808"
+          ]
+        },
+        {
+          "term": "anm",
+          "ids": [
+            "tp-anm-mergellina",
+            "tp-anm-echia",
+            "tp-anm-ascensori",
+            "tp-anm-metroart-toledo",
+            "tp-anm-gtfs",
+            "tp-anm-centrale",
+            "tp-anm-chiaia",
+            "tp-anm-linea1"
+          ]
+        },
+        {
+          "term": "mappe e dati",
+          "ids": [
+            "osm"
+          ]
+        }
+      ],
+      "returnQuery": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "name": "Cancella la ricerca",
+          "top": 613.078125,
+          "bottom": 657.078125,
+          "covered": false
+        },
+        {
+          "name": "Torna alla ricerca",
+          "top": 613.078125,
+          "bottom": 657.078125,
+          "covered": false
+        },
+        {
+          "name": "Locali e cucina3 documenti",
+          "top": 682.078125,
+          "bottom": 770.765625,
+          "covered": false
+        },
+        {
+          "name": "Where to eat pasta, potatoes, and provola in Naples. The 8 b",
+          "top": 434.484375,
+          "bottom": 536.484375,
+          "covered": false
+        },
+        {
+          "name": "Sedi e orari",
+          "top": 676.234375,
+          "bottom": 720.234375,
+          "covered": false
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "light",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024"
+          ]
+        },
+        {
+          "term": "catacombe",
+          "ids": [
+            "tp-catacombe-sangennaro"
+          ]
+        },
+        {
+          "term": "eav",
+          "ids": [
+            "tp-eav-l1-orario",
+            "tp-eav-campania-express-sospeso"
+          ]
+        },
+        {
+          "term": "anm",
+          "ids": [
+            "tp-anm-gtfs"
+          ]
+        },
+        {
+          "term": "mappe e dati",
+          "ids": [
+            "osm"
+          ]
+        }
+      ],
+      "returnQuery": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "name": "Cancella la ricerca",
+          "top": 596.28125,
+          "bottom": 640.28125,
+          "covered": false
+        },
+        {
+          "name": "Torna alla ricerca",
+          "top": 596.28125,
+          "bottom": 640.28125,
+          "covered": false
+        },
+        {
+          "name": "Locali e cucina1 documento",
+          "top": 665.28125,
+          "bottom": 753.28125,
+          "covered": false
+        },
+        {
+          "name": "Gli 8 ristoranti scelti da Gambero RossoWhere to eat pasta, ",
+          "top": 459.5,
+          "bottom": 510.5,
+          "covered": false
+        },
+        {
+          "name": "Leggi il titolo completo",
+          "top": 510.5,
+          "bottom": 554.5,
+          "covered": false
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "theme": "dark",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024"
+          ]
+        },
+        {
+          "term": "catacombe",
+          "ids": [
+            "tp-catacombe-sangennaro"
+          ]
+        },
+        {
+          "term": "eav",
+          "ids": [
+            "tp-eav-l1-orario",
+            "tp-eav-campania-express-sospeso"
+          ]
+        },
+        {
+          "term": "anm",
+          "ids": [
+            "tp-anm-gtfs"
+          ]
+        },
+        {
+          "term": "mappe e dati",
+          "ids": [
+            "osm"
+          ]
+        }
+      ],
+      "returnQuery": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "name": "Cancella la ricerca",
+          "top": 596.28125,
+          "bottom": 640.28125,
+          "covered": false
+        },
+        {
+          "name": "Torna alla ricerca",
+          "top": 596.28125,
+          "bottom": 640.28125,
+          "covered": false
+        },
+        {
+          "name": "Locali e cucina1 documento",
+          "top": 665.28125,
+          "bottom": 753.28125,
+          "covered": false
+        },
+        {
+          "name": "Gli 8 ristoranti scelti da Gambero RossoWhere to eat pasta, ",
+          "top": 459.5,
+          "bottom": 510.5,
+          "covered": false
+        },
+        {
+          "name": "Leggi il titolo completo",
+          "top": 510.5,
+          "bottom": 554.5,
+          "covered": false
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "light",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-nennella",
+            "lc-nennella-domande"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-gesu-vecchio",
+            "lc-gesu-vecchio-home",
+            "lc-gesu-vecchio-menu"
+          ]
+        },
+        {
+          "term": "catacombe",
+          "ids": [
+            "tp-catacombe-sangennaro",
+            "tp-catacombe",
+            "tp-catacombe-basilica"
+          ]
+        },
+        {
+          "term": "eav",
+          "ids": [
+            "tp-eav-l1-orario",
+            "tp-eav-campania-express-sospeso",
+            "tp-eav-campania-express",
+            "tp-eav-teleindicatori",
+            "tp-eav-808"
+          ]
+        },
+        {
+          "term": "anm",
+          "ids": [
+            "tp-anm-mergellina",
+            "tp-anm-echia",
+            "tp-anm-ascensori",
+            "tp-anm-metroart-toledo",
+            "tp-anm-gtfs",
+            "tp-anm-centrale",
+            "tp-anm-chiaia",
+            "tp-anm-linea1"
+          ]
+        },
+        {
+          "term": "mappe e dati",
+          "ids": [
+            "osm"
+          ]
+        }
+      ],
+      "returnQuery": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "name": "Cancella la ricerca",
+          "top": 596.9375,
+          "bottom": 640.9375,
+          "covered": false
+        },
+        {
+          "name": "Torna alla ricerca",
+          "top": 596.9375,
+          "bottom": 640.9375,
+          "covered": false
+        },
+        {
+          "name": "Locali e cucina3 documenti",
+          "top": 665.9375,
+          "bottom": 753.9375,
+          "covered": false
+        },
+        {
+          "name": "Where to eat pasta, potatoes, and provola in Naples. The 8 b",
+          "top": 434.15625,
+          "bottom": 536.15625,
+          "covered": false
+        },
+        {
+          "name": "Sedi e orari",
+          "top": 715.71875,
+          "bottom": 759.71875,
+          "covered": false
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "theme": "dark",
+      "tasks": [
+        {
+          "term": "nennella",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-nennella",
+            "lc-nennella-domande"
+          ]
+        },
+        {
+          "term": "gesu vecchio",
+          "ids": [
+            "gri-pasta-patate-2024",
+            "lc-gesu-vecchio",
+            "lc-gesu-vecchio-home",
+            "lc-gesu-vecchio-menu"
+          ]
+        },
+        {
+          "term": "catacombe",
+          "ids": [
+            "tp-catacombe-sangennaro",
+            "tp-catacombe",
+            "tp-catacombe-basilica"
+          ]
+        },
+        {
+          "term": "eav",
+          "ids": [
+            "tp-eav-l1-orario",
+            "tp-eav-campania-express-sospeso",
+            "tp-eav-campania-express",
+            "tp-eav-teleindicatori",
+            "tp-eav-808"
+          ]
+        },
+        {
+          "term": "anm",
+          "ids": [
+            "tp-anm-mergellina",
+            "tp-anm-echia",
+            "tp-anm-ascensori",
+            "tp-anm-metroart-toledo",
+            "tp-anm-gtfs",
+            "tp-anm-centrale",
+            "tp-anm-chiaia",
+            "tp-anm-linea1"
+          ]
+        },
+        {
+          "term": "mappe e dati",
+          "ids": [
+            "osm"
+          ]
+        }
+      ],
+      "returnQuery": "nennella",
+      "storagePreserved": true,
+      "keyboard": [
+        {
+          "name": "Cancella la ricerca",
+          "top": 596.9375,
+          "bottom": 640.9375,
+          "covered": false
+        },
+        {
+          "name": "Torna alla ricerca",
+          "top": 596.9375,
+          "bottom": 640.9375,
+          "covered": false
+        },
+        {
+          "name": "Locali e cucina3 documenti",
+          "top": 665.9375,
+          "bottom": 753.9375,
+          "covered": false
+        },
+        {
+          "name": "Where to eat pasta, potatoes, and provola in Naples. The 8 b",
+          "top": 434.15625,
+          "bottom": 536.15625,
+          "covered": false
+        },
+        {
+          "name": "Sedi e orari",
+          "top": 715.71875,
+          "bottom": 759.71875,
+          "covered": false
+        }
+      ]
+    }
+  ],
+  "nojs": 195,
+  "photo": [
+    {
+      "id": "via-partenope",
+      "text": "Via Partenope e la scogliera verso Castel dell'Ovo. Foto di Baku, CC BY-SA 4.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Via_Parthenope.jpg"
+      ]
+    },
+    {
+      "id": "floridiana-viale",
+      "text": "Villa Floridiana: il viale che scende verso il belvedere sul mare. Foto di Baku, CC BY-SA 4.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Floridiana2.jpg"
+      ]
+    },
+    {
+      "id": "vista-monte-echia",
+      "text": "Da Monte Echia: i tetti di Santa Lucia, il golfo e il Vesuvio. Foto di MentNFG, CC BY-SA 4.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Monte_Echia_25_001.jpg"
+      ]
+    },
+    {
+      "id": "tp-duomo",
+      "text": "La facciata del Duomo, in via Duomo. Foto di Velvet, CC BY-SA 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Naples_duomo_facade.jpg"
+      ]
+    },
+    {
+      "id": "tp-santa-chiara",
+      "text": "La basilica di Santa Chiara e il campanile. Foto di IlSistemone, CC BY-SA 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Monastero_di_SantaChiaraNaples.jpg"
+      ]
+    },
+    {
+      "id": "tp-spaccanapoli",
+      "text": "Spaccanapoli, nel centro storico. Foto di Velvet, CC BY-SA 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Naples_spaccanapoli.JPG"
+      ]
+    },
+    {
+      "id": "tp-tribunali",
+      "text": "Il portico di Palazzo d'Avalos, in via dei Tribunali. Foto di Armando Mancini, CC BY-SA 2.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/2.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Palazzo_d%27Avalos_o_della_Guardia._Napoli_-_Via_dei_Tribunali.jpg"
+      ]
+    },
+    {
+      "id": "tp-pio-monte",
+      "text": "Il Pio Monte della Misericordia, in via dei Tribunali. Foto di IlSistemone, CC BY-SA 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:PioMonteMisericordiaNaples.jpg"
+      ]
+    },
+    {
+      "id": "tp-mann",
+      "text": "Il Museo Archeologico Nazionale, in piazza Museo. Foto di Mister No, CC BY 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Museo_Archeologico_Nazionale_di_Napoli_-_panoramio_(1).jpg"
+      ]
+    },
+    {
+      "id": "tp-san-lorenzo",
+      "text": "Due cappelle della chiesa di San Lorenzo Maggiore. Foto di Wolfgang Moroder, CC BY-SA 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Church_San_Lorenzo_Maggiore_Cacace_and_Saint_Roch_chapels_Niccol%C3%B2_De_Simone.jpg"
+      ]
+    },
+    {
+      "id": "tp-napoli-sotterranea",
+      "text": "Una delle scale scavate nel tufo di Napoli Sotterranea. Foto di Armando Mancini, CC BY-SA 2.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/2.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Napoli_sotterranea_(cunicolo).jpg"
+      ]
+    },
+    {
+      "id": "tp-madre",
+      "text": "Il cortile di Palazzo Donnaregina, sede del museo Madre. Foto di Amedeo Benestante, CC BY 4.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Museo_Madre,.jpg"
+      ]
+    },
+    {
+      "id": "tp-plebiscito",
+      "text": "Piazza del Plebiscito con la basilica di San Francesco di Paola. Foto di Wolfgang Pehlemann, CC BY-SA 3.0 DE, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/de/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Basilica_reale_pontificia_di_San_Francesco_di_Paola_Piazza_del_Plebiscito_Napoli_Neapel_Italy_Foto_Wolfgang_Pehlemann_P1070687.jpg"
+      ]
+    },
+    {
+      "id": "tp-palazzo-reale",
+      "text": "Il Palazzo Reale visto da piazza del Plebiscito. Foto di Sordelli, CC BY-SA 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Palazzo_Reale_di_Napoli.jpg"
+      ]
+    },
+    {
+      "id": "tp-san-carlo",
+      "text": "La sala del Teatro di San Carlo. Foto di Diego Delso, CC BY-SA 4.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Teatro_de_San_Carlos,_N%C3%A1poles,_Italia,_2023-03-25,_DD_214-216_HDR.jpg"
+      ]
+    },
+    {
+      "id": "tp-castel-nuovo",
+      "text": "Castel Nuovo, il Maschio Angioino, da piazza Municipio. Foto di PaestumPaestum, CC BY-SA 4.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Maschio_Angioino_frontale.jpg"
+      ]
+    },
+    {
+      "id": "tp-toledo",
+      "text": "Via Toledo. Foto di Mister No, CC BY 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Via_Toledo_-_panoramio_(1).jpg"
+      ]
+    },
+    {
+      "id": "tp-galleria-borbonica",
+      "text": "Uno degli ambienti della Galleria Borbonica. Foto di Associazione Culturale Borbonica Sotterranea, CC BY-SA 4.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Galleria_borbonica_-_War_refuge_(Naples).jpg"
+      ]
+    },
+    {
+      "id": "tp-borgo-marinari",
+      "text": "Barche nel porticciolo del Borgo Marinari, accanto a Castel dell'Ovo. Foto di Sordelli, CC BY-SA 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Borgo_Marinari.jpg"
+      ]
+    },
+    {
+      "id": "tp-dadom",
+      "text": "La Stazione Zoologica Anton Dohrn nella Villa Comunale, sede dell'acquario e del museo Darwin-Dohrn. Foto di TatsuoTabei, Pubblico dominio, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://commons.wikimedia.org/wiki/File:StazionezoologicaAntonDohrnNapoli19-12-10_1512.jpg"
+      ]
+    },
+    {
+      "id": "tp-sant-elmo",
+      "text": "Castel Sant'Elmo dal lato dell'ingresso. Foto di Wolfgang Moroder, CC BY-SA 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Castel_Sant_Elmo_Napoli_lato_ingresso.jpg"
+      ]
+    },
+    {
+      "id": "tp-san-martino",
+      "text": "La vista da Castel Sant'Elmo sulla Certosa di San Martino, il porto e il Vesuvio. Foto di Wolfgang Moroder, CC BY-SA 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Naples_from_the_Castello_Sant_Elmo_with_Abbazia_San_Martino_the_port_and_the_Vesuv.jpg"
+      ]
+    },
+    {
+      "id": "tp-catacombe",
+      "text": "Le Catacombe di San Gennaro. Foto di Dominik Matus, CC BY-SA 4.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Catacombe_di_San_Gennaro_023.jpg"
+      ]
+    },
+    {
+      "id": "tp-sanita",
+      "text": "Il Palazzo dello Spagnolo, nel Rione Sanità. Foto di Diego Delso, CC BY-SA 4.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Palazzo_dello_Spagnolo,_N%C3%A1poles,_Italia,_2023-03-25,_DD_132.jpg"
+      ]
+    },
+    {
+      "id": "tp-fontanelle",
+      "text": "L'interno del Cimitero delle Fontanelle. Foto di Lalupa, CC BY-SA 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Napoli_-_Fontanelle_crocevia_1030852.JPG"
+      ]
+    },
+    {
+      "id": "tp-capodimonte",
+      "text": "La Reggia di Capodimonte, sede del museo, nel Real Bosco. Foto di Mentnafunangann, CC BY-SA 4.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Reggia_di_Capodimonte_1.JPG"
+      ]
+    },
+    {
+      "id": "tp-virgilio",
+      "text": "Il sepolcro romano detto Tomba di Virgilio, nel parco di Piedigrotta. Foto di Mentnafunangann, CC BY-SA 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Tomba_di_Virgilio_(Vergiliano)_1.JPG"
+      ]
+    },
+    {
+      "id": "tp-marechiaro",
+      "text": "Marechiaro, sulla costa di Posillipo. Foto di Armando Mancini, CC BY-SA 2.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/2.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Napoli_-_Marechiaro2.jpg"
+      ]
+    },
+    {
+      "id": "tp-gaiola",
+      "text": "L'isolotto della Gaiola visto dalla costa di Posillipo. Foto di ChristiHarri, CC BY-SA 4.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Parco_della_Gaiola.jpg"
+      ]
+    },
+    {
+      "id": "tp-parco-virgiliano",
+      "text": "Il tramonto dal belvedere del Parco Virgiliano. Foto di Fr~itwiki, Pubblico dominio, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://commons.wikimedia.org/wiki/File:ParcoVirgilianoNapoli.jpg"
+      ]
+    },
+    {
+      "id": "tp-citta-scienza",
+      "text": "Il cortile di Città della Scienza, a Bagnoli. Foto di Pinotto992, Pubblico dominio, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://commons.wikimedia.org/wiki/File:Citt%C3%A0_della_Scienza_Cortile.jpg"
+      ]
+    },
+    {
+      "id": "tp-pompei",
+      "text": "Il Foro di Pompei e il Vesuvio. Foto di Commonists, CC BY-SA 4.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Forum_(Pompeii)_and_the_Vesuvio.jpg"
+      ]
+    },
+    {
+      "id": "tp-ercolano",
+      "text": "Gli scavi di Ercolano. Foto di Diego Delso, CC BY-SA 4.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Antigua_ciudad_de_Herculano,_Italia,_2023-03-27,_DD_135-138_PAN.jpg"
+      ]
+    },
+    {
+      "id": "tp-vesuvio",
+      "text": "Il Vesuvio dal golfo di Napoli. Foto di PaestumPaestum, CC BY-SA 4.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Vesuvio_e_nave_a_Napoli.jpg"
+      ]
+    },
+    {
+      "id": "tp-capri",
+      "text": "Marina Grande, il porto di Capri. Foto di Norbert Nagel, CC BY-SA 3.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Capri_island_-_Campania_-_Italy_-_July_12th_2013_-_20.jpg"
+      ]
+    },
+    {
+      "id": "tp-ischia",
+      "text": "Il Castello Aragonese di Ischia. Foto di Dudva, CC0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/publicdomain/zero/1.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Castello_Aragonese_(Ischia).jpg"
+      ]
+    },
+    {
+      "id": "tp-procida",
+      "text": "La Marina della Corricella, a Procida. Foto di Velvet, CC BY-SA 4.0, ridimensionata. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Procida_Marina_Corricella.jpg"
+      ]
+    },
+    {
+      "id": "tp-san-domenico",
+      "text": "La basilica di San Domenico Maggiore. Foto di Mongolo1984, CC BY-SA 4.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Domenico_Maggiore_(Napoli),_facciata_01.jpg"
+      ]
+    },
+    {
+      "id": "tp-girolamini",
+      "text": "La facciata della chiesa dei Girolamini, di Ferdinando Fuga. Foto di Wolfgang Moroder, CC BY-SA 3.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Chiesa_dei_Girolamini_facciata_di_Ferdinando_Fuga_Napoli.jpg"
+      ]
+    },
+    {
+      "id": "tp-filangieri",
+      "text": "Una sala del Museo Civico Gaetano Filangieri, a Palazzo Como. Foto di IlSistemone, CC BY-SA 3.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:FilangieriNaples.jpg"
+      ]
+    },
+    {
+      "id": "tp-purgatorio",
+      "text": "Santa Maria delle Anime del Purgatorio ad Arco, in via dei Tribunali. Foto di ho visto nina volare, CC BY-SA 2.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/2.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Napoli_-_Purgatorio_ad_Arco2012.jpg"
+      ]
+    },
+    {
+      "id": "tp-carbonara",
+      "text": "La scalinata di San Giovanni a Carbonara. Foto di Mongolo1984, CC BY-SA 4.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Chiesa_di_San_Giovanni_a_Carbonara_(Napoli),_facciata_01.jpg"
+      ]
+    },
+    {
+      "id": "tp-villa-pignatelli",
+      "text": "Villa Pignatelli, il lato verso il giardino. Foto di Armando Mancini, CC BY-SA 2.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/2.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Napoli_-_Villa_Pignatelli5.jpg"
+      ]
+    },
+    {
+      "id": "tp-pignasecca",
+      "text": "Il mercato della Pignasecca. Foto di Argo Navis, CC BY-SA 4.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Pignasecca_market,_Naples_20230622_02.jpg"
+      ]
+    },
+    {
+      "id": "tp-porta-nolana",
+      "text": "Porta Nolana e il mercato. Foto di Rémy Lee, CC BY-SA 4.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Porta_Nolana_mercato_Napoli_Naples_1_May_2021.jpg"
+      ]
+    },
+    {
+      "id": "tp-donn-anna",
+      "text": "Palazzo Donn'Anna e la costa di Posillipo, visti dal mare. Foto di Ruthven, CC0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/publicdomain/zero/1.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Palazzo_Donn%27Anna_visto_dal_mare_(Napoli).jpg"
+      ]
+    },
+    {
+      "id": "tp-camaldoli",
+      "text": "Un viale nel bosco del Parco dei Camaldoli. Foto di Ruthven, CC BY 4.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Parco_dei_Camaldoli_-_bosco.jpg"
+      ]
+    },
+    {
+      "id": "tp-poggio",
+      "text": "Il laghetto del Parco del Poggio, con il Vesuvio sullo sfondo. Foto di IlSistemone, CC BY-SA 3.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:ParcoPoggioNaples2.jpg"
+      ]
+    },
+    {
+      "id": "tp-orto-botanico",
+      "text": "L'ingresso del Real Orto Botanico, in via Foria. Foto di Armando Mancini, CC BY-SA 2.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/2.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Napoli_-_Real_orto_botanico.jpg"
+      ]
+    },
+    {
+      "id": "tp-mostra-oltremare",
+      "text": "La Fontana dell'Esedra, alla Mostra d'Oltremare. Foto di aquila 460 (Gennaro Fusco), CC BY-SA 2.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/2.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Font_EsedraNa.jpg"
+      ]
+    },
+    {
+      "id": "tp-ventaglieri",
+      "text": "Il Parco dei Ventaglieri, a Montesanto. Foto di Mattia Luigi Nappi, CC BY-SA 4.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Parco_dei_Ventaglieri,_upper_side,_Napoli_01.jpg"
+      ]
+    },
+    {
+      "id": "tp-caserta",
+      "text": "Il parco della Reggia di Caserta, verso la Grande Cascata. Foto di Carlo Pelagalli, CC BY-SA 3.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Parco_della_Reggia_di_Caserta,_prospettiva_dalla_fontana_di_Cerere_verso_la_Grande_Cascata._-_panoramio.jpg"
+      ]
+    },
+    {
+      "id": "tp-pietrarsa",
+      "text": "Il Museo Nazionale Ferroviario di Pietrarsa. Foto di B.Zsolt, CC BY-SA 3.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Pietrarsa_railway_museum_21.JPG"
+      ]
+    },
+    {
+      "id": "tp-sorrento",
+      "text": "Piazza Tasso, a Sorrento. Foto di Berthold Werner, CC BY-SA 3.0. Pagina di origine.",
+      "hrefs": [
+        "https://creativecommons.org/licenses/by-sa/3.0/deed.it",
+        "https://commons.wikimedia.org/wiki/File:Piazza_Tasso_-_Sorrento_BW_2013-05-12.jpg"
+      ]
+    }
+  ],
+  "auxiliary": [
+    {
+      "file": "crediti.html",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "file": "crediti.html",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "file": "crediti.html",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "file": "crediti.html",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "theme": "light",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "theme": "light",
+      "width": 1280,
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "theme": "dark",
+      "width": 375,
+      "overflow": false
+    },
+    {
+      "file": "index.html",
+      "theme": "dark",
+      "width": 1280,
+      "overflow": false
+    }
+  ],
+  "external": [],
+  "errors": []
+}

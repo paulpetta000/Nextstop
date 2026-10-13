@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import PageHead from '../components/PageHead.astro';
 import { SITO } from '../config/sito';
 import { getCollection } from 'astro:content';
+import { LICENZE } from '../lib/foto';
 const foto = await getCollection('foto');
 const t = SITO.titolare;
 ---
@@ -17,13 +18,13 @@ const t = SITO.titolare;
       <p>I nomi dei luoghi, dei locali, degli eventi e delle aziende citati, e i loro marchi, appartengono ai rispettivi titolari. Li usiamo solo per indicare di chi e di cosa parliamo, senza loghi e senza grafica ufficiale.</p>
       <h2>Informazioni</h2>
       <p>Le informazioni vengono dalle fonti indicate in ogni pagina e nella pagina <a href="/fonti/">fonti</a>, con la data del controllo. Possono cambiare: per decisioni importanti (viaggi, prenotazioni, gite) verifica sempre sui siti ufficiali.</p>
-      <h2>Foto</h2>
+      <h2 id="foto">Foto</h2>
       <p>Usiamo solo foto con licenza libera, prese da Wikimedia Commons. Le foto con licenza CC BY-SA, ritagliate da noi, restano con la stessa licenza.</p>
       <ul class="crediti">
-        {foto.map(f => <li><strong>{f.data.didascalia}</strong> Foto di {f.data.autore}, {f.data.licenza}{f.data.modifiche && `, ${f.data.modifiche.toLowerCase()}`}. <a href={f.data.fonte} rel="noopener">Pagina di origine</a>.</li>)}
+        {foto.map(f => <li data-photo-id={f.id}><strong>{f.data.didascalia}</strong> Foto di {f.data.autoreUrl ? <a href={f.data.autoreUrl}>{f.data.autore}</a> : f.data.autore}, {LICENZE[f.data.licenza] ? <a href={LICENZE[f.data.licenza]}>{f.data.licenza}</a> : f.data.licenza}{f.data.modifiche && `, ${f.data.modifiche.toLowerCase()}`}. <a href={f.data.fonte} rel="noopener">Pagina di origine</a>.</li>)}
       </ul>
       <h2>Mappe, dati e font</h2>
-      <p>Mappe disegnate da noi (si spostano e si ingrandiscono, funzionano senza rete) con dati © collaboratori di <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a>, licenza ODbL. Le salite per i tempi a piedi vengono dal modello del terreno Copernicus; gli orari dei bus dai dati aperti dell'ANM. Font Barlow, Archivo e IBM Plex Mono, licenza SIL Open Font License (<a href="/fonts/LICENSE-Barlow.txt">testo</a>, <a href="/fonts/LICENSE-Archivo.txt">testo</a>, <a href="/fonts/LICENSE-IBM-Plex-Mono.txt">testo</a>).</p>
+      <p>Mappe disegnate da noi (si spostano e si ingrandiscono, funzionano senza rete) con dati © collaboratori di <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a>, licenza ODbL. Le salite per i tempi a piedi vengono dal modello del terreno Copernicus; gli orari dei bus dai dati aperti dell'ANM. Font Barlow, Archivo, IBM Plex Mono e Bodoni Moda, licenza SIL Open Font License (<a href="/fonts/LICENSE-Barlow.txt">Barlow</a>, <a href="/fonts/LICENSE-Archivo.txt">Archivo</a>, <a href="/fonts/LICENSE-IBM-Plex-Mono.txt">IBM Plex Mono</a>, <a href="/fonts/LICENSE-Bodoni-Moda.txt">Bodoni Moda</a>).</p>
       <h2>Contatti</h2>
       <p>Titolare del sito: <strong>{t.nome || '[da completare]'}</strong> · {t.email || '[email da completare]'}.</p>
     </div>

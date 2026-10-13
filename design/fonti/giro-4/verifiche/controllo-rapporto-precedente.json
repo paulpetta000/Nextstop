@@ -1,0 +1,14 @@
+{
+  "path": "design/fonti/giro-1/verifiche/lighthouse-b-dark.json",
+  "headSha256": "1f2c16753aef1aa5beb25e1ed32068e2c8a4cccbaead7263626347df8d3cb0e0",
+  "currentSha256": "e377d6dfb181d2f7969cd82a7fc12fcf30e59e8fc7dfea489bedaff5c4c4f512",
+  "normalizedSha256": "e377d6dfb181d2f7969cd82a7fc12fcf30e59e8fc7dfea489bedaff5c4c4f512",
+  "modifiedAt": "2026-10-12T13:03:41.936Z",
+  "changedFields": [
+    {
+      "path": "audits.definition-list.title",
+      "before": "`<dl>`'s contain only properly-ordered `<dt>` and `<dd>` groups, `<script>`, `<template>` or `<div>` elements.",
+      "after": "`<dl>`'s contain only properly-ordered `<dt>` and `<dd>` groups, `<script>`, `<tem`late>` or `<div>` elements."
+    }
+  ]
+}

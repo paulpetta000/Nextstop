@@ -1,0 +1,110 @@
+[
+  {
+    "theme": "light",
+    "width": 390,
+    "reduced": "reduce",
+    "stable": true,
+    "animations": [],
+    "visible": [
+      "lc-nennella",
+      "lc-nennella-domande",
+      "gri-pasta-patate-2024"
+    ]
+  },
+  {
+    "theme": "light",
+    "width": 390,
+    "reduced": "no-preference",
+    "stable": true,
+    "animations": [
+      "fonti-conteggio",
+      "fonti-risultati"
+    ],
+    "visible": [
+      "lc-nennella",
+      "lc-nennella-domande",
+      "gri-pasta-patate-2024"
+    ]
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "reduced": "reduce",
+    "stable": true,
+    "animations": [],
+    "visible": [
+      "lc-nennella",
+      "lc-nennella-domande",
+      "gri-pasta-patate-2024"
+    ]
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "reduced": "no-preference",
+    "stable": true,
+    "animations": [
+      "fonti-conteggio",
+      "fonti-risultati"
+    ],
+    "visible": [
+      "lc-nennella",
+      "lc-nennella-domande",
+      "gri-pasta-patate-2024"
+    ]
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "reduced": "reduce",
+    "stable": true,
+    "animations": [],
+    "visible": [
+      "lc-nennella",
+      "lc-nennella-domande",
+      "gri-pasta-patate-2024"
+    ]
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "reduced": "no-preference",
+    "stable": true,
+    "animations": [
+      "fonti-conteggio",
+      "fonti-risultati"
+    ],
+    "visible": [
+      "lc-nennella",
+      "lc-nennella-domande",
+      "gri-pasta-patate-2024"
+    ]
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "reduced": "reduce",
+    "stable": true,
+    "animations": [],
+    "visible": [
+      "lc-nennella",
+      "lc-nennella-domande",
+      "gri-pasta-patate-2024"
+    ]
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "reduced": "no-preference",
+    "stable": true,
+    "animations": [
+      "fonti-conteggio",
+      "fonti-risultati"
+    ],
+    "visible": [
+      "lc-nennella",
+      "lc-nennella-domande",
+      "gri-pasta-patate-2024"
+    ]
+  }
+]

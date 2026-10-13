@@ -1,0 +1,42 @@
+[
+  {
+    "key": "d",
+    "theme": "light",
+    "performance": 97,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1733.5196,
+    "cls": 0.03350093097782127,
+    "warnings": []
+  },
+  {
+    "key": "d",
+    "theme": "dark",
+    "performance": 97,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 1731.1841,
+    "cls": 0,
+    "warnings": []
+  },
+  {
+    "key": "d-lungo",
+    "theme": "light",
+    "performance": 95,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2258.3516604358406,
+    "cls": 0.03354373120660971,
+    "warnings": []
+  },
+  {
+    "key": "d-lungo",
+    "theme": "dark",
+    "performance": 90,
+    "accessibility": 100,
+    "bestPractices": 100,
+    "lcp": 2334.0518546372946,
+    "cls": 0,
+    "warnings": []
+  }
+]

@@ -1,0 +1,5234 @@
+{
+  "scope": [
+    "a",
+    "c",
+    "d"
+  ],
+  "rows": [
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "searchTop": 1406,
+      "registerTop": 1009,
+      "firstSourceTop": 1792,
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 36,
+        "open": true,
+        "topicHeight": 659,
+        "groups": []
+      }
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "searchTop": 1406,
+      "registerTop": 1009,
+      "firstSourceTop": 1792,
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 36,
+        "open": true,
+        "topicHeight": 659,
+        "groups": []
+      }
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "searchTop": 1075,
+      "registerTop": 871,
+      "firstSourceTop": 1407,
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 35,
+        "open": true,
+        "topicHeight": 646,
+        "groups": []
+      }
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "searchTop": 1075,
+      "registerTop": 871,
+      "firstSourceTop": 1407,
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 36,
+        "open": true,
+        "topicHeight": 646,
+        "groups": []
+      }
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "searchTop": 1379,
+      "registerTop": 1009,
+      "firstSourceTop": null,
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 48,
+        "open": true,
+        "topicHeight": 18694,
+        "groups": []
+      }
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "searchTop": 1379,
+      "registerTop": 1009,
+      "firstSourceTop": null,
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 43,
+        "open": true,
+        "topicHeight": 18694,
+        "groups": []
+      }
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "searchTop": 1049,
+      "registerTop": 871,
+      "firstSourceTop": null,
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 42,
+        "open": true,
+        "topicHeight": 18459,
+        "groups": []
+      }
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "searchTop": 1049,
+      "registerTop": 871,
+      "firstSourceTop": null,
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 45,
+        "open": true,
+        "topicHeight": 18459,
+        "groups": []
+      }
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "searchTop": 1455,
+      "registerTop": 1058,
+      "firstSourceTop": 1859,
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 36,
+        "open": true,
+        "topicHeight": 676,
+        "groups": []
+      }
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "searchTop": 1455,
+      "registerTop": 1058,
+      "firstSourceTop": 1859,
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 36,
+        "open": true,
+        "topicHeight": 676,
+        "groups": []
+      }
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "searchTop": 1043,
+      "registerTop": 839,
+      "firstSourceTop": 1396,
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 36,
+        "open": true,
+        "topicHeight": 667,
+        "groups": []
+      }
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "searchTop": 1043,
+      "registerTop": 839,
+      "firstSourceTop": 1396,
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 36,
+        "open": true,
+        "topicHeight": 667,
+        "groups": []
+      }
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "searchTop": 1429,
+      "registerTop": 1058,
+      "firstSourceTop": null,
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 39,
+        "open": true,
+        "topicHeight": 18710,
+        "groups": []
+      }
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "searchTop": 1429,
+      "registerTop": 1058,
+      "firstSourceTop": null,
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 36,
+        "open": true,
+        "topicHeight": 18710,
+        "groups": []
+      }
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "searchTop": 1017,
+      "registerTop": 839,
+      "firstSourceTop": null,
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 42,
+        "open": true,
+        "topicHeight": 18480,
+        "groups": []
+      }
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "searchTop": 1017,
+      "registerTop": 839,
+      "firstSourceTop": null,
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 39,
+        "open": true,
+        "topicHeight": 18480,
+        "groups": []
+      }
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "searchTop": 1399,
+      "registerTop": 1034,
+      "firstSourceTop": 1821,
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 36,
+        "open": true,
+        "topicHeight": 696,
+        "groups": [
+          {
+            "title": "Catacombe di San Gennaro",
+            "count": 1,
+            "height": 201
+          },
+          {
+            "title": "Palazzo Donn’Anna",
+            "count": 1,
+            "height": 288
+          }
+        ]
+      }
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "searchTop": 1399,
+      "registerTop": 1034,
+      "firstSourceTop": 1821,
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 35,
+        "open": true,
+        "topicHeight": 696,
+        "groups": [
+          {
+            "title": "Catacombe di San Gennaro",
+            "count": 1,
+            "height": 201
+          },
+          {
+            "title": "Palazzo Donn’Anna",
+            "count": 1,
+            "height": 288
+          }
+        ]
+      }
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "searchTop": 1098,
+      "registerTop": 847,
+      "firstSourceTop": 1455,
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 36,
+        "open": true,
+        "topicHeight": 447,
+        "groups": [
+          {
+            "title": "Catacombe di San Gennaro",
+            "count": 1,
+            "height": 201
+          },
+          {
+            "title": "Palazzo Donn’Anna",
+            "count": 1,
+            "height": 267
+          }
+        ]
+      }
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "searchTop": 1098,
+      "registerTop": 847,
+      "firstSourceTop": 1455,
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 35,
+        "open": true,
+        "topicHeight": 447,
+        "groups": [
+          {
+            "title": "Catacombe di San Gennaro",
+            "count": 1,
+            "height": 201
+          },
+          {
+            "title": "Palazzo Donn’Anna",
+            "count": 1,
+            "height": 267
+          }
+        ]
+      }
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "searchTop": 1373,
+      "registerTop": 1034,
+      "firstSourceTop": null,
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 41,
+        "open": true,
+        "topicHeight": 19476,
+        "groups": [
+          {
+            "title": "Catacombe di San Gennaro",
+            "count": 2,
+            "height": 325
+          },
+          {
+            "title": "Sorrento",
+            "count": 3,
+            "height": 729
+          },
+          {
+            "title": "Fonti condivise",
+            "count": 10,
+            "height": 2068
+          },
+          {
+            "title": "Acquario e museo Darwin-Dohrn",
+            "count": 2,
+            "height": 321
+          },
+          {
+            "title": "Borgo Marinari e Castel dell'Ovo",
+            "count": 2,
+            "height": 372
+          },
+          {
+            "title": "Cappella Sansevero",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Capri",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Castel Nuovo (Maschio Angioino)",
+            "count": 1,
+            "height": 222
+          },
+          {
+            "title": "Castel Sant'Elmo",
+            "count": 1,
+            "height": 202
+          },
+          {
+            "title": "Certosa e Museo di San Martino",
+            "count": 1,
+            "height": 222
+          },
+          {
+            "title": "Cimitero delle Fontanelle",
+            "count": 2,
+            "height": 326
+          },
+          {
+            "title": "Città della Scienza",
+            "count": 4,
+            "height": 542
+          },
+          {
+            "title": "Duomo e Tesoro di San Gennaro",
+            "count": 3,
+            "height": 497
+          },
+          {
+            "title": "Ercolano",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Galleria Borbonica",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Girolamini, chiesa, museo e biblioteca",
+            "count": 1,
+            "height": 218
+          },
+          {
+            "title": "I tetti del Duomo",
+            "count": 2,
+            "height": 432
+          },
+          {
+            "title": "Il belvedere di Sant'Antonio a Posillipo",
+            "count": 1,
+            "height": 196
+          },
+          {
+            "title": "Il lungomare: via Partenope, via Caracciolo e Villa Comunale",
+            "count": 1,
+            "height": 250
+          },
+          {
+            "title": "Il parco della Mostra d'Oltremare",
+            "count": 1,
+            "height": 269
+          },
+          {
+            "title": "Ischia",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "La Pedamentina, da San Martino in discesa",
+            "count": 1,
+            "height": 203
+          },
+          {
+            "title": "Marechiaro",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Monte Echia, il belvedere di Pizzofalcone",
+            "count": 2,
+            "height": 353
+          },
+          {
+            "title": "Museo Archeologico Nazionale",
+            "count": 2,
+            "height": 353
+          },
+          {
+            "title": "Museo e Real Bosco di Capodimonte",
+            "count": 2,
+            "height": 321
+          },
+          {
+            "title": "Museo ferroviario di Pietrarsa",
+            "count": 3,
+            "height": 510
+          },
+          {
+            "title": "Museo Filangieri",
+            "count": 1,
+            "height": 227
+          },
+          {
+            "title": "Museo Madre",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Napoli Sotterranea",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Orto Botanico",
+            "count": 1,
+            "height": 191
+          },
+          {
+            "title": "Palazzo Donn'Anna, da fuori",
+            "count": 1,
+            "height": 218
+          },
+          {
+            "title": "Palazzo Reale",
+            "count": 2,
+            "height": 377
+          },
+          {
+            "title": "Parco dei Ventaglieri",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Parco delle Tombe di Virgilio e Leopardi",
+            "count": 3,
+            "height": 613
+          },
+          {
+            "title": "Parco sommerso della Gaiola",
+            "count": 2,
+            "height": 364
+          },
+          {
+            "title": "Parco Virgiliano",
+            "count": 2,
+            "height": 352
+          },
+          {
+            "title": "Piazza del Plebiscito e Galleria Umberto I",
+            "count": 1,
+            "height": 196
+          },
+          {
+            "title": "Pio Monte della Misericordia",
+            "count": 2,
+            "height": 321
+          },
+          {
+            "title": "Pompei",
+            "count": 3,
+            "height": 476
+          },
+          {
+            "title": "Purgatorio ad Arco, chiesa e ipogeo",
+            "count": 1,
+            "height": 218
+          },
+          {
+            "title": "Reggia di Caserta",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Rione Sanità e Basilica della Sanità",
+            "count": 2,
+            "height": 328
+          },
+          {
+            "title": "San Domenico Maggiore e le arche aragonesi",
+            "count": 2,
+            "height": 364
+          },
+          {
+            "title": "San Giovanni a Carbonara",
+            "count": 1,
+            "height": 242
+          },
+          {
+            "title": "San Lorenzo Maggiore e gli scavi",
+            "count": 1,
+            "height": 218
+          },
+          {
+            "title": "Santa Chiara e il chiostro maiolicato",
+            "count": 2,
+            "height": 394
+          },
+          {
+            "title": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+            "count": 2,
+            "height": 424
+          },
+          {
+            "title": "Teatro di San Carlo",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Vesuvio, il Gran Cono",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+            "count": 1,
+            "height": 224
+          },
+          {
+            "title": "Villa Floridiana e il museo della ceramica",
+            "count": 1,
+            "height": 229
+          },
+          {
+            "title": "Villa Pignatelli, museo e giardino",
+            "count": 1,
+            "height": 225
+          }
+        ]
+      }
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "searchTop": 1373,
+      "registerTop": 1034,
+      "firstSourceTop": null,
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 40,
+        "open": true,
+        "topicHeight": 19476,
+        "groups": [
+          {
+            "title": "Catacombe di San Gennaro",
+            "count": 2,
+            "height": 325
+          },
+          {
+            "title": "Sorrento",
+            "count": 3,
+            "height": 729
+          },
+          {
+            "title": "Fonti condivise",
+            "count": 10,
+            "height": 2068
+          },
+          {
+            "title": "Acquario e museo Darwin-Dohrn",
+            "count": 2,
+            "height": 321
+          },
+          {
+            "title": "Borgo Marinari e Castel dell'Ovo",
+            "count": 2,
+            "height": 372
+          },
+          {
+            "title": "Cappella Sansevero",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Capri",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Castel Nuovo (Maschio Angioino)",
+            "count": 1,
+            "height": 222
+          },
+          {
+            "title": "Castel Sant'Elmo",
+            "count": 1,
+            "height": 202
+          },
+          {
+            "title": "Certosa e Museo di San Martino",
+            "count": 1,
+            "height": 222
+          },
+          {
+            "title": "Cimitero delle Fontanelle",
+            "count": 2,
+            "height": 326
+          },
+          {
+            "title": "Città della Scienza",
+            "count": 4,
+            "height": 542
+          },
+          {
+            "title": "Duomo e Tesoro di San Gennaro",
+            "count": 3,
+            "height": 497
+          },
+          {
+            "title": "Ercolano",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Galleria Borbonica",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Girolamini, chiesa, museo e biblioteca",
+            "count": 1,
+            "height": 218
+          },
+          {
+            "title": "I tetti del Duomo",
+            "count": 2,
+            "height": 432
+          },
+          {
+            "title": "Il belvedere di Sant'Antonio a Posillipo",
+            "count": 1,
+            "height": 196
+          },
+          {
+            "title": "Il lungomare: via Partenope, via Caracciolo e Villa Comunale",
+            "count": 1,
+            "height": 250
+          },
+          {
+            "title": "Il parco della Mostra d'Oltremare",
+            "count": 1,
+            "height": 269
+          },
+          {
+            "title": "Ischia",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "La Pedamentina, da San Martino in discesa",
+            "count": 1,
+            "height": 203
+          },
+          {
+            "title": "Marechiaro",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Monte Echia, il belvedere di Pizzofalcone",
+            "count": 2,
+            "height": 353
+          },
+          {
+            "title": "Museo Archeologico Nazionale",
+            "count": 2,
+            "height": 353
+          },
+          {
+            "title": "Museo e Real Bosco di Capodimonte",
+            "count": 2,
+            "height": 321
+          },
+          {
+            "title": "Museo ferroviario di Pietrarsa",
+            "count": 3,
+            "height": 510
+          },
+          {
+            "title": "Museo Filangieri",
+            "count": 1,
+            "height": 227
+          },
+          {
+            "title": "Museo Madre",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Napoli Sotterranea",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Orto Botanico",
+            "count": 1,
+            "height": 191
+          },
+          {
+            "title": "Palazzo Donn'Anna, da fuori",
+            "count": 1,
+            "height": 218
+          },
+          {
+            "title": "Palazzo Reale",
+            "count": 2,
+            "height": 377
+          },
+          {
+            "title": "Parco dei Ventaglieri",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Parco delle Tombe di Virgilio e Leopardi",
+            "count": 3,
+            "height": 613
+          },
+          {
+            "title": "Parco sommerso della Gaiola",
+            "count": 2,
+            "height": 364
+          },
+          {
+            "title": "Parco Virgiliano",
+            "count": 2,
+            "height": 352
+          },
+          {
+            "title": "Piazza del Plebiscito e Galleria Umberto I",
+            "count": 1,
+            "height": 196
+          },
+          {
+            "title": "Pio Monte della Misericordia",
+            "count": 2,
+            "height": 321
+          },
+          {
+            "title": "Pompei",
+            "count": 3,
+            "height": 476
+          },
+          {
+            "title": "Purgatorio ad Arco, chiesa e ipogeo",
+            "count": 1,
+            "height": 218
+          },
+          {
+            "title": "Reggia di Caserta",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Rione Sanità e Basilica della Sanità",
+            "count": 2,
+            "height": 328
+          },
+          {
+            "title": "San Domenico Maggiore e le arche aragonesi",
+            "count": 2,
+            "height": 364
+          },
+          {
+            "title": "San Giovanni a Carbonara",
+            "count": 1,
+            "height": 242
+          },
+          {
+            "title": "San Lorenzo Maggiore e gli scavi",
+            "count": 1,
+            "height": 218
+          },
+          {
+            "title": "Santa Chiara e il chiostro maiolicato",
+            "count": 2,
+            "height": 394
+          },
+          {
+            "title": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+            "count": 2,
+            "height": 424
+          },
+          {
+            "title": "Teatro di San Carlo",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Vesuvio, il Gran Cono",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+            "count": 1,
+            "height": 224
+          },
+          {
+            "title": "Villa Floridiana e il museo della ceramica",
+            "count": 1,
+            "height": 229
+          },
+          {
+            "title": "Villa Pignatelli, museo e giardino",
+            "count": 1,
+            "height": 225
+          }
+        ]
+      }
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "searchTop": 1071,
+      "registerTop": 847,
+      "firstSourceTop": null,
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 43,
+        "open": true,
+        "topicHeight": 11200,
+        "groups": [
+          {
+            "title": "Catacombe di San Gennaro",
+            "count": 2,
+            "height": 325
+          },
+          {
+            "title": "Sorrento",
+            "count": 3,
+            "height": 601
+          },
+          {
+            "title": "Fonti condivise",
+            "count": 10,
+            "height": 1900
+          },
+          {
+            "title": "Acquario e museo Darwin-Dohrn",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Borgo Marinari e Castel dell'Ovo",
+            "count": 2,
+            "height": 345
+          },
+          {
+            "title": "Cappella Sansevero",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Capri",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Castel Nuovo (Maschio Angioino)",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Castel Sant'Elmo",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Certosa e Museo di San Martino",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Cimitero delle Fontanelle",
+            "count": 2,
+            "height": 319
+          },
+          {
+            "title": "Città della Scienza",
+            "count": 4,
+            "height": 542
+          },
+          {
+            "title": "Duomo e Tesoro di San Gennaro",
+            "count": 3,
+            "height": 447
+          },
+          {
+            "title": "Ercolano",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Galleria Borbonica",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Girolamini, chiesa, museo e biblioteca",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "I tetti del Duomo",
+            "count": 2,
+            "height": 377
+          },
+          {
+            "title": "Il belvedere di Sant'Antonio a Posillipo",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Il lungomare: via Partenope, via Caracciolo e Villa Comunale",
+            "count": 1,
+            "height": 222
+          },
+          {
+            "title": "Il parco della Mostra d'Oltremare",
+            "count": 1,
+            "height": 220
+          },
+          {
+            "title": "Ischia",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "La Pedamentina, da San Martino in discesa",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Marechiaro",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Monte Echia, il belvedere di Pizzofalcone",
+            "count": 2,
+            "height": 319
+          },
+          {
+            "title": "Museo Archeologico Nazionale",
+            "count": 2,
+            "height": 319
+          },
+          {
+            "title": "Museo e Real Bosco di Capodimonte",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Museo ferroviario di Pietrarsa",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Museo Filangieri",
+            "count": 1,
+            "height": 199
+          },
+          {
+            "title": "Museo Madre",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Napoli Sotterranea",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Orto Botanico",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Palazzo Donn'Anna, da fuori",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Palazzo Reale",
+            "count": 2,
+            "height": 326
+          },
+          {
+            "title": "Parco dei Ventaglieri",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Parco delle Tombe di Virgilio e Leopardi",
+            "count": 3,
+            "height": 513
+          },
+          {
+            "title": "Parco sommerso della Gaiola",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Parco Virgiliano",
+            "count": 2,
+            "height": 345
+          },
+          {
+            "title": "Piazza del Plebiscito e Galleria Umberto I",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Pio Monte della Misericordia",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Pompei",
+            "count": 3,
+            "height": 450
+          },
+          {
+            "title": "Purgatorio ad Arco, chiesa e ipogeo",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Reggia di Caserta",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Rione Sanità e Basilica della Sanità",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "San Domenico Maggiore e le arche aragonesi",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "San Giovanni a Carbonara",
+            "count": 1,
+            "height": 220
+          },
+          {
+            "title": "San Lorenzo Maggiore e gli scavi",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Santa Chiara e il chiostro maiolicato",
+            "count": 2,
+            "height": 345
+          },
+          {
+            "title": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+            "count": 2,
+            "height": 380
+          },
+          {
+            "title": "Teatro di San Carlo",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Vesuvio, il Gran Cono",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+            "count": 1,
+            "height": 196
+          },
+          {
+            "title": "Villa Floridiana e il museo della ceramica",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Villa Pignatelli, museo e giardino",
+            "count": 1,
+            "height": 169
+          }
+        ]
+      }
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "searchTop": 1071,
+      "registerTop": 847,
+      "firstSourceTop": null,
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ],
+      "noteLink": "http://127.0.0.1:4347/note-legali/",
+      "mail": "mailto:napoliavela.guida@gmail.com",
+      "overflow": false,
+      "expansion": {
+        "milliseconds": 40,
+        "open": true,
+        "topicHeight": 11200,
+        "groups": [
+          {
+            "title": "Catacombe di San Gennaro",
+            "count": 2,
+            "height": 325
+          },
+          {
+            "title": "Sorrento",
+            "count": 3,
+            "height": 601
+          },
+          {
+            "title": "Fonti condivise",
+            "count": 10,
+            "height": 1900
+          },
+          {
+            "title": "Acquario e museo Darwin-Dohrn",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Borgo Marinari e Castel dell'Ovo",
+            "count": 2,
+            "height": 345
+          },
+          {
+            "title": "Cappella Sansevero",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Capri",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Castel Nuovo (Maschio Angioino)",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Castel Sant'Elmo",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Certosa e Museo di San Martino",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Cimitero delle Fontanelle",
+            "count": 2,
+            "height": 319
+          },
+          {
+            "title": "Città della Scienza",
+            "count": 4,
+            "height": 542
+          },
+          {
+            "title": "Duomo e Tesoro di San Gennaro",
+            "count": 3,
+            "height": 447
+          },
+          {
+            "title": "Ercolano",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Galleria Borbonica",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Girolamini, chiesa, museo e biblioteca",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "I tetti del Duomo",
+            "count": 2,
+            "height": 377
+          },
+          {
+            "title": "Il belvedere di Sant'Antonio a Posillipo",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Il lungomare: via Partenope, via Caracciolo e Villa Comunale",
+            "count": 1,
+            "height": 222
+          },
+          {
+            "title": "Il parco della Mostra d'Oltremare",
+            "count": 1,
+            "height": 220
+          },
+          {
+            "title": "Ischia",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "La Pedamentina, da San Martino in discesa",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Marechiaro",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Monte Echia, il belvedere di Pizzofalcone",
+            "count": 2,
+            "height": 319
+          },
+          {
+            "title": "Museo Archeologico Nazionale",
+            "count": 2,
+            "height": 319
+          },
+          {
+            "title": "Museo e Real Bosco di Capodimonte",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Museo ferroviario di Pietrarsa",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Museo Filangieri",
+            "count": 1,
+            "height": 199
+          },
+          {
+            "title": "Museo Madre",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Napoli Sotterranea",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Orto Botanico",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Palazzo Donn'Anna, da fuori",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Palazzo Reale",
+            "count": 2,
+            "height": 326
+          },
+          {
+            "title": "Parco dei Ventaglieri",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Parco delle Tombe di Virgilio e Leopardi",
+            "count": 3,
+            "height": 513
+          },
+          {
+            "title": "Parco sommerso della Gaiola",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Parco Virgiliano",
+            "count": 2,
+            "height": 345
+          },
+          {
+            "title": "Piazza del Plebiscito e Galleria Umberto I",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Pio Monte della Misericordia",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Pompei",
+            "count": 3,
+            "height": 450
+          },
+          {
+            "title": "Purgatorio ad Arco, chiesa e ipogeo",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Reggia di Caserta",
+            "count": 3,
+            "height": 418
+          },
+          {
+            "title": "Rione Sanità e Basilica della Sanità",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "San Domenico Maggiore e le arche aragonesi",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "San Giovanni a Carbonara",
+            "count": 1,
+            "height": 220
+          },
+          {
+            "title": "San Lorenzo Maggiore e gli scavi",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Santa Chiara e il chiostro maiolicato",
+            "count": 2,
+            "height": 345
+          },
+          {
+            "title": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+            "count": 2,
+            "height": 380
+          },
+          {
+            "title": "Teatro di San Carlo",
+            "count": 1,
+            "height": 169
+          },
+          {
+            "title": "Vesuvio, il Gran Cono",
+            "count": 2,
+            "height": 293
+          },
+          {
+            "title": "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+            "count": 1,
+            "height": 196
+          },
+          {
+            "title": "Villa Floridiana e il museo della ceramica",
+            "count": 1,
+            "height": 195
+          },
+          {
+            "title": "Villa Pignatelli, museo e giardino",
+            "count": 1,
+            "height": 169
+          }
+        ]
+      }
+    }
+  ],
+  "scenarios": [
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "reset",
+      "opened": [
+        "argomento-visite",
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [
+        "argomento-visite"
+      ],
+      "visibleDocuments": 2
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "theme": "light",
+      "kind": "short-viewport",
+      "railHeight": 94.6875,
+      "railTop": 0,
+      "linkTop": 24.375,
+      "linkBottom": 75.375,
+      "viewport": 420,
+      "focus": {
+        "className": "source-link",
+        "top": 24.375,
+        "bottom": 75.375,
+        "railBottom": 94.6875,
+        "entirelyCovered": true
+      }
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "reset",
+      "opened": [
+        "argomento-visite",
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [
+        "argomento-visite"
+      ],
+      "visibleDocuments": 2
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "theme": "dark",
+      "kind": "short-viewport",
+      "railHeight": 94.6875,
+      "railTop": 0,
+      "linkTop": 24.375,
+      "linkBottom": 75.375,
+      "viewport": 420,
+      "focus": {
+        "className": "source-link",
+        "top": 24.375,
+        "bottom": 75.375,
+        "railBottom": 94.6875,
+        "entirelyCovered": true
+      }
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "reset",
+      "opened": [
+        "argomento-visite",
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [
+        "argomento-visite"
+      ],
+      "visibleDocuments": 2
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "reset",
+      "opened": [
+        "argomento-visite",
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [
+        "argomento-visite"
+      ],
+      "visibleDocuments": 2
+    },
+    {
+      "key": "a",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella-domande",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "reset",
+      "opened": [
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [],
+      "visibleDocuments": 0
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella-domande",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "reset",
+      "opened": [
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [],
+      "visibleDocuments": 0
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella-domande",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "reset",
+      "opened": [
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [],
+      "visibleDocuments": 0
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella-domande",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "reset",
+      "opened": [
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [],
+      "visibleDocuments": 0
+    },
+    {
+      "key": "a",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "reset",
+      "opened": [
+        "argomento-visite",
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [
+        "argomento-visite"
+      ],
+      "visibleDocuments": 2
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "theme": "light",
+      "kind": "short-viewport",
+      "railHeight": 94.6875,
+      "railTop": 0,
+      "linkTop": 23.828125,
+      "linkBottom": 74.828125,
+      "viewport": 420,
+      "focus": {
+        "className": "source-link",
+        "top": 23.828125,
+        "bottom": 74.828125,
+        "railBottom": 94.6875,
+        "entirelyCovered": true
+      }
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "reset",
+      "opened": [
+        "argomento-visite",
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [
+        "argomento-visite"
+      ],
+      "visibleDocuments": 2
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "theme": "dark",
+      "kind": "short-viewport",
+      "railHeight": 94.6875,
+      "railTop": 0,
+      "linkTop": 23.828125,
+      "linkBottom": 74.828125,
+      "viewport": 420,
+      "focus": {
+        "className": "source-link",
+        "top": 23.828125,
+        "bottom": 74.828125,
+        "railBottom": 94.6875,
+        "entirelyCovered": true
+      }
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "reset",
+      "opened": [
+        "argomento-visite",
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [
+        "argomento-visite"
+      ],
+      "visibleDocuments": 2
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "reset",
+      "opened": [
+        "argomento-visite",
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [
+        "argomento-visite"
+      ],
+      "visibleDocuments": 2
+    },
+    {
+      "key": "c",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella-domande",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "reset",
+      "opened": [
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [],
+      "visibleDocuments": 0
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella-domande",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "reset",
+      "opened": [
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [],
+      "visibleDocuments": 0
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella-domande",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "reset",
+      "opened": [
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [],
+      "visibleDocuments": 0
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella-domande",
+          "context": "Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "reset",
+      "opened": [
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [],
+      "visibleDocuments": 0
+    },
+    {
+      "key": "c",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "reset",
+      "opened": [
+        "argomento-visite",
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [
+        "argomento-visite"
+      ],
+      "visibleDocuments": 2
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "light",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "theme": "light",
+      "kind": "short-viewport",
+      "railHeight": 94.6875,
+      "railTop": 0,
+      "linkTop": 23.5,
+      "linkBottom": 74.5,
+      "viewport": 420,
+      "focus": {
+        "className": "source-link",
+        "top": 23.5,
+        "bottom": 74.5,
+        "railBottom": 94.6875,
+        "entirelyCovered": true
+      }
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "reset",
+      "opened": [
+        "argomento-visite",
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [
+        "argomento-visite"
+      ],
+      "visibleDocuments": 2
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 390,
+      "theme": "dark",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "theme": "dark",
+      "kind": "short-viewport",
+      "railHeight": 94.6875,
+      "railTop": 0,
+      "linkTop": 23.5,
+      "linkBottom": 74.5,
+      "viewport": 420,
+      "focus": {
+        "className": "source-link",
+        "top": 23.5,
+        "bottom": 74.5,
+        "railBottom": 94.6875,
+        "entirelyCovered": true
+      }
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "reset",
+      "opened": [
+        "argomento-visite",
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [
+        "argomento-visite"
+      ],
+      "visibleDocuments": 2
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "light",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "reset",
+      "opened": [
+        "argomento-visite",
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [
+        "argomento-visite"
+      ],
+      "visibleDocuments": 2
+    },
+    {
+      "key": "d",
+      "long": false,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite2 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina7 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti3 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella",
+          "context": "",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella-domande",
+          "context": "",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "reset",
+      "opened": [
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [],
+      "visibleDocuments": 0
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "light",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella",
+          "context": "",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella-domande",
+          "context": "",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "reset",
+      "opened": [
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [],
+      "visibleDocuments": 0
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 390,
+      "theme": "dark",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella",
+          "context": "",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella-domande",
+          "context": "",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "reset",
+      "opened": [
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [],
+      "visibleDocuments": 0
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "light",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(236, 234, 228)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "trasporti",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "storia e cultura",
+      "result": []
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "mappe e dati",
+      "result": [
+        {
+          "id": "osm",
+          "context": "Città della Scienza / Il belvedere di Sant'Antonio a Posillipo / Il belvedere di via Petrarca / Il lungomare: via Partenope, via Caracciolo e Villa Comunale / La Pedamentina, da San Martino in discesa / Marechiaro / Monte Echia, il belvedere di Pizzofalcone / Piazza del Plebiscito e Galleria Umberto I / Spaccanapoli, Gesù Nuovo e San Gregorio Armeno / Via dei Tribunali: pizza e cibo di strada / Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+          "topic": "argomento-mappe"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "Trattoria da Nennella / La Locanda Gesù Vecchio",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella",
+          "context": "",
+          "topic": "argomento-cucina"
+        },
+        {
+          "id": "lc-nennella-domande",
+          "context": "",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "query",
+      "term": "pasta e patate nennella",
+      "result": [
+        {
+          "id": "gri-pasta-patate-2024",
+          "context": "La Locanda Gesù Vecchio / Trattoria da Nennella",
+          "topic": "argomento-cucina"
+        }
+      ]
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "reset",
+      "opened": [
+        "argomento-cucina",
+        "argomento-trasporti"
+      ],
+      "afterReset": [],
+      "visibleDocuments": 0
+    },
+    {
+      "key": "d",
+      "long": true,
+      "width": 1280,
+      "theme": "dark",
+      "kind": "index",
+      "hash": "#argomento-mappe",
+      "nav": [
+        {
+          "name": "Luoghi e visite101 documenti",
+          "background": "rgb(25, 34, 58)",
+          "current": null
+        },
+        {
+          "name": "Locali e cucina69 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Trasporti10 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Mappe e dati1 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        },
+        {
+          "name": "Storia e cultura14 documenti",
+          "background": "rgba(0, 0, 0, 0)",
+          "current": null
+        }
+      ]
+    },
+    {
+      "key": "a",
+      "kind": "malformed-fragment",
+      "errors": [
+        "URI malformed\ndecodeURIComponent (<anonymous>)"
+      ]
+    }
+  ],
+  "credits": [
+    {
+      "url": "http://127.0.0.1:4347/note-legali/",
+      "title": "Note legali · Nextstop",
+      "oldProjectVisible": true,
+      "oldOccurrences": [
+        "lare del sito: Enrico Licenziati · napoliavela.guida@gmail.com."
+      ],
+      "photoHeading": "",
+      "photoCount": 54,
+      "photoHosts": [
+        "commons.wikimedia.org"
+      ],
+      "bodoniMention": false,
+      "oldProjectLinks": []
+    }
+  ],
+  "external": [],
+  "errors": [
+    "URI malformed\ndecodeURIComponent (<anonymous>)"
+  ],
+  "registry": {
+    "count": 195,
+    "withDescription": 10,
+    "withoutPlaces": 24,
+    "groups": {
+      "mappe": 1,
+      "visite": 101,
+      "trasporti": 10,
+      "cucina": 69,
+      "cultura": 14
+    },
+    "transportExamples": [
+      {
+        "id": "tp-eav-campania-express",
+        "title": "Orari e tariffe Campania Express (PDF)",
+        "category": "visite",
+        "places": [
+          "Ercolano",
+          "Pompei"
+        ]
+      },
+      {
+        "id": "tp-eav-campania-express-sospeso",
+        "title": "Campania Express",
+        "category": "visite",
+        "places": [
+          "Ercolano",
+          "Pompei",
+          "Sorrento"
+        ]
+      },
+      {
+        "id": "tp-eav-808",
+        "title": "Orario bus 808 Pompei–Vesuvio",
+        "category": "visite",
+        "places": [
+          "Vesuvio, il Gran Cono"
+        ]
+      },
+      {
+        "id": "tp-caremar-tariffe",
+        "title": "Tariffe",
+        "category": "visite",
+        "places": [
+          "Capri",
+          "Ischia",
+          "Procida"
+        ]
+      },
+      {
+        "id": "tp-caremar-partenze",
+        "title": "Prossime partenze",
+        "category": "visite",
+        "places": [
+          "Capri",
+          "Ischia",
+          "Procida"
+        ]
+      },
+      {
+        "id": "tp-caremar-orari",
+        "title": "Orari",
+        "category": "visite",
+        "places": [
+          "Capri",
+          "Ischia",
+          "Procida"
+        ]
+      },
+      {
+        "id": "tp-eav-teleindicatori",
+        "title": "Orario treni: partenze e arrivi di Montesanto e Bagnoli (Cumana)",
+        "category": "trasporti",
+        "places": []
+      },
+      {
+        "id": "tp-eav-l1-orario",
+        "title": "Orario ferrovia L1 Napoli–Sorrento, valido dal 1° ottobre 2026",
+        "category": "visite",
+        "places": [
+          "Sorrento"
+        ]
+      }
+    ]
+  }
+}

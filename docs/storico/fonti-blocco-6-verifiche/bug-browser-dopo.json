@@ -1,0 +1,110 @@
+[
+  {
+    "width": 390,
+    "hour": 10,
+    "state": "vuoto",
+    "errors": [],
+    "warning": false,
+    "emptyVisible": true,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 10:00 con l'ora del telefono"
+  },
+  {
+    "width": 390,
+    "hour": 10,
+    "state": "fatto",
+    "errors": [],
+    "warning": false,
+    "emptyVisible": false,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 10:00 con l'ora del telefono"
+  },
+  {
+    "width": 390,
+    "hour": 10,
+    "state": "da-fare",
+    "errors": [],
+    "warning": false,
+    "emptyVisible": false,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 10:00 con l'ora del telefono"
+  },
+  {
+    "width": 390,
+    "hour": 20,
+    "state": "vuoto",
+    "errors": [],
+    "warning": false,
+    "emptyVisible": true,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 20:00 con l'ora del telefono"
+  },
+  {
+    "width": 390,
+    "hour": 20,
+    "state": "fatto",
+    "errors": [],
+    "warning": false,
+    "emptyVisible": false,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 20:00 con l'ora del telefono"
+  },
+  {
+    "width": 390,
+    "hour": 20,
+    "state": "da-fare",
+    "errors": [],
+    "warning": true,
+    "emptyVisible": false,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 20:00 con l'ora del telefono"
+  },
+  {
+    "width": 1280,
+    "hour": 10,
+    "state": "vuoto",
+    "errors": [],
+    "warning": false,
+    "emptyVisible": true,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 10:00 con l'ora del telefono"
+  },
+  {
+    "width": 1280,
+    "hour": 10,
+    "state": "fatto",
+    "errors": [],
+    "warning": false,
+    "emptyVisible": false,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 10:00 con l'ora del telefono"
+  },
+  {
+    "width": 1280,
+    "hour": 10,
+    "state": "da-fare",
+    "errors": [],
+    "warning": false,
+    "emptyVisible": false,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 10:00 con l'ora del telefono"
+  },
+  {
+    "width": 1280,
+    "hour": 20,
+    "state": "vuoto",
+    "errors": [],
+    "warning": false,
+    "emptyVisible": true,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 20:00 con l'ora del telefono"
+  },
+  {
+    "width": 1280,
+    "hour": 20,
+    "state": "fatto",
+    "errors": [],
+    "warning": false,
+    "emptyVisible": false,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 20:00 con l'ora del telefono"
+  },
+  {
+    "width": 1280,
+    "hour": 20,
+    "state": "da-fare",
+    "errors": [],
+    "warning": true,
+    "emptyVisible": false,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 20:00 con l'ora del telefono"
+  }
+]
