@@ -37,7 +37,9 @@ Il compositore è la pagina `/napoli/itinerari/`. Deve far dire «wow, ci hanno 
 - Le parole chiave sono dati (`tappe.yaml`, `locali.yaml`): ognuna deve trovarsi nella scheda o nel menu del luogo (la build lo controlla, come per gli orari).
 - Si apre con un'animazione breve; i risultati entrano uno dopo l'altro (Fase 1, «Movimento»).
 
-**Piano delle parole chiave (13/10/2026, da approvare).** Due tipi di parole:
+**Piano delle parole chiave (13/10/2026). Rimandato da Enrico (13/10/2026)**: le parole chiave si scrivono quando si riscrivono i testi di tutte le tappe
+(Fase 3, racconti) e le pagine degli itinerari pronti (mezza giornata, uno, due, tre giorni: una spiegazione perfetta di cosa si farà).
+Fino ad allora la ricerca usa nomi, parole del sito e i testi di oggi. Due tipi di parole:
 - **Parole del sito** (regola nostra, come le fasce di prezzo): sinonimi dei generi, delle cucine e dei piatti che abbiamo già
   («belvedere, vista» → panorami; «pizzeria» → pizza; «sfogliatelle, riccia, frolla» → sfogliatella). Un file solo
   (`src/data/sinonimi.yaml`), uguale per ogni città; non dicono niente di un luogo, quindi non servono fonti.
@@ -49,7 +51,9 @@ Il compositore è la pagina `/napoli/itinerari/`. Deve far dire «wow, ci hanno 
   deve trovarsi in quei testi; se no la build si ferma («sansevero: "Cristo velato" non compare in nessuna scheda della tappa»).
   Test nuovi: il controllo, e la ricerca («cristo velato» → Sansevero per primo; «sfogliatela» → le pasticcerie; «gesu» → Gesù Nuovo;
   «panorama» → i panorami; una parola che non c'è → nessun risultato e la proposta «Togli i filtri»).
-- **Errori di battitura**: una lettera sbagliata, mancante, in più o scambiata con la vicina dalle 5 lettere in su, due dalle 9;
+- **Il nome della città** («Napoli», «napoletana») vale **solo nei nomi** (Napoli Sotterranea), non nei testi, nelle etichette o nelle zone:
+  chi scrive «Napoli» non cerca la Reggia di Caserta o tutti i locali (Enrico, 13/10/2026). Le parole della città arrivano dai dati della città.
+- **Errori di battitura**, solo se la parola scritta non c'è nei nostri testi («pizza» c'è, quindi non trova «piazza»): una lettera sbagliata, mancante, in più o scambiata con la vicina dalle 5 lettere in su, due dalle 9;
   scritto da noi in `src/lib/itinerari/` (niente pacchetti). Ordine: nome, poi parola del luogo, poi genere o piatto; a parità, il più vicino.
 - Sulla pagina il risultato dice perché è uscito («per: Cristo velato»): anche per questo ogni parola deve avere la fonte.
 
