@@ -159,25 +159,28 @@ Sanità non sa quanto ci mette ad arrivarci, e «C'è un ordine più corto» tie
 *Perché non basta migliorare l'ordine più corto*: senza sapere da dove parti non può scegliere la prima tappa né dire quando ci arrivi.
 
 **Cosa fa**
-- **È facoltativo** (Enrico, 13/10/2026): nessuno è obbligato a dire da dove parte o dove dorme. Senza partenza il compositore funziona
+- **È facoltativo** (Enrico, 13/10/2026): nessuno è obbligato a dire da dove parte. Senza partenza il compositore funziona
   come oggi (la giornata parte dalla prima tappa); la riga non blocca niente, non torna a chiedere e non compare come avviso.
   Si toglie con un tocco («Nessuna partenza»).
+- **La domanda è «Da dove parti?», mai «Dove dormi?»** (Enrico, 13/10/2026): il sito chiede un punto, non l'alloggio. Le parole della
+  pagina parlano di «punto di partenza»; l'hotel è solo uno dei modi per trovarlo.
 - In cima a ogni giorno la riga **«Da dove parti?»**, con tre modi:
-  1. **Il mio alloggio** (hotel, B&B, casa): si mette una volta e vale per tutti i giorni; un giorno si può cambiare (chi cambia hotel).
+  1. **Un punto tuo**: sulla mappa, da una via o dal nome di un hotel o B&B (può essere l'hotel, casa di amici, un bar…). Si mette una
+     volta e vale per tutti i giorni; un giorno si può cambiare.
   2. **Dove sono**: la posizione del telefono, solo dopo un tocco (come oggi sulla mappa). Vale per adesso e non si salva, a meno di
-     «Usalo come alloggio».
+     «Parti sempre da qui».
   3. **Un punto dall'elenco**: una tappa o un locale della città («parto dal Duomo»), o una stazione o un porto (sotto): tempi veri.
      Se è una tappa del giorno, diventa la prima.
 - **L'ordine migliore da lì**: scelto il punto, se un altro ordine fa risparmiare almeno 5 minuti si propone con la grafica del pezzo 2
-  («C'è un ordine più corto da Hotel …: 18 minuti in meno» → «Usa questo ordine», con «Annulla», oppure «Lascia così»). Niente cambia da
+  («C'è un ordine più corto da Piazza Bellini: 18 minuti in meno» → «Usa questo ordine», con «Annulla», oppure «Lascia così»). Niente cambia da
   solo. Rispetto a oggi: anche la prima tappa può cambiare (resta fermo il punto di partenza); evento e locali restano dove sono; **un
   ordine che fa trovare chiuso un luogo non si propone** (si prende il più corto senza avvisi nuovi di chiusura).
-- **Gli orari partono da lì**: l'ora d'inizio del giorno diventa l'ora in cui esci («Esci alle 9:30 da Hotel …, al Duomo alle 9:50»).
+- **Gli orari partono da lì**: l'ora d'inizio del giorno diventa l'ora in cui esci («Esci alle 9:30 da Piazza Bellini, al Duomo alle 9:50»).
 - **«Torno lì alla fine»** (spento di base): aggiunge il tratto di ritorno e l'ordine si calcola come un giro chiuso (chi torna in hotel
   prima di cena).
 
 **Tempi veri e tempi stimati**
-- Da un punto dell'elenco i tempi sono **veri** (gli stessi di oggi). Dall'alloggio e da «Dove sono» il primo tratto è **stimato**,
+- Da un punto dell'elenco i tempi sono **veri** (gli stessi di oggi). Da un punto tuo e da «Dove sono» il primo tratto è **stimato**,
   agganciandosi alle tappe vicine: per ogni tappa entro 800 m, linea d'aria × 20 minuti al km fino a lì, più il tempo vero da lì (metro e
   funicolari comprese). Misurato sui nostri dati (`ricerca/2026-10-13-stima-tempi-partenza.md`): con una tappa entro 250 m metà delle stime
   sbaglia di circa 1 minuto e 9 su 10 entro 7; tra 250 e 500 m, 3 e 11 minuti.
@@ -186,7 +189,7 @@ Sanità non sa quanto ci mette ad arrivarci, e «C'è un ordine più corto» tie
 - **Lontano dalle tappe**: tra 500 e 800 m dalla più vicina «stima incerta»; oltre 800 m niente minuti («Sei lontano dalle nostre tappe:
   il primo tratto non lo sappiamo stimare») e l'ordine parte dalla tappa più vicina al punto. Il ritorno di «Torno lì» è sempre stimato.
 
-**Trovare l'alloggio** (scelta di Enrico, 13/10/2026: tutto dal sito; ricerca `ricerca/2026-10-13-da-dove-parti.md`). Su OpenStreetMap (13/10/2026) nel Comune ci sono
+**Trovare un punto tuo** (scelta di Enrico, 13/10/2026: tutto dal sito; ricerca `ricerca/2026-10-13-da-dove-parti.md`). Su OpenStreetMap (13/10/2026) nel Comune ci sono
 **441 alloggi** (188 hotel, 213 B&B e affittacamere, 17 ostelli, 23 case vacanza), 428 con il nome: l'elenco pesa circa 6 KB compressi.
 Ma le strutture extralberghiere censite dal Comune sarebbero **6.168** (dato 2024 in una nota della Regione, da rileggere nel PDF): chi
 dorme in un B&B **di solito non trova il suo nome**. Quindi la mappa e la via sono la strada normale, non un ripiego. **Tutto dal sito,
@@ -200,7 +203,7 @@ nessun servizio esterno**:
 - Nessun link a siti di prenotazione e nessun giudizio sugli alloggi: l'elenco serve solo a trovare un punto.
 
 **Privacy**
-- L'alloggio è un dato personale: resta **solo sul telefono**, dentro l'itinerario, e **non va nel link condiviso**. Nel link va solo un
+- Il punto tuo è un dato personale (spesso è l'alloggio): resta **solo sul telefono**, dentro l'itinerario, e **non va nel link condiviso**. Nel link va solo un
   punto dell'elenco (una tappa non dice niente di chi lo manda). Chi riceve il link trova «Da dove parti?» vuoto.
 - «Dove sono» non lascia il telefono e non si salva (come oggi).
 
@@ -216,8 +219,8 @@ nessun servizio esterno**:
   dell'arrivo e per chi dorme vicino alla stazione.
 
 **Le 4 proposte** (dentro C e D, partendo da `design/compositore/ricerca-giro-2/`, con la stima vera): campo libero. Per esempio:
-1 · la riga di partenza come un biglietto in cima al giorno; 2 · la casetta sulla mappa che si trascina; 3 · la domanda prima della
-prima tappa, come primo passo; 4 · l'alloggio del viaggio nella barra dei giorni. In tutte: facoltativo e discreto, i tre modi, la proposta
+1 · la riga di partenza come un biglietto in cima al giorno; 2 · il segno della partenza sulla mappa, da trascinare; 3 · la domanda prima della
+prima tappa, come primo passo; 4 · la partenza del viaggio nella barra dei giorni. In tutte: facoltativo e discreto, i tre modi, la proposta
 dell'ordine, tempi veri e stimati diversi a colpo d'occhio, «Torno lì», tema scuro, «riduci movimento». Nelle prove le stazioni e i porti
 hanno tempi stimati (il ricalcolo dei tempi veri si fa nella costruzione).
 
@@ -248,15 +251,15 @@ hanno tempi stimati (il ricalcolo dei tempi veri si fa nella costruzione).
 - **Ricerca senza risultati**: proponiamo le tappe dello stesso genere e «Togli i filtri».
 - **Tema scuro** e **320 px**: nessuno scorrimento di lato, mappa compresa.
 - **Senza JavaScript**: il compositore non funziona (come oggi); la pagina lo dice e porta agli itinerari pronti e a «Dove mangiare».
-- **Alloggio fuori città** (Pozzuoli, Sorrento) o lontano dalle tappe: niente minuti per il primo tratto, ordine dalla tappa più vicina.
-- **Giorno di gita**: la gita ha la sua partenza; la riga mostra solo la stima dall'alloggio al punto da cui parte la gita, se è in città.
+- **Partenza fuori città** (Pozzuoli, Sorrento) o lontano dalle tappe: niente minuti per il primo tratto, ordine dalla tappa più vicina.
+- **Giorno di gita**: la gita ha la sua partenza; la riga mostra solo la stima dal punto di partenza al punto da cui parte la gita, se è in città.
 - **Giorno di oggi con «Dove sono»**: gli orari ripartono da adesso e da dove sei; le visitate restano in cima (come «oggi»).
-- **Posizione negata o imprecisa** (più di 100 m): lo diciamo e proponiamo l'alloggio o un punto dall'elenco.
+- **Posizione negata o imprecisa** (più di 100 m): lo diciamo e proponiamo un punto tuo o un punto dall'elenco.
 - **Due alloggi nel viaggio**: ogni giorno il suo; cambiare quello di base non cambia i giorni già cambiati a mano.
 - **Primo tratto lungo**: conta nell'avviso «piena» come gli altri tratti.
 
 ## Controlli
-- `npm test` verde (con test nuovi: salvataggio e vecchi itinerari, «visitato», ricerca con parole chiave, proposta del pranzo, filtri; e per «Da dove parti?»: la stima su casi fissi, l'ordine dal punto con e senza ritorno e con le chiusure, il link con un punto dell'elenco e senza l'alloggio, i vecchi link e itinerari senza partenza), build senza errori, `check:links` pulito.
+- `npm test` verde (con test nuovi: salvataggio e vecchi itinerari, «visitato», ricerca con parole chiave, proposta del pranzo, filtri; e per «Da dove parti?»: la stima su casi fissi, l'ordine dal punto con e senza ritorno e con le chiusure, il link con un punto dell'elenco e senza il punto tuo, i vecchi link e itinerari senza partenza), build senza errori, `check:links` pulito.
 - Prima dell'anteprima: axe in chiaro e scuro, Lighthouse su telefono 95 o più, 320 e 390 px, «riduci movimento», nessun errore in console.
 - **consistent-ui almeno 35 su 40** (lista di Enrico, 07/10/2026) e ux-audit di VectorLab.
 - Prova a mano su telefono: comporre 2 giorni, salvare, chiudere, riaprire, segnare «visitato», aprire un vecchio link condiviso.
@@ -268,7 +271,7 @@ hanno tempi stimati (il ricalcolo dei tempi veri si fa nella costruzione).
 - [ ] Pezzo 1 · pagina e barra: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 2 · scheda della tappa e «visitato»: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 3 · ricerca: grafica scelta il 13/10/2026 (file di cartoline, segno 4: `design/compositore/README.md`); le parole chiave nei dati vengono con la riscrittura dei testi delle tappe.
-- [x] Enrico approva la sezione 10 «Da dove parti?» e il pezzo «Salva» ridotto (13/10/2026: alloggio tutto dal sito, stazioni e porti sì, niente «Tutti i giorni», partenza facoltativa).
+- [x] Enrico approva la sezione 10 «Da dove parti?» e il pezzo «Salva» ridotto (13/10/2026: punto tuo tutto dal sito, stazioni e porti sì, niente «Tutti i giorni», partenza facoltativa, la domanda è «Da dove parti?»).
 - [ ] Pezzo 4 · «Da dove parti?»: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 5 · «Salva» com'è nelle prove: solo costruzione (niente vista separata, niente «Tutti i giorni»).
 - [ ] Pezzo 6 · mappa (dopo la decisione di Enrico: con o senza uso offline).
