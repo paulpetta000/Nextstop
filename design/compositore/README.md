@@ -3,6 +3,37 @@
 Proposte con i dati veri di «Due giorni a Napoli»: orari, tempi a piedi e percorsi calcolati dal sito (giorno feriale), foto e
 caratteri del sito. Regola di Enrico: 4 proposte molto diverse per pezzo, si itera su quello che va. Specifica: `specifiche/compositore.md`.
 
+# Pezzo 4: «Da dove parti?»
+
+Specifica §10 (approvata il 13/10/2026: facoltativo; la domanda è «Da dove parti?», mai «Dove dormi?»; un punto tuo tutto dal sito;
+stazioni e porti sì). Quattro proposte dentro C e D: nella striscia in alto si sceglie la proposta (1-4) e la vista. Cartella
+`partenza-giro-1/` (nata da `ricerca-giro-2/`, più `partenza.css` e `alloggi.json`).
+
+## Giro 1 (14/10/2026) · https://claude.ai/artifact/VsuPUwPwehrh6jC3UnMhCi
+| | Dove si chiede | Come si sceglie il punto |
+|---|---|---|
+| **1 · Il biglietto** | in cima al giorno un biglietto vuoto «Da dove parti?»; scelto il punto si «stampa»: l'ora in cui esci e da dove (in D di carta, in Bodoni) | un foglio con tre schede: Sulla mappa (la mappa si sposta sotto il segno fermo al centro; si cerca una via o un hotel), Dove sono, Stazioni e tappe |
+| **2 · Sulla mappa** | in C un pulsante sulla mappa; nella giornata una riga «Mettilo sulla mappa»; un tocco sul segno della partenza lo riapre | il segno della partenza (la porta del marchio) si trascina sulla mappa grande, o si tocca la mappa; i minuti cambiano mentre lo sposti; vicino a una stazione o a una tappa ci si attacca. In D sul telefono si apre la mappa a tutto schermo |
+| **3 · La prima domanda** | il giorno comincia con una domanda e quattro risposte (Dove sono, Sulla mappa, Stazione o porto, Una tappa), più «Salta» (resta solo «Punto di partenza», piccolo) | la risposta si apre sul posto: le stazioni, le tappe con la ricerca, una piccola mappa con il mirino; risposto, l'ordine migliore si mostra subito, con le tappe nel nuovo ordine |
+| **4 · Il viaggio** | la partenza di tutto il viaggio: in C una pillola sopra la giornata, in D un'etichetta da bagaglio appesa al titolo (dondola quando cambia) | una ricerca sola per vie, hotel e B&B, tappe e stazioni, più Dove sono e Sulla mappa; «Giorno per giorno»: un giorno da un altro posto o da nessuno |
+
+In tutte: **facoltativo** (senza partenza tutto va come prima); da una tappa i tempi sono veri, da un punto tuo il primo tratto è
+**stimato** come nella specifica (tappe entro 800 m, 20 minuti al km, poi il tempo vero, metro e funicolari comprese): «circa 15 min»
+con la parola «stima» (o «stima incerta»), linea dritta a puntini sulla mappa, a righe nella barra del tempo; oltre 800 m niente minuti.
+**L'ordine migliore da lì** (tutti gli ordini fino a 8 tappe, senza chiusure in più, almeno 5 minuti in meno) si propone con il
+consiglio del pezzo 2, con «Annulla»; **«Torno lì alla fine»** aggiunge il ritorno (stimato) e l'arrivo. Il punto resta sul telefono;
+«Dove sono» non si salva. Quando conviene: con «Dove sono» (in questa prova finto, in piazza del Gesù) si comincia da Santa Chiara,
+7 minuti in meno (con il ritorno 8, da Spaccanapoli); dalle stazioni e da Chiaia l'ordine dei due giorni è già il migliore.
+Limiti della prova: da stazioni e porti i minuti sono stimati (nel sito veri, ricalcolando `tempi-tappe.json`); stazioni e porti da
+`src/data/luoghi.yaml` (Napoli Centrale, Molo Beverello, Montesanto, Mergellina: **la Stazione Marittima non c'è ancora**, la
+posizione va presa da OpenStreetMap); le vie sono le 110 della zona dei due giorni (`strade.json`); hotel e B&B: i 428 con il nome
+di OpenStreetMap (`alloggi.json`, dati del 13/10/2026, ODbL), solo per trovare un punto.
+Controlli (14/10/2026): axe pulito in 120 controlli (4 proposte, C e D, telefono e computer, chiaro e scuro, fogli e scelte aperte,
+«riduci movimento»); nessuno scorrimento di lato a 320 e 390 px; nessun errore nella pagina; prove dei gesti: trascinare il segno,
+stazioni, «Usa questo ordine», «Torno lì», giorno per giorno. Immagini: `partenza-giro-1/immagini/prima-*.jpg` (la domanda) e `dopo-*.jpg`.
+Rifare: `npm run build`, `node design/compositore/genera.mjs partenza-giro-1`; con il server della copia acceso (porta 4333)
+`node design/compositore/partenza-giro-1/prove/foto.cjs <cartella> light,dark` e `prove/axe.cjs`.
+
 # Pezzo 3: la ricerca (il riquadro dei risultati)
 
 Specifica §3 (con il piano delle parole chiave). Tre proposte piccole, solo per il riquadro dei risultati, dentro C e D: nella striscia

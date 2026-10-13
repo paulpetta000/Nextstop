@@ -21,3 +21,6 @@ design/compositore/ricerca-giro-*/immagini/*.png
 .env
 .env.*
 !.env.example
+design/compositore/partenza-giro-*/proposte.html
+design/compositore/partenza-giro-*/proposte-locale.html
+design/compositore/partenza-giro-*/immagini/*.png

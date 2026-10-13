@@ -215,7 +215,8 @@ nessun servizio esterno**:
   di partenza (e verso il punto, con «torno lì») invece di tenere ferma la prima tappa; la stima in un modulo suo
   (`src/lib/itinerari/stima.ts`), con i test. Niente pacchetti.
 - **Stazioni e porti** (sì, Enrico 13/10/2026): Napoli Centrale, Molo Beverello, Stazione Marittima, Montesanto, Mergellina come punti di sola
-  partenza, con posizione da OpenStreetMap e tempi veri (ricalcolo di `tempi-tappe.json` con `scripts/itinerari/`). Utili il giorno
+  partenza, con posizione da OpenStreetMap e tempi veri (ricalcolo di `tempi-tappe.json` con `scripts/itinerari/`). Quattro su cinque
+  sono già in `src/data/luoghi.yaml` (le partenze delle gite); la Stazione Marittima va aggiunta, con la posizione da OpenStreetMap. Utili il giorno
   dell'arrivo e per chi dorme vicino alla stazione.
 
 **Le 4 proposte** (dentro C e D, partendo da `design/compositore/ricerca-giro-2/`, con la stima vera): campo libero. Per esempio:

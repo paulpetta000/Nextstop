@@ -1,0 +1,337 @@
+/* =====================================================================================
+   PEZZO 4, GIRO 1 (14/10/2026): «Da dove parti?», quattro proposte dentro C e D (html.v1 … v4 non servono: le classi
+   sono già della proposta). Comuni: il segno della partenza (la porta del marchio), il tratto stimato (puntini, «circa»,
+   «stima»), il mirino sulla mappa, gli interruttori, le liste di stazioni, tappe e risultati.
+   ===================================================================================== */
+:root { --via: var(--ink); --su-via: var(--sup, #fff); }
+.pd { --via: var(--ink); --su-via: var(--carta); }
+
+/* ---------- il segno della partenza: la porta del marchio ---------- */
+.segno-via { width: 22px; height: 22px; display: block; fill: none; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.segno-via__dentro { opacity: .5; }
+.segno-via--grande { width: 34px; height: 34px; }
+
+/* ---------- il tratto stimato: «circa», la parola «stima», i puntini ---------- */
+.stima { display: inline-block; margin-left: 7px; padding: 0 7px; border-radius: 999px; border: 1px dashed currentColor; font: 650 11.5px/1.5 "Archivo", system-ui, sans-serif; font-style: normal; font-stretch: 104%; letter-spacing: .01em; color: var(--ink2); vertical-align: 1px; }
+.pc .c-tratto--stima i { background: radial-gradient(circle, var(--acc) 1.2px, transparent 1.6px) 50% 0 / 2px 6px repeat-y; width: 3px; opacity: .85; }
+.pc .c-tratto--via { margin-top: -2px; }
+.pc .c-tratto--ritorno i { opacity: .55; }
+.pd .d-tratto--stima .orma { opacity: .38; }
+.pd .d-tratto--stima .d-tratto__t { background: transparent; box-shadow: 0 0 0 1px var(--riga); border: 1px dashed var(--ink2); }
+.pd .d-tratto--stima .stima { font-size: 11px; }
+.tempo__s--stima { background-image: repeating-linear-gradient(-45deg, rgba(255, 255, 255, .62) 0 2px, transparent 2px 5px); }
+:root[data-theme="dark"] .tempo__s--stima { background-image: repeating-linear-gradient(-45deg, rgba(0, 0, 0, .5) 0 2px, transparent 2px 5px); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .tempo__s--stima { background-image: repeating-linear-gradient(-45deg, rgba(0, 0, 0, .5) 0 2px, transparent 2px 5px); } }
+
+/* ---------- la mappa: la linea stimata a puntini (dritta: la strada non la conosciamo), il segno, le stazioni ---------- */
+.m-svg .m-c.m-stima { display: none; }
+.m-svg .m-l.m-stima { stroke-dasharray: .2 9; stroke-width: 5px; }
+.m-svg .m-ritorno { opacity: .55; }
+.m-via-box, .m-extra { position: absolute; inset: 0; pointer-events: none; }
+.m-via-box { z-index: 3; }
+.m-via { position: absolute; left: 0; top: 0; width: 40px; height: 40px; margin: -20px 0 0 -20px; display: grid; place-items: center; border-radius: 13px; pointer-events: auto; background: var(--via); color: var(--su-via); box-shadow: 0 0 0 2.5px var(--m-anello, var(--fondo)), 0 8px 18px -8px rgba(5, 9, 32, .7); transition: scale 200ms var(--entra); }
+.m-via .segno-via { width: 24px; height: 24px; }
+.m-via::after { content: ""; position: absolute; inset: -9px; border-radius: 18px; }
+.m-via--lontano { background: var(--m-terra); color: var(--ink); box-shadow: 0 0 0 2px var(--ink) inset, 0 8px 18px -8px rgba(5, 9, 32, .5); }
+@media (prefers-reduced-motion: no-preference) {
+  .m-via { animation: via-cade 620ms var(--molla) both; }
+  .m-via::before { content: ""; position: absolute; inset: -3px; border-radius: 16px; box-shadow: 0 0 0 2px var(--via); animation: via-onda 1400ms var(--entra) 400ms 2 both; pointer-events: none; }
+}
+@keyframes via-cade { from { translate: 0 -18px; opacity: 0; } }
+@keyframes via-onda { from { opacity: .7; scale: 1; } to { opacity: 0; scale: 2; } }
+@media (hover: hover) { .m-via:hover { scale: 1.08; } }
+.m-x { position: absolute; left: 0; top: 0; width: 28px; height: 28px; margin: -14px 0 0 -14px; display: grid; place-items: center; border-radius: 8px; pointer-events: auto; background: var(--sup, var(--carta)); color: var(--ink); box-shadow: 0 0 0 1.5px var(--ink2), 0 5px 12px -6px rgba(5, 9, 32, .6); }
+.m-x[aria-hidden="true"] { pointer-events: none; }
+.m-x::after { content: ""; position: absolute; inset: -8px; }
+
+/* ---------- il mirino (proposte 1, 3 e 4): la mappa si sposta sotto il segno fermo al centro ---------- */
+.mir { position: relative; height: 300px; border-radius: 20px; overflow: hidden; box-shadow: 0 0 0 1px var(--f-riga, var(--riga)); isolation: isolate; }
+.mir__m { position: absolute; inset: 0; }
+.mir .m-ctrl { bottom: 12px; right: 8px; }
+.mir .m-osm { top: auto; bottom: 4px; left: 6px; right: auto; }
+.mir__pin { position: absolute; z-index: 4; left: 50%; top: 50%; width: 0; height: 0; pointer-events: none; }
+.mir__testa { position: absolute; left: -21px; bottom: 9px; width: 42px; height: 42px; display: grid; place-items: center; border-radius: 14px 14px 14px 4px; rotate: -45deg; background: var(--via); color: var(--su-via); box-shadow: 0 10px 20px -10px rgba(5, 9, 32, .75), 0 0 0 2.5px var(--m-anello, #fff); transition: translate 260ms var(--molla); }
+.mir__testa .segno-via { rotate: 45deg; width: 24px; height: 24px; }
+.mir__ombra { position: absolute; left: -7px; top: -3px; width: 14px; height: 6px; border-radius: 50%; background: rgba(5, 9, 32, .45); transition: scale 260ms var(--entra), opacity 260ms; }
+.mir--su .mir__testa { translate: 0 -12px; }
+.mir--su .mir__ombra { scale: .6; opacity: .5; }
+.mir--lontano .mir__testa { background: var(--m-terra); color: var(--ink); box-shadow: 0 0 0 2px var(--ink) inset; }
+.mir__leggi { min-height: 44px; display: grid; gap: 2px; font-size: 14.5px; line-height: 1.35; }
+.mir__leggi b { font-weight: 700; }
+.mir__leggi span { color: var(--ink2); }
+
+/* ---------- interruttori («Per tutti i giorni», «Torno lì alla fine») ---------- */
+.via-int { display: grid; gap: 2px; }
+.int { display: grid; grid-template-columns: 46px minmax(0, 1fr); align-items: center; gap: 12px; min-height: 52px; padding: 4px 2px; cursor: pointer; font-weight: 600; }
+.int small { display: block; font-weight: 400; font-size: 13px; color: var(--ink2); }
+.int input { position: absolute; opacity: 0; width: 46px; height: 28px; margin: 0; cursor: pointer; }
+.int__p { position: relative; width: 46px; height: 28px; border-radius: 999px; background: var(--f-riga, var(--riga)); transition: background-color 200ms; }
+.int__p::after { content: ""; position: absolute; left: 3px; top: 3px; width: 22px; height: 22px; border-radius: 50%; background: #fff; box-shadow: 0 2px 5px -1px rgba(0, 0, 0, .35); transition: translate 260ms var(--molla); }
+.int input:checked + .int__p { background: var(--f-acc, var(--acc)); }
+.int input:checked + .int__p::after { translate: 18px 0; }
+.int input:focus-visible + .int__p { outline: 3px solid var(--fuoco); outline-offset: 2px; }
+
+/* ---------- liste: stazioni e porti, tappe, risultati della ricerca ---------- */
+.v1-staz, .dm-staz { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.vs { display: grid; grid-template-columns: 22px minmax(0, 1fr); align-items: center; gap: 10px; min-height: 64px; padding: 10px 12px; border-radius: 16px; background: var(--f-sup2, var(--sup2)); text-align: left; transition: box-shadow 200ms, background-color 200ms; }
+.vs b, .vt b, .vr b { display: block; font-weight: 650; line-height: 1.2; }
+.vs small, .vt small, .vr small { display: block; font-size: 12.5px; color: var(--ink2); line-height: 1.3; }
+.vs[aria-pressed="true"], .vt[aria-pressed="true"] { box-shadow: inset 0 0 0 2px var(--f-acc, var(--acc)); background: var(--f-sup, var(--sup)); }
+.v1-tappe, .dm-tappe { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 8px; }
+.vt { display: grid; grid-template-columns: 44px minmax(0, 1fr); align-items: center; gap: 10px; min-height: 60px; padding: 8px; border-radius: 16px; background: var(--f-sup2, var(--sup2)); text-align: left; }
+.vt img, .vt__senza { width: 44px; height: 44px; border-radius: 12px; object-fit: cover; }
+.vt__senza { display: grid; place-items: center; background: var(--f-riga, var(--riga)); font-weight: 700; }
+.vr { width: 100%; display: grid; grid-template-columns: 22px minmax(0, 1fr); align-items: center; gap: 12px; min-height: 56px; padding: 8px 10px; border-radius: 14px; text-align: left; }
+@media (hover: hover) { .vr:hover, .vs:hover, .vt:hover { background: color-mix(in srgb, var(--f-acc, var(--acc)) 9%, var(--f-sup2, var(--sup2))); } }
+.vr .ic, .vs .ic { color: var(--f-acc, var(--acc)); }
+.vr-gruppo h3, .v1-h { font-size: 13px; font-weight: 700; color: var(--ink2); margin: 6px 0 4px; }
+.vr-vuoto { font-size: 14px; color: var(--ink2); padding: 8px 2px; }
+
+/* ---------- 1 · IL BIGLIETTO ---------- */
+.bg { list-style: none; position: relative; margin: 6px 0 0; filter: drop-shadow(0 10px 14px rgba(5, 9, 32, .14)); }
+.bg__b { width: 100%; display: grid; grid-template-columns: 82px minmax(0, 1fr) auto; align-items: stretch; min-height: 82px; text-align: left; border-radius: 16px; background: var(--acc-chiaro);
+  -webkit-mask: radial-gradient(circle 9px at 82px 0, #0000 97%, #000) top / 100% 51% no-repeat, radial-gradient(circle 9px at 82px 100%, #0000 97%, #000) bottom / 100% 51% no-repeat;
+  mask: radial-gradient(circle 9px at 82px 0, #0000 97%, #000) top / 100% 51% no-repeat, radial-gradient(circle 9px at 82px 100%, #0000 97%, #000) bottom / 100% 51% no-repeat; }
+.bg__stub { display: grid; place-content: center; justify-items: center; gap: 2px; background: var(--acc); color: var(--su-acc); border-right: 2px dashed color-mix(in srgb, var(--su-acc) 55%, transparent); }
+.bg__ora { font: 700 22px/1 "Archivo", system-ui, sans-serif; font-stretch: 112%; letter-spacing: -.01em; }
+.bg__stub small { font-size: 12px; font-weight: 600; opacity: .85; }
+.bg__t { display: grid; align-content: center; gap: 1px; padding: 10px 6px 10px 18px; min-width: 0; }
+.bg__t b { font-weight: 700; font-size: 17px; line-height: 1.2; font-stretch: 106%; overflow-wrap: anywhere; }
+.bg__t small { font-size: 13px; color: var(--ink2); line-height: 1.3; }
+.bg__da { font-weight: 600; }
+.bg__cambia { align-self: center; margin-right: 12px; padding: 8px 12px; border-radius: 999px; font-size: 14px; font-weight: 650; color: var(--acc); background: var(--sup); }
+.bg__piu { align-self: center; margin-right: 14px; width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; background: var(--acc); color: var(--su-acc); }
+.bg--vuoto { filter: none; }
+.bg--vuoto .bg__b { background: var(--sup2); }
+.bg--vuoto .bg__stub { background: transparent; color: var(--acc); border-right-color: var(--riga); }
+.bg--vuoto .bg__stub .segno-via { width: 30px; height: 30px; }
+.bg--vuoto .bg__t b { font-size: 18px; }
+@media (hover: hover) { .bg__b:hover .bg__piu, .bg__b:hover .bg__cambia { filter: brightness(1.06); } }
+.bg__b:active { scale: .985; transition: scale 120ms; }
+@media (prefers-reduced-motion: no-preference) {
+  .bg--stampa .bg__b { animation: bg-stampa 900ms var(--entra) both; }
+  .bg--stampa .bg__ora { animation: bg-ora 700ms var(--entra) 280ms both; }
+}
+@keyframes bg-stampa { from { clip-path: inset(0 100% 0 0 round 16px); translate: -18px 0; } to { clip-path: inset(0 0 0 0 round 16px); } }
+@keyframes bg-ora { from { opacity: 0; translate: 0 8px; } }
+/* in D il biglietto è di carta, come le cartoline: Bodoni, il bordo che si strappa, appena storto */
+.pd .bg { margin: 0 0 6px; rotate: -.6deg; filter: drop-shadow(0 1px 1px rgba(40, 34, 20, .12)) drop-shadow(0 12px 14px rgba(40, 34, 20, .2)); }
+.pd .bg__b { border-radius: 6px; background: var(--carta); }
+.pd .bg__stub { background: var(--acc); }
+.pd .bg__ora { font: 600 26px/1 "Bodoni Moda", Georgia, serif; font-variant-numeric: lining-nums tabular-nums; }
+.pd .bg__t b { font: italic 500 21px/1.15 "Bodoni Moda", Georgia, serif; }
+.pd .bg__cambia { background: transparent; box-shadow: inset 0 0 0 1.5px var(--acc); }
+.pd .bg--vuoto .bg__b { background: var(--sup); }
+.pd .bg--vuoto .bg__t b { font: italic 500 22px/1.15 "Bodoni Moda", Georgia, serif; color: var(--acc); }
+.pd .bg + .d-tratto { height: 104px; }
+/* il foglio della proposta 1 */
+.v1-intro { font-size: 14.5px; color: var(--ink2); }
+.v1-schede { position: relative; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 4px; border-radius: 16px; background: var(--f-sup2); isolation: isolate; }
+.v1-schede button { position: relative; z-index: 1; min-height: 48px; display: grid; justify-items: center; align-content: center; gap: 3px; padding: 6px 4px; border-radius: 12px; font-size: 13px; font-weight: 650; line-height: 1.15; color: var(--ink2); transition: color 250ms; }
+.v1-schede button[aria-selected="true"] { color: var(--ink); }
+.v1-schede__segno { position: absolute; z-index: 0; left: 0; top: 4px; bottom: 4px; width: 0; border-radius: 12px; background: var(--f-sup); box-shadow: 0 4px 12px -6px rgba(5, 9, 32, .35); transition: translate 380ms var(--entra), width 380ms var(--entra); }
+.v1-pannello { display: grid; gap: 12px; }
+.v1-pannello[hidden] { display: none; }
+.v1-ris { display: grid; padding: 6px; border-radius: 18px; background: var(--f-sup2); }
+.v1-qui { display: grid; justify-items: start; gap: 12px; padding: 18px; border-radius: 20px; background: var(--f-sup2); }
+.v1-qui > .segno-via { color: var(--f-acc); }
+.v1-qui__leggi:empty { display: none; }
+.v1-qui__leggi { font-size: 14.5px; }
+.v1-fondo { position: sticky; bottom: 0; z-index: 3; display: grid; gap: 6px; margin: 0 -20px -26px; padding: 12px 20px calc(16px + env(safe-area-inset-bottom, 0px)); background: var(--f-sup); box-shadow: 0 -10px 18px -14px rgba(5, 9, 32, .4); }
+.v1-ok { width: 100%; min-height: 54px; font-size: 16px; transition: opacity 200ms, background-color 200ms; }
+.v1-ok:disabled { opacity: .45; cursor: default; }
+.v1-nessuna { justify-self: center; min-height: 44px; padding: 0 12px; color: var(--ink2); text-decoration: underline; text-underline-offset: 3px; font-weight: 600; }
+
+/* ---------- le righe della partenza e dell'arrivo (comuni) ---------- */
+.via-corta { list-style: none; display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; align-items: center; gap: 12px; min-height: 64px; padding: 8px 6px; }
+.via-corta__s { width: 34px; height: 34px; justify-self: center; display: grid; place-items: center; border-radius: 11px; background: var(--via); color: var(--su-via); }
+.via-corta__s .segno-via { width: 20px; height: 20px; }
+.via-corta__t { font-size: 15px; line-height: 1.3; min-width: 0; }
+.via-corta__t b { font-weight: 700; }
+.via-corta__t small { display: block; font-size: 12.5px; color: var(--ink2); }
+.via-corta__ora { font-weight: 700; color: var(--acc); font-stretch: 110%; }
+.via-corta__b { min-height: 40px; padding: 0 14px; border-radius: 999px; font-size: 14px; font-weight: 650; color: var(--acc); box-shadow: inset 0 0 0 1.5px var(--riga); }
+.via-corta .via-lontano { grid-column: 1 / -1; }
+.pd .via-corta { padding: 6px 0 0; }
+.pd .via-corta__t b { font: italic 500 19px/1.2 "Bodoni Moda", Georgia, serif; }
+.via-lontano { display: grid; grid-template-columns: 18px minmax(0, 1fr); gap: 8px; align-items: start; margin-top: 8px; padding: 10px 12px; border-radius: 14px; font-size: 13.5px; line-height: 1.4; background: var(--avviso); color: var(--su-avviso); }
+.bg .via-lontano { margin: 8px 0 0; }
+.via-arrivo { list-style: none; display: grid; grid-template-columns: 40px minmax(0, 1fr); align-items: center; gap: 12px; min-height: 52px; padding: 4px 6px; font-size: 15px; }
+.via-arrivo > .segno-via { justify-self: center; width: 30px; height: 30px; padding: 5px; border-radius: 10px; color: var(--via); box-shadow: inset 0 0 0 1.5px var(--via); }
+.via-arrivo b { font-weight: 700; }
+.via-arrivo__ora { font-weight: 700; color: var(--acc); }
+.pd .via-arrivo { justify-content: center; grid-template-columns: auto auto; padding: 4px 0 10px; }
+.pd .via-arrivo b { font: italic 500 19px/1.2 "Bodoni Moda", Georgia, serif; }
+
+/* ---------- 2 · SULLA MAPPA ---------- */
+.via-cerca { list-style: none; margin: 6px 0 2px; }
+.via-cerca__b { width: 100%; display: grid; grid-template-columns: 22px minmax(0, 1fr) auto; align-items: center; gap: 10px; min-height: 52px; padding: 6px 14px; border-radius: 16px; text-align: left; font-size: 14.5px; color: var(--ink2); box-shadow: inset 0 0 0 1.5px var(--riga); }
+.via-cerca__b b { color: var(--ink); font-weight: 700; }
+.via-cerca__b .ic { color: var(--acc); }
+.via-cerca__b small { font-size: 12px; }
+.pd .via-cerca__b { border-radius: 4px; background: var(--carta); box-shadow: 0 0 0 1px var(--riga), 0 8px 16px -14px rgba(40, 34, 20, .5); }
+.pd .via-cerca__b b { font: italic 500 18px/1.2 "Bodoni Moda", Georgia, serif; color: var(--acc); }
+/* il segno da trascinare: la testa con la porta, la punta in basso; si alza mentre lo trascini */
+.posa-pin { position: absolute; z-index: 6; left: 0; top: 0; width: 56px; height: 72px; margin: -66px 0 0 -28px; touch-action: none; cursor: grab; }
+.posa-pin:active { cursor: grabbing; }
+.posa-pin__testa { position: absolute; left: 6px; top: 4px; width: 44px; height: 44px; display: grid; place-items: center; border-radius: 15px 15px 15px 4px; rotate: -45deg; background: var(--via); color: var(--su-via); box-shadow: 0 0 0 2.5px var(--m-anello, #fff), 0 12px 22px -10px rgba(5, 9, 32, .8); transition: translate 240ms var(--molla), background-color 200ms; }
+.posa-pin__testa .segno-via { rotate: 45deg; width: 25px; height: 25px; }
+.posa-pin__ombra { position: absolute; left: 21px; top: 62px; width: 14px; height: 6px; border-radius: 50%; background: rgba(5, 9, 32, .5); transition: scale 240ms var(--entra), opacity 240ms; }
+.posa-pin--su .posa-pin__testa { translate: 0 -14px; }
+.posa-pin--su .posa-pin__ombra { scale: .55; opacity: .5; }
+.posa-pin--attaccato .posa-pin__testa { background: var(--acc); color: var(--su-acc); }
+.posa-pin--lontano .posa-pin__testa { background: var(--m-terra); color: var(--ink); box-shadow: 0 0 0 2px var(--ink) inset; }
+.posa-pin__nome { position: absolute; left: 50%; bottom: 76px; translate: -50% 0; max-width: 190px; padding: 3px 10px; border-radius: 999px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font: 650 13px/1.5 "Archivo", system-ui, sans-serif; background: var(--via); color: var(--su-via); pointer-events: none; }
+.posa-pin__nome:empty { display: none; }
+.posa-pin:focus-visible { outline: none; }
+.posa-pin:focus-visible .posa-pin__testa { outline: 3px solid var(--fuoco); outline-offset: 3px; }
+.posa-carta { position: fixed; z-index: 90; left: 10px; right: 10px; bottom: calc(10px + env(safe-area-inset-bottom, 0px)); max-height: 62dvh; overflow: auto; display: grid; gap: 12px; padding: 16px 16px 14px; border-radius: 24px; background: var(--f-sup); color: var(--ink); box-shadow: 0 24px 60px -18px rgba(5, 9, 32, .6), 0 0 0 1px var(--f-riga); }
+@media (min-width: 960px) { .posa-carta { left: auto; right: 24px; bottom: 24px; width: 420px; } .pc .posa-carta { right: 24px; } }
+.posa-carta__t { display: flex; align-items: center; gap: 8px; font: 700 18px/1.2 var(--f-titolo); font-stretch: 108%; }
+.pd .posa-carta__t { font: italic 500 22px/1.15 "Bodoni Moda", Georgia, serif; color: var(--acc); }
+.posa-carta__leggi { display: grid; gap: 2px; min-height: 42px; font-size: 14.5px; line-height: 1.35; }
+.posa-carta__leggi b { font-weight: 700; }
+.posa-carta__leggi span { color: var(--ink2); }
+.posa-carta__staz { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; margin: 0 -16px; padding: 0 16px; }
+.posa-carta__staz button { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 40px; padding: 0 12px; border-radius: 999px; font-size: 13.5px; font-weight: 600; background: var(--f-sup2); }
+.posa-carta__staz button[aria-pressed="true"] { background: var(--f-acc); color: var(--f-su-acc); }
+.posa-carta__az { display: flex; flex-wrap: wrap; gap: 8px; justify-content: flex-end; }
+.posa-carta__az button { min-height: 48px; padding: 0 16px; border-radius: 999px; font-weight: 650; }
+.posa-carta__no { color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--f-riga); }
+.posa-carta__si { flex: 1; background: var(--f-acc); color: var(--f-su-acc); }
+@media (prefers-reduced-motion: no-preference) {
+  .posa-carta { animation: posa-sale 420ms var(--entra) both; }
+  .posa-carta--via { animation: posa-scende 220ms var(--esce) forwards; }
+}
+@keyframes posa-sale { from { translate: 0 40px; opacity: 0; } }
+@keyframes posa-scende { to { translate: 0 30px; opacity: 0; } }
+/* in C, mentre sposti il segno, la giornata scende e la mappa è tutta tua */
+@media (max-width: 959px) {
+  .pc .c-foglio { transition: translate 420ms var(--entra); }
+  html.pc.in-posa .c-foglio { translate: 0 100dvh; }
+  html.pc.in-posa .c-giu { display: none; }
+  html.pc.in-posa .c-mappa { transform: none; }
+  html.pc.in-posa .c-mappa::after { opacity: 0; }
+}
+html.in-posa .m-segni { opacity: .9; }
+
+/* ---------- 3 · LA PRIMA DOMANDA ---------- */
+.dm { list-style: none; display: grid; gap: 12px; margin: 8px 0 6px; padding: 18px; border-radius: 22px; background: var(--acc-chiaro); }
+.dm__q { font: 700 22px/1.15 "Archivo", system-ui, sans-serif; font-stretch: 110%; letter-spacing: -.01em; }
+.dm__sotto { font-size: 14.5px; color: var(--ink2); margin-top: -6px; }
+.dm__risposte { display: flex; flex-wrap: wrap; gap: 8px; }
+.dm__r { display: inline-flex; align-items: center; gap: 7px; min-height: 46px; padding: 0 15px 0 12px; border-radius: 999px; font-size: 14.5px; font-weight: 650; background: var(--sup); color: var(--ink); box-shadow: 0 1px 0 rgba(5, 9, 32, .05), 0 6px 14px -12px rgba(5, 9, 32, .6); transition: background-color 220ms, color 220ms, scale 140ms; }
+.dm__r .ic { color: var(--acc); transition: color 220ms; }
+.dm__r[aria-expanded="true"] { background: var(--acc); color: var(--su-acc); }
+.dm__r[aria-expanded="true"] .ic { color: var(--su-acc); }
+.dm__r:active { scale: .96; }
+.dm__dentro { display: grid; gap: 10px; }
+@media (prefers-reduced-motion: no-preference) { .dm__dentro { animation: dm-apre 420ms var(--entra) both; } .dm__dentro > * { animation: dm-apre 460ms var(--entra) both; } .dm__dentro > :nth-child(2) { animation-delay: 60ms; } .dm__dentro > :nth-child(3) { animation-delay: 120ms; } }
+@keyframes dm-apre { from { opacity: 0; translate: 0 -8px; } }
+.dm .vs, .dm .vt { background: var(--sup); }
+.dm-mirino .mir { height: 240px; }
+.dm-ok { justify-self: start; min-height: 48px; padding: 0 20px; border-radius: 999px; font-weight: 650; background: var(--acc); color: var(--su-acc); }
+.dm-cerca input { height: 48px; background: var(--sup); }
+.dm-ris { display: grid; }
+.dm-ris:empty { display: none; }
+.dm__fondo { display: flex; justify-content: flex-end; }
+.dm__salta { min-height: 40px; padding: 0 6px; font-size: 14px; font-weight: 600; color: var(--ink2); text-decoration: underline; text-underline-offset: 3px; }
+.dm--fatta { gap: 10px; padding: 12px 12px 14px; }
+.dm__risposta { display: grid; grid-template-columns: 40px minmax(0, 1fr) auto; align-items: center; gap: 12px; }
+.dm__s { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 13px; background: var(--via); color: var(--su-via); }
+.dm__risposta p { display: grid; line-height: 1.25; min-width: 0; }
+.dm__q2 { font-size: 13px; color: var(--ink2); font-weight: 600; }
+.dm__risposta b { font-weight: 700; font-size: 17px; overflow-wrap: anywhere; }
+.dm__risposta small { font-size: 13px; color: var(--ink2); }
+.dm__cambia { min-height: 40px; padding: 0 14px; border-radius: 999px; font-size: 14px; font-weight: 650; color: var(--acc); background: var(--sup); }
+.dm-torno { display: inline-flex; align-items: center; gap: 8px; justify-self: start; min-height: 40px; padding: 0 14px 0 10px; border-radius: 999px; font-size: 14px; font-weight: 600; background: var(--sup); cursor: pointer; }
+.dm-torno input { width: 18px; height: 18px; margin: 0; accent-color: var(--acc); }
+.dm-ordine { display: grid; gap: 10px; padding: 14px; border-radius: 16px; background: var(--sup); box-shadow: inset 0 0 0 1.5px var(--acc); }
+.dm-ordine p { font-size: 14.5px; line-height: 1.4; }
+.dm-seq { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 2px; font-size: 14px; font-weight: 600; }
+.dm-seq li { display: inline-flex; align-items: center; gap: 6px; padding: 4px 8px 4px 4px; border-radius: 999px; background: var(--acc-chiaro); }
+.dm-seq li + li::before { content: ""; width: 10px; height: 10px; margin: 0 4px 0 -2px; border: solid var(--ink2); border-width: 2px 2px 0 0; rotate: 45deg; scale: .7; }
+.dm-seq__n { width: 22px; height: 22px; display: grid; place-items: center; border-radius: 50%; background: var(--acc); color: var(--su-acc); font-size: 12px; font-weight: 700; }
+@media (prefers-reduced-motion: no-preference) { .dm-seq li { animation: dm-seq 520ms var(--molla) both; animation-delay: calc(140ms + var(--k) * 90ms); } }
+@keyframes dm-seq { from { opacity: 0; scale: .6; } }
+.dm-ordine__az { display: flex; flex-wrap: wrap; gap: 8px; }
+.dm-ordine__az button { min-height: 46px; padding: 0 18px; border-radius: 999px; font-weight: 650; }
+.dm-si { background: var(--acc); color: var(--su-acc); }
+.dm-no { color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--riga); }
+.dm-saltata { list-style: none; margin: 4px 0 0; }
+.dm-saltata button { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 12px 0 8px; border-radius: 999px; font-size: 14px; font-weight: 600; color: var(--ink2); }
+.dm-saltata .segno-via { width: 20px; height: 20px; }
+@media (hover: hover) { .dm-saltata button:hover { background: var(--sup2); color: var(--ink); } }
+/* in D la domanda è un foglietto di carta, con la domanda in corsivo */
+.pd .dm { margin: 0 0 10px; border-radius: 4px; background: var(--carta) var(--grana); box-shadow: 0 1px 2px rgba(40, 34, 20, .1), 0 16px 28px -20px rgba(40, 34, 20, .55), 0 0 0 1px var(--riga); rotate: .4deg; }
+.pd .dm__q { font: italic 500 28px/1.1 "Bodoni Moda", Georgia, serif; color: var(--acc); letter-spacing: 0; }
+.pd .dm__r { background: var(--sup); box-shadow: none; }
+.pd .dm .vs, .pd .dm .vt, .pd .dm-torno, .pd .dm__cambia { background: var(--sup); }
+.pd .dm__risposta b { font: italic 500 21px/1.15 "Bodoni Moda", Georgia, serif; }
+.pd .dm-ordine { background: transparent; box-shadow: inset 0 0 0 1px var(--acc); border-radius: 4px; }
+.pd .dm-seq li { background: var(--sup); }
+.pd .dm--fatta + .d-tratto, .pd .dm + .d-tratto { height: 104px; }
+
+/* ---------- 4 · IL VIAGGIO ---------- */
+.v4-pill-box { margin: 0 0 4px; }
+.v4-pill { width: 100%; display: grid; grid-template-columns: 38px minmax(0, 1fr) 20px; align-items: center; gap: 12px; min-height: 58px; padding: 9px 14px 9px 9px; border-radius: 18px; text-align: left; background: var(--sup2); }
+.v4-pill > .segno-via { width: 38px; height: 38px; padding: 8px; border-radius: 12px; background: var(--via); color: var(--su-via); }
+.v4-pill span { display: grid; line-height: 1.25; min-width: 0; }
+.v4-pill small { font-size: 12.5px; color: var(--ink2); font-weight: 600; }
+.v4-pill b { font-weight: 700; font-size: 16px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.v4-pill .v4-pill__oggi { color: var(--acc); }
+/* l'etichetta da bagaglio: carta kraft, il buco con l'occhiello, il filo che sale al titolo; dondola quando cambia */
+.v4-tag-box { position: relative; padding: 4px 20px 0 34px; }
+.v4-tag { position: relative; display: block; max-width: 300px; text-align: left; transform-origin: 26px 0; rotate: -2.5deg; }
+.v4-tag__filo { position: absolute; left: 2px; top: -34px; width: 30px; height: 46px; fill: none; stroke: var(--ink2); stroke-width: 1.6; stroke-linecap: round; opacity: .8; }
+.v4-tag__corpo { position: relative; display: grid; gap: 1px; padding: 12px 18px 13px 42px; border-radius: 3px 10px 10px 3px; background: #EAD9B4; color: #2E2618; clip-path: polygon(16px 0, 100% 0, 100% 100%, 16px 100%, 0 calc(100% - 16px), 0 16px);
+  box-shadow: inset 0 0 0 1px rgba(80, 60, 20, .14); }
+.v4-tag__buco { position: absolute; left: 18px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: var(--fondo); box-shadow: 0 0 0 3px #C9B48A; }
+.v4-tag small { font-size: 12.5px; font-weight: 600; color: #6A5A3C; }
+.v4-tag b { font: italic 500 22px/1.15 "Bodoni Moda", Georgia, serif; overflow-wrap: anywhere; }
+.v4-tag--vuoto .v4-tag__corpo { background: transparent; color: var(--ink); box-shadow: none; outline: 1.5px dashed var(--ink2); outline-offset: -2px; clip-path: none; border-radius: 6px; }
+.v4-tag--vuoto .v4-tag__buco { background: transparent; box-shadow: 0 0 0 1.5px var(--ink2); }
+.v4-tag--vuoto small { color: var(--acc); font-size: 15px; font: italic 500 20px/1.15 "Bodoni Moda", Georgia, serif; }
+.v4-tag--vuoto b { font: 400 14px/1.3 "Archivo", system-ui, sans-serif; color: var(--ink2); }
+:root.pd[data-theme="dark"] .v4-tag__corpo { background: #3B3222; color: #F3E7CF; box-shadow: inset 0 0 0 1px rgba(255, 230, 180, .12); }
+:root.pd[data-theme="dark"] .v4-tag small { color: #CDBB97; }
+:root.pd[data-theme="dark"] .v4-tag__buco { box-shadow: 0 0 0 3px #6E5D3D; }
+@media (prefers-color-scheme: dark) {
+  :root.pd:not([data-theme="light"]) .v4-tag__corpo { background: #3B3222; color: #F3E7CF; box-shadow: inset 0 0 0 1px rgba(255, 230, 180, .12); }
+  :root.pd:not([data-theme="light"]) .v4-tag small { color: #CDBB97; }
+  :root.pd:not([data-theme="light"]) .v4-tag__buco { box-shadow: 0 0 0 3px #6E5D3D; }
+}
+@media (hover: hover) and (prefers-reduced-motion: no-preference) { .v4-tag { transition: rotate 600ms var(--molla); } .v4-tag:hover { rotate: 1deg; } }
+.v4-per { font-weight: 700; font-size: 14px; color: var(--f-acc); }
+.v4-rapidi { display: flex; flex-wrap: wrap; gap: 8px; }
+.v4-rapidi button { display: inline-flex; align-items: center; gap: 7px; min-height: 46px; padding: 0 16px 0 12px; border-radius: 999px; font-weight: 650; background: var(--f-sup2); }
+.v4-rapidi .ic { color: var(--f-acc); }
+.v4-rapidi button[aria-expanded="true"] { background: var(--f-acc); color: var(--f-su-acc); }
+.v4-rapidi button[aria-expanded="true"] .ic { color: inherit; }
+.v4-mappa { display: grid; gap: 10px; }
+.v4-mappa[hidden] { display: none; }
+.v4-ris { display: grid; }
+.v4-giorni { display: grid; gap: 6px; padding-top: 6px; border-top: 1px solid var(--f-riga); }
+.v4-giorni h3 { font-size: 15px; font-weight: 700; margin: 6px 0 2px; }
+.v4-g { display: grid; grid-template-columns: 30px minmax(0, 1fr); align-items: center; gap: 4px 12px; padding: 8px 0; }
+.v4-g__n { width: 30px; height: 30px; display: grid; place-items: center; border-radius: 50%; background: var(--f-sup2); font-weight: 700; font-size: 14px; }
+.v4-g__t { font-size: 14.5px; font-weight: 600; min-width: 0; }
+.v4-g button { grid-column: 2; justify-self: start; min-height: 40px; padding: 0 14px; border-radius: 999px; font-size: 13.5px; font-weight: 650; color: var(--f-acc); box-shadow: inset 0 0 0 1.5px var(--f-riga); }
+.v4-g button[aria-pressed="true"] { background: var(--f-acc); color: var(--f-su-acc); box-shadow: none; }
+.v4-g button + button { grid-column: 2; }
+html.in-posa .m-via-box { display: none; }
+.v1-ris[hidden] { display: none; }
+.pd .bg--vuoto .bg__stub { background: transparent; color: var(--acc); border-right-color: var(--riga); }
+.v4-tag-box { padding-top: 30px; }
+.v4-tag__filo { top: -30px; height: 40px; }
+.pd .dm__r[aria-expanded="true"] { background: var(--acc); color: var(--su-acc); }
+.pd .dm__r[aria-expanded="true"] .ic { color: var(--su-acc); }
+.v1-schede__segno { left: 4px; width: calc((100% - 8px) / 3); translate: calc(var(--i, 0) * 100%) 0; transition: translate 380ms var(--entra); }
+/* proposta 2 in C: il pulsante sulla mappa */
+.via-mappa-box { position: absolute; z-index: 4; left: 12px; top: 96px; pointer-events: none; }
+.via-mappa { pointer-events: auto; display: inline-flex; align-items: center; gap: 8px; min-height: 46px; max-width: calc(100vw - 110px); padding: 0 16px 0 8px; border-radius: 999px; font-weight: 700; font-stretch: 106%; font-size: 15px; background: var(--via); color: var(--su-via); box-shadow: 0 12px 26px -12px rgba(5, 9, 32, .75), 0 0 0 2px color-mix(in srgb, var(--sup) 60%, transparent); }
+.via-mappa span { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.via-mappa .segno-via { width: 30px; height: 30px; padding: 5px; border-radius: 50%; background: color-mix(in srgb, var(--su-via) 16%, transparent); }
+@media (prefers-reduced-motion: no-preference) { .via-mappa { animation: via-cade 600ms var(--molla) 300ms both; } }
+@media (min-width: 960px) { .via-mappa-box { left: 520px; top: 24px; } }
+html.in-posa .via-mappa-box { display: none; }

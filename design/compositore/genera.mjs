@@ -268,13 +268,33 @@ if (leggi('app.js').includes('CALCOLO')) {
   }
 }
 
+// ---------- pezzo 4 («Da dove parti?»): i punti da cui si parte ----------
+// Se app.js usa PARTENZA: stazioni e porti (src/data/luoghi.yaml, coordinate OpenStreetMap), gli alloggi di OpenStreetMap
+// (alloggi.json del giro, solo per trovare un punto) e i nomi delle vie della zona (strade.json), tutti nelle unità della mappa.
+if (leggi('app.js').includes('PARTENZA')) {
+  // la stessa proiezione del sito (src/lib/itinerari/napoli.ts): il riquadro è in src/data/mappa.json
+  const BOX = JSON.parse(fs.readFileSync(path.join(RADICE, 'src/data/mappa.json'), 'utf8')).box;
+  const KX = MAPPA.w / (BOX.e - BOX.w), KY = MAPPA.h / (BOX.n - BOX.s);
+  const XY = (lat, lon) => [+((lon - BOX.w) * KX).toFixed(1), +((BOX.n - lat) * KY).toFixed(1)];
+  const dentro = ([x, y]) => x >= 0 && y >= 0 && x <= MAPPA.w && y <= MAPPA.h;
+  const luoghi = leggiYaml('src/data/luoghi.yaml');
+  const SCELTE = [['napoli-centrale', 'Napoli Centrale', 'piazza Garibaldi'], ['molo-beverello', 'Molo Beverello', 'aliscafi e traghetti'], ['montesanto', 'Montesanto', 'Cumana, Circumflegrea, Linea 2'], ['mergellina-l2', 'Mergellina', 'stazione dei treni']];
+  const stazioni = SCELTE.map(([id, nome, sotto]) => { const l = luoghi.find(x => x.id === id); if (!l) throw new Error(`${id} non in luoghi.yaml`); return { id, nome, sotto, tipo: l.tipo, xy: XY(l.lat, l.lon) }; });
+  const A = JSON.parse(leggi('alloggi.json'));
+  const alloggi = A.voci.map(([nome, tipo, lat, lon, via]) => ({ nome, tipo, via, xy: XY(lat, lon) })).filter(a => dentro(a.xy));
+  // una via: il punto a metà della linea del nome (strade.json, solo la zona dei due giorni in questa prova)
+  const meta = d => { const p = (d.match(/-?\d+(?:\.\d+)?/g) || []).map(Number), q = []; for (let i = 0; i + 1 < p.length; i += 2) q.push([p[i], p[i + 1]]); let L = 0; const s = q.slice(1).map((b, i) => { const l = Math.hypot(b[0] - q[i][0], b[1] - q[i][1]); L += l; return l; }); let r = L / 2; for (let i = 0; i < s.length; i++) { if (r <= s[i]) { const k = r / (s[i] || 1); return [+(q[i][0] + (q[i + 1][0] - q[i][0]) * k).toFixed(1), +(q[i][1] + (q[i + 1][1] - q[i][1]) * k).toFixed(1)]; } r -= s[i]; } return q[0]; };
+  const vie = [...new Map(STRADE.etichette.map(e => [e.nome, { nome: e.nome, xy: meta(e.d) }])).values()];
+  DATI.partenza = { stazioni, alloggi, vie, fonteAlloggi: A.fonte, metriUnita: +((BOX.e - BOX.w) * 111320 * Math.cos((BOX.n + BOX.s) / 2 * Math.PI / 180) / MAPPA.w).toFixed(3) };
+}
+
 const sicuro = o => JSON.stringify(o).replace(/</g, '\\u003c');
 // sostituzioni con una funzione: nel codice ci sono «$» che replace() altrimenti interpreta
 const pagina = leggi('modello.html')
   .replace('/*FONT*/', () => `@font-face{font-family:"Archivo";src:url(${FONT.archivo}) format("woff2");font-weight:100 900;font-stretch:62% 125%;font-display:swap}
 @font-face{font-family:"Bodoni Moda";src:url(${FONT.bodoni}) format("woff2");font-weight:600;font-display:swap}
 @font-face{font-family:"Bodoni Moda";src:url(${FONT.bodoniCorsivo}) format("woff2");font-weight:500;font-style:italic;font-display:swap}`)
-  .replace('/*STILE*/', () => leggi('stile.css') + (fs.existsSync(path.join(GIRO, 'pezzo2.css')) ? `\n${leggi('pezzo2.css')}` : '') + (fs.existsSync(path.join(GIRO, 'ricerca.css')) ? `\n${leggi('ricerca.css')}` : ''))
+  .replace('/*STILE*/', () => leggi('stile.css') + (fs.existsSync(path.join(GIRO, 'pezzo2.css')) ? `\n${leggi('pezzo2.css')}` : '') + (fs.existsSync(path.join(GIRO, 'ricerca.css')) ? `\n${leggi('ricerca.css')}` : '') + (fs.existsSync(path.join(GIRO, 'partenza.css')) ? `\n${leggi('partenza.css')}` : ''))
   .replace('/*APP*/', () => leggi('app.js'))
   .replace('<!--DATI-->', () => `<script>window.DATI=${sicuro(DATI)};window.FOTO=${sicuro(FOTO)};window.MAPPA=${sicuro(MAPPA)};window.STRADE=${sicuro(STRADE)};${leggi('app.js').includes('PORTICO') ? `window.PORTICO=${sicuro(PORTICO)};` : ''}</script>${CALCOLO_JS ? `<script>${CALCOLO_JS.replace(/<\/script/gi, '<\\/script')}</script>` : ''}`);
 fs.writeFileSync(path.join(GIRO, 'proposte.html'), pagina);
