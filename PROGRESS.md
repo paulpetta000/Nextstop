@@ -8,7 +8,7 @@ _Aggiornato il 13/10/2026. Ramo `compositore-pagina` (Claude) unito con `main` i
 - **Pezzo 1 scelto (08/10/2026): C «Mappa prima» e D «Le pagine»**, chi visita passa dall'una all'altra; ricerca di A; logo scuro ambra.
 - **Pezzo 2 scelto (13/10/2026): la scheda come foglio, timbro 2** (postale, con il giorno della visita), ordine più corto, barra del tempo.
 - **Pezzo 3 scelto (13/10/2026): file di cartoline con il segno 4** (il corsivo), avviso in basso −10%. Parole chiave rimandate alla riscrittura dei testi delle tappe.
-- **Prossimo**: pezzo 4 ridotto («Salva» com'è, al massimo «Tutti i giorni») e pezzo nuovo «Da dove parti?» (specifica da approvare). Mappa (pezzo 5) in sospeso: 213 KB di strade piccole (79 KB compressi).
+- **Prossimo** (pezzi rinumerati il 13/10/2026): pezzo 4 nuovo «Da dove parti?» (specifica §10, da approvare, poi 4 proposte); pezzo 5 «Salva» com'è, al massimo «Tutti i giorni». Mappa (pezzo 6) in sospeso: 213 KB di strade piccole (79 KB compressi).
 - **Home da rivedere**: l'arco di pietra (portico di piperno) non piace a Enrico (08/10/2026).
 
 ## Fonti · rilascio autorizzato, prestazioni da rivedere con Claude

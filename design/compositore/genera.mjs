@@ -13,6 +13,7 @@ import path from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { createRequire } from 'node:module';
 import { arcata, VANO, MASCHERA, W as PW, H as PH, CX, YS, R, SOGLIA } from '../../src/lib/portico.mjs';
+import { fonteDiNextstop } from '../../src/lib/fonti-nextstop.mjs';
 
 const QUI = path.dirname(fileURLToPath(import.meta.url));
 const RADICE = path.join(QUI, '../..');
@@ -244,7 +245,8 @@ if (leggi('app.js').includes('CALCOLO')) {
     const tY = tappeYaml.find(x => x.id === t.id) ?? lY, tT = (lY ? testiLocali : testiTappe)[t.id] ?? {};
     const idFatti = [tY.orari, tY.prezzi, tY.viaggio, tY.perche, tY.rinomatoPer?.scheda, ...(tT.usa ?? [])].filter(Boolean);
     const usati = idFatti.map(id => fatti.find(f => f.id === id)).filter(Boolean);
-    const idFonti = [...new Set([...usati.flatMap(f => f.fonti ?? []), ...(tT.fonti ?? []), tY.durataFonte].filter(Boolean))];
+    // come nel sito (src/lib/fonti-nextstop.mjs): le fonti delle regate non entrano negli elenchi pubblici
+    const idFonti = [...new Set([...usati.flatMap(f => f.fonti ?? []), ...(tT.fonti ?? []), tY.durataFonte].filter(Boolean))].filter(fonteDiNextstop);
     DATI.tappe[t.id].scheda = {
       alt: alt ? testo(alt) : '', credito: credito ? testo(credito) : '',
       testo: [...corpo.matchAll(/<div class="testo it-sch__testo">([\s\S]*?)<\/div>/g)].map(m => [...m[1].matchAll(/<p>([\s\S]*?)<\/p>/g)].map(p => testo(p[1]))).flat(),
