@@ -46,3 +46,12 @@ test('la ricerca approvata trova i biglietti di Sansevero anche con costo al sin
  const corpus=equivalente(normalizza([s.titolo,s.descrizione,...s.parole].join(' ')));
  assert.ok(corpus.includes(equivalente(normalizza('costo'))));
 });
+
+test('ogni durata attribuita al gestore è riconoscibile nella descrizione del documento',()=>{
+ const tappe=yaml.load(fs.readFileSync(new URL('../src/data/tappe.yaml',import.meta.url),'utf8'));
+ for(const t of tappe.filter(t=>t.durataFonte)){
+  const s=registro.find(s=>s.id===t.durataFonte);
+  assert.ok(s.durate.includes(t.id),t.id);
+  assert.match(s.descrizione,/durata|tempo/i,`${t.id}: la durata deve essere trovabile dal testo visibile`);
+ }
+});

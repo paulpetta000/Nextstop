@@ -1,0 +1,6 @@
+
+> check:links
+> node scripts/check-links.mjs
+
+12 pagine, 880 link interni controllati
+Nessun link rotto

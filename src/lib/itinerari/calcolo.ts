@@ -240,7 +240,7 @@ export function calcolaGiorno(C: Citta, it: Itinerario, g: number, adesso?: Ades
     if (e.ritardo) avvisi.push({ tipo: 'evento-tardi', ritardo: e.ritardo });
   }
   // la giornata non ci sta: si propongono le ultime tappe che finiscono oltre (l'evento resta dov'è)
-  if (t > G.fine) {
+  if (restano.length && t > G.fine) {
     const daSpostare = voci.filter((v): v is Extract<Voce, { tipo: 'tappa' }> => v.tipo === 'tappa' && !v.fatta && v.fine > G.fine && v.id !== C.evento?.id && !v.inCorso).map(v => v.id);
     avvisi.push({ tipo: 'piena', fine: t, limite: G.fine, daSpostare });
   }

@@ -3,10 +3,29 @@ const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').
 // Equivalenze lessicali su parole già presenti: non sono nuove relazioni con i fatti.
 const searchNormalize = text => normalize(text).split(' ').map(word => /^(costo|costi|prezzo|prezzi|tariffa|tariffe)$/.test(word) ? 'costo' : /^bigliett[oi]$/.test(word) ? 'biglietto' : word).join(' ');
 for (const root of document.querySelectorAll('.fonti-pannello')) {
+  // Gli stili sono già nell'HTML offline. Li attiviamo prima che il pannello
+  // entri nello schermo, senza caricare il suo carattere durante l'apertura.
+  const style = root.querySelector('[data-fonti-stile]');
+  const activate = () => { if (style.media !== 'all') style.media = 'all'; observer?.disconnect(); };
+  let observer;
+  if ('IntersectionObserver' in window) {
+    observer = new IntersectionObserver(entries => {
+      if (entries.some(entry => entry.isIntersecting)) activate();
+    }, { rootMargin: '1500px' });
+    observer.observe(root);
+  } else activate();
+  root.addEventListener('focusin', activate);
+  const hashTarget = () => {
+    let target;
+    try { target = document.getElementById(decodeURIComponent(location.hash.slice(1))); } catch { return; }
+    if (target && root.contains(target)) activate();
+  };
+  addEventListener('hashchange', hashTarget); hashTarget();
   const disclosure=root.querySelector('.disclosure');
   let initialized=false;
   const start=()=>{
     if(initialized||!disclosure.open)return;
+    activate();
     initialized=true;
     initPannello(root);
   };

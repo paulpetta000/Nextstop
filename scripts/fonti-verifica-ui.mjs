@@ -5,7 +5,7 @@ import assert from 'node:assert/strict';
 const require=createRequire('C:/Users/Windows11/tools/controlli/package.json');
 const puppeteer=require('puppeteer-core');
 const axe=fs.readFileSync(require.resolve('axe-core/axe.min.js'),'utf8');
-const dir='docs/storico/fonti-blocco-5-verifiche';
+const dir=process.env.FONTI_VERIFY_DIR||'docs/storico/fonti-blocco-5-verifiche';
 const browser=await puppeteer.launch({executablePath:'C:/Program Files/Google/Chrome/Application/chrome.exe',headless:true,args:['--disable-background-networking','--disable-component-update','--no-first-run']});
 const errors=[],external=[],rows=[],scans=[],behavior=[];
 const page=await browser.newPage();
@@ -28,7 +28,20 @@ const load=async(path,theme,width=390)=>{
 try{
  for(const path of ['/fonti/','/napoli/itinerari/','/napoli/dove-mangiare/','/note-legali/'])for(const theme of ['light','dark']){
   await load(path,theme);
+  let saved;
+  if(path==='/napoli/itinerari/'){
+   const elenco=Array.from({length:51},(_,n)=>({id:`fittizio${n}`,nome:`Itinerario fittizio ${n}`,giorni:[{inizio:570,fine:1140,tappe:['duomo']}],creato:1,modificato:1,data:'2030-10-13'}));
+   saved=JSON.stringify({v:1,attivo:elenco[50].id,elenco});
+   await page.evaluate(value=>localStorage.setItem('itinerari-v1',value),saved);
+   await page.reload({waitUntil:'networkidle0'});
+   assert.equal(await page.$eval('#it-nome-testo',e=>e.textContent),'Itinerario fittizio 50');
+  }
   const area=path==='/fonti/'?'.fonti-atlante':'.fonti-pannello';
+  if(path.startsWith('/napoli/')){
+   const deferred=await page.$eval('[data-fonti-stile]',e=>e.media);
+   assert.equal(deferred,'print','Gli stili Fonti restano rinviati durante l’apertura');
+   behavior.push({path,theme,deferred});
+  }
   for(const width of [320,375,390,768,1280])for(const open of [false,true]){
    await page.setViewport({width,height:844});
    await page.evaluate(({area,open})=>document.querySelectorAll(area+' .topic, '+area+' .disclosure').forEach(d=>d.open=open),{area,open});await frame();
@@ -42,6 +55,7 @@ try{
    }
   }
   await page.setViewport({width:390,height:844});
+  if(path.startsWith('/napoli/'))assert.equal(await page.$eval('[data-fonti-stile]',e=>e.media),'all','Gli stili sono attivi nel pannello aperto');
   await page.addStyleTag({content:'*{transition:none!important}'});await page.addScriptTag({content:axe});
   const violations=await page.evaluate(async()=>{const r=await axe.run(document,{runOnly:{type:'tag',values:['wcag2a','wcag2aa','wcag21aa','wcag22aa']}});return r.violations.map(v=>({id:v.id,impact:v.impact,nodes:v.nodes.map(n=>n.target)}));});
   scans.push({path,theme,violations});
@@ -59,15 +73,16 @@ try{
   await page.goBack({waitUntil:'networkidle0'});await frame();
   const returned=await page.$eval(input,e=>e.value);assert.equal(returned,'nennella');
   assert.equal(await page.evaluate(()=>localStorage.getItem('nextstop-fonti-prova')),'itinerario fittizio, senza dati personali');
+  if(saved){assert.equal(await page.evaluate(()=>localStorage.getItem('itinerari-v1')),saved);assert.equal(await page.$eval('#it-nome-testo',e=>e.textContent),'Itinerario fittizio 50');}
   await page.evaluate(()=>localStorage.removeItem('nextstop-fonti-prova'));original=null;
   await page.focus(input);const keyboard=[];
   for(let n=0;n<8;n++){await page.keyboard.press('Tab');await frame();keyboard.push(await page.evaluate(()=>{const e=document.activeElement,r=e.getBoundingClientRect();return {tag:e.tagName,text:e.textContent.slice(0,75),top:r.top,bottom:r.bottom};}));}
   behavior.push({path,theme,tasks,returned,storagePreserved:true,keyboard});
  }
- for(const path of ['/fonti/','/napoli/itinerari/','/napoli/dove-mangiare/']){
-  await page.setJavaScriptEnabled(false);await load(path,'light');
+ for(const path of ['/fonti/','/napoli/itinerari/','/napoli/dove-mangiare/'])for(const theme of ['light','dark']){
+  await page.setJavaScriptEnabled(false);await load(path,theme);
   await page.evaluate(()=>document.querySelectorAll('.topic,.disclosure').forEach(d=>d.open=true));
-  const count=await page.$$eval('.source-link',as=>as.filter(a=>a.getClientRects().length).length);assert.ok(count>0);behavior.push({path,nojs:count});
+  const count=await page.$$eval('.source-link',as=>as.filter(a=>a.getClientRects().length).length);assert.ok(count>0);behavior.push({path,theme,nojs:count});
   await page.setJavaScriptEnabled(true);
  }
  await load('/fonti/','light');await page.click('.tail a');assert.ok(page.url().endsWith('/note-legali/#foto'));
@@ -88,7 +103,5 @@ try{
  fs.writeFileSync(`${dir}/movimento.json`,JSON.stringify(movement,null,2)+'\n');
  console.log(JSON.stringify({layouts:rows.length,axe:scans,errors,external,behavior:behavior.length},null,2));
  fs.writeFileSync(`${dir}/ui.json`,JSON.stringify({rows,scans,behavior,errors,external},null,2)+'\n');
- // L’errore del compositore è documentato prima di questo blocco; niente correzioni fuori ambito.
- const nuovi=errors.filter(e=>e.message!=="Cannot read properties of undefined (reading 'id')");
- assert.deepEqual(nuovi,[]);assert.deepEqual(external,[]);assert.ok(scans.every(s=>!s.violations.length));
+ assert.deepEqual(errors,[]);assert.deepEqual(external,[]);assert.ok(scans.every(s=>!s.violations.length));
 }finally{await browser.close();}

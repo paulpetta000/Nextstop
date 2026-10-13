@@ -1,0 +1,482 @@
+[
+  {
+    "theme": "light",
+    "width": 375,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 608.78125,
+    "bottom": 652.78125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 375,
+    "direction": "Tab",
+    "tag": "SUMMARY",
+    "top": 677.78125,
+    "bottom": 765.78125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 375,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 493.8125,
+    "bottom": 537.8125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 375,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 756.78125,
+    "bottom": 800.78125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 375,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 490.75,
+    "bottom": 541.75,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 375,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 764.71875,
+    "bottom": 808.71875,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 375,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 490.75,
+    "bottom": 541.75,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 375,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 227.78125,
+    "bottom": 271.78125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 375,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 493.8125,
+    "bottom": 537.8125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 375,
+    "direction": "Shift+Tab",
+    "tag": "SUMMARY",
+    "top": 232.78125,
+    "bottom": 320.78125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 375,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 174.78125,
+    "bottom": 218.78125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 375,
+    "direction": "Shift+Tab",
+    "tag": "INPUT",
+    "top": 433.71875,
+    "bottom": 485.71875,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 378.515625,
+    "bottom": 422.515625,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "direction": "Tab",
+    "tag": "SUMMARY",
+    "top": 449.015625,
+    "bottom": 541.015625,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 683.5625,
+    "bottom": 727.5625,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 482.921875,
+    "bottom": 526.921875,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 688.28125,
+    "bottom": 732.28125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 482.328125,
+    "bottom": 526.328125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 251.28125,
+    "bottom": 295.28125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 164.921875,
+    "bottom": 208.921875,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 482.5625,
+    "bottom": 526.5625,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "direction": "Shift+Tab",
+    "tag": "SUMMARY",
+    "top": 259.015625,
+    "bottom": 351.015625,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 199.515625,
+    "bottom": 243.515625,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "light",
+    "width": 1280,
+    "direction": "Shift+Tab",
+    "tag": "INPUT",
+    "top": 76.328125,
+    "bottom": 128.328125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 375,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 608.78125,
+    "bottom": 652.78125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 375,
+    "direction": "Tab",
+    "tag": "SUMMARY",
+    "top": 677.78125,
+    "bottom": 765.78125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 375,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 493.8125,
+    "bottom": 537.8125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 375,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 756.78125,
+    "bottom": 800.78125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 375,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 490.75,
+    "bottom": 541.75,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 375,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 764.71875,
+    "bottom": 808.71875,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 375,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 490.75,
+    "bottom": 541.75,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 375,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 227.78125,
+    "bottom": 271.78125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 375,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 493.8125,
+    "bottom": 537.8125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 375,
+    "direction": "Shift+Tab",
+    "tag": "SUMMARY",
+    "top": 232.78125,
+    "bottom": 320.78125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 375,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 174.78125,
+    "bottom": 218.78125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 375,
+    "direction": "Shift+Tab",
+    "tag": "INPUT",
+    "top": 433.71875,
+    "bottom": 485.71875,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 378.515625,
+    "bottom": 422.515625,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "direction": "Tab",
+    "tag": "SUMMARY",
+    "top": 449.015625,
+    "bottom": 541.015625,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 683.5625,
+    "bottom": 727.5625,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 482.921875,
+    "bottom": 526.921875,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 688.28125,
+    "bottom": 732.28125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "direction": "Tab",
+    "tag": "A",
+    "top": 482.328125,
+    "bottom": 526.328125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 251.28125,
+    "bottom": 295.28125,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 164.921875,
+    "bottom": 208.921875,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 482.5625,
+    "bottom": 526.5625,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "direction": "Shift+Tab",
+    "tag": "SUMMARY",
+    "top": 259.015625,
+    "bottom": 351.015625,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "direction": "Shift+Tab",
+    "tag": "A",
+    "top": 199.515625,
+    "bottom": 243.515625,
+    "outline": "solid",
+    "hidden": false
+  },
+  {
+    "theme": "dark",
+    "width": 1280,
+    "direction": "Shift+Tab",
+    "tag": "INPUT",
+    "top": 76.328125,
+    "bottom": 128.328125,
+    "outline": "solid",
+    "hidden": false
+  }
+]

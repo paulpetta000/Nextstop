@@ -6,7 +6,7 @@ import { tutteLeFonti } from '../lib/fatti';
 import { fontiPerPagina } from '../lib/fonti-nextstop.mjs';
 import { registroFonti, ordinaFonti, slugFonte } from '../lib/fonti-registro.mjs';
 import Documento from './fonti/Documento.astro';
-import '../styles/fonti-pannello.css';
+import stilePannello from '../styles/fonti-pannello.css?raw';
 interface Props { fatti?: Iterable<Fatto>; extra?: Fonte[]; testi?: TestiPagina | TestiPagina[]; cautela?: boolean; tappe?: CollectionEntry<'tappe'>[]; perimetro?: string; id?: string }
 const { fatti=[], extra=[], cautela=false, tappe=[], perimetro='', id='fonti' }=Astro.props;
 const testi=[Astro.props.testi??[]].flat();
@@ -17,6 +17,8 @@ const segno=cautela||testi.some(t=>t.cautela);
 const cerca=fonti.length>5;
 ---
 {fonti.length>0 && <section class="fonti-pannello section" aria-labelledby={`${id}-h`}>
+  <style is:inline data-fonti-stile media="print" set:html={stilePannello}></style>
+  <noscript><style is:inline set:html={stilePannello}></style></noscript>
   <div class="wrap fonti variant-d">
     <h2 class="sr" id={`${id}-h`}>Fonti di questa pagina</h2>
     <div class="essential">
@@ -37,3 +39,8 @@ const cerca=fonti.length>5;
   </div>
 </section>}
 <script>import '../scripts/fonti/pannello';</script>
+<style is:global>
+  /* Il pannello è sotto il contenuto: resta HTML nativo, anche senza JavaScript. */
+  .fonti-pannello { content-visibility: auto; contain-intrinsic-block-size: auto 19rem; }
+  @media print { .fonti-pannello { content-visibility: visible; } }
+</style>

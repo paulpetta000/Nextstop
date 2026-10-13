@@ -1,0 +1,34 @@
+[
+  {
+    "width": 390,
+    "hour": 10,
+    "errors": [],
+    "emptyVisible": true,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 10:00 con l'ora del telefono"
+  },
+  {
+    "width": 390,
+    "hour": 20,
+    "errors": [
+      "TypeError: Cannot read properties of undefined (reading 'id')\n    at Ue (http://127.0.0.1:4322/_astro/index.astro_astro_type_script_index_0_lang.R76b9ZfN.js:2:27113)\n    at Ve (http://127.0.0.1:4322/_astro/index.astro_astro_type_script_index_0_lang.R76b9ZfN.js:2:25755)\n    at Y (http://127.0.0.1:4322/_astro/index.astro_astro_type_script_index_0_lang.R76b9ZfN.js:2:24465)\n    at De (http://127.0.0.1:4322/_astro/index.astro_astro_type_script_index_0_lang.R76b9ZfN.js:36:24554)\n    at <anonymous> (http://127.0.0.1:4322/_astro/index.astro_astro_type_script_index_0_lang.R76b9ZfN.js:2:20768)"
+    ],
+    "emptyVisible": true,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 20:00 con l'ora del telefono"
+  },
+  {
+    "width": 1280,
+    "hour": 10,
+    "errors": [],
+    "emptyVisible": true,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 10:00 con l'ora del telefono"
+  },
+  {
+    "width": 1280,
+    "hour": 20,
+    "errors": [
+      "TypeError: Cannot read properties of undefined (reading 'id')\n    at Ue (http://127.0.0.1:4322/_astro/index.astro_astro_type_script_index_0_lang.R76b9ZfN.js:2:27113)\n    at Ve (http://127.0.0.1:4322/_astro/index.astro_astro_type_script_index_0_lang.R76b9ZfN.js:2:25755)\n    at Y (http://127.0.0.1:4322/_astro/index.astro_astro_type_script_index_0_lang.R76b9ZfN.js:2:24465)\n    at De (http://127.0.0.1:4322/_astro/index.astro_astro_type_script_index_0_lang.R76b9ZfN.js:36:24554)\n    at <anonymous> (http://127.0.0.1:4322/_astro/index.astro_astro_type_script_index_0_lang.R76b9ZfN.js:2:20768)"
+    ],
+    "emptyVisible": true,
+    "when": "Martedì 13 ottobre · dalle 9:30 alle 19:00 · oggi: ricalcolato alle 20:00 con l'ora del telefono"
+  }
+]
