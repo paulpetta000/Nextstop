@@ -184,13 +184,18 @@ Sanità non sa quanto ci mette ad arrivarci, e «C'è un ordine più corto» tie
 - **Lontano dalle tappe**: tra 500 e 800 m dalla più vicina «stima incerta»; oltre 800 m niente minuti («Sei lontano dalle nostre tappe:
   il primo tratto non lo sappiamo stimare») e l'ordine parte dalla tappa più vicina al punto. Il ritorno di «Torno lì» è sempre stimato.
 
-**Trovare l'alloggio** (da decidere). Consiglio: **tutto dal sito, nessun servizio esterno**:
-- il **nome** dall'elenco degli alloggi di OpenStreetMap (hotel, B&B, ostelli, case vacanza): file nostro con data e licenza ODbL, che si
-  carica solo quando apri «Da dove parti?»; chi non trova il suo (gli elenchi liberi non hanno tutti i B&B) passa al punto dopo;
-- **sulla mappa**: tocchi il punto o sposti il segnaposto (anche con i tasti freccia), oppure scegli la **via** dall'elenco delle vie e poi
-  lo sposti.
+**Trovare l'alloggio** (da decidere; ricerca `ricerca/2026-10-13-da-dove-parti.md`). Su OpenStreetMap (13/10/2026) nel Comune ci sono
+**441 alloggi** (188 hotel, 213 B&B e affittacamere, 17 ostelli, 23 case vacanza), 428 con il nome: l'elenco pesa circa 6 KB compressi.
+Ma le strutture extralberghiere censite dal Comune sarebbero **6.168** (dato 2024 in una nota della Regione, da rileggere nel PDF): chi
+dorme in un B&B **di solito non trova il suo nome**. Quindi la mappa e la via sono la strada normale, non un ripiego. Consiglio: **tutto dal
+sito, nessun servizio esterno**:
+- **sulla mappa**: tocchi il punto o sposti il segnaposto (anche con i tasti freccia), oppure scegli la **via** dall'elenco delle vie di
+  OpenStreetMap e poi lo sposti;
+- il **nome** dall'elenco degli alloggi di OpenStreetMap: file nostro con data e licenza ODbL, che si carica solo quando apri «Da dove parti?»;
+- «Dove sono», se sei già lì.
 - Alternativa: l'indirizzo con Nominatim (il servizio di OpenStreetMap), dopo un tocco. Più preciso, ma l'indirizzo dell'hotel va a un
-  server esterno: avviso, pagina Privacy, condizioni d'uso del servizio.
+  server esterno; le sue regole vietano la ricerca mentre scrivi (si cerca solo premendo «Cerca»), chiedono al massimo una richiesta al
+  secondo, l'attribuzione e di non mandare dati personali. Servirebbero avviso, pagina Privacy e un interruttore per spegnerlo.
 - Nessun link a siti di prenotazione e nessun giudizio sugli alloggi: l'elenco serve solo a trovare un punto.
 
 **Privacy**
