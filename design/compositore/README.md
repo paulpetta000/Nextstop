@@ -3,6 +3,35 @@
 Proposte con i dati veri di «Due giorni a Napoli»: orari, tempi a piedi e percorsi calcolati dal sito (giorno feriale), foto e
 caratteri del sito. Regola di Enrico: 4 proposte molto diverse per pezzo, si itera su quello che va. Specifica: `specifiche/compositore.md`.
 
+# Pezzo 7: mangiare nella giornata
+
+Specifica §7. Quattro proposte dentro C e D: nella striscia in alto si sceglie la proposta (1-4) e la vista; **Sera** porta i giorni
+alle 22:00 e fa comparire anche la cena. Cartella `mangiare-giro-1/` (nata da `mappa-giro-1/`, con la mappa a pezzi scelta, più `mangiare.css`).
+
+## Giro 1 (14/10/2026) · https://claude.ai/artifact/Ka4wHT2GqRZkCqo3p6apXZ
+| | Nella giornata | Toccando |
+|---|---|---|
+| **1 · La sosta** | la pausa pranzo diventa «Qui puoi fermarti a mangiare», con i tre locali aperti più vicini nella riga | un locale apre la sua scheda con «Mangia qui»; «Tutti» apre l'elenco con i filtri e, in fondo, i chiusi a quell'ora |
+| **2 · Il menù** | una riga piccola, «Il menù del pranzo» | un foglio come la carta di un ristorante: i locali per tipo, i puntini fino ai minuti, fino a che ora sono aperti; in cima «A piedi: 5, 10, 20 min» |
+| **3 · Sulla mappa** | una piccola mappa disegnata con i cerchi e i locali | la mappa intorno a dove sarai: cerchi di 5 e 10 minuti, locali pieni se aperti e vuoti se chiusi; toccandone uno, la sua carta sotto |
+| **4 · Lungo la strada** | cartoline in fila (in D appese a un filo), dal locale che allunga meno la strada verso la tappa dopo: «di passaggio» (fino a 2 min) o «+8 min» | la scheda con «Mangia qui»; «Tutti» apre l'elenco in quell'ordine |
+
+In tutte: la riga compare dove sarai all'ora del pasto. **Pranzo** (12:30–14:30) = la pausa pranzo del pezzo 1 (dopo la tappa dove si
+mangia o quella che finisce più vicino alle 13); **cena** (19:30–21:30) dopo l'ultima tappa, se il giorno arriva almeno alle 20:30.
+Niente riga se a quell'ora c'è già un locale nel giorno. I minuti sono quelli veri dalla tappa prima (`tempi-tappe` del sito); aperto o
+chiuso all'arrivo con gli orari scritti dai locali (`orarioLocale` del sito; senza data, i giorni in cui hanno l'orario). Per il pranzo:
+locali da pranzo e di cibo di strada, non le pasticcerie. **Mangia qui** mette il locale nel giorno al posto della pausa pranzo (con
+«Annulla»); per la cena, se arrivi prima delle 19:30, si aggiunge un «Tempo libero» fino alla cena. **No, grazie** toglie la proposta
+per quel giorno (la pausa pranzo resta). Niente si aggiunge da solo. Se vicino è tutto chiuso, lo dice e indica il più vicino aperto.
+Con i dati di oggi (32 locali) dopo via dei Tribunali, alle 12:25, gli aperti a 10 minuti sono tre (Di Matteo, Port'Alba, Gesù Vecchio):
+i locali nuovi del pezzo 8 ne aggiungeranno.
+Da decidere con Enrico: la cena dopo l'ultima tappa (la specifica dice «se la giornata attraversa la cena»); quanti minuti al massimo.
+Controlli (14/10/2026): axe pulito in 112 controlli (4 proposte, C e D, telefono e computer, chiaro e scuro, riga, fogli, mappa, sera);
+nessuno scorrimento di lato a 320 e 390 px; nessun errore nella pagina (solo l'icona del server di prova); prove dei gesti: Mangia qui,
+Annulla, No, grazie, cena con il tempo libero. Immagini: `mangiare-giro-1/immagini/*.jpg`.
+Rifare: `npm run build`, `node design/compositore/genera.mjs mangiare-giro-1`; con il server della copia acceso (porta 4333)
+`node design/compositore/mangiare-giro-1/prove/axe.cjs 4333 <cartella immagini>`.
+
 # Pezzo 6: la mappa (strada A, anche senza rete)
 
 Specifica §6 (deciso il 14/10/2026). Cartella `mappa-giro-1/` (nata da `ricerca-giro-2/`, segno 4 fisso). Numeri: `ricerca/2026-10-14-mappa-peso.md`.

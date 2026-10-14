@@ -1,0 +1,192 @@
+/* Pezzo 7 · mangiare nella giornata: la riga del pasto nelle quattro proposte (C e D), i fogli (elenco, menù, mappa) e i locali sulla mappa */
+:root.pc { --cibo: #2B7A57; --cibo-chiaro: #E2F3EA; --cibo-su: #FFFFFF; }
+:root.pd { --cibo: #A64B22; --cibo-chiaro: #F8E9DF; --cibo-su: #FFFFFF; }
+@media (prefers-color-scheme: dark) {
+  :root.pc:not([data-theme="light"]) { --cibo: #6FD0A8; --cibo-chiaro: #14302A; --cibo-su: #0A0F27; }
+  :root.pd:not([data-theme="light"]) { --cibo: #F0A070; --cibo-chiaro: #3A2418; --cibo-su: #141311; }
+}
+:root.pc[data-theme="dark"] { --cibo: #6FD0A8; --cibo-chiaro: #14302A; --cibo-su: #0A0F27; }
+:root.pd[data-theme="dark"] { --cibo: #F0A070; --cibo-chiaro: #3A2418; --cibo-su: #141311; }
+
+/* ---------- pezzi comuni ---------- */
+.pm-ora { display: block; font-weight: 700; font-stretch: 112%; font-size: 13px; color: var(--cibo); letter-spacing: .01em; }
+.pm-ic { width: 30px; height: 30px; flex: none; border-radius: 50%; display: grid; place-items: center; background: var(--cibo); color: var(--cibo-su); }
+.pm-piede { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 6px 0 0; }
+.pm-link { min-height: 44px; padding: 0 2px; font-weight: 600; font-size: 14px; color: var(--ink2); text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 3px; }
+.pm-link--no { margin-left: auto; }
+.c-pasto, .d-pasto { list-style: none; min-width: 0; max-width: 100%; }
+.pm1, .pm3, .pm4, .pm4__filo, .pm1__scelte, .pm4__carte { min-width: 0; }
+.pc .c-pasto { padding: 8px 0 6px; }
+.pd .d-pasto { width: calc(100% - 28px); margin: 22px auto 0; }
+.pd .d-pasto + .d-tratto { height: 108px; }
+.pd .d-pasto .pm-ora { font: italic 500 15px/1.2 "Bodoni Moda", Georgia, serif; letter-spacing: 0; }
+.pc .in-modifica-lista > .c-pasto, .pd .in-modifica-lista > .d-pasto { display: none; }
+
+/* ---------- 1 · la sosta: i tre più vicini nella riga ---------- */
+.pm1__testa { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: start; margin: 0; padding: 0 6px; }
+.pm1__testa .pm-ic { justify-self: center; margin-top: 2px; }
+.pm1__tit { display: block; font-weight: 650; font-size: 16px; line-height: 1.25; }
+.pm1__testa small { display: block; font-size: 13.5px; line-height: 1.35; color: var(--ink2); margin-top: 2px; }
+.pm1__scelte { display: flex; gap: 8px; overflow-x: auto; scroll-snap-type: x mandatory; padding: 10px 6px 4px 52px; margin: 0; list-style: none; scrollbar-width: none; }
+.pm1__scelte::-webkit-scrollbar { display: none; }
+.pm1__scelte li { flex: none; scroll-snap-align: start; }
+.pm1__l, .pm1__tutti { min-height: 56px; display: grid; align-content: center; gap: 1px; padding: 8px 14px; border-radius: 14px; text-align: left; background: var(--cibo-chiaro); color: var(--ink); transition: background-color 200ms, translate 200ms var(--entra); }
+.pm1__l b { font-weight: 650; font-size: 15px; white-space: nowrap; }
+.pm1__l small { font-size: 12.5px; color: var(--ink2); white-space: nowrap; }
+.pm1__tutti { display: flex; align-items: center; gap: 6px; font-weight: 650; font-size: 14px; color: var(--cibo); background: none; box-shadow: inset 0 0 0 1.5px var(--cibo); }
+@media (hover: hover) { .pm1__l:hover { translate: 0 -2px; } }
+.pc .pm1 .pm-piede { padding-left: 52px; }
+.pd .pm1 { padding: 16px 16px 10px; background: var(--carta); border-radius: 3px; box-shadow: 0 1px 2px rgba(40, 34, 20, .1), 0 12px 22px -16px rgba(40, 34, 20, .55), 0 0 0 1px var(--riga); rotate: .6deg; }
+.pd .pm1__testa { padding: 0; grid-template-columns: 44px minmax(0, 1fr); }
+.pd .pm1__testa .pm-ic { width: 44px; height: 44px; background: none; color: var(--cibo); box-shadow: inset 0 0 0 1.5px var(--cibo); }
+.pd .pm1__tit { font: 600 19px/1.2 "Bodoni Moda", Georgia, serif; }
+.pd .pm1__scelte { padding: 12px 0 4px; }
+.pd .pm1__l { border-radius: 2px; background: var(--fondo); box-shadow: 0 0 0 1px var(--riga); border-top: 3px solid var(--cibo); }
+.pd .pm1__l b { font: 600 16px/1.2 "Bodoni Moda", Georgia, serif; }
+.pd .pm1__tutti { border-radius: 2px; }
+
+/* ---------- 2 · il menù: una riga piccola, il foglio come una carta ---------- */
+.pm2 { width: 100%; display: grid; grid-template-columns: 44px minmax(0, 1fr) auto; gap: 12px; align-items: center; min-height: 72px; padding: 10px 12px 10px 6px; border-radius: 18px; text-align: left; box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--cibo) 45%, transparent); }
+.pm2__carta { width: 38px; height: 48px; justify-self: center; display: grid; place-items: center; border-radius: 3px; background: var(--cibo-chiaro); box-shadow: inset 0 0 0 1px var(--cibo), inset 0 0 0 3px var(--cibo-chiaro), inset 0 0 0 4px color-mix(in srgb, var(--cibo) 50%, transparent); rotate: -4deg; }
+.pm2__carta i { font: italic 500 10px/1 "Bodoni Moda", Georgia, serif; color: var(--cibo); writing-mode: vertical-rl; rotate: 180deg; }
+.pm2__t b { display: block; font-weight: 650; font-size: 16px; line-height: 1.25; }
+.pm2__t small { display: block; font-size: 13.5px; line-height: 1.35; color: var(--ink2); margin-top: 2px; }
+.pm2__apri { display: inline-flex; align-items: center; gap: 2px; font-weight: 650; font-size: 14px; color: var(--cibo); }
+.pc .pm2 { margin: 0 0; }
+.pc .c-pasto.pm2 .pm-piede, .pc .pm2 + .pm-piede { padding-left: 62px; }
+.pd .pm2 { background: var(--carta); border-radius: 3px; box-shadow: 0 1px 2px rgba(40, 34, 20, .1), 0 12px 22px -16px rgba(40, 34, 20, .55), 0 0 0 1px var(--riga); rotate: -.7deg; padding: 14px 16px; }
+.pd .pm2__t b { font: 600 19px/1.2 "Bodoni Moda", Georgia, serif; }
+.pd .pm2 + .pm-piede { padding: 0 4px; }
+
+/* il foglio del menù */
+.f--menu .f-corpo { gap: 0; }
+.mn { display: grid; gap: 18px; padding: 4px 4px 0; }
+.mn-testa { margin: 0; text-align: center; display: grid; gap: 4px; padding-bottom: 14px; border-bottom: 1px solid var(--f-riga); position: relative; }
+.mn-testa::after { content: "✦"; position: absolute; left: 50%; bottom: -.62em; translate: -50% 0; padding: 0 10px; background: var(--f-sup); color: var(--cibo); font-size: 13px; }
+.mn-testa i { font: italic 500 40px/1 "Bodoni Moda", Georgia, serif; color: var(--cibo); }
+.mn-testa span { font-size: 14px; color: var(--ink2); }
+.mn-quanto { display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px; }
+.mn-quanto span { font-size: 13.5px; color: var(--ink2); margin-right: 4px; }
+.mn-quanto button { min-height: 44px; padding: 0 14px; border-radius: 999px; font-weight: 650; font-size: 14px; box-shadow: inset 0 0 0 1.5px var(--f-riga); transition: background-color 200ms, color 200ms; }
+.mn-quanto button[aria-pressed="true"] { background: var(--cibo); color: var(--cibo-su); box-shadow: none; }
+.mn-gruppo h3 { margin: 0 0 4px; font: 700 12px/1.2 "Archivo", system-ui, sans-serif; font-stretch: 118%; letter-spacing: .14em; text-transform: uppercase; color: var(--cibo); text-align: center; }
+.mn-gruppo ul { list-style: none; margin: 0; padding: 0; }
+.mn-v summary { list-style: none; display: grid; grid-template-columns: auto minmax(12px, 1fr) auto; align-items: baseline; column-gap: 6px; padding: 10px 2px; min-height: 48px; cursor: pointer; border-radius: 8px; }
+.mn-v summary::-webkit-details-marker { display: none; }
+.mn-nome { font: 600 18px/1.25 "Bodoni Moda", Georgia, serif; }
+.mn-punti { border-bottom: 2px dotted color-mix(in srgb, var(--ink2) 55%, transparent); translate: 0 -4px; }
+.mn-min { font-weight: 700; font-size: 14px; color: var(--cibo); white-space: nowrap; }
+.mn-sotto { grid-column: 1 / -1; font: italic 500 14px/1.3 "Bodoni Moda", Georgia, serif; color: var(--ink2); }
+.mn-v--chiuso .mn-nome, .mn-v--chiuso .mn-min { color: var(--ink2); }
+.mn-v--chiuso .mn-nome { text-decoration: line-through; text-decoration-thickness: 1px; }
+.mn-dentro { padding: 2px 2px 12px; display: grid; gap: 10px; }
+.mn-dentro p { margin: 0; font-size: 15px; line-height: 1.45; }
+.mn-az { display: flex; flex-wrap: wrap; gap: 8px; }
+.mn-vuoto, .mn-piede { margin: 0; text-align: center; font-size: 14px; color: var(--ink2); }
+.mn-piede { font: italic 500 14px/1.4 "Bodoni Moda", Georgia, serif; padding-top: 6px; border-top: 1px solid var(--f-riga); }
+@media (prefers-reduced-motion: no-preference) {
+  .mn-v[open] .mn-dentro { animation: pm-entra 260ms var(--entra); }
+}
+@keyframes pm-entra { from { opacity: 0; translate: 0 -6px; } }
+
+/* ---------- 3 · sulla mappa: la mini mappa nella riga, il foglio con i cerchi ---------- */
+.pm3 { display: grid; grid-template-columns: 104px minmax(0, 1fr); gap: 4px 14px; align-items: center; padding: 4px 6px; }
+.pm3__mappa { width: 104px; height: 84px; border-radius: 16px; overflow: hidden; background: var(--m-terra, var(--sup2)); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--cibo) 50%, transparent); }
+.pm3__svg { width: 100%; height: 100%; display: block; }
+.mm-s0, .mm-s1, .mm-s2 { fill: none; stroke: color-mix(in srgb, var(--ink2) 35%, transparent); stroke-linecap: round; stroke-linejoin: round; }
+.mm-s0 { stroke-width: 9; } .mm-s1 { stroke-width: 6; } .mm-s2 { stroke-width: 4; }
+.mm-giro { fill: color-mix(in srgb, var(--cibo) 10%, transparent); stroke: var(--cibo); stroke-width: 3; stroke-dasharray: 8 7; }
+.mm-giro--5 { fill: color-mix(in srgb, var(--cibo) 14%, transparent); stroke-dasharray: none; stroke-width: 2.5; }
+.mm-l { fill: var(--cibo); stroke: var(--sup, #fff); stroke-width: 3; }
+.mm-l--chiuso { fill: var(--sup, #fff); stroke: var(--ink2); stroke-width: 3; }
+.mm-qui { fill: var(--m-segno, var(--acc)); stroke: var(--sup, #fff); stroke-width: 4; }
+.pm3__t b { display: block; font-weight: 650; font-size: 16px; line-height: 1.25; }
+.pm3__t small { display: block; font-size: 13.5px; line-height: 1.35; color: var(--ink2); margin-top: 2px; }
+.pm3__vai { display: inline-flex; align-items: center; gap: 6px; min-height: 40px; margin-top: 4px; font-weight: 650; font-size: 14px; color: var(--cibo); }
+.pm3 .pm-piede { grid-column: 1 / -1; }
+.pd .pm3 { padding: 14px; background: var(--carta); border-radius: 3px; box-shadow: 0 1px 2px rgba(40, 34, 20, .1), 0 12px 22px -16px rgba(40, 34, 20, .55), 0 0 0 1px var(--riga); rotate: .8deg; }
+.pd .pm3__mappa { border-radius: 2px; rotate: -2deg; box-shadow: 0 0 0 4px var(--fondo), 0 0 0 5px var(--riga); }
+.pd .pm3__t b { font: 600 19px/1.2 "Bodoni Moda", Georgia, serif; }
+
+.f--mappa-pasto .f-corpo { gap: 12px; }
+.pm3-mappa { position: relative; height: min(58dvh, 520px); border-radius: 18px; overflow: hidden; }
+.pm3-mappa .m { position: absolute; inset: 0; }
+.pm3-carta { position: absolute; left: 10px; right: 10px; bottom: 10px; z-index: 3; padding: 12px 14px; border-radius: 16px; background: var(--f-sup); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .45), 0 0 0 1px var(--f-riga); display: grid; gap: 10px; }
+.pm3-carta__t { margin: 0; display: grid; gap: 2px; }
+.pm3-carta__t b { font-weight: 650; font-size: 16px; }
+.pm3-carta__t small { font-size: 13.5px; color: var(--ink2); line-height: 1.35; }
+.pm3-carta__az { display: flex; gap: 8px; flex-wrap: wrap; }
+.pm3-elenco { justify-self: start; }
+.m-cerchi .m-giro { fill: color-mix(in srgb, var(--cibo) 8%, transparent); stroke: var(--cibo); stroke-width: calc(var(--u, 1) * 2); stroke-dasharray: calc(var(--u, 1) * 7) calc(var(--u, 1) * 6); }
+.m-cerchi .m-giro--5 { fill: color-mix(in srgb, var(--cibo) 12%, transparent); stroke-dasharray: none; }
+.m-giro__t { font: 700 calc(var(--u, 1) * 12px) "Archivo", system-ui, sans-serif; fill: var(--cibo); paint-order: stroke; stroke: var(--m-casing, #fff); stroke-width: calc(var(--u, 1) * 3); }
+.m-cibi { position: absolute; inset: 0; pointer-events: none; }
+.m-cibo { position: absolute; left: 0; top: 0; width: 30px; height: 30px; margin: -15px 0 0 -15px; border-radius: 50%; display: grid; place-items: center; pointer-events: auto; background: var(--cibo); color: var(--cibo-su); box-shadow: 0 0 0 2.5px var(--m-casing, #fff), 0 4px 10px -4px rgba(0, 0, 0, .5); }
+.m-cibo::after { content: ""; position: absolute; inset: -7px; border-radius: 50%; }
+.m-cibo--chiuso { background: var(--m-casing, #fff); color: var(--ink2); box-shadow: 0 0 0 2px var(--ink2); }
+.m-cibo[aria-current="true"] { width: 38px; height: 38px; margin: -19px 0 0 -19px; z-index: 2; box-shadow: 0 0 0 3px var(--m-casing, #fff), 0 0 0 6px var(--cibo); }
+
+/* ---------- 4 · lungo la strada: cartoline in fila, dal meno lontano ---------- */
+.pm4__testa { display: grid; grid-template-columns: 34px minmax(0, 1fr); gap: 12px; align-items: start; margin: 0; padding: 0 6px; }
+.pm4__testa .pm-ic { justify-self: center; margin-top: 2px; }
+.pm4__testa b { display: block; font-weight: 650; font-size: 16px; line-height: 1.25; }
+.pm4__filo { position: relative; }
+.pm4__carte { display: flex; gap: 10px; overflow-x: auto; scroll-snap-type: x mandatory; list-style: none; margin: 0; padding: 12px 6px 8px 52px; scrollbar-width: none; }
+.pm4__carte::-webkit-scrollbar { display: none; }
+.pm4__carte li { flex: none; scroll-snap-align: start; }
+.pm4__c { width: 136px; min-height: 118px; display: grid; align-content: start; gap: 3px; padding: 10px 12px; border-radius: 14px; text-align: left; background: var(--sup); box-shadow: 0 0 0 1px var(--riga); transition: translate 200ms var(--entra); }
+.pm4__c b { font-weight: 650; font-size: 15px; line-height: 1.2; }
+.pm4__c small { font-size: 12.5px; color: var(--ink2); line-height: 1.3; }
+.pm4__fino { margin-top: auto; }
+.pm4__dev { justify-self: start; padding: 2px 8px; border-radius: 999px; font-weight: 700; font-size: 12px; background: var(--sup2); color: var(--ink); margin-bottom: 4px; }
+.pm4__dev--si { background: var(--cibo); color: var(--cibo-su); }
+.pm4__c--tutti { align-content: center; justify-items: start; color: var(--cibo); background: none; box-shadow: inset 0 0 0 1.5px var(--cibo); }
+@media (hover: hover) { .pm4__c:hover { translate: 0 -3px; } }
+.pc .pm4 .pm-piede { padding-left: 52px; }
+/* in D: cartoline appese a un filo, con la molletta */
+.pd .pm4 { padding: 14px 0 6px; }
+.pd .pm4__testa { padding: 0 4px; grid-template-columns: 44px minmax(0, 1fr); }
+.pd .pm4__testa .pm-ic { width: 44px; height: 44px; background: none; color: var(--cibo); box-shadow: inset 0 0 0 1.5px var(--cibo); }
+.pd .pm4__testa b { font: 600 19px/1.2 "Bodoni Moda", Georgia, serif; }
+.pd .pm4__filo::before { content: ""; position: absolute; left: -14px; right: -14px; top: 22px; height: 18px; border-top: 1.5px solid color-mix(in srgb, var(--ink2) 60%, transparent); border-radius: 50% 50% 0 0 / 100% 100% 0 0; rotate: 180deg; pointer-events: none; }
+.pd .pm4__carte { padding: 26px 4px 12px; gap: 14px; }
+.pd .pm4__c { position: relative; border-radius: 2px; background: var(--carta); box-shadow: 0 1px 2px rgba(40, 34, 20, .12), 0 12px 20px -14px rgba(40, 34, 20, .6), 0 0 0 1px var(--riga); rotate: calc((var(--k, 0) - 1.5) * .9deg); transform-origin: 50% -10px; }
+.pd .pm4__c::before { content: ""; position: absolute; top: -13px; left: 50%; width: 10px; height: 22px; margin-left: -5px; border-radius: 2px; background: color-mix(in srgb, var(--cibo) 75%, var(--carta)); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .15); }
+.pd .pm4__c b { font: 600 17px/1.2 "Bodoni Moda", Georgia, serif; }
+.pd .pm4__c--tutti { background: var(--fondo); }
+.pd .pm4 .pm-piede { padding: 0 4px; }
+@media (hover: hover) { .pd .pm4__c:hover { rotate: 0deg; } }
+@media (prefers-reduced-motion: no-preference) {
+  .pm4__carte li { animation: pm-carta 360ms var(--entra) backwards; animation-delay: calc(var(--k, 0) * 50ms); }
+  .pm1__scelte li { animation: pm-carta 300ms var(--entra) backwards; }
+}
+@keyframes pm-carta { from { opacity: 0; translate: 16px 0; } }
+
+/* ---------- l'elenco (1 e 4) e la scheda del locale ---------- */
+.pl-quando { margin: 0; display: flex; gap: 8px; align-items: flex-start; font-size: 14.5px; line-height: 1.4; color: var(--ink2); }
+.pl-quando .ic { flex: none; color: var(--cibo); margin-top: 1px; }
+.pl-filtri { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; margin: 0 -20px; padding: 0 20px; }
+.pl-filtri .f-chip { flex: none; }
+.pl-filtri .f-chip[aria-pressed="true"] { background: var(--cibo); color: var(--cibo-su); outline: none; }
+.pl-filtri .f-chip:disabled { opacity: .45; }
+.pl-lista { list-style: none; margin: 0; padding: 0; display: grid; }
+.pl { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 6px; border-bottom: 1px solid var(--f-riga); }
+.pl__apri { display: grid; grid-template-columns: 52px minmax(0, 1fr); gap: 12px; align-items: center; min-height: 64px; padding: 8px 0; text-align: left; }
+.pl__min { display: grid; justify-items: center; font-weight: 750; font-size: 20px; line-height: 1; color: var(--cibo); }
+.pl__min small { font-weight: 600; font-size: 11px; color: var(--ink2); margin-top: 2px; text-align: center; }
+.pl__t b { display: block; font-weight: 650; font-size: 16px; }
+.pl__t small { display: block; font-size: 13px; color: var(--ink2); line-height: 1.35; margin-top: 2px; }
+.pl__si { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--cibo); color: var(--cibo-su); }
+.pl--chiuso .pl__min, .pl--chiuso .pl__t b { color: var(--ink2); }
+.pl__stato--stretto { color: var(--su-avviso); background: var(--avviso); padding: 0 6px; border-radius: 999px; }
+.pl__stato--chiuso { font-weight: 600; }
+.pl-chiusi summary { min-height: 44px; display: flex; align-items: center; font-weight: 650; color: var(--ink2); cursor: pointer; }
+.pl-vuoto { margin: 0; color: var(--ink2); }
+.pl-stato-grande { margin: 0; display: flex; gap: 8px; align-items: center; font-weight: 600; font-size: 15px; padding: 10px 12px; border-radius: 12px; background: var(--cibo-chiaro); color: var(--ink); }
+.pl-stato-grande.pl__stato--chiuso { background: var(--sup2, var(--f-sup2)); }
+.pl-stato-grande.pl__stato--stretto { background: var(--avviso); color: var(--su-avviso); }
+.pl-scegli { background: var(--cibo); color: var(--cibo-su); }
+.f--pasto .f-bottone:not(.f-bottone--contorno) { background: var(--cibo); color: var(--cibo-su); }
+.pd #foglio.f--pasto .pl__t b, .pd .f--pasto .pl__t b { font: 600 17px/1.25 "Bodoni Moda", Georgia, serif; }
+.pc .pm1__scelte, .pc .pm4__carte { scroll-padding-inline-start: 52px; }
+.pd .pm1__scelte, .pd .pm4__carte { scroll-padding-inline-start: 4px; }

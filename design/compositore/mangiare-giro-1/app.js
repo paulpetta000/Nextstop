@@ -347,9 +347,17 @@
     cena: { nome: 'Cena', da: 1170, a: 1290, ora: 1200, pasti: ['cena'] }
   };
   const NOMI_PM = { 1: 'La sosta', 2: 'Il menù', 3: 'Sulla mappa', 4: 'Lungo la strada' };
+  const IDEA_M = {
+    1: 'La pausa pranzo diventa «Qui puoi fermarti a mangiare»: nella riga stessa i tre locali aperti più vicini a dove sarai, con i minuti e il tipo. Un tocco apre la scheda con «Mangia qui»; «Tutti» apre l\'elenco con i filtri e, in fondo, i chiusi a quell\'ora.',
+    2: 'Nella giornata una riga piccola, «Il menù del pranzo». Si apre un foglio come la carta di un ristorante: i locali per tipo (pizzerie, cucina napoletana, pesce…), i puntini fino ai minuti, fino a che ora sono aperti. In cima «Quanto cammini?»: 5, 10 o 20 minuti. Un tocco su un locale lo apre sul posto.',
+    3: 'La riga ha una piccola mappa disegnata. Toccandola si apre la mappa intorno a dove sarai: due cerchi (5 e 10 minuti a piedi) e i locali, pieni se aperti e vuoti se chiusi. Un tocco su un locale e sotto compare la sua carta, con «Mangia qui».',
+    4: 'I locali in fila come cartoline, ordinati per quanto allungano la strada verso la tappa dopo: «di passaggio» se costano al massimo 2 minuti, altrimenti «+6 min». Così il pranzo non ti porta fuori strada. Dopo l\'ultima tappa (la cena) contano i minuti da lì.'
+  };
   const LOCALI = Object.keys(D.tappe).filter(id => T(id).categoria);
   const GIORNI_ORARI = ['lun', 'mar', 'mer', 'gio', 'ven', 'sab', 'dom'];
   const uscitaDi = v => { const t = tappaC(v.id); return t.pf != null && t.pf >= 0 && !v.indietro ? t.pf : t.p; };
+  // dove sei quando esci dalla tappa (nei percorsi a piedi, la fine): il centro dei cerchi della proposta 3
+  const qui = m => { const v = tappe(G(m.g)).find(x => x.id === m.dove), t = tappaC(m.dove); return v && !v.indietro && t.xyFine ? t.xyFine : t.xy; };
   const chiaveM = m => `${m.g}-${m.q}`;
   // i momenti del pasto di un giorno: { g, q, dove (la tappa prima), ora (quando sei lì), min (quanto dura), dopo (la tappa dopo) }
   function momenti(g, Gx = G(g)) {
@@ -464,7 +472,7 @@
   const bottoneNo = (m, cl) => `<button type="button" class="${cl}" data-azione="pasto-no" ${datiM(m)}>No, grazie</button>`;
   const pausaInfo = (m, cl) => (m.pausa ? `<button type="button" class="${cl}" data-azione="pausa" data-quale="pranzo">Pausa di ${durataLunga(m.min)}: cambia</button>` : '');
   function rigaPasto(m, vista) {
-    const tag = vista === 'c' ? 'li' : 'div', base = `${vista}-pasto pm${PM}`, chiave = `data-chiave="pasto-${m.q}"`;
+    const tag = vista === 'c' ? 'li' : 'div', base = `${vista}-pasto pasto-${PM}`, chiave = `data-chiave="pasto-${m.q}"`;
     const lista = vicini(m), ap = aperti(m), oraT = `<span class="num">${ora(m.ora)}</span>`;
     const icona = `<span class="pm-ic" aria-hidden="true">${ic('posate', vista === 'c' ? 17 : 22)}</span>`;
     if (PM === 1) {
@@ -502,7 +510,7 @@
   }
   // proposta 3: una piccola mappa disegnata (le strade della mappa nostra intorno alla tappa, i locali come puntini)
   function miniMappa(m) {
-    const c = T(m.dove).xy, r = 150, vb = `${(c[0] - r).toFixed(0)} ${(c[1] - r * .6).toFixed(0)} ${2 * r} ${(1.2 * r).toFixed(0)}`;
+    const c = qui(m), r = 150, vb = `${(c[0] - r).toFixed(0)} ${(c[1] - r * .6).toFixed(0)} ${2 * r} ${(1.2 * r).toFixed(0)}`;
     const punti = vicini(m).filter(x => Math.abs(T(x.id).xy[0] - c[0]) < r && Math.abs(T(x.id).xy[1] - c[1]) < r * .6);
     return `<svg class="pm3__svg" viewBox="${vb}" aria-hidden="true" focusable="false"><path class="mm-s1" d="${M.strade[1]}"/><path class="mm-s2" d="${M.strade[2]}"/><path class="mm-s0" d="${M.strade[0]}"/>
       <circle class="mm-giro" cx="${c[0]}" cy="${c[1]}" r="140"/><circle class="mm-giro mm-giro--5" cx="${c[0]}" cy="${c[1]}" r="70"/>
@@ -542,7 +550,7 @@
       const voce = x => `<li class="mn-v${x.stato === 'chiuso' ? ' mn-v--chiuso' : ''}"><details><summary><span class="mn-nome">${esc(T(x.id).nome)}</span><span class="mn-punti" aria-hidden="true"></span><span class="mn-min num">${x.min < 2 ? 'accanto' : `${x.min} min`}</span><small class="mn-sotto">${esc(x.nota)}${euro(x.id) ? ` · ${euro(x.id)}` : ''}${x.mezzi ? ' · con i mezzi' : ''}</small></summary>
         <div class="mn-dentro"><p>${esc(T(x.id).frase || '')}</p><div class="mn-az">${x.stato === 'chiuso' ? '' : `<button type="button" class="f-bottone" data-f="scegli" data-v="${x.id}">${ic('posate', 18)}Mangia qui, dalle ${ora(x.arrivo)}</button>`}<button type="button" class="f-bottone f-bottone--contorno" data-f="scheda" data-v="${x.id}">La scheda</button></div></div></details></li>`;
       return `<div class="mn"><p class="mn-testa"><i>${m.q === 'pranzo' ? 'Pranzo' : 'Cena'}</i><span>dalle <span class="num">${ora(m.ora)}</span>, intorno a ${esc(T(m.dove).breve)}</span></p>
-        <div class="mn-quanto" role="group" aria-label="Quanto vuoi camminare"><span>Quanto cammini?</span>${[5, 10, 20].map(k => `<button type="button" data-f="quanto" data-v="${k}" aria-pressed="${k === mx}">${k} min</button>`).join('')}</div>
+        <div class="mn-quanto" role="group" aria-label="Quanto vuoi camminare"><span>A piedi:</span>${[5, 10, 20].map(k => `<button type="button" data-f="quanto" data-v="${k}" aria-pressed="${k === mx}">${k} min</button>`).join('')}</div>
         ${gruppi.length ? gruppi.map(([t, l]) => `<section class="mn-gruppo"><h3>${esc(t)}</h3><ul>${l.map(voce).join('')}</ul></section>`).join('') : `<p class="mn-vuoto">A ${mx} minuti, a quell'ora, è tutto chiuso. ${(() => { const p = tutti.find(x => x.stato !== 'chiuso'); return p ? `Il più vicino aperto è ${esc(T(p.id).breve)}, a ${p.min} minuti.` : ''; })()}</p>`}
         ${no.length ? `<section class="mn-gruppo mn-gruppo--chiusi"><h3>Chiusi a quell'ora</h3><ul>${no.map(voce).join('')}</ul></section>` : ''}
         <p class="mn-piede">Orari scritti dai locali${S.data ? `, ${dataLunga(m.g)}` : ''}. Scegli tu: niente si aggiunge da solo.</p></div>`;
@@ -680,7 +688,7 @@
         <path class="m-s0" d="${M.strade[0]}"/><path class="m-s1c" d="${M.strade[1]}"/><path class="m-s2c" d="${M.strade[2]}"/><path class="m-s1" d="${M.strade[1]}"/><path class="m-s2" d="${M.strade[2]}"/><path class="m-moli" d="${M.moli}"/>
         <g class="m-fine">${MODO === 2 ? STRATI_P.map(([, c]) => `<g class="${c}"></g>`).join('') : `<path class="m-vicoli" d="${ST.vicoli}"/><path class="m-pedonali" d="${ST.pedonali}"/><path class="m-medie-c" d="${ST.medie}"/><path class="m-grandi-c" d="${ST.grandi}"/><path class="m-medie" d="${ST.medie}"/><path class="m-grandi" d="${ST.grandi}"/><path class="m-scale" d="${ST.scale}"/>`}</g><g class="m-bordi"></g>
         <g class="m-nomi">${nomi}</g>
-        <g class="m-altre"></g><g class="m-rotta"></g><g class="m-nomi-rotta"></g><g class="m-fili"></g></svg><p class="m-pezzi" aria-hidden="true"></p><div class="m-punti"></div><div class="m-segni"></div>
+        <g class="m-cerchi"></g><g class="m-altre"></g><g class="m-rotta"></g><g class="m-nomi-rotta"></g><g class="m-fili"></g></svg><p class="m-pezzi" aria-hidden="true"></p><div class="m-punti"></div><div class="m-cibi"></div><div class="m-segni"></div>
         <div class="m-ctrl">${tasto}<button type="button" data-z="piu" aria-label="Ingrandisci la mappa">${ic('piu', 20)}</button><button type="button" data-z="meno" aria-label="Rimpicciolisci la mappa">${ic('meno', 20)}</button><button type="button" data-z="tutto" aria-label="Mostra tutto il giorno">${ic('centra', 20)}</button></div>
         <p class="m-osm">© OpenStreetMap</p>`;
       this.svg = $('svg', el);
@@ -959,6 +967,28 @@
         ? `<line class="m-filo" x1="${(this.vb.x + p.x0 / s).toFixed(2)}" y1="${(this.vb.y + p.y0 / s).toFixed(2)}" x2="${(this.vb.x + p.x / s).toFixed(2)}" y2="${(this.vb.y + p.y / s).toFixed(2)}"/>` : '')).join('');
       const nT = this.tappe.length;
       punti.forEach((b, i) => { const p = pos[nT + i]; b.style.transform = `translate(${p.x.toFixed(1)}px, ${p.y.toFixed(1)}px)`; b.classList.toggle('m-punto--sotto', p.y < 150); });
+      // pezzo 7: i locali intorno al pasto, allontanati appena tra loro (e dai segni delle tappe) per poterli toccare
+      const cibi = $$('.m-cibo', this.el);
+      if (cibi.length) {
+        const cp = cibi.map(b => { const xy = T(b.dataset.id).xy, x = (xy[0] - this.vb.x) * s, y = (xy[1] - this.vb.y) * s; return { x, y }; });
+        for (let giro = 0; giro < 40; giro++) {
+          let mosso = false;
+          for (let i = 0; i < cp.length; i++) {
+            for (let j = i + 1; j < cp.length; j++) { const a = cp[i], b = cp[j]; let dx = b.x - a.x, dy = b.y - a.y, d = Math.hypot(dx, dy); if (d >= 26) continue; if (d < .01) { dx = 1; dy = .3; d = 1.04; } const k = (26 - d) / 2 / d; a.x -= dx * k; a.y -= dy * k; b.x += dx * k; b.y += dy * k; mosso = true; }
+          }
+          if (!mosso) break;
+        }
+        cibi.forEach((b, i) => { b.style.transform = `translate(${cp[i].x.toFixed(1)}px, ${cp[i].y.toFixed(1)}px)`; });
+      }
+    }
+    cibo(m, lista, tocca) {
+      const c = qui(m);
+      $('.m-cerchi', this.svg).innerHTML = `<circle class="m-giro" cx="${c[0]}" cy="${c[1]}" r="140"/><circle class="m-giro m-giro--5" cx="${c[0]}" cy="${c[1]}" r="70"/><text class="m-giro__t" x="${c[0]}" y="${c[1] - 144}" text-anchor="middle">10 min</text><text class="m-giro__t" x="${c[0]}" y="${c[1] - 74}" text-anchor="middle">5 min</text>`;
+      const vicinoQui = lista.filter(x => x.min <= 15);
+      $('.m-cibi', this.el).innerHTML = vicinoQui.map(x => `<button type="button" class="m-cibo${x.stato === 'chiuso' ? ' m-cibo--chiuso' : ''}" data-id="${x.id}" aria-label="${esc(T(x.id).nome)}, ${minTesto(x)}, ${esc(x.nota)}">${ic('posate', 15)}</button>`).join('');
+      $$('.m-cibo', this.el).forEach(b => { b.onclick = () => tocca(b.dataset.id); });
+      this.fuoco = { x1: c[0] - 150, x2: c[0] + 150, y1: c[1] - 160, y2: c[1] + 150 };
+      this.adatta(false);
     }
     centra(id) {
       const v = this.tappe.find(t => t.id === id);
@@ -970,7 +1000,7 @@
       this.evidenzia(id);
     }
     tutto() { this.fuoco = null; this.mosso = false; this.vola(this.vbPer(this.box), 700); this.evidenzia(null); }
-    evidenzia(id) { $$('.m-segno, .m-punto', this.el).forEach(b => b.setAttribute('aria-current', String(b.dataset.id === id))); }
+    evidenzia(id) { $$('.m-segno, .m-punto, .m-cibo', this.el).forEach(b => b.setAttribute('aria-current', String(b.dataset.id === id))); }
     spegni() { this.ro.disconnect(); cancelAnimationFrame(this.raf); }
   }
 
@@ -2126,7 +2156,10 @@
     'sposta-su': b => { const id = b.dataset.id; spostaA(id, S.giorni[giornoDi(id)].indexOf(id) - 1); requestAnimationFrame(() => $(`[data-azione="sposta-su"][data-id="${id}"]`)?.focus()); },
     'sposta-giu': b => { const id = b.dataset.id; spostaA(id, S.giorni[giornoDi(id)].indexOf(id) + 1); requestAnimationFrame(() => $(`[data-azione="sposta-giu"][data-id="${id}"]`)?.focus()); },
     'sposta-apri': b => { const box = b.closest('.riga-aperta').querySelector('.ra-sposta'); const si = box.hidden; box.hidden = !si; b.setAttribute('aria-expanded', String(si)); if (si) $('button', box)?.focus(); },
-    pronto: () => avvisa('Prova: qui si aprirebbe un altro itinerario.')
+    pronto: () => avvisa('Prova: qui si aprirebbe un altro itinerario.'),
+    'pasto-apri': b => { const m = trovaM(b.dataset.k); if (m) apriPasto(m); },
+    'pasto-scheda': b => { const m = trovaM(b.dataset.k); if (m) schedaPasto(b.dataset.id, m, null); },
+    'pasto-no': b => { const m = trovaM(b.dataset.k); if (m) noGrazie(m); }
   };
   $('#app').addEventListener('click', e => {
     const b = e.target.closest('[data-azione]');
@@ -2251,7 +2284,7 @@
     const t = T(v.id), q = S.q, ed = S.modifica && q === 3, vis = visitata(v.id);
     const quando = v.fatta ? '<span class="c-ora c-ora--v">Visitata</span>' : `<span class="c-ora num">${ora(v.inizio)} – ${ora(v.fine)}</span>`;
     const et = !ed && etichette(v.id).length ? `<small class="c-et">${etichette(v.id).join(', ')}</small>` : '';
-    const foto = FOTO[v.id] ? `<img src="${FOTO[v.id]}" alt="" loading="lazy" decoding="async">` : `<span class="c-voce__senza">${soglia()}</span>`;
+    const foto = FOTO[v.id] ? `<img src="${FOTO[v.id]}" alt="" loading="lazy" decoding="async">` : T(v.id).categoria ? `<span class="c-voce__senza c-voce__cibo">${ic("posate", 26)}</span>` : `<span class="c-voce__senza">${soglia()}</span>`;
     const sigillo = q === 2 || q === 3 ? `<i class="c-sigillo sg-si" aria-hidden="true">${soglia()}</i>` : '';
     const sr = vis ? '<span class="vh">, visitata</span>' : '';
     const apri = `<button type="button" class="c-voce__apri" data-azione="tappa" data-id="${v.id}"${S.attiva === v.id ? ' aria-current="true"' : ''}><span class="c-tit">${quando}<span class="c-voce__nome">${esc(t.nome)}${sr}</span>${et}</span><span class="c-voce__foto">${foto}${sigillo}</span></button>`;
@@ -3090,13 +3123,14 @@
     if (document.startViewTransition && piano()) document.startViewTransition(fai).ready.catch(() => {}); else fai();
   });
   function prova() {
-    $$('#prova [data-q]').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.q === MODO)));
+    $$('#prova [data-q]').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.q === PM)));
+    $('#p-sera').setAttribute('aria-pressed', String(FINE > 1140));
     $('#p-bordi').setAttribute('aria-pressed', String(mostraBordi));
     $$('#prova [data-p]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.p === S.p)));
-    $('#p-nome').textContent = MODO === 2 ? 'Mappa a pezzi: tutta la città' : 'Prima: solo la zona dei due giorni';
-    $('#idea').innerHTML = `<h2>La mappa a pezzi (pezzo 6, prima prova)</h2><p>Le strade piccole di OpenStreetMap (vicoli, pedonali, scale) ci sono ora su tutta la mappa, non più solo nella zona dei due giorni. Sono divise in pezzi quadrati di 1,3 km: la mappa scarica solo quelli dove stai guardando, e ognuno una volta sola. Tocca «Pezzi» qui in alto per vedere i bordi e quanto pesa ogni pezzo.</p>
-      <p class="idea__nota">Nomi delle vie: sempre quelli delle vie principali (se il nome ci sta), e in più, in grassetto e nel colore del percorso, quelli delle vie dove passa il percorso del giorno. «Prima» mostra la mappa delle prove di prima, con le strade piccole solo nella zona dei due giorni.</p>
-      <p class="idea__nota">Prova: allontanati fino a Posillipo, Vomero o la Stazione Centrale e ingrandisci: le strade piccole arrivano anche lì. Da lontano restano solo le strade della mappa di oggi, senza scaricare niente.</p>
+    $('#p-nome').textContent = `${PM} · ${NOMI_PM[PM]}`;
+    $('#idea').innerHTML = `<h2>Mangiare nella giornata, proposta ${PM}: ${NOMI_PM[PM]}</h2><p>${esc(IDEA_M[PM])}</p>
+      <p class="idea__nota">In tutte: la riga compare dove sarai all'ora di pranzo (al posto della pausa pranzo) o di cena; i minuti sono quelli veri dalla tappa prima, gli orari quelli scritti dai locali. «Mangia qui» mette il locale nel giorno (con «Annulla»); «No, grazie» toglie la proposta per quel giorno. Niente si aggiunge da solo.</p>
+      <p class="idea__nota">Tocca «Sera» qui in alto: i giorni arrivano alle 22:00 e compare anche la cena, dopo l'ultima tappa (se arrivi prima delle 19:30, scegliendo un locale si aggiunge un «Tempo libero» fino alla cena). Con una data (Altro → Data e orari) i locali chiusi quel giorno vanno in fondo.</p>
       <button type="button" class="idea__oggi" data-oggi aria-pressed="${!!adesso()}">${ic('orologio', 18)}<span>${adesso() ? 'Prova «oggi» accesa: il giorno 1 è oggi, sono le 12:10' : 'Prova «oggi»: il giorno 1 è oggi, sono le 12:10'}</span></button>
       <p class="idea__nota">Con «oggi» segni MANN e Tribunali visitati: vanno in cima e gli orari delle altre tappe ripartono dalle 12:10, come fa il sito il giorno stesso. Negli altri giorni la tappa si segna e basta.</p>
       <button type="button" class="idea__da-capo" data-da-capo>Ricomincia la prova da capo</button>`;
@@ -3121,15 +3155,16 @@
       avvisa('Prova ricominciata da «Due giorni a Napoli».');
     }
   });
-  $$('#prova [data-q]').forEach(b => b.addEventListener('click', () => { if (+b.dataset.q !== MODO) location.hash = `${S.p}${b.dataset.q}`; }));
+  $$('#prova [data-q]').forEach(b => b.addEventListener('click', () => { if (+b.dataset.q !== PM) location.hash = `${S.p}${b.dataset.q}`; }));
+  $('#p-sera').addEventListener('click', () => { FINE = FINE > 1140 ? 1140 : 1320; memo.clear(); aggiornaTutto(() => {}); avvisa(FINE > 1140 ? 'Sera: i giorni arrivano alle 22:00, compare anche la cena.' : 'I giorni finiscono di nuovo alle 19:00.'); });
   $('#p-bordi').addEventListener('click', () => { mostraBordi = !mostraBordi; document.documentElement.classList.toggle('bordi-su', mostraBordi); prova(); });
   $('#p-cerca').addEventListener('click', () => apriAggiungi(ricercaAperta));
-  $$('#prova [data-p]').forEach(b => b.addEventListener('click', () => { if (b.dataset.p !== S.p) location.hash = `${b.dataset.p}${MODO}`; }));
+  $$('#prova [data-p]').forEach(b => b.addEventListener('click', () => { if (b.dataset.p !== S.p) location.hash = `${b.dataset.p}${PM}`; }));
   function daHash(primo) {
     const h = location.hash.slice(1), m = /^([cd])?([1-4])?$/.exec(h) || [];
-    const p = m[1] || (primo && /^[cd]$/.test(vistaSalvata || '') ? vistaSalvata : null) || S.p || 'c', q = 1, t = 2, r = 4, modo = Math.min(2, +(m[2] || MODO));
-    if (!primo && p === S.p && modo === MODO) return;
-    MODO = modo;
+    const p = m[1] || (primo && /^[cd]$/.test(vistaSalvata || '') ? vistaSalvata : null) || S.p || 'c', q = 1, t = 2, r = 4, pm = +(m[2] || PM);
+    if (!primo && p === S.p && pm === PM) return;
+    PM = pm;
     try { localStorage.setItem('prova-scheda-vista', p); } catch {}
     const fai = async () => { await chiudiSchede(); if (menuEl.matches?.(':popover-open')) menuEl.hidePopover(); Object.assign(S, { ...NUOVO(), p, q, t, r, anima: primo || p !== S.p }); rotta = true; disegna(); scrollTo(0, 0); };
     if (!primo && document.startViewTransition && piano()) document.startViewTransition(fai).ready.catch(() => {}); else fai();
@@ -3141,5 +3176,5 @@
   $('#p-cerca').innerHTML = `${ic('cerca', 20)}<span>Cerca</span>`;
   mettiTema();
   daHash(true);
-  try { if (!localStorage.getItem('prova-mappa-idea-1')) { $('#idea').showPopover?.(); localStorage.setItem('prova-mappa-idea-1', '1'); } } catch {}
+  try { if (!localStorage.getItem('prova-mangiare-idea-1')) { $('#idea').showPopover?.(); localStorage.setItem('prova-mangiare-idea-1', '1'); } } catch {}
 })();

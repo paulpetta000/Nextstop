@@ -292,6 +292,6 @@ hanno tempi stimati (il ricalcolo dei tempi veri si fa nella costruzione).
 - [ ] Pezzo 4 · «Da dove parti?»: **in stand-by** (Enrico, 14/10/2026). Scelta la proposta 2 «Sulla mappa»; si riprende più avanti, con le fermate e le linee e la scritta «beta» (sezione 10).
 - [ ] Pezzo 5 · «Salva» com'è nelle prove: solo costruzione (niente vista separata, niente «Tutti i giorni»).
 - [ ] Pezzo 6 · mappa: deciso il 14/10/2026 (senza rete, strada A, aspetto delle prove, nomi delle vie principali e del percorso). Da costruire.
-- [ ] Pezzo 7 · mangiare nella giornata.
+- [ ] Pezzo 7 · mangiare nella giornata: giro 1 (14/10/2026), 4 proposte in `design/compositore/README.md`; aspetta la scelta.
 - [ ] Pezzo 8 · filtri dei locali (dati nuovi con le fonti, poi compositore e «Dove mangiare»).
 - [ ] Controlli, anteprima di Vercel, OK di Enrico, poi `main`.
