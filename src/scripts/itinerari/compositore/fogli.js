@@ -2,13 +2,13 @@
 // Condividi, Elimina con «Annulla»), «Condividi», «Pause e margini», una pausa, «Data e orari», «Altro», «I giorni», gli
 // itinerari pronti (anche la giornata di regata, che vuole un giorno di regata).
 import { $, $$, esc, ic, piano, range, ora, durata, maiuscola, oggi } from './base.js';
-import { E, T, X, A, PRONTI, nG, G, daFare, tappeDi, titoloGiorno, salvato, visitata, apri, nuovo, nomeLibero, ricordaBozza, gia, dopoModifica, scriviArchivio, ripristina, piuGiorni, dataLungaDi, chiusaIl, nuovoItinerario, vuotoTutto } from './stato.js';
+import { E, T, X, A, PRONTI, nG, G, daFare, tappeDi, titoloGiorno, salvato, apri, nuovo, nomeLibero, ricordaBozza, gia, dopoModifica, scriviArchivio, piuGiorni, dataLungaDi, chiusaIl, nuovoItinerario, vuotoTutto } from './stato.js';
 import { codifica, MAX_NOME, MAX_GIORNI } from '../../../lib/itinerari/link';
 import { dataValida, dataBreve, dataLunga } from '../../../lib/itinerari/date';
 import { TIPI_PAUSA, MARGINI, pauseDelGiorno } from '../../../lib/itinerari/pause';
 import { grezzo } from './stato.js';
 import { C } from './stato.js';
-import { S, foglio, chiudiFoglio, rinfresca, avvisa, annuncia, contaCifre, tempo } from './comuni.js';
+import { S, foglio, chiudiFoglio, rinfresca, avvisa, annuncia, tempo } from './comuni.js';
 import { aggiorna, aggiornaTutto, conAnnulla, mettiNome, NOMI_PAUSA, IC_PAUSA, nuovoGiorno, vaiAlGiorno, togliGiorno } from './viste.js';
 import { chiudiSchede } from './scheda.js';
 
@@ -155,14 +155,14 @@ export function apriQuando() {
 // ---------- i miei itinerari ----------
 const contaTappe = x => x.giorni.reduce((s, D) => s + (D.gita ? 1 : D.tappe.filter(t => !E || t !== E.id).length), 0);
 const contaVisitate = x => x.giorni.reduce((s, D) => s + (D.fatte?.length ?? 0), 0);
-const descrivi = x => { const n = contaTappe(x), g = x.giorni.length; return `${g} ${g === 1 ? 'giorno' : 'giorni'}, ${n} ${n === 1 ? 'tappa' : 'tappe'}${x.data ? `, dal ${dataBreve(x.data)}` : ''}${salvato(x) && n ? `, ${contaVisitate(x)} visitate su ${n}` : ''}`; };
+const descrivi = x => { const n = contaTappe(x), g = x.giorni.length; return `${g} ${g === 1 ? 'giorno' : 'giorni'}, ${n} ${n === 1 ? 'tappa' : 'tappe'}${x.data ? `, dal ${dataBreve(x.data)}` : ''}${salvato(x) && n ? `, ${contaVisitate(x)} ${contaVisitate(x) === 1 ? "visitata" : "visitate"} su ${n}` : ''}`; };
 export function apriMiei() {
   let menu = null, rinomina = null, elimina = null;
   const riga = x => {
     const qui = x.id === A.attivo;
     const testa = rinomina === x.id
       ? `<label class="f-campo f-campo--nome" for="f-nome"><span>Nome dell'itinerario</span><input id="f-nome" value="${esc(x.nome)}" maxlength="${MAX_NOME}" autocomplete="off" enterkeyhint="done"></label>`
-      : `<button type="button" class="f-mio__apri" data-f="apri" data-v="${x.id}"${qui ? ' aria-current="true"' : ''}><b>${esc(x.nome)}</b><small>${descrivi(x)}</small><span class="f-segno">${qui ? 'Aperto ora · ' : ''}${salvato(x) ? `${ic('spunta', 16)}Salvato` : 'Non ancora salvato'}</span></button>`;
+      : `<button type="button" class="f-mio__apri" data-f="apri" data-v="${x.id}"${qui ? ' aria-current="true"' : ''}><b>${esc(x.nome)}</b><small>${descrivi(x)}</small><span class="f-segno">${salvato(x) ? `${ic('spunta', 16)}Salvato` : 'Non ancora salvato'}${qui ? ', aperto ora' : ''}</span></button>`;
     const azioni = elimina === x.id
       ? `<div class="f-conferma f-conferma--due"><p>«${esc(x.nome)}» sparisce da questo telefono${salvato(x) ? ', con le tappe visitate' : ''}. I link che hai già mandato continuano ad aprirsi: portano tutto con sé.</p><button type="button" class="f-bottone f-bottone--pericolo" data-f="elimina-si" data-v="${x.id}">${ic('cestino', 18)}Elimina</button><button type="button" class="f-bottone f-bottone--contorno" data-f="elimina-no">Annulla</button></div>`
       : rinomina === x.id
@@ -322,4 +322,3 @@ export function chiediGiornoRegata() {
     };
   });
 }
-void contaCifre; void visitata; void ripristina;

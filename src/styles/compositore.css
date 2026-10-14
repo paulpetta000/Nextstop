@@ -1468,3 +1468,6 @@ html.pd .cmp .gita__carta { border-radius: 4px; background: var(--carta); box-sh
 .cmp .sch-credito a { color: inherit; }
 .cmp .cautela { color: var(--ink2); }
 @media (prefers-reduced-motion: reduce) { .cmp *, .cmp *::before, .cmp *::after { animation-duration: 1ms !important; animation-delay: 0ms !important; transition-duration: 1ms !important; } }
+/* i miei itinerari: senza la foto, il nome prende tutta la riga */
+.cmp .f-miei .f-riga--mio { grid-template-columns: minmax(0, 1fr) auto; padding: 10px 0 6px; border-bottom: 1px solid var(--f-riga); }
+.cmp .f-miei .f-mio .f-segno { margin-top: 6px; }

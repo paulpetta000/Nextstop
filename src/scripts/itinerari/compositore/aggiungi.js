@@ -2,7 +2,7 @@
 // gite (src/lib/itinerari/ricerca.ts), in gruppi da scorrere di lato; senza parole le tappe dalla più vicina e qualche ricerca
 // da provare; elenco o mappa; i filtri. Un tocco sul risultato apre la scheda, con «Torna ai risultati».
 import { $, $$, esc, ic, piano, ora, durata, dopo } from './base.js';
-import { C, E, T, X, UI, nG, giornoDi, nelViaggio, lista, ultimaDi, aggiunta, G, chiusaIl, dataLungaDi } from './stato.js';
+import { C, E, T, X, UI, giornoDi, nelViaggio, lista, ultimaDi, aggiunta, G, chiusaIl, dataLungaDi } from './stato.js';
 import { creaIndice, cerca, evidenzia, pezzetto, gruppoDi } from '../../../lib/itinerari/ricerca';
 import { S, foglio, chiudiFoglio, annunciaF, quandoChiudeFoglio } from './comuni.js';
 import { aggiungi, aggiungiGita } from './viste.js';
@@ -193,4 +193,3 @@ export function apriAggiungi(prima = null, tipo = null) {
     };
   }, 'f--a');
 }
-void nG;

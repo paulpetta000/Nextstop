@@ -187,7 +187,15 @@ export function ordineCorto(g) {
 }
 
 // ---------- dati che arrivano dopo l'apertura (restano salvati per l'uso senza rete dal service worker) ----------
-export function caricaDopo(quandoArriva) {
+// Prima si disegna la pagina; i dati grandi (mappa, percorsi, scenari, orari dei bus) si scaricano a pagina caricata, quando il
+// telefono è libero: così il primo disegno non aspetta mezzo megabyte di dati.
+let libero = null;
+export const quandoLibero = () => (libero ??= new Promise(ok => {
+  const vai = () => (window.requestIdleCallback ? requestIdleCallback(() => ok(), { timeout: 1200 }) : setTimeout(ok, 200));
+  if (document.readyState === 'complete') vai(); else addEventListener('load', vai, { once: true });
+}));
+export async function caricaDopo(quandoArriva) {
+  await quandoLibero();
   fetch('/napoli/itinerari/scenari.json', { priority: 'low' }).then(r => (r.ok ? r.json() : null)).then(p => {
     if (!p) return;
     aggiungiScenari(C, p); memoOrdine.clear(); ricalcola(); quandoArriva();
@@ -199,8 +207,8 @@ export function caricaDopo(quandoArriva) {
 }
 // la mappa di oggi e i percorsi tra le tappe: si caricano una volta
 let mappaDati = null, alternativi = null;
-export const caricaMappa = () => (mappaDati ??= Promise.all([
+export const caricaMappa = () => (mappaDati ??= quandoLibero().then(() => Promise.all([
   fetch('/napoli/itinerari/mappa.json').then(r => { if (!r.ok) throw new Error('mappa'); return r.json(); }),
   fetch('/napoli/itinerari/percorsi.json').then(r => { if (!r.ok) throw new Error('percorsi'); return r.json(); })
-]).catch(e => { mappaDati = null; throw e; }));
+])).catch(e => { mappaDati = null; throw e; }));
 export const caricaAlternativi = () => (alternativi ??= fetch('/napoli/itinerari/percorsi-alternativi.json').then(r => (r.ok ? r.json() : null)).catch(() => { alternativi = null; return null; }));

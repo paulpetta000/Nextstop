@@ -3,7 +3,7 @@
 // «Sposta nel giorno», «Togli»); di lato si passa alla tappa prima o dopo. In C la mappa resta sopra e vola sulla tappa.
 // I contenuti sono le schede vere della build (src/components/itinerari/Scheda.astro, SchedaLocale.astro, nei <template>).
 import { $, $$, esc, ic, soglia, piano, computer, range, ora, durata, dataScritta, GS, INGRESSO, DENTRO, SCALE, MOMENTO } from './base.js';
-import { C, E, T, X, nG, giornoDi, nelViaggio, visitata, puoiSegnare, G, tappeDi, aggiunta, ultimaDi, chiusaIl, dataLungaDi } from './stato.js';
+import { E, T, X, nG, giornoDi, nelViaggio, visitata, puoiSegnare, G, tappeDi, aggiunta, ultimaDi, chiusaIl, dataLungaDi } from './stato.js';
 import { S, foglio, chiudiFoglio, foglioEl, scorri, occupato, annuncia, tiraPerChiudere, gestoScheda } from './comuni.js';
 import { segna, togliTappa, spostaGiorno, aggiungi, aggiungiGita, vaiAlGiorno, testoTratto, mappaC } from './viste.js';
 import { salva } from './fogli.js';
@@ -287,4 +287,3 @@ export function preparaScheda() {
   tiraPerChiudere(el, { pronto: () => !!sch && sch.detent === 'tutto', scorre: () => $('.sch1__corpo', el), pannello: () => $('.sch1__pannello', el), chiudi: () => chiudi() });
   addEventListener('resize', () => { if (schedaAperta()) metti(sch.detent, false); });
 }
-void C;

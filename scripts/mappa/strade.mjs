@@ -1,6 +1,6 @@
 // Le strade di tutta la mappa a pezzi (specifiche/compositore.md §6, proposta 1 scelta da Enrico il 14/10/2026):
 // vicoli, scale, pedonali, strade medie e grandi e i nomi delle vie di OpenStreetMap (ODbL), in pezzi quadrati da 1,28 km
-// che la pagina scarica solo dove si guarda (src/lib/itinerari/strade.ts, src/scripts/itinerari/mappa.ts).
+// che la pagina scarica solo dove si guarda (src/lib/itinerari/strade.ts, src/scripts/itinerari/compositore/mappa.js, blocco D della costruzione).
 // Scrive src/data/strade.json: { fonte, lato, pezzi: { "i_j": { g, m, p, v, s, n } }, principali }.
 // Uso: node scripts/mappa/strade.mjs scarica <file.json>   (Overpass: tutte le «way[highway]» del riquadro, circa 14 MB)
 //      node scripts/mappa/strade.mjs <file.json>

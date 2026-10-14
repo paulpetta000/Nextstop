@@ -15,6 +15,6 @@ export const TRASPARENZA = [
   { href: '/accessibilita/', label: 'Accessibilità del sito' }
 ];
 
-// Un itinerario pronto: apre il compositore con l'itinerario già caricato (?pronto=, src/scripts/itinerari/app.ts).
+// Un itinerario pronto: apre il compositore con l'itinerario già caricato (?pronto=, src/scripts/itinerari/compositore/avvio.js).
 // Senza JavaScript il «#» porta alla sua scheda, con tutti gli orari, più in basso nella stessa pagina.
 export const linkPronto = (c: Citta, id: string) => `${c.itinerari}?pronto=${id}#pronto-${id}`;

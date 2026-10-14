@@ -113,7 +113,7 @@ export function conAnnulla(testo, fn, opz = {}) {
 // «visitata»: sugli itinerari salvati. Oggi, dal vivo, gli orari ripartono da adesso; negli altri giorni la tappa si segna e basta.
 export function segna(id) {
   if (!puoiSegnare() || !nelViaggio(id)) return;
-  const si = !visitata(id), g = giornoDi(id), x = X(), Gg = x.giorni[g];
+  const si = !visitata(id), g = giornoDi(id), x = X();
   const cambia = y => {
     const D = y.giorni[g];
     D.fatte = si ? [...(D.fatte ?? []), id] : (D.fatte ?? []).filter(t => t !== id);
@@ -129,7 +129,6 @@ export function segna(id) {
   }
   // gli altri giorni: la tappa si segna e basta, gli orari restano (niente ridisegno, solo i segni)
   cambia(x); dopoModifica(); scriviArchivio(avvisa);
-  void Gg;
   $$(`[data-azione="visitata"][data-id="${id}"]`).forEach(b => { b.setAttribute('aria-pressed', String(si)); animaSoglia(b, si); });
   $$(`[data-v-id="${id}"]`).forEach(el => el.toggleAttribute('data-visitata', si));
   rinfrescaScheda(id, si);
@@ -429,6 +428,7 @@ const C1 = {
     fn();
     if (!mappa || !$('#c-foglio')) { aggiornaTutto(() => {}); return; }
     const cambiato = prima !== S.g || !!opz.giorno || n0 !== nG();
+    document.documentElement.dataset.g = String(S.g);
     $('#c-giorni').innerHTML = this.giorni();
     mettiSegno($('#c-giorni .schede'), { da: segno });
     osservaSchede();
@@ -792,4 +792,3 @@ export function preparaViste() {
   computer.addEventListener('change', async () => { await chiudiSchede(); rotta = true; disegna(); });
   addEventListener('resize', () => { if (S.p === 'd') Dp.misura(); });
 }
-export { salvato, A };

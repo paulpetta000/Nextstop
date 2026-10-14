@@ -38,6 +38,8 @@ function avvia() {
   ascoltaFirme($('#app'));
   document.documentElement.classList.add('cmp-pronto');
   if (chiesto) usaPronto(chiesto); else disegna();
+  // scorrendo sotto il compositore (itinerari pronti, gite, fonti) la mappa fissa e le barre si nascondono
+  new IntersectionObserver(([e]) => document.documentElement.classList.toggle('cmp-fuori', !e.isIntersecting && e.boundingClientRect.top < 0)).observe($('#compositore'));
 
   // un locale (o una tappa) da aggiungere, dalla pagina «Dove mangiare» (?aggiungi=<id>&g=<giorno>)
   const richiesta = new URLSearchParams(W.daAggiungere ?? '');
@@ -95,6 +97,9 @@ function avvia() {
 let primi = [];
 function avvisaDopo(t) { primi.push(t); }
 if (document.getElementById('app')) {
+  // i segni di tempo dell'avvio (per misurare il primo disegno, anche da telefono)
+  performance.mark('compositore-inizio');
   avvia();
+  performance.mark('compositore-fine');
   if (primi.length) setTimeout(() => avvisa(primi.join(' ')), 600);
 }
