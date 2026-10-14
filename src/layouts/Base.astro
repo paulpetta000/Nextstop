@@ -16,8 +16,10 @@ interface Props {
   // la home: testata sopra la foto, fondo «carta» della grafica nuova, marchio animato all'apertura
   home?: boolean;
   orizzonte?: boolean;
+  // il compositore ha la sua testata: della testata del sito resta solo il menu
+  soloMenu?: boolean;
 }
-const { title, description, og, jsonld = [], noindex = false, home = false, orizzonte = false } = Astro.props;
+const { title, description, og, jsonld = [], noindex = false, home = false, orizzonte = false, soloMenu = false } = Astro.props;
 const path = Astro.url.pathname;
 const canonical = new URL(path, SITO.url).href;
 const fullTitle = path === '/' ? `${SITO.nome} · ${SITO.sottotitolo}` : `${title} · ${SITO.nome}`;
@@ -74,7 +76,7 @@ const ld = [
 </head>
 <body class={orizzonte ? 'g5 v-o4' : home ? 'su-carta' : undefined}>
   <a class="skip" href="#contenuto">Vai al contenuto</a>
-  {orizzonte ? <HomeTestata /> : <Header sopraFoto={home} />}
+  {orizzonte ? <HomeTestata /> : <Header sopraFoto={home} soloMenu={soloMenu} />}
   <main id="contenuto">
     <slot />
   </main>

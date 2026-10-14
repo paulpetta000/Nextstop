@@ -8,15 +8,16 @@ import Marchio from './Marchio.astro';
 import { CITTA, linkPronto } from '../config/menu';
 import { scelteNapoli } from '../lib/itinerari/napoli';
 
-interface Props { sopraFoto?: boolean }
-const { sopraFoto = false } = Astro.props;
+// soloMenu: la pagina ha la sua testata (il compositore, /napoli/itinerari/): resta solo il menu, aperto dal suo tondo
+interface Props { sopraFoto?: boolean; soloMenu?: boolean }
+const { sopraFoto = false, soloMenu = false } = Astro.props;
 const path = Astro.url.pathname;
 const qui = (href: string) => (path === href ? 'page' : undefined);
 // Gli itinerari pronti di ogni città (oggi solo Napoli)
 const SCELTE: Record<string, ReturnType<typeof scelteNapoli>> = { napoli: scelteNapoli() };
 const principale = CITTA[0];
 ---
-<header class:list={['testata', { 'testata--foto': sopraFoto }]}>
+{!soloMenu && <header class:list={['testata', { 'testata--foto': sopraFoto }]}>
   <div class="testata__riga">
     <a class="testata__marchio" href="/" aria-current={qui('/')}>
       <Marchio dove={sopraFoto ? 'foto' : 'chiaro'} />
@@ -29,7 +30,7 @@ const principale = CITTA[0];
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M4 7h16M4 12h16M4 17h10" /></svg>
     </button>
   </div>
-</header>
+</header>}
 
 <nav id="menu" class="menu" popover aria-label="Menu">
   <div class="menu__testa">
