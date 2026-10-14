@@ -314,3 +314,7 @@ itinerari salvati (`itinerari-v1`), link già mandati, `?pronto=` e `?aggiungi=`
    5, 10, 20 min, Tutti»; la scheda del locale che si sfoglia; «No, grazie» con «Rimettile».
 6. **Blocco F · controlli e rilascio**: axe chiaro e scuro, Lighthouse da telefono 95 o più, 320 e 390 px, «riduci movimento», console,
    consistent-ui almeno 35 su 40, prova a mano da telefono; anteprima di Vercel, OK di Enrico, `main`.
+
+**Due fermate invece di sei (Enrico, 14/10/2026)**: **parte 1 = blocchi A, B e C** (il compositore nuovo con la mappa di oggi, anteprima di
+Vercel da provare dal telefono, poi OK di Enrico); **parte 2 = blocchi D, E e F** (mappa, mangiare, controlli, poi `main` con l'OK).
+Dentro una parte si continua anche su più sessioni senza fermarsi; aggiornamenti al 30/50/70/90%.
