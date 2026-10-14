@@ -212,3 +212,15 @@ export const caricaMappa = () => (mappaDati ??= quandoLibero().then(() => Promis
   fetch('/napoli/itinerari/percorsi.json').then(r => { if (!r.ok) throw new Error('percorsi'); return r.json(); })
 ])).catch(e => { mappaDati = null; throw e; }));
 export const caricaAlternativi = () => (alternativi ??= fetch('/napoli/itinerari/percorsi-alternativi.json').then(r => (r.ok ? r.json() : null)).catch(() => { alternativi = null; return null; }));
+// le schede complete e i dati della ricerca (/napoli/itinerari/schede/, schede.astro): si scaricano a pagina caricata e
+// servono quando apri una scheda o cerchi. MODELLI: id → contenuto del <template> della scheda.
+export const MODELLI = new Map();
+let schede = null;
+export const schedePronte = () => MODELLI.size > 0;
+export const caricaSchede = () => (schede ??= fetch('/napoli/itinerari/schede/').then(r => { if (!r.ok) throw new Error('schede'); return r.text(); }).then(html => {
+  const doc = new DOMParser().parseFromString(html, 'text/html');
+  for (const t of doc.querySelectorAll('template[id^="it-t-"]')) MODELLI.set(t.id.slice(5), document.importNode(t.content, true));
+  const cerca = JSON.parse(doc.getElementById('it-cerca')?.textContent || '{}');
+  for (const [id, x] of Object.entries(cerca)) UI.tappe[id] = { ...(UI.tappe[id] ?? {}), ...x };
+  cache.clear();
+}).catch(e => { schede = null; throw e; }));

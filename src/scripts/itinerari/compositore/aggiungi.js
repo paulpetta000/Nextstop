@@ -2,7 +2,7 @@
 // gite (src/lib/itinerari/ricerca.ts), in gruppi da scorrere di lato; senza parole le tappe dalla più vicina e qualche ricerca
 // da provare; elenco o mappa; i filtri. Un tocco sul risultato apre la scheda, con «Torna ai risultati».
 import { $, $$, esc, ic, piano, ora, durata, dopo } from './base.js';
-import { C, E, T, X, UI, giornoDi, nelViaggio, lista, ultimaDi, aggiunta, G, chiusaIl, dataLungaDi } from './stato.js';
+import { C, E, T, X, UI, schedePronte, caricaSchede, giornoDi, nelViaggio, lista, ultimaDi, aggiunta, G, chiusaIl, dataLungaDi } from './stato.js';
 import { creaIndice, cerca, evidenzia, pezzetto, gruppoDi } from '../../../lib/itinerari/ricerca';
 import { S, foglio, chiudiFoglio, annunciaF, quandoChiudeFoglio } from './comuni.js';
 import { aggiungi, aggiungiGita } from './viste.js';
@@ -78,7 +78,9 @@ function scriviSegnaposto(input, testo) {
 
 let mappaF = null;
 quandoChiudeFoglio(null);
-export function apriAggiungi(prima = null, tipo = null) {
+export async function apriAggiungi(prima = null, tipo = null) {
+  // la ricerca guarda anche nelle frasi dei testi, che arrivano con le schede
+  if (!schedePronte()) await caricaSchede().catch(() => {});
   const g = S.g, D = X().giorni[g];
   const ultima = !D.gita && ultimaDi(g) ? T(ultimaDi(g)).breve : null;
   let filtro = prima?.filtro ?? (tipo === 'gite' ? 'gite' : 'tutte'), q = prima?.q ?? '', scelta = null, visti = new Set();

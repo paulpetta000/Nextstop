@@ -17,7 +17,8 @@ const CORE = [
 // (anche quelli caricati dopo, come la mappa), i dati e le miniature delle tappe (il campo "foto" dei dati
 // della pagina). Le foto grandi no: si salvano quando le guardi.
 const INTERATTIVE = {
-  '/napoli/itinerari/': ['/napoli/itinerari/mappa.json', '/napoli/itinerari/scenari.json', '/napoli/itinerari/percorsi.json', '/napoli/itinerari/partenze.json']
+  // le schede del compositore (/napoli/itinerari/schede/) arrivano dopo il primo disegno: si salvano con la pagina
+  '/napoli/itinerari/': ['/napoli/itinerari/schede/', '/napoli/itinerari/mappa.json', '/napoli/itinerari/scenari.json', '/napoli/itinerari/percorsi.json', '/napoli/itinerari/partenze.json']
 };
 
 export default function serviceWorker() {
@@ -36,7 +37,7 @@ export default function serviceWorker() {
         const visti = new Set();
         const aggiungi = (u) => {
           if (visti.has(u)) return;
-          const f = path.join(out, u);
+          const f = path.join(out, u, u.endsWith('/') ? 'index.html' : '');
           if (!fs.existsSync(f)) { logger.warn(`File offline mancante: ${u}`); return; }
           visti.add(u);
           files.push([u, f]);

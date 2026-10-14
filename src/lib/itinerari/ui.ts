@@ -14,15 +14,19 @@ const frasiDi = (s?: string) => pulisci(s).split(/(?<=[.!?])\s+(?=[A-ZÀ-Ú«"])
 const interno = (svg: string) => svg.replace(/<svg[^>]*>/, '').replace('</svg>', '');
 
 type Fonte = { titolo: string; editore: string; url: string; tipo: string };
+// ui: nella pagina, per il primo disegno (foto e prima frase); cerca: nel file delle schede (/napoli/itinerari/schede/),
+// scaricato dopo il primo disegno, per la ricerca e le fonti della scheda
 export type DatiUI = {
-  tappe: Record<string, { foto?: { m?: string; c?: string }; frase?: string; frasi: { t: string; da: string | null }[]; fonti: Fonte[]; controllato: string | null }>;
+  tappe: Record<string, { foto?: { m?: string; c?: string }; frase?: string }>;
   marchio: { chiaro: string; scuro: string; spillo: string };
   citta: string[];
 };
+export type DatiCerca = Record<string, { frasi: { t: string; da: string | null }[]; fonti: Fonte[]; controllato: string | null }>;
 
-export async function datiUI(C: Citta, tappe: TappaDati[], locali: Locale[]): Promise<DatiUI> {
+export async function datiUI(C: Citta, tappe: TappaDati[], locali: Locale[]): Promise<{ ui: DatiUI; cerca: DatiCerca }> {
   const registro = await tutteLeFonti();
   const out: DatiUI['tappe'] = {};
+  const cerca: DatiCerca = {};
   for (const t of C.tappe) {
     const x: { data: { foto?: { id: string }; orari?: { id: string } | null; durataFonte?: { id: string } }; schede: Map<string, Fatto>; testo: { nudo: string; fatti: Fatto[]; fonti: import('../fatti').Fonte[] } } | undefined = tappe.find(y => y.id === t.id) ?? locali.find(y => y.id === t.id);
     if (!x) continue;
@@ -45,17 +49,19 @@ export async function datiUI(C: Citta, tappe: TappaDati[], locali: Locale[]): Pr
     const controllato = controlloMenoRecente(fatti);
     out[t.id] = {
       ...(t.foto || c ? { foto: { ...(t.foto ? { m: t.foto } : {}), ...(c ? { c } : {}) } } : {}),
-      frase: frasiDi(x.testo.nudo)[0],
+      frase: frasiDi(x.testo.nudo)[0]
+    };
+    cerca[t.id] = {
       frasi,
       fonti: fonti.map(f => ({ titolo: f.data.titolo, editore: f.data.editore, url: f.data.url, tipo: f.data.tipo })),
       controllato: controllato ? controllato.toISOString().slice(0, 10) : null
     };
   }
-  return {
+  return { cerca, ui: {
     tappe: out,
     // il segno chiaro e quello ambra del tema scuro (come il logo scuro scelto da Enrico), il segnaposto della «o»
     marchio: { chiaro: interno(marchio('chiaro')), scuro: interno(marchio('foto')), spillo: SPILLO_O },
     // il nome della città vale solo nei nomi (specifica §3)
     citta: ['napoli', 'napoletano', 'napoletana', 'napoletani', 'napoletane']
-  };
+  } };
 }

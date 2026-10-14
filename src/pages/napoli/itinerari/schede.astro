@@ -1,0 +1,37 @@
+---
+// Le schede del compositore (/napoli/itinerari/schede/): le schede complete delle tappe, dei locali e delle gite (Scheda.astro,
+// SchedaLocale.astro), il testo delle regate e i dati della ricerca (frasi dei testi, fonti di ogni tappa). Non è una pagina da
+// leggere: il compositore la scarica dopo il primo disegno (src/scripts/itinerari/compositore/stato.js, caricaSchede) e il
+// service worker la salva per l'uso senza rete. Così la pagina degli itinerari si apre più leggera.
+import Scheda from '../../../components/itinerari/Scheda.astro';
+import SchedaLocale from '../../../components/itinerari/SchedaLocale.astro';
+import Testo from '../../../components/Testo.astro';
+import { getLocali } from '../../../lib/locali';
+import { getTesti } from '../../../lib/testi';
+import { getTappe } from '../../../lib/tappe';
+import { cittaNapoli } from '../../../lib/itinerari/napoli';
+import { datiUI } from '../../../lib/itinerari/ui';
+import { getCollection } from 'astro:content';
+
+const T = await getTesti('itinerari');
+const locali = await getLocali();
+const tappe = await getTappe();
+const C = await cittaNapoli();
+const luoghi = await getCollection('luoghi');
+const { cerca } = await datiUI(C, tappe, locali);
+const partenzaDi = (id: string) => { const p = tappe.find(t => t.id === id)!.data.partenza; return p ? luoghi.find(l => l.id === p.id)?.data.nome : undefined; };
+---
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="robots" content="noindex" />
+  <title>Schede del compositore</title>
+</head>
+<body>
+  {tappe.map(t => <template id={`it-t-${t.id}`}><Scheda t={t} partenza={partenzaDi(t.id)} /></template>)}
+  {locali.map(l => <template id={`it-t-${l.id}`}><SchedaLocale l={l} /></template>)}
+  <template id="it-t-regate"><Testo b={T.b('regate')} class="it-regate-nota" /></template>
+  <script type="application/json" id="it-cerca" set:html={JSON.stringify(cerca).replace(/</g, '\\u003c')} />
+</body>
+</html>

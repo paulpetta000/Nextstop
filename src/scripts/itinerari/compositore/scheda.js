@@ -3,7 +3,7 @@
 // «Sposta nel giorno», «Togli»); di lato si passa alla tappa prima o dopo. In C la mappa resta sopra e vola sulla tappa.
 // I contenuti sono le schede vere della build (src/components/itinerari/Scheda.astro, SchedaLocale.astro, nei <template>).
 import { $, $$, esc, ic, soglia, piano, computer, range, ora, durata, dataScritta, GS, INGRESSO, DENTRO, SCALE, MOMENTO } from './base.js';
-import { E, T, X, nG, giornoDi, nelViaggio, visitata, puoiSegnare, G, tappeDi, aggiunta, ultimaDi, chiusaIl, dataLungaDi } from './stato.js';
+import { E, T, X, MODELLI, schedePronte, caricaSchede, nG, giornoDi, nelViaggio, visitata, puoiSegnare, G, tappeDi, aggiunta, ultimaDi, chiusaIl, dataLungaDi } from './stato.js';
 import { S, foglio, chiudiFoglio, foglioEl, scorri, occupato, annuncia, tiraPerChiudere, gestoScheda } from './comuni.js';
 import { segna, togliTappa, spostaGiorno, aggiungi, aggiungiGita, vaiAlGiorno, testoTratto, mappaC } from './viste.js';
 import { salva } from './fogli.js';
@@ -15,7 +15,9 @@ let daDove = null;   // chi l'ha aperta: torna lì il fuoco
 export const schedaAperta = () => (sch && schEl().open ? sch : null);
 
 // ---------- i pezzi della scheda ----------
-const modello = id => document.getElementById(`it-t-${E && id === E.id ? 'regate' : id}`)?.content;
+const modello = id => MODELLI.get(E && id === E.id ? 'regate' : id);
+// le schede arrivano dopo il primo disegno: se non ci sono ancora si aspettano (senza rete e senza copia, la scheda è più corta)
+const conSchede = async () => { if (!schedePronte()) await caricaSchede().catch(() => {}); };
 export function fotoGrande(id, cl = 'sch-foto') {
   const pic = modello(id)?.querySelector('picture');
   if (!pic) return `<span class="${cl} sch-senza" aria-hidden="true">${soglia()}</span>`;
@@ -129,15 +131,17 @@ function azioniScheda(id) {
 }
 
 // ---------- aprire ----------
-export function apriScheda(id, sorgente) {
+export async function apriScheda(id, sorgente) {
   daDove = sorgente?.closest?.('button') || document.activeElement;
+  await conSchede();
   const g = giornoDi(id);
   if (g !== S.g) { schedaFuori(id); return; }
   apri(id);
 }
 export async function chiudiSchede() { if (schedaAperta()) await chiudi(true); }
 // le tappe che non sono in questo giorno (dalla mappa, dalla ricerca, le gite): la scheda nel foglio, con «Aggiungi»
-export function schedaFuori(id, indietro = null) {
+export async function schedaFuori(id, indietro = null) {
+  await conSchede();
   const g = giornoDi(id);
   const corpo = `${indietro ? `<button type="button" class="r-indietro" data-f="indietro">${ic('indietro', 18)}Torna ai risultati</button>` : ''}<div class="f-scheda-foto">${fotoGrande(id, 'f-scheda-img')}</div>${credito(id)}<p class="sch-quando">${g >= 0 ? quandoTesto(id) : X().giorni.some(D => D.gita === id) ? 'È una gita del tuo itinerario' : 'Non è nel tuo itinerario'}</p>${chips(id)}<div class="sch-testo">${testoScheda(id)}</div>${sezioni(id)}${fontiScheda(id)}${g >= 0 ? `<button type="button" class="f-bottone f-bottone--contorno" data-f="vai" data-g="${g}">Vai al giorno ${g + 1}</button>` : X().giorni.some(D => D.gita === id) ? '' : azioniScheda(id)}`;
   foglio(T(id).nome, corpo, f => {

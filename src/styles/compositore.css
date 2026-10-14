@@ -1471,3 +1471,18 @@ html.pd .cmp .gita__carta { border-radius: 4px; background: var(--carta); box-sh
 /* i miei itinerari: senza la foto, il nome prende tutta la riga */
 .cmp .f-miei .f-riga--mio { grid-template-columns: minmax(0, 1fr) auto; padding: 10px 0 6px; border-bottom: 1px solid var(--f-riga); }
 .cmp .f-miei .f-mio .f-segno { margin-top: 6px; }
+/* sotto il compositore: le sezioni si impaginano solo quando ci arrivi (il primo disegno non le aspetta) */
+.it-pagina > .it-sezione { content-visibility: auto; contain-intrinsic-size: auto 1100px; }
+@media print { .it-pagina > .it-sezione { content-visibility: visible; } }
+/* la prima schermata, già nell'HTML (prima che parta lo script): come la mappa di C, con la frase d'apertura */
+.cmp-primo { min-height: 100dvh; display: grid; align-content: end; gap: 10px; padding: 24px 22px calc(40px + env(safe-area-inset-bottom, 0px)); background: #E6E9F2; color: #10173A; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+.cmp-primo__t { margin: 0; font-weight: 700; font-size: 28px; line-height: 1.1; }
+.cmp-primo__p { margin: 0; max-width: 34rem; font-size: 18px; line-height: 1.5; color: #4B5376; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cmp-primo { background: #0A0F27; color: #EEF0FA; } :root:not([data-theme="light"]) .cmp-primo__p { color: #A8AFD3; } }
+:root[data-theme="dark"] .cmp-primo { background: #0A0F27; color: #EEF0FA; }
+:root[data-theme="dark"] .cmp-primo__p { color: #A8AFD3; }
+.cmp-ha .cmp-primo > * { visibility: hidden; }
+/* con JavaScript, la parte bassa della pagina compare quando il compositore è partito: il primo disegno non la aspetta (e nemmeno i suoi caratteri) */
+.cmp-js:not(.cmp-pronto) .it-pagina > :not(.cmp), .cmp-js:not(.cmp-pronto) body > footer { display: none; }
+/* una foto della mappa coperta dalla testata, dai pulsanti o dal foglio: nascosta finché non sposti la mappa */
+.cmp .m-punto--coperto { visibility: hidden; }

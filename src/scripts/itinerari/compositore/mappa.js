@@ -292,7 +292,7 @@ export class Mappa {
     const s = this.s;
     const pos = this.tappe.map(v => { const xy = xyDi(v), x = (xy[0] - this.vb.x) * s, y = (xy[1] - this.vb.y) * s; return { x, y, x0: x, y0: y }; });
     const punti = this.tutte ? $$('.m-punto', this.el) : [];
-    for (const b of punti) { const xy = T(b.dataset.id).xy, x = (xy[0] - this.vb.x) * s, y = (xy[1] - this.vb.y) * s; pos.push({ x, y, x0: x, y0: y, r: b.classList.contains('m-punto--viaggio') ? 12 : 16 }); }
+    for (const b of punti) { const xy = T(b.dataset.id).xy, x = (xy[0] - this.vb.x) * s, y = (xy[1] - this.vb.y) * s; pos.push({ x, y, x0: x, y0: y, r: 18 }); }   // r 18: i pulsanti sono di 36 px, così non si sovrappongono (WCAG 2.5.8)
     const MIN = this.opz.distanza ?? 32;
     const minimo = (a, b) => (a.r && b.r ? a.r + b.r + 2 : a.r || b.r ? MIN / 2 + (a.r || b.r) + 2 : MIN);
     for (let giro = 0; giro < (punti.length ? 60 : 80); giro++) {
@@ -313,7 +313,10 @@ export class Mappa {
     $('.m-fili', this.svg).innerHTML = pos.map(p => (Math.hypot(p.x - p.x0, p.y - p.y0) > 6
       ? `<line class="m-filo" x1="${(this.vb.x + p.x0 / s).toFixed(2)}" y1="${(this.vb.y + p.y0 / s).toFixed(2)}" x2="${(this.vb.x + p.x / s).toFixed(2)}" y2="${(this.vb.y + p.y / s).toFixed(2)}"/>` : '')).join('');
     const nT = this.tappe.length;
-    punti.forEach((b, i) => { const p = pos[nT + i]; b.style.transform = `translate(${p.x.toFixed(1)}px, ${p.y.toFixed(1)}px)`; b.classList.toggle('m-punto--sotto', p.y < 150); });
+    // le foto che cadono sotto la testata, i pulsanti della mappa o il foglio si nascondono: coperte a metà non si toccano bene
+    const W = this.el.clientWidth, H = this.el.clientHeight, m = this.opz.margini ? this.opz.margini() : { t: 0, r: 0, b: 0, l: 0 };
+    const coperto = p => p.y < Math.max(20, m.t) || p.y > H - Math.max(20, m.b - 30) || p.x < Math.max(20, m.l - 40) || p.x > W - Math.max(20, m.r + 10);
+    punti.forEach((b, i) => { const p = pos[nT + i]; b.style.transform = `translate(${p.x.toFixed(1)}px, ${p.y.toFixed(1)}px)`; b.classList.toggle('m-punto--sotto', p.y < 150); b.classList.toggle('m-punto--coperto', coperto(p)); });
   }
   centra(id) {
     if (!BASE) return;

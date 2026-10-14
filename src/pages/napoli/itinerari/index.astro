@@ -4,8 +4,6 @@
 import Base from '../../../layouts/Base.astro';
 import Testo from '../../../components/Testo.astro';
 import FontiPagina from '../../../components/FontiPagina.astro';
-import Scheda from '../../../components/itinerari/Scheda.astro';
-import SchedaLocale from '../../../components/itinerari/SchedaLocale.astro';
 import { getLocali, CUCINE, PASTI } from '../../../lib/locali';
 import { getTesti } from '../../../lib/testi';
 import { tutteLeFonti } from '../../../lib/fatti';
@@ -13,7 +11,6 @@ import { getTappe, ZONE } from '../../../lib/tappe';
 import { cittaNapoli, impacchetta, prontiNapoli, REGATE } from '../../../lib/itinerari/napoli';
 import { icona } from '../../../lib/itinerari/icone';
 import { durata, ora } from '../../../lib/itinerari/date';
-import { getCollection } from 'astro:content';
 import '../../../styles/itinerari.css';
 import '../../../styles/compositore.css';
 import { datiUI } from '../../../lib/itinerari/ui';
@@ -25,7 +22,6 @@ const locali = await getLocali();
 const tappe = await getTappe();
 const C = await cittaNapoli();
 const pronti = await prontiNapoli();
-const luoghi = await getCollection('luoghi');
 const fonti = await tutteLeFonti();
 const pacco = impacchetta(C);
 
@@ -37,17 +33,13 @@ const gite = C.tappe.filter(t => t.tipo === 'gita');
 const ordineZone = Object.keys(ZONE);
 citta.sort((a, b) => ordineZone.indexOf(a.zona) - ordineZone.indexOf(b.zona));
 const nomeDi = (id: string) => (id === REGATE.id ? REGATE.nome : C.tappe.find(t => t.id === id)!.nome);
-const partenzaDi = (id: string) => { const p = tappe.find(t => t.id === id)!.data.partenza; return p ? luoghi.find(l => l.id === p.id)?.data.nome : undefined; };
 // Schede mostrate così come sono (orari, prezzi, viaggi): anche le loro fonti vanno in fondo alla pagina
 const schedeMostrate = [...tappe.flatMap(t => [...t.schede.values()]), ...locali.flatMap(l => [...l.schede.values()])];
 const ore = Array.from({ length: 11 }, (_, i) => 9 + i);
-const ui = await datiUI(C, tappe, locali);
+const { ui } = await datiUI(C, tappe, locali);
 const json = JSON.stringify(pacco).replace(/</g, '\\u003c');
 ---
 <Base soloMenu title="Itinerari a Napoli: mezza giornata, 1, 2 e 3 giorni" description="Componi il tuo itinerario a Napoli: 51 tappe in città e 9 gite, con i tempi a piedi e con metro, funicolari e autobus, la mappa e gli avvisi. Itinerari pronti per mezza giornata, 1, 2 e 3 giorni e per un giorno di regata. Senza account, anche offline.">
-  <Fragment slot="head">
-    <link rel="preload" href="/fonts/bodoni-moda-500-corsivo.woff2" as="font" type="font/woff2" crossorigin />
-  </Fragment>
   <script is:inline>
     // Un itinerario ricevuto con un link: lo prendo e tolgo il «#…» dall'indirizzo prima di tutto il resto,
     // così non finisce nelle statistiche né nella cronologia delle pagine viste.
@@ -57,6 +49,9 @@ const json = JSON.stringify(pacco).replace(/</g, '\\u003c');
     // Un itinerario pronto scelto dalla home o dal menu (?pronto=…#pronto-…): lo carica il compositore. Tolgo anche il «#pronto-…»,
     // che serve solo senza JavaScript (porta alla scheda dell'itinerario, più in basso)
     try { var p = /[?&]pronto=([a-z0-9-]+)/.exec(location.search); if (p) { window.prontoRichiesto = p[1]; history.replaceState(null, '', location.pathname); } } catch (e) {}
+    // Chi ha già itinerari sul telefono (o arriva con un link o un pronto) non vede la prima schermata: arriva subito il suo
+    document.documentElement.classList.add('cmp-js');
+    try { if (localStorage.getItem('itinerari-v1') || window.itinerarioRicevuto || window.prontoRichiesto) document.documentElement.classList.add('cmp-ha'); } catch (e) {}
   </script>
   <div class="it-pagina">
 
@@ -68,16 +63,14 @@ const json = JSON.stringify(pacco).replace(/</g, '\\u003c');
         </div>
       </noscript>
       <h1 class="vh">Itinerari a Napoli</h1>
-      <div id="app" class="cmp-app"></div>
+      <!-- La prima schermata, già nell'HTML: si vede subito, poi il compositore la sostituisce (per chi ha già itinerari sul telefono resta invisibile) -->
+      <div id="app" class="cmp-app"><div class="cmp-primo"><p class="cmp-primo__t">Itinerari a Napoli</p><p class="cmp-primo__p">Componi le tue giornate: scegli le tappe, vedi quanto ci metti a piedi e con i mezzi, controlla tutto sulla mappa. Gli itinerari restano sul telefono e si mandano con un link.</p></div></div>
       <dialog id="foglio" aria-labelledby="f-titolo"></dialog>
       <dialog id="scheda" aria-labelledby="sch-t"></dialog>
       <div id="toast" role="status" aria-live="polite"></div>
       <p id="annuncio" class="vh" aria-live="polite"></p>
       <p id="aiuto-maniglia" hidden>Trascina con il dito o con il mouse. Con la tastiera usa le frecce su e giù.</p>
-      <!-- Schede delle tappe e testo delle regate, copiati dallo script quando servono -->
-      {tappe.map(t => <template id={`it-t-${t.id}`}><Scheda t={t} partenza={partenzaDi(t.id)} /></template>)}
-      {locali.map(l => <template id={`it-t-${l.id}`}><SchedaLocale l={l} /></template>)}
-      <template id="it-t-regate"><Testo b={T.b('regate')} class="it-regate-nota" /></template>
+      <!-- Le schede delle tappe, dei locali e delle gite e i dati della ricerca sono in /napoli/itinerari/schede/ (schede.astro): arrivano dopo il primo disegno -->
       <script type="application/json" id="it-dati" set:html={json} />
       <script type="application/json" id="it-pronti" set:html={JSON.stringify(pronti.map(p => ({ id: p.id, nome: p.nome, evento: p.evento, giorni: p.it.giorni }))).replace(/</g, '\\u003c')} />
       <script type="application/json" id="it-ui" set:html={JSON.stringify(ui).replace(/</g, '\\u003c')} />

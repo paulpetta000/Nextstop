@@ -2,7 +2,7 @@
 // ricevuto, un itinerario pronto dalla home o dal menu, un locale da «Dove mangiare»), disegna la vista scelta (C o D), poi
 // carica i dati che arrivano dopo e, il giorno stesso, ricalcola dal vivo ogni mezzo minuto.
 import { $, ascoltaFirme, maiuscola } from './base.js';
-import { C, A, X, PRONTI, T, nuovo, apri, nomeLibero, ricordaBozza, gia, scriviArchivio, sostituisciArchivio, caricaDopo, VIVO, oggiNelGiorno, posizioneAttiva, adessoPer, statoPosizione, nG } from './stato.js';
+import { C, A, X, PRONTI, T, caricaSchede, quandoLibero, nuovo, apri, nomeLibero, ricordaBozza, gia, scriviArchivio, sostituisciArchivio, caricaDopo, VIVO, oggiNelGiorno, posizioneAttiva, adessoPer, statoPosizione, nG } from './stato.js';
 import { decodifica } from '../../../lib/itinerari/link';
 import { leggi, quandoCambia } from '../memoria';
 import { S, vistaSalvata, preparaFoglio, preparaAvviso, avvisa, annuncia } from './comuni.js';
@@ -57,6 +57,8 @@ function avvia() {
   const ridisegna = () => { if (lista()) return; if (occupato()) setTimeout(ridisegna, 5000); else aggiorna(() => {}); };
   const lista = () => !X().giorni[S.g].tappe.length && !$('#foglio').open;
   Promise.all([document.fonts?.ready ?? Promise.resolve(), new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))]).then(() => caricaDopo(ridisegna));
+  // le schede complete e i dati della ricerca, a pagina caricata
+  quandoLibero().then(() => caricaSchede()).catch(() => { /* si riprova quando servono */ });
 
   // ---------- dal vivo: ora del telefono e, se l'hai permesso, la posizione ----------
   navigator.permissions?.query({ name: 'geolocation' }).then(p => {
@@ -96,10 +98,23 @@ function avvia() {
 // un avviso subito dopo il primo disegno
 let primi = [];
 function avvisaDopo(t) { primi.push(t); }
-if (document.getElementById('app')) {
+function parti() {
   // i segni di tempo dell'avvio (per misurare il primo disegno, anche da telefono)
   performance.mark('compositore-inizio');
   avvia();
   performance.mark('compositore-fine');
   if (primi.length) setTimeout(() => avvisa(primi.join(' ')), 600);
+}
+if (document.getElementById('app')) {
+  // la prima schermata dell'HTML si disegna prima che il compositore la sostituisca (chi ha già itinerari parte subito)
+  // si parte appena il browser ha mostrato il primo disegno (al massimo dopo 3 secondi; subito se la scheda non si vede)
+  if (document.documentElement.classList.contains('cmp-ha') || document.visibilityState === 'hidden') parti();
+  else {
+    let partito = false;
+    const via = () => { if (partito) return; partito = true; parti(); };
+    try {
+      new PerformanceObserver((l, o) => { if (l.getEntries().some(e => e.name === 'first-contentful-paint')) { o.disconnect(); requestAnimationFrame(() => setTimeout(via, 0)); } }).observe({ type: 'paint', buffered: true });
+    } catch { requestAnimationFrame(() => requestAnimationFrame(() => setTimeout(via, 0))); }
+    setTimeout(via, 3000);
+  }
 }

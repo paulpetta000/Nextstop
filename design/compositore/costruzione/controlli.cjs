@@ -39,7 +39,8 @@ const STATI = [
   const controlla = async dove => {
     await page.addScriptTag({ path: AXE });
     const r = await page.evaluate(async () => {
-      const s = document.createElement('style'); s.textContent = '*,*::before,*::after{transition:none!important;animation:none!important}'; document.head.append(s);
+      const s = document.createElement('style'); s.textContent = '*,*::before,*::after{transition:none!important;animation:none!important}*{content-visibility:visible!important;contain-intrinsic-size:none!important}'; // le sezioni fuori schermo (content-visibility) si impaginano, così axe legge i colori veri document.head.append(s);
+      await new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)));
       const x = await axe.run(document, { resultTypes: ['violations'] }); s.remove();
       return x.violations.map(v => `${v.id} (${v.impact}): ${v.nodes.slice(0, 3).map(n => n.target.join(' ')).join(' | ')} — ${v.nodes[0]?.failureSummary?.split('\n')[1] ?? ''}`);
     });
