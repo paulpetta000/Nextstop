@@ -109,6 +109,7 @@ export interface Giorno {
   ok?: string[];           // tappe lontane che hai deciso di lasciare dove sono
   fatte?: string[];        // tappe segnate «visitata», nell'ordine dei tocchi (solo sul telefono, non nel link)
   pause?: Pausa[];         // senza: la pausa pranzo di base (src/lib/itinerari/pause.ts); [] nessuna pausa
+  noPasti?: ('pranzo' | 'cena')[];   // «No, grazie» alle proposte per mangiare di quel giorno (solo sul telefono)
   lascia?: string;         // l'ordine delle tappe per cui hai detto «Lascia così» al consiglio dell'ordine più corto (solo sul telefono)
 }
 

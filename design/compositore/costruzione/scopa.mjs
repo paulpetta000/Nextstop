@@ -3,11 +3,13 @@
 import fs from 'node:fs';
 const [out, ...ins] = process.argv.slice(2);
 const SCARTA = /\.p[aefg]\b|\.q[234]\b|#prova|#idea|\.idea|\.r1-|\.r3-|\.r--[13]\b|\.sch[234]\b|\.sch[234]__|\.timbro--[13]\b|\.segno-[123]\b|\.cammino|\.riga-sotto|\.riga-pelle|\.riga-aperta|\.ra-|\.sigillo|\.m-bordi|\.bordi-su|\.m-pezzi|\.p-dentro|data-vv="[23]"|\.in-modifica|\.modifica-barra|\.c-modifica|\.d-modifica|\.meno\b|\.d-voce--stretta|\.d-stretta|\.d-maniglia-s|\.d-timbro-b|\.d-altro|\.c-altro|\.c-sigillo|\.d-sigillo|\.menu-t|#menu-tappa|\.scorre\b|\.armata|\.preme\b|\.alzata/;
+// SCARTA_ANCHE: un'altra espressione per togliere altre proposte (per esempio quelle del pezzo 7 non scelte)
+const ALTRE = process.env.SCARTA_ANCHE ? new RegExp(process.env.SCARTA_ANCHE) : null;
 const RADICE = /^(:root|html)([.:[][^\s>+~]*)?|^\.(p[cd]|q1|sch1-su|c-giu-su)\b[^\s>+~]*/;
 function selettore(s) {
   s = s.trim();
   if (!s) return null;
-  if (SCARTA.test(s)) return null;
+  if (SCARTA.test(s) || (ALTRE && ALTRE.test(s))) return null;
   if (s === 'body') return '.cmp';
   if (/^(\*|::selection|:focus-visible|::backdrop)/.test(s)) return `.cmp ${s}`;
   const m = RADICE.exec(s);

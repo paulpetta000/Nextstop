@@ -100,3 +100,9 @@ test('link itinerari: il confronto tiene conto di pause e margine', () => {
   assert.equal(uguali(x, { ...x, giorni: [{ ...x.giorni[0], pause: [] }] }), false);
   assert.equal(uguali(x, { ...x, salvato: false, timbri: { tappa0: 1 } }), true);
 });
+
+test('link itinerari: «No, grazie» ai pasti resta sul telefono, solo pranzo e cena', () => {
+  const r = sistema(C, { giorni: [{ ...giornoVuoto(), tappe: ['tappa0'], noPasti: ['cena', 'merenda', 'cena', 'pranzo'] }] }).it;
+  assert.deepEqual(r.giorni[0].noPasti, ['cena', 'pranzo']);
+  assert.doesNotMatch(codifica(r), /noPasti|cena/);
+});

@@ -69,8 +69,9 @@ function sistemaGiorno(C: Citta, g: Partial<Giorno> | undefined, scartate: strin
   const ok = Array.isArray(g?.ok) ? g!.ok.filter(id => tappe.includes(id)) : undefined;
   const fatte = Array.isArray(g?.fatte) ? g!.fatte.filter(id => tappe.includes(id)) : undefined;
   const pause = gita ? undefined : sistemaPause(g?.pause, tappe);
+  const noPasti = Array.isArray(g?.noPasti) ? [...new Set(g!.noPasti.filter(x => x === 'pranzo' || x === 'cena'))] : [];
   const lascia = typeof g?.lascia === 'string' && g.lascia.length <= 800 ? g.lascia : undefined;
-  return { tappe, inizio, fine, ...(gita ? { gita } : {}), ...(ok?.length ? { ok } : {}), ...(fatte?.length ? { fatte } : {}), ...(pause ? { pause } : {}), ...(lascia ? { lascia } : {}) };
+  return { tappe, inizio, fine, ...(gita ? { gita } : {}), ...(ok?.length ? { ok } : {}), ...(fatte?.length ? { fatte } : {}), ...(pause ? { pause } : {}), ...(lascia ? { lascia } : {}), ...(noPasti.length && !gita ? { noPasti } : {}) };
 }
 
 // Un itinerario letto dalla memoria o da un link: tiene solo ciò che è valido e dice cosa ha scartato

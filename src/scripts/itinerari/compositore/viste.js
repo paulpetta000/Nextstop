@@ -8,7 +8,8 @@ import {
 } from './stato.js';
 import { MAX_GIORNI, MAX_TAPPE, giornoVuoto } from '../../../lib/itinerari/link';
 import { preparaSpostamento } from '../../../lib/itinerari/spostamenti';
-import { TIPI_PAUSA, sequenza } from '../../../lib/itinerari/pause';
+import { TIPI_PAUSA } from '../../../lib/itinerari/pause';
+import { sequenzaM, rigaPasto, AZ_PASTO } from './pasto.js';
 import { Mappa, daVedere, preparaAlternativi } from './mappa.js';
 import {
   S, ricordaVista, avvisa, annuncia, cifre, contaCifre, contaDa, contaFine, tempo, scorri, allInizio, entra, schede, segnoOra, mettiSegno,
@@ -350,9 +351,10 @@ const C1 = {
   giorni() { return `<div class="c-pista" style="--n:${nG()}">${schede('c')}${nG() < MAX_GIORNI ? `<button type="button" class="c-piu onda" data-azione="nuovo-giorno" aria-label="Aggiungi un giorno">${ic('piu', 20)}</button>` : ''}</div>`; },
   elenco(Gx) {
     let i = 0;
-    const voci = sequenza(Gx);
+    const voci = sequenzaM(Gx, S.g);
     const righe = voci.map((v, k) => {
       if (v.tipo === 'tratto') { const dopoT = voci.slice(k + 1).find(x => x.tipo === 'tappa'); return `<li class="c-tratto" data-chiave="t-${dopoT?.id}" data-verso="${dopoT?.id ?? ''}"${dopoT && visitata(dopoT.id) ? ' data-fatto' : ''} style="--i:${i++}"><i aria-hidden="true"></i><span>${ic(tipoTratto(v) === 'piedi' ? 'piedi' : tipoTratto(v), 15)}${testoTratto(v, Gx)}</span></li>`; }
+      if (v.tipo === 'pasto') return rigaPasto(v.m, 'c', ` style="--i:${i++}"`);
       if (v.tipo === 'pausa') return `<li class="c-riga c-pausa" data-chiave="p-${v.quale}" style="--i:${i++}"><button type="button" data-azione="pausa" data-quale="${v.quale}"><span class="c-n c-n--pausa">${ic(IC_PAUSA[v.quale], 17)}</span><span class="c-tit"><span class="c-ora num">${ora(v.inizio)} – ${ora(v.fine)}</span>${NOMI_PAUSA[v.quale]}<small class="c-pausa__d">${durataLunga(v.min)}: tocca per cambiarla</small></span><span></span></button></li>`;
       const html = rigaC(v, i++);
       return v.fatta && Gx.vivo && voci[k + 1] && !(voci[k + 1].tipo === 'tappa' && voci[k + 1].fatta) ? html + rigaAdesso(Gx) : html;
@@ -488,9 +490,10 @@ const Dp = {
   },
   cartoline(Gx, g) {
     let k = 0;
-    const voci = sequenza(Gx);
+    const voci = sequenzaM(Gx, g);
     return voci.map((v, j) => {
       if (v.tipo === 'tratto') { const dopoT = voci.slice(j + 1).find(x => x.tipo === 'tappa'); return `<div class="d-tratto" data-chiave="t-${dopoT?.id}" data-verso="${dopoT?.id ?? ''}"${dopoT && visitata(dopoT.id) ? ' data-fatto' : ''}>${v.mezzi.length ? ic(tipoTratto(v), 22) : orme()}<span class="d-tratto__t">${testoTratto(v, Gx)}</span></div>`; }
+      if (v.tipo === 'pasto') return rigaPasto(v.m, 'd');
       if (v.tipo === 'pausa') return `<button type="button" class="d-pausa" data-chiave="p-${v.quale}" data-azione="pausa" data-quale="${v.quale}"><span class="d-pausa__ic">${ic(IC_PAUSA[v.quale], 24)}</span><span class="d-pausa__t"><b>${NOMI_PAUSA[v.quale]}</b><span class="num">${ora(v.inizio)} – ${ora(v.fine)}, ${durataLunga(v.min)}</span></span><span class="d-pausa__cambia">Cambia</span></button>`;
       const html = cartolinaD(v, k++, g);
       return v.fatta && Gx.vivo && voci[j + 1] && !(voci[j + 1].tipo === 'tappa' && voci[j + 1].fatta) ? `${html}<p class="d-adesso" data-chiave="adesso">${ic('orologio', 16)}Da adesso, ${ora(Gx.inizio)}: orari ricalcolati</p>` : html;
@@ -679,6 +682,7 @@ export const mettiNome = () => $$('[data-nome]').forEach(x => { x.textContent = 
 
 // ---------- le azioni dei pulsanti (delega) ----------
 export const AZ = {
+  ...AZ_PASTO,
   giorno: b => vaiAlGiorno(+b.dataset.g),
   'nuovo-giorno': nuovoGiorno,
   'togli-giorno': () => togliGiorno(),
