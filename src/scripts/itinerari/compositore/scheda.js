@@ -98,7 +98,7 @@ function timbro(id) {
   return `<button type="button" class="timbro timbro--2" data-azione="visitata" data-id="${id}" aria-pressed="${vis}"><svg class="timbro__giro" viewBox="0 0 100 100" aria-hidden="true" focusable="false"><defs><path id="giro-${id}" d="M50 50m-37 0a37 37 0 1 1 74 0a37 37 0 1 1-74 0"/></defs><circle class="timbro__anello" cx="50" cy="50" r="46"/><circle class="timbro__anello timbro__anello--2" cx="50" cy="50" r="28"/><text><textPath href="#giro-${id}">NAPOLI · NEXTSTOP · NAPOLI · NEXTSTOP ·</textPath></text></svg>${soglia()}<span class="vh">${b}: </span><span class="timbro__t">visitata</span><span class="timbro__data num" aria-hidden="true">${giornoSegnato(id)}</span></button>`;
 }
 // senza «Salva» il timbro non c'è: la scheda propone di salvare
-const salvaPrima = id => (!nelViaggio(id) || puoiSegnare() || T(id)?.evento ? '' : `<div class="bv-salva">${soglia('bv__s')}<p>Salva l'itinerario per segnare le tappe che hai visitato: il segno resta su questo telefono.</p><button type="button" class="f-bottone" data-azione="salva">Salva</button></div>`);
+const salvaPrima = id => (!nelViaggio(id) || puoiSegnare() || T(id)?.evento ? '' : `<div class="bv-salva">${soglia('bv__s')}<p>Salva l'itinerario per segnare le tappe visitate (restano su questo telefono).</p><button type="button" class="f-bottone" data-azione="salva">Salva</button></div>`);
 export function animaSoglia(b, si) {
   if (si && b.classList.contains('timbro--2')) { b.classList.remove('timbro--stampa'); void b.offsetWidth; b.classList.add('timbro--stampa'); }
   const s = $('.soglia', b);

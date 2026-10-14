@@ -34,7 +34,8 @@ const principale = CITTA[0];
 
 <nav id="menu" class="menu" popover aria-label="Menu">
   <div class="menu__testa">
-    <Marchio dove="scuro" />
+    {/* nel compositore il logo del menu è quello ambra della pagina (pezzo 1) e si anima a ogni apertura */}
+    <Marchio dove={soloMenu ? 'foto' : 'scuro'} />
     <button class="tondo tondo--notte" type="button" popovertarget="menu" popovertargetaction="hide" aria-label="Chiudi il menu">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M6 6l12 12M18 6L6 18" /></svg>
     </button>
@@ -60,12 +61,16 @@ const principale = CITTA[0];
       <li><a href="/fonti/" aria-current={qui('/fonti/')}>Fonti e controlli</a></li>
       <li><a href="/privacy/" aria-current={qui('/privacy/')}>Privacy</a></li>
     </ul>
-    <button class="menu__tema" type="button" id="tema-btn">
-      <span class="tema-ico tema-ico--auto"><Icon name="auto" size={20} /></span>
-      <span class="tema-ico tema-ico--light"><Icon name="sole" size={20} /></span>
-      <span class="tema-ico tema-ico--dark"><Icon name="luna" size={20} /></span>
-      <span id="tema-nome">Tema: automatico</span>
-    </button>
+    <div class="menu__interruttori">
+      <button class="menu__tema" type="button" id="tema-btn">
+        <span class="tema-ico tema-ico--auto"><Icon name="auto" size={20} /></span>
+        <span class="tema-ico tema-ico--light"><Icon name="sole" size={20} /></span>
+        <span class="tema-ico tema-ico--dark"><Icon name="luna" size={20} /></span>
+        <span id="tema-nome">Tema: automatico</span>
+      </button>
+      {/* la vista del compositore (Mappa prima / Le pagine): la accende lo script del compositore, solo con JavaScript */}
+      {soloMenu && <button class="menu__tema" type="button" id="vista-btn" hidden><span class="vista-ico" aria-hidden="true"></span><span id="vista-nome">Vista</span></button>}
+    </div>
   </div>
 </nav>
 
@@ -118,6 +123,9 @@ const principale = CITTA[0];
   .menu__piccoli a { display: flex; align-items: center; justify-content: space-between; gap: 1rem; min-height: 44px; color: var(--su-notte-2); text-decoration: none; font-size: 1rem; }
   @media (hover: hover) { .menu__voci a:hover, .menu__piccoli a:hover { text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 4px; } }
   .menu__tema { justify-self: start; display: inline-flex; align-items: center; gap: .55rem; min-height: 44px; padding: .4rem 1rem .4rem .8rem; border-radius: 999px; border: 1px solid rgba(255, 255, 255, .28); background: transparent; color: var(--su-notte); font: inherit; font-size: .95rem; cursor: pointer; }
+  .menu__interruttori { display: grid; justify-items: start; gap: .5rem; }
+  .menu__tema[hidden] { display: none; }
+  .vista-ico { display: block; line-height: 0; }
   .tema-ico { display: none; line-height: 0; }
   :global(html:not([data-theme])) .tema-ico--auto,
   :global(html[data-theme="light"]) .tema-ico--light,

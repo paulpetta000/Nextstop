@@ -727,18 +727,23 @@ html.pd .cmp { --t-visita: #1B1A17; --t-cammino: #1F4FA0; --t-pausa: #B4552A; --
 :root.pc:not([data-theme="light"]) .cmp { --t-visita: #EEF0FA; --t-cammino: #8C9BEA; --t-pausa: #6FD0A8; --t-margine: #A8AFD3; --t-pista: #1B2350; }
 :root.pd:not([data-theme="light"]) .cmp { --t-visita: #F2EEE6; --t-cammino: #8FB0F0; --t-pausa: #F0A070; --t-margine: #B6AEA1; --t-pista: #2A2723; }
 }
-.cmp .tempo { display: grid; gap: 9px; min-width: 0; }
+.cmp .tempo { display: grid; gap: 6px; min-width: 0; }
+/* i numeri del riepilogo nel carattere del testo, con le cifre della stessa larghezza (scorrono senza far ballare la riga):
+   nel carattere a spaziatura fissa «8 h 32» aveva spazi troppo larghi (Enrico, 14/10/2026) */
+.cmp .tempo .num { font-family: inherit; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
 .cmp .tempo__testa { display: flex; align-items: center; justify-content: space-between; gap: 6px 10px; flex-wrap: wrap; }
-.cmp .tempo__tit { display: flex; align-items: baseline; flex-wrap: wrap; gap: 2px 12px; font-size: 15px; color: var(--ink2); }
+.cmp .tempo__tit { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 8px; font-size: 14.5px; line-height: 1.3; color: var(--ink2); }
 .cmp .tempo__tit b { color: var(--ink); font-weight: 700; }
 .cmp .tempo__resta b { color: var(--ink); font-weight: 700; }
 .cmp .tempo__resta--oltre, .cmp .tempo__resta--oltre b { color: var(--pericolo-t); }
-.cmp .tempo__cambia { min-height: 44px; padding: 0 14px 0 12px; border-radius: 999px; display: inline-flex; align-items: center; gap: 7px; font-weight: 650; font-size: 14.5px; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--riga, var(--f-riga)); transition: background-color 200ms, transform 160ms var(--entra); }
+.cmp .tempo__cambia { position: relative; min-height: 36px; padding: 0 12px 0 10px; border-radius: 999px; display: inline-flex; align-items: center; gap: 7px; font-weight: 650; font-size: 13.5px; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--riga, var(--f-riga)); transition: background-color 200ms, transform 160ms var(--entra); }
 .cmp .tempo__cambia:active { transform: scale(.96); }
+/* più piccolo a vedersi, ma il tocco resta di 44 px */
+.cmp .tempo__cambia::after { content: ""; position: absolute; inset: -4px 0; }
 @media (hover: hover) {
 .cmp .tempo__cambia:hover { background: color-mix(in srgb, var(--ink) 6%, transparent); }
 }
-.cmp .tempo__barra { position: relative; height: 12px; }
+.cmp .tempo__barra { position: relative; height: 10px; }
 .cmp .tempo__pista { position: absolute; inset: 0; border-radius: 6px; overflow: hidden; background: var(--t-pista); }
 .cmp .tempo__s { position: absolute; top: 0; bottom: 0; box-shadow: inset -1.5px 0 0 var(--t-sep); transition: left 700ms var(--entra), width 700ms var(--entra); }
 .cmp .tempo__s--visita { background: var(--t-visita); }
@@ -752,7 +757,7 @@ html.pd .cmp { --t-visita: #1B1A17; --t-cammino: #1F4FA0; --t-pausa: #B4552A; --
 .cmp .tempo__ore .tempo__ora-fine { left: auto; right: 0; }
 .cmp .tempo__ore .tempo__ora-limite { transform: translateX(-50%); color: var(--pericolo-t); font-weight: 650; }
 .cmp .tempo__voci { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 16px; margin: 0; }
-.cmp .tempo__voci > div { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 6px 0; border-top: 1px solid color-mix(in srgb, var(--riga, var(--f-riga)) 80%, transparent); font-size: 14px; min-width: 0; }
+.cmp .tempo__voci > div { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; padding: 3px 0; border-top: 1px solid color-mix(in srgb, var(--riga, var(--f-riga)) 80%, transparent); font-size: 13.5px; min-width: 0; }
 .cmp .tempo__voci dt { display: inline-flex; align-items: center; gap: 8px; color: var(--ink2); white-space: nowrap; }
 .cmp .tempo__voci dd { font-weight: 650; white-space: nowrap; }
 .cmp .tempo__p { width: 10px; height: 10px; border-radius: 3px; flex: none; }
@@ -767,13 +772,13 @@ html.pd .cmp { --t-visita: #1B1A17; --t-cammino: #1F4FA0; --t-pausa: #B4552A; --
 .cmp .tempo__pista { animation: tempo-pista 900ms var(--entra) both; }
 }
 @keyframes tempo-pista { from { clip-path: inset(0 100% 0 0 round 6px); } to { clip-path: inset(0 0 0 0 round 6px); } }
-html.pc .cmp .tempo--c { padding: 12px 12px 6px; border-radius: 18px; background: var(--sup2); --t-sep: var(--sup2); }
-html.pc .cmp .tempo--c .tempo__tit b { font-stretch: 112%; }
+html.pc .cmp .tempo--c { padding: 10px 12px 4px; border-radius: 18px; background: var(--sup2); --t-sep: var(--sup2); }
+html.pc .cmp .tempo--c .tempo__tit b { font-size: 16px; }
 html.pc .cmp .tempo--c .tempo__cambia { background: var(--sup); box-shadow: none; }
-html.pd .cmp .tempo--d { margin-top: 16px; padding: 14px 14px 8px; background: var(--carta); border-radius: 4px; box-shadow: 0 1px 2px rgba(40, 34, 20, .1), 0 10px 20px -14px rgba(40, 34, 20, .5), 0 0 0 1px var(--riga); rotate: -.35deg; }
+html.pd .cmp .tempo--d { margin-top: 14px; padding: 10px 12px 4px; background: var(--carta); border-radius: 4px; box-shadow: 0 1px 2px rgba(40, 34, 20, .1), 0 10px 20px -14px rgba(40, 34, 20, .5), 0 0 0 1px var(--riga); rotate: -.35deg; }
 html.pd .cmp .tempo--d .tempo__tit b { font: 600 21px/1 "Bodoni Moda", Georgia, serif; color: var(--acc); -webkit-text-stroke: .4px currentColor; }
 html.pd .cmp .tempo--d .tempo__cambia { color: var(--acc); box-shadow: inset 0 0 0 1.5px var(--acc); }
-.cmp .tempo--f { padding: 14px 14px 6px; border-radius: 18px; background: var(--f-sup2); --t-sep: var(--f-sup2); }
+.cmp .tempo--f { padding: 10px 12px 4px; border-radius: 18px; background: var(--f-sup2); --t-sep: var(--f-sup2); }
 /* ---------- Le pause nella giornata: si toccano per cambiarle ---------- */
 html.pd .cmp .d-pausa { display: flex; align-items: center; gap: 14px; width: calc(100% - 28px); margin: 22px auto 0; padding: 14px 16px; border-radius: 3px; text-align: left; background: var(--carta); border-left: 3px dashed color-mix(in srgb, var(--t-pausa) 55%, transparent); box-shadow: 0 1px 2px rgba(40, 34, 20, .1), 0 12px 22px -16px rgba(40, 34, 20, .55), 0 0 0 1px var(--riga); rotate: .9deg; transition: rotate 400ms var(--entra), translate 300ms var(--entra); }
 @media (hover: hover) {
@@ -851,6 +856,18 @@ html.pd .cmp .d-pausa.da-vedere.vista { opacity: 1; translate: 0 0; transition: 
 .cmp .f-pausa b { display: block; font-weight: 650; }
 .cmp .f-pausa small { display: block; color: var(--ink2); font-size: 13.5px; }
 .cmp .f-pausa__cambia { font-weight: 650; font-size: 14px; color: var(--f-acc); }
+/* «Pause e margini» compatto (tranche 1): righe più basse, margine in una fila, stessi controlli da 44 px */
+.cmp #foglio.f--tempo .f-corpo { gap: 12px; }
+.cmp #foglio.f--tempo .f-sezione { gap: 8px; padding-top: 10px; }
+.cmp #foglio.f--tempo .f-sezione h3 { font-size: 15px; }
+.cmp #foglio.f--tempo .f-nota { font-size: 13px; line-height: 1.4; }
+.cmp #foglio.f--tempo .f-pause { gap: 4px; }
+.cmp #foglio.f--tempo .f-pausa { min-height: 48px; padding: 4px 12px; gap: 10px; border-radius: 12px; grid-template-columns: 22px minmax(0, 1fr) auto; }
+.cmp #foglio.f--tempo .f-pausa small { font-size: 12.5px; }
+.cmp #foglio.f--tempo .f-scelte__b { flex-wrap: nowrap; gap: 6px; }
+.cmp #foglio.f--tempo .f-scelte__b button { flex: 1 1 0; min-width: 0; padding: 0 6px; font-size: 13.5px; }
+.cmp #foglio.f--tempo .f-chips { gap: 6px; }
+.cmp #foglio.f--tempo .f-chip { padding: 0 12px; font-size: 13.5px; }
 .cmp .f-campo { display: grid; gap: 6px; font-weight: 650; }
 .cmp .f-campo input { width: 100%; height: 52px; padding: 0 14px; border-radius: 14px; border: 1.5px solid var(--f-riga); background: var(--f-sup2); color: var(--ink); font: 500 16px/1 "Archivo", system-ui, sans-serif; }
 .cmp .f-campo input:focus-visible { outline: none; border-color: var(--f-acc); background: var(--f-sup); box-shadow: 0 0 0 4px color-mix(in srgb, var(--f-acc) 22%, transparent); }
@@ -1079,10 +1096,11 @@ html.pd .cmp .sch-azione { border-radius: 4px; background: var(--sup); }
 html.pd .cmp .bv { border-radius: 6px; background: var(--sup); box-shadow: inset 0 0 0 1.5px var(--riga); }
 html.pd .cmp .bv__no, html.pd .cmp .bv__si { font: 600 20px/1.1 "Bodoni Moda", Georgia, serif; }
 html.pd .cmp .bv[aria-pressed="true"] { background: color-mix(in srgb, var(--acc) 10%, var(--carta)); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--acc) 50%, transparent); }
-.cmp .bv-salva { display: grid; grid-template-columns: 38px minmax(0, 1fr); gap: 6px 14px; align-items: center; padding: 12px 14px; border-radius: 18px; background: var(--f-sup2); color: var(--f-acc); }
-.cmp .bv-salva .bv__s { grid-row: span 2; height: 50px; }
-.cmp .bv-salva p { font-size: 14.5px; color: var(--ink2); }
-.cmp .bv-salva .f-bottone { justify-self: start; }
+/* la barra «Salva l'itinerario per segnare…» nella scheda: una riga bassa, il tasto di misura normale (tranche 1) */
+.cmp .bv-salva { display: grid; grid-template-columns: 24px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 8px 8px 8px 12px; border-radius: 14px; background: var(--f-sup2); color: var(--f-acc); }
+.cmp .bv-salva .bv__s { height: 30px; }
+.cmp .bv-salva p { font-size: 13px; line-height: 1.35; color: var(--ink2); }
+.cmp .bv-salva .f-bottone { min-height: 40px; padding: 0 16px; font-size: 14px; }
 /* ---------- 1 · IL FOGLIO ---------- */
 .cmp #scheda { color: var(--ink); }
 .cmp #scheda.sch1 { position: fixed; z-index: 45; inset: auto 0 0 0; width: 100%; max-width: 100%; height: 0; max-height: none; margin: 0; padding: 0; border: 0; background: none; overflow: visible; }
@@ -1579,9 +1597,18 @@ html.pd .cmp .pm-cena b { font: italic 600 18px/1.2 "Bodoni Moda", Georgia, seri
 .cmp { --prova: 0px; position: relative; }
 .cmp .vh, .cmp-senza-js .vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .cmp-senza-js { max-width: 640px; margin: 0 auto; padding: 24px 20px; display: flex; gap: 16px; align-items: center; }
+/* senza JavaScript: gli itinerari pronti e le gite, in un elenco semplice (index.astro) */
+.cmp-senza-js__elenco { max-width: 640px; margin: 0 auto; padding: 0 20px 32px; }
+.cmp-senza-js__elenco h2 { margin: 28px 0 8px; font-size: 1.75rem; }
+.cmp-senza-js__pronto { margin: 0 0 16px; padding: 16px; border: 1px solid var(--it-line); border-radius: var(--it-r); background: var(--it-surface); }
+.cmp-senza-js__pronto h3 { margin: 0 0 8px; font-size: 1.375rem; }
+.cmp-senza-js__pronto h4 { margin: 12px 0 4px; font-size: 1.0625rem; }
+.cmp-senza-js__elenco ol { margin: 6px 0; padding-left: 0; list-style: none; }
+.cmp-senza-js__elenco li { margin: 2px 0; }
+.cmp-senza-js__elenco .num { display: inline-block; min-width: 3em; font-variant-numeric: tabular-nums; }
 .cmp-app { min-height: 100dvh; }
 
-/* sotto il compositore la pagina continua (itinerari pronti, gite, da sapere, fonti): copre la mappa fissa di C */
+/* sotto il compositore la pagina continua («Da sapere» e le fonti): copre la mappa fissa di C */
 html.pc #contenuto > .it-pagina > :not(.cmp) { position: relative; z-index: 6; background: var(--carta, #F7F6F2); }
 html.pc body > footer { position: relative; z-index: 6; }
 html.cmp-fuori .cmp .c-sopra, html.cmp-fuori .cmp .c-mappa, html.cmp-fuori .cmp .c-giu, html.cmp-fuori .cmp .d-tab { visibility: hidden; }
@@ -1593,12 +1620,11 @@ html.cmp-sotto .cmp .c-giu, html.cmp-sotto .cmp .d-tab { visibility: hidden; }
 }
 
 /* l'interruttore della vista: C «Mappa prima» o D «Le pagine» */
-.cmp .vista-scelta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 22px 16px 8px; padding: 6px; border-radius: 999px; background: var(--sup2); width: fit-content; max-width: calc(100% - 32px); font-size: 14px; }
-.cmp .vista-scelta > span { padding: 0 8px 0 10px; color: var(--ink2); }
-.cmp .vista-scelta button { min-height: 44px; padding: 0 14px; border-radius: 999px; display: inline-flex; align-items: center; gap: 6px; font-weight: 600; color: var(--ink2); }
-.cmp .vista-scelta button[aria-pressed="true"] { background: var(--sup, #fff); color: var(--ink); box-shadow: 0 1px 3px rgba(5, 9, 32, .16); }
-html.pd .cmp .vista-scelta { margin: 28px auto 120px; background: var(--sup); }
-html.pd .cmp .vista-scelta button[aria-pressed="true"] { background: var(--carta); }
+/* lo spazio che lasciava l'interruttore della vista (ora nel menu del sito, sotto il tema): la barra in basso non copre la fine della pagina */
+html.pd .cmp .d-sinistra { padding-bottom: 104px; }
+@media (min-width: 960px) { html.pd .cmp .d-sinistra { padding-bottom: 40px; } }
+html.pc .cmp .c-dentro { padding-bottom: 80px; }
+@media (min-width: 960px) { html.pc .cmp .c-dentro { padding-bottom: 0; } }
 
 /* gli avvisi del giorno, con le azioni (giornata piena, tappa lontana, regate) */
 .cmp .avviso-giorno__t { flex: 1; min-width: 0; display: grid; gap: 8px; }
@@ -1683,3 +1709,35 @@ html.pd .cmp .gita__carta { border-radius: 4px; background: var(--carta); box-sh
 /* una foto della mappa coperta dalla testata, dai pulsanti o dal foglio: nascosta finché non sposti la mappa */
 .cmp .m-punto--coperto { visibility: hidden; }
 .cmp .m-riprova { margin-left: 6px; min-height: 44px; padding: 0 14px; border-radius: 999px; font-weight: 650; background: var(--acc); color: var(--su-acc); }
+
+/* ---------- tranche 1 (specifiche/compositore-rifiniture-1.md) ---------- */
+/* il nome in alto è il pulsante di «I miei itinerari» */
+.cmp .nome-it__b { position: relative; display: inline-flex; align-items: center; gap: 4px; max-width: 100%; min-height: 32px; text-align: left; border-radius: 8px; }
+/* a vedersi è basso come il titolo, ma il tocco è di 44 px */
+.cmp .nome-it__b::after { content: ""; position: absolute; inset: -6px -4px; }
+.cmp .nome-it__t { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.cmp .nome-it__b .ic { flex: none; opacity: .72; transition: transform 200ms var(--entra); }
+@media (hover: hover) { .cmp .nome-it__b:hover .ic { transform: translateY(2px); } }
+html.pd .cmp .nome-it__t { white-space: normal; }
+html.pd .cmp .nome-it__b { align-items: flex-end; }
+html.pd .cmp .nome-it__b .ic { margin-bottom: .2em; }
+/* data e orari: tutto il campo apre il calendario o la scelta dell'ora */
+.cmp .f-campo input[type="date"], .cmp .f-campo input[type="time"] { cursor: pointer; }
+/* «I miei itinerari»: aperto ora, nuovo, gli altri */
+.cmp .f-sotto { margin: 0 0 8px; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--ink2); }
+.cmp .f-aperto { padding: 12px 14px 14px; border-radius: 18px; background: var(--f-sup2); }
+.cmp .f-aperto__nome { display: grid; gap: 2px; margin: 0 0 10px; }
+.cmp .f-aperto__nome b { font-size: 18px; line-height: 1.2; }
+.cmp .f-aperto__nome small { color: var(--ink2); font-size: 13px; }
+.cmp .f-aperto__nome .f-segno { justify-self: start; margin-top: 4px; background: var(--f-sup); }
+.cmp .f-mio-az { display: flex; flex-wrap: wrap; gap: 6px; }
+.cmp .f-bottone--piccolo { min-height: 44px; padding: 0 14px; font-size: 14px; gap: 6px; }
+.cmp .f-aperto .f-bottone--contorno { background: var(--f-sup); }
+.cmp .f-bottone--rosso { color: var(--pericolo-t); }
+.cmp .f-chiedi { display: grid; gap: 8px; padding: 10px 12px; border-radius: 14px; background: color-mix(in srgb, var(--pericolo) 10%, var(--f-sup)); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--pericolo) 40%, transparent); }
+.cmp .f-chiedi p { margin: 0; font-weight: 650; }
+.cmp .f-chiedi .f-bottone--pericolo { min-width: 0; }
+.cmp .f-chip--pronto { box-shadow: inset 0 0 0 1.5px var(--f-riga); outline: 0; }
+.cmp .f-miei .f-mio__apri .f-segno { justify-self: start; margin-top: 4px; }
+.cmp .f-miei .f-riga--mio { align-items: center; }
+.cmp .f-tolto { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin: 0; padding: 6px 6px 6px 14px; border-radius: 14px; background: var(--f-sup2); font-size: 14px; font-weight: 600; }

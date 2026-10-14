@@ -1,7 +1,7 @@
 // Le due viste scelte da Enrico (pezzo 1): C «Mappa prima» (la mappa è la pagina, il foglio con i giorni sale) e D «Le pagine»
 // (un giorno è una pagina da sfogliare, con le cartoline e le orme). Chi visita passa dall'una all'altra; la scelta resta sul
 // telefono. Qui anche le azioni sulle tappe (visitata, togli, sposta, aggiungi), uguali nelle due viste, e gli avvisi del giorno.
-import { $, $$, esc, ic, soglia, firma, animaFirma, piano, computer, range, ora, durata, durataLunga, resta, metri, maiuscola, ORDINALE } from './base.js';
+import { $, $$, esc, ic, soglia, firma, animaFirma, GIRO_FIRMA, piano, computer, range, ora, durata, durataLunga, resta, metri, maiuscola, ORDINALE } from './base.js';
 import {
   C, E, T, X, UI, PRONTI, A, nG, lista, giornoDi, nelViaggio, visitata, puoiSegnare, salvato, G, tappeDi, daFare, ultimaDi, titoloGiorno,
   aggiunta, ordineCorto, dopoModifica, ripristina, scriviArchivio, chiusaIl, dataLungaDi, giornoSett, oggiNelGiorno, VIVO, posizioneAttiva, tappaQui, statoPosizione
@@ -17,7 +17,7 @@ import {
 } from './comuni.js';
 import { apriScheda, chiudiSchede, rinfrescaScheda, animaSoglia, schedaAperta } from './scheda.js';
 import { apriAggiungi } from './aggiungi.js';
-import { apriTempo, apriPausa, apriQuando, apriMiei, apriCondividi, apriAltro, apriGiorni, salva, stato, bottoneSalva, usaPronto, chiediGiornoRegata } from './fogli.js';
+import { apriTempo, apriPausa, apriQuando, apriMiei, apriCondividi, apriAltro, apriGiorni, salva, stato, bottoneSalva, mettiPronto, chiediGiornoRegata } from './fogli.js';
 
 const M = () => UI.marchio;
 export const NOMI_PAUSA = { pranzo: 'Pausa pranzo', caffe: 'Pausa caffè', riposo: 'Riposo', libero: 'Tempo libero' };
@@ -300,7 +300,7 @@ const consiglio = (g = S.g, cl = '') => {
   return `<div class="consiglio ${cl}" role="status"><p class="consiglio__t">${ic('sposta', 20)}<span>C'è un ordine più corto</span></p><p class="consiglio__p">Cambiando l'ordine risparmi <b>${durataLunga(o.risparmio)}</b> di strada. La prima tappa resta la stessa.</p><div class="consiglio__az"><button type="button" class="consiglio__si onda" data-azione="ordina">Usa questo ordine</button><button type="button" class="consiglio__no onda" data-azione="ordine-ok">Lascia così</button></div></div>`;
 };
 // il giorno vuoto: aggiungi la prima tappa, oppure un itinerario pronto o una gita
-const vuoto = (cl, bott) => `<div class="${cl}"><p>Il giorno ${S.g + 1} è vuoto. Aggiungi la prima tappa, oppure parti da un itinerario pronto. Sulla mappa vedi tutte le tappe della città.</p><button type="button" class="${bott}" data-azione="aggiungi">${ic('piu', 20)}Aggiungi una tappa</button>
+const vuoto = (cl, bott) => `<div class="${cl}"><p>Il giorno ${S.g + 1} è vuoto. Aggiungi la prima tappa, oppure metti qui un itinerario pronto. Sulla mappa vedi tutte le tappe della città.</p><button type="button" class="${bott}" data-azione="aggiungi">${ic('piu', 20)}Aggiungi una tappa</button>
   <ul>${PRONTI.filter(p => !p.evento || (E && !(new Date().toISOString().slice(0, 10) > E.ultimo))).map(p => `<li><button type="button" data-azione="pronto" data-pronto="${p.id}"><span>${esc(p.nome)}</span><small>${p.evento ? 'Solo nei giorni di regata' : `${p.giorni.length === 1 ? '1 giorno' : `${p.giorni.length} giorni`}, ${p.giorni.reduce((s, g) => s + g.tappe.length, 0)} tappe`}</small></button></li>`).join('')}
   <li><button type="button" data-azione="aggiungi" data-tipo="gite"><span>Oppure una gita di un giorno</span><small>Pompei, Capri, la Reggia di Caserta…</small></button></li></ul>
   ${nG() > 1 ? `<button type="button" class="${bott} ${bott}--contorno" data-azione="togli-giorno">Togli il giorno ${S.g + 1}</button>` : ''}</div>`;
@@ -336,12 +336,11 @@ function rigaC(v, k) {
 const C1 = {
   html() {
     return `<div class="c-mappa" id="c-mappa"><div id="mappa"></div></div>
-      <header class="c-sopra"><button type="button" class="tondo onda" popovertarget="menu" aria-label="Apri il menu del sito">${ic('menu')}</button><div class="c-nome">${firma(M(), 'firma--solo-segno')}<div><h2 data-nome>${esc(X().nome)}</h2>${stato()}</div></div>${bottoneSalva('c-salva onda')}</header>
+      <header class="c-sopra"><button type="button" class="tondo onda" popovertarget="menu" aria-label="Apri il menu del sito">${ic('menu')}</button><div class="c-nome">${firma(M(), 'firma--solo-segno')}<div>${nomeBottone()}${stato()}</div></div>${bottoneSalva('c-salva onda')}</header>
       <div class="c-spazio" aria-hidden="true"></div>
       <section class="c-foglio" id="c-foglio" aria-label="Giornata"><span class="c-maniglia" aria-hidden="true"></span>
         <div class="c-giorni" id="c-giorni">${this.giorni()}</div>
         <div class="c-dentro giorno-corpo giorno-attivo" id="c-dentro" data-inizio-giorno>${this.corpo(true)}</div>
-        ${interruttore()}
         <div class="c-giu" id="c-giu" data-nascosto="true"><nav class="c-giu__barra" aria-label="Comandi dell'itinerario">
           <button type="button" class="c-giu__mappa onda" data-azione="su-mappa">${ic('mappa', 20)}<span>Mappa</span></button>
           <button type="button" class="c-giu__piu onda" data-azione="aggiungi">${ic('piu', 20)}<span>Aggiungi</span></button>
@@ -474,10 +473,9 @@ const Dp = {
     const pc = computer.matches;
     return `<div class="d-tutto"><div class="d-sinistra">
       <header class="d-testata">${firma(M())}<button type="button" class="tondo onda" popovertarget="menu" aria-label="Apri il menu del sito">${ic('menu')}</button></header>
-      <div class="d-titolo"><div><h2 data-nome>${esc(X().nome)}</h2>${stato()}</div>${bottoneSalva('d-salva onda')}</div>
+      <div class="d-titolo"><div>${nomeBottone()}${stato()}</div>${bottoneSalva('d-salva onda')}</div>
       <nav class="d-indice" aria-label="Giorni"><div class="d-indice__voci" role="tablist" aria-label="Giorni dell'itinerario">${range(nG()).map(g => `<button type="button" role="tab" aria-selected="${g === S.g}" tabindex="${g === S.g ? 0 : -1}" data-azione="giorno" data-g="${g}" aria-label="Giorno ${g + 1}">${g + 1}</button>`).join('')}</div><span class="d-indice__segno" id="d-segno" aria-hidden="true" style="transform:translateX(${S.g * PASSO}px)"></span>${nG() < MAX_GIORNI ? `<button type="button" class="d-piu onda" data-azione="nuovo-giorno" aria-label="Aggiungi un giorno">${ic('piu', 22)}</button>` : ''}<span class="d-indice__dove" id="d-dove" aria-live="polite">giorno ${S.g + 1} di ${nG()}</span></nav>
       <div class="d-pagine" id="d-pagine">${range(nG()).map(g => this.pagina(g)).join('')}</div>
-      ${interruttore()}
     </div>${pc ? '<div class="d-destra"><div id="mappa"></div></div>' : ''}</div>
     ${pc ? '' : `<div class="d-strato" id="d-strato" hidden role="dialog" aria-label="Mappa del giorno"><div class="d-strato__testa"><h2 id="d-strato-t">${ORDINALE[S.g]} giorno</h2><button type="button" class="tondo onda" data-azione="chiudi-mappa" aria-label="Chiudi la mappa">${ic('x')}</button></div><div id="mappa-d"></div></div>`}
     <nav class="d-tab" aria-label="Comandi dell'itinerario">
@@ -629,8 +627,6 @@ const Dp = {
 export const P = { c: C1, d: Dp };
 export const mappaC = () => mappa;
 
-// l'interruttore della vista: C «Mappa prima» o D «Le pagine» (la scelta resta sul telefono)
-const interruttore = () => `<div class="vista-scelta" role="group" aria-label="Come vedere l'itinerario"><span aria-hidden="true">Vista</span><button type="button" data-azione="vista" data-v="c" aria-pressed="${S.p === 'c'}">${ic('mappa', 18)}Mappa prima</button><button type="button" data-azione="vista" data-v="d" aria-pressed="${S.p === 'd'}">${ic('elenco', 18)}Le pagine</button></div>`;
 
 // ---------- disegno della pagina ----------
 function finisciNuova() {
@@ -677,8 +673,11 @@ export function vaiAlGiorno(g, daX = 0) {
   P[S.p].giorno(g, daX);
   return true;
 }
-// il nome dell'itinerario e lo stato «salvato» (dopo Rinomina o Salva)
-export const mettiNome = () => $$('[data-nome]').forEach(x => { x.textContent = X().nome; });
+// il nome in alto è il pulsante degli itinerari: un tocco apre «I miei itinerari» (cambiare, crearne uno, eliminare)
+const nomeBottone = () => `<h2 class="nome-it"><button type="button" class="nome-it__b" data-azione="miei" aria-haspopup="dialog"><span class="nome-it__t">${esc(X().nome)}</span><span class="vh">, i miei itinerari</span>${ic('scendi', 18)}</button></h2>`;
+// il nome dell'itinerario in alto (dopo Rinomina o Salva). Solo quello: i nomi delle vie sulla mappa hanno un attributo
+// «data-nome» e prima venivano sovrascritti con il nome dell'itinerario
+export const mettiNome = () => $$('.nome-it__t').forEach(x => { x.textContent = X().nome; });
 
 // ---------- le azioni dei pulsanti (delega) ----------
 export const AZ = {
@@ -696,8 +695,7 @@ export const AZ = {
   visitata: b => segna(b.dataset.id),
   togli: b => togliTappa(b.dataset.id),
   'togli-gita': () => conAnnulla('Hai tolto la gita.', y => { delete y.giorni[S.g].gita; }, { giorno: true }),
-  pronto: b => { const p = PRONTI.find(x => x.id === b.dataset.pronto); if (!p) return; if (p.evento) chiediGiornoRegata(); else usaPronto(p); },
-  vista: b => cambiaVista(b.dataset.v),
+  pronto: b => { const p = PRONTI.find(x => x.id === b.dataset.pronto); if (!p) return; if (p.evento) chiediGiornoRegata(); else mettiPronto(p); },
   'su-mappa': () => { if (computer.matches) { mappa?.tutto(); return; } scrollTo({ top: 0, behavior: piano() ? 'smooth' : 'auto' }); },
   ordina: () => {
     const g = S.g, o = ordineCorto(g);
@@ -745,9 +743,50 @@ export const AZ = {
 export function cambiaVista(v) {
   if (v !== 'c' && v !== 'd' || v === S.p) return;
   ricordaVista(v);
-  const fai = async () => { await chiudiSchede(); S.p = v; S.anima = true; rotta = true; disegna(); scrollTo(0, 0); };
+  const fai = async () => {
+    await chiudiSchede(); S.p = v; S.anima = true; rotta = true; disegna(); scrollTo(0, 0);
+    // dal menu: il pulsante che lo aveva aperto è stato ridisegnato, il fuoco va sul tondo nuovo
+    if (!document.activeElement || document.activeElement === document.body) $('.cmp [popovertarget="menu"]')?.focus({ preventScroll: true });
+  };
   if (document.startViewTransition && piano()) document.startViewTransition(fai).ready.catch(() => {}); else fai();
   annuncia(v === 'c' ? 'Vista Mappa prima' : 'Vista Le pagine');
+}
+// Il logo del menu (quello ambra della pagina) si anima a ogni apertura e passandoci sopra; con «riduci movimento» resta
+// fermo (Marchio.astro). Dura quanto quello della pagina.
+function animaLogoMenu(m) {
+  let t = 0;
+  const vai = () => {
+    if (m.classList.contains('menu--anima')) return;
+    m.classList.add('menu--anima');
+    t = setTimeout(() => m.classList.remove('menu--anima'), GIRO_FIRMA);
+  };
+  m.addEventListener('toggle', e => {
+    clearTimeout(t); m.classList.remove('menu--anima');
+    if (e.newState === 'open') { void m.offsetWidth; vai(); }
+  });
+  $('.firma', m)?.addEventListener('pointerenter', vai);
+}
+// il cambio di vista sta nel menu del sito, sotto il tema chiaro/scuro e con lo stesso gesto (Header.astro, solo in questa pagina)
+const NOMI_VISTA = { c: 'Mappa prima', d: 'Le pagine' };
+export function preparaMenu() {
+  const m = document.getElementById('menu');
+  if (m) animaLogoMenu(m);
+  const b = document.getElementById('vista-btn');
+  if (!b) return;
+  const metti = () => {
+    $('.vista-ico', b).innerHTML = ic(S.p === 'c' ? 'mappa' : 'elenco', 20);
+    $('#vista-nome', b).textContent = `Vista: ${NOMI_VISTA[S.p]}`;
+    b.setAttribute('aria-label', `Vista: ${NOMI_VISTA[S.p]}. Cambia vista`);
+  };
+  metti();
+  b.hidden = false;
+  b.addEventListener('click', () => {
+    const m = document.getElementById('menu');
+    try { m?.hidePopover?.(); } catch { /* già chiuso */ }
+    m?.classList.remove('aperto');
+    cambiaVista(S.p === 'c' ? 'd' : 'c');
+    metti();
+  });
 }
 
 // i comandi della pagina: tocchi, tastiera sui giorni e sulle maniglie, trascinare

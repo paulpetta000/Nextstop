@@ -6,7 +6,7 @@ import { C, A, X, PRONTI, T, caricaSchede, quandoLibero, nuovo, apri, nomeLibero
 import { decodifica } from '../../../lib/itinerari/link';
 import { leggi, quandoCambia } from '../memoria';
 import { S, vistaSalvata, preparaFoglio, preparaAvviso, avvisa, annuncia } from './comuni.js';
-import { disegna, preparaViste, aggiorna, aggiungi } from './viste.js';
+import { disegna, preparaViste, preparaMenu, aggiorna, aggiungi } from './viste.js';
 import { preparaScheda, schedaAperta } from './scheda.js';
 import { usaPronto } from './fogli.js';
 
@@ -34,7 +34,7 @@ function avvia() {
   // un itinerario pronto scelto dalla home o dal menu (?pronto=…)
   const chiesto = PRONTI.find(p => !p.evento && p.id === W.prontoRichiesto);
   scriviArchivio(avvisa);
-  preparaFoglio(); preparaAvviso(); preparaViste(); preparaScheda();
+  preparaFoglio(); preparaAvviso(); preparaViste(); preparaMenu(); preparaScheda();
   ascoltaFirme($('#app'));
   document.documentElement.classList.add('cmp-pronto');
   if (chiesto) usaPronto(chiesto); else disegna();

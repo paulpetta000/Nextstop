@@ -3,7 +3,8 @@
 // itinerari pronti (anche la giornata di regata, che vuole un giorno di regata).
 import { $, $$, esc, ic, piano, range, ora, durata, maiuscola, oggi } from './base.js';
 import { E, T, X, A, PRONTI, nG, G, daFare, tappeDi, titoloGiorno, salvato, apri, nuovo, nomeLibero, ricordaBozza, gia, dopoModifica, scriviArchivio, piuGiorni, dataLungaDi, chiusaIl, nuovoItinerario, vuotoTutto } from './stato.js';
-import { codifica, MAX_NOME, MAX_GIORNI } from '../../../lib/itinerari/link';
+import { codifica, MAX_NOME, MAX_GIORNI, MAX_TAPPE } from '../../../lib/itinerari/link';
+import { prontoNelGiorno } from '../../../lib/itinerari/pronti';
 import { dataValida, dataBreve, dataLunga } from '../../../lib/itinerari/date';
 import { TIPI_PAUSA, MARGINI, pauseDelGiorno } from '../../../lib/itinerari/pause';
 import { grezzo } from './stato.js';
@@ -89,9 +90,9 @@ export function apriTempo() {
         ${Gx.pause.length ? `<ul class="f-pause">${Gx.pause.map(p => `<li><button type="button" class="f-pausa onda" data-f="pausa" data-v="${p.quale}">${ic(IC_PAUSA[p.quale], 22)}<span><b>${NOMI_PAUSA[p.quale]}, ${durata(p.min)}</b><small class="num">${ora(p.inizio)}–${ora(p.fine)}, dopo ${esc(T(p.dove).breve)}</small></span><span class="f-pausa__cambia">Cambia</span></button></li>`).join('')}</ul>` : '<p class="f-nota">Nessuna pausa: la giornata va da una tappa all\'altra.</p>'}
         ${mancano.length && daFare(Gx).length > 1 ? `<div class="f-chips">${mancano.map(q => `<button type="button" class="f-chip" data-f="nuova-pausa" data-v="${q}">${ic('piu', 16)}${NOMI_PAUSA[q]}</button>`).join('')}</div>` : ''}
       </section>
-      <section class="f-sezione"><h3 id="f-margine-t">Margine a ogni spostamento</h3><p class="f-nota">Per le foto, le code e il passo più lento: si aggiunge dopo ogni tratto, i minuti di strada restano quelli veri. Vale per tutti i giorni.</p>
+      <section class="f-sezione"><h3 id="f-margine-t">Margine a ogni spostamento</h3><p class="f-nota">Dopo ogni tratto, per foto, code e passo lento; i minuti di strada restano veri. Vale per tutti i giorni.</p>
         <div class="f-scelte__b" role="group" aria-labelledby="f-margine-t">${MARGINI.map(m => `<button type="button" aria-pressed="${(X().margine ?? 0) === m}" data-f="margine" data-v="${m}">${m ? `${m} min` : 'Nessuno'}</button>`).join('')}</div></section>
-      <p class="f-nota">L'ora di pranzo (dalle 12:30 alle 14:30) è una regola nostra: la pausa pranzo c'è già, un'ora, dopo la tappa dove si mangia o quella che finisce più vicino alle 13.</p>`;
+      <p class="f-nota">Pranzo: un'ora, dopo la tappa dove si mangia o quella che finisce più vicino alle 13 (regola nostra, fra le 12:30 e le 14:30).</p>`;
   };
   foglio('Pause e margini', `<div id="f-vivo">${corpo()}</div>`, f => {
     f.onclick = e => {
@@ -143,6 +144,10 @@ export function apriQuando() {
     };
     f.onclick = async e => {
       if (e.target === f) { chiudiFoglio(); return; }
+      // un tocco in qualsiasi punto del campo (anche su «GG» o sulle ore) apre il calendario o la scelta dell'ora del telefono;
+      // con la tastiera non arriva un clic (e.detail è 0): si scrive come prima
+      const campo = e.target.closest?.('input[type="date"], input[type="time"]');
+      if (campo) { if (e.detail && campo.showPicker) try { campo.showPicker(); } catch { /* il browser non lo permette qui: resta come prima */ } return; }
       const b = e.target.closest('[data-f]');
       if (!b) return;
       if (b.dataset.f === 'fatto') chiudiFoglio();
@@ -153,71 +158,104 @@ export function apriQuando() {
 }
 
 // ---------- i miei itinerari ----------
+// Tre parti (specifiche/compositore-rifiniture-1.md, punto 9): quello aperto ora (Salva, Rinomina, Condividi, Elimina), un
+// itinerario nuovo (vuoto o da un pronto) e gli altri, che si aprono con un tocco. Eliminare: cestino, poi la domanda con il nome.
 const contaTappe = x => x.giorni.reduce((s, D) => s + (D.gita ? 1 : D.tappe.filter(t => !E || t !== E.id).length), 0);
 const contaVisitate = x => x.giorni.reduce((s, D) => s + (D.fatte?.length ?? 0), 0);
 const descrivi = x => { const n = contaTappe(x), g = x.giorni.length; return `${g} ${g === 1 ? 'giorno' : 'giorni'}, ${n} ${n === 1 ? 'tappa' : 'tappe'}${x.data ? `, dal ${dataBreve(x.data)}` : ''}${salvato(x) && n ? `, ${contaVisitate(x)} ${contaVisitate(x) === 1 ? "visitata" : "visitate"} su ${n}` : ''}`; };
+const segno = x => `<span class="f-segno">${salvato(x) ? `${ic('spunta', 16)}Salvato` : 'Non ancora salvato'}</span>`;
+// i pronti che si possono aprire adesso (la regata solo fino all'ultimo giorno di regata)
+const prontiDaAprire = () => PRONTI.filter(p => !p.evento || (E && !(oggi() > E.ultimo)));
+// dopo aver aperto o creato un altro itinerario: l'avviso dice dov'è quello di prima e offre «Torna». prima: l'itinerario
+// aperto prima del cambio. Se era una bozza lasciata com'era è sparito (stato.js, lasciaBozza): «Torna» lo rimette
+export function avvisaCambio(prima) {
+  if (!prima || prima.id === A.attivo) return;
+  const resta = A.elenco.some(i => i.id === prima.id), copia = structuredClone(prima);
+  avvisa(resta ? `Aperto «${X().nome}». «${prima.nome}» è in «I miei itinerari».` : `Aperto «${X().nome}».`, { testo: 'Torna', fai: () => {
+    if (!A.elenco.some(i => i.id === copia.id)) { A.elenco.push(copia); ricordaBozza(copia); }
+    apri(copia.id); S.g = 0; scriviArchivio(avvisa); dopoCambioItinerario(); annuncia(`Aperto: ${X().nome}`);
+  } });
+}
 export function apriMiei() {
-  let menu = null, rinomina = null, elimina = null;
-  const riga = x => {
-    const qui = x.id === A.attivo;
-    const testa = rinomina === x.id
-      ? `<label class="f-campo f-campo--nome" for="f-nome"><span>Nome dell'itinerario</span><input id="f-nome" value="${esc(x.nome)}" maxlength="${MAX_NOME}" autocomplete="off" enterkeyhint="done"></label>`
-      : `<button type="button" class="f-mio__apri" data-f="apri" data-v="${x.id}"${qui ? ' aria-current="true"' : ''}><b>${esc(x.nome)}</b><small>${descrivi(x)}</small><span class="f-segno">${salvato(x) ? `${ic('spunta', 16)}Salvato` : 'Non ancora salvato'}${qui ? ', aperto ora' : ''}</span></button>`;
-    const azioni = elimina === x.id
-      ? `<div class="f-conferma f-conferma--due"><p>«${esc(x.nome)}» sparisce da questo telefono${salvato(x) ? ', con le tappe visitate' : ''}. I link che hai già mandato continuano ad aprirsi: portano tutto con sé.</p><button type="button" class="f-bottone f-bottone--pericolo" data-f="elimina-si" data-v="${x.id}">${ic('cestino', 18)}Elimina</button><button type="button" class="f-bottone f-bottone--contorno" data-f="elimina-no">Annulla</button></div>`
-      : rinomina === x.id
-        ? '<div class="f-conferma f-conferma--due"><button type="button" class="f-bottone" data-f="nome-ok">Salva il nome</button><button type="button" class="f-bottone f-bottone--contorno" data-f="nome-no">Annulla</button></div>'
-        : `<div class="f-mio-azioni" id="f-az-${x.id}"${menu === x.id ? '' : ' hidden'}><button type="button" class="f-azione" data-f="rinomina" data-v="${x.id}">${ic('matita')}<span>Rinomina</span></button><button type="button" class="f-azione" data-f="condividi" data-v="${x.id}">${ic('condividi')}<span>Condividi</span></button><button type="button" class="f-azione f-azione--pericolo" data-f="elimina" data-v="${x.id}">${ic('cestino')}<span>Elimina</span></button></div>`;
-    return `<li class="f-lista"><div class="f-riga f-riga--mio"><div class="f-mio">${testa}</div>${rinomina === x.id || elimina === x.id ? '' : `<button type="button" class="f-icona onda" data-f="menu" data-v="${x.id}" aria-expanded="${menu === x.id}" aria-controls="f-az-${x.id}" aria-label="Altre azioni per «${esc(x.nome)}»">${ic('altro', 20)}</button>`}</div>${azioni}</li>`;
+  // tolto: l'ultimo eliminato, con l'archivio di prima. «Annulla» sta dentro il foglio: l'avviso in basso resterebbe sotto il
+  // foglio aperto, senza poterlo toccare
+  let rinomina = false, elimina = null, tolto = null;
+  const domanda = x => `<div class="f-chiedi" role="group" aria-labelledby="f-chiedi-t"><p id="f-chiedi-t">Eliminare «${esc(x.nome)}»?${salvato(x) && contaVisitate(x) ? ' Anche le tappe visitate.' : ''}</p>
+    <div class="f-mio-az"><button type="button" class="f-bottone f-bottone--piccolo f-bottone--pericolo" data-f="elimina-si" data-v="${x.id}">${ic('cestino', 18)}Elimina</button><button type="button" class="f-bottone f-bottone--piccolo f-bottone--contorno" data-f="elimina-no">Annulla</button></div></div>`;
+  const aperto = () => {
+    const x = X();
+    const corpo = rinomina
+      ? `<label class="f-campo f-campo--nome" for="f-nome"><span>Nome dell'itinerario</span><input id="f-nome" value="${esc(x.nome)}" maxlength="${MAX_NOME}" autocomplete="off" enterkeyhint="done"></label>
+        <div class="f-mio-az"><button type="button" class="f-bottone f-bottone--piccolo" data-f="nome-ok">Salva il nome</button><button type="button" class="f-bottone f-bottone--piccolo f-bottone--contorno" data-f="nome-no">Annulla</button></div>`
+      : `<p class="f-aperto__nome"><b>${esc(x.nome)}</b><small>${descrivi(x)}</small>${segno(x)}</p>
+        ${elimina === x.id ? domanda(x) : `<div class="f-mio-az">${salvato(x) ? '' : `<button type="button" class="f-bottone f-bottone--piccolo" data-f="salva">${ic('spunta', 18)}Salva</button>`}
+          <button type="button" class="f-bottone f-bottone--piccolo f-bottone--contorno" data-f="rinomina">${ic('matita', 18)}Rinomina</button>
+          <button type="button" class="f-bottone f-bottone--piccolo f-bottone--contorno" data-f="condividi" data-v="${x.id}">${ic('condividi', 18)}Condividi</button>
+          <button type="button" class="f-bottone f-bottone--piccolo f-bottone--contorno f-bottone--rosso" data-f="elimina" data-v="${x.id}">${ic('cestino', 18)}Elimina</button></div>`}`;
+    return `<section class="f-aperto" aria-labelledby="f-aperto-t"><h3 id="f-aperto-t" class="f-sotto">Aperto ora</h3>${corpo}</section>`;
   };
+  const nuovi = () => `<section class="f-nuovi" aria-labelledby="f-nuovi-t"><h3 id="f-nuovi-t" class="f-sotto">Nuovo itinerario</h3>
+    <div class="f-chips"><button type="button" class="f-chip" data-f="nuovo">${ic('piu', 16)}Vuoto</button>${prontiDaAprire().map(p => `<button type="button" class="f-chip f-chip--pronto" data-f="nuovo-pronto" data-v="${p.id}">${esc(p.evento ? 'Giornata di regata' : p.durata ?? p.nome)}</button>`).join('')}</div></section>`;
+  const riga = x => `<li class="f-lista">${elimina === x.id ? domanda(x) : `<div class="f-riga f-riga--mio"><div class="f-mio"><button type="button" class="f-mio__apri" data-f="apri" data-v="${x.id}"><b>${esc(x.nome)}</b><small>${descrivi(x)}</small>${segno(x)}</button></div>
+    <button type="button" class="f-icona onda" data-f="elimina" data-v="${x.id}" aria-label="Elimina «${esc(x.nome)}»">${ic('cestino', 20)}</button></div>`}</li>`;
   const vivo = () => {
-    const ordine = [...A.elenco].sort((a, b) => (b.id === A.attivo) - (a.id === A.attivo) || b.modificato - a.modificato);
-    return `<button type="button" class="f-bottone f-bottone--contorno f-nuovo" data-f="nuovo">${ic('piu', 20)}Nuovo itinerario</button>
-      <ul class="f-miei">${ordine.map(riga).join('')}</ul>
-      ${salvato() ? '' : '<button type="button" class="f-bottone" data-f="salva">Salva quello aperto</button>'}
+    const altri = A.elenco.filter(i => i.id !== A.attivo).sort((a, b) => b.modificato - a.modificato);
+    return `${tolto ? `<p class="f-tolto" role="status">Hai eliminato «${esc(tolto.nome)}».<button type="button" class="f-bottone f-bottone--piccolo f-bottone--contorno" data-f="annulla">Annulla</button></p>` : ''}${aperto()}${nuovi()}
+      ${altri.length ? `<section aria-labelledby="f-altri-t"><h3 id="f-altri-t" class="f-sotto">Gli altri sul telefono</h3><ul class="f-miei">${altri.map(riga).join('')}</ul></section>` : ''}
       <p class="f-nota">Gli itinerari restano su questo telefono, anche se chiudi la pagina: niente account, niente iscrizione. Per averli su un altro telefono, mandali con «Condividi». Le tappe visitate non vanno nel link.</p>`;
   };
   const nuovoNome = f => {
-    const x = A.elenco.find(i => i.id === rinomina), v = $('#f-nome', f)?.value.trim().slice(0, MAX_NOME);
-    rinomina = null;
-    if (x && v && v !== x.nome) { x.nome = v; x.modificato = Date.now(); scriviArchivio(avvisa); mettiNome(); avvisa(`Nome cambiato: «${v}».`); }
+    const x = X(), v = $('#f-nome', f)?.value.trim().slice(0, MAX_NOME);
+    rinomina = false;
+    if (v && v !== x.nome) { x.nome = v; x.modificato = Date.now(); scriviArchivio(avvisa); mettiNome(); avvisa(`Nome cambiato: «${v}».`); }
     rinfresca(f, vivo());
+    $('[data-f="rinomina"]', f)?.focus();
   };
   foglio('I miei itinerari', `<div id="f-vivo">${vivo()}</div>`, f => {
-    f.onkeydown = e => { if (e.target.id === 'f-nome' && e.key === 'Enter') { e.preventDefault(); nuovoNome(f); } if (e.target.id === 'f-nome' && e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); rinomina = null; rinfresca(f, vivo()); } };
+    f.onkeydown = e => { if (e.target.id === 'f-nome' && e.key === 'Enter') { e.preventDefault(); nuovoNome(f); } if (e.target.id === 'f-nome' && e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); rinomina = false; rinfresca(f, vivo()); } };
     f.onclick = async e => {
       if (e.target === f) { chiudiFoglio(); return; }
       const b = e.target.closest('[data-f]');
       if (!b) return;
       const k = b.dataset.f, id = b.dataset.v;
-      if (k === 'menu') { menu = menu === id ? null : id; rinfresca(f, vivo(), b); if (menu) $(`#f-az-${id} button`, f)?.focus(); return; }
-      if (k === 'rinomina') { rinomina = id; menu = null; rinfresca(f, vivo()); const i = $('#f-nome', f); i?.focus(); i?.select(); return; }
+      if (k === 'rinomina') { rinomina = true; elimina = null; rinfresca(f, vivo()); const i = $('#f-nome', f); i?.focus(); i?.select(); return; }
       if (k === 'nome-ok') { nuovoNome(f); return; }
-      if (k === 'nome-no') { rinomina = null; rinfresca(f, vivo()); return; }
-      if (k === 'elimina') { elimina = id; menu = null; rinfresca(f, vivo()); $('[data-f="elimina-no"]', f)?.focus(); return; }
-      if (k === 'elimina-no') { elimina = null; rinfresca(f, vivo()); return; }
+      if (k === 'nome-no') { rinomina = false; rinfresca(f, vivo()); $('[data-f="rinomina"]', f)?.focus(); return; }
+      if (k === 'annulla' && tolto) {
+        A.elenco = tolto.prima.elenco; A.attivo = tolto.prima.attivo; const nome = tolto.nome; tolto = null;
+        scriviArchivio(avvisa); dopoCambioItinerario(); rinfresca(f, vivo()); $('[data-f="nuovo"]', f)?.focus(); annuncia(`«${nome}» è tornato.`);
+        return;
+      }
+      if (k === 'elimina') { elimina = id; rinomina = false; rinfresca(f, vivo()); $('[data-f="elimina-no"]', f)?.focus(); return; }
+      if (k === 'elimina-no') { const era = elimina; elimina = null; rinfresca(f, vivo()); $(`[data-f="elimina"][data-v="${era}"]`, f)?.focus(); return; }
       if (k === 'elimina-si') {
         const prima = structuredClone(A), x = A.elenco.find(i => i.id === id);
         A.elenco = A.elenco.filter(i => i.id !== id);
         if (!A.elenco.length) { const y = nuovo('Il mio itinerario'); A.elenco = [y]; }
         if (!A.elenco.some(i => i.id === A.attivo)) { A.attivo = [...A.elenco].sort((a, b2) => b2.modificato - a.modificato)[0].id; S.g = 0; }
-        elimina = null;
+        elimina = null; tolto = { nome: x.nome, prima };
         scriviArchivio(avvisa); dopoCambioItinerario();
         rinfresca(f, vivo());
-        avvisa(`Hai eliminato «${x.nome}».`, { testo: 'Annulla', fai: () => { A.elenco = prima.elenco; A.attivo = prima.attivo; scriviArchivio(); dopoCambioItinerario(); } });
+        $('[data-f="annulla"]', f)?.focus();
         return;
       }
       if (k === 'salva') { await chiudiFoglio(); salva($('.cmp .salva')); return; }
       if (k === 'condividi') { await chiudiFoglio(); apriCondividi(A.elenco.find(i => i.id === id)); return; }
       if (k === 'nuovo') {
-        const y = nuovo(nomeLibero('Nuovo itinerario'));
+        const prima = X(), y = nuovo(nomeLibero('Nuovo itinerario'));
         A.elenco.push(y); ricordaBozza(y); apri(y.id); S.g = 0;
         scriviArchivio(avvisa); await chiudiFoglio(); dopoCambioItinerario();
         annuncia(`Nuovo itinerario: ${y.nome}`);
+        avvisaCambio(prima);
         return;
       }
-      if (k === 'apri' && id !== A.attivo) { apri(id); S.g = 0; scriviArchivio(avvisa); await chiudiFoglio(); dopoCambioItinerario(); annuncia(`Aperto: ${X().nome}`); return; }
-      if (k === 'apri') chiudiFoglio();
+      if (k === 'nuovo-pronto') {
+        const p = PRONTI.find(x => x.id === id);
+        await chiudiFoglio();
+        if (p?.evento) chiediGiornoRegata(); else if (p) usaPronto(p);
+        return;
+      }
+      if (k === 'apri' && id !== A.attivo) { const prima = X(); apri(id); S.g = 0; scriviArchivio(avvisa); await chiudiFoglio(); dopoCambioItinerario(); annuncia(`Aperto: ${X().nome}`); avvisaCambio(prima); return; }
     };
   });
 }
@@ -252,7 +290,6 @@ export function apriAltro() {
     <button type="button" class="f-azione" data-f="condividi">${ic('condividi')}<span>Condividi<small>Un link con tutto l'itinerario</small></span></button>
     <button type="button" class="f-azione" data-f="tempo">${ic('cursori')}<span>Pause e margini<small>${Gx ? `${Gx.pause.length ? Gx.pause.map(p => `${NOMI_PAUSA[p.quale].toLowerCase()} ${durata(p.min)}`).join(', ') : 'nessuna pausa'}; margine ${x.margine ? `${x.margine} min` : 'nessuno'}` : 'Il giorno è vuoto'}</small></span></button>
     <button type="button" class="f-azione" data-f="quando">${ic('calendario')}<span>Data e orari<small>${esc(testoQuando)}</small></span></button>
-    <button type="button" class="f-azione" data-f="giorni">${ic('giorni')}<span>Tutti i giorni<small>${nG()} ${nG() === 1 ? 'giorno' : 'giorni'}</small></span></button>
     ${nG() < MAX_GIORNI ? `<button type="button" class="f-azione" data-f="giorno">${ic('piu')}<span>Aggiungi un giorno</span></button>` : ''}
   </div>`, f => {
     f.onclick = async e => {
@@ -262,7 +299,7 @@ export function apriAltro() {
       if (b.dataset.f === 'tempo') { apriTempo(); return; }
       if (b.dataset.f === 'quando') { apriQuando(); return; }
       await chiudiFoglio();
-      ({ miei: apriMiei, condividi: () => apriCondividi(), giorni: apriGiorni, giorno: nuovoGiorno })[b.dataset.f]();
+      ({ miei: apriMiei, condividi: () => apriCondividi(), giorno: nuovoGiorno })[b.dataset.f]();
     };
   });
 }
@@ -280,6 +317,26 @@ export function apriGiorni() {
 }
 
 // ---------- itinerari pronti ----------
+// Un pronto scelto dentro un giorno (dal giorno vuoto): le tappe vanno in quel giorno, nello stesso itinerario, e si resta lì
+// (src/lib/itinerari/pronti.ts). Se non c'è posto non cambia niente; dopo, «Annulla».
+export function mettiPronto(p) {
+  const g = S.g, x = X();
+  const r = prontoNelGiorno(x, g, p.giorni);
+  if (r === 'niente') { avvisa(`Le tappe di «${p.nome}» sono già nel tuo itinerario.`); return; }
+  if (r === 'limite-giorni') { avvisa(`Non c'è posto: un itinerario ha al massimo ${MAX_GIORNI} giorni.`); return; }
+  if (r === 'limite-tappe') { avvisa(`Non c'è posto: un giorno ha al massimo ${MAX_TAPPE} tappe.`); return; }
+  const rinomina = vuotoTutto(x) && !salvato(x) && GENERICI.test(x.nome);
+  const usati = new Set(r.giorni.flatMap((D, k) => (D.tappe.some(id => r.aggiunte.includes(id)) ? [k] : []))).size;
+  const n = r.aggiunte.length;
+  const gia = r.gia.length === 1 ? ` ${T(r.gia[0].id).breve} è già nel giorno ${r.gia[0].giorno + 1}: resta lì.`
+    : r.gia.length ? ` ${r.gia.length} tappe erano già nel viaggio: restano dove sono.` : '';
+  conAnnulla(`«${p.nome}» ${usati > 1 ? 'dal' : 'nel'} giorno ${r.giorno + 1}: ${n} ${n === 1 ? 'tappa' : 'tappe'}${usati > 1 ? ` in ${usati} giorni` : ''}.${gia}`, y => {
+    y.giorni = r.giorni;
+    if (rinomina) y.nome = nomeLibero(p.nome, y.id);
+    S.g = r.giorno;
+  }, { giorno: true });
+  if (rinomina) mettiNome();
+}
 // Un pronto si apre come bozza: nell'itinerario aperto se è vuoto, altrimenti in uno nuovo (quello di prima resta).
 // Se sul telefono c'è già, con le stesse giornate, si riapre quello.
 export function usaPronto(p, data) {
@@ -296,11 +353,11 @@ export function usaPronto(p, data) {
     const y = nuovo(nomeLibero(p.nome), giorni);
     if (data) y.data = data; else if (p.evento) delete y.data;
     A.elenco.push(y); ricordaBozza(y); apri(y.id);
-    if (!vuotoTutto(x)) avvisa(`Aperto «${y.nome}»: quello di prima resta in «I miei itinerari».`);
   }
   S.g = 0;
   scriviArchivio(avvisa);
   dopoCambioItinerario();
+  avvisaCambio(x);
   annuncia(`Itinerario ${X().nome}: ${X().giorni.length} ${X().giorni.length === 1 ? 'giorno' : 'giorni'}`);
 }
 // la giornata di regata vuole un giorno di regata in calendario

@@ -3,7 +3,7 @@
 // dove: chiaro (intestazione delle pagine), scuro (menu e piè di pagina), foto (sopra la foto della home).
 // I colori dei tre posti sono variabili CSS scritte nel <head> da Base.astro (cssFirma).
 // L'animazione (DESIGN.md §7) parte solo nell'intestazione e solo se <html> ha la classe «marchio-anima»:
-// una volta, all'apertura della home (src/layouts/Base.astro).
+// una volta, all'apertura della home (src/layouts/Base.astro); nel menu del compositore («menu--anima») a ogni apertura.
 import { segnoVivo, SPILLO_O } from '../lib/marchio.mjs';
 import { SITO } from '../config/sito';
 
@@ -46,14 +46,14 @@ const o = lettere.lastIndexOf('o');
   /* L'animazione: le soglie una dopo l'altra (140 ms), il segnaposto che cade in fondo; il nome che si scrive da sinistra
      lungo un percorso a puntini, il segnaposto che cade al posto della «o» e manda un'onda. Circa 2 secondi, una volta. */
   @media (prefers-reduced-motion: no-preference) {
-    :global(.marchio-anima .testata) .firma__segno :global(.strato) { transform-box: fill-box; transform-origin: 50% 100%; animation: firma-strato 900ms var(--entra) both; animation-delay: calc(var(--k) * 140ms); }
-    :global(.marchio-anima .testata) .firma__segno :global(.meta) { transform-box: fill-box; transform-origin: 50% 100%; animation: firma-cade 900ms var(--entra) both; animation-delay: 1050ms; }
-    :global(.marchio-anima .testata) .firma__l { animation: firma-lettera 600ms var(--entra) both; animation-delay: calc(250ms + var(--i) * 120ms); }
-    :global(.marchio-anima .testata) .firma__rotta { animation: firma-rotta 1250ms cubic-bezier(.65, 0, .35, 1) both, firma-svanisci 500ms cubic-bezier(.65, 0, .35, 1) 1950ms forwards; }
-    :global(.marchio-anima .testata) .firma__pin svg { animation: firma-spillo 900ms var(--entra) both; animation-delay: calc(250ms + var(--i) * 120ms); }
-    :global(.marchio-anima .testata) .firma__ombra { animation: firma-ombra 900ms var(--entra) both; animation-delay: calc(250ms + var(--i) * 120ms); }
-    :global(.marchio-anima .testata) .firma__onda { animation: firma-onda 1000ms var(--entra) both; animation-delay: calc(780ms + var(--i) * 120ms); }
-    :global(.marchio-anima .testata) .firma__descr { animation: firma-lettera 700ms var(--entra) both; animation-delay: 1750ms; }
+    :global(:is(.marchio-anima .testata, .menu--anima)) .firma__segno :global(.strato) { transform-box: fill-box; transform-origin: 50% 100%; animation: firma-strato 900ms var(--entra) both; animation-delay: calc(var(--k) * 140ms); }
+    :global(:is(.marchio-anima .testata, .menu--anima)) .firma__segno :global(.meta) { transform-box: fill-box; transform-origin: 50% 100%; animation: firma-cade 900ms var(--entra) both; animation-delay: 1050ms; }
+    :global(:is(.marchio-anima .testata, .menu--anima)) .firma__l { animation: firma-lettera 600ms var(--entra) both; animation-delay: calc(250ms + var(--i) * 120ms); }
+    :global(:is(.marchio-anima .testata, .menu--anima)) .firma__rotta { animation: firma-rotta 1250ms cubic-bezier(.65, 0, .35, 1) both, firma-svanisci 500ms cubic-bezier(.65, 0, .35, 1) 1950ms forwards; }
+    :global(:is(.marchio-anima .testata, .menu--anima)) .firma__pin svg { animation: firma-spillo 900ms var(--entra) both; animation-delay: calc(250ms + var(--i) * 120ms); }
+    :global(:is(.marchio-anima .testata, .menu--anima)) .firma__ombra { animation: firma-ombra 900ms var(--entra) both; animation-delay: calc(250ms + var(--i) * 120ms); }
+    :global(:is(.marchio-anima .testata, .menu--anima)) .firma__onda { animation: firma-onda 1000ms var(--entra) both; animation-delay: calc(780ms + var(--i) * 120ms); }
+    :global(:is(.marchio-anima .testata, .menu--anima)) .firma__descr { animation: firma-lettera 700ms var(--entra) both; animation-delay: 1750ms; }
   }
   @keyframes firma-strato { from { transform: scale(1.18); opacity: 0; } 40% { opacity: 1; } }
   @keyframes firma-cade { 0% { transform: translateY(-9px); opacity: 0; } 55% { transform: translateY(.6px); opacity: 1; } 78% { transform: translateY(-.8px); } 100% { transform: none; } }

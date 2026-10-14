@@ -1,15 +1,14 @@
 ---
-// Itinerari a Napoli: il compositore (stile «Orario», bozzetti in design/itinerari/), gli itinerari pronti,
-// le gite e come calcoliamo i tempi. Lo script della pagina è in src/scripts/itinerari/.
+// Itinerari a Napoli: il compositore (specifiche/compositore.md), sotto «Da sapere» e le fonti; senza JavaScript gli itinerari pronti
+// e le gite. Lo script della pagina è in src/scripts/itinerari/compositore/.
 import Base from '../../../layouts/Base.astro';
 import Testo from '../../../components/Testo.astro';
 import FontiPagina from '../../../components/FontiPagina.astro';
-import { getLocali, CUCINE, PASTI } from '../../../lib/locali';
+import { getLocali } from '../../../lib/locali';
 import { getTesti } from '../../../lib/testi';
 import { tutteLeFonti } from '../../../lib/fatti';
-import { getTappe, ZONE } from '../../../lib/tappe';
+import { getTappe } from '../../../lib/tappe';
 import { cittaNapoli, impacchetta, prontiNapoli, REGATE } from '../../../lib/itinerari/napoli';
-import { icona } from '../../../lib/itinerari/icone';
 import { durata, ora } from '../../../lib/itinerari/date';
 import '../../../styles/itinerari.css';
 import '../../../styles/compositore.css';
@@ -25,17 +24,10 @@ const pronti = await prontiNapoli();
 const fonti = await tutteLeFonti();
 const pacco = impacchetta(C);
 
-const citta = C.tappe.filter(t => t.tipo === 'citta' && !t.categoria);
-// i locali di «Dove mangiare» (src/data/locali.yaml): nel pannello hanno una scelta a parte, «Mangiare»
-const mangiare = C.tappe.filter(t => t.categoria === 'mangiare');
-const FASCIA = ['', '€', '€€', '€€€'];
 const gite = C.tappe.filter(t => t.tipo === 'gita');
-const ordineZone = Object.keys(ZONE);
-citta.sort((a, b) => ordineZone.indexOf(a.zona) - ordineZone.indexOf(b.zona));
 const nomeDi = (id: string) => (id === REGATE.id ? REGATE.nome : C.tappe.find(t => t.id === id)!.nome);
 // Schede mostrate così come sono (orari, prezzi, viaggi): anche le loro fonti vanno in fondo alla pagina
 const schedeMostrate = [...tappe.flatMap(t => [...t.schede.values()]), ...locali.flatMap(l => [...l.schede.values()])];
-const ore = Array.from({ length: 11 }, (_, i) => 9 + i);
 const { ui } = await datiUI(C, tappe, locali);
 const json = JSON.stringify(pacco).replace(/</g, '\\u003c');
 ---
@@ -61,6 +53,31 @@ const json = JSON.stringify(pacco).replace(/</g, '\\u003c');
           <p>Per comporre un itinerario serve JavaScript, che in questo browser è spento. Qui sotto trovi gli itinerari pronti, con tutti gli orari, e le gite; per mangiare c'è <a href="/napoli/dove-mangiare/">Dove mangiare</a>.</p>
           <button class="tondo" type="button" popovertarget="menu" aria-label="Apri il menu">Menu</button>
         </div>
+        <!-- Solo senza JavaScript: gli itinerari pronti con gli orari e le gite (gli indirizzi #pronto-… di home e menu portano qui).
+             Con JavaScript il browser non legge questo blocco: i pronti stanno nel compositore (giorno vuoto e «Nuovo itinerario»). -->
+        <div class="cmp-senza-js__elenco">
+          <h2>Itinerari pronti</h2>
+          <p>Gli orari sono quelli di un giorno feriale, partendo alle 9:30.</p>
+          {pronti.map(p => (
+            <section class="cmp-senza-js__pronto" id={`pronto-${p.id}`} aria-labelledby={`pronto-${p.id}-h`}>
+              <h3 id={`pronto-${p.id}-h`}>{p.nome}</h3>
+              <Testo b={T.b(`pronto-${p.id}`)} />
+              {p.evento && <Testo b={T.b('regate')} />}
+              {p.giorni.map((g, k) => (
+                <div>
+                  {p.giorni.length > 1 && <h4>Giorno {k + 1}</h4>}
+                  <ol>
+                    {g.voci.filter(v => v.tipo === 'tappa').map(v => v.tipo === 'tappa' && <li><span class="num">{ora(v.inizio)}</span> {nomeDi(v.id)}</li>)}
+                  </ol>
+                  <p>Dalle {ora(g.inizio)} alle {ora(g.fine)}, con {durata(g.spostamenti)} di spostamenti.</p>
+                </div>
+              ))}
+            </section>
+          ))}
+          <h2>Gite di un giorno</h2>
+          <Testo b={T.b('gite')} />
+          <ul>{gite.map(g => <li><b>{g.nome}</b>: da {g.partenza}, {g.durata > 240 ? 'giornata intera' : 'mezza giornata'}</li>)}</ul>
+        </div>
       </noscript>
       <h1 class="vh">Itinerari a Napoli</h1>
       <!-- La prima schermata, già nell'HTML: si vede subito, poi il compositore la sostituisce (per chi ha già itinerari sul telefono resta invisibile) -->
@@ -72,56 +89,9 @@ const json = JSON.stringify(pacco).replace(/</g, '\\u003c');
       <p id="aiuto-maniglia" hidden>Trascina con il dito o con il mouse. Con la tastiera usa le frecce su e giù.</p>
       <!-- Le schede delle tappe, dei locali e delle gite e i dati della ricerca sono in /napoli/itinerari/schede/ (schede.astro): arrivano dopo il primo disegno -->
       <script type="application/json" id="it-dati" set:html={json} />
-      <script type="application/json" id="it-pronti" set:html={JSON.stringify(pronti.map(p => ({ id: p.id, nome: p.nome, evento: p.evento, giorni: p.it.giorni }))).replace(/</g, '\\u003c')} />
+      <script type="application/json" id="it-pronti" set:html={JSON.stringify(pronti.map(p => ({ id: p.id, nome: p.nome, durata: p.durata, evento: p.evento, giorni: p.it.giorni }))).replace(/</g, '\\u003c')} />
       <script type="application/json" id="it-ui" set:html={JSON.stringify(ui).replace(/</g, '\\u003c')} />
     </div>
-
-    <section class="it-sezione" id="pronti" aria-labelledby="pronti-h">
-      <div class="it-wrap">
-        <h2 id="pronti-h">Itinerari pronti</h2>
-        <p class="it-sezione__lead">Un punto di partenza: aprili nel compositore e cambiali come vuoi. Gli orari sono quelli di un giorno feriale, partendo alle 9:30.</p>
-        <div class="it-pronti">
-          {pronti.map(p => (
-            <article class="it-pronto-scheda" aria-labelledby={`pronto-${p.id}`}>
-              <h3 id={`pronto-${p.id}`}>{p.nome}</h3>
-              <Testo b={T.b(`pronto-${p.id}`)} />
-              {p.evento && <Testo b={T.b('regate')} />}
-              {p.giorni.map((g, k) => (
-                <div class="it-pronto-giorno">
-                  {p.giorni.length > 1 && <h4>Giorno {k + 1}</h4>}
-                  <ol class="it-pronto-tappe">
-                    {g.voci.filter(v => v.tipo === 'tappa').map(v => v.tipo === 'tappa' && (
-                      <li><span class="it-pronto-ora">{ora(v.inizio)}</span><span class="it-piastrella it-piastrella--mini" aria-hidden="true">{v.n}</span> {nomeDi(v.id)}</li>
-                    ))}
-                  </ol>
-                  <p class="it-pronto-totale">Dalle {ora(g.inizio)} alle {ora(g.fine)}, con {durata(g.spostamenti)} di spostamenti.</p>
-                </div>
-              ))}
-              <button type="button" class="it-btn it-btn--contorno it-interattivo" data-pronto={p.id}>Apri nel compositore</button>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-
-    <section class="it-sezione it-sezione--gite" id="gite" aria-labelledby="gite-h">
-      <div class="it-wrap">
-        <h2 id="gite-h">Gite di un giorno</h2>
-        <Testo b={T.b('gite')} class="it-sezione__lead" />
-        <ul class="it-gite">
-          {gite.map(g => (
-            <li class="it-gita-riga">
-              {g.foto ? <img src={g.foto} alt="" width="72" height="72" loading="lazy" decoding="async" /> : <span class="it-scelta__foto--vuota" aria-hidden="true" />}
-              <div>
-                <h3>{g.nome}</h3>
-                <p>Da {g.partenza} · {g.durata > 240 ? 'giornata intera' : 'mezza giornata'}</p>
-              </div>
-              <button type="button" class="it-btn it-btn--contorno it-btn--piccolo it-interattivo" data-gita={g.id}>Aggiungi<span class="visually-hidden"> la gita a {g.breve}</span></button>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </section>
 
     <section class="it-sezione" id="da-sapere" aria-labelledby="sapere-h">
       <div class="it-wrap it-testi">

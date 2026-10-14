@@ -51,6 +51,7 @@ const I = {
   avanti: '<path d="M9 6l6 6-6 6"/>',
   su: '<path d="M12 19V5M6 11l6-6 6 6"/>',
   giu: '<path d="M12 5v14M6 13l6 6 6-6"/>',
+  scendi: '<path d="M6.5 9.5l5.5 5.5 5.5-5.5"/>',
   alza: '<path d="M6 15l6-6 6 6"/>',
   abbassa: '<path d="M6 9l6 6 6-6"/>',
   giorni: '<rect x="4" y="4" width="7" height="7" rx="1.5"/><rect x="13" y="4" width="7" height="7" rx="1.5"/><rect x="4" y="13" width="7" height="7" rx="1.5"/><rect x="13" y="13" width="7" height="7" rx="1.5"/>',
@@ -100,7 +101,7 @@ const LETTERE = [...'nextstop'];
 export const firma = (M, cl = '') => `<a class="firma ${cl}" href="/"><span class="vh">nextstop, la home</span><svg class="firma__segno segno--chiaro" viewBox="0 0 48 48" aria-hidden="true" focusable="false">${M.chiaro}</svg><svg class="firma__segno segno--scuro" viewBox="0 0 48 48" aria-hidden="true" focusable="false">${M.scuro}</svg><span class="firma__parola" aria-hidden="true">${LETTERE.map((c, i) => (i === 6
   ? `<span class="firma__pin" style="--i:${i}"><i class="firma__ombra"></i><svg viewBox="0 0 20 28" focusable="false">${M.spillo}</svg><i class="firma__onda"></i></span>`
   : `<span class="firma__l" style="--i:${i}">${c}</span>`)).join('')}<span class="firma__rotta"></span></span></a>`;
-const GIRO_FIRMA = 2700;
+export const GIRO_FIRMA = 2700;
 export function animaFirma(el) {
   if (!el || !piano()) return;
   if (el.dataset.gira === '1') { el.dataset.ancora = '1'; return; }
