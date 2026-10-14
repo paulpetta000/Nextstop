@@ -63,7 +63,7 @@
 .pc .c-voce__foto { position: relative; width: 60px; height: 60px; }
 .pc .c-voce__foto img, .pc .c-voce__senza { display: block; width: 60px; height: 60px; border-radius: 16px; object-fit: cover; background: var(--sup2); box-shadow: 0 8px 18px -12px rgba(5, 9, 32, .6); transition: filter 400ms; }
 .pc .c-voce[data-visitata] .c-voce__nome { color: var(--ink2); }
-.pc .c-voce[data-visitata] .c-voce__foto img { filter: saturate(.5); }
+/* visitata: la foto resta com'è (Enrico, 14/10/2026) */
 .pc .c-ora--v { color: var(--ink2); }
 .pc .c-n2 { position: relative; width: 44px; height: 44px; display: grid; place-items: center; justify-self: center; }
 .pc .c-n2 b { width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--acc); color: var(--su-acc); font-weight: 700; font-size: 14px; }
@@ -408,7 +408,7 @@
 /* ---------- le cartoline di D (pezzo 2) ---------- */
 .pd .d-voce { position: relative; rotate: var(--r, 0deg); container-type: inline-size; }
 .pd .d-voce .d-cartolina { rotate: none; }
-.pd .d-voce[data-visitata] .d-foto img { filter: saturate(.55); }
+/* visitata: la foto resta com'è (Enrico, 14/10/2026) */
 .pd .d-voce[data-visitata] .d-cartolina b { color: var(--ink2); }
 .pd .d-sv { position: absolute; z-index: 2; top: 16px; left: 16px; width: 52px; height: 60px; border-radius: 16px; background: var(--carta); box-shadow: 0 8px 18px -10px rgba(20, 16, 8, .6); }
 .pd .d-sv .soglia { width: 30px; height: 40px; }

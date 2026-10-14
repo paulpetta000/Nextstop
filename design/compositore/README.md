@@ -17,6 +17,12 @@ alle 22:00 e fa comparire anche la cena. Cartella `mangiare-giro-1/` (nata da `m
   cima quando appoggi il dito, e solo con un gesto deciso (più di 200 px, o più di 110 px veloce); altrimenti tornano su;
 - le schede di tutte le tappe e dei locali vanno rifatte, prima o poi (`ROADMAP.md`).
 
+**Ultime decisioni (14/10/2026, versione 6)**: la cena dopo l'ultima tappa va bene ma sempre facoltativa: nei giorni che finiscono prima
+delle 20:30 c'è solo «Cena?», piccola, e scegliendo un locale quel giorno si allunga fino a dopo cena (niente avviso); in D cambiando giorno
+i numeri scorrono come in C; per «visitata» si tiene la 1 (la 2 e la 3 restano nel codice) e la foto non si ingrigisce più. Il segno della
+parola trovata resta il 4, il corsivo (già scelto il 13/10). Controlli: axe pulito in 168 controlli, nessuno scorrimento di lato.
+**Pezzo 7 chiuso: si costruisce** (piano a blocchi nella specifica, «Costruzione»).
+
 **Secondo passaggio (14/10/2026, versione 5): nella pagina resta solo la 2.** Richieste di Enrico:
 - **la pausa pranzo non si perde**: scegliendo un locale a pranzo la pausa resta da parte; togliendo il locale torna com'era
   (durata e posto). Il «Tempo libero» prima di una cena vale solo finché dopo quella tappa c'è il locale;

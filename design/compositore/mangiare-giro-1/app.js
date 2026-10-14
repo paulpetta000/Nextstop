@@ -167,7 +167,7 @@
     try { localStorage.setItem(CHIAVE, JSON.stringify({ nome: S.nome, salvato: S.salvato, giorni: S.giorni, fatte: S.fatte, pause: S.pause, margine: S.margine, data: S.data, oggi: S.oggi, ordineOk: S.ordineOk, quando: Date.now() })); } catch {}
   }
   const dimentica = () => { try { localStorage.removeItem(CHIAVE); } catch {} };
-  const NUOVO = () => ({ g: 0, nome: D.nome, salvato: true, eliminato: false, giorni: PRONTO(), fatte: {}, pause: {}, margine: 0, data: null, oggi: false, tutte: false, attiva: null, nuova: null, aperta: null, modifica: false, anima: true, fini: {}, ordineOk: {}, noGrazie: {}, ...richiama() });
+  const NUOVO = () => ({ g: 0, nome: D.nome, salvato: true, eliminato: false, giorni: PRONTO(), fatte: {}, pause: {}, margine: 0, data: null, oggi: false, tutte: false, attiva: null, nuova: null, aperta: null, modifica: false, anima: true, fini: {}, ordineOk: {}, noGrazie: {}, fineG: {}, ...richiama() });
   let vistaSalvata = null;
   try { vistaSalvata = localStorage.getItem('prova-scheda-vista'); } catch {}
   const S = { p: 'c', q: 1, t: 2, r: 1, ...NUOVO() };
@@ -205,7 +205,7 @@
   const traccia = punti => 'M' + punti.map(p => p.join(' ')).join('L');
   const tappaC = id => CITTA.tappe.find(t => t.id === id);
   const fatteDi = l => l.filter(id => S.fatte[id]).sort((a, b) => S.fatte[a] - S.fatte[b]);
-  const itin = (giorni = S.giorni) => ({ id: 'prova', nome: S.nome, data: S.data || undefined, giorni: giorni.map(l => ({ tappe: l, inizio: INIZIO, fine: FINE, fatte: fatteDi(l) })), creato: 0, modificato: 0 });
+  const itin = (giorni = S.giorni) => ({ id: 'prova', nome: S.nome, data: S.data || undefined, giorni: giorni.map((l, k) => ({ tappe: l, inizio: INIZIO, fine: S.fineG?.[k] ?? FINE, fatte: fatteDi(l) })), creato: 0, modificato: 0 });
   const adesso = () => (S.oggi && S.data === OGGI ? { data: OGGI, ora: ORA_FINTA } : undefined);
   const vivoOggi = g => !!adesso() && g === 0;
   const memo = new Map();
@@ -213,7 +213,7 @@
     if (!lista || !lista.length) return null;
     const giorni = S.giorni.map((l, k) => (k === g ? lista : l));
     const a = adesso();
-    const chiave = JSON.stringify([g, giorni, lista.map(id => S.fatte[id] || 0), S.data, a, FINE]);
+    const chiave = JSON.stringify([g, giorni, lista.map(id => S.fatte[id] || 0), S.data, a, FINE, S.fineG]);
     if (memo.has(chiave)) return memo.get(chiave);
     const r = K.calcolaGiorno(CITTA, itin(giorni), g, a);
     const linee = [];
@@ -226,7 +226,7 @@
       if (!v.fatta && t.pf != null && t.pf >= 0) { const [x, y] = v.indietro ? [t.pf, t.p] : [t.p, t.pf]; for (const p of decodifica(percorso('piedi', x, y))) if (p.punti.length > 1) linee.push({ modo: 'piedi', d: traccia(p.punti), dentro: true, v: iv }); }
       return { tipo: 'tappa', id: v.id, n: v.n, inizio: v.inizio, fine: v.fine, fatta: !!v.fatta, inCorso: !!v.inCorso, indietro: !!v.indietro, xy: v.indietro && t.xyFine ? t.xyFine : t.xy };
     });
-    const out = { inizio: r.inizio, partenza: r.vivo && ORA_FINTA > INIZIO ? ORA_FINTA : r.inizio, fine: r.fine, fineScelta: FINE, visite: r.visite, spostamenti: r.spostamenti, metri: r.metri, avvisi: r.avvisi, voci, linee, vivo: !!r.vivo };
+    const out = { inizio: r.inizio, partenza: r.vivo && ORA_FINTA > INIZIO ? ORA_FINTA : r.inizio, fine: r.fine, fineScelta: S.fineG?.[g] ?? FINE, visite: r.visite, spostamenti: r.spostamenti, metri: r.metri, avvisi: r.avvisi, voci, linee, vivo: !!r.vivo };
     if (memo.size > 400) memo.clear();
     memo.set(chiave, out);
     return out;
@@ -347,7 +347,7 @@
   // 3 sulla mappa (cerchi di 5 e 10 minuti e i locali intorno), 4 lungo la strada (ordinati per i minuti in più verso la tappa dopo).
   // =====================================================================================
   const PM = 2; // Enrico, 14/10/2026: si tiene «Il menù»
-  let VV = 1;   // lo stile di «visitata» nella riga: 1 com'è oggi, 2 si riempie, 3 il segnaposto
+  let VV = 1;   // lo stile di «visitata» nella riga: Enrico tiene la 1 (14/10/2026); la 2 e la 3 restano nel codice, fuori dalla striscia
   const NOMI_VV = { 1: 'com\'è oggi', 2: 'la porta si riempie', 3: 'il segnaposto' };
   const PASTI = {
     pranzo: { nome: 'Pranzo', da: 750, a: 870, ora: 780, pasti: ['pranzo', 'spuntino'] },
@@ -384,6 +384,12 @@
         const v = tp.slice(0, -1).reduce((a, b) => (Math.abs(b.fine - Ce.ora) < Math.abs(a.fine - Ce.ora) ? b : a), tp[0]);
         if (v.fine >= Ce.da - 30 && v.fine <= Ce.a) out.push({ g, q: 'cena', dove: v.id, ora: v.fine, min: 60, dopo: dopoDi(v.id), nascosto });
       }
+    }
+    // Enrico, 14/10/2026: la cena dopo l'ultima tappa sì, ma sempre facoltativa. Se il giorno finisce prima delle 20:30 non
+    // compare la riga grande: solo «Cena?», piccola, dopo l'ultima tappa; aprendola si sceglie (o no) dove cenare.
+    else if (Gx.inizio < Ce.a && !conLocale('cena') && !T(ultima.id).categoria) {
+      const fineU = ultima.fine + Gx.pause.filter(x => x.dove === ultima.id).reduce((s, x) => s + x.min, 0);
+      if (fineU <= Ce.a) out.push({ g, q: 'cena', dove: ultima.id, ora: Math.max(fineU, Ce.da), min: 60, dopo: null, attesa: Math.max(0, Ce.da - fineU), piccola: true });
     }
     return out;
   }
@@ -441,7 +447,7 @@
   // scegliere: il locale entra nel giorno dopo la tappa prima, al posto della pausa pranzo; per la cena, se arrivi prima
   // delle 19:30, un «Tempo libero» fino all'apertura della cena. «Annulla» rimette tutto com'era.
   function mangiaQui(m, id) {
-    const g = m.g, primaL = [...S.giorni[g]], primaP = S.pause[g];
+    const g = m.g, primaL = [...S.giorni[g]], primaP = S.pause[g], primaF = { ...S.fineG };
     if (S.giorni[g].length >= MAX_TAPPE) { avvisa(`Al massimo ${MAX_TAPPE} tappe per giorno.`); return; }
     aggiorna(() => {
       const l = [...S.giorni[g]];
@@ -454,9 +460,10 @@
         if (attesa >= 10) pause = [...pause, { quale: 'libero', min: Math.round(attesa / 5) * 5, dopo: m.dove }];
       }
       S.pause = { ...S.pause, [g]: pause };
+      if (m.q === 'cena') { const X = conTempo(grezzo(g), g), fine = X?.fine ?? 0; if (fine > (S.fineG?.[g] ?? FINE)) S.fineG = { ...S.fineG, [g]: Math.min(23 * 60 + 30, Math.ceil(fine / 30) * 30) }; }
     });
     const v = tappe(G(g)).find(x => x.id === id);
-    avvisa(`${T(id).breve}: ${m.q} dalle ${ora(v.inizio)} alle ${ora(v.fine)}. Fine stimata ${ora(G(g).fine)}.`, { testo: 'Annulla', fai: () => aggiorna(() => { S.giorni[g] = primaL; const p = { ...S.pause }; if (primaP === undefined) delete p[g]; else p[g] = primaP; S.pause = p; }) });
+    avvisa(`${T(id).breve}: ${m.q} dalle ${ora(v.inizio)} alle ${ora(v.fine)}. Fine stimata ${ora(G(g).fine)}.`, { testo: 'Annulla', fai: () => aggiorna(() => { S.giorni[g] = primaL; const p = { ...S.pause }; if (primaP === undefined) delete p[g]; else p[g] = primaP; S.pause = p; S.fineG = primaF; }) });
   }
   function noGrazie(m) {
     const k = chiaveM(m);
@@ -481,6 +488,7 @@
   const pausaInfo = (m, cl) => (m.pausa ? `<button type="button" class="${cl}" data-azione="pausa" data-quale="pranzo">Pausa di ${durataLunga(m.min)}: cambia</button>` : '');
   function rigaPasto(m, vista) {
     const tag = vista === 'c' ? 'li' : 'div', base = `${vista}-pasto pasto-${PM}`, chiave = `data-chiave="pasto-${m.q}"`;
+    if (m.piccola) return `<${tag} class="${vista}-pasto pasto-piccola" ${chiave}><button type="button" class="pm-cena" data-azione="pasto-apri" ${datiM(m)}><span class="pm-ic" aria-hidden="true">${ic('posate', 16)}</span><span><b>Cena?</b><small>Facoltativa: i locali aperti dalle 19:30 vicino a ${esc(T(m.dove).breve)}</small></span>${ic('piu', 18)}</button></${tag}>`;
     if (m.nascosto) return `<${tag} class="${vista}-pasto pasto-nascosto" ${chiave}><p class="pm-rimetti">${ic('posate', 16)}<span>${m.q === 'pranzo' ? 'Niente proposte per il pranzo' : 'Niente proposte per la cena'}</span><button type="button" class="pm-link" data-azione="pasto-si" ${datiM(m)}>Rimettile</button></p></${tag}>`;
     const lista = vicini(m), ap = aperti(m), oraT = `<span class="num">${ora(m.ora)}</span>`;
     const icona = `<span class="pm-ic" aria-hidden="true">${ic('posate', vista === 'c' ? 17 : 22)}</span>`;
@@ -657,6 +665,19 @@
       requestAnimationFrame(passo);
     }
     S.cifre = { ...(S.cifre || {}), ...seen };
+  }
+  // D (Enrico, 14/10/2026): cambiando giorno i numeri della pagina nuova scorrono da quelli del giorno di prima, come in C
+  function contaDa(g0, g1) {
+    if (!piano() || g0 === g1) return;
+    for (const el of $$(`[data-cifra$="@${g1}"]`)) {
+      const base = el.dataset.cifra.split('@')[0], vecchio = $(`[data-cifra="${base}@${g0}"]`), n = +el.dataset.n;
+      if (!vecchio) continue;
+      const da = +vecchio.dataset.n, forma = FORMA_CIFRA[base], t0 = performance.now(), dur = 820;
+      if (da === n || !forma) continue;
+      cancelAnimationFrame(el._conta);
+      const passo = now => { const q = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - q, 3); el.textContent = forma(da + (n - da) * e); if (q < 1) el._conta = requestAnimationFrame(passo); };
+      el._conta = requestAnimationFrame(passo);
+    }
   }
   const NOMI_FASE = { visita: 'Visite', cammino: 'A piedi', pausa: 'Pause', margine: 'Margine' };
   function tempo(Gx, cl = '', { suf = '', bottone = true } = {}) {
@@ -2567,6 +2588,7 @@
         if (h[i] != null && this.coppia !== i) { this.coppia = i; pag.style.height = `${Math.max(h[i], h[i + 1] ?? 0)}px`; }
         const g = Math.max(0, Math.min(nG() - 1, Math.round(x)));
         if (g !== S.g) {
+          contaDa(S.g, g);
           S.g = g; S.attiva = null; S.nuova = null; S.aperta = null;
           document.documentElement.dataset.g = String(g);
           $$('.d-indice [role="tab"]').forEach(b => { const si = +b.dataset.g === g; b.setAttribute('aria-selected', String(si)); b.tabIndex = si ? 0 : -1; });
@@ -2613,7 +2635,7 @@
     giorno(g, daX = 0) {
       const pag = $('#d-pagine');
       if (computer.matches) {
-        const dir = g > S.g ? 1 : -1, vecchia = $('.d-pagina.attiva');
+        const dir = g > S.g ? 1 : -1, vecchia = $('.d-pagina.attiva'), g0 = S.g;
         S.g = g; S.attiva = null;
         document.documentElement.dataset.g = String(g);
         $$('.d-indice [role="tab"]').forEach(b => { const si = +b.dataset.g === g; b.setAttribute('aria-selected', String(si)); b.tabIndex = si ? 0 : -1; });
@@ -2625,6 +2647,7 @@
           $$('.da-vedere', nuova).forEach(x => { if (x.getBoundingClientRect().top < innerHeight) { x.classList.add('vista', 'subito'); this.io?.unobserve(x); } });
           requestAnimationFrame(() => requestAnimationFrame(() => $$('.subito', nuova).forEach(x => x.classList.remove('subito'))));
           allInizio(nuova, $('.d-indice'));
+          contaDa(g0, g);
           contaFine();
         }, () => $('.d-pagina.attiva'), () => mappa?.disegna(G(g), { vola: true, altre: G(g) ? [] : altreLinee(), n: g + 1 }));
         return;
@@ -3232,7 +3255,7 @@
     $('#p-sera').setAttribute('aria-pressed', String(FINE > 1140));
     $('#p-bordi').setAttribute('aria-pressed', String(mostraBordi));
     $$('#prova [data-p]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.p === S.p)));
-    $('#p-nome').textContent = `Visitata ${VV}: ${NOMI_VV[VV]}`;
+    $('#p-nome').textContent = 'Il menù';
     $('#idea').innerHTML = `<h2>Il menù (scelto) e «visitata»</h2><p>${esc(IDEA_M[PM])} In cima «A piedi»: 5, 10, 20 minuti o Tutti, con i minuti di ogni locale anche se vicino non c'è niente di aperto.</p>
       <p class="idea__nota">«Visitata 1 2 3» qui in alto: tocca la porta a sinistra di una tappa (vista C). 1 com'è oggi (le soglie e la spunta); 2 la porta si riempie dal basso e il numero resta, senza spunta; 3 nella porta cade il segnaposto del marchio, «sei passato di qui».</p>
       <p class="idea__nota">In tutte: la riga compare dove sarai all'ora di pranzo (al posto della pausa pranzo) o di cena; i minuti sono quelli veri dalla tappa prima, gli orari quelli scritti dai locali. «Mangia qui» mette il locale nel giorno (con «Annulla»); «No, grazie» toglie la proposta per quel giorno. Niente si aggiunge da solo.</p>
@@ -3268,7 +3291,7 @@
   $$('#prova [data-p]').forEach(b => b.addEventListener('click', () => { if (b.dataset.p !== S.p) location.hash = `${b.dataset.p}${VV}`; }));
   function daHash(primo) {
     const h = location.hash.slice(1), m = /^([cd])?([1-4])?$/.exec(h) || [];
-    const p = m[1] || (primo && /^[cd]$/.test(vistaSalvata || '') ? vistaSalvata : null) || S.p || 'c', q = 1, t = 2, r = 4, vv = Math.min(3, +(m[2] || VV));
+    const p = m[1] || (primo && /^[cd]$/.test(vistaSalvata || '') ? vistaSalvata : null) || S.p || 'c', q = 1, t = 2, r = 4, vv = 1;
     if (!primo && p === S.p && vv === VV) return;
     VV = vv; document.documentElement.dataset.vv = String(vv);
     try { localStorage.setItem('prova-scheda-vista', p); } catch {}

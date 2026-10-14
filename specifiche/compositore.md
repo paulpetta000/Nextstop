@@ -295,3 +295,22 @@ hanno tempi stimati (il ricalcolo dei tempi veri si fa nella costruzione).
 - [ ] Pezzo 7 · mangiare nella giornata: **scelta la proposta 2 «Il menù»** (Enrico, 14/10/2026), con la scheda del locale che si sfoglia, «No, grazie» che si può togliere e le schede che si chiudono tirando giù con decisione da qualsiasi punto (`design/compositore/README.md`). Da costruire.
 - [ ] Pezzo 8 · filtri dei locali (dati nuovi con le fonti, poi compositore e «Dove mangiare»).
 - [ ] Controlli, anteprima di Vercel, OK di Enrico, poi `main`.
+
+## Costruzione (Enrico, 14/10/2026: «costruiamolo e portiamolo su main»)
+Si costruisce nel sito vero (`/napoli/itinerari/`) il compositore nuovo con i pezzi già scelti; il pezzo 4 resta in stand-by, il pezzo 8
+(filtri) e la riscrittura delle schede di tappe e locali vengono dopo. Un blocco alla volta, ognuno con i suoi test e l'OK di Enrico;
+`main` solo alla fine, dopo l'anteprima di Vercel e le immagini da telefono in chiaro e scuro. Restano: dati e calcoli del sito,
+itinerari salvati (`itinerari-v1`), link già mandati, `?pronto=` e `?aggiungi=`, uso senza rete, privacy.
+1. **Blocco A · la pagina**: le due viste C «Mappa prima» e D «Le pagine» con l'interruttore (la scelta resta sul telefono), barra del
+   compositore, giorni, tappe e tratti, numeri e barra del tempo (che scorrono anche in D), pause e margini, data e orari, «visitata»
+   (la 1, la foto non si ingrigisce). Per ora la mappa di oggi.
+2. **Blocco B · la scheda e Salva**: il foglio della tappa (metà, tutto, chiusura decisa da qualsiasi punto), timbro postale, si sfoglia;
+   «Salva», «I miei itinerari», «Rinomina», «Elimina» con «Annulla».
+3. **Blocco C · Aggiungi e ricerca**: file di cartoline con il segno 4, gruppi «Da vedere», «Da mangiare», «Gite», senza accenti e
+   con piccoli errori; le parole chiave nei dati vengono con la riscrittura delle schede. Ordine più corto.
+4. **Blocco D · la mappa a pezzi**: `strade.ts` e i pezzi da 1,28 km, nomi delle vie principali e del percorso, «Tutte le tappe»,
+   il volo leggero; senza rete i pezzi già visti e quelli delle tappe salvate.
+5. **Blocco E · mangiare**: «Il menù» a pranzo (al posto della pausa, che torna se togli il locale) e la cena facoltativa; «A piedi:
+   5, 10, 20 min, Tutti»; la scheda del locale che si sfoglia; «No, grazie» con «Rimettile».
+6. **Blocco F · controlli e rilascio**: axe chiaro e scuro, Lighthouse da telefono 95 o più, 320 e 390 px, «riduci movimento», console,
+   consistent-ui almeno 35 su 40, prova a mano da telefono; anteprima di Vercel, OK di Enrico, `main`.

@@ -247,3 +247,14 @@
 
 /* la mappa su un suo strato: il volo si muove senza ridisegnarla (Enrico, 14/10/2026: più fluida) */
 .m-svg { will-change: transform; }
+
+/* la cena facoltativa nei giorni che finiscono prima delle 20:30: una riga piccola dopo l'ultima tappa */
+.pasto-piccola { list-style: none; }
+.pm-cena { width: 100%; min-height: 56px; display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 12px; align-items: center; padding: 6px 12px 6px 6px; border-radius: 16px; text-align: left; color: var(--ink); box-shadow: inset 0 0 0 1.5px color-mix(in srgb, var(--cibo) 40%, transparent); }
+.pm-cena .pm-ic { width: 28px; height: 28px; justify-self: center; background: none; color: var(--cibo); box-shadow: inset 0 0 0 1.5px var(--cibo); }
+.pm-cena b { display: block; font-weight: 650; font-size: 15px; }
+.pm-cena small { display: block; font-size: 13px; color: var(--ink2); line-height: 1.35; }
+.pm-cena > .ic { color: var(--cibo); }
+.pd .d-pasto.pasto-piccola { width: calc(100% - 28px); }
+.pd .pm-cena { border-radius: 3px; background: var(--carta); box-shadow: 0 0 0 1px var(--riga); }
+.pd .pm-cena b { font: italic 600 18px/1.2 "Bodoni Moda", Georgia, serif; }
