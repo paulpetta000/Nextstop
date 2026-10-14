@@ -18,7 +18,7 @@ const CORE = [
 // della pagina). Le foto grandi no: si salvano quando le guardi.
 const INTERATTIVE = {
   // le schede del compositore (/napoli/itinerari/schede/) arrivano dopo il primo disegno: si salvano con la pagina
-  '/napoli/itinerari/': ['/napoli/itinerari/schede/', '/napoli/itinerari/mappa.json', '/napoli/itinerari/scenari.json', '/napoli/itinerari/percorsi.json', '/napoli/itinerari/partenze.json']
+  '/napoli/itinerari/': ['/napoli/itinerari/schede/', '/napoli/itinerari/strade/indice.json', '/napoli/itinerari/mappa.json', '/napoli/itinerari/scenari.json', '/napoli/itinerari/percorsi.json', '/napoli/itinerari/partenze.json']
 };
 
 export default function serviceWorker() {

@@ -209,7 +209,9 @@ export async function caricaDopo(quandoArriva) {
 let mappaDati = null, alternativi = null;
 export const caricaMappa = () => (mappaDati ??= quandoLibero().then(() => Promise.all([
   fetch('/napoli/itinerari/mappa.json').then(r => { if (!r.ok) throw new Error('mappa'); return r.json(); }),
-  fetch('/napoli/itinerari/percorsi.json').then(r => { if (!r.ok) throw new Error('percorsi'); return r.json(); })
+  fetch('/napoli/itinerari/percorsi.json').then(r => { if (!r.ok) throw new Error('percorsi'); return r.json(); }),
+  // l'indice delle strade a pezzi: senza (vecchia copia, niente rete) la mappa resta quella di base
+  fetch('/napoli/itinerari/strade/indice.json').then(r => (r.ok ? r.json() : null)).catch(() => null)
 ])).catch(e => { mappaDati = null; throw e; }));
 export const caricaAlternativi = () => (alternativi ??= fetch('/napoli/itinerari/percorsi-alternativi.json').then(r => (r.ok ? r.json() : null)).catch(() => { alternativi = null; return null; }));
 // le schede complete e i dati della ricerca (/napoli/itinerari/schede/, schede.astro): si scaricano a pagina caricata e
