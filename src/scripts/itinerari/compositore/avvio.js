@@ -40,6 +40,9 @@ function avvia() {
   if (chiesto) usaPronto(chiesto); else disegna();
   // scorrendo sotto il compositore (itinerari pronti, gite, fonti) la mappa fissa e le barre si nascondono
   new IntersectionObserver(([e]) => document.documentElement.classList.toggle('cmp-fuori', !e.isIntersecting && e.boundingClientRect.top < 0)).observe($('#compositore'));
+  // appena la parte bassa entra nello schermo, le barre fisse del compositore (in basso o di lato) si tolgono: non la coprono
+  const sotto = document.querySelector('.it-pagina > :not(.cmp)');
+  if (sotto) new IntersectionObserver(([e]) => document.documentElement.classList.toggle('cmp-sotto', e.isIntersecting || e.boundingClientRect.top < 0)).observe(sotto);
 
   // un locale (o una tappa) da aggiungere, dalla pagina «Dove mangiare» (?aggiungi=<id>&g=<giorno>)
   const richiesta = new URLSearchParams(W.daAggiungere ?? '');

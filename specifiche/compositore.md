@@ -318,3 +318,21 @@ itinerari salvati (`itinerari-v1`), link già mandati, `?pronto=` e `?aggiungi=`
 **Due fermate invece di sei (Enrico, 14/10/2026)**: **parte 1 = blocchi A, B e C** (il compositore nuovo con la mappa di oggi, anteprima di
 Vercel da provare dal telefono, poi OK di Enrico); **parte 2 = blocchi D, E e F** (mappa, mangiare, controlli, poi `main` con l'OK).
 Dentro una parte si continua anche su più sessioni senza fermarsi; aggiornamenti al 30/50/70/90%.
+
+**Parte 1 costruita (14/10/2026, ramo `compositore-pagina`).** Decisioni prese costruendo (Enrico, 14/10/2026: niente fermate per
+giudicare, i controlli li fa Claude; solo un «sì» prima di `main`):
+- **Pause e margine sopra il calcolo** (`src/lib/itinerari/pause.ts`, con i test), come nelle prove: `calcolo.ts` resta la giornata da
+  tappa a tappa (così gli itinerari pronti, controllati dalla build, non cambiano); le pause spostano gli orari dopo. Nel link: `m=`
+  (margine) e `p=` (pause per giorno); i vecchi link si aprono uguali.
+- **Bozze**: un itinerario nuovo, un pronto o un link ricevuto è una bozza («Non ancora salvato») finché non tocchi «Salva»; resta sul
+  telefono. Una bozza lasciata com'era (o vuota) sparisce quando apri un altro itinerario; quelle cambiate restano in «I miei
+  itinerari». Gli itinerari di prima del 14/10/2026 sono salvati. «Salva» propone il nome («Napoli, 12–14 ottobre») solo se quello di
+  ora è generico; avvisa vicino ai 50.
+- **Un itinerario nuovo parte senza data**, come nelle prove (prima prendeva la data di oggi e alle 17 un pronto partiva «da adesso»).
+- **«Visitata»**: il campo `fatte` resta; il timbro postale legge la data da `timbri` (solo sul telefono, non nel link).
+- **Prestazioni da telefono** (Lighthouse 95–96, accessibilità 100): la prima schermata è già nell'HTML e il compositore parte dopo il
+  primo disegno; le schede complete e i dati della ricerca sono in `/napoli/itinerari/schede/` (`schede.astro`), scaricati dopo e
+  salvati dal service worker; mappa, percorsi, scenari e orari dei bus a pagina caricata; la parte bassa della pagina compare quando il
+  compositore è partito.
+- Della testata del sito resta solo il menu, aperto dal tondo del compositore. Il compositore vecchio (`app.ts`, `mappa.ts`,
+  `trascina.ts`) è tolto: sostituito, nessun altro lo usava.

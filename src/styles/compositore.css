@@ -1,5 +1,5 @@
 /* Lo stile del compositore (pagina /napoli/itinerari/). Nato dalle prove scelte da Enrico con design/compositore/ (vedi in fondo).
-   Rifare la parte delle prove: lo script di conversione è descritto in design/compositore/README.md, «Costruzione». */
+   Rifare la parte delle prove: design/compositore/costruzione/scopa.mjs (vedi design/compositore/README.md, «Costruzione nel sito»). */
 /* ===== stile.css ===== */
 /* Compositore, pezzo 1, giro 2 (pagina e barra): A, C, D migliorate; E e F nuove, più astratte. Non è il sito: è una prova.
    Ogni proposta mette i suoi colori sulla radice (html.pa, .pc, .pd, .pe, .pf); i pezzi comuni (foglio, avviso, mappa,
@@ -1390,6 +1390,7 @@ html.pd .cmp .segno-4 .r2-cartellino .r-segno { font-style: normal; font-weight:
 html.pc #contenuto > .it-pagina > :not(.cmp) { position: relative; z-index: 6; background: var(--carta, #F7F6F2); }
 html.pc body > footer { position: relative; z-index: 6; }
 html.cmp-fuori .cmp .c-sopra, html.cmp-fuori .cmp .c-mappa, html.cmp-fuori .cmp .c-giu, html.cmp-fuori .cmp .d-tab { visibility: hidden; }
+html.cmp-sotto .cmp .c-giu, html.cmp-sotto .cmp .d-tab { visibility: hidden; }
 /* sul computer, in C, mappa e foglio stanno nella prima schermata; poi la pagina scorre */
 @media (min-width: 960px) {
   html.pc .cmp .cmp-app { position: relative; height: 100dvh; min-height: 640px; overflow: hidden; }

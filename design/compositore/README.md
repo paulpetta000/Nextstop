@@ -3,6 +3,16 @@
 Proposte con i dati veri di «Due giorni a Napoli»: orari, tempi a piedi e percorsi calcolati dal sito (giorno feriale), foto e
 caratteri del sito. Regola di Enrico: 4 proposte molto diverse per pezzo, si itera su quello che va. Specifica: `specifiche/compositore.md`.
 
+# Costruzione nel sito (14/10/2026)
+
+Il compositore scelto è nel sito (`/napoli/itinerari/`): codice in `src/scripts/itinerari/compositore/`, stile in
+`src/styles/compositore.css`, decisioni nella specifica («Parte 1 costruita»). Strumenti in `costruzione/`:
+- `scopa.mjs <uscita.css> <stile.css> <pezzo2.css> <ricerca.css>`: ha portato lo stile delle prove (`mangiare-giro-1/`) sotto `.cmp`,
+  togliendo le proposte non scelte; da lì in poi `compositore.css` si cambia a mano (le aggiunte del sito sono in fondo).
+- `controlli.cjs [porta] [cartella immagini]`: axe in chiaro e scuro, telefono (320 e 390 px) e computer, viste C e D e fogli;
+  scorrimento di lato; errori in console. Con il sito acceso: `npm run build`, poi `astro preview --port 4336`.
+- `tempi.cjs [porta]`: primo disegno e contenuto principale su un telefono lento (processore 4 volte più lento).
+
 # Pezzo 7: mangiare nella giornata
 
 Specifica §7. Quattro proposte dentro C e D: nella striscia in alto si sceglie la proposta (1-4) e la vista; **Sera** porta i giorni
