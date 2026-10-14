@@ -96,13 +96,20 @@ export interface Adesso {
   qui?: string;            // tappa a meno di 200 m (dal GPS)
 }
 
+// Una pausa della giornata (specifiche/compositore.md §9): dopo quale tappa (senza: la sceglie il calcolo) e quanto dura.
+// «libero» è il tempo prima di una cena scelta (pezzo 7), non si aggiunge dal foglio delle pause.
+export type QualePausa = 'pranzo' | 'caffe' | 'riposo' | 'libero';
+export interface Pausa { quale: QualePausa; min: number; dopo?: string }
+
 export interface Giorno {
   tappe: string[];
   inizio: number;          // minuti dalla mezzanotte
   fine: number;
   gita?: string;
   ok?: string[];           // tappe lontane che hai deciso di lasciare dove sono
-  fatte?: string[];        // tappe segnate «Fatto» (solo sul telefono, non nel link)
+  fatte?: string[];        // tappe segnate «visitata», nell'ordine dei tocchi (solo sul telefono, non nel link)
+  pause?: Pausa[];         // senza: la pausa pranzo di base (src/lib/itinerari/pause.ts); [] nessuna pausa
+  lascia?: string;         // l'ordine delle tappe per cui hai detto «Lascia così» al consiglio dell'ordine più corto (solo sul telefono)
 }
 
 export interface Itinerario {
@@ -111,6 +118,9 @@ export interface Itinerario {
   data?: string;           // data del primo giorno (AAAA-MM-GG); gli altri seguono
   piedi?: boolean;         // solo a piedi, senza mezzi
   posizione?: 'si' | 'no'; // la risposta al pannello della posizione (solo sul telefono)
+  margine?: number;        // minuti dopo ogni spostamento (5, 10 o 15): foto, code, passo lento
+  salvato?: boolean;       // false: bozza, non ancora in «I miei itinerari»; senza: salvato (gli itinerari di prima del 14/10/2026)
+  timbri?: Record<string, number>;   // quando hai segnato una tappa «visitata» (ms), per il timbro della scheda (solo sul telefono)
   giorni: Giorno[];
   creato: number;
   modificato: number;

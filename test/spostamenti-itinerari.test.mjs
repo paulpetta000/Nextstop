@@ -68,3 +68,17 @@ test('spostamento: preparare una modifica valida non muta l’originale, che res
   risultato.giorni[1].tappe.push('castello');
   assert.deepEqual(x, prima);
 });
+
+test('spostamento: il segno «visitata» segue la tappa nel giorno nuovo (specifica §5, casi limite)', () => {
+  const x = viaggio([{ ...giorno(['duomo', 'museo']), fatte: ['museo', 'duomo'] }, giorno(['castello'])]);
+  const r = preparaSpostamento(x, 0, 1, ['duomo']);
+  assert.deepEqual(r.giorni[0].fatte, ['museo']);
+  assert.deepEqual(r.giorni[1].fatte, ['duomo']);
+  assert.deepEqual(r.giorni[1].tappe, ['castello', 'duomo']);
+});
+
+test('spostamento: una pausa messa dopo la tappa spostata torna al suo posto di base', () => {
+  const x = viaggio([{ ...giorno(['duomo', 'museo', 'castello']), pause: [{ quale: 'pranzo', min: 60, dopo: 'museo' }] }]);
+  const r = preparaSpostamento(x, 0, 1, ['museo']);
+  assert.deepEqual(r.giorni[0].pause, [{ quale: 'pranzo', min: 60 }]);
+});

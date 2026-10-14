@@ -48,3 +48,55 @@ test('link itinerari: il confronto ignora solo il nome, senza confondere giorni 
   assert.equal(uguali(x, { ...x, piedi: false }), false);
   assert.equal(uguali(x, { ...x, giorni: [{ ...giornoVuoto(), tappe: ['tappa1', 'tappa0'] }] }), false);
 });
+
+// Compositore nuovo (specifiche/compositore.md §4, §5, §9): pause e margine vanno nel link; salvato, timbri e «Lascia così» restano sul telefono
+test('link itinerari: pause e margine vanno e tornano nel link, senza cambiare i vecchi link', () => {
+  const x = { ...viaggio([
+    { ...giornoVuoto(), tappe: ['tappa0', 'tappa1', 'tappa2'], pause: [{ quale: 'pranzo', min: 45, dopo: 'tappa1' }, { quale: 'caffe', min: 20 }] },
+    { ...giornoVuoto(), tappe: ['tappa3'] },
+    { ...giornoVuoto(), tappe: ['tappa4', 'tappa5'], pause: [] }
+  ]), margine: 10 };
+  const hash = codifica(x);
+  assert.match(hash, /(^|&)m=10(&|$)/);
+  const r = decodifica(C, '#' + hash);
+  assert.deepEqual(r.scartate, []);
+  assert.equal(r.it.margine, 10);
+  assert.deepEqual(r.it.giorni.map(g => g.pause), x.giorni.map(g => g.pause));
+  assert.equal(codifica(r.it), hash);
+  // senza pause scelte né margine il link è quello di prima
+  const vecchio = viaggio([{ ...giornoVuoto(), tappe: ['tappa0', 'tappa1'] }]);
+  assert.doesNotMatch(codifica(vecchio), /(^|&)(p|m)=/);
+  assert.equal(decodifica(C, '#' + codifica(vecchio)).it.giorni[0].pause, undefined);
+});
+
+test('link itinerari: visitate, timbri, «Salva» e «Lascia così» non vanno nel link', () => {
+  const x = { ...viaggio([{ ...giornoVuoto(), tappe: ['tappa0', 'tappa1'], fatte: ['tappa0'], lascia: 'tappa0.tappa1' }]), salvato: true, timbri: { tappa0: 1760000000000 } };
+  const hash = codifica(x);
+  assert.doesNotMatch(hash, /fatte|lascia|salvato|timbri|1760000000000/);
+  const r = decodifica(C, '#' + hash).it;
+  assert.equal(r.salvato, undefined);
+  assert.equal(r.timbri, undefined);
+  assert.equal(r.giorni[0].fatte, undefined);
+});
+
+test('link itinerari: la memoria conserva Salva, timbri, pause e margine validi, e scarta il resto', () => {
+  const r = sistema(C, {
+    salvato: false, margine: 7, timbri: { tappa0: 1760000000000, tappa9: 5, tappa1: 'ieri' },
+    giorni: [{ ...giornoVuoto(), tappe: ['tappa0', 'tappa1'], lascia: 'tappa1.tappa0', pause: [{ quale: 'pranzo', min: 60, dopo: 'tappa1' }, { quale: 'cena', min: 60 }, { quale: 'caffe', min: -3 }, { quale: 'riposo', min: 30, dopo: 'assente' }] }]
+  }).it;
+  assert.equal(r.salvato, false);
+  assert.equal(r.margine, undefined, 'solo 5, 10 o 15 minuti');
+  assert.deepEqual(r.timbri, { tappa0: 1760000000000 });
+  assert.deepEqual(r.giorni[0].pause, [{ quale: 'pranzo', min: 60, dopo: 'tappa1' }, { quale: 'riposo', min: 30 }]);
+  assert.equal(r.giorni[0].lascia, 'tappa1.tappa0');
+  const vecchio = sistema(C, { giorni: [{ ...giornoVuoto(), tappe: ['tappa0'] }] }).it;
+  assert.equal(vecchio.salvato, undefined, 'gli itinerari di prima restano salvati');
+  assert.equal(vecchio.giorni[0].pause, undefined);
+});
+
+test('link itinerari: il confronto tiene conto di pause e margine', () => {
+  const x = viaggio([{ ...giornoVuoto(), tappe: ['tappa0', 'tappa1'] }]);
+  assert.equal(uguali(x, { ...x, margine: 5 }), false);
+  assert.equal(uguali(x, { ...x, giorni: [{ ...x.giorni[0], pause: [] }] }), false);
+  assert.equal(uguali(x, { ...x, salvato: false, timbri: { tappa0: 1 } }), true);
+});

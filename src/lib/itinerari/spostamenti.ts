@@ -14,7 +14,13 @@ export function preparaSpostamento(x: Itinerario, da: number, dest: number, ids:
   const giorni = structuredClone(x.giorni);
   if (dest >= giorni.length) { giorni.push(giornoVuoto(giorni[da].inizio, giorni[da].fine)); dest = giorni.length - 1; }
   if (giorni[dest].gita) { giorni.splice(dest, 0, giornoVuoto(giorni[da].inizio, giorni[da].fine)); }
+  // il segno «visitata» segue la tappa (specifiche/compositore.md, casi limite); una pausa messa dopo una tappa che va via
+  // torna al suo posto di base
+  const visitate = ids.filter(t => giorni[da].fatte?.includes(t));
   giorni[da].tappe = giorni[da].tappe.filter(t => !ids.includes(t));
+  if (giorni[da].fatte) giorni[da].fatte = giorni[da].fatte.filter(t => !ids.includes(t));
+  if (giorni[da].pause) giorni[da].pause = giorni[da].pause.map(p => (p.dopo && ids.includes(p.dopo) ? { quale: p.quale, min: p.min } : p));
   giorni[dest].tappe = [...giorni[dest].tappe.filter(t => !ids.includes(t)), ...ids];
+  if (visitate.length) giorni[dest].fatte = [...(giorni[dest].fatte ?? []).filter(t => !ids.includes(t)), ...visitate];
   return { giorni, destinazione: dest };
 }

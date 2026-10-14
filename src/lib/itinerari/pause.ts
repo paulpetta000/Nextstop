@@ -1,0 +1,121 @@
+// Pause e margini della giornata (specifiche/compositore.md §9). Sopra il calcolo del sito (calcolo.ts), come nelle prove
+// scelte da Enrico: la giornata calcolata va da una tappa all'altra; qui si aggiungono le pause (dopo una tappa) e il margine
+// (dopo ogni spostamento), e gli orari dopo slittano. I minuti a piedi e con i mezzi restano quelli veri.
+// La pausa pranzo c'è già: un'ora, dopo la tappa dove si mangia o quella che finisce più vicino alle 13. Se all'ora di pranzo
+// c'è un locale nel giorno la pausa resta da parte (nei dati) e torna se lo togli. Una pausa non va mai dopo l'ultima tappa.
+// Funzioni pure, senza DOM: le usa la pagina (src/scripts/itinerari/) e i test.
+import { tappaDi } from './calcolo.ts';
+import type { Avviso, Citta, Giorno, Pausa, QualePausa, Risultato, Voce } from './tipi';
+
+export const TIPI_PAUSA: Record<QualePausa, { min: number; ora: number; scelte: number[]; solo?: boolean }> = {
+  pranzo: { min: 60, ora: 780, scelte: [30, 45, 60, 90] },
+  caffe: { min: 20, ora: 990, scelte: [15, 20, 30] },
+  riposo: { min: 30, ora: 930, scelte: [15, 30, 45, 60] },
+  libero: { min: 30, ora: 1140, scelte: [15, 30, 45, 60, 90, 120], solo: true }
+};
+export const MARGINI = [0, 5, 10, 15];
+// l'ora di pranzo (regola nostra, scritta nella pagina): 12:30–14:30
+export const PRANZO = { da: 750, a: 870 };
+
+type VoceTappa = Extract<Voce, { tipo: 'tappa' }>;
+export type Fase = { tipo: 'visita' | 'cammino' | 'pausa' | 'margine'; da: number; a: number };
+export type PausaMessa = Pausa & { dove: string; inizio: number; fine: number };
+export interface Giornata extends Risultato {
+  pause: PausaMessa[];
+  fasi: Fase[];
+  pauseMin: number;
+  margineMin: number;
+  totale: number;          // dall'uscita all'ultima tappa, pause e margine compresi
+  resta: number;           // fino all'ora di fine scelta (negativo: di quanto sfori)
+  fineScelta: number;
+}
+
+const tappeDi = (r: Risultato) => r.voci.filter((v): v is VoceTappa => v.tipo === 'tappa');
+const daFare = (r: Risultato) => tappeDi(r).filter(v => !v.fatta);
+const locale = (C: Citta, id: string) => tappaDi(C, id)?.categoria === 'mangiare';
+// un locale nel giorno all'ora di pranzo: il pranzo è lì
+const conLocaleAPranzo = (C: Citta, r: Risultato) => daFare(r).some(v => locale(C, v.id) && v.inizio < PRANZO.a && v.fine > PRANZO.da);
+
+// L'ora da cui parte la giornata: l'ora scelta o, dal vivo, adesso (l'inizio della prima tappa meno il tratto per arrivarci)
+function partenza(r: Risultato) {
+  if (!r.vivo) return r.inizio;
+  const k = r.voci.findIndex(v => !(v.tipo === 'tappa' && v.fatta));
+  const v = r.voci[k];
+  if (!v) return r.fine;
+  if (v.tipo === 'tappa') return v.inizio;
+  const dopo = r.voci.slice(k + 1).find((x): x is VoceTappa => x.tipo === 'tappa');
+  return dopo ? dopo.inizio - v.min : r.fine;
+}
+
+// La pausa pranzo di base serve se ci sono almeno due tappe da fare e la giornata attraversa l'ora di pranzo senza un locale
+export const pranzoServe = (C: Citta, r: Risultato) => daFare(r).length > 1 && partenza(r) < PRANZO.a && r.fine > PRANZO.da && !conLocaleAPranzo(C, r);
+
+// Le pause del giorno: quelle scelte, oppure la pausa pranzo di base
+export const pauseDelGiorno = (C: Citta, G: Giorno, r: Risultato): Pausa[] => G.pause ?? (pranzoServe(C, r) ? [{ quale: 'pranzo', min: TIPI_PAUSA.pranzo.min }] : []);
+
+// Dopo quale tappa va una pausa senza posto scelto: a pranzo quella dove si mangia (genere «cibo») se finisce tra le 11:45 e
+// le 14:30, altrimenti quella che finisce più vicino all'ora della pausa; mai l'ultima
+function posto(C: Citta, quale: QualePausa, tp: VoceTappa[], fineA: Record<string, number>) {
+  const candidati = tp.slice(0, -1);
+  if (!candidati.length) return null;
+  if (quale === 'pranzo') {
+    const cibo = candidati.find(v => tappaDi(C, v.id)?.generi?.includes('cibo') && fineA[v.id] >= 705 && fineA[v.id] <= 870);
+    if (cibo) return cibo.id;
+  }
+  const o = TIPI_PAUSA[quale].ora;
+  return candidati.reduce((a, b) => (Math.abs(fineA[b.id] - o) < Math.abs(fineA[a.id] - o) ? b : a)).id;
+}
+
+export function conPause(C: Citta, G: Giorno, r: Risultato, margine = 0): Giornata {
+  const m = margine || 0, tp = daFare(r), t0 = partenza(r), ev = C.evento;
+  // quando finisce ogni tappa con il margine, senza pause: serve a scegliere dove vanno
+  const fineA: Record<string, number> = {};
+  let t = t0;
+  for (const v of r.voci) {
+    if (v.tipo === 'tratto') t += v.min + m;
+    else if (!v.fatta) { if (ev && v.id === ev.id) t = Math.max(t, ev.inizio); t += v.fine - v.inizio; fineA[v.id] = t; }
+  }
+  const ultima = tp[tp.length - 1]?.id;
+  const tutte = tappeDi(r), aPranzo = conLocaleAPranzo(C, r);
+  // il tempo libero prima di una cena vale solo se dopo quella tappa c'è ancora un locale
+  const liberoServe = (p: Pausa) => { const i = tutte.findIndex(v => v.id === p.dopo); return i >= 0 && !!tutte[i + 1] && locale(C, tutte[i + 1].id); };
+  const lista = pauseDelGiorno(C, G, r)
+    .filter(p => !(p.quale === 'pranzo' && aPranzo) && !(p.quale === 'libero' && !liberoServe(p)))
+    .map(p => ({ ...p, dove: p.dopo && p.dopo !== ultima && fineA[p.dopo] != null ? p.dopo : posto(C, p.quale, tp, fineA) }))
+    .filter((p): p is Pausa & { dove: string } => !!p.dove);
+
+  t = t0;
+  const voci: Voce[] = [], fasi: Fase[] = [], pause: PausaMessa[] = [];
+  let mar = 0, pau = 0, vis = 0;
+  for (const v of r.voci) {
+    if (v.tipo === 'tappa' && v.fatta) { voci.push(v); continue; }
+    if (v.tipo === 'tratto') {
+      fasi.push({ tipo: 'cammino', da: t, a: t + v.min });
+      voci.push(v);
+      t += v.min;
+      if (m) { fasi.push({ tipo: 'margine', da: t, a: t + m }); t += m; mar += m; }
+      continue;
+    }
+    // le regate hanno un'ora fissa: se arrivi prima aspetti
+    if (ev && v.id === ev.id && t < ev.inizio) t = ev.inizio;
+    const d = v.fine - v.inizio;
+    voci.push({ ...v, inizio: t, fine: t + d });
+    fasi.push({ tipo: 'visita', da: t, a: t + d });
+    t += d; vis += d;
+    for (const p of lista.filter(x => x.dove === v.id)) {
+      pause.push({ ...p, inizio: t, fine: t + p.min });
+      fasi.push({ tipo: 'pausa', da: t, a: t + p.min });
+      t += p.min; pau += p.min;
+    }
+  }
+  const avvisi: Avviso[] = r.avvisi.filter(a => a.tipo !== 'piena');
+  if (tp.length && t > G.fine) {
+    const daSpostare = voci.filter((v): v is VoceTappa => v.tipo === 'tappa' && !v.fatta && !v.inCorso && v.fine > G.fine && v.id !== ev?.id).map(v => v.id);
+    avvisi.unshift({ tipo: 'piena', fine: t, limite: G.fine, daSpostare });
+  }
+  return { ...r, inizio: t0, voci, fine: t, pause, fasi, visite: vis, pauseMin: pau, margineMin: mar, totale: t - t0, resta: G.fine - t, fineScelta: G.fine, avvisi };
+}
+
+// Le voci della giornata con le pause al loro posto (dopo la tappa), per disegnarla
+export type VoceGiornata = Voce | (PausaMessa & { tipo: 'pausa' });
+export const sequenza = (g: Giornata): VoceGiornata[] => g.voci.flatMap(v => (v.tipo === 'tappa' && !v.fatta ? [v, ...g.pause.filter(p => p.dove === v.id).map(p => ({ ...p, tipo: 'pausa' as const }))] : [v]));
