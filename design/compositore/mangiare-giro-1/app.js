@@ -297,7 +297,12 @@
     const fineA = {};
     for (const v of Gx.voci) { if (v.tipo === 'tratto') t += v.min + m; else if (!v.fatta) { t += v.fine - v.inizio; fineA[v.id] = t; } }
     const ultima = tp.slice(-1)[0]?.id;
-    const lista = pauseDi(g, Gx).map(p => ({ ...p, dove: p.dopo && p.dopo !== ultima && fineA[p.dopo] != null ? p.dopo : postoPausa(p.quale, tp, fineA) })).filter(p => p.dove);
+    // pezzo 7 (Enrico, 14/10/2026): la pausa pranzo non si cancella quando scegli un locale; finché c'è un locale all'ora di
+    // pranzo resta da parte, e se lo togli torna com'era (durata e posto). Il «Tempo libero» prima di una cena vale solo se
+    // dopo quella tappa c'è ancora un locale.
+    const tutte = tappe(Gx), conLocale = tutte.some(v => T(v.id).categoria && !v.fatta && v.inizio < 870 && v.fine > 750);
+    const liberoServe = p => { const i = tutte.findIndex(v => v.id === p.dopo); return i >= 0 && !!T(tutte[i + 1]?.id ?? '')?.categoria; };
+    const lista = pauseDi(g, Gx).filter(p => !(p.quale === 'pranzo' && conLocale) && !(p.quale === 'libero' && !liberoServe(p))).map(p => ({ ...p, dove: p.dopo && p.dopo !== ultima && fineA[p.dopo] != null ? p.dopo : postoPausa(p.quale, tp, fineA) })).filter(p => p.dove);
     t = Gx.partenza;
     const voci = [], fasi = [], pause = [];
     let mar = 0, pau = 0, vis = 0;
@@ -341,7 +346,9 @@
   // Quattro proposte (PM): 1 la sosta (i più vicini nella riga), 2 il menù (un foglio come la carta di un ristorante),
   // 3 sulla mappa (cerchi di 5 e 10 minuti e i locali intorno), 4 lungo la strada (ordinati per i minuti in più verso la tappa dopo).
   // =====================================================================================
-  let PM = 1;
+  const PM = 2; // Enrico, 14/10/2026: si tiene «Il menù»
+  let VV = 1;   // lo stile di «visitata» nella riga: 1 com'è oggi, 2 si riempie, 3 il segnaposto
+  const NOMI_VV = { 1: 'com\'è oggi', 2: 'la porta si riempie', 3: 'il segnaposto' };
   const PASTI = {
     pranzo: { nome: 'Pranzo', da: 750, a: 870, ora: 780, pasti: ['pranzo', 'spuntino'] },
     cena: { nome: 'Cena', da: 1170, a: 1290, ora: 1200, pasti: ['cena'] }
@@ -440,7 +447,7 @@
       const l = [...S.giorni[g]];
       l.splice(l.indexOf(m.dove) + 1, 0, id);
       S.giorni[g] = l; S.nuova = id;
-      let pause = (primaP ?? pauseDi(g, grezzo(g, primaL))).filter(p => !(m.q === 'pranzo' && p.quale === 'pranzo') && p.quale !== 'libero');
+      let pause = (primaP ?? pauseDi(g, grezzo(g, primaL))).filter(p => p.quale !== 'libero');
       if (m.q === 'cena') {
         const v = tappe(grezzo(g)).find(x => x.id === id), prima = pause.filter(p => l.indexOf(p.dove) < l.indexOf(id)).reduce((s, p) => s + p.min, 0);
         const arrivo = v.inizio + prima, attesa = PASTI.cena.da - arrivo;
@@ -489,7 +496,7 @@
       const tipi = [...new Set(ap.map(x => tipoL(x.id)))];
       return `<${tag} class="${base}" ${chiave}><button type="button" class="pm2" data-azione="pasto-apri" ${datiM(m)}>
         <span class="pm2__carta" aria-hidden="true"><i>${m.q === 'pranzo' ? 'Pranzo' : 'Cena'}</i></span>
-        <span class="pm2__t"><span class="pm-ora">${oraT}${m.pausa ? ` – <span class="num">${ora(m.ora + m.min)}</span>` : ''}</span><b>Il menù ${m.q === 'pranzo' ? 'del pranzo' : 'della cena'}</b><small>${ap.length ? `${ap.length} aperti intorno a ${esc(T(m.dove).breve)}${tipi.length ? `: ${tipi.slice(0, 3).map(x => x.toLowerCase()).join(', ')}` : ''}` : esc(riassuntoM(m))}</small></span>
+        <span class="pm2__t"><span class="pm-ora">${oraT}${m.pausa ? ` – <span class="num">${ora(m.ora + m.min)}</span>` : ''}</span><b>Il menù ${m.q === 'pranzo' ? 'del pranzo' : 'della cena'}</b><small>${ap.length ? `${ap.length} aperti intorno a ${esc(T(m.dove).breve)}${tipi.length ? `: ${tipi.slice(0, 3).map(x => x.toLowerCase()).join(', ')}` : ''}` : esc(riassuntoM(m))}. Dentro anche tutti gli altri, con i minuti.</small></span>
         <span class="pm2__apri">Apri${ic('avanti', 16)}</span></button>
         <p class="pm-piede">${pausaInfo(m, 'pm-link')}${bottoneNo(m, 'pm-link pm-link--no')}</p></${tag}>`;
     }
@@ -545,17 +552,17 @@
     foglio(m.q === 'pranzo' ? 'Dove pranzare' : 'Dove cenare', `<div id="f-vivo">${corpo()}</div>`, f => { f.onclick = e => clickFoglioM(e, f, m, k => { f0 = k; rinfresca(f, corpo(), { dataset: { f: 'filtro', v: k } }); }, () => apriElenco(m, f0)); }, 'f--pasto');
   }
   // 2 · il menù: per tipo di locale, con i puntini fino ai minuti; quanto vuoi camminare in cima
-  function apriMenu(m, max = 10) {
+  function apriMenu(m, max = aperti(m).length ? 10 : 0) {
     let mx = max;
     const corpo = () => {
-      const tutti = vicini(m), si = tutti.filter(x => x.stato !== 'chiuso' && x.min <= mx), no = tutti.filter(x => x.stato === 'chiuso' && x.min <= mx);
+      const entro = x => !mx || x.min <= mx, tutti = vicini(m), si = tutti.filter(x => x.stato !== 'chiuso' && entro(x)), no = tutti.filter(x => x.stato === 'chiuso' && entro(x));
       const gruppi = [...new Set(si.map(x => tipoL(x.id)))].map(t => [t, si.filter(x => tipoL(x.id) === t)]);
       ordineLocali = [...gruppi.flatMap(([, l]) => l), ...no].map(x => x.id);
       const voce = x => `<li class="mn-v${x.stato === 'chiuso' ? ' mn-v--chiuso' : ''}"><details><summary><span class="mn-nome">${esc(T(x.id).nome)}</span><span class="mn-punti" aria-hidden="true"></span><span class="mn-min num">${x.min < 2 ? 'accanto' : `${x.min} min`}</span><small class="mn-sotto">${esc(x.nota)}${euro(x.id) ? ` · ${euro(x.id)}` : ''}${x.mezzi ? ' · con i mezzi' : ''}</small></summary>
         <div class="mn-dentro"><p>${esc(T(x.id).frase || '')}</p><div class="mn-az">${x.stato === 'chiuso' ? '' : `<button type="button" class="f-bottone" data-f="scegli" data-v="${x.id}">${ic('posate', 18)}Mangia qui, dalle ${ora(x.arrivo)}</button>`}<button type="button" class="f-bottone f-bottone--contorno" data-f="scheda" data-v="${x.id}">La scheda</button></div></div></details></li>`;
       return `<div class="mn"><p class="mn-testa"><i>${m.q === 'pranzo' ? 'Pranzo' : 'Cena'}</i><span>dalle <span class="num">${ora(m.ora)}</span>, intorno a ${esc(T(m.dove).breve)}</span></p>
-        <div class="mn-quanto" role="group" aria-label="Quanto vuoi camminare"><span>A piedi:</span>${[5, 10, 20].map(k => `<button type="button" data-f="quanto" data-v="${k}" aria-pressed="${k === mx}">${k} min</button>`).join('')}</div>
-        ${gruppi.length ? gruppi.map(([t, l]) => `<section class="mn-gruppo"><h3>${esc(t)}</h3><ul>${l.map(voce).join('')}</ul></section>`).join('') : `<p class="mn-vuoto">A ${mx} minuti, a quell'ora, è tutto chiuso. ${(() => { const p = tutti.find(x => x.stato !== 'chiuso'); return p ? `Il più vicino aperto è ${esc(T(p.id).breve)}, a ${p.min} minuti.` : ''; })()}</p>`}
+        <div class="mn-quanto" role="group" aria-label="Quanto vuoi camminare"><span>A piedi:</span>${[5, 10, 20, 0].map(k => `<button type="button" data-f="quanto" data-v="${k}" aria-pressed="${k === mx}">${k ? `${k} min` : 'Tutti'}</button>`).join('')}</div>
+        ${gruppi.length ? gruppi.map(([t, l]) => `<section class="mn-gruppo"><h3>${esc(t)}</h3><ul>${l.map(voce).join('')}</ul></section>`).join('') : `<div class="mn-vuoto"><p>A ${mx} minuti, a quell'ora, è tutto chiuso. ${(() => { const p = tutti.find(x => x.stato !== 'chiuso'); return p ? `Il più vicino aperto è ${esc(T(p.id).breve)}, a ${p.min} minuti.` : ''; })()}</p><button type="button" class="f-bottone" data-f="quanto" data-v="0">Vedi tutti i locali, con i minuti</button></div>`}
         ${no.length ? `<section class="mn-gruppo mn-gruppo--chiusi"><h3>Chiusi a quell'ora</h3><ul>${no.map(voce).join('')}</ul></section>` : ''}
         <p class="mn-piede">Orari scritti dai locali${S.data ? `, ${dataLunga(m.g)}` : ''}. Scegli tu: niente si aggiunge da solo.</p></div>`;
     };
@@ -584,21 +591,36 @@
   // la scheda del locale, dal pasto: la scheda vera e «Mangia qui» con l'ora. In fondo «prima» e «dopo» con il nome del locale,
   // nell'ordine dell'elenco da cui l'hai aperta (nel menù: per tipo); col dito si gira di lato, come le schede delle tappe.
   let ordineLocali = [];
-  function schedaPasto(id, m, indietro, verso = 0) {
-    const x = vicini(m).find(y => y.id === id);
-    const lista = ordineLocali.includes(id) ? ordineLocali : vicini(m).map(y => y.id), i = lista.indexOf(id), prima = lista[i - 1], dopo = lista[i + 1];
+  // la pagina di un locale (dentro il foglio): si costruisce da sola, così si può preparare mentre la pagina prima esce
+  function paginaPasto(id, m, indietro, lista) {
+    const x = vicini(m).find(y => y.id === id), i = lista.indexOf(id), prima = lista[i - 1], dopo = lista[i + 1];
     const vai = (v, dir) => (v ? `<button type="button" class="pl-sf pl-sf--${dir < 0 ? 'prima' : 'dopo'}" data-f="sfoglia" data-v="${v}" data-dir="${dir}">${ic(dir < 0 ? 'indietro' : 'avanti', 20)}<span><small>${dir < 0 ? 'Prima' : 'Dopo'}</small><b>${esc(T(v).breve)}</b></span></button>` : '<span></span>');
     const sfoglia = lista.length > 1 ? `<nav class="pl-sfoglia" aria-label="Altri locali">${vai(prima, -1)}<span class="pl-sf__n num">${i + 1} di ${lista.length}</span>${vai(dopo, 1)}</nav>` : '';
-    const corpo = `${indietro ? `<button type="button" class="r-indietro" data-f="indietro">${ic('indietro', 18)}Torna ai locali</button>` : ''}
+    return `${indietro ? `<button type="button" class="r-indietro" data-f="indietro">${ic('indietro', 18)}Torna ai locali</button>` : ''}
       <p class="sch-quando">${esc(tipoL(id))}${euro(id) ? ` · ${euro(id)}` : ''} · ${x ? `${minTesto(x)} da ${esc(T(m.dove).breve)}` : ''}</p>
       ${x ? `<p class="pl-stato-grande pl__stato--${x.stato}">${ic(x.stato === 'chiuso' ? 'attenzione' : 'orologio', 18)}<span>Arrivi alle ${ora(x.arrivo)}: ${esc(x.nota)}</span></p>` : ''}
       ${x && x.stato !== 'chiuso' ? `<button type="button" class="f-bottone pl-scegli" data-f="scegli" data-v="${id}">${ic('posate', 20)}Mangia qui, ${m.q === 'pranzo' ? 'a pranzo' : 'a cena'} dalle ${ora(x.arrivo)}</button>` : ''}
       <div class="sch-testo">${testoScheda(id)}</div>${sezioni(id)}${fontiScheda(id)}${sfoglia}`;
-    foglio(T(id).nome, `<div class="pl-pagina">${corpo}</div>`, f => {
+  }
+  function schedaPasto(id, m, indietro) {
+    const lista = ordineLocali.includes(id) ? [...ordineLocali] : vicini(m).map(y => y.id);
+    let cur = id;
+    foglio(T(id).nome, `<div class="pl-pagina">${paginaPasto(id, m, indietro, lista)}</div>`, f => {
       f.onclick = e => clickFoglioM(e, f, m, null, indietro);
-      f.sfoglia = dir => { const v = lista[i + dir]; if (v) schedaPasto(v, m, indietro, dir); return !!v; };
-      f.puoi = dir => !!lista[i + dir];
-      if (verso) { f.scrollTop = 0; if (piano()) $('.pl-pagina', f).animate([{ translate: `${verso * 48}px 0`, opacity: 0 }, { translate: '0 0', opacity: 1 }], { duration: 300, easing: 'cubic-bezier(.16,1,.3,1)' }); annuncia(`${T(id).nome}, ${i + 1} di ${lista.length}`); }
+      f.puoi = dir => !!lista[lista.indexOf(cur) + dir];
+      // girare pagina: la pagina dopo si prepara e si impagina mentre questa esce (come i giorni e le tappe)
+      f.sfoglia = (dir, daX = 0) => {
+        const v = lista[lista.indexOf(cur) + dir];
+        if (!v || occupato) return !!v;
+        cur = v;
+        scorri($('.pl-pagina', f), dir, daX, pre => {
+          if (pre !== true) $('.pl-pagina', f).innerHTML = pre ?? paginaPasto(v, m, indietro, lista);
+          $('#f-titolo', f).textContent = T(v).nome;
+          f.scrollTop = 0;
+          annuncia(`${T(v).nome}, ${lista.indexOf(v) + 1} di ${lista.length}`);
+        }, () => $('.pl-pagina', f), () => {}, () => paginaPasto(v, m, indietro, lista));
+        return true;
+      };
     }, 'f--scheda f--fuori f--pasto');
   }
   async function clickFoglioM(e, f, m, filtro, torna, quanto) {
@@ -732,7 +754,7 @@
       this.dita.set(e.pointerId, [e.clientX, e.clientY]);
       this.preso = false;
       this.partenza = { vb: { ...this.vb }, dita: new Map(this.dita) };
-      cancelAnimationFrame(this.raf);
+      cancelAnimationFrame(this.raf); this.fermaVolo?.();
       this.el.classList.add('m--muovo');
     }
     muovi(e) {
@@ -826,7 +848,7 @@
     inquadra(dur = 700, ids = this.idsPunti) {
       this.fuoco = null; this.mosso = true;
       const fine = this.vbPer(riquadroXY([...ids.map(id => T(id).xy), ...this.tappe.map(v => v.xy)]));
-      if (piano() && this.vb && dur > 0) this.vola(fine, dur); else { cancelAnimationFrame(this.raf); this.metti(fine); this.nomiVisibili(); }
+      if (piano() && this.vb && dur > 0) this.vola(fine, dur); else { cancelAnimationFrame(this.raf); this.fermaVolo?.(); this.metti(fine); this.nomiVisibili(); }
     }
     vbPer(box) {
       const W = this.el.clientWidth || 1, H = this.el.clientHeight || 1;
@@ -839,19 +861,29 @@
     }
     adatta(vola) {
       const fine = this.vbPer(this.fuoco || this.box);
-      if (!vola || !this.vb || !piano()) { cancelAnimationFrame(this.raf); this.metti(fine); this.finito(); return; }
+      if (!vola || !this.vb || !piano()) { cancelAnimationFrame(this.raf); this.fermaVolo?.(); this.metti(fine); this.finito(); return; }
       this.vola(fine, 780, () => this.finito());
     }
+    // Il volo della mappa (Enrico, 14/10/2026: più fluido): la mappa si sposta e si ingrandisce come un'immagine sola, mossa
+    // dal telefono senza ridisegnarla a ogni passo, insieme ai segni delle tappe; all'arrivo si ridisegna nitida. Prima si
+    // ricalcolava tutto il disegno (strade, nomi) a ogni immagine: su un telefono medio 6-7 immagini al secondo.
     vola(fine, dur, poi) {
-      cancelAnimationFrame(this.raf);
-      const da = this.vb, t0 = performance.now();
+      cancelAnimationFrame(this.raf); this.fermaVolo?.();
+      const da = this.vb;
       if (!da) { this.metti(fine); poi?.(); return; }
-      const passo = now => {
-        const k = Math.min(1, (now - t0) / dur), e = k < .5 ? 4 * k * k * k : 1 - Math.pow(-2 * k + 2, 3) / 2;
-        this.metti({ x: da.x + (fine.x - da.x) * e, y: da.y + (fine.y - da.y) * e, w: da.w + (fine.w - da.w) * e, h: da.h + (fine.h - da.h) * e });
-        if (k < 1) this.raf = requestAnimationFrame(passo); else { this.nomiVisibili(); poi?.(); }
-      };
-      this.raf = requestAnimationFrame(passo);
+      const W = this.el.clientWidth || 1, s0 = W / da.w, s1 = W / fine.w, k = s1 / s0, tx = (da.x - fine.x) * s1, ty = (da.y - fine.y) * s1;
+      const ease = 'cubic-bezier(.65, 0, .35, 1)';
+      this.svg.style.transformOrigin = '0 0';
+      const anims = [this.svg.animate([{ transform: 'none' }, { transform: `translate(${tx.toFixed(1)}px, ${ty.toFixed(1)}px) scale(${k.toFixed(4)})` }], { duration: dur, easing: ease })];
+      $$('.m-segno, .m-cibo, .m-punto', this.el).forEach(el => {
+        const m = /translate\((-?[\d.]+)px, (-?[\d.]+)px\)/.exec(el.style.transform);
+        if (!m) return;
+        const x = +m[1], y = +m[2];
+        anims.push(el.animate([{ transform: `translate(${x}px, ${y}px)` }, { transform: `translate(${(x * k + tx).toFixed(1)}px, ${(y * k + ty).toFixed(1)}px)` }], { duration: dur, easing: ease }));
+      });
+      let fatto = false;
+      this.fermaVolo = () => { if (fatto) return; fatto = true; this.fermaVolo = null; anims.forEach(x => x.cancel()); };
+      anims[0].finished.then(() => { if (fatto) return; fatto = true; this.fermaVolo = null; this.metti(fine); anims.forEach(x => x.cancel()); this.nomiVisibili(); poi?.(); }, () => {});
     }
     finito() { this.nomiVisibili(); if (this.daLinea !== Infinity) { const da = this.daLinea; this.daLinea = Infinity; this.traccia(da); } }
     metti(vb) {
@@ -1017,7 +1049,7 @@
     }
     tutto() { this.fuoco = null; this.mosso = false; this.vola(this.vbPer(this.box), 700); this.evidenzia(null); }
     evidenzia(id) { $$('.m-segno, .m-punto, .m-cibo', this.el).forEach(b => b.setAttribute('aria-current', String(b.dataset.id === id))); }
-    spegni() { this.ro.disconnect(); cancelAnimationFrame(this.raf); }
+    spegni() { this.ro.disconnect(); cancelAnimationFrame(this.raf); this.fermaVolo?.(); }
   }
 
   // =====================================================================================
@@ -1133,7 +1165,7 @@
   }
   const credito = id => (T(id).scheda?.credito ? `<p class="sch-credito">${esc(T(id).scheda.credito)}</p>` : '');
   // senza una foto con licenza libera: un riquadro con la soglia del marchio (niente foto inventate)
-  const fotoScheda = (id, cl = 'sch-foto') => (FOTO[id] ? `<img class="${cl}" src="${FOTO[id]}" alt="${esc(T(id).scheda?.alt ?? '')}">` : `<span class="${cl} sch-senza" aria-hidden="true">${soglia()}</span>`);
+  const fotoScheda = (id, cl = 'sch-foto') => (FOTO[id] ? `<img class="${cl}" src="${FOTO[id]}" decoding="async" alt="${esc(T(id).scheda?.alt ?? '')}">` : `<span class="${cl} sch-senza" aria-hidden="true">${soglia()}</span>`);
   const quandoSegnata = id => { if (!S.fatte[id]) return ''; const d = new Date(S.fatte[id]); return `Segnata ${d.toDateString() === new Date().toDateString() ? 'oggi' : d.toLocaleDateString('it-IT', { day: 'numeric', month: 'long' })} alle ${d.getHours()}:${String(d.getMinutes()).padStart(2, '0')}`; };
   // il pulsante grande di «visitata» (nelle schede): la soglia, il testo, sotto quando l'hai segnata
   const bottoneV = (id, cl = '') => (!nelViaggio(id) ? '' : puoiSegnare()
@@ -1976,19 +2008,23 @@
   // Cambiare giorno senza scatti (pezzo 1, giro 5): il giorno che lasci continua il gesto ed esce, il nuovo entra dall'altro lato.
   // =====================================================================================
   let occupato = false;
-  async function scorri(el, dir, daX, cambia, nuovo = () => el, poi = () => {}) {
-    if (!el || !piano()) { cambia(); const n = nuovo(); if (n) { n.style.translate = ''; n.style.opacity = ''; } poi(); return; }
+  async function scorri(el, dir, daX, cambia, nuovo = () => el, poi = () => {}, prepara = null) {
+    if (!el || !piano()) { cambia(prepara?.()); const n = nuovo(); if (n) { n.style.translate = ''; n.style.opacity = ''; } poi(); return; }
     occupato = true;
     try {
       const W = el.getBoundingClientRect().width || innerWidth;
       const op = parseFloat(el.style.opacity || '1');
       el.style.translate = ''; el.style.opacity = '';
       const restoX = 1 - Math.min(1, Math.abs(daX) / (W * .5));
-      const fuori = el.animate([{ translate: `${daX}px 0`, opacity: op }, { translate: `${-dir * W * .3}px 0`, opacity: 0 }], { duration: 110 + 130 * restoX, easing: 'cubic-bezier(.3, 0, .8, .15)', fill: 'forwards' });
+      const fuori = el.animate([{ translate: `${daX}px 0`, opacity: op }, { translate: `${-dir * W * .3}px 0`, opacity: 0 }], { duration: 120 + 120 * restoX, easing: 'cubic-bezier(.4, 0, .9, .4)', fill: 'forwards' });
+      // la pagina nuova (HTML) si costruisce mentre la vecchia esce: l'uscita è un'animazione di posizione e trasparenza
+      // che il telefono muove da solo; alla fine si cambia solo l'HTML
+      let pronto;
+      try { pronto = prepara?.(); } catch {}
       try { await fuori.finished; } catch {}
-      try { cambia(); } finally {
+      try { cambia(pronto); } finally {
         const n = nuovo() || el;
-        const dentro = n.animate([{ translate: `${dir * W * .22}px 0`, opacity: 0 }, { translate: '0 0', opacity: 1 }], { duration: 430, easing: 'cubic-bezier(.16, 1, .3, 1)' });
+        const dentro = n.animate([{ translate: `${dir * W * .22}px 0`, opacity: 0 }, { translate: '0 0', opacity: 1 }], { duration: 380, easing: 'cubic-bezier(.16, 1, .3, 1)' });
         fuori.cancel();
         try { await dentro.finished; } catch {}
       }
@@ -2296,7 +2332,7 @@
   // =====================================================================================
   const nVoce = (v, cl) => `<span class="${cl}" aria-hidden="true"><b>${v.n}</b><i class="sg-si">${soglia()}</i></span>`;
   // il segno «visitata» piccolo, nelle righe (proposte 1 e 4): la porta con il numero; toccandola si chiude
-  const segnoV = (v, cl = 'sv') => `<button type="button" class="${cl}" data-azione="visitata" data-id="${v.id}" aria-pressed="${visitata(v.id)}">${soglia()}<span class="vh">Visitata: ${esc(T(v.id).breve)}, tappa </span><span class="sv__n">${v.n}</span></button>`;
+  const segnoV = (v, cl = 'sv') => `<button type="button" class="${cl}" data-azione="visitata" data-id="${v.id}" aria-pressed="${visitata(v.id)}">${soglia()}<svg class="sv__pin" viewBox="0 0 20 29" aria-hidden="true" focusable="false">${D.marchio.spillo}</svg><span class="vh">Visitata: ${esc(T(v.id).breve)}, tappa </span><span class="sv__n">${v.n}</span></button>`;
   function rigaC(v, k) {
     const t = T(v.id), q = S.q, ed = S.modifica && q === 3, vis = visitata(v.id);
     const quando = v.fatta ? '<span class="c-ora c-ora--v">Visitata</span>' : `<span class="c-ora num">${ora(v.inizio)} – ${ora(v.fine)}</span>`;
@@ -2409,7 +2445,7 @@
       document.documentElement.dataset.g = String(g);
       segnaSchede(g);
       const el = $('#c-dentro');
-      scorri(el, dir, daX, () => { el.innerHTML = this.corpo(true); this.allInizio(); contaCifre(); contaFine(); this.osserva(); }, undefined, () => this.disegnaMappa(true));
+      scorri(el, dir, daX, () => { el.innerHTML = this.corpo(true); this.allInizio(); contaCifre(); contaFine(); this.osserva(); }, undefined, () => requestAnimationFrame(() => this.disegnaMappa(true)));
     },
     aggiorna(fn, opz = {}) {
       const prima = S.g, segno = segnoOra();
@@ -2526,8 +2562,9 @@
         const x = pag.scrollLeft / pag.clientWidth;
         $('#d-segno').style.transform = `translateX(${(x * PASSO).toFixed(1)}px)`;
         this.profondita();
-        const i = Math.max(0, Math.min(nG() - 1, Math.floor(x))), f = x - i, h = this.alte || [];
-        if (h[i] != null) pag.style.height = `${(h[i] + ((h[i + 1] ?? h[i]) - h[i]) * Math.max(0, Math.min(1, f))).toFixed(1)}px`;
+        // l'altezza cambia una volta sola, quando passi tra due pagine (la più alta delle due), e si aggiusta a fine scorrimento
+        const i = Math.max(0, Math.min(nG() - 1, Math.floor(x))), h = this.alte || [];
+        if (h[i] != null && this.coppia !== i) { this.coppia = i; pag.style.height = `${Math.max(h[i], h[i + 1] ?? 0)}px`; }
         const g = Math.max(0, Math.min(nG() - 1, Math.round(x)));
         if (g !== S.g) {
           S.g = g; S.attiva = null; S.nuova = null; S.aperta = null;
@@ -2538,6 +2575,7 @@
         }
         clearTimeout(fermo);
         fermo = setTimeout(() => {
+          this.coppia = null;
           this.misura();
           contaFine();
           const p = pag.children[S.g], top = p ? p.getBoundingClientRect().top : 0;
@@ -2561,7 +2599,9 @@
       const pag = $('#d-pagine');
       if (!pag || !piano()) return;
       const x = pag.scrollLeft / pag.clientWidth;
-      $$('.d-pagina', pag).forEach(p => p.style.setProperty('--o', (+p.dataset.pagina - x).toFixed(3)));
+      // la testata di ogni pagina scorre un po' più piano (parallasse): si sposta solo lei, non tutta la pagina
+      (this.teste ??= new Map());
+      $$('.d-pagina', pag).forEach(p => { const o = +p.dataset.pagina - x; if (Math.abs(o) > 1.2) return; let t = this.teste.get(p); if (!t || !t[0]?.isConnected) { t = $$(':scope > h2, .d-riassunto', p); this.teste.set(p, t); } t.forEach(e => { e.style.translate = `${(o * 38).toFixed(1)}% 0`; }); });
     },
     misura() {
       const pag = $('#d-pagine');
@@ -2733,16 +2773,20 @@
       $('.sch1__alza', schEl)?.setAttribute('aria-label', d === 'tutto' ? 'Riduci la scheda' : 'Leggi tutta la scheda');
       if (d === 'meta') $('.sch1__corpo', schEl).scrollTop = 0;
     },
-    riempi() {
-      const id = sch.id, p = posizione(id);
+    pagina(id) {
+      const p = posizione(id);
       const tr = p ? trattoVerso(p.Gx, id) : null;
-      $('.sch1__pagina', schEl).innerHTML = `<div class="sch1__foto"><div class="sch1__cornice">${fotoScheda(id)}${timbro(id)}</div>${credito(id)}</div>
+      return `<div class="sch1__foto"><div class="sch1__cornice">${fotoScheda(id)}${timbro(id)}</div>${credito(id)}</div>
         <h2 class="sch-titolo" id="sch-t" tabindex="-1">${esc(T(id).nome)}</h2>
         <p class="sch-quando">${quandoTesto(id)}${p ? `<span>, tappa ${p.i + 1} di ${p.n}</span>` : ''}</p>
         ${puoiSegnare() ? `<p class="sch-segnata" data-sotto="${id}">${visitata(id) ? quandoSegnata(id) : 'Tocca il timbro sulla foto quando ci sei stato'}</p>` : bottoneV(id)}
         ${chips(id)}
         <button type="button" class="sch1__leggi" data-azione="detent">Leggi tutto${ic('abbassa', 18)}</button>
         <div class="sch1__resto"><div class="sch-testo">${testoScheda(id)}</div>${sezioni(id)}${tr ? `<section class="sch-sez"><h3>Ci arrivi</h3><p>${testoTratto(tr)}, da ${esc(T(passo(id, -1)).breve)}.</p></section>` : ''}${fontiScheda(id)}${azioniScheda(id)}</div>`;
+    },
+    riempi(pre) {
+      const id = sch.id, p = posizione(id);
+      if (pre !== true) $('.sch1__pagina', schEl).innerHTML = pre ?? this.pagina(id);
       schEl.setAttribute('aria-labelledby', 'sch-t');
       const prima = passo(id, -1), dopoId = passo(id, 1), trDopo = dopoId ? trattoVerso(p.Gx, dopoId) : null;
       $('.sch1__passi', schEl).innerHTML = `<button type="button" class="sch1__passo" data-azione="passo" data-dir="-1"${prima ? '' : ' disabled'}>${ic('indietro', 20)}<span>${prima ? `<span class="vh">Tappa prima: </span>${esc(T(prima).breve)}` : 'Prima tappa'}</span></button><span class="sch1__dove num">${p ? `${p.i + 1} di ${p.n}` : ''}</span><button type="button" class="sch1__passo sch1__passo--dopo" data-azione="passo" data-dir="1"${dopoId ? '' : ' disabled'}><span>${dopoId ? `<span class="vh">Tappa dopo: </span>${esc(T(dopoId).breve)}` : 'Ultima tappa'}${trDopo ? `<small>${ic('piedi', 13)}${trDopo.min} min<span class="vh"> a piedi</span></small>` : ''}</span>${ic('avanti', 20)}</button>`;
@@ -2752,6 +2796,7 @@
       if (!id || occupato) return;
       const pag = $('.sch1__pagina', schEl);
       const fuoco = schEl.contains(document.activeElement);
+      if (FOTO[id]) { const im = new Image(); im.src = FOTO[id]; im.decode?.().catch(() => {}); }
       await scorri(pag, dir, daX, () => { sch.id = id; this.riempi(); $('.sch1__corpo', schEl).scrollTop = 0; });
       if (fuoco) $('.sch-titolo', schEl)?.focus({ preventScroll: true });
       S.attiva = id;
@@ -2850,7 +2895,7 @@
         else { const da = p.style.translate; p.style.translate = ''; if (piano() && da) p.animate([{ translate: da }, { translate: '0 0' }], { duration: 300, easing: 'cubic-bezier(.16,1,.3,1)' }); }
       } else {
         const p = $('.pl-pagina', el), dir = t.dx < 0 ? 1 : -1;
-        if (!((Math.abs(t.dx) > 70 || Math.abs(t.dx) / ms > .45) && el.sfoglia(dir)) && p) { const da = { translate: p.style.translate || '0px 0', opacity: p.style.opacity || '1' }; p.style.translate = ''; p.style.opacity = ''; if (piano()) p.animate([da, { translate: '0px 0', opacity: 1 }], { duration: 300, easing: 'cubic-bezier(.16,1,.3,1)' }); }
+        if (!((Math.abs(t.dx) > 70 || Math.abs(t.dx) / ms > .45) && el.puoi?.(dir) && el.sfoglia(dir, p ? parseFloat(p.style.translate) || 0 : 0)) && p) { const da = { translate: p.style.translate || '0px 0', opacity: p.style.opacity || '1' }; p.style.translate = ''; p.style.opacity = ''; if (piano()) p.animate([da, { translate: '0px 0', opacity: 1 }], { duration: 300, easing: 'cubic-bezier(.16,1,.3,1)' }); }
       }
       t = null;
     };
@@ -3183,12 +3228,13 @@
     if (document.startViewTransition && piano()) document.startViewTransition(fai).ready.catch(() => {}); else fai();
   });
   function prova() {
-    $$('#prova [data-q]').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.q === PM)));
+    $$('#prova [data-q]').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.q === VV)));
     $('#p-sera').setAttribute('aria-pressed', String(FINE > 1140));
     $('#p-bordi').setAttribute('aria-pressed', String(mostraBordi));
     $$('#prova [data-p]').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.p === S.p)));
-    $('#p-nome').textContent = `${PM} · ${NOMI_PM[PM]}`;
-    $('#idea').innerHTML = `<h2>Mangiare nella giornata, proposta ${PM}: ${NOMI_PM[PM]}</h2><p>${esc(IDEA_M[PM])}</p>
+    $('#p-nome').textContent = `Visitata ${VV}: ${NOMI_VV[VV]}`;
+    $('#idea').innerHTML = `<h2>Il menù (scelto) e «visitata»</h2><p>${esc(IDEA_M[PM])} In cima «A piedi»: 5, 10, 20 minuti o Tutti, con i minuti di ogni locale anche se vicino non c'è niente di aperto.</p>
+      <p class="idea__nota">«Visitata 1 2 3» qui in alto: tocca la porta a sinistra di una tappa (vista C). 1 com'è oggi (le soglie e la spunta); 2 la porta si riempie dal basso e il numero resta, senza spunta; 3 nella porta cade il segnaposto del marchio, «sei passato di qui».</p>
       <p class="idea__nota">In tutte: la riga compare dove sarai all'ora di pranzo (al posto della pausa pranzo) o di cena; i minuti sono quelli veri dalla tappa prima, gli orari quelli scritti dai locali. «Mangia qui» mette il locale nel giorno (con «Annulla»); «No, grazie» toglie la proposta per quel giorno. Niente si aggiunge da solo.</p>
       <p class="idea__nota">Tocca «Sera» qui in alto: i giorni arrivano alle 22:00 e compare anche la cena, dopo l'ultima tappa (se arrivi prima delle 19:30, scegliendo un locale si aggiunge un «Tempo libero» fino alla cena). Con una data (Altro → Data e orari) i locali chiusi quel giorno vanno in fondo.</p>
       <button type="button" class="idea__oggi" data-oggi aria-pressed="${!!adesso()}">${ic('orologio', 18)}<span>${adesso() ? 'Prova «oggi» accesa: il giorno 1 è oggi, sono le 12:10' : 'Prova «oggi»: il giorno 1 è oggi, sono le 12:10'}</span></button>
@@ -3215,16 +3261,16 @@
       avvisa('Prova ricominciata da «Due giorni a Napoli».');
     }
   });
-  $$('#prova [data-q]').forEach(b => b.addEventListener('click', () => { if (+b.dataset.q !== PM) location.hash = `${S.p}${b.dataset.q}`; }));
+  $$('#prova [data-q]').forEach(b => b.addEventListener('click', () => { if (+b.dataset.q !== VV) location.hash = `${S.p}${b.dataset.q}`; }));
   $('#p-sera').addEventListener('click', () => { FINE = FINE > 1140 ? 1140 : 1320; memo.clear(); aggiornaTutto(() => {}); avvisa(FINE > 1140 ? 'Sera: i giorni arrivano alle 22:00, compare anche la cena.' : 'I giorni finiscono di nuovo alle 19:00.'); });
   $('#p-bordi').addEventListener('click', () => { mostraBordi = !mostraBordi; document.documentElement.classList.toggle('bordi-su', mostraBordi); prova(); });
   $('#p-cerca').addEventListener('click', () => apriAggiungi(ricercaAperta));
-  $$('#prova [data-p]').forEach(b => b.addEventListener('click', () => { if (b.dataset.p !== S.p) location.hash = `${b.dataset.p}${PM}`; }));
+  $$('#prova [data-p]').forEach(b => b.addEventListener('click', () => { if (b.dataset.p !== S.p) location.hash = `${b.dataset.p}${VV}`; }));
   function daHash(primo) {
     const h = location.hash.slice(1), m = /^([cd])?([1-4])?$/.exec(h) || [];
-    const p = m[1] || (primo && /^[cd]$/.test(vistaSalvata || '') ? vistaSalvata : null) || S.p || 'c', q = 1, t = 2, r = 4, pm = +(m[2] || PM);
-    if (!primo && p === S.p && pm === PM) return;
-    PM = pm;
+    const p = m[1] || (primo && /^[cd]$/.test(vistaSalvata || '') ? vistaSalvata : null) || S.p || 'c', q = 1, t = 2, r = 4, vv = Math.min(3, +(m[2] || VV));
+    if (!primo && p === S.p && vv === VV) return;
+    VV = vv; document.documentElement.dataset.vv = String(vv);
     try { localStorage.setItem('prova-scheda-vista', p); } catch {}
     const fai = async () => { await chiudiSchede(); if (menuEl.matches?.(':popover-open')) menuEl.hidePopover(); Object.assign(S, { ...NUOVO(), p, q, t, r, anima: primo || p !== S.p }); rotta = true; disegna(); scrollTo(0, 0); };
     if (!primo && document.startViewTransition && piano()) document.startViewTransition(fai).ready.catch(() => {}); else fai();

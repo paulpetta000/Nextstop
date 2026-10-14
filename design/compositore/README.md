@@ -17,6 +17,22 @@ alle 22:00 e fa comparire anche la cena. Cartella `mangiare-giro-1/` (nata da `m
   cima quando appoggi il dito, e solo con un gesto deciso (più di 200 px, o più di 110 px veloce); altrimenti tornano su;
 - le schede di tutte le tappe e dei locali vanno rifatte, prima o poi (`ROADMAP.md`).
 
+**Secondo passaggio (14/10/2026, versione 5): nella pagina resta solo la 2.** Richieste di Enrico:
+- **la pausa pranzo non si perde**: scegliendo un locale a pranzo la pausa resta da parte; togliendo il locale torna com'era
+  (durata e posto). Il «Tempo libero» prima di una cena vale solo finché dopo quella tappa c'è il locale;
+- **tutti i locali, sempre**: nel menù «A piedi: 5, 10, 20 min, **Tutti**» con i minuti di ognuno; se a 10 minuti è tutto chiuso
+  il menù si apre già su «Tutti», e c'è «Vedi tutti i locali, con i minuti»;
+- **«visitata»**: nella striscia «Visitata 1 2 3» (tocca la porta a sinistra di una tappa, vista C). 1 com'è oggi (le soglie e la
+  spunta); 2 la porta si riempie dal basso, le soglie una dopo l'altra, e il numero resta, senza spunta; 3 la porta si colora appena e
+  al posto del numero cade il segnaposto del marchio. Immagini: `immagini/visitata-*.jpg`;
+- **più fluido**. Misure con il processore 4 volte più lento (`prove/fluidita.cjs`, `prove/schermo.cjs`, con la versione di prima
+  costruita a parte): il volo della mappa dopo il cambio di giorno o di tappa ora si muove come un'immagine sola (circa 1 immagine
+  ogni 21 ms invece di una ogni 217); in D lo scorrimento tra i giorni non ricalcola più l'altezza e lo stile di tutta la pagina a ogni
+  immagine (solo la testata si sposta); tra i locali la pagina dopo si prepara mentre quella prima esce (circa 38 fotogrammi in 900 ms
+  invece di 18, nessuna pausa). Il cambio di giorno e di tappa in C resta com'era (circa 40-70 ms di pausa al tocco su un telefono
+  lento): prepararlo prima non migliorava nelle prove, a volte peggiorava, quindi non l'ho tenuto. Le misure da computer sono
+  variabili: la prova vera è sul telefono.
+
 | | Nella giornata | Toccando |
 |---|---|---|
 | **1 · La sosta** | la pausa pranzo diventa «Qui puoi fermarti a mangiare», con i tre locali aperti più vicini nella riga | un locale apre la sua scheda con «Mangia qui»; «Tutti» apre l'elenco con i filtri e, in fondo, i chiusi a quell'ora |

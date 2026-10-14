@@ -211,3 +211,39 @@
 .pl-sf__n { font-size: 13px; color: var(--ink2); }
 .pd .pl-sf b { font: 600 16px/1.2 "Bodoni Moda", Georgia, serif; }
 #foglio.f--pasto { overflow-x: hidden; }
+
+/* il menù vuoto vicino: il bottone per vederli tutti */
+.mn-vuoto { display: grid; gap: 10px; justify-items: center; }
+.mn-vuoto p { margin: 0; }
+
+/* ---------- «visitata» nella riga: 2 la porta si riempie, 3 il segnaposto (Enrico: la spunta non convince) ---------- */
+.sv__pin { position: absolute; left: 50%; top: 13px; width: 15px; height: 22px; margin-left: -7.5px; opacity: 0; pointer-events: none; --pin: var(--acc); --pin-buco: var(--sup, #fff); }
+:root[data-vv="2"] .sv :is(.soglia__spunta, .soglia__sotto), :root[data-vv="3"] .sv :is(.soglia__spunta, .soglia__sotto) { display: none; }
+/* 2: le sei soglie salgono dal basso una dopo l'altra, tutte del colore della porta; il numero resta, chiaro sul pieno */
+:root[data-vv="2"] .sv .soglia__s { fill: var(--acc); }
+:root[data-vv="2"] .sv .soglia__s:nth-child(n) { fill-opacity: calc(.55 + var(--k) * .09); }
+:root[data-vv="2"] .sv[aria-pressed="true"] .sv__n { opacity: 1; color: var(--su-acc); }
+:root[data-vv="2"] .sv[aria-pressed="true"] .soglia__porta { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  :root[data-vv="2"] .sv .soglia--chiude .soglia__s { animation: vv-sale 220ms cubic-bezier(.2, .7, .3, 1) both; animation-delay: calc(var(--k) * 34ms); }
+  :root[data-vv="2"] .sv .soglia--chiude .soglia__porta { animation: none; }
+  :root[data-vv="2"] .sv .soglia--apre .soglia__s { animation: vv-scende 200ms var(--esce) both; animation-delay: calc((5 - var(--k)) * 22ms); }
+  :root[data-vv="2"] .sv .soglia--apre .soglia__porta { animation: none; }
+}
+@keyframes vv-sale { from { opacity: 0; translate: 0 6px; } to { opacity: 1; translate: 0 0; } }
+@keyframes vv-scende { from { opacity: 1; translate: 0 0; } to { opacity: 0; translate: 0 6px; } }
+/* 3: la porta resta disegnata e si colora appena dentro; il numero lascia il posto al segnaposto, che cade dall'alto */
+:root[data-vv="3"] .sv .soglia__s { display: none; }
+:root[data-vv="3"] .sv[aria-pressed="true"] .soglia__porta { opacity: 1; fill: var(--acc-chiaro); stroke-width: 2.4; }
+:root[data-vv="3"] .sv[aria-pressed="true"] .sv__n { opacity: 0; }
+:root[data-vv="3"] .sv[aria-pressed="true"] .sv__pin { opacity: 1; }
+@media (prefers-reduced-motion: no-preference) {
+  :root[data-vv="3"] .sv .soglia--chiude .soglia__porta { animation: none; }
+  :root[data-vv="3"] .sv[aria-pressed="true"]:has(.soglia--chiude) .sv__pin { animation: vv-cade 340ms cubic-bezier(.3, 1.4, .5, 1) both; }
+  :root[data-vv="3"] .sv[aria-pressed="false"]:has(.soglia--apre) .sv__pin { animation: vv-via 200ms var(--esce) both; }
+}
+@keyframes vv-cade { from { opacity: 0; translate: 0 -14px; } 60% { opacity: 1; } to { opacity: 1; translate: 0 0; } }
+@keyframes vv-via { from { opacity: 1; translate: 0 0; } to { opacity: 0; translate: 0 -10px; } }
+
+/* la mappa su un suo strato: il volo si muove senza ridisegnarla (Enrico, 14/10/2026: più fluida) */
+.m-svg { will-change: transform; }

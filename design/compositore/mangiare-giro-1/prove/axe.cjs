@@ -9,12 +9,9 @@ const URL = `http://localhost:${PORTA}/mangiare-giro-1/proposte-locale.html`;
 const attesa = ms => new Promise(r => setTimeout(r, ms));
 const QUI = '.giorno-attivo';
 // gli stati per ogni proposta: [nome, gesti]
-const STATI = {
-  1: [['riga', []], ['elenco', [`${QUI} [data-azione="pasto-apri"]`]], ['scheda', [`${QUI} [data-azione="pasto-scheda"]`]], ['sera', ['#p-sera']]],
-  2: [['riga', []], ['menu', [`${QUI} [data-azione="pasto-apri"]`, '.mn-v summary']], ['scheda', [`${QUI} [data-azione="pasto-apri"]`, '.mn-v summary', '#foglio [data-f="scheda"]', '.pl-sf--dopo']], ['no grazie', [`${QUI} [data-azione="pasto-no"]`]], ['sera', ['#p-sera']]],
-  3: [['riga', []], ['mappa', [`${QUI} [data-azione="pasto-apri"]`, '.m-cibo']], ['sera', ['#p-sera']]],
-  4: [['riga', []], ['elenco', [`${QUI} .pm4__c--tutti`]], ['scheda', [`${QUI} .pm4__c`]], ['sera', ['#p-sera']]]
-};
+// da qui solo «Il menù» (scelto da Enrico); la cifra dell'indirizzo è lo stile di «visitata» (1-3): gli stessi stati per tutti e tre
+const MENU = [['riga', []], ['menu', [`${QUI} [data-azione="pasto-apri"]`, '.mn-v summary']], ['menu tutti', [`${QUI} [data-azione="pasto-apri"]`, '.mn-quanto [data-v="0"]']], ['scheda', [`${QUI} [data-azione="pasto-apri"]`, '.mn-v summary', '#foglio [data-f="scheda"]', '.pl-sf--dopo']], ['no grazie', [`${QUI} [data-azione="pasto-no"]`]], ['sera', ['#p-sera']], ['visitata', [`${QUI} .sv, ${QUI} [data-azione="visitata"]`]]];
+const STATI = { 1: MENU, 2: MENU, 3: MENU };
 if (FOTO) fs.mkdirSync(FOTO, { recursive: true });
 (async () => {
   const browser = await puppeteer.launch({ executablePath: 'C:/Program Files/Google/Chrome/Application/chrome.exe', headless: true, protocolTimeout: 600000, args: ['--hide-scrollbars'] });
@@ -37,7 +34,7 @@ if (FOTO) fs.mkdirSync(FOTO, { recursive: true });
   const allaRiga = () => page.evaluate(() => { const f = document.querySelector('#foglio'); if (f?.open) return; const p = [...document.querySelectorAll('.giorno-attivo .c-pasto, .giorno-attivo .d-pasto')].pop(); if (p) scrollTo(0, p.getBoundingClientRect().top + scrollY - innerHeight / 2 + p.offsetHeight / 2); document.querySelectorAll('.da-vedere').forEach(x => x.classList.add('vista')); });
   for (const [w, h] of [[390, 844], [1440, 900]]) for (const tema of ['light', 'dark']) {
     await page.emulateMediaFeatures([{ name: 'prefers-color-scheme', value: tema }, { name: 'prefers-reduced-motion', value: 'reduce' }]);
-    for (const p of ['c', 'd']) for (const v of [1, 2, 3, 4]) for (const [nome, gesti] of STATI[v]) {
+    for (const p of ['c', 'd']) for (const v of [1, 2, 3]) for (const [nome, gesti] of STATI[v]) {
       await page.setViewport({ width: w, height: h, deviceScaleFactor: w < 900 && FOTO ? 2 : 1, isMobile: w < 900, hasTouch: w < 900 });
       await page.goto(`${URL}?v=${Date.now()}#${p}${v}`, { waitUntil: 'load' }); await attesa(500);
       try { await fai(gesti); } catch (e) { errori.push(`${p}${v} ${nome}: ${e.message}`); continue; }
