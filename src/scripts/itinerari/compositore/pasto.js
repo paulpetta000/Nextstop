@@ -10,7 +10,7 @@ import { C, T, X, G, grezzo, daFare, tappeDi, nelViaggio, dataDi, giornoSett, da
 import { minuti, orarioLocale, scenarioDi, tappaDi } from '../../../lib/itinerari/calcolo';
 import { pauseDelGiorno, sequenza } from '../../../lib/itinerari/pause';
 import { MAX_TAPPE } from '../../../lib/itinerari/link';
-import { S, foglio, chiudiFoglio, rinfresca, avvisa, annuncia, scorri, occupato } from './comuni.js';
+import { S, assicuraSchede, foglio, chiudiFoglio, rinfresca, avvisa, annuncia, scorri, occupato } from './comuni.js';
 import { aggiorna, conAnnulla } from './viste.js';
 import { testoScheda, sezioni, fontiScheda } from './scheda.js';
 
@@ -182,7 +182,7 @@ function paginaPasto(id, m, indietro, lista) {
     ${lista.length > 1 ? `<nav class="pl-sfoglia" aria-label="Altri locali">${vai(prima, -1)}<span class="pl-sf__n num">${i + 1} di ${lista.length}</span>${vai(dopoId, 1)}</nav>` : ''}`;
 }
 async function schedaPasto(id, m, indietro) {
-  if (!schedePronte()) await caricaSchede().catch(() => {});
+  await assicuraSchede();
   const lista = ordineLocali.includes(id) ? [...ordineLocali] : vicini(m).map(y => y.id);
   let cur = id;
   const sfoglia = (dir, daX = 0) => {

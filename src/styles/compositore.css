@@ -1682,3 +1682,4 @@ html.pd .cmp .gita__carta { border-radius: 4px; background: var(--carta); box-sh
 .cmp-js:not(.cmp-pronto) .it-pagina > :not(.cmp), .cmp-js:not(.cmp-pronto) body > footer { display: none; }
 /* una foto della mappa coperta dalla testata, dai pulsanti o dal foglio: nascosta finché non sposti la mappa */
 .cmp .m-punto--coperto { visibility: hidden; }
+.cmp .m-riprova { margin-left: 6px; min-height: 44px; padding: 0 14px; border-radius: 999px; font-weight: 650; background: var(--acc); color: var(--su-acc); }

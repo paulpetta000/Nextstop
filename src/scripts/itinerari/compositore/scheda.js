@@ -4,7 +4,7 @@
 // I contenuti sono le schede vere della build (src/components/itinerari/Scheda.astro, SchedaLocale.astro, nei <template>).
 import { $, $$, esc, ic, soglia, piano, computer, range, ora, durata, dataScritta, GS, INGRESSO, DENTRO, SCALE, MOMENTO } from './base.js';
 import { E, T, X, MODELLI, schedePronte, caricaSchede, nG, giornoDi, nelViaggio, visitata, puoiSegnare, G, tappeDi, aggiunta, ultimaDi, chiusaIl, dataLungaDi } from './stato.js';
-import { S, foglio, chiudiFoglio, foglioEl, scorri, occupato, annuncia, tiraPerChiudere, gestoScheda } from './comuni.js';
+import { S, assicuraSchede, foglio, chiudiFoglio, foglioEl, scorri, occupato, annuncia, tiraPerChiudere, gestoScheda } from './comuni.js';
 import { segna, togliTappa, spostaGiorno, aggiungi, aggiungiGita, vaiAlGiorno, testoTratto, mappaC } from './viste.js';
 import { salva } from './fogli.js';
 import { apriAggiungi } from './aggiungi.js';
@@ -17,7 +17,7 @@ export const schedaAperta = () => (sch && schEl().open ? sch : null);
 // ---------- i pezzi della scheda ----------
 const modello = id => MODELLI.get(E && id === E.id ? 'regate' : id);
 // le schede arrivano dopo il primo disegno: se non ci sono ancora si aspettano (senza rete e senza copia, la scheda è più corta)
-const conSchede = async () => { if (!schedePronte()) await caricaSchede().catch(() => {}); };
+const conSchede = () => assicuraSchede();
 export function fotoGrande(id, cl = 'sch-foto') {
   const pic = modello(id)?.querySelector('picture');
   if (!pic) return `<span class="${cl} sch-senza" aria-hidden="true">${soglia()}</span>`;

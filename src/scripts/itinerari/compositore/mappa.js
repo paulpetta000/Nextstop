@@ -125,7 +125,10 @@ export class Mappa {
         pezziDelleTappe(A.elenco.filter(x => salvato(x)).flatMap(x => x.giorni.flatMap(g => g.tappe)).map(id => T(id)?.xy).filter(Boolean));
       }
     } catch {
-      $('.m-carico', this.el).textContent = 'La mappa non si è caricata: riprova quando hai la rete.';
+      const c = $('.m-carico', this.el);
+      c.innerHTML = 'La mappa non si è caricata: la prima volta serve la rete. <button type="button" class="m-riprova">Riprova</button>';
+      c.style.pointerEvents = 'auto';
+      $('.m-riprova', c).onclick = () => { c.style.pointerEvents = ''; this.base(); };
       return;
     }
     $('.m-carico', this.el).textContent = '';

@@ -2,7 +2,7 @@
 // l'avviso in basso con «Annulla», l'annuncio per i lettori di schermo, i numeri del giorno che scorrono, il tempo del giorno,
 // le schede dei giorni con il segno che scorre, cambiare giorno senza scatti (anche col dito), le liste che scivolano.
 import { $, $$, esc, ic, piano, computer, durata, durataLunga, ora, km, range } from './base.js';
-import { G, nG, tappeDi, aPiedi } from './stato.js';
+import { G, nG, tappeDi, aPiedi, caricaSchede, schedePronte } from './stato.js';
 
 // Lo stato della pagina (non va nella memoria, tranne la vista)
 export const S = { g: 0, p: 'c', attiva: null, nuova: null, tutte: false, cifre: {}, fini: {}, anima: true };
@@ -18,7 +18,7 @@ export function foglio(titolo, corpo, dopoAperto, cl = '') {
   const f = foglioEl();
   spegniF?.(); spegniF = null;
   f.className = cl;
-  f.innerHTML = `<div class="f-testa"><span class="f-maniglia" aria-hidden="true"></span><h2 id="f-titolo">${esc(titolo)}</h2><button type="button" class="f-chiudi" aria-label="Chiudi">${ic('x')}</button></div><div class="f-corpo">${corpo}</div>`;
+  f.innerHTML = `<div class="f-testa"><span class="f-maniglia" aria-hidden="true"></span><h2 id="f-titolo">${esc(titolo)}</h2><button type="button" class="f-chiudi" aria-label="Chiudi: ${esc(titolo)}">${ic('x')}</button></div><div class="f-corpo">${corpo}</div>`;
   $('.f-chiudi', f).onclick = () => chiudiFoglio();
   f.onclick = null; f.onchange = null; f.onkeydown = null; f.oninput = null;
   f.style.translate = '';
@@ -72,6 +72,14 @@ export function preparaAvviso() {
   t.addEventListener('focusin', () => clearTimeout(tempoAvviso));
   t.addEventListener('pointerleave', () => chiudi(1800));
   t.addEventListener('focusout', () => chiudi(1800));
+}
+// le schede complete (arrivano dopo il primo disegno): se non arrivano (la prima volta senza rete) lo diciamo, con «Riprova»
+export async function assicuraSchede() {
+  if (schedePronte()) return true;
+  try { await caricaSchede(); return true; } catch {
+    avvisa('Le schede complete non si sono caricate: la prima volta serve la rete.', { testo: 'Riprova', fai: () => caricaSchede().then(() => avvisa('Schede caricate.')).catch(() => avvisa('Ancora niente rete: riprova più tardi.')) });
+    return false;
+  }
 }
 export const annuncia = testo => { const a = $('#annuncio'); a.textContent = ''; setTimeout(() => { a.textContent = testo; }, 30); };
 // dentro un foglio (finestra modale) la voce per i lettori di schermo deve stare nel foglio

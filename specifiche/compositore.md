@@ -336,3 +336,8 @@ giudicare, i controlli li fa Claude; solo un «sì» prima di `main`):
   compositore è partito.
 - Della testata del sito resta solo il menu, aperto dal tondo del compositore. Il compositore vecchio (`app.ts`, `mappa.ts`,
   `trascina.ts`) è tolto: sostituito, nessun altro lo usava.
+
+**Parte 2 costruita (14/10/2026).** Blocco D: `/napoli/itinerari/strade/indice.json` (pezzi che esistono, nomi principali) e i pezzi
+da 1,28 km solo dove si guarda; il service worker tiene l'indice, i pezzi visti e quelli delle tappe degli itinerari salvati. Blocco E:
+`compositore/pasto.js`, solo «Il menù» (le altre tre proposte restano nelle prove); «No, grazie» è `noPasti` nel giorno, solo sul
+telefono; niente proposta nei giorni di gita e di regata. Blocco F: controlli in `design/compositore/costruzione/`, risultati in PROGRESS.

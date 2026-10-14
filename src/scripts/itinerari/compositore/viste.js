@@ -345,7 +345,7 @@ const C1 = {
         <div class="c-giu" id="c-giu" data-nascosto="true"><nav class="c-giu__barra" aria-label="Comandi dell'itinerario">
           <button type="button" class="c-giu__mappa onda" data-azione="su-mappa">${ic('mappa', 20)}<span>Mappa</span></button>
           <button type="button" class="c-giu__piu onda" data-azione="aggiungi">${ic('piu', 20)}<span>Aggiungi</span></button>
-          <button type="button" class="c-giu__altro onda" data-azione="altro" aria-label="Altro: I miei itinerari, Condividi, Pause e margini, Data e orari">${ic('altro')}</button></nav></div>
+          <button type="button" class="c-giu__altro onda" data-azione="altro" aria-label="Altro">${ic('altro')}</button></nav></div>
       </section>`;
   },
   giorni() { return `<div class="c-pista" style="--n:${nG()}">${schede('c')}${nG() < MAX_GIORNI ? `<button type="button" class="c-piu onda" data-azione="nuovo-giorno" aria-label="Aggiungi un giorno">${ic('piu', 20)}</button>` : ''}</div>`; },
@@ -451,7 +451,7 @@ const C1 = {
   }
 };
 const azioniTesta = () => `<button type="button" class="c-azione c-azione--piena onda" data-azione="aggiungi">${ic('piu', 20)}Aggiungi</button>
-  <button type="button" class="c-azione onda" data-azione="altro" aria-label="Altro: I miei itinerari, Condividi, Pause e margini, Data e orari">${ic('altro')}</button>`;
+  <button type="button" class="c-azione onda" data-azione="altro" aria-label="Altro">${ic('altro')}</button>`;
 
 // =====================================================================================
 // D · LE PAGINE
