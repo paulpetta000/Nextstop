@@ -48,6 +48,7 @@ Approvata l'08/10/2026: `specifiche/compositore.md` (mappa in sospeso), con le r
 - [ ] **Fonti in fondo alla pagina a scomparsa**: oggi occupano metà pagina; si vede «Fonti di questa pagina» con la freccia e si apre toccando.
 - [ ] **Crediti delle foto** (autore, licenza) in fondo alla pagina insieme alle fonti, non sotto ogni foto.
 - [ ] «Dove mangiare», Napoli, fonti e pagine legali con la grafica nuova.
+- [ ] **Rifare le schede di tutte le tappe e di tutti i locali** (Enrico, 14/10/2026): testi, orari leggibili (oggi nei locali escono tutti attaccati), prezzi, come arrivare. Prima o poi, con la riscrittura dei testi.
 
 **Controlli**: consistent-ui **almeno 35 su 40**; Lighthouse su telefono 95 o più, axe in chiaro e scuro, 320 e 390 px.
 

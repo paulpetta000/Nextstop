@@ -367,14 +367,15 @@
     const dopoDi = id => { const i = tp.findIndex(v => v.id === id); return tp[i + 1]?.id ?? null; };
     const conLocale = q => tp.some(v => T(v.id).categoria && v.inizio < PASTI[q].a && v.fine > PASTI[q].da);
     const p = Gx.pause.find(x => x.quale === 'pranzo');
-    if (p && !conLocale('pranzo') && !S.noGrazie[`${g}-pranzo`]) out.push({ g, q: 'pranzo', dove: p.dove, ora: p.inizio, min: p.min, pausa: true, dopo: dopoDi(p.dove) });
+    if (p && !conLocale('pranzo')) out.push({ g, q: 'pranzo', dove: p.dove, ora: p.inizio, min: p.min, pausa: true, dopo: dopoDi(p.dove), nascosto: !!S.noGrazie[`${g}-pranzo`] });
     const Ce = PASTI.cena, ultima = tp[tp.length - 1];
-    if (Gx.fineScelta >= Ce.a - 60 && Gx.inizio < Ce.a && !conLocale('cena') && !S.noGrazie[`${g}-cena`] && !T(ultima.id).categoria) {
+    if (Gx.fineScelta >= Ce.a - 60 && Gx.inizio < Ce.a && !conLocale('cena') && !T(ultima.id).categoria) {
+      const nascosto = !!S.noGrazie[`${g}-cena`];
       const fineU = ultima.fine + Gx.pause.filter(x => x.dove === ultima.id).reduce((s, x) => s + x.min, 0);
-      if (fineU <= Ce.a) out.push({ g, q: 'cena', dove: ultima.id, ora: Math.max(fineU, Ce.da), min: 60, dopo: null, attesa: Math.max(0, Ce.da - fineU) });
+      if (fineU <= Ce.a) out.push({ g, q: 'cena', dove: ultima.id, ora: Math.max(fineU, Ce.da), min: 60, dopo: null, attesa: Math.max(0, Ce.da - fineU), nascosto });
       else {
         const v = tp.slice(0, -1).reduce((a, b) => (Math.abs(b.fine - Ce.ora) < Math.abs(a.fine - Ce.ora) ? b : a), tp[0]);
-        if (v.fine >= Ce.da - 30 && v.fine <= Ce.a) out.push({ g, q: 'cena', dove: v.id, ora: v.fine, min: 60, dopo: dopoDi(v.id) });
+        if (v.fine >= Ce.da - 30 && v.fine <= Ce.a) out.push({ g, q: 'cena', dove: v.id, ora: v.fine, min: 60, dopo: dopoDi(v.id), nascosto });
       }
     }
     return out;
@@ -459,7 +460,7 @@
   function sequenzaM(Gx, g) {
     const voci = sequenza(Gx), ms = momenti(g, Gx);
     for (const m of ms) {
-      if (m.pausa) { const i = voci.findIndex(v => v.tipo === 'pausa' && v.quale === 'pranzo'); if (i >= 0) voci[i] = { tipo: 'pasto', m }; continue; }
+      if (m.pausa) { const i = voci.findIndex(v => v.tipo === 'pausa' && v.quale === 'pranzo'); if (i >= 0) { if (m.nascosto) voci.splice(i + 1, 0, { tipo: 'pasto', m }); else voci[i] = { tipo: 'pasto', m }; } continue; }
       let i = voci.findIndex(v => v.tipo === 'tappa' && v.id === m.dove);
       while (voci[i + 1]?.tipo === 'pausa') i++;
       voci.splice(i + 1, 0, { tipo: 'pasto', m });
@@ -473,6 +474,7 @@
   const pausaInfo = (m, cl) => (m.pausa ? `<button type="button" class="${cl}" data-azione="pausa" data-quale="pranzo">Pausa di ${durataLunga(m.min)}: cambia</button>` : '');
   function rigaPasto(m, vista) {
     const tag = vista === 'c' ? 'li' : 'div', base = `${vista}-pasto pasto-${PM}`, chiave = `data-chiave="pasto-${m.q}"`;
+    if (m.nascosto) return `<${tag} class="${vista}-pasto pasto-nascosto" ${chiave}><p class="pm-rimetti">${ic('posate', 16)}<span>${m.q === 'pranzo' ? 'Niente proposte per il pranzo' : 'Niente proposte per la cena'}</span><button type="button" class="pm-link" data-azione="pasto-si" ${datiM(m)}>Rimettile</button></p></${tag}>`;
     const lista = vicini(m), ap = aperti(m), oraT = `<span class="num">${ora(m.ora)}</span>`;
     const icona = `<span class="pm-ic" aria-hidden="true">${ic('posate', vista === 'c' ? 17 : 22)}</span>`;
     if (PM === 1) {
@@ -532,6 +534,7 @@
     const corpo = () => {
       const tutti = vicini(m), ord = perStrada ? [...tutti].sort((a, b) => (a.stato === 'chiuso') - (b.stato === 'chiuso') || a.dev - b.dev || a.min - b.min) : tutti;
       const l = filtra(ord, f0), si = l.filter(x => x.stato !== 'chiuso'), no = l.filter(x => x.stato === 'chiuso');
+      ordineLocali = [...si, ...no].map(x => x.id);
       const conta = f => filtra(tutti, f).filter(x => x.stato !== 'chiuso').length;
       return `<p class="pl-quando">${ic('posate', 18)}<span>${esc(quandoM(m))}. ${perStrada && m.dopo ? `In cima quelli che allungano meno la strada per ${esc(T(m.dopo).breve)}.` : 'Minuti dalla tappa prima.'}</span></p>
         <div class="f-chips pl-filtri" role="group" aria-label="Filtri">${FILTRI_M.map(([k, n]) => `<button type="button" class="f-chip" data-f="filtro" data-v="${k}" aria-pressed="${k === f0}"${conta(k) || k === f0 ? '' : ' disabled'}>${n} <span class="num">${conta(k)}</span></button>`).join('')}</div>
@@ -547,6 +550,7 @@
     const corpo = () => {
       const tutti = vicini(m), si = tutti.filter(x => x.stato !== 'chiuso' && x.min <= mx), no = tutti.filter(x => x.stato === 'chiuso' && x.min <= mx);
       const gruppi = [...new Set(si.map(x => tipoL(x.id)))].map(t => [t, si.filter(x => tipoL(x.id) === t)]);
+      ordineLocali = [...gruppi.flatMap(([, l]) => l), ...no].map(x => x.id);
       const voce = x => `<li class="mn-v${x.stato === 'chiuso' ? ' mn-v--chiuso' : ''}"><details><summary><span class="mn-nome">${esc(T(x.id).nome)}</span><span class="mn-punti" aria-hidden="true"></span><span class="mn-min num">${x.min < 2 ? 'accanto' : `${x.min} min`}</span><small class="mn-sotto">${esc(x.nota)}${euro(x.id) ? ` · ${euro(x.id)}` : ''}${x.mezzi ? ' · con i mezzi' : ''}</small></summary>
         <div class="mn-dentro"><p>${esc(T(x.id).frase || '')}</p><div class="mn-az">${x.stato === 'chiuso' ? '' : `<button type="button" class="f-bottone" data-f="scegli" data-v="${x.id}">${ic('posate', 18)}Mangia qui, dalle ${ora(x.arrivo)}</button>`}<button type="button" class="f-bottone f-bottone--contorno" data-f="scheda" data-v="${x.id}">La scheda</button></div></div></details></li>`;
       return `<div class="mn"><p class="mn-testa"><i>${m.q === 'pranzo' ? 'Pranzo' : 'Cena'}</i><span>dalle <span class="num">${ora(m.ora)}</span>, intorno a ${esc(T(m.dove).breve)}</span></p>
@@ -573,18 +577,29 @@
           : `<p class="pm3-carta__t"><b>${esc(riassuntoM(m).replace(/^./, s => s.toUpperCase()))}</b><small>Tocca un locale sulla mappa. Pieni gli aperti, vuoti i chiusi; i cerchi sono 5 e 10 minuti a piedi in linea d'aria.</small></p>`;
       };
       carta(scelto);
+      ordineLocali = vicini(m).filter(x => x.min <= 15).map(x => x.id);
       f.onclick = e => clickFoglioM(e, f, m, null, () => apriMappaPasto(m, scelto));
     }, 'f--pasto f--mappa-pasto');
   }
-  // la scheda del locale, dal pasto: la scheda vera e «Mangia qui» con l'ora
-  function schedaPasto(id, m, indietro) {
+  // la scheda del locale, dal pasto: la scheda vera e «Mangia qui» con l'ora. In fondo «prima» e «dopo» con il nome del locale,
+  // nell'ordine dell'elenco da cui l'hai aperta (nel menù: per tipo); col dito si gira di lato, come le schede delle tappe.
+  let ordineLocali = [];
+  function schedaPasto(id, m, indietro, verso = 0) {
     const x = vicini(m).find(y => y.id === id);
+    const lista = ordineLocali.includes(id) ? ordineLocali : vicini(m).map(y => y.id), i = lista.indexOf(id), prima = lista[i - 1], dopo = lista[i + 1];
+    const vai = (v, dir) => (v ? `<button type="button" class="pl-sf pl-sf--${dir < 0 ? 'prima' : 'dopo'}" data-f="sfoglia" data-v="${v}" data-dir="${dir}">${ic(dir < 0 ? 'indietro' : 'avanti', 20)}<span><small>${dir < 0 ? 'Prima' : 'Dopo'}</small><b>${esc(T(v).breve)}</b></span></button>` : '<span></span>');
+    const sfoglia = lista.length > 1 ? `<nav class="pl-sfoglia" aria-label="Altri locali">${vai(prima, -1)}<span class="pl-sf__n num">${i + 1} di ${lista.length}</span>${vai(dopo, 1)}</nav>` : '';
     const corpo = `${indietro ? `<button type="button" class="r-indietro" data-f="indietro">${ic('indietro', 18)}Torna ai locali</button>` : ''}
       <p class="sch-quando">${esc(tipoL(id))}${euro(id) ? ` · ${euro(id)}` : ''} · ${x ? `${minTesto(x)} da ${esc(T(m.dove).breve)}` : ''}</p>
       ${x ? `<p class="pl-stato-grande pl__stato--${x.stato}">${ic(x.stato === 'chiuso' ? 'attenzione' : 'orologio', 18)}<span>Arrivi alle ${ora(x.arrivo)}: ${esc(x.nota)}</span></p>` : ''}
       ${x && x.stato !== 'chiuso' ? `<button type="button" class="f-bottone pl-scegli" data-f="scegli" data-v="${id}">${ic('posate', 20)}Mangia qui, ${m.q === 'pranzo' ? 'a pranzo' : 'a cena'} dalle ${ora(x.arrivo)}</button>` : ''}
-      <div class="sch-testo">${testoScheda(id)}</div>${sezioni(id)}${fontiScheda(id)}`;
-    foglio(T(id).nome, corpo, f => { f.onclick = e => clickFoglioM(e, f, m, null, indietro); }, 'f--scheda f--fuori f--pasto');
+      <div class="sch-testo">${testoScheda(id)}</div>${sezioni(id)}${fontiScheda(id)}${sfoglia}`;
+    foglio(T(id).nome, `<div class="pl-pagina">${corpo}</div>`, f => {
+      f.onclick = e => clickFoglioM(e, f, m, null, indietro);
+      f.sfoglia = dir => { const v = lista[i + dir]; if (v) schedaPasto(v, m, indietro, dir); return !!v; };
+      f.puoi = dir => !!lista[i + dir];
+      if (verso) { f.scrollTop = 0; if (piano()) $('.pl-pagina', f).animate([{ translate: `${verso * 48}px 0`, opacity: 0 }, { translate: '0 0', opacity: 1 }], { duration: 300, easing: 'cubic-bezier(.16,1,.3,1)' }); annuncia(`${T(id).nome}, ${i + 1} di ${lista.length}`); }
+    }, 'f--scheda f--fuori f--pasto');
   }
   async function clickFoglioM(e, f, m, filtro, torna, quanto) {
     if (e.target === f) { chiudiFoglio(); return; }
@@ -594,6 +609,7 @@
     if (k === 'filtro' && filtro) filtro(v);
     else if (k === 'quanto' && quanto) quanto(+v);
     else if (k === 'scheda') schedaPasto(v, m, torna);
+    else if (k === 'sfoglia') { const dir = +b.dataset.dir; f.sfoglia?.(dir); requestAnimationFrame(() => $(`.pl-sf--${dir < 0 ? 'prima' : 'dopo'}`, f)?.focus({ preventScroll: true })); }
     else if (k === 'indietro') torna?.();
     else if (k === 'elenco') apriElenco(m);
     else if (k === 'scegli') { await chiudiFoglio(); mangiaQui(m, v); }
@@ -1015,7 +1031,7 @@
     foglioEl.className = cl;
     foglioEl.innerHTML = `<div class="f-testa"><span class="f-maniglia" aria-hidden="true"></span><h2 id="f-titolo">${esc(titolo)}</h2><button type="button" class="f-chiudi" aria-label="Chiudi">${ic('x')}</button></div><div class="f-corpo">${corpo}</div>`;
     $('.f-chiudi', foglioEl).onclick = () => chiudiFoglio();
-    foglioEl.onclick = null; foglioEl.onchange = null; foglioEl.onkeydown = null;
+    foglioEl.onclick = null; foglioEl.onchange = null; foglioEl.onkeydown = null; foglioEl.sfoglia = null; foglioEl.puoi = null;
     foglioEl.style.translate = '';
     if (!foglioEl.open) foglioEl.showModal();
     dopoAperto?.(foglioEl);
@@ -2158,8 +2174,9 @@
     'sposta-apri': b => { const box = b.closest('.riga-aperta').querySelector('.ra-sposta'); const si = box.hidden; box.hidden = !si; b.setAttribute('aria-expanded', String(si)); if (si) $('button', box)?.focus(); },
     pronto: () => avvisa('Prova: qui si aprirebbe un altro itinerario.'),
     'pasto-apri': b => { const m = trovaM(b.dataset.k); if (m) apriPasto(m); },
-    'pasto-scheda': b => { const m = trovaM(b.dataset.k); if (m) schedaPasto(b.dataset.id, m, null); },
-    'pasto-no': b => { const m = trovaM(b.dataset.k); if (m) noGrazie(m); }
+    'pasto-scheda': b => { const m = trovaM(b.dataset.k); if (!m) return; const l = vicini(m).filter(x => x.stato !== 'chiuso'); ordineLocali = (PM === 4 ? [...l].sort((a, c) => a.dev - c.dev || a.min - c.min) : l).map(x => x.id); schedaPasto(b.dataset.id, m, null); },
+    'pasto-no': b => { const m = trovaM(b.dataset.k); if (m) noGrazie(m); },
+    'pasto-si': b => { const k = b.dataset.k; aggiorna(() => { const x = { ...S.noGrazie }; delete x[k]; S.noGrazie = x; }); annuncia('Proposte rimesse'); }
   };
   $('#app').addEventListener('click', e => {
     const b = e.target.closest('[data-azione]');
@@ -2771,7 +2788,7 @@
       if (!dir) {
         if (Math.hypot(dx, dy) < 8) return;
         dir = Math.abs(dx) > Math.abs(dy) * 1.2 ? 'h' : 'v';
-        if (dir === 'v' && !(dallaTesta || sch.detent === 'meta' || (corpo.scrollTop <= 0 && dy > 0 && !computer.matches))) { dir = 'x'; return; }
+        if (dir === 'v' && !(dallaTesta || sch.detent === 'meta' || (e.pointerType !== 'touch' && corpo.scrollTop <= 0 && dy > 0 && !computer.matches))) { dir = 'x'; return; }
         if (dir === 'v' && computer.matches) { dir = 'x'; return; }
         try { schEl.setPointerCapture(e.pointerId); } catch {}
         if (dir === 'v') p.style.transition = 'none';
@@ -2798,6 +2815,49 @@
     schEl.addEventListener('pointermove', muovi); schEl.addEventListener('pointerup', su); schEl.addEventListener('pointercancel', su);
   });
   schEl.addEventListener('click', e => { if (schTolto) { e.stopPropagation(); e.preventDefault(); } }, true);
+  // Da telefono, un foglio aperto del tutto si chiude tirando giù da qualsiasi punto (Enrico, 14/10/2026), ma solo se il testo
+  // era già in cima quando hai appoggiato il dito (chi risale leggendo e arriva in cima non lo chiude nello stesso gesto) e solo
+  // con un gesto deciso: più di 200 px, o più di 110 px veloce. Altrimenti torna su. Se il foglio sa sfogliare, di lato gira pagina.
+  function tiraPerChiudere(el, { pronto, scorre, pannello, chiudi }) {
+    let t = null;
+    el.addEventListener('touchstart', e => {
+      t = null;
+      if (!pronto() || computer.matches || e.touches.length !== 1 || e.target.closest('a, input, summary, .f-testa, .sch1__testa, .m, .f-chips, .mn-quanto')) return;
+      const sc = scorre();
+      t = { x: e.touches[0].clientX, y: e.touches[0].clientY, t: performance.now(), dir: null, dy: 0, dx: 0, cima: !sc || sc.scrollTop <= 0 };
+    }, { passive: true });
+    el.addEventListener('touchmove', e => {
+      if (!t) return;
+      const dx = e.touches[0].clientX - t.x, dy = e.touches[0].clientY - t.y;
+      if (!t.dir) {
+        if (Math.hypot(dx, dy) < 8) return;
+        t.dir = dy > 0 && dy > Math.abs(dx) * 1.2 && t.cima ? 'giu' : Math.abs(dx) > Math.abs(dy) * 1.2 && el.sfoglia ? 'lato' : 'no';
+        if (t.dir === 'giu') pannello().style.transition = 'none';
+      }
+      if (t.dir === 'no') return;
+      e.preventDefault();
+      if (t.dir === 'giu') { t.dy = dy; pannello().style.translate = `0 ${(dy * .6).toFixed(1)}px`; }
+      else { t.dx = dx; const p = $('.pl-pagina', el), x = el.puoi?.(dx < 0 ? 1 : -1) ? dx : dx * .25; if (p && piano()) { p.style.translate = `${x.toFixed(1)}px 0`; p.style.opacity = String(Math.max(.35, 1 - Math.abs(x) / 520)); } }
+    }, { passive: false });
+    const fine = () => {
+      if (!t || t.dir === 'no' || !t.dir) { t = null; return; }
+      const ms = Math.max(1, performance.now() - t.t);
+      schTolto = true; setTimeout(() => { schTolto = false; }, 60);
+      if (t.dir === 'giu') {
+        const p = pannello(), v = t.dy / ms;
+        p.style.transition = '';
+        if (t.dy > 200 || (t.dy > 110 && v > .9)) { chiudi(); setTimeout(() => { p.style.translate = ''; }, 420); }
+        else { const da = p.style.translate; p.style.translate = ''; if (piano() && da) p.animate([{ translate: da }, { translate: '0 0' }], { duration: 300, easing: 'cubic-bezier(.16,1,.3,1)' }); }
+      } else {
+        const p = $('.pl-pagina', el), dir = t.dx < 0 ? 1 : -1;
+        if (!((Math.abs(t.dx) > 70 || Math.abs(t.dx) / ms > .45) && el.sfoglia(dir)) && p) { const da = { translate: p.style.translate || '0px 0', opacity: p.style.opacity || '1' }; p.style.translate = ''; p.style.opacity = ''; if (piano()) p.animate([da, { translate: '0px 0', opacity: 1 }], { duration: 300, easing: 'cubic-bezier(.16,1,.3,1)' }); }
+      }
+      t = null;
+    };
+    el.addEventListener('touchend', fine); el.addEventListener('touchcancel', fine);
+  }
+  tiraPerChiudere(schEl, { pronto: () => sch?.q === 1 && sch.detent === 'tutto', scorre: () => $('.sch1__corpo', schEl), pannello: () => $('.sch1__pannello', schEl), chiudi: () => Q1.chiudi() });
+  tiraPerChiudere(foglioEl, { pronto: () => foglioEl.open, scorre: () => foglioEl, pannello: () => foglioEl, chiudi: () => chiudiFoglio() });
 
   // ---------- 2 · LA RIGA SI APRE ----------
   // La tappa si allarga sul posto: la foto cresce dalla miniatura, i tratti prima e dopo restano dove sono. Dentro: quando,

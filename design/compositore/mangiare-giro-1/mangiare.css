@@ -190,3 +190,24 @@
 .pd #foglio.f--pasto .pl__t b, .pd .f--pasto .pl__t b { font: 600 17px/1.25 "Bodoni Moda", Georgia, serif; }
 .pc .pm1__scelte, .pc .pm4__carte { scroll-padding-inline-start: 52px; }
 .pd .pm1__scelte, .pd .pm4__carte { scroll-padding-inline-start: 4px; }
+
+/* «No, grazie» si può togliere: una riga piccola sotto la pausa (o al posto della cena) */
+.pasto-nascosto { list-style: none; }
+.pm-rimetti { margin: 0; display: flex; align-items: center; gap: 8px; flex-wrap: wrap; padding: 2px 6px 2px 52px; font-size: 13.5px; color: var(--ink2); }
+.pm-rimetti .ic { color: var(--cibo); flex: none; }
+.pm-rimetti .pm-link { color: var(--cibo); }
+.pd .pm-rimetti { padding: 10px 4px 0; justify-content: center; }
+
+/* la scheda del locale: prima e dopo, con il nome */
+.pl-pagina { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; min-width: 0; }
+.pl-sfoglia { display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 8px; margin-top: 4px; padding-top: 14px; border-top: 1px solid var(--f-riga); }
+.pl-sf { max-width: 100%; min-height: 56px; display: flex; align-items: center; gap: 6px; padding: 6px 10px; border-radius: 14px; text-align: left; background: var(--f-sup2); min-width: 0; }
+.pl-sf--dopo { flex-direction: row-reverse; text-align: right; justify-self: end; }
+.pl-sf--prima { justify-self: start; }
+.pl-sf .ic { flex: none; color: var(--cibo); }
+.pl-sf span { display: grid; min-width: 0; }
+.pl-sf small { font-size: 12px; color: var(--ink2); }
+.pl-sf b { font-weight: 650; font-size: 14.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.pl-sf__n { font-size: 13px; color: var(--ink2); }
+.pd .pl-sf b { font: 600 16px/1.2 "Bodoni Moda", Georgia, serif; }
+#foglio.f--pasto { overflow-x: hidden; }

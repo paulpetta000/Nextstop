@@ -11,7 +11,7 @@ const QUI = '.giorno-attivo';
 // gli stati per ogni proposta: [nome, gesti]
 const STATI = {
   1: [['riga', []], ['elenco', [`${QUI} [data-azione="pasto-apri"]`]], ['scheda', [`${QUI} [data-azione="pasto-scheda"]`]], ['sera', ['#p-sera']]],
-  2: [['riga', []], ['menu', [`${QUI} [data-azione="pasto-apri"]`, '.mn-v summary']], ['sera', ['#p-sera']]],
+  2: [['riga', []], ['menu', [`${QUI} [data-azione="pasto-apri"]`, '.mn-v summary']], ['scheda', [`${QUI} [data-azione="pasto-apri"]`, '.mn-v summary', '#foglio [data-f="scheda"]', '.pl-sf--dopo']], ['no grazie', [`${QUI} [data-azione="pasto-no"]`]], ['sera', ['#p-sera']]],
   3: [['riga', []], ['mappa', [`${QUI} [data-azione="pasto-apri"]`, '.m-cibo']], ['sera', ['#p-sera']]],
   4: [['riga', []], ['elenco', [`${QUI} .pm4__c--tutti`]], ['scheda', [`${QUI} .pm4__c`]], ['sera', ['#p-sera']]]
 };
@@ -24,8 +24,10 @@ if (FOTO) fs.mkdirSync(FOTO, { recursive: true });
   page.on('console', m => { if (m.type() === 'error' && !/favicon/.test(m.text())) errori.push(m.text()); });
   await page.evaluateOnNewDocument(() => { try { localStorage.setItem('prova-mangiare-idea-1', '1'); localStorage.removeItem('prova-mangiare-1'); } catch {} });
   let tot = 0, n = 0;
-  const controlla = async dove => {
+  const controlla = async (dove, prova = 0) => {
     await page.addScriptTag({ path: AXE });
+    // se intanto la pagina si è ricaricata (cambio di vista), axe non c'è più: si riprova una volta
+    if (!(await page.evaluate(() => typeof axe !== 'undefined'))) { if (prova < 1) { await attesa(800); return controlla(dove, prova + 1); } errori.push(dove + ': axe non caricato'); return; }
     const r = await page.evaluate(async () => { const s = document.createElement('style'); s.textContent = '*,*::before,*::after{transition:none!important;animation:none!important}'; document.head.append(s); const x = await axe.run(document, { resultTypes: ['violations'] }); s.remove(); return x.violations.map(v => `${v.id} (${v.impact}): ${v.nodes.slice(0, 3).map(n => n.target.join(' ')).join(' | ')} — ${v.nodes[0]?.failureSummary?.split('\n')[1] ?? ''}`); });
     n++; tot += r.length;
     if (r.length) console.log('\n' + dove, '\n  ' + r.join('\n  '));

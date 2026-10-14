@@ -9,6 +9,14 @@ Specifica §7. Quattro proposte dentro C e D: nella striscia in alto si sceglie 
 alle 22:00 e fa comparire anche la cena. Cartella `mangiare-giro-1/` (nata da `mappa-giro-1/`, con la mappa a pezzi scelta, più `mangiare.css`).
 
 ## Giro 1 (14/10/2026) · https://claude.ai/artifact/Ka4wHT2GqRZkCqo3p6apXZ
+**Scelta di Enrico (14/10/2026): la 2, «Il menù».** Con le sue richieste, già nella stessa pagina (versione 3):
+- **la scheda del locale si sfoglia**: aperta dal menù, in fondo «Prima» e «Dopo» con il nome del locale e «2 di 3», e col dito
+  di lato si gira pagina, come le schede delle tappe (nell'ordine del menù: per tipo, poi i chiusi);
+- **«No, grazie» si toglie**: resta una riga piccola «Niente proposte per il pranzo · Rimettile» (sotto la pausa, che resta);
+- **da telefono le schede aperte del tutto si chiudono tirando giù da qualsiasi punto** (tappe e fogli), ma solo se il testo era già in
+  cima quando appoggi il dito, e solo con un gesto deciso (più di 200 px, o più di 110 px veloce); altrimenti tornano su;
+- le schede di tutte le tappe e dei locali vanno rifatte, prima o poi (`ROADMAP.md`).
+
 | | Nella giornata | Toccando |
 |---|---|---|
 | **1 · La sosta** | la pausa pranzo diventa «Qui puoi fermarti a mangiare», con i tre locali aperti più vicini nella riga | un locale apre la sua scheda con «Mangia qui»; «Tutti» apre l'elenco con i filtri e, in fondo, i chiusi a quell'ora |
@@ -26,7 +34,7 @@ per quel giorno (la pausa pranzo resta). Niente si aggiunge da solo. Se vicino �
 Con i dati di oggi (32 locali) dopo via dei Tribunali, alle 12:25, gli aperti a 10 minuti sono tre (Di Matteo, Port'Alba, Gesù Vecchio):
 i locali nuovi del pezzo 8 ne aggiungeranno.
 Da decidere con Enrico: la cena dopo l'ultima tappa (la specifica dice «se la giornata attraversa la cena»); quanti minuti al massimo.
-Controlli (14/10/2026): axe pulito in 112 controlli (4 proposte, C e D, telefono e computer, chiaro e scuro, riga, fogli, mappa, sera);
+Controlli (14/10/2026, dopo le richieste di Enrico): axe pulito in 128 controlli (4 proposte, C e D, telefono e computer, chiaro e scuro, riga, fogli, mappa, sera, scheda del locale sfogliata, «No, grazie»);
 nessuno scorrimento di lato a 320 e 390 px; nessun errore nella pagina (solo l'icona del server di prova); prove dei gesti: Mangia qui,
 Annulla, No, grazie, cena con il tempo libero. Immagini: `mangiare-giro-1/immagini/*.jpg`.
 Rifare: `npm run build`, `node design/compositore/genera.mjs mangiare-giro-1`; con il server della copia acceso (porta 4333)
