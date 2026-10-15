@@ -1,0 +1,111 @@
+/* La scelta dell'ora «Tutte le ore» del compositore (specifiche/compositore-rifiniture-2.md, scelta di Enrico del 16/10/2026, proposta
+   2 del giro 2 in design/compositore/rifiniture-2/ora-giro-2/). Arriva con compositore/ore.js al primo tocco su un campo dell'ora;
+   fascia e punto sono quelli del calendario (--cal-fascia, --cal-punto, in compositore.css). */
+html.pc .cmp { --ore-libero: #DCE2F9; --ore-tufo: #E0A51B; }
+html.pd .cmp { --ore-libero: #DFE8F6; --ore-tufo: #E0A51B; }
+@media (prefers-color-scheme: dark) {
+:root.pc:not([data-theme="light"]) .cmp { --ore-libero: #222A63; --ore-tufo: #F0BE3E; }
+:root.pd:not([data-theme="light"]) .cmp { --ore-libero: #222C40; --ore-tufo: #F0BE3E; }
+}
+:root.pc[data-theme="dark"] .cmp { --ore-libero: #222A63; --ore-tufo: #F0BE3E; }
+:root.pd[data-theme="dark"] .cmp { --ore-libero: #222C40; --ore-tufo: #F0BE3E; }
+.cmp #ore { --morbido: cubic-bezier(.32, .72, 0, 1); width: 100%; max-width: 100%; height: 100dvh; max-height: 100dvh; margin: 0; padding: 0; border: 0; background: var(--f-sup); color: var(--ink); overflow: hidden; }
+html.pd .cmp #ore { background: var(--f-sup) var(--grana); }
+.cmp #ore::backdrop { background: rgba(8, 10, 18, .55); }
+@media (min-width: 960px) {
+.cmp #ore { width: 560px; height: min(820px, 92dvh); margin: auto; border-radius: var(--f-raggio, 24px); }
+}
+@media (prefers-reduced-motion: no-preference) {
+.cmp #ore[open] { animation: ore-su 420ms var(--morbido); }
+.cmp #ore[open]::backdrop { animation: ore-velo 420ms var(--morbido); }
+.cmp #ore.ore--esce { animation: ore-giu 240ms var(--esce) forwards; }
+.cmp #ore[open] .ore-modo, .cmp #ore[open] .ore-leg, .cmp #ore[open] .ore-scorre { animation: ore-dentro 520ms var(--morbido) both; animation-delay: 90ms; }
+}
+@keyframes ore-su { from { translate: 0 64px; opacity: 0; } }
+@keyframes ore-giu { to { translate: 0 64px; opacity: 0; } }
+@keyframes ore-velo { from { opacity: 0; } }
+@keyframes ore-dentro { from { translate: 0 14px; opacity: 0; } }
+.cmp .ore { display: flex; flex-direction: column; height: 100%; }
+.cmp .ore-testa { display: flex; align-items: flex-start; gap: 12px; padding: calc(18px + env(safe-area-inset-top, 0px)) 12px 6px 20px; }
+.cmp .ore-testa > div { flex: 1; min-width: 0; }
+.cmp .ore-occhio { margin: 0; font-size: 12.5px; font-weight: 600; letter-spacing: .04em; color: var(--ink2); overflow-wrap: anywhere; }
+html.pd .cmp .ore-occhio { font: italic 500 15px/1.2 "Bodoni Moda", Georgia, serif; letter-spacing: 0; }
+.cmp .ore-testa h2 { margin: 2px 0 0; font: 600 27px/1.1 var(--f-titolo); letter-spacing: -.015em; }
+html.pc .cmp .ore-testa h2 { font-weight: 800; font-stretch: 78%; font-size: 32px; letter-spacing: -.02em; }
+/* l'ora: l'ora piena e i minuti più leggeri */
+.cmp .ore-m { font-weight: 400; opacity: .72; }
+@keyframes ore-rotola { from { translate: 0 .3em; opacity: .2; } }
+.cmp .ore-rotola { display: inline-block; animation: ore-rotola 260ms var(--morbido); }
+
+/* inizio → fine: due metà con un indicatore che scorre */
+.cmp .ore-modo { position: relative; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; margin: 6px 16px 2px; padding: 4px; border-radius: 20px; background: var(--f-sup2); }
+.cmp .ore-modo > .ic { color: var(--ink2); margin: 0 2px; }
+.cmp .ore-modo__ind { position: absolute; top: 4px; bottom: 4px; left: 4px; width: calc(50% - 16px); border-radius: 16px; background: var(--f-acc); box-shadow: 0 6px 18px -8px color-mix(in srgb, var(--f-acc) 70%, transparent); transition: translate 380ms var(--morbido); }
+.cmp .ore-modo[data-modo="fine"] .ore-modo__ind { translate: calc(100% + 24px) 0; }
+.cmp .ore-modo__b { position: relative; z-index: 1; display: grid; justify-items: start; gap: 3px; min-height: 64px; padding: 8px 14px; border-radius: 16px; text-align: left; transition: color 300ms var(--morbido); }
+.cmp .ore-modo__b > span { font-size: 12.5px; font-weight: 650; letter-spacing: .04em; color: var(--ink2); transition: color 300ms var(--morbido); }
+.cmp .ore-modo__b b { font: 800 27px/1 "Archivo", system-ui, sans-serif; font-stretch: 74%; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+.cmp .ore-modo__b[aria-pressed="true"] { color: var(--f-su-acc); }
+.cmp .ore-modo__b[aria-pressed="true"] > span { color: inherit; }
+.cmp .ore-modo__b[aria-pressed="true"] .ore-m { opacity: 1; }
+html.pd .cmp .ore-modo, html.pd .cmp .ore-modo__ind, html.pd .cmp .ore-modo__b { border-radius: 3px; }
+html.pd .cmp .ore-modo { background: var(--sup); }
+html.pd .cmp .ore-modo__b b { font: 600 28px/1 "Bodoni Moda", Georgia, serif; }
+.cmp .ore-leg { display: flex; flex-wrap: wrap; gap: 4px 14px; margin: 0; padding: 10px 20px 2px; font-size: 12.5px; color: var(--ink2); }
+.cmp .ore-leg span { display: inline-flex; align-items: center; gap: 6px; }
+.cmp .ore-leg i { display: inline-block; width: 18px; height: 10px; border-radius: 5px; }
+.cmp .ore-leg__fascia { background: var(--cal-fascia); }
+.cmp .ore-leg__libero { background: var(--ore-libero); box-shadow: inset 0 0 0 1px var(--cal-fascia); }
+.cmp .ore-leg .ore-punto { width: 6px; height: 6px; border-radius: 50%; }
+.cmp .ore-punto { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--cal-punto); }
+
+/* la griglia dei quarti d'ora, con i titoli delle parti del giorno dentro la tabella */
+.cmp .ore-scorre { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; padding: 0 16px 24px; }
+.cmp .ore-gr { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.cmp .ore-gr td { position: relative; padding: 3px 0; height: 52px; border: 0; text-align: center; vertical-align: middle; background: none; }
+.cmp .ore-sez span { position: relative; z-index: 1; font: 700 12.5px/1.1 "Archivo", system-ui, sans-serif; font-stretch: 112%; letter-spacing: .1em; text-transform: uppercase; color: var(--ink2); }
+.cmp .ore-sez .in span { color: var(--ink); }
+html.pd .cmp .ore-sez span { font: italic 500 20px/1.1 "Bodoni Moda", Georgia, serif; letter-spacing: 0; text-transform: none; color: var(--ink); }
+/* la fascia: un solo pezzo dall'inizio alla fine scelti, riga dopo riga, come quando si seleziona un testo; si accende dal quarto
+   toccato verso fuori */
+.cmp .ore-gr td::before { content: ""; position: absolute; inset: 0; background: var(--cal-fascia); opacity: 0; transition: opacity 260ms var(--morbido) var(--d, 0ms); }
+.cmp .ore-gr td.in::before { opacity: 1; }
+.cmp .ore-gr td.in--libero::before { background: var(--ore-libero); }
+.cmp .ore-gr td.in-primo::before { left: 2px; border-radius: 26px 0 0 26px; }
+.cmp .ore-gr td.in-ultimo::before { right: 2px; border-radius: 0 26px 26px 0; }
+.cmp .ore-gr td.in-primo.in-ultimo::before { border-radius: 26px; }
+.cmp .ore-gr td.oltre::before { opacity: 1; background: repeating-linear-gradient(135deg, color-mix(in srgb, var(--cal-punto) 28%, transparent) 0 2px, transparent 2px 7px); }
+html.pd .cmp .ore-gr td::before { border-radius: 0 !important; }
+html.pd .cmp .ore-gr tr + tr:not(.ore-sez) td { box-shadow: inset 0 1px 0 color-mix(in srgb, var(--riga) 70%, transparent); }
+html.pd .cmp .ore-gr tr.ore-sez + tr td { box-shadow: none; }
+.cmp .ore-q { position: relative; z-index: 1; width: calc(100% - 6px); max-width: 78px; height: 46px; border-radius: 23px; font: 500 16.5px/1 "Archivo", system-ui, sans-serif; font-stretch: 92%; font-variant-numeric: tabular-nums; transition: background-color 240ms var(--morbido), color 240ms var(--morbido), box-shadow 240ms var(--morbido), transform 160ms var(--morbido); }
+@media (hover: hover) { .cmp .ore-q:hover:not(:disabled):not(.ore-q--capo) { background: color-mix(in srgb, var(--ink) 7%, transparent); } }
+.cmp .ore-q:active:not(:disabled) { transform: scale(.94); }
+.cmp .ore-q--capo { background: var(--f-acc); color: var(--f-su-acc); font-weight: 700; box-shadow: 0 6px 16px -8px color-mix(in srgb, var(--f-acc) 80%, transparent); }
+.cmp .ore-q--capo .ore-m { opacity: .85; }
+.cmp .ore-q--attivo { box-shadow: 0 0 0 3px var(--f-sup), 0 0 0 5px var(--f-acc), 0 8px 18px -8px color-mix(in srgb, var(--f-acc) 80%, transparent); }
+@keyframes ore-entra { from { transform: scale(.7); opacity: .3; } }
+.cmp .ore-q--entra { animation: ore-entra 320ms var(--morbido); }
+.cmp .ore-q:disabled { opacity: .3; cursor: default; }
+.cmp .ore-k { position: absolute; bottom: 2px; left: 50%; translate: -50% 0; font: 700 9px/1 "Archivo", sans-serif; letter-spacing: .06em; text-transform: uppercase; color: var(--ink); opacity: 0; }
+.cmp .ore-q--finisci .ore-k { opacity: 1; }
+.cmp .ore-q--finisci { box-shadow: inset 0 -2px 0 var(--ore-tufo); border-radius: 23px 23px 6px 6px; }
+.cmp .ore-q--capo.ore-q--finisci { border-radius: 23px; }
+.cmp .ore-q--capo .ore-k { color: inherit; }
+.cmp .ore-q .ore-punto { position: absolute; top: 6px; right: 9px; opacity: 0; }
+.cmp .ore-q--oltre .ore-punto { opacity: 1; }
+html.pd .cmp .ore-q { font: 600 17px/1 "Bodoni Moda", Georgia, serif; border-radius: 3px; }
+html.pd .cmp .ore-q .ore-m { font-style: italic; }
+
+/* oltre la fine: chi resta fuori e «Finisci alle …» */
+.cmp .ore-avviso { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; margin: 0 16px 10px; padding: 10px 12px 10px 14px; border-radius: 14px; background: var(--avviso); color: var(--su-avviso); font-size: 14px; line-height: 1.4; }
+.cmp .ore-avviso[hidden] { display: none; }
+.cmp .ore-avviso span { flex: 1 1 12em; }
+.cmp .ore-avviso .f-bottone { background: var(--su-avviso); color: var(--avviso); }
+html.pd .cmp .ore-avviso { border-radius: 3px; }
+@media (prefers-reduced-motion: no-preference) { .cmp .ore-avviso:not([hidden]) { animation: ore-dentro 300ms var(--morbido); } }
+.cmp .ore-piede { display: flex; align-items: center; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)) 20px; border-top: 1px solid var(--f-riga); background: var(--f-sup); }
+html.pd .cmp .ore-piede { background: var(--f-sup) var(--grana); }
+.cmp .ore-sel { flex: 1; min-width: 0; display: grid; margin: 0; font-size: 13.5px; line-height: 1.35; color: var(--ink2); }
+.cmp .ore-sel b { color: var(--ink); font-size: 15px; font-weight: 650; font-variant-numeric: tabular-nums; }
+html.pd .cmp .ore-sel b { font: 600 16px/1.25 "Bodoni Moda", Georgia, serif; }

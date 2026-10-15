@@ -7,6 +7,7 @@ import { codifica, MAX_NOME, MAX_GIORNI, MAX_TAPPE } from '../../../lib/itinerar
 import { prontoNelGiorno } from '../../../lib/itinerari/pronti';
 import { dataBreve, dataLunga } from '../../../lib/itinerari/date';
 import { TIPI_PAUSA, MARGINI, pauseDelGiorno } from '../../../lib/itinerari/pause';
+import { fraseFine } from '../../../lib/itinerari/ore';
 import { grezzo } from './stato.js';
 import { C } from './stato.js';
 import { S, foglio, chiudiFoglio, rinfresca, avvisa, annuncia, tempo } from './comuni.js';
@@ -109,8 +110,14 @@ export function apriTempo() {
 }
 
 // ---------- data e orari ----------
-const hhmm = m => `${String(Math.floor(m / 60)).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`;
-const minutiDa = s => { const m = /^(\d{1,2}):(\d{2})$/.exec(s); return m ? +m[1] * 60 + +m[2] : NaN; };
+// quando finisce il giorno g con le sue tappe (la giornata che si vede, con pause e margine), quali restano oltre la fine scelta e
+// la frase che lo dice; null per un giorno senza tappe o di gita. La usa anche ore.js
+export function fineDelGiorno(g) {
+  const Gx = G(g), D = X().giorni[g];
+  if (!Gx) return null;
+  const nome = id => T(id)?.breve ?? T(id)?.nome ?? id, tp = daFare(Gx), fuori = tp.filter(v => v.fine > D.fine).map(v => nome(v.id));
+  return { st: Gx.fine, oltre: Gx.fine > D.fine, fuori, frase: fraseFine(Gx.fine, D.fine, fuori, tp.length ? nome(tp[tp.length - 1].id) : undefined) };
+}
 // il campo della data: il giorno scritto per intero; un tocco apre il nostro calendario (calendario.js)
 const campoData = g => {
   const d = X().data ? piuGiorni(X().data, g) : null;
@@ -121,8 +128,8 @@ export function apriQuando() {
   const vivo = () => {
     const x = X(), D = x.giorni[g];
     return `${x.data ? `<ul class="f-date">${range(nG()).map(k => { const ch = (x.giorni[k].tappe ?? []).filter(id => chiusaIl(id, k)); return `<li><b>Giorno ${k + 1}</b><span>${dataLungaDi(k)}${x.giorni[k].gita ? `, gita: ${esc(T(x.giorni[k].gita).breve)}` : ''}</span>${ch.length ? `<span class="f-et f-et--attenzione">Chiuso: ${ch.map(id => esc(T(id).breve)).join(', ')}</span>` : '<span class="f-et">Tutto aperto</span>'}</li>`; }).join('')}</ul>` : ''}
-      <div class="f-campi-due"><label class="f-campo" for="f-inizio"><span>Inizio del giorno ${g + 1}</span><input id="f-inizio" type="time" step="900" min="05:00" max="20:00" value="${hhmm(D.inizio)}"></label>
-      <label class="f-campo" for="f-fine"><span>Fine del giorno ${g + 1}</span><input id="f-fine" type="time" step="900" min="06:00" max="23:45" value="${hhmm(D.fine)}"></label></div>
+      <div class="f-campi-due">${['inizio', 'fine'].map(k => `<div class="f-campo"><span id="f-${k}-et">${k === 'inizio' ? 'Inizio' : 'Fine'} del giorno ${g + 1}</span><button type="button" id="f-${k}" class="f-data f-data--ora" data-f="ore" data-v="${k}" aria-haspopup="dialog" aria-labelledby="f-${k}-et f-${k}-v">${ic('orologio')}<span id="f-${k}-v">${ora(D[k])}</span>${ic('abbassa', 18)}</button></div>`).join('')}</div>
+      ${(fd => (fd ? `<p class="f-ore-esito${fd.oltre ? ' f-ore-esito--oltre' : ''}">${esc(fd.frase)}</p>` : ''))(fineDelGiorno(g))}
       <label class="f-si" for="f-piedi"><input id="f-piedi" type="checkbox"${x.piedi ? ' checked' : ''}><span>Solo a piedi, senza metro, funicolari e autobus<small>Vale per tutti i giorni di questo itinerario.</small></span></label>
       <div class="f-conferma"><button type="button" class="f-bottone" data-f="fatto">Fatto</button>${x.data ? '<button type="button" class="f-bottone f-bottone--contorno" data-f="senza">Togli la data</button>' : ''}</div>
       ${nG() > 1 ? `<button type="button" class="f-bottone f-bottone--pericolo f-togli-giorno" data-f="togli-giorno">${ic('cestino', 18)}Elimina il giorno ${g + 1}</button>` : ''}`;
@@ -132,20 +139,10 @@ export function apriQuando() {
     <div id="f-vivo">${vivo()}</div>`, f => {
     f.onchange = e => {
       const t = e.target;
-      if (t.id === 'f-inizio' || t.id === 'f-fine') {
-        const D = X().giorni[g], v = minutiDa(t.value);
-        if (t.id === 'f-inizio' && (!Number.isFinite(v) || v < 300 || v > D.fine - 60)) { t.value = hhmm(D.inizio); avvisa('L\'inizio deve essere almeno un\'ora prima della fine.'); return; }
-        if (t.id === 'f-fine' && (!Number.isFinite(v) || v < D.inizio + 60)) { t.value = hhmm(D.fine); avvisa('La fine deve essere almeno un\'ora dopo l\'inizio.'); return; }
-        aggiorna(y => { y.giorni[g][t.id === 'f-inizio' ? 'inizio' : 'fine'] = v; });
-      }
       if (t.id === 'f-piedi') { aggiorna(y => { if (t.checked) y.piedi = true; else delete y.piedi; }); annuncia(t.checked ? 'Solo a piedi' : 'A piedi e con i mezzi'); }
     };
     f.onclick = async e => {
       if (e.target === f) { chiudiFoglio(); return; }
-      // un tocco in qualsiasi punto del campo dell'ora (anche sulle ore) apre la scelta dell'ora del telefono;
-      // con la tastiera non arriva un clic (e.detail è 0): si scrive come prima
-      const campo = e.target.closest?.('input[type="time"]');
-      if (campo) { if (e.detail && campo.showPicker) try { campo.showPicker(); } catch { /* il browser non lo permette qui: resta come prima */ } return; }
       const b = e.target.closest('[data-f]');
       if (!b) return;
       if (b.dataset.f === 'fatto') chiudiFoglio();
@@ -158,6 +155,16 @@ export function apriQuando() {
           if (!c) return;
           c.innerHTML = campoData(g); rinfresca(f, vivo()); c.focus({ preventScroll: true });
           if (X().data && X().data !== prima) annuncia(`Data: ${dataLunga(piuGiorni(X().data, g))}`);
+        });
+      }
+      if (b.dataset.f === 'ore') {
+        // la scelta dell'ora «Tutte le ore» si scarica solo quando serve, come il calendario
+        const { apriOre } = await import('./ore.js'), k = b.dataset.v, prima = { ...X().giorni[g] };
+        apriOre(g, k, modo => {
+          rinfresca(f, vivo());
+          $(`#f-${modo}`, f)?.focus({ preventScroll: true });
+          const D = X().giorni[g];
+          if (D.inizio !== prima.inizio || D.fine !== prima.fine) annuncia(`Dalle ${ora(D.inizio)} alle ${ora(D.fine)}`);
         });
       }
       if (b.dataset.f === 'senza') { aggiorna(y => { delete y.data; }); $('#f-data', f).innerHTML = campoData(g); rinfresca(f, vivo()); $('#f-data', f).focus(); annuncia('Data tolta'); }

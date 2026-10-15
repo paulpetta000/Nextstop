@@ -5,6 +5,9 @@ caratteri del sito. Regola di Enrico: 4 proposte molto diverse per pezzo, si ite
 
 # Tranche 2 · selettore dell'ora, giro 2 (15/10/2026) · https://claude.ai/artifact/WnmewL29t6LYVUMPFb73nd
 
+**Scelta di Enrico (16/10/2026): la 2 «Tutte le ore»**, costruita nel sito (specifica, «Ora: scelte di Enrico e costruzione»). La 4 e la 5
+restano qui, conservate per un domani.
+
 Enrico sul giro 1: via la 1 e la 3 («non mi piacciono proprio», in T1 e in T2); la 2 resta ma va migliorata (la fascia degli orari in
 mezzo era sbagliata: si fermava all'ultima tappa, 18:15, invece che alla fine scelta, ed era a strisce staccate) e deve sembrare un
 sito di lusso, bello e fluido; due proposte nuove. Cartella `rifiniture-2/ora-giro-2/` (dati, sfondi e `giornate.mjs` come il giro 1).

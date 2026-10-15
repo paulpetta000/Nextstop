@@ -1663,8 +1663,6 @@ html.pd .cmp .gita__carta { border-radius: 4px; background: var(--carta); box-sh
 html.pd .cmp .nome-it__t { white-space: normal; }
 html.pd .cmp .nome-it__b { align-items: flex-end; }
 html.pd .cmp .nome-it__b .ic { margin-bottom: .2em; }
-/* data e orari: tutto il campo apre il calendario o la scelta dell'ora */
-.cmp .f-campo input[type="time"] { cursor: pointer; }
 /* «I miei itinerari»: aperto ora, nuovo, gli altri */
 .cmp .f-sotto { margin: 0 0 8px; font-size: 13px; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; color: var(--ink2); }
 .cmp .f-aperto { padding: 12px 14px 14px; border-radius: 18px; background: var(--f-sup2); }
@@ -1704,6 +1702,15 @@ html.pd .cmp .f-data { border-radius: 4px; }
 html.pd .cmp .f-data > span { font: 600 18px/1.2 "Bodoni Moda", Georgia, serif; }
 html.pd .cmp .f-data .f-data__vuoto { font-style: italic; font-weight: 500; }
 /* il foglio del calendario: in src/styles/calendario.css, scaricato con calendario.js al primo tocco */
+/* l'ora «Tutte le ore» (scelta di Enrico del 16/10/2026): i due campi aprono il foglio delle ore (src/styles/ore.css, con ore.js);
+   sotto, quando finisci con le tappe del giorno, in giallo se vai oltre la fine scelta */
+.cmp .f-data--ora > span { font: 700 20px/1 "Archivo", system-ui, sans-serif; font-stretch: 82%; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+html.pd .cmp .f-data--ora > span { font: 600 20px/1 "Bodoni Moda", Georgia, serif; }
+.cmp .f-ore-esito { display: flex; gap: 10px; align-items: baseline; margin: 10px 0 0; font-size: 14.5px; line-height: 1.45; color: var(--ink2); }
+.cmp .f-ore-esito::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; background: var(--f-acc); translate: 0 -1px; }
+.cmp .f-ore-esito--oltre { padding: 10px 12px; border-radius: 12px; background: var(--avviso); color: var(--su-avviso); }
+.cmp .f-ore-esito--oltre::before { background: var(--cal-punto); }
+html.pd .cmp .f-ore-esito--oltre { border-radius: 3px; }
 
 /* ---------- Barre di scorrimento del tema 2: «Il nastro» (scelta di Enrico del 15/10/2026). Il tema 1 e il resto del sito hanno
    «Il filo», in global.css, che legge queste stesse variabili. ---------- */

@@ -105,7 +105,7 @@ toccare la grafica. Così la tranche 2 si chiude in pochi giorni e non resta fer
 ## Compiti
 - [x] Enrico approva questa specifica (15/10/2026).
 - [x] Pezzo 1 calendario: 3 proposte (giro 1 con le barre) → scelta la 3 con la fascia della 1 (sotto) → costruzione.
-- [ ] Pezzo 2 ora: 3 proposte ([giro 1](https://claude.ai/artifact/2CWqzAxgK1mdB9p9A9XKuK): via la 1 e la 3; [giro 2](https://claude.ai/artifact/WnmewL29t6LYVUMPFb73nd): 2 rifatta, 4 e 5 nuove, 15/10/2026) → scelta → costruzione.
+- [x] Pezzo 2 ora: 3 proposte ([giro 1](https://claude.ai/artifact/2CWqzAxgK1mdB9p9A9XKuK): via la 1 e la 3; [giro 2](https://claude.ai/artifact/WnmewL29t6LYVUMPFb73nd): 2 rifatta, 4 e 5 nuove, 15/10/2026) → scelta la 2 «Tutte le ore» (16/10/2026) → costruzione (sotto).
 - [ ] Pezzo 3 barra «Salvato» e menu: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 4 mappa e scheda intera: 4 proposte → scelta → costruzione.
 - [x] Pezzo 5 barre di scorrimento: scelte «Il filo» (tema 1 e sito) e «Il nastro» (tema 2) → costruzione su tutto il sito.
@@ -142,3 +142,16 @@ toccare la grafica. Così la tranche 2 si chiude in pochi giorni e non resta fer
   delle proposte non scelte (mangiare 1, 3, 4; schede 3 e 4), che nessuna pagina usava. Sull'anteprima: mediana 97 contro 95 della
   versione di prima, misurate di seguito; pagina 104,4 KB come prima.
 - **Su `main` e pubblicati** il 15/10/2026, col sì di Enrico.
+
+## Ora: scelte di Enrico e costruzione (15–16/10/2026)
+- Giro 1 ([proposte](https://claude.ai/artifact/2CWqzAxgK1mdB9p9A9XKuK)): via la 1 «La giornata» e la 3 «La frase»; la 2 «Tutte le ore» resta,
+  da migliorare (la fascia si fermava all'ultima tappa ed era a strisce staccate) e da rendere «un sito di lusso», bello e fluido.
+- Giro 2 ([proposte](https://claude.ai/artifact/WnmewL29t6LYVUMPFb73nd)): **scelta la 2 «Tutte le ore»** (16/10/2026). La 4 «Il quadrante» e la 5 «Le
+  ruote» restano conservate in `design/compositore/rifiniture-2/ora-giro-2/` per un domani. Enrico: «va bene il 2 e poi pubblica su `main`».
+- **Costruita**: `src/lib/itinerari/ore.ts` (limiti e passi di oggi, l'ora che si sposta con l'altra, tocco con «Inizio»/«Fine», stato
+  di ogni quarto e dei titoli, «Finisci alle …», la frase di quando finisci) con 7 test in `test/ore.test.mjs`, scritti prima;
+  il foglio è `compositore/ore.js`, una finestra (`<dialog id="ore">`) sopra «Data e orari», scaricata al primo tocco con il suo stile
+  (`src/styles/ore.css`) come il calendario, e salvata dal service worker per l'uso senza rete. Al posto dei due `input type="time"`
+  ci sono due pulsanti («Inizio del giorno N», «Fine del giorno N»); sotto, la frase «Finisci alle 18:22, 38 minuti prima delle
+  19:00. Ultima tappa: Duomo.», in giallo se vai oltre. Cambia una regola: se inizio e fine si avvicinano meno di un'ora, l'altra si
+  sposta con lei (prima c'era il messaggio d'errore). Prova nel sito: `design/compositore/costruzione/ore.cjs`.
