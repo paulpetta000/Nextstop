@@ -1761,57 +1761,7 @@ html.pd .cmp { --cal-fascia: #BACCEC; --cal-punto: #B07800; }
 html.pd .cmp .f-data { border-radius: 4px; }
 html.pd .cmp .f-data > span { font: 600 18px/1.2 "Bodoni Moda", Georgia, serif; }
 html.pd .cmp .f-data .f-data__vuoto { font-style: italic; font-weight: 500; }
-/* il foglio del calendario */
-.cmp #calendario { width: 100%; max-width: 100%; height: 100dvh; max-height: 100dvh; margin: 0; padding: 0; border: 0; background: var(--f-sup); color: var(--ink); overflow: hidden; }
-html.pd .cmp #calendario { background: var(--f-sup) var(--grana); }
-.cmp #calendario::backdrop { background: rgba(8, 10, 18, .55); }
-@media (min-width: 960px) {
-.cmp #calendario { width: 560px; height: min(820px, 92dvh); margin: auto; border-radius: var(--f-raggio, 24px); }
-}
-@media (prefers-reduced-motion: no-preference) {
-.cmp #calendario[open] { animation: cal-su 380ms var(--entra); }
-.cmp #calendario.cal--esce { animation: cal-giu 220ms var(--esce) forwards; }
-}
-@keyframes cal-su { from { translate: 0 48px; opacity: 0; } }
-@keyframes cal-giu { to { translate: 0 48px; opacity: 0; } }
-.cmp .cal { display: flex; flex-direction: column; height: 100%; }
-.cmp .cal-testa { display: flex; align-items: center; gap: 12px; padding: calc(16px + env(safe-area-inset-top, 0px)) 12px 4px 20px; }
-.cmp .cal-testa h2 { flex: 1; font: 600 26px/1.1 var(--f-titolo); letter-spacing: -.015em; }
-html.pc .cmp .cal-testa h2 { font-weight: 800; font-stretch: 80%; font-size: 30px; }
-.cmp .cal-nota { display: flex; align-items: center; gap: 8px; padding: 2px 20px 6px; font-size: 14px; color: var(--ink2); }
-.cmp .cal-punto { display: inline-block; flex: none; width: 7px; height: 7px; border-radius: 50%; background: var(--cal-punto); }
-.cmp .cal-scorre { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; padding: 0 16px 20px; }
-.cmp .cal-mese h3 { position: sticky; top: 0; z-index: 2; padding: 14px 4px 8px; background: var(--f-sup); font: 700 17px/1.1 var(--f-titolo); font-stretch: 112%; }
-.cmp .cal-mese h3::first-letter { text-transform: uppercase; }
-html.pd .cmp .cal-mese h3 { background: var(--f-sup) var(--grana); font: italic 500 22px/1.1 "Bodoni Moda", Georgia, serif; }
-html.pd .cmp .cal-mese h3::first-letter { text-transform: none; }
-.cmp .cal-mese__g { width: 100%; border-collapse: collapse; table-layout: fixed; }
-.cmp .cal-mese__g th { padding: 0 0 6px; border: 0; background: none; font: 600 12px/1.2 "Archivo", system-ui, sans-serif; letter-spacing: 0; text-transform: none; text-align: center; color: var(--ink2); white-space: nowrap; }
-.cmp .cal-mese__g td { position: relative; padding: 2px 0; height: 48px; border: 0; text-align: center; vertical-align: middle; }
-/* la fascia del viaggio, come nella proposta 1 */
-.cmp .cal-in::before { content: ""; position: absolute; inset: 4px 0; background: var(--cal-fascia); }
-.cmp .cal-in--primo::before { left: 50%; margin-left: -22px; border-radius: 22px 0 0 22px; }
-.cmp .cal-in--ultimo::before { right: 50%; margin-right: -22px; border-radius: 0 22px 22px 0; }
-.cmp .cal-in--primo.cal-in--ultimo::before { border-radius: 22px; }
-.cmp .cal-in:first-child::before { left: 2px; border-top-left-radius: 22px; border-bottom-left-radius: 22px; }
-.cmp .cal-in:last-child::before { right: 2px; border-top-right-radius: 22px; border-bottom-right-radius: 22px; }
-.cmp .cal-g { position: relative; z-index: 1; width: 44px; height: 44px; max-width: 100%; border-radius: 50%; display: inline-grid; place-items: center; font: 500 16px/1 "Archivo", system-ui, sans-serif; font-variant-numeric: tabular-nums; transition: background-color 200ms, color 200ms, transform 120ms var(--entra); }
-html.pd .cmp .cal-g { font: 600 17px/1 "Bodoni Moda", Georgia, serif; }
-@media (hover: hover) { .cmp .cal-g:hover:not(:disabled):not(.cal-g--scelto) { background: var(--f-sup2); } }
-.cmp .cal-g:active:not(:disabled) { transform: scale(.94); }
-.cmp .cal-g--prima { color: var(--ink2); font-weight: 400; }
-.cmp .cal-g--oggi { box-shadow: inset 0 0 0 1.5px var(--ink); font-weight: 700; }
-.cmp .cal-g--viaggio { color: var(--ink); font-weight: 700; }
-.cmp .cal-g--scelto { background: var(--f-acc); color: var(--f-su-acc); }
-.cmp .cal-g:disabled { opacity: .35; cursor: default; }
-.cmp .cal-k { position: absolute; bottom: 2px; left: 50%; translate: -50% 0; font: 700 9.5px/1 "Archivo", sans-serif; color: var(--ink); }
-.cmp .cal-g--scelto .cal-k { color: inherit; }
-.cmp .cal-g .cal-punto { position: absolute; top: 5px; right: 7px; width: 6px; height: 6px; }
-.cmp .cal-piede { display: flex; align-items: center; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)) 20px; border-top: 1px solid var(--f-riga); background: var(--f-sup); }
-.cmp .cal-sel { flex: 1; min-width: 0; display: grid; font-size: 13.5px; line-height: 1.35; color: var(--ink2); }
-.cmp .cal-sel b { color: var(--ink); font-size: 15px; font-weight: 650; }
-.cmp .cal-sel b::first-letter { text-transform: uppercase; }
-html.pd .cmp .cal-sel b { font: 600 16px/1.25 "Bodoni Moda", Georgia, serif; }
+/* il foglio del calendario: in src/styles/calendario.css, scaricato con calendario.js al primo tocco */
 
 /* ---------- Barre di scorrimento del tema 2: «Il nastro» (scelta di Enrico del 15/10/2026). Il tema 1 e il resto del sito hanno
    «Il filo», in global.css, che legge queste stesse variabili. ---------- */

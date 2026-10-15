@@ -7,6 +7,8 @@ import { T, X, nG } from './stato.js';
 import { aggiorna } from './viste.js';
 import { settimaneDelMese, chiuseDa, mesiDaMostrare, meseDopo, DATA_MIN, DATA_MAX } from '../../../lib/itinerari/calendario';
 import { piuGiorni, giornoSettimana, dataLunga, NOMI_GIORNI } from '../../../lib/itinerari/date';
+// lo stile arriva dentro questo file (così il service worker lo tiene con lui per l'uso senza rete) e si mette nella pagina la prima volta
+import STILE from '../../../styles/calendario.css?inline';
 
 const MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
 const nomeMese = m => `${MESI[+m.slice(5, 7) - 1]} ${m.slice(0, 4)}`;
@@ -53,7 +55,10 @@ function disegna() {
   </div>`;
 }
 
+// questo file si scarica al primo tocco sul campo della data (fogli.js): la prima volta prepara anche la finestra
+let pronto = false;
 export function apriCalendario(giorno, fatto) {
+  if (!pronto) { preparaCalendario(); pronto = true; }
   g = giorno; dopo = fatto;
   const d = el();
   disegna();
@@ -70,9 +75,11 @@ async function chiudi() {
   d.close();
 }
 
-export function preparaCalendario() {
+function preparaCalendario() {
   const d = el();
   if (!d) return;
+  const s = document.createElement('style');
+  s.dataset.stile = 'calendario'; s.textContent = STILE; document.head.append(s);
   d.addEventListener('close', () => { const f = dopo; dopo = null; f?.(); });
   d.addEventListener('cancel', e => { e.preventDefault(); chiudi(); });
   d.addEventListener('click', e => {

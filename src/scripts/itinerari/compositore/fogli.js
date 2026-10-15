@@ -12,7 +12,6 @@ import { C } from './stato.js';
 import { S, foglio, chiudiFoglio, rinfresca, avvisa, annuncia, tempo } from './comuni.js';
 import { aggiorna, aggiornaTutto, conAnnulla, mettiNome, NOMI_PAUSA, IC_PAUSA, nuovoGiorno, vaiAlGiorno, togliGiorno } from './viste.js';
 import { chiudiSchede } from './scheda.js';
-import { apriCalendario } from './calendario.js';
 
 const MAX_SALVATI = 50;
 
@@ -152,6 +151,8 @@ export function apriQuando() {
       if (b.dataset.f === 'fatto') chiudiFoglio();
       if (b.dataset.f === 'calendario') {
         const prima = X().data;
+        // il calendario si scarica solo quando serve (la prima schermata resta leggera); il service worker lo tiene anche senza rete
+        const { apriCalendario } = await import('./calendario.js');
         apriCalendario(g, () => {
           const c = $('#f-data', f);
           if (!c) return;

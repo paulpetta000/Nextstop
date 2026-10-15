@@ -1,11 +1,12 @@
 // Prova del calendario e delle barre nel sito (tranche 2, specifiche/compositore-rifiniture-2.md): apre «Data e orari», tocca il
 // campo, sceglie un martedì, controlla fascia, punti, riepilogo, tastiera ed Esc; axe con il calendario aperto; immagini.
 // Uso, con il sito acceso: node design/compositore/costruzione/calendario.cjs [porta] [cartella immagini]
+// Sull'anteprima di Vercel: al posto della porta l'indirizzo della pagina, poi la cartella, poi il link di accesso (_vercel_share)
 const fs = require('node:fs'), path = require('node:path');
 const puppeteer = require('C:/Users/Windows11/tools/controlli/node_modules/puppeteer-core');
 const AXE = 'C:/Users/Windows11/tools/controlli/node_modules/axe-core/axe.min.js';
 const PORTA = process.argv[2] || '4341', FOTO = process.argv[3];
-const BASE = `http://localhost:${PORTA}/napoli/itinerari/`;
+const BASE = PORTA.startsWith('http') ? PORTA : `http://localhost:${PORTA}/napoli/itinerari/`, ACCESSO = process.argv[4];
 const attesa = ms => new Promise(r => setTimeout(r, ms));
 if (FOTO) fs.mkdirSync(FOTO, { recursive: true });
 const MARTEDI = '2026-10-27';
@@ -15,6 +16,7 @@ const MARTEDI = '2026-10-27';
   const page = await browser.newPage();
   const errori = [], no = [], largo = [];
   let axeTot = 0, axeN = 0;
+  if (ACCESSO) await page.goto(ACCESSO, { waitUntil: 'networkidle0', timeout: 120000 });
   page.on('pageerror', e => errori.push(e.message));
   page.on('console', m => { if (m.type() === 'error' && !/favicon|Transition was skipped/.test(m.text())) errori.push(m.text()); });
   const ok = (dove, n, c) => { if (!c) no.push(`${dove}: ${n}`); };
