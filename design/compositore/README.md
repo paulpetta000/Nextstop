@@ -3,6 +3,25 @@
 Proposte con i dati veri di «Due giorni a Napoli»: orari, tempi a piedi e percorsi calcolati dal sito (giorno feriale), foto e
 caratteri del sito. Regola di Enrico: 4 proposte molto diverse per pezzo, si itera su quello che va. Specifica: `specifiche/compositore.md`.
 
+# Tranche 2 · selettore dell'ora, giro 2 (15/10/2026) · https://claude.ai/artifact/WnmewL29t6LYVUMPFb73nd
+
+Enrico sul giro 1: via la 1 e la 3 («non mi piacciono proprio», in T1 e in T2); la 2 resta ma va migliorata (la fascia degli orari in
+mezzo era sbagliata: si fermava all'ultima tappa, 18:15, invece che alla fine scelta, ed era a strisce staccate) e deve sembrare un
+sito di lusso, bello e fluido; due proposte nuove. Cartella `rifiniture-2/ora-giro-2/` (dati, sfondi e `giornate.mjs` come il giro 1).
+Tutte e tre si aprono dai campi «Inizio» e «Fine» di «Data e orari» in un foglio intero, come il calendario: testa con «Due giorni a
+Napoli · giorno N», la scelta, una riga gialla con «Finisci alle …» se vai oltre, il piede con le ore e «Fatto».
+- **Ora 2 · Tutte le ore (rifatta)**: la fascia va dall'inizio alla fine scelti, tutta di un pezzo (come un testo selezionato) e si
+  accende dal quarto toccato verso fuori; più chiara dove avanza tempo dopo l'ultima tappa; a righe gialle con il punto dove vai oltre;
+  «finisci» con la riga tufo sotto il quarto in cui finisci. Inizio e fine pieni, quello che stai scegliendo con l'anello; «Inizio →
+  Fine» in alto con l'indicatore che scorre; con «Fine», un tocco prima dell'inizio diventa il nuovo inizio. In D righe sottili d'orario.
+- **Ora 4 · Il quadrante**: 24 ore sul cerchio, mezzogiorno in alto e mezzanotte in basso; la notte (0–5) grigia; l'arco tra i due
+  punti è la giornata, dentro un anello sottile con tappe e pranzo, a trattini oltre la fine; al centro «Finisci alle 18:22, con Duomo».
+  Il punto non salta dall'altra parte della notte (resta alle 23:45 o alle 5:00).
+- **Ora 5 · Le ruote**: due rulli (inizio, fine) che girano e si fermano sul quarto d'ora; la riga della scelta attraversa tutte e
+  due; se una spinge l'altra, l'altra gira da sola. Sotto, il percorso del giorno con la linea a puntini tufo: prima tappa, pranzo,
+  quando finisci e la fine scelta (con il tempo in più, o in giallo quando vai oltre).
+- Comandi come il giro 1, con `ora-giro-2`: `node --no-liftoff …/ora-giro-2/genera.mjs`, `foto.cjs 4342 <cartella>`, `prove-tasti.cjs 4342`.
+
 # Tranche 2 · selettore dell'ora (15/10/2026) · https://claude.ai/artifact/2CWqzAxgK1mdB9p9A9XKuK
 
 Specifica `specifiche/compositore-rifiniture-2.md`, pezzo 2. Cartella `rifiniture-2/ora-giro-1/`, nata dal giro del calendario: il

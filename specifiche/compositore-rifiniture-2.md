@@ -105,7 +105,7 @@ toccare la grafica. Così la tranche 2 si chiude in pochi giorni e non resta fer
 ## Compiti
 - [x] Enrico approva questa specifica (15/10/2026).
 - [x] Pezzo 1 calendario: 3 proposte (giro 1 con le barre) → scelta la 3 con la fascia della 1 (sotto) → costruzione.
-- [ ] Pezzo 2 ora: 3 proposte ([giro 1](https://claude.ai/artifact/2CWqzAxgK1mdB9p9A9XKuK), 15/10/2026) → scelta → costruzione.
+- [ ] Pezzo 2 ora: 3 proposte ([giro 1](https://claude.ai/artifact/2CWqzAxgK1mdB9p9A9XKuK): via la 1 e la 3; [giro 2](https://claude.ai/artifact/WnmewL29t6LYVUMPFb73nd): 2 rifatta, 4 e 5 nuove, 15/10/2026) → scelta → costruzione.
 - [ ] Pezzo 3 barra «Salvato» e menu: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 4 mappa e scheda intera: 4 proposte → scelta → costruzione.
 - [x] Pezzo 5 barre di scorrimento: scelte «Il filo» (tema 1 e sito) e «Il nastro» (tema 2) → costruzione su tutto il sito.
