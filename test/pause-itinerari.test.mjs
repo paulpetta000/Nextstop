@@ -58,6 +58,23 @@ test('pause: con un locale all’ora di pranzo la pausa resta da parte, e torna 
   assert.deepEqual(giornata(C, senzaLocale).pause.map(p => [p.dove, p.min]), [['b', 45]]);
 });
 
+// Prova di Enrico del 15/10/2026: scelto il locale del pranzo («Mangia qui»), lo sposti una o più tappe dopo; se finisce dopo
+// le 14:30 tornavano la pausa pranzo e «Il menù del pranzo», come se il pranzo non ci fosse.
+test('pause: il locale del pranzo spostato dopo le 14:30 resta il pranzo', () => {
+  const C = citta({ locali: ['a'] });
+  // b 11:00–12:00, c 12:10–13:10, d 13:20–14:20, a (il locale) 14:30–15:30
+  const x = viaggio({ inizio: 660, tappe: ['b', 'c', 'd', 'a'] });
+  assert.equal(calcolaGiorno(C, x, 0).voci.find(v => v.id === 'a').inizio, 870);
+  assert.deepEqual(giornata(C, x).pause, [], 'niente pausa pranzo: si mangia nel locale');
+  assert.deepEqual(pauseDelGiorno(C, x.giorni[0], calcolaGiorno(C, x, 0)), [], 'senza pausa di base');
+});
+
+test('pause: un locale finito prima delle 12:30 non è il pranzo', () => {
+  const C = citta({ locali: ['a'] });
+  // a (il locale) 9:30–10:30: uno spuntino del mattino, la pausa pranzo resta
+  assert.deepEqual(giornata(C, viaggio()).pause.map(p => p.quale), ['pranzo']);
+});
+
 test('pause: il margine si aggiunge dopo ogni tratto, i minuti a piedi restano veri', () => {
   const C = citta(), x = viaggio({ pause: [] });
   const r = giornata(C, x, 10);

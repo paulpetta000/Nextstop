@@ -2,7 +2,8 @@
 // scelte da Enrico: la giornata calcolata va da una tappa all'altra; qui si aggiungono le pause (dopo una tappa) e il margine
 // (dopo ogni spostamento), e gli orari dopo slittano. I minuti a piedi e con i mezzi restano quelli veri.
 // La pausa pranzo c'è già: un'ora, dopo la tappa dove si mangia o quella che finisce più vicino alle 13. Se all'ora di pranzo
-// c'è un locale nel giorno la pausa resta da parte (nei dati) e torna se lo togli. Una pausa non va mai dopo l'ultima tappa.
+// c'è il locale del pranzo (anche spostato più avanti, fino alla cena) la pausa resta da parte (nei dati) e torna se lo togli.
+// Una pausa non va mai dopo l'ultima tappa.
 // Funzioni pure, senza DOM: le usa la pagina (src/scripts/itinerari/) e i test.
 import { tappaDi } from './calcolo.ts';
 import type { Avviso, Citta, Giorno, Pausa, QualePausa, Risultato, Voce } from './tipi';
@@ -33,8 +34,17 @@ export interface Giornata extends Risultato {
 const tappeDi = (r: Risultato) => r.voci.filter((v): v is VoceTappa => v.tipo === 'tappa');
 const daFare = (r: Risultato) => tappeDi(r).filter(v => !v.fatta);
 const locale = (C: Citta, id: string) => tappaDi(C, id)?.categoria === 'mangiare';
-// un locale nel giorno all'ora di pranzo: il pranzo è lì
-const conLocaleAPranzo = (C: Citta, r: Risultato) => daFare(r).some(v => locale(C, v.id) && v.inizio < PRANZO.a && v.fine > PRANZO.da);
+// da quest'ora un locale è la cena (regola nostra, 19:30)
+const CENA_DA = 1170;
+// Il locale del pranzo: un locale all'ora di pranzo, oppure uno che serve il pranzo, dopo la mattina e prima della cena.
+// Il secondo caso c'è perché il locale scelto con «Mangia qui» si può spostare più avanti nel giorno: anche dopo le 14:30 il pranzo
+// resta quello e non tornano la pausa e «Il menù del pranzo» (prova di Enrico, 15/10/2026).
+export const localeDelPranzo = (C: Citta, v: { id: string; inizio: number; fine: number }) => {
+  const t = tappaDi(C, v.id);
+  if (t?.categoria !== 'mangiare' || v.fine <= PRANZO.da) return false;
+  return v.inizio < PRANZO.a || ((!t.pasto || t.pasto.includes('pranzo')) && v.inizio < CENA_DA);
+};
+const conLocaleAPranzo = (C: Citta, r: Risultato) => daFare(r).some(v => localeDelPranzo(C, v));
 
 // L'ora da cui parte la giornata: l'ora scelta o, dal vivo, adesso (l'inizio della prima tappa meno il tratto per arrivarci)
 function partenza(r: Risultato) {

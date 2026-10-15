@@ -8,7 +8,7 @@
 import { $, esc, ic, ora, durataLunga, dopo, piano, computer } from './base.js';
 import { C, T, X, G, grezzo, daFare, tappeDi, nelViaggio, dataDi, giornoSett, dataLungaDi, caricaSchede, schedePronte } from './stato.js';
 import { minuti, orarioLocale, scenarioDi, tappaDi } from '../../../lib/itinerari/calcolo';
-import { pauseDelGiorno, sequenza } from '../../../lib/itinerari/pause';
+import { pauseDelGiorno, sequenza, localeDelPranzo } from '../../../lib/itinerari/pause';
 import { MAX_TAPPE } from '../../../lib/itinerari/link';
 import { S, assicuraSchede, foglio, chiudiFoglio, rinfresca, avvisa, annuncia, scorri, occupato } from './comuni.js';
 import { aggiorna, conAnnulla } from './viste.js';
@@ -33,7 +33,8 @@ export function momenti(g, Gx = G(g)) {
   const tp = daFare(Gx), out = [];
   if (!tp.length || (C.evento && tp.some(v => v.id === C.evento.id))) return out;   // il giorno di regata ha già il suo tempo per mangiare
   const dopoDi = id => { const i = tp.findIndex(v => v.id === id); return tp[i + 1]?.id ?? null; };
-  const conLocale = q => tp.some(v => locale(v.id) && v.inizio < PASTI[q].a && v.fine > PASTI[q].da);
+  // il pranzo c'è se c'è il suo locale, anche spostato dopo le 14:30 (pause.ts); la cena se un locale cade nell'ora di cena
+  const conLocale = q => tp.some(v => (q === 'pranzo' ? localeDelPranzo(C, v) : locale(v.id) && v.inizio < PASTI[q].a && v.fine > PASTI[q].da));
   const p = Gx.pause.find(x => x.quale === 'pranzo');
   if (p && !conLocale('pranzo')) out.push({ g, q: 'pranzo', dove: p.dove, ora: p.inizio, min: p.min, pausa: true, dopo: dopoDi(p.dove), nascosto: nascosto(g, 'pranzo') });
   const Ce = PASTI.cena, ultima = tp[tp.length - 1];

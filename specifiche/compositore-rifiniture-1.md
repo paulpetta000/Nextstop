@@ -128,3 +128,10 @@ Si toglie la voce (già decisa nella specifica madre, pezzo 5). Il tasto «Giorn
 - **Difetto trovato in passando**: dopo «Salva» o «Rinomina» il nome dell'itinerario veniva scritto anche sui nomi delle vie della
   mappa (stesso attributo `data-nome`); ora cambia solo il nome in alto.
 - Senza l'interruttore in fondo, in C e in D c'è spazio sotto l'ultima riga, così la barra in basso non la copre.
+
+## Dopo la prova dell'anteprima (Enrico, 15/10/2026)
+- **Bug: il pranzo scelto e poi spostato.** Scelto il locale con «Mangia qui», se lo sposti una o più tappe dopo e finisce oltre le
+  14:30 tornavano la pausa pranzo e «Il menù del pranzo». Ora il locale del pranzo è quello all'ora di pranzo **oppure** un locale
+  che serve il pranzo, dopo le 12:30 e prima della cena (19:30), dovunque sia nel giorno (`localeDelPranzo` in `pause.ts`,
+  usato anche da `pasto.js`). Uno spuntino del mattino finito prima delle 12:30 non conta. Test prima (fallito), poi verde.
+- Enrico: «per il resto va bene». Autorizzati i controlli e la pubblicazione su `main`.
