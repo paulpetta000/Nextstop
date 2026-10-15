@@ -1,6 +1,6 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 15/10/2026. Ramo `rifiniture-tranche-2` (Claude, da `main` `14e6e74`, cartella `nextstop-tranche2`): Fase 2 bis, tranche 2, [specifica](specifiche/compositore-rifiniture-2.md) in attesa dell'OK di Enrico. Tranche 1 su `main` e pubblicata._
+_Aggiornato il 15/10/2026. Ramo `rifiniture-tranche-2` (Claude, da `main` `14e6e74`, cartella `nextstop-tranche2`): Fase 2 bis, tranche 2, [specifica](specifiche/compositore-rifiniture-2.md) approvata da Enrico. **Giro 1 di calendario (3 proposte) e barre di scorrimento (2 + 2)** mandato a Enrico (https://claude.ai/artifact/Qz5QeweMwhtptB93dJPSVM), in attesa della scelta (`design/compositore/README.md`, «Tranche 2»). Tranche 1 su `main` e pubblicata._
 
 ## Compositore · proposte grafiche (ramo `compositore-pagina`, con Claude)
 

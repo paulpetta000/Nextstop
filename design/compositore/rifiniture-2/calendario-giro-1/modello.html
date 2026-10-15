@@ -1,0 +1,53 @@
+<title>Calendario e barre</title>
+<meta name="description" content="Compositore di Nextstop, tranche 2: tre proposte di calendario e due più due proposte di barre di scorrimento, nei temi 1 e 2, in chiaro e in scuro.">
+<style>
+/*CARATTERI*/
+/*STILE*/
+</style>
+<header class="prova" aria-label="Scegli cosa guardare">
+  <div class="prova__riga">
+    <div class="prova__gruppo" role="group" aria-label="Pezzo">
+      <button type="button" data-p="pezzo" data-v="cal" aria-pressed="true">Calendario</button>
+      <button type="button" data-p="pezzo" data-v="barre" aria-pressed="false">Barre</button>
+    </div>
+    <div class="prova__gruppo" role="group" aria-label="Chiaro o scuro">
+      <button type="button" data-p="tema" data-v="light" aria-pressed="true">Chiaro</button>
+      <button type="button" data-p="tema" data-v="dark" aria-pressed="false">Scuro</button>
+    </div>
+  </div>
+  <div class="prova__riga">
+    <div class="prova__gruppo prova__proposte" role="group" aria-label="Proposta"></div>
+    <div class="prova__gruppo" role="group" aria-label="Vista">
+      <button type="button" data-p="vista" data-v="c" aria-pressed="true" aria-label="T1, Mappa prima">T1</button>
+      <button type="button" data-p="vista" data-v="d" aria-pressed="false" aria-label="T2, Le pagine">T2</button>
+    </div>
+    <div class="prova__gruppo prova__giorni" role="group" aria-label="Itinerario">
+      <button type="button" data-p="it" data-v="due-giorni" aria-pressed="true" aria-label="2 g, Due giorni a Napoli">2 g</button>
+      <button type="button" data-p="it" data-v="tre-giorni" aria-pressed="false" aria-label="3 g, Tre giorni a Napoli">3 g</button>
+    </div>
+  </div>
+  <p class="prova__nome"></p>
+</header>
+
+<main class="scena">
+  <img class="scena__sfondo" alt="">
+  <div class="scena__velo"></div>
+  <section class="foglio" aria-labelledby="foglio-titolo">
+    <div class="f-scorre">
+      <div class="f-testa"><span class="f-maniglia"></span><h1 id="foglio-titolo">Data e orari</h1>
+        <button type="button" class="f-chiudi" aria-label="Chiudi" data-a="chiudi">
+          <svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <div class="f-corpo"></div>
+    </div>
+    <div class="finta" aria-hidden="true"><span class="finta__pollice"></span></div>
+  </section>
+</main>
+
+<dialog class="mesi" aria-labelledby="mesi-titolo"></dialog>
+<p class="annuncio vh" aria-live="polite"></p>
+
+<script>
+/*APP*/
+</script>

@@ -33,3 +33,6 @@ design/compositore/mangiare-giro-*/immagini/*.png
 # misure in più di pezzi.mjs (due livelli): si rifanno con lo script
 design/compositore/mappa-giro-*/vicini-*/
 design/compositore/mappa-giro-*/livello1.json
+# Tranche 2: la pagina pubblicata e le immagini singole si rifanno con genera.mjs e foto.cjs; restano i confronti
+design/compositore/rifiniture-2/*/proposte.html
+design/compositore/rifiniture-2/*/immagini/

@@ -1,6 +1,6 @@
 # Compositore · rifiniture, tranche 2: grafica nuova (con le proposte)
 
-_Specifica del 15/10/2026, **da approvare**. Ramo `rifiniture-tranche-2` (Claude, cartella `nextstop-tranche2`), nato da `main` (`14e6e74`).
+_Specifica del 15/10/2026, **approvata da Enrico lo stesso giorno**: ordine dei pezzi ok, schede a parte dopo il pezzo 4, barre di scorrimento insieme al calendario, il resto del sito prende la barra del tema 1. Ramo `rifiniture-tranche-2` (Claude, cartella `nextstop-tranche2`), nato da `main` (`14e6e74`).
 Origine: [ROADMAP · Fase 2 bis, tranche 2](../ROADMAP.md). Specifiche madri: [compositore.md](compositore.md),
 [tranche 1](compositore-rifiniture-1.md). «Tema 1» = vista C «Mappa prima», «tema 2» = vista D «Le pagine»._
 
@@ -103,8 +103,8 @@ toccare la grafica. Così la tranche 2 si chiude in pochi giorni e non resta fer
 4. Il resto del sito (home, Fonti, Dove mangiare) non ha temi 1 e 2: prende la barra scelta per il **tema 1**? (Consiglio sì.)
 
 ## Compiti
-- [ ] Enrico approva questa specifica.
-- [ ] Pezzo 1 calendario: 3 proposte → scelta → costruzione.
+- [x] Enrico approva questa specifica (15/10/2026).
+- [ ] Pezzo 1 calendario: 3 proposte (giro 1 con le barre, `design/compositore/rifiniture-2/calendario-giro-1/`) → scelta → costruzione.
 - [ ] Pezzo 2 ora: 3 proposte → scelta → costruzione.
 - [ ] Pezzo 3 barra «Salvato» e menu: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 4 mappa e scheda intera: 4 proposte → scelta → costruzione.

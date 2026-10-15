@@ -3,6 +3,22 @@
 Proposte con i dati veri di «Due giorni a Napoli»: orari, tempi a piedi e percorsi calcolati dal sito (giorno feriale), foto e
 caratteri del sito. Regola di Enrico: 4 proposte molto diverse per pezzo, si itera su quello che va. Specifica: `specifiche/compositore.md`.
 
+# Tranche 2 · calendario e barre di scorrimento (15/10/2026) · https://claude.ai/artifact/Qz5QeweMwhtptB93dJPSVM
+
+Specifica `specifiche/compositore-rifiniture-2.md` (pezzi 1 e 5 insieme, su richiesta di Enrico). Cartella
+`rifiniture-2/calendario-giro-1/`: il foglio «Data e orari» sopra la pagina vera di oggi (immagini in `sfondi/`), con «Due giorni» e
+«Tre giorni» e i giorni di chiusura delle tappe presi da `tappe.yaml` (con «Due giorni»: il martedì MANN e Cappella Sansevero il
+giorno 1, San Martino il giorno 2; il mercoledì Palazzo Reale il giorno 2). In alto si sceglie pezzo, proposta, vista, chiaro/scuro.
+- **Calendario 1 · Il mese**: il mese si apre sotto il campo; frecce o dito di lato per gli altri mesi; il viaggio come una fascia.
+- **Calendario 2 · La striscia**: i giorni in fila (in D francobolli dentellati); sotto ogni giorno quante tappe trovi chiuse partendo da lì.
+- **Calendario 3 · Tutti i mesi**: foglio intero, mesi uno sotto l'altro; punto sui giorni a rischio, legenda in alto, viaggio con la
+  linea a puntini color tufo, riepilogo e «Fatto» in basso.
+- **Barre, tema 1**: 1 «Il filo» (sottile, pervinca), 2 «Il percorso» (traccia a puntini, pollice pieno). **Tema 2**: 1 «La matita»
+  (tratto di grafite su un filo), 2 «Il nastro» (blu inchiostro, cucito). Sul telefono la barra vera la disegna il sistema: nella
+  prova è ridisegnata uguale (`.finta`), al computer è quella vera (`::-webkit-scrollbar`; Firefox solo colore e spessore).
+- Comandi: `node design/compositore/rifiniture-2/calendario-giro-1/genera.mjs` scrive `proposte.html`; con il server
+  (preview «proposte2», porta 4342) `foto.cjs 4342 <cartella>` fa axe, scorrimento di lato a 320 e 390 px, errori e immagini.
+
 # Costruzione nel sito (14/10/2026)
 
 Il compositore scelto è nel sito (`/napoli/itinerari/`): codice in `src/scripts/itinerari/compositore/`, stile in
