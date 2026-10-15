@@ -228,8 +228,8 @@ document.addEventListener('click', e => {
     const k = b.dataset.p, v = b.dataset.v;
     S[k] = k === 'p' ? +v : v;
     if (k === 'pezzo') S.p = 1;
-    if (k === 'vista' && S.pezzo === 'barre') S.p = Math.min(S.p, 2);
-    if (k !== 'tema' && dlg.open) dlg.close();
+    if (k === 'v' && S.pezzo === 'barre') S.p = Math.min(S.p, 2);
+    if (k !== 't' && dlg.open) dlg.close();
     disegna({ fuoco: `.prova [data-p="${k}"][data-v="${v}"]` });
     if (k === 'pezzo' || k === 'p') scorre.scrollTop = 0;
     return;

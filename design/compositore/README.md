@@ -17,7 +17,8 @@ giorno 1, San Martino il giorno 2; il mercoledì Palazzo Reale il giorno 2). In 
   (tratto di grafite su un filo), 2 «Il nastro» (blu inchiostro, cucito). Sul telefono la barra vera la disegna il sistema: nella
   prova è ridisegnata uguale (`.finta`), al computer è quella vera (`::-webkit-scrollbar`; Firefox solo colore e spessore).
 - Comandi: `node design/compositore/rifiniture-2/calendario-giro-1/genera.mjs` scrive `proposte.html`; con il server
-  (preview «proposte2», porta 4342) `foto.cjs 4342 <cartella>` fa axe, scorrimento di lato a 320 e 390 px, errori e immagini.
+  (preview «proposte2», porta 4342) `foto.cjs 4342 <cartella>` fa axe, scorrimento di lato a 320 e 390 px, errori e immagini;
+  `prove-tasti.cjs` prova i tasti della striscia in alto (nata dal difetto trovato da Enrico: T1/T2 e chiaro/scuro non cambiavano niente).
 
 # Costruzione nel sito (14/10/2026)
 
