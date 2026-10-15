@@ -1,0 +1,52 @@
+<title>Ora del giorno</title>
+<meta name="description" content="Compositore di Nextstop, tranche 2: tre proposte per scegliere l'ora di inizio e di fine del giorno, nei temi 1 e 2, in chiaro e in scuro, con le giornate vere di «Due giorni a Napoli».">
+<style>
+/*CARATTERI*/
+/*STILE*/
+</style>
+<header class="prova" aria-label="Scegli cosa guardare">
+  <div class="prova__riga">
+    <div class="prova__gruppo" role="group" aria-label="Proposta">
+      <button type="button" data-p="p" data-v="1" aria-pressed="true" aria-label="Proposta 1, La giornata">1</button>
+      <button type="button" data-p="p" data-v="2" aria-pressed="false" aria-label="Proposta 2, Tutte le ore">2</button>
+      <button type="button" data-p="p" data-v="3" aria-pressed="false" aria-label="Proposta 3, La frase">3</button>
+    </div>
+    <div class="prova__gruppo" role="group" aria-label="Chiaro o scuro">
+      <button type="button" data-p="t" data-v="light" aria-pressed="true">Chiaro</button>
+      <button type="button" data-p="t" data-v="dark" aria-pressed="false">Scuro</button>
+    </div>
+  </div>
+  <div class="prova__riga">
+    <div class="prova__gruppo" role="group" aria-label="Vista">
+      <button type="button" data-p="v" data-v="c" aria-pressed="true" aria-label="T1, Mappa prima">T1</button>
+      <button type="button" data-p="v" data-v="d" aria-pressed="false" aria-label="T2, Le pagine">T2</button>
+    </div>
+    <div class="prova__gruppo" role="group" aria-label="Giorno">
+      <button type="button" data-p="g" data-v="0" aria-pressed="true" aria-label="Giorno 1, centro storico">Giorno 1</button>
+      <button type="button" data-p="g" data-v="1" aria-pressed="false" aria-label="Giorno 2, dal Vomero al mare">Giorno 2</button>
+    </div>
+  </div>
+  <p class="prova__nome"></p>
+</header>
+
+<main class="scena">
+  <img class="scena__sfondo" alt="">
+  <div class="scena__velo"></div>
+  <section class="foglio" aria-labelledby="foglio-titolo">
+    <div class="f-scorre">
+      <div class="f-testa"><span class="f-maniglia"></span><h1 id="foglio-titolo">Data e orari</h1>
+        <button type="button" class="f-chiudi" aria-label="Chiudi" data-a="chiudi">
+          <svg class="ic" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+      <div class="f-corpo"></div>
+    </div>
+  </section>
+</main>
+
+<dialog class="ore" id="ore" aria-labelledby="ore-titolo"></dialog>
+<p class="annuncio vh" aria-live="polite"></p>
+
+<script>
+/*APP*/
+</script>

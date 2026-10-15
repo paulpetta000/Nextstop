@@ -1,0 +1,280 @@
+/* Tranche 2 · selettore dell'ora. Colori di C e D come in src/styles/compositore.css; fascia e punto come il calendario costruito (--cal-fascia, --cal-punto). */
+:root { --entra: cubic-bezier(.16, 1, .3, 1); --esce: cubic-bezier(.7, 0, .84, 0); --prova: 104px; }
+html.vc {
+  --fondo: #E6E9F2; --sup: #FFFFFF; --sup2: #F0F2F8; --riga: #D7DBE7; --ink: #10173A; --ink2: #4B5376;
+  --acc: #4B5DBE; --su-acc: #FFFFFF; --acc-chiaro: #E5E9FB; --fuoco: #4B5DBE; --avviso: #FBEFD0; --su-avviso: #5E4300;
+  --f-sup: #FFFFFF; --f-sup2: #F0F2F8; --f-riga: #D7DBE7; --f-raggio: 28px; --f-titolo: "Archivo", system-ui, sans-serif;
+  --tufo: #E0A51B; --punto: #C98A00; --cifre: "Archivo", system-ui, sans-serif;
+  color-scheme: light;
+}
+html.vc[data-theme="dark"] {
+  --fondo: #0A0F27; --sup: #131A3B; --sup2: #1B2350; --riga: #27306A; --ink: #EEF0FA; --ink2: #A8AFD3;
+  --acc: #8C9BEA; --su-acc: #0A0F27; --acc-chiaro: #1E275E; --fuoco: #8C9BEA; --avviso: #33290F; --su-avviso: #F6DA8E;
+  --f-sup: #131A3B; --f-sup2: #1B2350; --f-riga: #27306A; --tufo: #F0BE3E; --punto: #F0BE3E;
+  color-scheme: dark;
+}
+html.vd {
+  --fondo: #FBFAF7; --carta: #FFFFFF; --sup: #F3F0EA; --sup2: #E9E4DA; --riga: #E2DCD0; --ink: #1B1A17; --ink2: #5F5A50;
+  --acc: #1F4FA0; --su-acc: #FFFFFF; --acc-chiaro: #E6EDF8; --fuoco: #1F4FA0; --avviso: #FBEFD0; --su-avviso: #5E4300;
+  --f-sup: #FFFFFF; --f-sup2: #F3F0EA; --f-riga: #E2DCD0; --f-raggio: 22px; --f-titolo: "Bodoni Moda", Georgia, serif;
+  --tufo: #E0A51B; --punto: #C98A00; --cifre: "Bodoni Moda", Georgia, serif;
+  --ombra-cartolina: 0 1px 2px rgba(40, 34, 20, .08), 0 18px 34px -20px rgba(40, 34, 20, .4);
+  --grana: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4 0 0 0 0 .35 0 0 0 0 .3 0 0 0 .06 0'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23g)'/%3E%3C/svg%3E");
+  color-scheme: light;
+}
+html.vd[data-theme="dark"] {
+  --fondo: #141311; --carta: #1F1D1A; --sup: #262320; --sup2: #302C27; --riga: #38332D; --ink: #F2EEE6; --ink2: #B6AEA1;
+  --acc: #8FB0F0; --su-acc: #141311; --acc-chiaro: #1E2638; --fuoco: #8FB0F0; --avviso: #33290F; --su-avviso: #F6DA8E;
+  --f-sup: #1F1D1A; --f-sup2: #2A2723; --f-riga: #38332D; --tufo: #F0BE3E; --punto: #F0BE3E;
+  --ombra-cartolina: 0 1px 0 rgba(255, 255, 255, .04) inset, 0 18px 34px -20px rgba(0, 0, 0, .85);
+  color-scheme: dark;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; background: var(--fondo); }
+body { margin: 0; min-height: 100dvh; background: var(--fondo); color: var(--ink); font: 400 16px/1.5 "Archivo", system-ui, sans-serif; -webkit-font-smoothing: antialiased; overflow: hidden; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; margin: 0; cursor: pointer; -webkit-tap-highlight-color: transparent; }
+button:disabled { cursor: default; }
+h1, h2, h3, p, ul { margin: 0; }
+ul { padding: 0; list-style: none; }
+.ic { display: block; flex: none; }
+:focus-visible { outline: 3px solid var(--fuoco); outline-offset: 2px; }
+::selection { background: color-mix(in srgb, var(--acc) 30%, transparent); }
+.vh { position: absolute !important; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+/* ---------- la striscia della prova: fuori dal disegno, grigia in tutti e due i temi ---------- */
+.prova { position: fixed; z-index: 30; top: 0; left: 0; right: 0; display: grid; gap: 6px; padding: calc(8px + env(safe-area-inset-top, 0px)) 10px 8px; background: #2A2C31; color: #F2F2F2; font-size: 13px; }
+.prova__riga { display: flex; gap: 6px; flex-wrap: wrap; justify-content: space-between; }
+.prova__gruppo { display: flex; gap: 2px; padding: 2px; border-radius: 999px; background: #3A3D44; }
+.prova__gruppo[hidden] { display: none; }
+.prova button { min-width: 40px; min-height: 36px; padding: 0 12px; border-radius: 999px; font-weight: 600; color: #E8E8EA; }
+.prova button[aria-pressed="true"] { background: #F2F2F2; color: #1A1B1E; }
+.prova :focus-visible { outline-color: #F2F2F2; }
+.prova__nome { font-size: 12.5px; line-height: 1.4; color: #D4D5D9; }
+.prova__nome b { color: #fff; font-weight: 650; }
+.prova__nome span { display: block; margin-top: 2px; color: #BFC1C7; }
+
+/* ---------- la scena: la pagina vera dietro, il velo, il foglio ---------- */
+.scena { position: fixed; inset: var(--prova) 0 0 0; overflow: hidden; }
+.scena__sfondo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
+.scena__velo { position: absolute; inset: 0; background: rgba(8, 10, 18, .5); }
+.foglio { position: absolute; left: 0; right: 0; bottom: 0; max-height: calc(100% - 24px); display: flex; flex-direction: column; border-radius: var(--f-raggio) var(--f-raggio) 0 0; background: var(--f-sup); color: var(--ink); box-shadow: 0 -20px 60px -20px rgba(0, 0, 0, .35); overflow: hidden; }
+html.vd .foglio { background: var(--f-sup) var(--grana); }
+@media (min-width: 960px) {
+  .foglio { left: 50%; right: auto; bottom: auto; top: 50%; width: 560px; max-height: calc(100% - 64px); translate: -50% -50%; border-radius: var(--f-raggio); }
+}
+.f-scorre { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; }
+.f-testa { position: sticky; top: 0; z-index: 3; display: flex; align-items: center; gap: 12px; padding: 22px 12px 10px 20px; background: var(--f-sup); }
+html.vd .f-testa { background: var(--f-sup) var(--grana); }
+.f-maniglia { position: absolute; top: 8px; left: 50%; width: 40px; height: 5px; margin-left: -20px; border-radius: 3px; background: var(--f-riga); }
+.f-testa h1 { flex: 1; font: 600 23px/1.15 var(--f-titolo); letter-spacing: -.01em; }
+.f-chiudi { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--f-sup2); }
+.f-corpo { padding: 4px 20px 26px; display: grid; gap: 18px; }
+.f-nota { font-size: 14px; color: var(--ink2); }
+.f-et { display: inline-flex; align-items: center; gap: 4px; padding: 2px 9px; border-radius: 999px; font-size: 12.5px; font-weight: 600; background: var(--f-sup2); color: var(--ink2); }
+.f-et--attenzione { background: var(--avviso); color: var(--su-avviso); }
+.f-bottone { min-height: 48px; padding: 0 18px; border-radius: 999px; display: inline-flex; align-items: center; justify-content: center; gap: 6px; font-weight: 650; background: var(--acc); color: var(--su-acc); white-space: nowrap; }
+.f-bottone--contorno { background: transparent; color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--f-riga); }
+.f-conferma { display: flex; flex-wrap: wrap; gap: 10px; }
+.f-conferma .f-bottone:first-child { flex: 1; }
+.f-link-b { min-height: 44px; padding: 0 4px; font-size: 14.5px; font-weight: 650; color: var(--acc); text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1.5px; }
+.f-chip { flex: none; min-height: 40px; padding: 0 14px; border-radius: 999px; font-size: 14.5px; font-weight: 600; box-shadow: inset 0 0 0 1.5px var(--f-riga); }
+.f-campi-due { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.f-campo { display: grid; gap: 6px; font-size: 14px; font-weight: 650; }
+.f-campo input { height: 50px; width: 100%; min-width: 0; padding: 0 12px; border-radius: 14px; border: 1.5px solid var(--f-riga); background: var(--f-sup2); color: var(--ink); font: inherit; font-weight: 500; }
+.f-spunta { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; }
+.f-spunta input { width: 22px; height: 22px; margin: 2px 0 0; accent-color: var(--acc); }
+.f-spunta small { display: block; font-size: 12.5px; color: var(--ink2); }
+
+/* il campo della data: un pulsante che dice il giorno per intero */
+.campo { display: grid; gap: 6px; }
+.campo__et { font-size: 14px; font-weight: 650; }
+.campo__b { display: flex; align-items: center; gap: 12px; min-height: 56px; padding: 0 16px; border-radius: 16px; border: 1.5px solid var(--f-riga); background: var(--f-sup2); text-align: left; font-weight: 600; transition: border-color 200ms, box-shadow 300ms var(--entra); }
+.campo__b span { flex: 1; }
+.campo__b .ic:first-child { color: var(--acc); }
+.campo__b--vuoto span { color: var(--ink2); font-weight: 500; }
+.campo__b[aria-expanded="true"] { border-color: var(--acc); box-shadow: 0 0 0 4px color-mix(in srgb, var(--acc) 18%, transparent); }
+.campo__b .ic:last-child { transition: rotate 300ms var(--entra); }
+.campo__b[aria-expanded="true"] .ic:last-child { rotate: 180deg; }
+html.vd .campo__b { border-radius: 4px; background: var(--carta); box-shadow: var(--ombra-cartolina); border-color: transparent; }
+html.vd .campo__b[aria-expanded="true"] { box-shadow: var(--ombra-cartolina), 0 0 0 2px var(--acc); }
+html.vd .campo__b span { font: 600 18px/1.2 "Bodoni Moda", Georgia, serif; }
+html.vd .campo__b--vuoto span { font: italic 500 18px/1.2 "Bodoni Moda", Georgia, serif; }
+
+/* riepilogo dei giorni (come nel sito, «Giorno 1 · giovedì 15 ottobre · Tutto aperto») */
+.riep { display: grid; gap: 0; border-top: 1px solid var(--f-riga); }
+.riep li { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 10px; padding: 10px 0; border-bottom: 1px solid var(--f-riga); font-size: 14.5px; }
+.riep b { font-weight: 650; min-width: 4.6em; }
+.riep li > span:nth-child(2) { flex: 1; }
+html.vd .riep b { font: 600 15px/1.2 "Bodoni Moda", Georgia, serif; }
+
+/* ---------- come nel calendario costruito: la fascia della giornata e il punto giallo ---------- */
+html.vc { --fascia: #B5C0F0; --punto: #B07800; }
+html.vd { --fascia: #BACCEC; --punto: #B07800; }
+html.vc[data-theme="dark"] { --fascia: #2F3B86; --punto: #F0BE3E; }
+html.vd[data-theme="dark"] { --fascia: #2C3E66; --punto: #F0BE3E; }
+.f-chip { min-height: 44px; display: inline-flex; align-items: center; gap: 6px; }
+.f-chip[aria-pressed="true"] { background: var(--acc); color: var(--su-acc); box-shadow: none; }
+.f-bottone--piccolo { min-height: 44px; padding: 0 16px; font-size: 14.5px; }
+.tondino { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--f-sup2); color: var(--ink); transition: transform 120ms var(--entra), opacity 150ms; }
+.tondino:active:not(:disabled) { transform: scale(.94); }
+.tondino:disabled { opacity: .35; }
+.punto { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--punto); }
+.annuncio { margin: 0; }
+/* i numeri che cambiano salgono un poco (solo posizione e trasparenza) */
+@keyframes rotola { from { translate: 0 .35em; opacity: .25; } }
+.rotola { display: inline-block; animation: rotola 200ms var(--entra); }
+
+/* «cosa cambia», sotto le proposte 1 e 2 */
+.esito { display: grid; gap: 8px; justify-items: start; padding: 12px 14px; border-radius: 14px; background: var(--f-sup2); font-size: 14.5px; line-height: 1.45; }
+.esito--oltre { background: var(--avviso); color: var(--su-avviso); }
+.esito--oltre .f-bottone--contorno { color: var(--su-avviso); box-shadow: inset 0 0 0 1.5px currentColor; }
+.esito__poco { font-size: 13.5px; color: var(--ink2); }
+html.vd .esito { border-radius: 3px; background: var(--sup); }
+html.vd .esito--oltre { background: var(--avviso); }
+
+/* ---------- proposta 1 · la giornata ---------- */
+.o1 { display: grid; gap: 12px; }
+.o1-valori { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px 12px; }
+.o1-val { display: grid; grid-template-columns: 44px 1fr 44px; grid-template-rows: auto 44px; align-items: center; text-align: center; padding: 6px 6px 8px; border-radius: 16px; background: var(--f-sup2); }
+.o1-et { grid-column: 1 / -1; font-size: 13px; font-weight: 650; color: var(--ink2); }
+.o1-num { font: 800 30px/1 var(--cifre); font-stretch: 72%; font-variant-numeric: tabular-nums; letter-spacing: -.01em; }
+.o1-val .tondino { background: var(--f-sup); }
+html.vd .o1-val { border-radius: 3px; background: var(--carta); box-shadow: var(--ombra-cartolina); }
+html.vd .o1-num { font: 600 30px/1 "Bodoni Moda", Georgia, serif; }
+html.vd .o1-val .tondino { background: var(--sup); }
+/* la pista: le tappe sopra, il binario con la fascia, le maniglie, le ore sotto */
+.o1-pista { position: relative; height: 104px; margin: 4px 14px 0; touch-action: pan-y; user-select: none; -webkit-user-select: none; cursor: pointer; }
+.o1-giorno { position: absolute; left: 0; right: 0; top: 22px; height: 16px; }
+.o1-b { position: absolute; top: 0; height: 100%; border-radius: 3px; transition: left 220ms var(--entra), width 220ms var(--entra); }
+.o1-b--tappa { background: var(--acc); }
+.o1-b--pausa { background: var(--tufo); }
+.o1-b--fuori { background: repeating-linear-gradient(135deg, var(--punto) 0 3px, transparent 3px 6px); box-shadow: inset 0 0 0 1px var(--punto); }
+.o1-binario { position: absolute; left: 0; right: 0; top: 52px; height: 8px; border-radius: 4px; background: var(--f-sup2); box-shadow: inset 0 0 0 1px var(--f-riga); }
+.o1-fascia { position: absolute; top: 0; bottom: 0; border-radius: 4px; background: var(--fascia); transition: left 220ms var(--entra), width 220ms var(--entra); }
+.o1-pollice { position: absolute; top: 34px; width: 44px; height: 44px; margin-left: -22px; display: grid; place-items: center; border-radius: 50%; touch-action: none; transition: left 220ms var(--entra); }
+.o1-pollice::before { content: ""; width: 26px; height: 26px; border-radius: 50%; background: var(--acc); box-shadow: 0 0 0 3px var(--f-sup), 0 2px 8px rgba(10, 15, 39, .3); transition: transform 150ms var(--entra); }
+.o1-pollice--fine::before { background: var(--f-sup); box-shadow: inset 0 0 0 3px var(--acc), 0 0 0 3px var(--f-sup), 0 2px 8px rgba(10, 15, 39, .3); }
+.o1-pollice.attivo::before { transform: scale(1.15); }
+.o1-pista--presa .o1-pollice, .o1-pista--presa .o1-fascia { transition: none; }
+.o1-bolla { position: absolute; bottom: 46px; left: 50%; translate: -50% 4px; padding: 3px 8px; border-radius: 8px; background: var(--ink); color: var(--f-sup); font-size: 13px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; opacity: 0; pointer-events: none; transition: opacity 150ms, translate 150ms var(--entra); }
+.o1-pollice.attivo .o1-bolla { opacity: 1; translate: -50% 0; }
+.o1-pollice:focus-visible { outline-offset: -2px; }
+.o1-segno { position: absolute; top: 2px; width: 2px; height: 40px; margin-left: -1px; background: var(--ink); transition: left 220ms var(--entra); pointer-events: none; }
+.o1-segno span { position: absolute; top: -2px; left: 4px; font-size: 12px; font-weight: 700; font-variant-numeric: tabular-nums; white-space: nowrap; color: var(--ink); }
+.o1-segno--oltre { background: var(--punto); }
+.o1-segno--oltre span { color: var(--su-avviso); background: var(--avviso); padding: 0 4px; border-radius: 4px; }
+.o1-segno--dx span { left: auto; right: 4px; }
+.o1-scala { position: absolute; left: 0; right: 0; top: 82px; height: 18px; font-size: 12px; font-weight: 600; color: var(--ink2); font-variant-numeric: tabular-nums; }
+.o1-scala span { position: absolute; translate: -50% 0; }
+.o1-scala span::before { content: ""; position: absolute; left: 50%; top: -6px; width: 1px; height: 4px; background: var(--f-riga); }
+html.vd .o1-scala { font: italic 500 13px/1 "Bodoni Moda", Georgia, serif; }
+.o1-leg { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 12.5px; color: var(--ink2); }
+.o1-leg span { display: inline-flex; align-items: center; gap: 6px; }
+.o1-leg i { display: inline-block; width: 14px; height: 10px; border-radius: 2px; }
+.o1-leg .o1-segno-p { width: 2px; height: 12px; background: var(--ink); border-radius: 0; }
+/* in D la pista è un righello: binario sottile, tacche d'inchiostro */
+html.vd .o1-binario { height: 4px; top: 54px; border-radius: 0; background: var(--riga); box-shadow: none; }
+html.vd .o1-fascia { top: -3px; bottom: -3px; border-radius: 0; }
+html.vd .o1-b { border-radius: 0; }
+html.vd .o1-pollice::before { border-radius: 2px; width: 14px; height: 30px; }
+
+/* ---------- proposta 2 · tutte le ore (il foglio come il calendario) ---------- */
+.o2-campi { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.o2-campi .campo__b { padding: 0 12px; gap: 8px; }
+.o2-campi .campo__b span { font-variant-numeric: tabular-nums; font-size: 18px; }
+html.vd .o2-campi .campo__b span { font-size: 20px; }
+.ore { width: 100%; max-width: 100%; height: 100dvh; max-height: 100dvh; margin: 0; padding: 0; border: 0; background: var(--f-sup); color: var(--ink); overflow: hidden; }
+html.vd .ore { background: var(--f-sup) var(--grana); }
+.ore::backdrop { background: rgba(8, 10, 18, .55); }
+@media (min-width: 960px) { .ore { width: 560px; height: min(820px, 92dvh); margin: auto; border-radius: var(--f-raggio); } }
+@media (prefers-reduced-motion: no-preference) {
+  .ore[open] { animation: oz-su 380ms var(--entra); }
+  .ore.esce { animation: oz-giu 220ms var(--esce) forwards; }
+}
+@keyframes oz-su { from { translate: 0 48px; opacity: 0; } }
+@keyframes oz-giu { to { translate: 0 48px; opacity: 0; } }
+.oz { display: flex; flex-direction: column; height: 100%; }
+.oz-testa { display: flex; align-items: center; gap: 12px; padding: calc(16px + env(safe-area-inset-top, 0px)) 12px 4px 20px; }
+.oz-testa h2 { flex: 1; font: 600 26px/1.1 var(--f-titolo); letter-spacing: -.015em; }
+html.vc .oz-testa h2 { font-weight: 800; font-stretch: 80%; font-size: 30px; }
+.oz-modo { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; padding: 6px 16px 4px; }
+.oz-modo__b { display: grid; justify-items: start; gap: 2px; min-height: 60px; padding: 8px 14px; border-radius: 16px; background: var(--f-sup2); text-align: left; transition: background-color 200ms, color 200ms; }
+.oz-modo__b span { font-size: 13px; font-weight: 650; color: var(--ink2); }
+.oz-modo__b b { font: 800 24px/1 var(--cifre); font-stretch: 72%; font-variant-numeric: tabular-nums; }
+.oz-modo__b[aria-pressed="true"] { background: var(--acc); color: var(--su-acc); }
+.oz-modo__b[aria-pressed="true"] span { color: inherit; }
+html.vd .oz-modo__b { border-radius: 3px; background: var(--sup); }
+html.vd .oz-modo__b b { font: 600 25px/1 "Bodoni Moda", Georgia, serif; }
+html.vd .oz-modo__b[aria-pressed="true"] { background: var(--acc); }
+.oz-nota { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 8px; padding: 6px 20px 4px; font-size: 13.5px; color: var(--ink2); }
+.oz-nota__fascia { width: 22px; height: 12px; border-radius: 6px; background: var(--fascia); }
+.oz-scorre { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; padding: 0 16px 20px; }
+.oz-fascia h3 { position: sticky; top: 0; z-index: 2; padding: 14px 4px 6px; background: var(--f-sup); font: 700 17px/1.1 var(--f-titolo); font-stretch: 112%; }
+html.vd .oz-fascia h3 { background: var(--f-sup) var(--grana); font: italic 500 22px/1.1 "Bodoni Moda", Georgia, serif; }
+.oz-gr { width: 100%; border-collapse: collapse; table-layout: fixed; }
+.oz-gr td { position: relative; padding: 2px 0; height: 50px; text-align: center; vertical-align: middle; }
+/* la fascia della giornata, come quella del viaggio nel calendario */
+.oz-gr td.in::before { content: ""; position: absolute; inset: 5px 0; background: var(--fascia); }
+.oz-gr td.in-primo::before { left: 4px; border-radius: 22px 0 0 22px; }
+.oz-gr td.in-ultimo::before { right: 4px; border-radius: 0 22px 22px 0; }
+.oz-gr td.in-primo.in-ultimo::before { border-radius: 22px; }
+.oz-gr td.in:first-child::before { left: 2px; border-top-left-radius: 22px; border-bottom-left-radius: 22px; }
+.oz-gr td.in:last-child::before { right: 2px; border-top-right-radius: 22px; border-bottom-right-radius: 22px; }
+.q { position: relative; z-index: 1; width: calc(100% - 8px); max-width: 76px; height: 44px; border-radius: 22px; font: 500 16px/1 var(--cifre); font-variant-numeric: tabular-nums; transition: background-color 200ms, color 200ms, transform 120ms var(--entra); }
+@media (hover: hover) { .q:hover:not(:disabled):not(.q--scelto) { background: var(--f-sup2); } }
+.q:active:not(:disabled) { transform: scale(.95); }
+.q--dentro { font-weight: 650; }
+.q--scelto { background: var(--acc); color: var(--su-acc); font-weight: 700; }
+.q--altro { box-shadow: inset 0 0 0 2px var(--acc); font-weight: 700; }
+.q:disabled { opacity: .35; cursor: default; }
+.q-k { position: absolute; bottom: 1px; left: 50%; translate: -50% 0; font: 700 9.5px/1 "Archivo", sans-serif; color: var(--ink); }
+.q--scelto .q-k { color: inherit; }
+.q .punto { position: absolute; top: 5px; right: 8px; }
+html.vd .q { font: 600 17px/1 "Bodoni Moda", Georgia, serif; border-radius: 3px; }
+html.vd .oz-gr td.in::before { border-radius: 0 !important; }
+.oz-piede { display: flex; align-items: center; gap: 12px; padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px)) 20px; border-top: 1px solid var(--f-riga); background: var(--f-sup); }
+.oz-sel { flex: 1; min-width: 0; display: grid; font-size: 13.5px; line-height: 1.35; color: var(--ink2); }
+.oz-sel b { color: var(--ink); font-size: 15px; font-weight: 650; }
+html.vd .oz-sel b { font: 600 16px/1.25 "Bodoni Moda", Georgia, serif; }
+
+/* ---------- proposta 3 · la frase ---------- */
+.o3 { display: grid; gap: 12px; }
+.o3 .campo__et { margin-bottom: -4px; }
+.o3-frase { display: grid; gap: 10px; font-size: 17px; font-weight: 600; }
+.o3-riga { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 10px; }
+.o3-spin { display: inline-grid; grid-template-columns: 44px auto 44px; align-items: center; gap: 4px; padding: 3px; border-radius: 999px; background: var(--f-sup2); }
+.o3-pm { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; background: var(--f-sup); color: var(--ink); transition: transform 120ms var(--entra), opacity 150ms; touch-action: manipulation; }
+.o3-pm:active:not(:disabled) { transform: scale(.92); }
+.o3-pm:disabled { opacity: .35; }
+.o3-v { min-width: 4.2ch; padding: 0 4px; text-align: center; border-radius: 10px; }
+.o3-v b { display: inline-block; font: 800 28px/44px var(--cifre); font-stretch: 72%; font-variant-numeric: tabular-nums; }
+html.vd .o3-frase { font: italic 500 20px/1.3 "Bodoni Moda", Georgia, serif; }
+html.vd .o3-spin { border-radius: 3px; background: var(--carta); box-shadow: var(--ombra-cartolina); }
+html.vd .o3-pm { border-radius: 2px; background: var(--sup); }
+html.vd .o3-v b { font: normal 600 28px/44px "Bodoni Moda", Georgia, serif; }
+.o3-veloci { display: flex; flex-wrap: wrap; gap: 8px; }
+.o3-veloci + .o3-veloci { margin-top: 8px; }
+.o3-veloci b { font-variant-numeric: tabular-nums; }
+.f-chip span { font-weight: 500; }
+/* il risultato: in C il numero grande, in D un timbro postale come quello delle schede */
+.o3-esito { display: flex; align-items: center; gap: 16px; padding: 16px; border-radius: 18px; background: var(--f-sup2); }
+.o3-esito--oltre { background: var(--avviso); color: var(--su-avviso); }
+.o3-esito--oltre .f-bottone--contorno { color: var(--su-avviso); box-shadow: inset 0 0 0 1.5px currentColor; }
+.o3-esito__testo { display: grid; gap: 4px; justify-items: start; min-width: 0; font-size: 14.5px; line-height: 1.4; }
+.o3-esito__et { font-size: 13.5px; font-weight: 650; color: var(--ink2); }
+.o3-esito--oltre .o3-esito__et, .o3-esito--oltre .o3-esito__poco { color: inherit; }
+.o3-esito__ora { display: inline-block; font: 800 52px/.95 var(--cifre); font-stretch: 68%; letter-spacing: -.02em; font-variant-numeric: tabular-nums; }
+.o3-esito__poco { font-size: 13.5px; color: var(--ink2); }
+.o3-esito .f-bottone { margin-top: 6px; }
+.o3-timbro { display: none; }
+html.vd .o3-esito { border-radius: 3px; background: var(--carta); box-shadow: var(--ombra-cartolina); }
+html.vd .o3-esito--oltre { background: var(--avviso); }
+html.vd .o3-esito__ora { display: none; }
+html.vd .o3-timbro { flex: none; display: grid; justify-items: center; align-content: center; width: 104px; height: 104px; border-radius: 50%; border: 2.5px solid var(--acc); box-shadow: inset 0 0 0 4px var(--carta), inset 0 0 0 5.5px var(--acc); color: var(--acc); rotate: -8deg; }
+html.vd .o3-esito--oltre .o3-timbro { border-color: var(--su-avviso); color: var(--su-avviso); box-shadow: inset 0 0 0 4px var(--avviso), inset 0 0 0 5.5px var(--su-avviso); }
+html.vd .o3-timbro b { font: 600 27px/1 "Bodoni Moda", Georgia, serif; font-variant-numeric: tabular-nums; margin: 2px 0; }
+html.vd .o3-timbro span { font: 700 9.5px/1 "Archivo", sans-serif; letter-spacing: .14em; text-transform: uppercase; }
+@media (prefers-reduced-motion: no-preference) { html.vd .o3-timbro.timbra { animation: timbra 320ms var(--entra); } }
+@keyframes timbra { from { opacity: 0; translate: 0 -10px; } }
+
+@media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 1ms !important; transition-duration: 1ms !important; } }

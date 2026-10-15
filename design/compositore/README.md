@@ -3,6 +3,29 @@
 Proposte con i dati veri di «Due giorni a Napoli»: orari, tempi a piedi e percorsi calcolati dal sito (giorno feriale), foto e
 caratteri del sito. Regola di Enrico: 4 proposte molto diverse per pezzo, si itera su quello che va. Specifica: `specifiche/compositore.md`.
 
+# Tranche 2 · selettore dell'ora (15/10/2026) · https://claude.ai/artifact/2CWqzAxgK1mdB9p9A9XKuK
+
+Specifica `specifiche/compositore-rifiniture-2.md`, pezzo 2. Cartella `rifiniture-2/ora-giro-1/`, nata dal giro del calendario: il
+foglio «Data e orari» sopra la pagina vera (stessi sfondi), con il campo della data com'è nel sito. Le giornate sono vere: `giornate.mjs`
+rifà con `calcolo.ts` e `pause.ts` del sito, sui tempi della build (`dist/napoli/itinerari`), il giorno 1 e il giorno 2 di «Due giorni»
+per ogni inizio da 5:00 a 20:00 (feriale, senza data, pranzo come lo mette il sito): con le 9:30 finisci alle 18:22 (Duomo) e alle
+17:48 (Borgo Marinari). Passi e limiti di oggi restano (15 minuti, inizio 5:00–20:00, fine 6:00–23:45, un'ora tra le due); novità
+comune: se inizio e fine si avvicinano meno di un'ora, l'altra si sposta con lei invece del messaggio d'errore. Oltre la fine scelta
+compare, come nell'avviso del sito, «Finisci alle …» (mezz'ora dopo la fine stimata).
+- **Ora 1 · La giornata**: una barra dalle 5 a mezzanotte con due maniglie; sopra, tappe e pranzo che si spostano mentre trascini, a
+  righe gialle quello che va oltre la fine; ‹ › per i 15 minuti. In D la pista è un righello.
+- **Ora 2 · Tutte le ore**: la gemella del calendario «Tutti i mesi». Dai due campi si apre un foglio intero con le ore a griglia
+  (Presto, Mattina, Pomeriggio, Sera), la fascia della giornata, «fine» sotto il quarto in cui finisci, il punto giallo dove vai oltre
+  la fine, «Fatto» in basso. Dopo l'inizio si passa da soli alla fine.
+- **Ora 3 · La frase**: «Cominci alle / Finisci entro le» con − e + (tenuti premuti vanno avanti da soli), scelte veloci («Presto»,
+  «Con calma», «Tardi», «Appena finisci», «Prima di cena», «Sera») e il riquadro con l'ora in cui finisci; in D un timbro postale.
+- Tastiera: maniglie e numeri con frecce (15 minuti), Pagina su e giù (un'ora), Inizio e Fine; nella griglia frecce, Pagina su e giù
+  (tre ore), Esc. Il lettore di schermo sente l'ora e, quando le dita si fermano, quando finisci.
+- Comandi: dopo `npm run build`, `node --no-liftoff design/compositore/rifiniture-2/ora-giro-1/genera.mjs` scrive `proposte.html`
+  (`--no-liftoff`: su questo computer, il 15/10/2026, Node a volte non riusciva a leggere i file `.ts` senza); con il server
+  (preview «proposte2», porta 4342) `foto.cjs 4342 <cartella>` fa axe, scorrimento di lato a 320 e 390 px, errori, immagini e i tre
+  confronti; `prove-tasti.cjs 4342` tocca tutti i tasti della striscia in alto e prova le tre proposte col dito e con la tastiera.
+
 # Tranche 2 · calendario e barre di scorrimento (15/10/2026) · https://claude.ai/artifact/Qz5QeweMwhtptB93dJPSVM
 
 Specifica `specifiche/compositore-rifiniture-2.md` (pezzi 1 e 5 insieme, su richiesta di Enrico). Cartella
