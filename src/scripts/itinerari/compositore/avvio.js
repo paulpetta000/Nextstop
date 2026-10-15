@@ -9,6 +9,7 @@ import { S, vistaSalvata, preparaFoglio, preparaAvviso, avvisa, annuncia } from 
 import { disegna, preparaViste, preparaMenu, aggiorna, aggiungi } from './viste.js';
 import { preparaScheda, schedaAperta } from './scheda.js';
 import { usaPronto } from './fogli.js';
+import { preparaCalendario } from './calendario.js';
 
 function avvia() {
   // ---------- l'itinerario da aprire ----------
@@ -34,7 +35,7 @@ function avvia() {
   // un itinerario pronto scelto dalla home o dal menu (?pronto=…)
   const chiesto = PRONTI.find(p => !p.evento && p.id === W.prontoRichiesto);
   scriviArchivio(avvisa);
-  preparaFoglio(); preparaAvviso(); preparaViste(); preparaMenu(); preparaScheda();
+  preparaFoglio(); preparaAvviso(); preparaViste(); preparaMenu(); preparaScheda(); preparaCalendario();
   ascoltaFirme($('#app'));
   document.documentElement.classList.add('cmp-pronto');
   if (chiesto) usaPronto(chiesto); else disegna();

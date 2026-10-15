@@ -104,9 +104,35 @@ toccare la grafica. Così la tranche 2 si chiude in pochi giorni e non resta fer
 
 ## Compiti
 - [x] Enrico approva questa specifica (15/10/2026).
-- [ ] Pezzo 1 calendario: 3 proposte (giro 1 con le barre, `design/compositore/rifiniture-2/calendario-giro-1/`) → scelta → costruzione.
+- [x] Pezzo 1 calendario: 3 proposte (giro 1 con le barre) → scelta la 3 con la fascia della 1 (sotto) → costruzione.
 - [ ] Pezzo 2 ora: 3 proposte → scelta → costruzione.
 - [ ] Pezzo 3 barra «Salvato» e menu: 4 proposte → scelta → costruzione.
 - [ ] Pezzo 4 mappa e scheda intera: 4 proposte → scelta → costruzione.
-- [ ] Pezzo 5 barre di scorrimento: 2 + 2 proposte → scelta → costruzione su tutto il sito.
+- [x] Pezzo 5 barre di scorrimento: scelte «Il filo» (tema 1 e sito) e «Il nastro» (tema 2) → costruzione su tutto il sito.
 - [ ] Controlli, `PROGRESS.md`, commit sul ramo. Anteprima, `main` e pubblicazione solo con il sì di Enrico.
+
+## Scelte di Enrico sul giro 1 (15/10/2026)
+[Proposte](https://claude.ai/artifact/Qz5QeweMwhtptB93dJPSVM), in `design/compositore/rifiniture-2/calendario-giro-1/`. Valgono per il tema 1 e il tema 2.
+- **Calendario: la 3 «Tutti i mesi»** (foglio intero, mesi uno sotto l'altro, «Fatto» in basso), con:
+  - **i giorni del viaggio evidenziati come nella 1**: il giorno scelto pieno, gli altri su una fascia; la fascia **più visibile** di
+    quella della prova (in chiaro era un bianco azzurrino che quasi non si vedeva), ma più chiara del giorno pieno e sempre leggibile;
+  - **i puntini gialli** sui giorni in cui, partendo lì, qualcosa è chiuso;
+  - **niente riquadro giallo in alto** con l'elenco delle chiusure: basta una riga che spiega il puntino («Il punto giallo: partendo
+    quel giorno qualcosa è chiuso»). Dopo «Fatto», nel foglio «Data e orari», il riepilogo giorno per giorno dice cosa è chiuso
+    («Giorno 2 · Chiusi: San Martino»), come oggi.
+- **Barre di scorrimento**: tema 1 la 1 **«Il filo»**, tema 2 la 2 **«Il nastro»**; il resto del sito prende «Il filo».
+- Enrico: «fai queste piccole modifiche e poi pubblica su `main`» (sì alla pubblicazione di calendario e barre, 15/10/2026).
+
+## Calendario e barre costruiti (15/10/2026)
+- **Calendario**: `src/lib/itinerari/calendario.ts` (settimane del mese dal lunedì, tappe chiuse partendo da un giorno, mesi da
+  mostrare dentro 2026–2030) con 6 test in `test/calendario.test.mjs`, scritti prima; il foglio è `compositore/calendario.js`, una
+  seconda finestra (`<dialog id="calendario">`) sopra «Data e orari». Un tocco su un giorno sceglie subito la data (come nella
+  prova); «Fatto», Esc o un tocco fuori chiudono e il fuoco torna sul campo. Nel giorno 2 o 3 il giorno pieno è quello che stai
+  cambiando e il punto vale «con quel giorno». Il campo è un pulsante con il giorno scritto per intero; via l'`input type="date"`.
+- **Fascia** più visibile della prova: pervinca chiaro in C, celeste in D (scura nel tema scuro); punto giallo più scuro in chiaro
+  (contrasto 3,8 sul bianco). Le regole generali delle tabelle del sito (intestazioni maiuscole, righe) non entrano nel calendario.
+- **Barre**: «Il filo» in `global.css` per tutto il sito e per il tema 1 (pollice `#7A88D0`, contrasto almeno 3 sulle carte chiare;
+  `#6573BE` in scuro); «Il nastro» in `compositore.css` per `html.pd`. Con «più contrasto» il pollice prende il colore del testo.
+  Tolto dalla home O4 il `scrollbar-color` che avrebbe spento le barre nuove in Chrome. Firefox: solo colore e spessore.
+- Prova nel sito: `design/compositore/costruzione/calendario.cjs` (C e D, chiaro e scuro, 320, 390 e computer: apertura, martedì
+  con la fascia e i punti, «3 tappe chiuse», frecce e Pagina giù, Esc, riepilogo e fuoco; axe con il calendario aperto e dopo).

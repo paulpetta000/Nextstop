@@ -69,6 +69,28 @@
   --anello: #F0BE3E;
 }
 
+/* Barre di scorrimento (specifiche/compositore-rifiniture-2.md, scelta di Enrico del 15/10/2026): «Il filo», sottile e pervinca,
+   su tutto il sito e nel tema 1 del compositore; il tema 2 («Il nastro») cambia le misure in compositore.css. Chrome, Edge e
+   Safari usano ::-webkit-scrollbar (la forma a pillola staccata dal bordo); Firefox solo colore e spessore. Sui telefoni la barra
+   la disegna il sistema. Le strisce che scorrono di lato senza barra restano senza (le loro regole sono più precise). */
+:root {
+  --sb-w: 12px; --sb-bordo: 3px; --sb-r: 999px; --sb-traccia: transparent; --sb-righe: none;
+  --sb-pollice: #7A88D0; --sb-pollice-su: #4B5DBE;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --sb-pollice: #6573BE; --sb-pollice-su: #8C9BEA; }
+}
+:root[data-theme="dark"] { --sb-pollice: #6573BE; --sb-pollice-su: #8C9BEA; }
+@media (prefers-contrast: more) { :root { --sb-pollice: var(--inchiostro); --sb-pollice-su: var(--inchiostro); } }
+::-webkit-scrollbar { width: var(--sb-w); height: var(--sb-w); }
+::-webkit-scrollbar-track { background: var(--sb-traccia); }
+::-webkit-scrollbar-corner { background: transparent; }
+::-webkit-scrollbar-thumb { border: var(--sb-bordo) solid transparent; background-clip: padding-box; border-radius: var(--sb-r); background-color: var(--sb-pollice); background-image: var(--sb-righe); }
+::-webkit-scrollbar-thumb:hover, ::-webkit-scrollbar-thumb:active { background-color: var(--sb-pollice-su); }
+@supports not selector(::-webkit-scrollbar) {
+  html { scrollbar-color: var(--sb-pollice) var(--sb-traccia); scrollbar-width: thin; }
+}
+
 /* Passaggio tra le pagine: una dissolvenza breve (DESIGN.md §6). Con «riduci movimento» niente. */
 @media (prefers-reduced-motion: no-preference) {
   @view-transition { navigation: auto; }

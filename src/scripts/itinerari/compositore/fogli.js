@@ -5,13 +5,14 @@ import { $, $$, esc, ic, piano, range, ora, durata, maiuscola, oggi } from './ba
 import { E, T, X, A, PRONTI, nG, G, daFare, tappeDi, titoloGiorno, salvato, apri, nuovo, nomeLibero, ricordaBozza, gia, dopoModifica, scriviArchivio, piuGiorni, dataLungaDi, chiusaIl, nuovoItinerario, vuotoTutto } from './stato.js';
 import { codifica, MAX_NOME, MAX_GIORNI, MAX_TAPPE } from '../../../lib/itinerari/link';
 import { prontoNelGiorno } from '../../../lib/itinerari/pronti';
-import { dataValida, dataBreve, dataLunga } from '../../../lib/itinerari/date';
+import { dataBreve, dataLunga } from '../../../lib/itinerari/date';
 import { TIPI_PAUSA, MARGINI, pauseDelGiorno } from '../../../lib/itinerari/pause';
 import { grezzo } from './stato.js';
 import { C } from './stato.js';
 import { S, foglio, chiudiFoglio, rinfresca, avvisa, annuncia, tempo } from './comuni.js';
 import { aggiorna, aggiornaTutto, conAnnulla, mettiNome, NOMI_PAUSA, IC_PAUSA, nuovoGiorno, vaiAlGiorno, togliGiorno } from './viste.js';
 import { chiudiSchede } from './scheda.js';
+import { apriCalendario } from './calendario.js';
 
 const MAX_SALVATI = 50;
 
@@ -111,6 +112,11 @@ export function apriTempo() {
 // ---------- data e orari ----------
 const hhmm = m => `${String(Math.floor(m / 60)).padStart(2, '0')}:${String(m % 60).padStart(2, '0')}`;
 const minutiDa = s => { const m = /^(\d{1,2}):(\d{2})$/.exec(s); return m ? +m[1] * 60 + +m[2] : NaN; };
+// il campo della data: il giorno scritto per intero; un tocco apre il nostro calendario (calendario.js)
+const campoData = g => {
+  const d = X().data ? piuGiorni(X().data, g) : null;
+  return `${ic('calendario')}<span id="f-data-v"${d ? '' : ' class="f-data__vuoto"'}>${d ? dataLunga(d, d.slice(0, 4) !== oggi().slice(0, 4)) : 'Scegli il giorno'}</span>${ic('abbassa', 18)}`;
+};
 export function apriQuando() {
   const g = S.g;
   const vivo = () => {
@@ -123,17 +129,10 @@ export function apriQuando() {
       ${nG() > 1 ? `<button type="button" class="f-bottone f-bottone--pericolo f-togli-giorno" data-f="togli-giorno">${ic('cestino', 18)}Elimina il giorno ${g + 1}</button>` : ''}`;
   };
   foglio('Data e orari', `<p>Con la data vedi quali tappe sono chiuse proprio quel giorno e i mezzi del sabato e della domenica. Senza data i giorni di chiusura restano nella scheda di ogni tappa.</p>
-    <label class="f-campo" for="f-data"><span>${g ? `Data del giorno ${g + 1}` : 'Primo giorno'}</span><input id="f-data" type="date" min="2026-01-01" max="2030-12-31" value="${X().data ? piuGiorni(X().data, g) : ''}"></label>
+    <div class="f-campo"><span id="f-data-et">${g ? `Data del giorno ${g + 1}` : 'Primo giorno'}</span><button type="button" id="f-data" class="f-data" data-f="calendario" aria-haspopup="dialog" aria-labelledby="f-data-et f-data-v">${campoData(g)}</button></div>
     <div id="f-vivo">${vivo()}</div>`, f => {
     f.onchange = e => {
       const t = e.target;
-      if (t.id === 'f-data') {
-        const v = t.value;
-        if (v && !dataValida(v)) return;
-        aggiorna(y => { if (v) y.data = piuGiorni(v, -g); else delete y.data; });
-        rinfresca(f, vivo()); t.focus({ preventScroll: true });
-        annuncia(v ? `Data: ${dataLunga(v)}` : 'Data tolta');
-      }
       if (t.id === 'f-inizio' || t.id === 'f-fine') {
         const D = X().giorni[g], v = minutiDa(t.value);
         if (t.id === 'f-inizio' && (!Number.isFinite(v) || v < 300 || v > D.fine - 60)) { t.value = hhmm(D.inizio); avvisa('L\'inizio deve essere almeno un\'ora prima della fine.'); return; }
@@ -144,14 +143,23 @@ export function apriQuando() {
     };
     f.onclick = async e => {
       if (e.target === f) { chiudiFoglio(); return; }
-      // un tocco in qualsiasi punto del campo (anche su «GG» o sulle ore) apre il calendario o la scelta dell'ora del telefono;
+      // un tocco in qualsiasi punto del campo dell'ora (anche sulle ore) apre la scelta dell'ora del telefono;
       // con la tastiera non arriva un clic (e.detail è 0): si scrive come prima
-      const campo = e.target.closest?.('input[type="date"], input[type="time"]');
+      const campo = e.target.closest?.('input[type="time"]');
       if (campo) { if (e.detail && campo.showPicker) try { campo.showPicker(); } catch { /* il browser non lo permette qui: resta come prima */ } return; }
       const b = e.target.closest('[data-f]');
       if (!b) return;
       if (b.dataset.f === 'fatto') chiudiFoglio();
-      if (b.dataset.f === 'senza') { aggiorna(y => { delete y.data; }); $('#f-data', f).value = ''; rinfresca(f, vivo()); $('#f-data', f).focus(); }
+      if (b.dataset.f === 'calendario') {
+        const prima = X().data;
+        apriCalendario(g, () => {
+          const c = $('#f-data', f);
+          if (!c) return;
+          c.innerHTML = campoData(g); rinfresca(f, vivo()); c.focus({ preventScroll: true });
+          if (X().data && X().data !== prima) annuncia(`Data: ${dataLunga(piuGiorni(X().data, g))}`);
+        });
+      }
+      if (b.dataset.f === 'senza') { aggiorna(y => { delete y.data; }); $('#f-data', f).innerHTML = campoData(g); rinfresca(f, vivo()); $('#f-data', f).focus(); annuncia('Data tolta'); }
       if (b.dataset.f === 'togli-giorno') { await chiudiFoglio(); togliGiorno(g); }
     };
   }, 'f--quando');
