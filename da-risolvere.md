@@ -1,9 +1,9 @@
 # Da risolvere
 
-Qui finiscono le cose che non siamo riusciti a trovare o a fare, nemmeno salendo di livello (vedi «Scala di salita» in `CLAUDE.md`),
+Qui finiscono le cose che non siamo riusciti a trovare o a fare, dopo averne capito la causa (vedi «Problemi, cambi e arresto» in `CLAUDE.md`),
 e le **piccole correzioni** che Enrico chiede mentre si lavora ad altro (motivo `altro`): si risolvono tutte insieme in una sessione apposta.
 **Non leggere questo file di default**: si apre solo quando si aggiunge una riga o quando Enrico decide di risolverne un gruppo.
-Quando le righe «aperto» sono almeno 10, o a fine di ogni blocco, avvisa Enrico con il conteggio.
+Ogni riga dice cosa manca, cosa è stato provato e se si può riprendere. A fine di ogni blocco riassumi a Enrico le righe nuove o ancora «aperto», con il conteggio; se un problema blocca il lavoro o è un rischio, diglielo subito, senza aspettare.
 
 Perché non è risolto (colonna «Motivo»): `non esiste` · `sito bloccato` · `manca la fonte` · `ricerca debole` · `dati in contrasto` · `altro`.
 «Si può ritentare»: `sì` solo se qualcosa è cambiato o c'è un'altra strada; `no` se la cosa non esiste (così non si perde tempo).
