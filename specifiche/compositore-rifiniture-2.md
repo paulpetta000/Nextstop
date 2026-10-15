@@ -136,3 +136,9 @@ toccare la grafica. Così la tranche 2 si chiude in pochi giorni e non resta fer
   Tolto dalla home O4 il `scrollbar-color` che avrebbe spento le barre nuove in Chrome. Firefox: solo colore e spessore.
 - Prova nel sito: `design/compositore/costruzione/calendario.cjs` (C e D, chiaro e scuro, 320, 390 e computer: apertura, martedì
   con la fascia e i punti, «3 tappe chiuse», frecce e Pagina giù, Esc, riepilogo e fuoco; axe con il calendario aperto e dopo).
+- **Velocità** (15/10/2026): con il calendario dentro la pagina Lighthouse da telefono scendeva di 2 punti (la pagina superava di poco
+  una soglia di trasmissione); ora `calendario.js` e il suo stile (`src/styles/calendario.css`, messo nella pagina da quel file) si
+  scaricano al primo tocco sul campo, e il service worker li tiene per l'uso senza rete. Tolte anche 56 regole di `compositore.css`
+  delle proposte non scelte (mangiare 1, 3, 4; schede 3 e 4), che nessuna pagina usava. Sull'anteprima: mediana 97 contro 95 della
+  versione di prima, misurate di seguito; pagina 104,4 KB come prima.
+- **Su `main` e pubblicati** il 15/10/2026, col sì di Enrico.

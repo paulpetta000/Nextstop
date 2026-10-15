@@ -1,6 +1,6 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 15/10/2026. Ramo `rifiniture-tranche-2` (Claude, da `main` `14e6e74`, cartella `nextstop-tranche2`): Fase 2 bis, tranche 2, [specifica](specifiche/compositore-rifiniture-2.md). **Enrico ha scelto** il calendario 3 «Tutti i mesi» con la fascia della 1 e i punti gialli, e le barre «Il filo» (tema 1 e sito) e «Il nastro» (tema 2): **costruiti** e, col suo sì, da portare su `main`. Prossimo pezzo: il selettore dell'ora (3 proposte). Tranche 1 su `main` e pubblicata._
+_Aggiornato il 15/10/2026. Ramo `rifiniture-tranche-2` (Claude, cartella `nextstop-tranche2`): Fase 2 bis, tranche 2, [specifica](specifiche/compositore-rifiniture-2.md). **Su `main` e pubblicati il 15/10/2026, col sì di Enrico**: calendario 3 «Tutti i mesi» con la fascia della 1 e i punti gialli; barre «Il filo» (tema 1 e sito) e «Il nastro» (tema 2). Controlli: 115/115 test, build, 809 link, axe pulito (156 controlli del compositore, 24 del calendario anche sull'anteprima), nessuno scorrimento di lato; Lighthouse da telefono sull'anteprima mediana 97 contro 95 della versione di prima nelle stesse condizioni (pagina 104,4 KB come prima: calendario scaricato al primo tocco, via 56 regole di stile delle proposte non scelte). Prossimo pezzo: il selettore dell'ora (3 proposte). Tranche 1 su `main` e pubblicata._
 
 ## Compositore · proposte grafiche (ramo `compositore-pagina`, con Claude)
 
