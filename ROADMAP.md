@@ -71,7 +71,7 @@ Ordine consigliato: 1 → 2 → 3 (la 1 è quasi tutta correzione e pulizia, sen
   - **cancellare un itinerario salvato è troppo lungo** (oggi: tre puntini → «Elimina» → tasto enorme): più diretto, con conferma con il nome (regola del progetto per le azioni che distruggono) e il tasto di conferma di misura normale, non a tutta larghezza.
 - [x] **Passare da un itinerario all'altro e crearne uno nuovo**: Enrico ha fatto fatica a ritrovarsi tra «I miei itinerari», l'itinerario aperto e «Nuovo itinerario» (esempio: aveva salvato un itinerario, ne ha aperto un altro, poi doveva andare in «I miei itinerari», sul «2 giorni» e infine «Nuovo itinerario»). Rivedere il percorso: meno passaggi, sempre chiaro quale itinerario è aperto e se è salvato. Enrico (14/10/2026) non vuole dare altri dettagli: lo decide Claude nella specifica della tranche 1, senza fare altre domande.
 
-### Tranche 2 · Grafica nuova del compositore (con proposte)
+### Tranche 2 · Grafica nuova del compositore (con proposte): [specifica](specifiche/compositore-rifiniture-2.md) da approvare, ramo `rifiniture-tranche-2`
 Regola: quattro proposte per pezzo (come sempre); **dove Enrico ha chiesto tre, tre**. Un pezzo alla volta, tema 1 e tema 2, chiaro e scuro.
 - [ ] **Calendario (giorno, mese, anno)**: stile del selettore da rifare, **3 proposte** (Enrico: «non mi piace proprio»).
 - [ ] **Selettore dell'ora**: stile da rifare, **3 proposte**, coerenti col calendario.

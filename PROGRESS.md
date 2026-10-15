@@ -1,6 +1,6 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 15/10/2026. Ramo `rifiniture-tranche-1` (Claude, da `main`): Fase 2 bis, tranche 1 costruita, in attesa del sì di Enrico._
+_Aggiornato il 15/10/2026. Ramo `rifiniture-tranche-2` (Claude, da `main` `14e6e74`, cartella `nextstop-tranche2`): Fase 2 bis, tranche 2, [specifica](specifiche/compositore-rifiniture-2.md) in attesa dell'OK di Enrico. Tranche 1 su `main` e pubblicata._
 
 ## Compositore · proposte grafiche (ramo `compositore-pagina`, con Claude)
 
