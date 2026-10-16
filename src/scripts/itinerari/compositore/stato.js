@@ -147,7 +147,7 @@ export function G(g, tappe) {
   const r = grezzo(g, tappe);
   if (!r) return null;
   const x = X(), Gg = tappe ? { ...x.giorni[g], tappe } : x.giorni[g];
-  return conPause(C, Gg, r, x.margine);
+  return conPause(C, Gg, r, x.margine, { data: dataDi(g), piedi: x.piedi });
 }
 export const tappeDi = Gx => Gx.voci.filter(v => v.tipo === 'tappa');
 export const daFare = Gx => tappeDi(Gx).filter(v => !v.fatta);

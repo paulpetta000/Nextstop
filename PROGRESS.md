@@ -5,6 +5,9 @@ _Aggiornato il 15/10/2026. Ramo `rifiniture-tranche-2` (Claude, cartella `nextst
 ## Conservazione degli itinerari · primo blocco di Codex (16/10/2026)
 
 Autorizzato da Enrico dopo l'analisi: D1, D2 e D7 corretti localmente nel ramo `codex/conservazione-itinerari`, dalla base main `75d25e6`. Esito reale delle scritture, recupero dei record validi e copia integrale dell'originale danneggiato prima di riscrivere; versioni ignote protette; filtri dei locali con lettura validata. 11 test nuovi scritti prima delle correzioni (10 rossi), poi 133/133 test, build e 809 link validi; nove scenari browser riusciti, axe pulito sul salvataggio rifiutato in chiaro/scuro. [File, prove e limiti](docs/storico/2026-10-16-conservazione-itinerari.md). Nessuna dipendenza nuova, push, merge o deploy. Blocco concluso, in attesa dell'OK per il seguito; calcoli e cache restano al blocco successivo.
+## Calcoli e offline · secondo blocco di Codex (16/10/2026)
+
+Autorizzato da Enrico: D3–D6 corretti localmente in `codex/calcoli-offline`, dal primo blocco `939e882`. Pause/margini ricalcolano corse, aperture, eventi e totali; tempi a piedi nel pacco iniziale; dati in cache per versione e filtri dei locali precaricati. 20 test nuovi, poi 153/153 test, build e 809 link validi. Prove browser riuscite anche con server spento e aggiornamento dal vecchio worker; archivio conservato, axe pulito in chiaro/scuro, nessuno sconfinamento a 320/390 px. Lighthouse locale singolo 94: soglia 95 per il rilascio ancora da verificare. [File, prove e limiti](docs/storico/2026-10-16-calcoli-offline.md). Nessuna dipendenza nuova, push, merge o deploy. Blocco concluso; seguito dopo OK.
 ## Compositore · proposte grafiche (ramo `compositore-pagina`, con Claude)
 
 - **Fase 2 · il compositore**: specifica approvata l'08/10/2026 (`specifiche/compositore.md`); tutti i giri, i link e le scelte in `design/compositore/README.md`. Si fanno le scelte pezzo per pezzo; la costruzione nel sito parte dopo.

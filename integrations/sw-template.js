@@ -2,7 +2,9 @@
 const VERSION = '__VERSION__';
 const CORE = __PRECACHE__;
 const PAGES = `pagine-${VERSION}`;
-const ASSETS = 'risorse-v1';
+const ASSETS = 'risorse-v1'; // immagini e risorse immutabili già viste: restano fra i rilasci
+const DATA_VERSION = '__DATA_VERSION__';
+const DATA = `dati-${DATA_VERSION}`;
 
 self.addEventListener('install', event => {
   event.waitUntil(caches.open(PAGES).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
@@ -11,7 +13,7 @@ self.addEventListener('install', event => {
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys()
-      .then(keys => Promise.all(keys.filter(k => k.startsWith('pagine-') && k !== PAGES).map(k => caches.delete(k))))
+      .then(keys => Promise.all(keys.filter(k => (k.startsWith('pagine-') && k !== PAGES) || (k.startsWith('dati-') && k !== DATA)).map(k => caches.delete(k))))
       .then(() => self.clients.claim())
   );
 });
@@ -30,7 +32,7 @@ self.addEventListener('fetch', event => {
       const cache = await caches.open(PAGES);
       try {
         const res = await timeout(4000, fetch(req));
-        if (res.ok) cache.put(req, res.clone());
+        if (res.ok) await cache.put(req, res.clone()).catch(() => {});
         return res;
       } catch {
         return (await cache.match(req, { ignoreSearch: true })) || (await cache.match('/offline/'));
@@ -42,20 +44,31 @@ self.addEventListener('fetch', event => {
   // File con nome che cambia a ogni versione: prima la copia salvata (anche quella fatta all'installazione)
   if (url.pathname.startsWith('/_astro/') || url.pathname.startsWith('/fonts/')) {
     event.respondWith((async () => {
-      const hit = await caches.match(req);
+      const hit = (await (await caches.open(PAGES)).match(req)) || (await (await caches.open(ASSETS)).match(req));
       if (hit) return hit;
       const res = await fetch(req);
-      if (res.ok) (await caches.open(ASSETS)).put(req, res.clone());
+      if (res.ok) await (await caches.open(ASSETS)).put(req, res.clone()).catch(() => {});
       return res;
     })());
     return;
   }
 
-  // Tutto il resto (icone, calendari, dati della mappa degli itinerari): copia salvata subito, aggiornata in background
+  // I dati della città devono appartenere al rilascio corrente. La precache corrente
+  // prevale sempre; le foto immutabili restano invece nella memoria condivisa ASSETS.
+  const archivio = caches.open(url.pathname.startsWith('/napoli/itinerari/') ? DATA : ASSETS);
+  const precache = caches.open(PAGES).then(c => c.match(req));
+  const aggiornamento = precache.then(async hit => {
+    if (hit) return hit;
+    try {
+      const res = await fetch(req);
+      if (res.ok) await (await archivio).put(req, res.clone()).catch(() => {});
+      return res;
+    } catch { return undefined; }
+  });
+  // Registrato durante il callback: il worker non termina mentre salva l'aggiornamento.
+  event.waitUntil(aggiornamento.then(() => {}));
   event.respondWith((async () => {
-    const cache = await caches.open(ASSETS);
-    const hit = (await cache.match(req)) || (await caches.match(req));
-    const net = fetch(req).then(res => { if (res.ok) cache.put(req, res.clone()); return res; }).catch(() => hit);
-    return hit || net;
+    const hit = (await precache) || (await (await archivio).match(req));
+    return hit || (await aggiornamento) || Response.error();
   })());
 });

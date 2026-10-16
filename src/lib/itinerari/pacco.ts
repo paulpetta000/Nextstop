@@ -1,23 +1,24 @@
 // Riapre nella pagina il pacco della città fatto durante la build (src/lib/itinerari/napoli.ts, impacchetta)
-import { SCENARI, PRIMA, type Citta, type Evento, type Scenario, type Tappa, type Vivo } from './tipi';
+import { SCENARI, PRIMA, type Citta, type Evento, type Scenario, type Tappa, type Vivo } from './tipi.ts';
 
 export interface Pacco {
   tappe: Tappa[];
   n: number;
   dizionario: string[];
   feriale: { min: number[]; metri: number[]; mezzi: number[] };
+  piedi: number[]; // differenze dal feriale: disponibili anche se scenari.json non arriva
   evento?: Evento;
   linee: Record<string, string>;
   zone: Record<string, string>;
 }
 
-// Gli altri scenari (sabato, domenica, festivi, solo a piedi) arrivano dopo, da /napoli/itinerari/scenari.json:
+// Gli scenari dei mezzi (sabato, domenica, festivi) arrivano dopo, da /napoli/itinerari/scenari.json:
 // finché non ci sono, valgono i tempi del feriale (aggiungiScenari li sostituisce).
 export interface PaccoScenari { dizionario: string[]; diff: Record<string, number[]> }
 export function aggiungiScenari(C: Citta, P: PaccoScenari) {
   for (const s of SCENARI) {
     const p = PRIMA[s];
-    if (!p) continue;
+    if (!p || !P.diff[s]) continue;
     const m = C.tempi.min[p].slice(), w = C.tempi.metri[p].slice(), z = C.tempi.mezzi[p].slice();
     const d = P.diff[s] ?? [];
     let ij = 0;
@@ -26,7 +27,25 @@ export function aggiungiScenari(C: Citta, P: PaccoScenari) {
   }
 }
 
+// Il pacco iniziale contiene il feriale e le differenze per andare solo a piedi.
+// Il dizionario è condiviso; gli altri scenari restano nel caricamento successivo.
+export function impacchetta(C: Citta): Pacco {
+  const dizionario: string[] = [];
+  const voce = (s: string) => { let i = dizionario.indexOf(s); if (i < 0) { i = dizionario.length; dizionario.push(s); } return i; };
+  const F = C.tempi;
+  const feriale = { min: F.min.feriale, metri: F.metri.feriale.map(m => Math.round(m / 10)), mezzi: F.mezzi.feriale.map(voce) };
+  const piedi: number[] = [];
+  let ultimo = 0;
+  for (let ij = 0; ij < F.n * F.n; ij++) {
+    const metri = Math.round(F.metri.piedi[ij] / 10), mezzo = voce(F.mezzi.piedi[ij]);
+    if (F.min.piedi[ij] !== feriale.min[ij] || metri !== feriale.metri[ij] || mezzo !== feriale.mezzi[ij]) {
+      piedi.push(ij - ultimo, F.min.piedi[ij], metri, mezzo); ultimo = ij;
+    }
+  }
+  return { tappe: C.tappe, n: F.n, dizionario, feriale, piedi, evento: C.evento, linee: C.linee, zone: C.zone };
+}
 export function spacchetta(P: Pacco): Citta {
+  if (!Array.isArray(P.piedi)) throw new Error('Tempi a piedi mancanti');
   const nn = P.n * P.n;
   const min = {} as Record<Scenario, number[]>, metri = {} as Record<Scenario, number[]>, mezzi = {} as Record<Scenario, string[]>;
   for (const s of SCENARI) {
@@ -34,7 +53,9 @@ export function spacchetta(P: Pacco): Citta {
     if (m.length !== nn) throw new Error('Tempi incompleti');
     min[s] = m; metri[s] = w; mezzi[s] = z;
   }
-  return { tappe: P.tappe, tempi: { n: P.n, min, metri, mezzi }, evento: P.evento, linee: P.linee, zone: P.zone };
+  const C = { tappe: P.tappe, tempi: { n: P.n, min, metri, mezzi }, evento: P.evento, linee: P.linee, zone: P.zone };
+  aggiungiScenari(C, { dizionario: P.dizionario, diff: { piedi: P.piedi } });
+  return C;
 }
 
 // Gli orari veri dei bus, come arrivano da /napoli/itinerari/partenze.json (src/pages/napoli/itinerari/partenze.json.ts)

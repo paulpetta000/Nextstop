@@ -119,7 +119,7 @@ function valuta(V: Vivo, tipo: number, seg: (number | string)[], t0: number): { 
 type Tratto = Extract<Voce, { tipo: 'tratto' }>;
 // Lo spostamento da un punto all'altro partendo all'ora t: i tempi di sempre (attesa media) o, se la data è
 // nell'orario ANM, la strada migliore tra quella senza bus e quelle con il bus valutate con le partenze vere
-function spostamento(C: Citta, s: Scenario, da: number, a: number, t: number, data?: string): Tratto {
+export function spostamento(C: Citta, s: Scenario, da: number, a: number, t: number, data?: string): Tratto {
   const ij = da * C.tempi.n + a;
   const voce = (min: number, metri: number, mezzi: string): Tratto => {
     const parti = mezzi.split('+').filter(Boolean);

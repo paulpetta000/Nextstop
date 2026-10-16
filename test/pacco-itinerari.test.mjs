@@ -1,0 +1,20 @@
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import {spacchetta,aggiungiScenari,impacchetta} from '../src/lib/itinerari/pacco.ts';
+const pack=()=>({n:2,tappe:[],linee:{},zone:{},dizionario:['B1',''],feriale:{min:[0,15,15,0],metri:[0,30,30,0],mezzi:[1,0,0,1]},piedi:[1,45,150,1,1,50,160,1]});
+test('pacco: i tempi a piedi sono corretti prima di caricare scenari.json',()=>{const C=spacchetta(pack());
+  assert.deepEqual(C.tempi.min.piedi,[0,45,50,0]);
+  assert.deepEqual(C.tempi.metri.piedi,[0,1500,1600,0]);
+  assert.deepEqual(C.tempi.mezzi.piedi,['','','','']);
+  assert.deepEqual(C.tempi.mezzi.feriale,['','B1','B1','']);});
+test('pacco: gli scenari successivi mantengono i tempi a piedi',()=>{const C=spacchetta(pack());aggiungiScenari(C,{dizionario:[''],diff:{piedi:pack().piedi.map((v,i)=>i%4===3?0:v)}});
+  assert.deepEqual(C.tempi.min.piedi,[0,45,50,0]);
+  assert.deepEqual(C.tempi.mezzi.piedi,['','','','']);});
+
+test('pacco: uno scenario parziale non sovrascrive i tempi a piedi già presenti',()=>{const C=spacchetta(pack());aggiungiScenari(C,{dizionario:[''],diff:{sabato:[]}});
+  assert.deepEqual(C.tempi.min.piedi,[0,45,50,0]);});
+test('pacco: feriale e piedi fanno andata/ritorno senza dipendere dalla città',()=>{const C=spacchetta(pack());
+  const nuovo=impacchetta(C);
+  const copia=spacchetta(nuovo);for(const s of ['feriale','piedi']){assert.deepEqual(copia.tempi.min[s],C.tempi.min[s]);
+  assert.deepEqual(copia.tempi.metri[s],C.tempi.metri[s]);
+  assert.deepEqual(copia.tempi.mezzi[s],C.tempi.mezzi[s]);}});
