@@ -13,13 +13,31 @@ Sito statico in [Astro](https://astro.build), pubblicato su Vercel. Nato il 06/1
 Node >=22.12. L'installazione serve alla prima preparazione autorizzata, non a ogni sessione AI; su questo computer vedi [ambiente locale](docs/AMBIENTE-LOCALE.md).
 
 ```sh
-npm install
+npm ci --ignore-scripts --no-audit --no-fund
 npm run dev      # sito in locale su http://localhost:4321
 npm run build    # costruisce il sito in dist/
 npm run check:links  # dopo la build: controlla che ogni link interno porti a una pagina o a un file
 npm test         # i test (pochi secondi, vedi «Test» in fondo)
 npm run testi:firma  # dopo aver riletto un testo che usa una scheda cambiata
 ```
+
+Per riprodurre il lockfile si usa [npm ci](https://docs.npmjs.com/cli/v11/commands/npm-ci/), dopo l'autorizzazione alla preparazione dell'ambiente. L'opzione `--ignore-scripts` evita gli script automatici dei pacchetti, come in CI. Non eseguire l'installazione per una normale sessione se le dipendenze sono già disponibili. Un aggiornamento dei pacchetti è un'attività distinta, descritta nella [guida di manutenzione](docs/MANUTENZIONE.md).
+
+## Struttura
+
+| Cartella | Ruolo |
+|---|---|
+| `src/pages/`, `src/layouts/`, `src/components/` | Pagine Astro, struttura comune e componenti |
+| `src/scripts/`, `src/styles/` | Interazioni e stili; il compositore entra da `itinerari/compositore/avvio.js` |
+| `src/lib/` | Calcoli, validazioni e caricamento dei dati |
+| `src/data/`, `src/testi/`, `src/assets/`, `public/` | Dati e testi, originali delle immagini, risorse pubbliche e licenze |
+| `integrations/` | Precaricamento e generazione del service worker durante la build |
+| `scripts/`, `test/`, `.github/` | Generatori e controlli, test automatici, workflow GitHub |
+| `docs/`, `specifiche/`, `aggiornamenti/` | Istruzioni operative, decisioni approvate, rinnovo dei dati |
+| `design/`, `ricerca/` | Proposte, ricerche e prove conservate; non sono cartelle pubblicate automaticamente |
+| `.agents/`, `.claude/` | Istruzioni e risorse degli assistenti, con licenze e copie da conservare |
+
+`node_modules/`, `dist/` e `.astro/` sono output locali esclusi da Git. Per una pulizia dello storico senza perdere materiali vedi [Manutenzione](docs/MANUTENZIONE.md#cartelle-e-materiali-da-conservare).
 
 ## Dove sono le informazioni
 
@@ -53,7 +71,7 @@ formato:
   testo: |
     ### Titoletto
 
-    Paragrafo. **Grassetto**, *corsivo*, [link](/calendario/).
+    Paragrafo. **Grassetto**, *corsivo*, [itinerari](/napoli/itinerari/).
 
     Nel 2024 i percorsi avrebbero avuto 8 lati{?reg-percorso}.
 ```
@@ -110,7 +128,7 @@ Una scheda `confermato` che ha **solo** fonti `enciclopedia`, `blog` o `altro` f
 - **Tappe**: `src/data/tappe.yaml`. Orari, prezzi e viaggi delle gite sono schede in `fatti.yaml` con id che cominciano con `tp-` (fonti e foto anche); i testi brevi stanno in `src/testi/tappe.yaml` (stesso id della tappa).
 - **Tempi tra le tappe**: `node scripts/itinerari/scarica.mjs <cartella>` scarica strade, scale, ascensori e linee da OpenStreetMap, le quote Copernicus e gli orari degli autobus ANM (feed GTFS, letto da `scripts/itinerari/gtfs.mjs`); `node scripts/itinerari/costruisci.mjs <cartella>` scrive `src/data/tempi-tappe.json` (giorno feriale, sabato, sabato dopo le 14:50, domenica mattina, domenica pomeriggio, solo a piedi) e `src/data/percorsi-tappe.json` (il disegno dei percorsi per la mappa, compresso). Se una tappa nuova o spostata non è nei tempi, la build si ferma. Metodo e controlli: `ricerca/2026-10-02-itinerari-distanze.md`. I parametri (velocità, attese, linee chiuse come la funicolare di Montesanto, le linee bus e le fasce orarie nella tabella `BUS`) sono in testa allo script. Da dove vengono i dati e come si rinnovano: `aggiornamenti/`.
 - **Bozzetti del design**: `design/itinerari/` (non fanno parte del sito). `node design/itinerari/genera.mjs <cartella>` rifà le due proposte in HTML con i dati veri; `node design/itinerari/foto.cjs <uscita> <percorso di playwright-core>` le fotografa come schermate da telefono, in chiaro e in scuro.
-- **La pagina** `/napoli/itinerari/` (`src/pages/napoli/itinerari/`): il compositore. Il calcolo (orari, avvisi, ordine più corto, link) sta in `src/lib/itinerari/` e non sa niente di Napoli: la città arriva come dati da `napoli.ts` (tappe, tempi, miniature, giorni delle regate da `src/data/eventi.ts`). Lo script della pagina è in `src/scripts/itinerari/` (`app.ts`; `mappa.ts` si carica solo quando apri la mappa; `memoria.ts` salva nel browser; `trascina.ts` per riordinare). Stile in `src/styles/itinerari.css`; caratteri Barlow con `node scripts/font/barlow.mjs`.
+- **La pagina** `/napoli/itinerari/` (`src/pages/napoli/itinerari/`): il compositore. Il motore di calcolo (orari, avvisi, ordine più corto, link) sta in `src/lib/itinerari/`; i dati di Napoli arrivano da `napoli.ts` (tappe, tempi, miniature, giorni delle regate da `src/data/eventi.ts`). La pagina importa `src/scripts/itinerari/compositore/avvio.js`: `stato.js` gestisce archivio e calcoli, `viste.js` le viste e il riordino, `mappa.js` il disegno della mappa, `fogli.js` i pannelli; `src/scripts/itinerari/memoria.ts` legge e scrive nel browser. `pacco.ts` prepara i tempi iniziali, incluso lo scenario a piedi. Stili in `src/styles/itinerari.css` e `src/styles/compositore.css`; caratteri Barlow con `node scripts/font/barlow.mjs`.
 - **Itinerari pronti**: `src/data/itinerari-pronti.yaml` (descrizioni in `src/testi/itinerari.yaml`, blocchi `pronto-<id>`). La build li ricalcola: si ferma se un giorno non ci sta negli orari, se una tappa è lontana dalle altre, se si arriva tardi alle regate o se esiste un ordine più corto di almeno 5 minuti (e lo stampa).
 - **Link condivisi**: tutto dopo il «#» (`n` nome, `d` data del primo giorno, `w=1` solo a piedi, `g` un giorno: `0930-1900.duomo.sansevero`, `@pompei` per una gita). Un link vecchio con una tappa che non esiste più si apre lo stesso, senza quella tappa.
 
@@ -127,24 +145,29 @@ Una scheda `confermato` che ha **solo** fonti `enciclopedia`, `blog` o `altro` f
 - i **link degli itinerari**: andata/ritorno, gite, sanitizzazione, limiti e compatibilità dei link vecchi (`test/link-itinerari.test.mjs`);
 - la **firma delle posizioni**, condivisa dalla build e dal generatore in `src/lib/itinerari/firma-posizioni.mjs`: compatibilità con il formato precedente, ordine dei punti, ingressi e arrivi cambiati (`test/firma-posizioni.test.mjs`). Solo Node, senza rigenerare i dati;
 - i **calcoli degli itinerari**: orari e totali, giornata piena, scenari di calendario, apertura dei locali, ripartenza dal vivo e bus con partenze valide/mancanti/esaurite (`test/calcolo-itinerari.test.mjs`). Casi sintetici, senza rete o dati utente;
+- la **conservazione degli archivi** corrotti e gli esiti reali del salvataggio (`test/conservazione-itinerari.test.mjs`);
+- **pause e margini**, tempi a piedi iniziali e cache offline (`test/pause-orari.test.mjs`, `test/pacco-itinerari.test.mjs`, `test/offline.test.mjs`);
+- il **checkout della CI**, con repository Git temporanei senza rete: commit corretto anche quando il ramo avanza, riferimento eliminato, commit mancante o malformato (`test/ci.test.mjs`). Serve Bash: sul runner è già presente, su Windows si usa Git for Windows;
 - gli **spostamenti delle tappe**: destinazione piena, gruppi senza spazio, limiti, ordine e preparazione senza mutare l'originale (`test/spostamenti-itinerari.test.mjs`). I casi che perdevano dati sono stati riprodotti prima delle correzioni del Blocco 1.
 
 Esecuzione durante il lavoro e a fine blocco secondo le [regole comuni](docs/REGOLE.md#verifiche-e-letture), senza ripetere la build per sole modifiche documentali. Il workflow seguente verifica le pull request, senza gestire la pubblicazione su Vercel.
 
 ## GitHub Actions · controlli delle pull request
 
-[`.github/workflows/ci.yml`](.github/workflows/ci.yml) è preparato sul ramo di manutenzione: solo PR verso `main`, un job Ubuntu 24.04, permessi `contents: read`, limite di 15 minuti e cancellazione delle esecuzioni superate per la stessa PR. Nessun agente AI, deploy, merge automatico o E2E pesante. Non salta i cambiamenti a documenti, YAML o dati.
+[`.github/workflows/ci.yml`](.github/workflows/ci.yml) controlla le PR verso `main`, i push su `main` e l'avvio manuale. Un job `verifica` su Ubuntu 24.04, permessi `contents: read`, limite 15 minuti e cancellazione delle esecuzioni superate nello stesso contesto. Nessun filtro sui percorsi: documenti, YAML e dati non saltano i controlli.
 
-Per riusare gli strumenti del runner e non introdurre Actions esterne, poche righe di Git leggono il commit di prova della PR; il token di lettura è usato solo in quel passo e non salvato nella configurazione Git. Git e Node >=22.12 sono [già presenti nel runner Ubuntu 24.04](https://github.com/actions/runner-images/blob/main/images/ubuntu/Ubuntu2404-Readme.md) (verificato il 09/10/2026); il workflow controlla la versione disponibile, senza fissare una patch o installare un runtime aggiuntivo.
+Git recupera **il commit dell'evento `GITHUB_SHA`**, poi confronta `HEAD` con quel valore; una ref che nel frattempo avanza non può produrre un verde sul commit sbagliato. Il token di lettura è passato solo al comando di fetch e non viene salvato nella configurazione. Se il commit non è più disponibile, il job fallisce senza ripiegare su un altro: avviare una nuova verifica sul commit corrente. Per una PR si verifica il merge di prova, non soltanto la punta del ramo ([eventi GitHub](https://docs.github.com/en/actions/reference/workflows-and-actions/events-that-trigger-workflows#pull_request)).
 
-Sul runner, in ordine:
+Git, Bash e Node sono quelli già presenti nel runner; viene verificato Node >=22.12, senza fissare una patch né installare Actions esterne. Ambiente locale misurato: Node 24.21.0; il runner stampa la propria versione. La sequenza è:
 
-1. `npm ci --ignore-scripts --no-audit --no-fund`: installa le sole dipendenze già fissate nel lockfile; [disabilita gli script automatici di installazione](https://docs.npmjs.com/cli/v11/commands/npm-ci/#ignore-scripts), senza introdurre pacchetti nel progetto.
+1. `npm ci --ignore-scripts --no-audit --no-fund`, con le versioni fissate nel lockfile.
 2. `npm test`.
-3. `npm run build` (telemetria Astro disabilitata).
-4. `npm run check:links`, solo dopo una build riuscita.
+3. `npm run build`, con telemetria Astro disabilitata.
+4. `npm run check:links`.
 
-**Stato della verifica:** YAML, permessi, trigger, ordine e sintassi Bash controllati localmente; test/build/link eseguiti su Windows con dipendenze già presenti. Il 09/10/2026 la [prima esecuzione su GitHub](https://github.com/paulpetta000/Nextstop/actions/runs/37976226763), nella [PR #1](https://github.com/paulpetta000/Nextstop/pull/1), ha superato anche l'installazione senza script su Ubuntu 24.04 con Node 22.23.3: 55/55 test, build e 888 link validi. I binari Linux di `esbuild`/`sharp` funzionano con questa installazione. Nessuna installazione locale; non serve creare token personali o fornire segreti Vercel.
+**Verifica reale:** la [prima esecuzione Ubuntu del 09/10](https://github.com/paulpetta000/Nextstop/actions/runs/37976226763) ha superato installazione senza script, 55 test, build e 888 link. Quel risultato è storico: il workflow aggiornato del 16/10 è verificato in locale, ma deve ancora essere eseguito su GitHub dopo il push autorizzato. Nessuna pubblicazione o configurazione remota è implicita.
+
+Il workflow non rende obbligatori i controlli prima del merge e non blocca un deploy Vercel. Stato remoto, regola consigliata e procedura per verificare il commit integrabile: [guida di manutenzione](docs/MANUTENZIONE.md#github-e-commit-verificati).
 
 ## Altro
 

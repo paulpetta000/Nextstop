@@ -3,12 +3,15 @@ name: Controlli Nextstop
 on:
   pull_request:
     branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 concurrency:
-  group: ci-${{ github.event.pull_request.number }}
+  group: ci-${{ github.workflow }}-${{ github.event_name }}-${{ github.event.pull_request.number || github.ref }}
   cancel-in-progress: true
 
 jobs:
@@ -22,16 +25,26 @@ jobs:
         shell: bash
     steps:
       # Git e Node sono già sul runner: nessuna Action o script esterno da installare.
-      - name: Leggi il commit di prova della pull request
+      - name: Leggi esattamente il commit dell'evento
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          set -euo pipefail
+          if [[ ! "$GITHUB_SHA" =~ ^[0-9a-f]{40}$ ]]; then
+            echo '::error::Identificativo del commit non valido.'
+            exit 1
+          fi
           git init --quiet
           git remote add origin "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY.git"
           auth="$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)"
           printf '::add-mask::%s\n' "$auth"
-          git -c "http.extraheader=AUTHORIZATION: basic $auth" fetch --no-tags --depth=1 origin "$GITHUB_REF"
+          if ! git -c "http.extraheader=AUTHORIZATION: basic $auth" fetch --no-tags --depth=1 origin "$GITHUB_SHA"; then
+            echo '::error::Commit dell’evento non disponibile. Avvia una nuova verifica sul commit corrente; nessun ripiego su altri commit.'
+            exit 1
+          fi
           git checkout --detach --quiet FETCH_HEAD
+          test "$(git rev-parse HEAD)" = "$GITHUB_SHA"
+          printf 'Commit verificato: %s\n' "$GITHUB_SHA"
 
       - name: Verifica Node già disponibile
         run: |

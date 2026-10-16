@@ -22,3 +22,11 @@ npm.cmd run check:links
 I tre comandi sono per blocchi che cambiano codice/dati; per sola documentazione valgono i controlli proporzionati delle [regole comuni](REGOLE.md#verifiche-e-letture). Non reinstallare dipendenze già disponibili e non cambiare il PATH permanente.
 
 `preview_start` è uno strumento dell'ambiente Claude, quando disponibile. In un ambiente diverso usa un server locale già previsto dal progetto (`npm run dev` o `npm run preview`) e la porta realmente indicata. Gli script per fotografare i bozzetti si consultano nel loro ramo, senza copiare proposte nella manutenzione.
+
+## Limiti riproducibili osservati il 16/10/2026
+
+Node 24.21.0 è l’ambiente locale verificato; resta valido il requisito Node >=22.12, ma non è una matrice di versioni tutte provate. Se la build si blocca o termina con errori WebAssembly senza una diagnosi applicativa, il rimedio già usato è `node --no-liftoff node_modules/astro/bin/astro.mjs build`, una volta, con telemetria disabilitata. Riportare quale comando è riuscito: non attribuire il crash automaticamente al sito.
+
+La worktree dell’audit riusa `node_modules` della cartella iniziale tramite junction: non è una nuova installazione. `npm ls --all` in questa disposizione ha segnalato pacchetti estranei/mancanti anche fra le dipendenze di sviluppo dei pacchetti; per inventariare le versioni fissate è stato usato `npm ls --package-lock-only --all --json`. Questo non sostituisce una futura installazione pulita autorizzata.
+
+Le prove `test/ci.test.mjs` usano Git e Bash già forniti da Git for Windows (`C:/Program Files/Git/bin/bash.exe`); non richiedono token o rete. Sul runner Ubuntu usano `bash` dal PATH.
