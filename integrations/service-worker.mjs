@@ -50,6 +50,8 @@ export default function serviceWorker() {
         };
         for (const [pagina, extra] of Object.entries(INTERATTIVE)) {
           const html = fs.readFileSync(path.join(out, pagina, 'index.html'), 'utf8');
+          // Anche il CSS caricato separatamente deve funzionare dopo la visita alla sola home.
+          for (const m of html.matchAll(/<link[^>]+href="(\/_astro\/[\w.-]+\.css)"/g)) aggiungi(m[1]);
           for (const m of html.matchAll(/<script[^>]+src="(\/_astro\/[\w.-]+\.js)"/g)) aggiungi(m[1]);
           for (const m of html.matchAll(/"foto":"(\/_astro\/[\w.-]+\.(?:webp|avif|jpe?g|png))"/g)) aggiungi(m[1]);
           for (const u of extra) aggiungi(u);

@@ -2,6 +2,7 @@
 // ricevuto, un itinerario pronto dalla home o dal menu, un locale da «Dove mangiare»), disegna la vista scelta (C o D), poi
 // carica i dati che arrivano dopo e, il giorno stesso, ricalcola dal vivo ogni mezzo minuto.
 import { $, ascoltaFirme, maiuscola } from './base.js';
+import { attendiStile } from '../stile.mjs';
 import { C, A, X, PRONTI, T, caricaSchede, quandoLibero, nuovo, apri, nomeLibero, ricordaBozza, gia, scriviArchivio, sostituisciArchivio, caricaDopo, VIVO, oggiNelGiorno, posizioneAttiva, adessoPer, statoPosizione, nG } from './stato.js';
 import { decodifica } from '../../../lib/itinerari/link';
 import { leggi, quandoCambia } from '../memoria';
@@ -36,8 +37,9 @@ function avvia() {
   scriviArchivio(avvisa);
   preparaFoglio(); preparaAvviso(); preparaViste(); preparaMenu(); preparaScheda();
   ascoltaFirme($('#app'));
-  document.documentElement.classList.add('cmp-pronto');
   if (chiesto) usaPronto(chiesto); else disegna();
+  // La parte bassa resta fuori dal primo ricalcolo del layout del compositore.
+  document.documentElement.classList.add('cmp-pronto');
   // scorrendo sotto il compositore (itinerari pronti, gite, fonti) la mappa fissa e le barre si nascondono
   new IntersectionObserver(([e]) => document.documentElement.classList.toggle('cmp-fuori', !e.isIntersecting && e.boundingClientRect.top < 0)).observe($('#compositore'));
   // appena la parte bassa entra nello schermo, le barre fisse del compositore (in basso o di lato) si tolgono: non la coprono
@@ -108,7 +110,8 @@ function parti() {
   performance.mark('compositore-fine');
   if (primi.length) setTimeout(() => avvisa(primi.join(' ')), 600);
 }
-if (document.getElementById('app')) {
+function preparaAvvio() {
+  if (!document.getElementById('app')) return;
   // la prima schermata dell'HTML si disegna prima che il compositore la sostituisca (chi ha già itinerari parte subito)
   // si parte appena il browser ha mostrato il primo disegno (al massimo dopo 3 secondi; subito se la scheda non si vede)
   if (document.documentElement.classList.contains('cmp-ha') || document.visibilityState === 'hidden') parti();
@@ -121,3 +124,4 @@ if (document.getElementById('app')) {
     setTimeout(via, 3000);
   }
 }
+attendiStile(document.getElementById('stile-compositore')).then(preparaAvvio).catch(error => console.error(error));

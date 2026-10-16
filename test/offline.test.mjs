@@ -58,9 +58,9 @@ test('build offline: da sola home precarica anche script e dipendenze dei filtri
   try{
     const files={
       'index.html':'<html>home</html>', 'napoli/index.html':'napoli', 'offline/index.html':'offline',
-      'napoli/itinerari/index.html':'<script type="module" src="/_astro/it.js"></script>',
+      'napoli/itinerari/index.html':'<link rel="stylesheet" href="/_astro/compositore.hash.css" media="print"><noscript><link rel="stylesheet" href="/_astro/compositore.hash.css"></noscript><script type="module" src="/_astro/it.js"></script>',
       'napoli/dove-mangiare/index.html':'<script type="module" src="/_astro/dm.js"></script>',
-      '_astro/it.js':'export const a=1;', '_astro/dm.js':'import "./filtro.js";', '_astro/filtro.js':'export const filtro=1;',
+      '_astro/compositore.hash.css':'.cmp{color:navy}', '_astro/it.js':'export const a=1;', '_astro/dm.js':'import "./filtro.js";', '_astro/filtro.js':'export const filtro=1;',
       'fonts/prova.woff2':'font', 'napoli/itinerari/schede/index.html':'schede',
       'napoli/itinerari/strade/indice.json':'{}', 'napoli/itinerari/mappa.json':'{}', 'napoli/itinerari/scenari.json':'{}', 'napoli/itinerari/percorsi.json':'{}', 'napoli/itinerari/partenze.json':'{}'
     };
@@ -68,6 +68,7 @@ test('build offline: da sola home precarica anche script e dipendenze dei filtri
     serviceWorker().hooks['astro:build:done']({dir:pathToFileURL(root+path.sep),logger:{warn:()=>{},info:()=>{}}});
     const sw=fs.readFileSync(path.join(root,'sw.js'),'utf8');
   const core=JSON.parse(sw.match(/const CORE = (.*);/)[1]);
+    assert.equal(core.filter(u=>u==='/_astro/compositore.hash.css').length,1,'Il foglio stile completo deve esserci anche dopo la sola home, una sola volta');
     assert.ok(core.includes('/_astro/dm.js'));
   assert.ok(core.includes('/_astro/filtro.js'));
     const versione=sw.match(/const DATA_VERSION = '(.*?)'/)[1];

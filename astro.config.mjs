@@ -7,7 +7,7 @@ export default defineConfig({
   trailingSlash: 'always',
   build: {
     format: 'directory',
-    // CSS dentro ogni pagina: meno richieste e pagine che funzionano anche offline
+    // CSS importati dentro ogni pagina. Il compositore completo usa ?url e viene precached.
     inlineStylesheets: 'always'
   },
   prefetch: { prefetchAll: false, defaultStrategy: 'hover' },

@@ -11,7 +11,8 @@ import { getTappe } from '../../../lib/tappe';
 import { cittaNapoli, impacchetta, prontiNapoli, REGATE } from '../../../lib/itinerari/napoli';
 import { durata, ora } from '../../../lib/itinerari/date';
 import '../../../styles/itinerari.css';
-import '../../../styles/compositore.css';
+import '../../../styles/compositore-avvio.css';
+import stileCompositore from '../../../styles/compositore.css?url';
 import { datiUI } from '../../../lib/itinerari/ui';
 
 const T = await getTesti('itinerari');
@@ -32,6 +33,11 @@ const { ui } = await datiUI(C, tappe, locali);
 const json = JSON.stringify(pacco).replace(/</g, '\\u003c');
 ---
 <Base soloMenu title="Itinerari a Napoli: mezza giornata, 1, 2 e 3 giorni" description="Componi il tuo itinerario a Napoli: 51 tappe in città e 9 gite, con i tempi a piedi e con metro, funicolari e autobus, la mappa e gli avvisi. Itinerari pronti per mezza giornata, 1, 2 e 3 giorni e per un giorno di regata. Senza account, anche offline.">
+  <Fragment slot="head">
+    <!-- Il primo disegno usa solo lo stile iniziale; i controlli attendono il foglio completo. -->
+    <link id="stile-compositore" rel="stylesheet" href={stileCompositore} media="print" onload="this.media='all'" onerror="this.dataset.errore='si'" />
+    <noscript><link rel="stylesheet" href={stileCompositore} /></noscript>
+  </Fragment>
   <script is:inline>
     // Un itinerario ricevuto con un link: lo prendo e tolgo il «#…» dall'indirizzo prima di tutto il resto,
     // così non finisce nelle statistiche né nella cronologia delle pagine viste.
