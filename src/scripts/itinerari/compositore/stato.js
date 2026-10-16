@@ -6,7 +6,7 @@ import { calcolaGiorno, ordinePiuCorto, tappaDi, dataDelGiorno } from '../../../
 import { conPause } from '../../../lib/itinerari/pause';
 import { nuovoItinerario, uguali, codifica } from '../../../lib/itinerari/link';
 import { giornoSettimana, piuGiorni, dataLunga } from '../../../lib/itinerari/date';
-import { leggi, scrivi } from '../memoria';
+import { leggi, creaSalvataggio } from '../memoria';
 import { oggi, oraDiAdesso } from './base.js';
 
 const json = id => JSON.parse(document.getElementById(id)?.textContent || 'null');
@@ -75,13 +75,8 @@ export const gia = x => A.elenco.find(i => uguali(i, x));
 export { nuovoItinerario };
 
 // salvare: true se il browser lo permette (in navigazione privata o con la memoria piena no)
-let avvisato = false;
-export function scriviArchivio(avvisa) {
-  if (scrivi(A) || avvisato) return true;
-  avvisato = true;
-  avvisa?.('Questo browser non salva i dati: l\'itinerario resta finché la pagina è aperta. Per tenerlo, mandalo con «Condividi».');
-  return false;
-}
+const salvaArchivio = creaSalvataggio();
+export function scriviArchivio(avvisa) { return salvaArchivio(A, avvisa); }
 // una modifica all'itinerario aperto: «visitata» vale solo per le tappe ancora nel giorno; i timbri per le tappe visitate
 export function dopoModifica() {
   const x = X();
