@@ -1,13 +1,14 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 16/10/2026. Lavoro locale Codex nel ramo `codex/cache-sourcemap`, dalla base main `75d25e6` con i quattro blocchi precedenti già inclusi. Nessun push, merge o deploy dei cinque blocchi._
+_Aggiornato il 16/10/2026. Lavoro locale Codex nel ramo `codex/satori-fflate`, dalla base main `75d25e6` con i cinque blocchi precedenti già inclusi. Nessun push, merge o deploy dei sei blocchi._
 
 ## Blocco corrente
 
-Aggiornamenti autorizzati da Enrico: source-map-js **1.2.1 → 1.2.2**, difetto riprodotto prima e corretto; http-cache-semantics **4.2.0 → 4.3.0**, aggiornato ma comportamento max-stale/cookie ancora riproducibile nella libreria. Il test del percorso immagini di Astro conferma durata non positiva con cookie sintetico. **164 test, build e 809 link validi; 705 file del sito identici**. Audit rimasto a due voci moderate (Satori/fflate), distinto dal problema cache mantenuto aperto. [Resoconto e limiti](docs/storico/2026-10-16-cache-sourcemap.md). Nessun push, merge o deploy.
+Blocco Satori/fflate autorizzato da Enrico: renderer Satori **0.33.5 conservato**, fflate **0.7.3 → 0.7.5** tramite override npm, perché anche Satori latest mantiene la dipendenza vulnerabile esatta. Tre casi ZIP64 bloccati prima e corretti dopo; sette nuovi test. **171 test, build e 809 link validi**, 705 file del sito e nove anteprime identici. **Audit senza segnalazioni**, distinto dal rilievo cache ancora aperto. [Resoconto e limiti](docs/storico/2026-10-16-satori-fflate.md). Nessun push, merge o deploy; Linux reale e anteprima di rilascio ancora da verificare.
 
 ## Correzioni già concluse localmente
 
+- **Cache/sourcemap**, commit `cd92cbc`: sourcemap 1.2.2 corretta, cache 4.3.0 con comportamento generico max-stale/cookie ancora riproducibile. 164 test, build e 809 link; contratto Astro verificato. [Resoconto](docs/storico/2026-10-16-cache-sourcemap.md).
 - **Sharp**, commit `848f717`: 0.35.5, avvisi relativi rimossi; 159 test, build/link e 18 confronti di immagini senza pixel diversi. [Resoconto](docs/storico/2026-10-16-sharp.md).
 - **Documentazione e CI**, commit `81664eb`: indici correnti, stato precedente conservato, workflow sul commit esatto con controlli PR/main/manuali. 159 test e 101 riferimenti validi. [Terzo blocco](docs/storico/2026-10-16-manutenzione-controlli.md).
 - **Dati e salvataggi**, commit `939e882`: recupero dei record validi, copia protetta dell’archivio corrotto, esito reale di scrittura e filtri dei locali. 133 test e nove scenari browser. [Primo blocco](docs/storico/2026-10-16-conservazione-itinerari.md).
@@ -21,6 +22,6 @@ Resta pendente il pezzo 3 delle rifiniture grafiche (barra «Salvato» e menu); 
 
 ## Limiti e seguito
 
-Prima dell’integrazione servono l’OK a push/PR e l’esecuzione del workflow aggiornato su GitHub; main risulta ancora senza protezione. Dipendenze: Sharp e sourcemap corretti localmente; audit rimasto a Satori/fflate. Cache 4.3.0 ancora da considerare per il caso generico max-stale/cookie, non individuato nel percorso pubblico del sito statico. Aggiornamenti successivi soltanto nel relativo blocco autorizzato. Controllo completo dei tipi non ancora predisposto. Prestazioni: Lighthouse locale singolo 94, soglia 95 e anteprima di rilascio ancora da verificare.
+Prima dell’integrazione servono l’OK a push/PR e l’esecuzione del workflow aggiornato su GitHub; main risulta ancora senza protezione. Dipendenze: Sharp, sourcemap e fflate corretti localmente; audit a zero segnalazioni. Override fflate da riesaminare al prossimo aggiornamento dei consumatori. Cache 4.3.0 ancora da considerare per il caso generico max-stale/cookie, non individuato nel percorso pubblico del sito statico. Aggiornamenti successivi soltanto nel relativo blocco autorizzato. Controllo completo dei tipi non ancora predisposto. Prestazioni: Lighthouse locale singolo 94, soglia 95 e anteprima di rilascio ancora da verificare.
 
-Seguito consigliato dopo OK: Satori/fflate, conservando il rilievo cache aperto. Organizzazione mirata di verifiche/archivi ancora da affrontare. Per lavorare bastano ambiente locale e strumenti esistenti; GitHub e Vercel servono nel blocco di integrazione autorizzato. Stato e comandi in [docs/README](docs/README.md), [README](README.md) e [ambiente locale](docs/AMBIENTE-LOCALE.md).
+Seguito dopo nuovo OK: verifica d’integrazione su GitHub/Linux e preparazione dell’anteprima, conservando il rilievo cache aperto. Push e PR non sono ancora autorizzati. Organizzazione mirata di verifiche/archivi ancora da affrontare. Per lavorare bastano ambiente locale e strumenti esistenti; GitHub e Vercel servono nel blocco di integrazione autorizzato. Stato e comandi in [docs/README](docs/README.md), [README](README.md) e [ambiente locale](docs/AMBIENTE-LOCALE.md).

@@ -1,0 +1,183 @@
+{
+  "base": "cd92cbc",
+  "data": "2026-10-16",
+  "scelta": {
+    "satori": "0.33.5 invariato",
+    "fflatePrima": "0.7.3",
+    "fflateDopo": "0.7.5",
+    "override": {
+      "fflate": "0.7.5"
+    },
+    "motivo": "Anche Satori latest 0.62.0 richiede esattamente fflate 0.7.3; la correzione minima evita modifiche al renderer."
+  },
+  "revisione": {
+    "file": 13,
+    "bytes": 535838,
+    "integrity": "sha512-QieYf//cis6ywHNi5qW1+PXPQ4bC+XVJAtS4AXIML8P76GroEiOxm/oQtn1f02UkJY1+KsXMJcC+R2v/Eg4G3g==",
+    "installati": 1,
+    "scriptAutomatici": false
+  },
+  "regressioni": {
+    "prima": {
+      "pass": 4,
+      "fail": 3,
+      "timeoutPerProvaMs": 2000
+    },
+    "dopo": {
+      "pass": 7,
+      "fail": 0
+    }
+  },
+  "suite": {
+    "pass": 171,
+    "fail": 0,
+    "skip": 0,
+    "secondi": 11.235
+  },
+  "build": {
+    "pagine": 12,
+    "secondi": 7.05,
+    "node": "24.21.0",
+    "flag": "--no-liftoff",
+    "moduli": [
+      {
+        "name": "satori",
+        "version": "0.33.5"
+      },
+      {
+        "name": "fflate",
+        "version": "0.7.5"
+      }
+    ]
+  },
+  "link": {
+    "html": 13,
+    "controllati": 809,
+    "rotti": 0
+  },
+  "output": {
+    "prima": 705,
+    "dopo": 705,
+    "differenze": [],
+    "anteprime": [
+      {
+        "file": "accessibilita.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytes": 28860,
+        "fileIdentico": true,
+        "pixelIdentici": true
+      },
+      {
+        "file": "fonti.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytes": 23440,
+        "fileIdentico": true,
+        "pixelIdentici": true
+      },
+      {
+        "file": "home.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytes": 22989,
+        "fileIdentico": true,
+        "pixelIdentici": true
+      },
+      {
+        "file": "napoli--dove-mangiare.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytes": 30323,
+        "fileIdentico": true,
+        "pixelIdentici": true
+      },
+      {
+        "file": "napoli--itinerari.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytes": 23247,
+        "fileIdentico": true,
+        "pixelIdentici": true
+      },
+      {
+        "file": "napoli.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytes": 18567,
+        "fileIdentico": true,
+        "pixelIdentici": true
+      },
+      {
+        "file": "note-legali.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytes": 23005,
+        "fileIdentico": true,
+        "pixelIdentici": true
+      },
+      {
+        "file": "privacy.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytes": 20992,
+        "fileIdentico": true,
+        "pixelIdentici": true
+      },
+      {
+        "file": "termini.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytes": 22503,
+        "fileIdentico": true,
+        "pixelIdentici": true
+      }
+    ]
+  },
+  "lockfile": {
+    "modificati": [
+      "node_modules/fflate"
+    ],
+    "nuoveDipendenzeDirette": false
+  },
+  "audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 0
+  },
+  "cacheHttp": {
+    "rilievoAncoraAperto": true,
+    "resoconto": "2026-10-16-cache-sourcemap.md"
+  },
+  "linux": {
+    "dryRunRiuscito": true,
+    "esecuzioneReale": false
+  },
+  "installazionePrimariaInvariata": true,
+  "fonti": [
+    "https://github.com/advisories/GHSA-px8p-9vwx-vf98",
+    "https://docs.npmjs.com/cli/v11/configuring-npm/package-json/#overrides",
+    "https://github.com/vercel/satori/releases"
+  ]
+}

@@ -32,3 +32,5 @@ Fino al terzo blocco la worktree dell’audit riusava `node_modules` della carte
 Le prove `test/ci.test.mjs` usano Git e Bash già forniti da Git for Windows (`C:/Program Files/Git/bin/bash.exe`); non richiedono token o rete. Sul runner Ubuntu usano `bash` dal PATH.
 
 Nel blocco cache/sourcemap, due pacchetti senza dipendenze runtime sono installati in `node_modules/.cache-sourcemap-verifica/`. Per risolverli davvero dalla worktree, i percorsi di Astro, Vite, PostCSS, css-tree, csso, magicast e `.bin` sono materializzati con hardlink ai file esistenti; il contenuto è invariato. La traccia della build conferma cache 4.3.0 e sourcemap 1.2.2. Le copie primarie restano 4.2.0 e 1.2.1; non aggiornare o ripulire automaticamente la cartella iniziale. Non è un’installazione completa nuova del progetto.
+
+Nel blocco Satori/fflate, il solo fflate 0.7.5 è installato e verificato in `node_modules/.fflate-verifica/`; Satori 0.33.5 è materializzato localmente con hardlink ai file invariati per risolvere quel pacchetto. La primaria mantiene fflate 0.7.3. L’override versionato nel manifest è ciò che riproduce la scelta durante una futura installazione ordinaria.
