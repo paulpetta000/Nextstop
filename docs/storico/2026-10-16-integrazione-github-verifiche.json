@@ -1,0 +1,734 @@
+{
+  "data": "2026-10-16",
+  "pullRequest": "https://github.com/paulpetta000/Nextstop/pull/5",
+  "statoPR": "draft",
+  "mergeProduzione": false,
+  "linux": {
+    "url": "https://github.com/paulpetta000/Nextstop/actions/runs/38968577527",
+    "pullRequest": "https://github.com/paulpetta000/Nextstop/pull/5",
+    "head": "156e1ae1a0a235f31c9fe3e0cc99ff86eb4d7c54",
+    "base": "75d25e67bd413b724a5cfc4afb05612d1cfac165",
+    "testedCommit": "17934c2097db9635b84485dfe3315362b0dd8039",
+    "status": "success",
+    "environment": "ubuntu-24.04",
+    "node": "22.23.3",
+    "install": "npm ci --ignore-scripts --no-audit --no-fund",
+    "packages": 233,
+    "tests": 171,
+    "passed": 171,
+    "failed": 0,
+    "testDurationMs": 1919.248006,
+    "buildPages": 12,
+    "linkPages": 13,
+    "links": 809
+  },
+  "preview": {
+    "deploymentId": "dpl_Cwzg7uBzzN7uRUri7yd44npQitje",
+    "url": "https://nextstop-1e1w0pv70-enrico-2d20.vercel.app",
+    "commit": "156e1ae1a0a235f31c9fe3e0cc99ff86eb4d7c54",
+    "target": "preview",
+    "state": "READY",
+    "protection": "Vercel Authentication conservata; accesso temporaneo senza token nei rapporti",
+    "buildPages": 12,
+    "checks": [
+      {
+        "slug": "home",
+        "path": "/",
+        "dimensions": [
+          {
+            "width": 320,
+            "scroll": 320
+          },
+          {
+            "width": 390,
+            "scroll": 390
+          },
+          {
+            "width": 1280,
+            "scroll": 1280
+          }
+        ],
+        "motion": {
+          "reduced": true,
+          "active": 0
+        },
+        "themes": [
+          {
+            "theme": "light",
+            "violations": [],
+            "incomplete": [
+              "color-contrast"
+            ]
+          },
+          {
+            "theme": "dark",
+            "violations": [],
+            "incomplete": [
+              "color-contrast"
+            ]
+          }
+        ],
+        "errors": [],
+        "consoleErrors": [],
+        "networkErrors": []
+      },
+      {
+        "slug": "napoli",
+        "path": "/napoli/",
+        "dimensions": [
+          {
+            "width": 320,
+            "scroll": 320
+          },
+          {
+            "width": 390,
+            "scroll": 390
+          },
+          {
+            "width": 1280,
+            "scroll": 1280
+          }
+        ],
+        "motion": {
+          "reduced": true,
+          "active": 0
+        },
+        "themes": [
+          {
+            "theme": "light",
+            "violations": [],
+            "incomplete": []
+          },
+          {
+            "theme": "dark",
+            "violations": [],
+            "incomplete": []
+          }
+        ],
+        "errors": [],
+        "consoleErrors": [],
+        "networkErrors": []
+      },
+      {
+        "slug": "itinerari",
+        "path": "/napoli/itinerari/",
+        "dimensions": [
+          {
+            "width": 320,
+            "scroll": 320
+          },
+          {
+            "width": 390,
+            "scroll": 390
+          },
+          {
+            "width": 1280,
+            "scroll": 1280
+          }
+        ],
+        "motion": {
+          "reduced": true,
+          "active": 0
+        },
+        "themes": [
+          {
+            "theme": "light",
+            "violations": [],
+            "incomplete": [
+              "color-contrast",
+              "label-content-name-mismatch"
+            ]
+          },
+          {
+            "theme": "dark",
+            "violations": [],
+            "incomplete": [
+              "color-contrast",
+              "label-content-name-mismatch"
+            ]
+          }
+        ],
+        "errors": [],
+        "consoleErrors": [],
+        "networkErrors": []
+      },
+      {
+        "slug": "mangiare",
+        "path": "/napoli/dove-mangiare/",
+        "dimensions": [
+          {
+            "width": 320,
+            "scroll": 320
+          },
+          {
+            "width": 390,
+            "scroll": 390
+          },
+          {
+            "width": 1280,
+            "scroll": 1280
+          }
+        ],
+        "motion": {
+          "reduced": true,
+          "active": 0
+        },
+        "themes": [
+          {
+            "theme": "light",
+            "violations": [],
+            "incomplete": []
+          },
+          {
+            "theme": "dark",
+            "violations": [],
+            "incomplete": []
+          }
+        ],
+        "errors": [],
+        "consoleErrors": [],
+        "networkErrors": []
+      },
+      {
+        "slug": "fonti",
+        "path": "/fonti/",
+        "dimensions": [
+          {
+            "width": 320,
+            "scroll": 320
+          },
+          {
+            "width": 390,
+            "scroll": 390
+          },
+          {
+            "width": 1280,
+            "scroll": 1280
+          }
+        ],
+        "motion": {
+          "reduced": true,
+          "active": 0
+        },
+        "themes": [
+          {
+            "theme": "light",
+            "violations": [],
+            "incomplete": [
+              "color-contrast"
+            ]
+          },
+          {
+            "theme": "dark",
+            "violations": [],
+            "incomplete": [
+              "color-contrast"
+            ]
+          }
+        ],
+        "errors": [],
+        "consoleErrors": [],
+        "networkErrors": []
+      },
+      {
+        "slug": "privacy",
+        "path": "/privacy/",
+        "dimensions": [
+          {
+            "width": 320,
+            "scroll": 320
+          },
+          {
+            "width": 390,
+            "scroll": 390
+          },
+          {
+            "width": 1280,
+            "scroll": 1280
+          }
+        ],
+        "motion": {
+          "reduced": true,
+          "active": 0
+        },
+        "themes": [
+          {
+            "theme": "light",
+            "violations": [],
+            "incomplete": [
+              "color-contrast"
+            ]
+          },
+          {
+            "theme": "dark",
+            "violations": [],
+            "incomplete": [
+              "color-contrast"
+            ]
+          }
+        ],
+        "errors": [],
+        "consoleErrors": [],
+        "networkErrors": []
+      },
+      {
+        "slug": "termini",
+        "path": "/termini/",
+        "dimensions": [
+          {
+            "width": 320,
+            "scroll": 320
+          },
+          {
+            "width": 390,
+            "scroll": 390
+          },
+          {
+            "width": 1280,
+            "scroll": 1280
+          }
+        ],
+        "motion": {
+          "reduced": true,
+          "active": 0
+        },
+        "themes": [
+          {
+            "theme": "light",
+            "violations": [],
+            "incomplete": [
+              "color-contrast"
+            ]
+          },
+          {
+            "theme": "dark",
+            "violations": [],
+            "incomplete": [
+              "color-contrast"
+            ]
+          }
+        ],
+        "errors": [],
+        "consoleErrors": [],
+        "networkErrors": []
+      },
+      {
+        "slug": "note-legali",
+        "path": "/note-legali/",
+        "dimensions": [
+          {
+            "width": 320,
+            "scroll": 320
+          },
+          {
+            "width": 390,
+            "scroll": 390
+          },
+          {
+            "width": 1280,
+            "scroll": 1280
+          }
+        ],
+        "motion": {
+          "reduced": true,
+          "active": 0
+        },
+        "themes": [
+          {
+            "theme": "light",
+            "violations": [],
+            "incomplete": [
+              "color-contrast"
+            ]
+          },
+          {
+            "theme": "dark",
+            "violations": [],
+            "incomplete": [
+              "color-contrast"
+            ]
+          }
+        ],
+        "errors": [],
+        "consoleErrors": [],
+        "networkErrors": []
+      },
+      {
+        "slug": "accessibilita",
+        "path": "/accessibilita/",
+        "dimensions": [
+          {
+            "width": 320,
+            "scroll": 320
+          },
+          {
+            "width": 390,
+            "scroll": 390
+          },
+          {
+            "width": 1280,
+            "scroll": 1280
+          }
+        ],
+        "motion": {
+          "reduced": true,
+          "active": 0
+        },
+        "themes": [
+          {
+            "theme": "light",
+            "violations": [],
+            "incomplete": [
+              "color-contrast"
+            ]
+          },
+          {
+            "theme": "dark",
+            "violations": [],
+            "incomplete": [
+              "color-contrast"
+            ]
+          }
+        ],
+        "errors": [],
+        "consoleErrors": [],
+        "networkErrors": []
+      },
+      {
+        "slug": "offline",
+        "path": "/offline/",
+        "dimensions": [
+          {
+            "width": 320,
+            "scroll": 320
+          },
+          {
+            "width": 390,
+            "scroll": 390
+          },
+          {
+            "width": 1280,
+            "scroll": 1280
+          }
+        ],
+        "motion": {
+          "reduced": true,
+          "active": 0
+        },
+        "themes": [
+          {
+            "theme": "light",
+            "violations": [],
+            "incomplete": []
+          },
+          {
+            "theme": "dark",
+            "violations": [],
+            "incomplete": []
+          }
+        ],
+        "errors": [],
+        "consoleErrors": [],
+        "networkErrors": []
+      }
+    ],
+    "flows": [
+      {
+        "name": "aggiunta, salvataggio, ricarica e condivisione in profilo separato",
+        "ok": true,
+        "tappe": [
+          "sansevero",
+          "duomo"
+        ],
+        "nativeShare": "payload intercettato senza invio",
+        "fallbackCopy": true,
+        "errors": []
+      },
+      {
+        "name": "prima visita home, rete disabilitata, filtri e salvataggio offline",
+        "ok": true,
+        "cache": {
+          "keys": [
+            "pagine-c99ec9c25a6c"
+          ],
+          "entries": 81
+        },
+        "errors": [],
+        "consoleErrors": [],
+        "networkErrors": []
+      }
+    ],
+    "filledItinerary": [
+      {
+        "theme": "light",
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "widths": [
+          {
+            "width": 320,
+            "scroll": 320
+          },
+          {
+            "width": 390,
+            "scroll": 390
+          }
+        ],
+        "errors": []
+      },
+      {
+        "theme": "dark",
+        "axe": {
+          "violations": [],
+          "incomplete": [
+            "color-contrast"
+          ]
+        },
+        "widths": [
+          {
+            "width": 320,
+            "scroll": 320
+          },
+          {
+            "width": 390,
+            "scroll": 390
+          }
+        ],
+        "errors": []
+      }
+    ]
+  },
+  "lighthouse": {
+    "method": "Lighthouse mobile standard; cookie temporaneo conservato, cache browser e dati del sito svuotati prima di ogni misura; nessun invio errori.",
+    "measures": [
+      {
+        "slug": "home",
+        "url": "https://nextstop-1e1w0pv70-enrico-2d20.vercel.app/",
+        "fetchTime": "2026-10-16T21:25:46.943Z",
+        "version": "13.5.0",
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "categories": {
+          "performance": 98,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 69,
+          "agentic-browsing": 100
+        },
+        "metrics": {
+          "first-contentful-paint": {
+            "value": 971.474,
+            "display": "1.0 s"
+          },
+          "largest-contentful-paint": {
+            "value": 1870.4740000000002,
+            "display": "1.9 s"
+          },
+          "total-blocking-time": {
+            "value": 149.0000000000001,
+            "display": "150 ms"
+          },
+          "cumulative-layout-shift": {
+            "value": 0,
+            "display": "0"
+          },
+          "speed-index": {
+            "value": 1044.0781859998597,
+            "display": "1.0 s"
+          }
+        },
+        "runWarnings": [],
+        "belowTarget": false,
+        "findings": [
+          {
+            "id": "largest-contentful-paint",
+            "title": "Largest Contentful Paint",
+            "score": 0.98,
+            "displayValue": "1.9 s",
+            "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)"
+          },
+          {
+            "id": "total-blocking-time",
+            "title": "Total Blocking Time",
+            "score": 0.95,
+            "displayValue": "150 ms",
+            "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/)."
+          },
+          {
+            "id": "max-potential-fid",
+            "title": "Max Potential First Input Delay",
+            "score": 0.76,
+            "displayValue": "170 ms",
+            "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/)."
+          },
+          {
+            "id": "is-crawlable",
+            "title": "Page is blocked from indexing",
+            "score": 0,
+            "description": "Search engines are unable to include your pages in search results if they don't have permission to crawl them. [Learn more about crawler directives](https://developer.chrome.com/docs/lighthouse/seo/is-crawlable/)."
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Improve image delivery",
+            "score": 0,
+            "displayValue": "Est savings of 48 KiB",
+            "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery)"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Network dependency tree",
+            "score": 0,
+            "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load."
+          }
+        ]
+      },
+      {
+        "slug": "itinerari",
+        "url": "https://nextstop-1e1w0pv70-enrico-2d20.vercel.app/napoli/itinerari/",
+        "fetchTime": "2026-10-16T21:25:55.268Z",
+        "version": "13.5.0",
+        "formFactor": "mobile",
+        "throttling": {
+          "rttMs": 150,
+          "throughputKbps": 1638.4,
+          "requestLatencyMs": 562.5,
+          "downloadThroughputKbps": 1474.5600000000002,
+          "uploadThroughputKbps": 675,
+          "cpuSlowdownMultiplier": 4
+        },
+        "categories": {
+          "performance": 94,
+          "accessibility": 100,
+          "best-practices": 100,
+          "seo": 66,
+          "agentic-browsing": 100
+        },
+        "metrics": {
+          "first-contentful-paint": {
+            "value": 1852.2894000000001,
+            "display": "1.9 s"
+          },
+          "largest-contentful-paint": {
+            "value": 2602.3594000000003,
+            "display": "2.6 s"
+          },
+          "total-blocking-time": {
+            "value": 128.5,
+            "display": "130 ms"
+          },
+          "cumulative-layout-shift": {
+            "value": 0,
+            "display": "0"
+          },
+          "speed-index": {
+            "value": 2111.5734812268965,
+            "display": "2.1 s"
+          }
+        },
+        "runWarnings": [],
+        "belowTarget": true,
+        "findings": [
+          {
+            "id": "first-contentful-paint",
+            "title": "First Contentful Paint",
+            "score": 0.88,
+            "displayValue": "1.9 s",
+            "description": "First Contentful Paint marks the time at which the first text or image is painted. [Learn more about the First Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/first-contentful-paint/)."
+          },
+          {
+            "id": "largest-contentful-paint",
+            "title": "Largest Contentful Paint",
+            "score": 0.87,
+            "displayValue": "2.6 s",
+            "description": "Largest Contentful Paint marks the time at which the largest text or image is painted. [Learn more about the Largest Contentful Paint metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-largest-contentful-paint/)"
+          },
+          {
+            "id": "speed-index",
+            "title": "Speed Index",
+            "score": 0.99,
+            "displayValue": "2.1 s",
+            "description": "Speed Index shows how quickly the contents of a page are visibly populated. [Learn more about the Speed Index metric](https://developer.chrome.com/docs/lighthouse/performance/speed-index/)."
+          },
+          {
+            "id": "total-blocking-time",
+            "title": "Total Blocking Time",
+            "score": 0.96,
+            "displayValue": "130 ms",
+            "description": "Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds. [Learn more about the Total Blocking Time metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-total-blocking-time/)."
+          },
+          {
+            "id": "max-potential-fid",
+            "title": "Max Potential First Input Delay",
+            "score": 0.86,
+            "displayValue": "140 ms",
+            "description": "The maximum potential First Input Delay that your users could experience is the duration of the longest task. [Learn more about the Maximum Potential First Input Delay metric](https://developer.chrome.com/docs/lighthouse/performance/lighthouse-max-potential-fid/)."
+          },
+          {
+            "id": "interactive",
+            "title": "Time to Interactive",
+            "score": 0.93,
+            "displayValue": "3.4 s",
+            "description": "Time to Interactive is the amount of time it takes for the page to become fully interactive. [Learn more about the Time to Interactive metric](https://developer.chrome.com/docs/lighthouse/performance/interactive/)."
+          },
+          {
+            "id": "unused-css-rules",
+            "title": "Reduce unused CSS",
+            "score": 0.5,
+            "displayValue": "Est savings of 26 KiB",
+            "description": "Reduce unused rules from stylesheets and defer CSS not used for above-the-fold content to decrease bytes consumed by network activity. [Learn how to reduce unused CSS](https://developer.chrome.com/docs/lighthouse/performance/unused-css-rules/)."
+          },
+          {
+            "id": "unused-javascript",
+            "title": "Reduce unused JavaScript",
+            "score": 0,
+            "displayValue": "Est savings of 43 KiB",
+            "description": "Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/)."
+          },
+          {
+            "id": "is-crawlable",
+            "title": "Page is blocked from indexing",
+            "score": 0,
+            "description": "Search engines are unable to include your pages in search results if they don't have permission to crawl them. [Learn more about crawler directives](https://developer.chrome.com/docs/lighthouse/seo/is-crawlable/)."
+          },
+          {
+            "id": "forced-reflow-insight",
+            "title": "Forced reflow",
+            "score": 0,
+            "description": "A forced reflow occurs when JavaScript queries geometric properties (such as offsetWidth) after styles have been invalidated by a change to the DOM state. This can result in poor performance. Learn more about [forced reflows](https://developer.chrome.com/docs/performance/insights/forced-reflow) and possible mitigations."
+          },
+          {
+            "id": "image-delivery-insight",
+            "title": "Improve image delivery",
+            "score": 0.5,
+            "displayValue": "Est savings of 9 KiB",
+            "description": "Reducing the download time of images can improve the perceived load time of the page and LCP. [Learn more about optimizing image size](https://developer.chrome.com/docs/performance/insights/image-delivery)"
+          },
+          {
+            "id": "network-dependency-tree-insight",
+            "title": "Network dependency tree",
+            "score": 0,
+            "description": "[Avoid chaining critical requests](https://developer.chrome.com/docs/performance/insights/network-dependency-tree) by reducing the length of chains, reducing the download size of resources, or deferring the download of unnecessary resources to improve page load."
+          }
+        ]
+      }
+    ]
+  },
+  "limiti": [
+    "Compositore Lighthouse 94/100, sotto 95: non pronto al rilascio secondo le regole del progetto.",
+    "Axe è un controllo automatico; alcuni contrasti sono indicati come incompleti e non costituisce una certificazione di accessibilità.",
+    "SEO Lighthouse penalizzato dal noindex della preview, previsto e conservato.",
+    "Cache max-stale/Set-Cookie ancora aperta come da rapporto cache/sourcemap.",
+    "Lighthouse ha richiesto un processo separato dopo un errore CDP dello strumento di prova; nessuna modifica al sito.",
+    "La prima prova della condivisione attendeva il campo del fallback, ma su telefono si attiva Web Share. Verificati separatamente payload nativo senza invio e fallback di copia."
+  ]
+}

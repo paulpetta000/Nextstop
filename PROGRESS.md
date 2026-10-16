@@ -1,10 +1,12 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 16/10/2026. Lavoro locale Codex nel ramo `codex/satori-fflate`, dalla base main `75d25e6` con i cinque blocchi precedenti già inclusi. Nessun push, merge o deploy dei sei blocchi._
+_Aggiornato il 16/10/2026. Ramo `codex/satori-fflate` pubblicato nella PR #5 in bozza; sei blocchi inclusi dalla base main `75d25e6`. Verifica GitHub/Linux e anteprima tecnica completate. Nessun merge o rilascio in produzione._
 
 ## Blocco corrente
 
-Blocco Satori/fflate autorizzato da Enrico: renderer Satori **0.33.5 conservato**, fflate **0.7.3 → 0.7.5** tramite override npm, perché anche Satori latest mantiene la dipendenza vulnerabile esatta. Tre casi ZIP64 bloccati prima e corretti dopo; sette nuovi test. **171 test, build e 809 link validi**, 705 file del sito e nove anteprime identici. **Audit senza segnalazioni**, distinto dal rilievo cache ancora aperto. [Resoconto e limiti](docs/storico/2026-10-16-satori-fflate.md). Nessun push, merge o deploy; Linux reale e anteprima di rilascio ancora da verificare.
+**Integrazione GitHub autorizzata e verificata**: [PR #5 in bozza](https://github.com/paulpetta000/Nextstop/pull/5), sei commit pubblicati fino a `156e1ae`. [CI Linux riuscita](https://github.com/paulpetta000/Nextstop/actions/runs/38968577527): installazione pulita, **171 test, build e 809 link validi** su Node 22.23.3. Anteprima Vercel READY dello stesso codice: dieci pagine, axe in chiaro/scuro, larghezze, riduci movimento e console senza problemi automatici osservati; salvataggio, ricarica, condivisione e offline riusciti. **Lighthouse home 98, compositore 94**: resta sotto la soglia 95, quindi anteprima tecnica e nessun via libera al rilascio. [Resoconto, limiti e prove](docs/storico/2026-10-16-integrazione-github.md). La chiusura modifica soltanto documentazione; la CI finale si controlla sulla PR.
+
+Il blocco Satori/fflate è concluso: Satori 0.33.5 conservato, fflate 0.7.5 tramite override. 171 test; 705 file del sito e nove anteprime identici nel confronto locale delle dipendenze; audit senza segnalazioni, distinto dal rilievo cache aperto. [Resoconto](docs/storico/2026-10-16-satori-fflate.md).
 
 ## Correzioni già concluse localmente
 
@@ -22,6 +24,6 @@ Resta pendente il pezzo 3 delle rifiniture grafiche (barra «Salvato» e menu); 
 
 ## Limiti e seguito
 
-Prima dell’integrazione servono l’OK a push/PR e l’esecuzione del workflow aggiornato su GitHub; main risulta ancora senza protezione. Dipendenze: Sharp, sourcemap e fflate corretti localmente; audit a zero segnalazioni. Override fflate da riesaminare al prossimo aggiornamento dei consumatori. Cache 4.3.0 ancora da considerare per il caso generico max-stale/cookie, non individuato nel percorso pubblico del sito statico. Aggiornamenti successivi soltanto nel relativo blocco autorizzato. Controllo completo dei tipi non ancora predisposto. Prestazioni: Lighthouse locale singolo 94, soglia 95 e anteprima di rilascio ancora da verificare.
+Push e apertura della PR sono autorizzati e completati. Main non è stato modificato; nessuna modifica alle protezioni GitHub/Vercel. Main risultava senza protezione nel controllo precedente, come già registrato. Dipendenze aggiornate e installazione Linux verificata. Override fflate da riesaminare al prossimo aggiornamento dei consumatori. Cache 4.3.0 ancora da considerare per il caso generico max-stale/cookie, non individuato nel percorso pubblico del sito statico. Controllo completo dei tipi non ancora predisposto.
 
-Seguito dopo nuovo OK: verifica d’integrazione su GitHub/Linux e preparazione dell’anteprima, conservando il rilievo cache aperto. Push e PR non sono ancora autorizzati. Organizzazione mirata di verifiche/archivi ancora da affrontare. Per lavorare bastano ambiente locale e strumenti esistenti; GitHub e Vercel servono nel blocco di integrazione autorizzato. Stato e comandi in [docs/README](docs/README.md), [README](README.md) e [ambiente locale](docs/AMBIENTE-LOCALE.md).
+**Prossimo blocco consigliato, dopo OK:** prestazioni del compositore per raggiungere Lighthouse mobile almeno 95, misurando caricamento iniziale di script/stili e ricalcoli del layout; preservare mappa, offline e comportamento. Nessuna nuova grafica o funzione inclusa. Prima di merge/rilascio servono risultato conforme e consenso esplicito di Enrico sull'anteprima. Organizzazione mirata di verifiche/archivi ancora da affrontare. Per il seguito bastano ambiente locale e controlli già installati, con GitHub e Vercel per CI e anteprima. Stato e comandi in [docs/README](docs/README.md), [README](README.md) e [ambiente locale](docs/AMBIENTE-LOCALE.md).
