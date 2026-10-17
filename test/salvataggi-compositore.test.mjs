@@ -1,13 +1,13 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
-import { creaSalvataggio, presentaSalvataggio, testoErroreSalvataggio } from '../src/scripts/itinerari/memoria.ts';
+import { creaSalvataggio, presentaSalvataggio, testoErroreSalvataggio, testoNotaMemoria } from '../src/scripts/itinerari/memoria.ts';
 
 const leggi = p => fs.readFileSync(new URL(p, import.meta.url), 'utf8');
 const stato = leggi('../src/scripts/itinerari/compositore/stato.js');
 const da = stato.indexOf('let salvaArchivio ='), a = stato.indexOf('// una modifica', da);
 assert.ok(da >= 0 && a > da);
-const gestione = new Function('d', 'const { creaSalvataggio, presentaSalvataggio, testoErroreSalvataggio } = d; const iniziale = d.fonte, A = d.archivio, X = () => A.elenco.find(i => i.id === A.attivo), salvato = (x = X()) => x.salvato; ' + stato.slice(da,a).replaceAll('export ','') + ';return { scriviArchivio, attendiSalvataggi, quandoSalva, salvataggioInCorso, erroreSalvataggio, statoSalvataggio };');
+const gestione = new Function('d', 'const { creaSalvataggio, presentaSalvataggio, testoErroreSalvataggio, testoNotaMemoria } = d; const iniziale = d.fonte, A = d.archivio, X = () => A.elenco.find(i => i.id === A.attivo), salvato = (x = X()) => x.salvato; ' + stato.slice(da,a).replaceAll('export ','') + ';return { scriviArchivio, attendiSalvataggi, quandoSalva, salvataggioInCorso, erroreSalvataggio, statoSalvataggio, notaSalvataggio };');
 const comuni = leggi('../src/scripts/itinerari/compositore/comuni.js');
 const daC = comuni.indexOf('export function rinfrescaSalvataggio('), aC = comuni.indexOf('export function avvisa(', daC);
 assert.ok(daC >= 0 && aC > daC);
@@ -27,10 +27,10 @@ function ambiente(t) {
     Object.defineProperty(globalThis,nome,{configurable:true,value});
     t.after(() => prima ? Object.defineProperty(globalThis,nome,prima) : delete globalThis[nome]);
   }
-  const g = gestione({creaSalvataggio,presentaSalvataggio,testoErroreSalvataggio,fonte:{riferimento:raw},archivio});
+  const g = gestione({creaSalvataggio,presentaSalvataggio,testoErroreSalvataggio,testoNotaMemoria,fonte:{riferimento:raw},archivio});
   const classi = new Set(), testo = {textContent:''}, stato = {dataset:{},querySelector:()=>testo};
   const bottone = {disabled:false,classList:{toggle:(c,on)=>on?classi.add(c):classi.delete(c),add:c=>classi.add(c)}};
-  const tutti = s => s.includes('data-itinerario-stato') ? [] : s.includes('[data-stato]') ? [stato] : [bottone];
+  const tutti = s => (s.includes('data-itinerario-stato') || s.includes('data-memoria-itinerari')) ? [] : s.includes('[data-stato]') ? [stato] : [bottone];
   g.quandoSalva(controlli(tutti,g.statoSalvataggio,g.salvataggioInCorso));
   const d = {...g,A:archivio,X:()=>archivio.elenco.find(i=>i.id===archivio.attivo),salvato:i=>i.salvato,
     apriMiei(){},nomeLibero:n=>n,nomeProposto:()=> 'Napoli',dopoModifica(){},avvisa:(testo,azione)=>avvisi.push({testo,azione}),
@@ -67,6 +67,7 @@ test('salva reale: un errore nell’ultima modifica mantiene errore e copia loca
   assert.equal(e.classi.has('salva--fatto'),false); assert.equal(e.testo.textContent,'Modifiche non salvate');
   assert.equal(e.x.nome,'Da recuperare'); assert.equal(e.bottone.disabled,false);
   assert.equal(e.timer.length,0);
+  assert.match(e.g.notaSalvataggio(), /non salvate/);
 });
 
 test('salva reale: cambiare itinerario durante l’attesa non avvia conferme per quello nuovo', async t => {

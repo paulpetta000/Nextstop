@@ -6,7 +6,7 @@ import { calcolaGiorno, ordinePiuCorto, tappaDi, dataDelGiorno } from '../../../
 import { conPause } from '../../../lib/itinerari/pause';
 import { nuovoItinerario, uguali, codifica } from '../../../lib/itinerari/link';
 import { giornoSettimana, piuGiorni, dataLunga } from '../../../lib/itinerari/date';
-import { leggiConRiferimento, creaSalvataggio, testoErroreSalvataggio, presentaSalvataggio } from '../memoria';
+import { leggiConRiferimento, creaSalvataggio, testoErroreSalvataggio, presentaSalvataggio, testoNotaMemoria } from '../memoria';
 import { oggi, oraDiAdesso } from './base.js';
 import { creaCaricaJson, applicaSchede } from '../caricamento.mjs';
 
@@ -92,6 +92,7 @@ export function scriviArchivio(avvisa) {
   ultimaScrittura = lavoro.then(ok => { if (corrente === salvaArchivio) quandoSalvato?.(); return ok; });
   return ultimaScrittura;
 }
+export const notaSalvataggio = () => testoNotaMemoria(salvaArchivio.stato());
 export const erroreSalvataggio = () => testoErroreSalvataggio(salvaArchivio.stato());
 export const statoSalvataggio = (x = X()) => presentaSalvataggio(salvato(x), salvaArchivio.stato());
 // una modifica all'itinerario aperto: «visitata» vale solo per le tappe ancora nel giorno; i timbri per le tappe visitate

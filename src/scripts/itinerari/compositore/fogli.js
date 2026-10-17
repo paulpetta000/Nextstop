@@ -2,7 +2,7 @@
 // Condividi, Elimina con «Annulla»), «Condividi», «Pause e margini», una pausa, «Data e orari», «Altro», «I giorni», gli
 // itinerari pronti (anche la giornata di regata, che vuole un giorno di regata).
 import { $, $$, esc, ic, piano, range, ora, durata, maiuscola, oggi } from './base.js';
-import { E, T, X, A, PRONTI, nG, G, daFare, tappeDi, titoloGiorno, salvato, apri, nuovo, nomeLibero, ricordaBozza, gia, dopoModifica, scriviArchivio, piuGiorni, dataLungaDi, chiusaIl, nuovoItinerario, vuotoTutto, erroreSalvataggio, statoSalvataggio, salvataggioInCorso, attendiSalvataggi } from './stato.js';
+import { E, T, X, A, PRONTI, nG, G, daFare, tappeDi, titoloGiorno, salvato, apri, nuovo, nomeLibero, ricordaBozza, gia, dopoModifica, scriviArchivio, piuGiorni, dataLungaDi, chiusaIl, nuovoItinerario, vuotoTutto, erroreSalvataggio, statoSalvataggio, salvataggioInCorso, attendiSalvataggi, notaSalvataggio } from './stato.js';
 import { codifica, MAX_NOME, MAX_GIORNI, MAX_TAPPE } from '../../../lib/itinerari/link';
 import { prontoNelGiorno } from '../../../lib/itinerari/pronti';
 import { dataBreve, dataLunga } from '../../../lib/itinerari/date';
@@ -236,7 +236,7 @@ export function apriMiei() {
     const altri = A.elenco.filter(i => i.id !== A.attivo).sort((a, b) => b.modificato - a.modificato);
     return `${tolto ? `<p class="f-tolto" role="status">Hai eliminato «${esc(tolto.nome)}».<button type="button" class="f-bottone f-bottone--piccolo f-bottone--contorno" data-f="annulla">Annulla</button></p>` : ''}${aperto()}${nuovi()}
       ${altri.length ? `<section aria-labelledby="f-altri-t"><h3 id="f-altri-t" class="f-sotto">Gli altri sul telefono</h3><ul class="f-miei">${altri.map(riga).join('')}</ul></section>` : ''}
-      <p class="f-nota">Gli itinerari restano su questo telefono, anche se chiudi la pagina: niente account, niente iscrizione. Per averli su un altro telefono, mandali con «Condividi». Le tappe visitate non vanno nel link.</p>`;
+      <p class="f-nota" data-memoria-itinerari>${esc(notaSalvataggio())}</p>`;
   };
   const nuovoNome = f => {
     const x = X(), v = $('#f-nome', f)?.value.trim().slice(0, MAX_NOME);

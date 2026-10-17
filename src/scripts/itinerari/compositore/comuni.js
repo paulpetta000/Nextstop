@@ -2,7 +2,7 @@
 // l'avviso in basso con «Annulla», l'annuncio per i lettori di schermo, i numeri del giorno che scorrono, il tempo del giorno,
 // le schede dei giorni con il segno che scorre, cambiare giorno senza scatti (anche col dito), le liste che scivolano.
 import { $, $$, esc, ic, piano, computer, durata, durataLunga, ora, km, range } from './base.js';
-import { A, G, nG, tappeDi, aPiedi, caricaSchede, schedePronte, erroreSalvataggio, statoSalvataggio, salvataggioInCorso } from './stato.js';
+import { A, G, nG, tappeDi, aPiedi, caricaSchede, schedePronte, erroreSalvataggio, statoSalvataggio, salvataggioInCorso, notaSalvataggio } from './stato.js';
 
 // Lo stato della pagina (non va nella memoria, tranne la vista)
 export const S = { g: 0, p: 'c', attiva: null, nuova: null, tutte: false, cifre: {}, fini: {}, anima: true };
@@ -65,6 +65,7 @@ export function rinfrescaSalvataggio() {
     const s = statoSalvataggio(x);
     el.innerHTML = (s.fatto ? ic('spunta', 16) : '') + esc(s.fatto ? 'Salvato' : s.testo);
   });
+  $$('#foglio [data-memoria-itinerari]').forEach(el => { el.textContent = notaSalvataggio(); });
 }
 export function avvisa(testo, azione) {
   const errore = erroreSalvataggio();

@@ -88,6 +88,13 @@ export function testoErroreSalvataggio(esito: EsitoSalvataggio): string {
   if (esito === 'conflitto') return 'Gli itinerari sono cambiati in un’altra scheda. Questa modifica resta qui: usa «Condividi» prima di ricaricare la pagina.';
   return 'Questo browser non salva i dati: l’itinerario resta finché la pagina è aperta. Per tenerlo, mandalo con «Condividi».';
 }
+// Nota del pannello: non promette persistenza quando l'ultima scrittura attende o è fallita.
+export function testoNotaMemoria(esito: EsitoSalvataggio): string {
+  if (esito === 'in-corso') return 'Il salvataggio è in corso: aspetta la conferma prima di chiudere la pagina. «Condividi» contiene il percorso, senza visite e timbri.';
+  if (esito === 'conflitto') return 'Un’altra scheda ha cambiato gli itinerari; questa copia resta solo in questa pagina. Prima di ricaricare usa «Condividi» per tenere il percorso: visite e timbri non vanno nel link.';
+  if (esito === 'errore') return 'Le modifiche non salvate restano solo in questa pagina. Chiudi questo pannello e riprova «Salva», oppure usa «Condividi» per tenere il percorso: visite e timbri non vanno nel link.';
+  return 'Gli itinerari restano su questo telefono, anche se chiudi la pagina: niente account, niente iscrizione. Per averli su un altro telefono, mandali con «Condividi». Le tappe visitate non vanno nel link.';
+}
 export function presentaSalvataggio(salvato: boolean, esito: EsitoSalvataggio) {
   const errore = esito !== 'salvato', fatto = salvato && !errore;
   return { fatto, tipo: fatto ? 'salvato' : 'bozza', testo: esito === 'in-corso' ? 'Salvataggio in corso' : errore ? 'Modifiche non salvate' : fatto ? 'Salvato in «I miei itinerari»' : 'Non ancora salvato' };

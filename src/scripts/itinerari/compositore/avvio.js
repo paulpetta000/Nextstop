@@ -2,7 +2,7 @@
 // ricevuto, un itinerario pronto dalla home o dal menu, un locale da «Dove mangiare»), disegna la vista scelta (C o D), poi
 // carica i dati che arrivano dopo e, il giorno stesso, ricalcola dal vivo ogni mezzo minuto.
 import { $, ascoltaFirme, maiuscola } from './base.js';
-import { attendiStile } from '../stile.mjs';
+import { avviaConStile, mostraErroreStile } from '../stile.mjs';
 import { C, A, X, PRONTI, T, caricaSchede, quandoLibero, nuovo, apri, nomeLibero, ricordaBozza, gia, scriviArchivio, sostituisciArchivio, caricaDopo, VIVO, oggiNelGiorno, posizioneAttiva, adessoPer, statoPosizione, nG, erroreSalvataggio, salvataggioInCorso, quandoSalva } from './stato.js';
 import { decodifica } from '../../../lib/itinerari/link';
 import { leggiConRiferimento, quandoCambia, giornoSicuro, allineaArchivio, proteggiUscita } from '../memoria';
@@ -132,4 +132,4 @@ function preparaAvvio() {
     setTimeout(via, 3000);
   }
 }
-attendiStile(document.getElementById('stile-compositore')).then(preparaAvvio).catch(error => console.error(error));
+avviaConStile(document.getElementById('stile-compositore'), preparaAvvio, riprova => mostraErroreStile(document.getElementById('app'), document.documentElement, riprova)).catch(error => console.error(error));

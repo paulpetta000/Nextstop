@@ -16,7 +16,7 @@ function ambiente(esito) {
   const azione = {};
   const toast = { innerHTML: '', offsetWidth: 1, classList: { add() {}, remove() {} } };
   const singolo = s => s === '#toast' ? toast : s === 'button' ? azione : s.includes('[data-stato]') ? stato : bottone;
-  const tutti = s => s.includes('data-itinerario-stato') ? [] : s.includes('[data-stato]') ? [stato] : [bottone];
+  const tutti = s => (s.includes('data-itinerario-stato') || s.includes('data-memoria-itinerari')) ? [] : s.includes('[data-stato]') ? [stato] : [bottone];
   const avvisa = crea(singolo, tutti, x => x, () => testoErroreSalvataggio(esito), () => presentaSalvataggio(true, esito), () => esito === 'in-corso', () => 0, () => {});
   return { avvisa, classi, etichetta, stato, toast, azione };
 }

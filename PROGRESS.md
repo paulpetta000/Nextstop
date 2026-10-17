@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · salvataggi coordinati
+## Revisione corrente · recupero dagli errori
+
+Conclusi insieme nota di conservazione nel pannello, prove di Condividi dopo un conflitto e recupero dell'avvio senza stile completo. Corretta la promessa di persistenza durante attesa/errore; nuova nota aggiornata anche a pannello aperto. Avvio con Riprova, attesa massima dieci secondi e nessun avvio doppio, mantenendo lo stesso URL del foglio per la cache offline. **267/267 test**, build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-6.md). Nessun browser o pubblicazione; nessuna dipendenza o CSS modificati.
+
+Ordine originale recuperato anche dalla chat precedente: siamo nel punto 3, revisione del codice, da cui Enrico aveva chiesto di partire. Prossimo gruppo: sicurezza/privacy degli ingressi e controlli dei generatori. Prova reale Claude separata dopo la pubblicazione. La nuova idea su città e registro aggiornamenti, compresa la sua analisi, è rinviata su istruzione di Enrico: non svilupparla adesso.
+
+## Revisione precedente · salvataggi coordinati
 
 Completato il blocco tecnico ripreso: lettura/riferimento coerenti, coda e Web Locks, attesa dell'ultima modifica prima di confermare, gestione errori/eventi storage e avviso d'uscita durante scritture pendenti o fallite. Corretti anche il primo salvataggio fallito dopo il cambio itinerario e la falsa etichetta «Salvato» nelle righe di «I miei itinerari», ora aggiornate anche dopo il completamento asincrono. Salva durante un autosalvataggio attende senza perdere il comando e senza applicarlo a un itinerario diverso. **253/253 test**, build di **12 pagine**, **811 link validi**, **82 risorse offline**. Prove con due worker Node realmente paralleli riuscite; nessun browser utilizzato. [Resoconto, prove e limiti](docs/storico/2026-10-18-revisione-codice-5.md).
 
