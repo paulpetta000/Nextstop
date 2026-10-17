@@ -1,8 +1,14 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 17/10/2026. Ramo `codex/satori-fflate`, PR #5 in bozza; prestazioni del compositore nel commit `d84e429`, sopra i blocchi già verificati. Nessun merge o rilascio in produzione._
+_Aggiornato il 17/10/2026. Ramo `codex/satori-fflate`: blocchi precedenti nella PR #5 in bozza; nuovo allineamento del blu soltanto locale, sopra `5b259b1`. Nessun merge o rilascio in produzione._
 
-## Blocco corrente
+## Blocco corrente · coerenza del blu
+
+Richiesto da Enrico nel riepilogo: allineati gli accenti di C Mappa al blu già presente in D Pagine, in `compositore.css` e `ore.css`; nessuna modifica a dati, ID, URL, calcoli, memoria o dipendenze. Tre prove di coerenza fallite prima, quattro controlli riusciti dopo (palette chiara/scura/automatica e contrasto principale). **180 test, build di 12 pagine e 811 link validi in locale**; worker con 82 risorse. [Resoconto e limiti](docs/storico/2026-10-17-coerenza-colore.md). **Non verificato visivamente e non pubblicato**: browser escluso su richiesta di Enrico; nessun nuovo axe, Lighthouse, push o deploy. I punteggi del blocco precedente non sono misure di questo colore.
+
+Riepilogo completo, inventario cartelle, controllo HTTP delle nove pagine pubbliche e statistiche aggregate Vercel conservati nella ricerca locale della cartella iniziale; nessun rapporto privato aggiunto alla PR. Search Console da completare solo con esportazioni scelte da Enrico. Nessuna cartella eliminata o spostata.
+
+## Prestazioni · blocco precedente nella PR
 
 **Prestazioni del compositore**, blocco autorizzato da Enrico e verificato: CSS iniziale piccolo, foglio completo separato e atteso prima dei controlli, CSS incluso nella precache (82 risorse), sezioni inferiori rese disponibili dopo il primo disegno. HTML compresso circa 121 → 98 KB. **176 test, build e 811 link validi** in locale e su [GitHub/Linux](https://github.com/paulpetta000/Nextstop/actions/runs/38973495948). Viste C/D, salvataggio/ricarica/condivisione, CSS lento, senza JS e offline riusciti; axe chiaro/scuro e larghezze senza problemi automatici osservati. [Anteprima verificata](https://nextstop-487y2t3e9-enrico-2d20.vercel.app/napoli/itinerari/): **Lighthouse mobile 98/98 sul compositore, home 98**, accessibilità e buone pratiche 100; variabilità precedente e limiti conservati nel [rapporto](docs/storico/2026-10-17-prestazioni-compositore.md). Nove Open Graph e altre pagine identici. Chiusura soltanto documentale; esito della CI finale nella [PR #5](https://github.com/paulpetta000/Nextstop/pull/5).
 
@@ -24,6 +30,6 @@ Resta pendente il pezzo 3 delle rifiniture grafiche (barra «Salvato» e menu); 
 
 ## Limiti e seguito
 
-Push e aggiornamento della PR sono autorizzati. Main e produzione non sono stati modificati; nessuna modifica alle protezioni GitHub/Vercel. Main risultava senza protezione nel controllo precedente. L'override fflate va riesaminato al prossimo aggiornamento dei consumatori; il caso generico cache max-stale/cookie resta aperto, senza esposizione individuata nel percorso statico di Nextstop. Controllo completo dei tipi e organizzazione mirata degli archivi restano lavori separati.
+I blocchi precedenti sono stati pubblicati nella PR con autorizzazione. Il nuovo allineamento del blu resta locale; questo blocco non comprende un nuovo push o deploy. Main e produzione non sono stati modificati; nessuna modifica alle protezioni GitHub/Vercel. Main risultava senza protezione nel controllo precedente. L'override fflate va riesaminato al prossimo aggiornamento dei consumatori; il caso generico cache max-stale/cookie resta aperto, senza esposizione individuata nel percorso statico di Nextstop. Controllo completo dei tipi e organizzazione mirata degli archivi restano lavori separati.
 
-**Cosa fare adesso:** rivedere con Enrico l'anteprima e le immagini da telefono del blocco prestazioni; attendere il suo OK esplicito prima di merge e rilascio. Le ultime due misure Lighthouse del compositore sono 98/98, ma non garantiscono tutte le visite: oscillazioni e controlli non automatici sono nel rapporto. Non avviare grafica o nuove funzioni. Per il seguito bastano ambiente locale e strumenti già presenti, GitHub e Vercel. Comandi e percorsi in [docs/README](docs/README.md), [README](README.md) e [ambiente locale](docs/AMBIENTE-LOCALE.md).
+**Cosa fare adesso:** 1. Rivedere visivamente il colore in chiaro/scuro e sulle due viste, rispettando il browser escluso. 2. Completare Search Console dai rapporti esportati da Enrico. 3. Concordare il blocco successivo: dati/orari, protezioni GitHub o organizzazione conservativa delle cartelle; nessuna cancellazione implicita. Per una nuova anteprima restano i controlli UI previsti; merge e produzione richiedono ancora OK esplicito. Bastano gli strumenti locali già presenti e GitHub/Vercel; nessuna nuova installazione.
