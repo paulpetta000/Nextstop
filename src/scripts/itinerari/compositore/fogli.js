@@ -31,8 +31,12 @@ function nomeProposto(x) {
   return x.giorni.length === 1 ? 'Napoli in un giorno' : `Napoli in ${x.giorni.length} giorni`;
 }
 export async function salva(b) {
-  if (salvataggioInCorso()) return;
-  const x = X(), eraSalvato = salvato(x);
+  const x = X();
+  if (salvataggioInCorso()) {
+    await attendiSalvataggi();
+    if (X() !== x || salvataggioInCorso()) return;
+  }
+  const eraSalvato = salvato(x);
   if (eraSalvato && !erroreSalvataggio()) { apriMiei(); return; }
   const salvati = A.elenco.filter(i => salvato(i)).length;
   if (!eraSalvato && salvati >= MAX_SALVATI) { avvisa(`Sul telefono ci sono già ${MAX_SALVATI} itinerari salvati: elimina quelli che non ti servono, oppure mandalo con «Condividi».`); return; }

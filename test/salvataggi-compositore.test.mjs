@@ -86,3 +86,23 @@ test('salva reale: un fallimento dopo il cambio itinerario lascia la prima bozza
   assert.equal(e.timer.length, 0);
   assert.equal(e.avvisi.length, 0);
 });
+
+test('Salva durante un autosalvataggio: attende la scrittura e conserva il comando esplicito', async t => {
+  const e = ambiente(t), automatico = e.g.scriviArchivio(); await tick();
+  const esplicito = e.salva();
+  e.turni.shift()(); await automatico; await tick();
+  assert.equal(e.x.salvato, true);
+  assert.equal(e.turni.length, 1);
+  e.turni.shift()(); await esplicito;
+  assert.equal(JSON.parse(e.dati.get('itinerari-v1')).elenco[0].salvato, true);
+});
+
+test('Salva in attesa: se cambia itinerario non applica il comando alla nuova bozza', async t => {
+  const e = ambiente(t), automatico = e.g.scriviArchivio(); await tick();
+  const esplicito = e.salva();
+  e.archivio.elenco.push({ ...structuredClone(e.x), id: 'viaggio1', nome: 'Altro', salvato: false });
+  e.archivio.attivo = 'viaggio1';
+  e.turni.shift()(); await Promise.all([automatico, esplicito]);
+  assert.equal(e.archivio.elenco[1].salvato, false);
+  assert.equal(e.turni.length, 0);
+});
