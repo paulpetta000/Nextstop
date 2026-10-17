@@ -17,42 +17,45 @@ function memoria(t, raw) {
     setItem: (k, v) => dati.set(k, v)
   } });
   t.after(() => { if (precedente) Object.defineProperty(globalThis, 'localStorage', precedente); else delete globalThis.localStorage; });
+  const primaNavigator = Object.getOwnPropertyDescriptor(globalThis, 'navigator');
+  Object.defineProperty(globalThis, 'navigator', { configurable: true, value: { locks: { request: async (_nome, _opzioni, fn) => fn() } } });
+  t.after(() => primaNavigator ? Object.defineProperty(globalThis, 'navigator', primaNavigator) : delete globalThis.navigator);
   return dati;
 }
 
-test('conservazione: ogni scrittura fallita resta fallita anche dopo l’avviso', t => {
+test('conservazione: ogni scrittura fallita resta fallita anche dopo l’avviso', async t => {
   memoria(t);
   t.mock.method(localStorage, 'setItem', () => { throw Error('Quota esaurita'); });
   const salva = creaSalvataggio(), avvisi = [];
-  assert.equal(salva(archivio(), x => avvisi.push(x)), false);
-  assert.equal(salva(archivio(), x => avvisi.push(x)), false);
-  assert.equal(salva(archivio()), false);
+  assert.equal(await salva(archivio(), x => avvisi.push(x)), false);
+  assert.equal(await salva(archivio(), x => avvisi.push(x)), false);
+  assert.equal(await salva(archivio()), false);
   assert.equal(avvisi.length, 1);
 });
 
-test('conservazione: un fallimento senza callback non consuma l’avviso', t => {
+test('conservazione: un fallimento senza callback non consuma l’avviso', async t => {
   memoria(t);
   t.mock.method(localStorage, 'setItem', () => { throw Error('Quota esaurita'); });
   const salva = creaSalvataggio(), avvisi = [];
-  assert.equal(salva(archivio()), false);
-  assert.equal(salva(archivio(), x => avvisi.push(x)), false);
+  assert.equal(await salva(archivio()), false);
+  assert.equal(await salva(archivio(), x => avvisi.push(x)), false);
   assert.equal(avvisi.length, 1);
 });
 
-test('conservazione: dopo il recupero della memoria un nuovo errore viene segnalato', t => {
+test('conservazione: dopo il recupero della memoria un nuovo errore viene segnalato', async t => {
   const dati = memoria(t);
   let bloccato = true;
   t.mock.method(localStorage, 'setItem', (k, v) => { if (bloccato) throw Error('Quota'); dati.set(k, v); });
   const salva = creaSalvataggio(), avvisi = [], avvisa = x => avvisi.push(x);
-  assert.equal(salva(archivio(), avvisa), false);
+  assert.equal(await salva(archivio(), avvisa), false);
   bloccato = false;
-  assert.equal(salva(archivio(), avvisa), true);
+  assert.equal(await salva(archivio(), avvisa), true);
   bloccato = true;
-  assert.equal(salva(archivio(), avvisa), false);
+  assert.equal(await salva(archivio(), avvisa), false);
   assert.equal(avvisi.length, 2);
 });
 
-test('conservazione: recupera i record validi ai due lati di un elemento danneggiato', t => {
+test('conservazione: recupera i record validi ai due lati di un elemento danneggiato', async t => {
   const raw = JSON.stringify({ v: 1, attivo: 'viaggio1', elenco: [valido(), null, 7, [], valido('viaggio1')] });
   const dati = memoria(t, raw);
   const letto = leggi(C);
@@ -63,7 +66,7 @@ test('conservazione: recupera i record validi ai due lati di un elemento dannegg
   assert.equal(JSON.parse(dati.get(CHIAVE)).elenco.length, 2);
 });
 
-test('conservazione: originale illeggibile o giorno malformato conservato prima di scrivere', t => {
+test('conservazione: originale illeggibile o giorno malformato conservato prima di scrivere', async t => {
   const dati = memoria(t);
   for (const raw of ['{', '{"elenco":{}}', JSON.stringify({ elenco: [valido(), { id: 'rotto00', giorni: null }] }), JSON.stringify({ elenco: [{ ...valido(), giorni: [null, { tappe: 'duomo' }] }] })]) {
     dati.clear(); dati.set(CHIAVE, raw);
@@ -72,7 +75,7 @@ test('conservazione: originale illeggibile o giorno malformato conservato prima 
   }
 });
 
-test('conservazione: se manca spazio per la copia non sovrascrive l’originale', t => {
+test('conservazione: se manca spazio per la copia non sovrascrive l’originale', async t => {
   const raw = JSON.stringify({ elenco: [valido(), null] });
   const dati = memoria(t, raw);
   t.mock.method(localStorage, 'setItem', (k, v) => { if (k === COPIA) throw Error('Quota'); dati.set(k, v); });
@@ -80,20 +83,20 @@ test('conservazione: se manca spazio per la copia non sovrascrive l’originale'
   assert.equal(dati.get(CHIAVE), raw);
 });
 
-test('conservazione: non sostituisce una copia di recupero diversa già presente', t => {
+test('conservazione: non sostituisce una copia di recupero diversa già presente', async t => {
   const raw = '{'; const dati = memoria(t, raw); dati.set(COPIA, 'originale precedente');
   assert.equal(scrivi(archivio()), false);
   assert.equal(dati.get(CHIAVE), raw);
   assert.equal(dati.get(COPIA), 'originale precedente');
 });
 
-test('conservazione: riconosce la copia identica e non la riscrive', t => {
+test('conservazione: riconosce la copia identica e non la riscrive', async t => {
   const raw = '{'; const dati = memoria(t, raw); dati.set(COPIA, raw);
   t.mock.method(localStorage, 'setItem', (k, v) => { assert.notEqual(k, COPIA); dati.set(k, v); });
   assert.equal(scrivi(archivio()), true);
 });
 
-test('conservazione: archivi senza versione e v1 compatibili, versioni ignote mai riscritte', t => {
+test('conservazione: archivi senza versione e v1 compatibili, versioni ignote mai riscritte', async t => {
   const dati = memoria(t);
   for (const v of [undefined, 1]) {
     dati.set(CHIAVE, JSON.stringify({ ...archivio(), ...(v ? { v } : {}) }));
@@ -110,7 +113,7 @@ test('conservazione: archivi senza versione e v1 compatibili, versioni ignote ma
   }
 });
 
-test('locali: l’archivio malformato non interrompe la lettura dei giorni', t => {
+test('locali: l’archivio malformato non interrompe la lettura dei giorni', async t => {
   const dati = memoria(t);
   for (const giorni of [null, {}, 'giorni']) {
     dati.set(CHIAVE, JSON.stringify({ attivo: 'viaggio0', elenco: [{ ...valido(), giorni }] }));
@@ -122,7 +125,7 @@ test('locali: l’archivio malformato non interrompe la lettura dei giorni', t =
   assert.deepEqual(r.giorni.map(g => g.tappe), [[], [], ['duomo']]);
 });
 
-test('locali: trova il record valido anche se quello attivo è danneggiato, senza scrivere', t => {
+test('locali: trova il record valido anche se quello attivo è danneggiato, senza scrivere', async t => {
   const raw = JSON.stringify({ attivo: 'rotto00', elenco: [null, { id: 'rotto00', giorni: null }, valido()] });
   const dati = memoria(t, raw);
   assert.deepEqual(leggiRiepilogo(), { id: 'viaggio0', nome: valido().nome, data: valido().data, giorni: [{ tappe: ['duomo'] }] });
@@ -130,7 +133,7 @@ test('locali: trova il record valido anche se quello attivo è danneggiato, senz
   assert.equal(dati.has(COPIA), false);
 });
 
-test('conservazione: spostamento e pronto attraversano salvataggio e rilettura senza perdere preferenze e visite', t => {
+test('conservazione: spostamento e pronto attraversano salvataggio e rilettura senza perdere preferenze e visite', async t => {
   const dati = memoria(t);
   const giorno = tappe => ({ inizio: 600, fine: 1080, tappe });
   const Citta = { tappe: ['duomo', 'museo', 'palazzo', 'castello', 'parco', 'piazza'].map(id => ({ id, tipo: 'citta' })) };
@@ -170,56 +173,56 @@ test('conservazione: spostamento e pronto attraversano salvataggio e rilettura s
   assert.equal(dati.has(COPIA), false);
 });
 
-test('concorrenza: una copia obsoleta non sovrascrive la modifica salvata da un’altra sessione', t => {
+test('concorrenza: una copia obsoleta non sovrascrive la modifica salvata da un’altra sessione', async t => {
   const dati=memoria(t); scrivi(archivio());
   const a=leggi(C), b=leggi(C), salvaA=creaSalvataggio(), salvaB=creaSalvataggio();
-  b.elenco[0].nome='Nome cambiato in B'; assert.equal(salvaB(b),true);
+  b.elenco[0].nome='Nome cambiato in B'; assert.equal(await salvaB(b),true);
   const salvato=dati.get(CHIAVE);
   a.elenco[0].nome='Modifica locale A';
-  assert.equal(salvaA(a),false);
+  assert.equal(await salvaA(a),false);
   assert.equal(dati.get(CHIAVE),salvato);
   assert.equal(a.elenco[0].nome,'Modifica locale A','La copia locale resta disponibile per Condividi');
 });
 
-test('concorrenza: non cancella nuovi itinerari aggiunti da un’altra sessione', t => {
+test('concorrenza: non cancella nuovi itinerari aggiunti da un’altra sessione', async t => {
   const dati=memoria(t); scrivi(archivio());
   const a=leggi(C), salvaA=creaSalvataggio();
   const b=leggi(C); b.elenco.push(valido('nuovo000')); scrivi(b);
   const salvato=dati.get(CHIAVE); a.elenco[0].nome='Copia vecchia';
-  assert.equal(salvaA(a),false); assert.equal(dati.get(CHIAVE),salvato);
+  assert.equal(await salvaA(a),false); assert.equal(dati.get(CHIAVE),salvato);
 });
 
-test('concorrenza: non ripristina un archivio eliminato da un’altra sessione', t => {
+test('concorrenza: non ripristina un archivio eliminato da un’altra sessione', async t => {
   const dati=memoria(t); scrivi(archivio());
   const a=leggi(C), salvaA=creaSalvataggio(); dati.delete(CHIAVE);
-  assert.equal(salvaA(a),false); assert.equal(dati.has(CHIAVE),false);
+  assert.equal(await salvaA(a),false); assert.equal(dati.has(CHIAVE),false);
 });
 
-test('concorrenza: scritture successive della stessa sessione e nuova lettura accettata restano valide', t => {
+test('concorrenza: scritture successive della stessa sessione e nuova lettura accettata restano valide', async t => {
   memoria(t); scrivi(archivio()); const a=leggi(C), salva=creaSalvataggio();
-  for(const nome of ['Prima','Seconda']) { a.elenco[0].nome=nome; assert.equal(salva(a),true); }
+  for(const nome of ['Prima','Seconda']) { a.elenco[0].nome=nome; assert.equal(await salva(a),true); }
   const b=leggi(C); b.elenco[0].nome='Altra sessione'; scrivi(b);
   const ricevuto=leggi(C), nuovoSalva=creaSalvataggio(); ricevuto.elenco[0].nome='Dopo riallineamento';
-  assert.equal(nuovoSalva(ricevuto),true); assert.equal(leggi(C).elenco[0].nome,'Dopo riallineamento');
+  assert.equal(await nuovoSalva(ricevuto),true); assert.equal(leggi(C).elenco[0].nome,'Dopo riallineamento');
 });
 
-test('stato: un itinerario già salvato non dichiara salvate modifiche rifiutate e può recuperare', t => {
+test('stato: un itinerario già salvato non dichiara salvate modifiche rifiutate e può recuperare', async t => {
   const dati=memoria(t); scrivi(archivio()); const salva=creaSalvataggio(), a=leggi(C), avvisi=[];
   const set=localStorage.setItem;
   t.mock.method(localStorage,'setItem',()=>{throw Error('Quota');});
-  assert.equal(salva(a, x=>avvisi.push(x)),false);
+  assert.equal(await salva(a, x=>avvisi.push(x)),false);
   assert.deepEqual(presentaSalvataggio(true,salva.stato()),{fatto:false,tipo:'bozza',testo:'Modifiche non salvate'});
   assert.match(avvisi[0],/Condividi/);
   t.mock.method(localStorage,'setItem',(k,v)=>set(k,v));
-  assert.equal(salva(a),true);
+  assert.equal(await salva(a),true);
   assert.equal(presentaSalvataggio(true,salva.stato()).fatto,true);
   assert.equal(testoErroreSalvataggio(salva.stato()),'');
 });
 
-test('stato: il conflitto resta visibile e la modifica locale può essere condivisa', t => {
+test('stato: il conflitto resta visibile e la modifica locale può essere condivisa', async t => {
   const dati=memoria(t); scrivi(archivio()); const a=leggi(C), salva=creaSalvataggio();
   const b=leggi(C); b.elenco[0].nome='Altro'; scrivi(b); a.elenco[0].nome='Locale';
-  assert.equal(salva(a),false); assert.equal(salva.stato(),'conflitto');
+  assert.equal(await salva(a),false); assert.equal(salva.stato(),'conflitto');
   assert.match(testoErroreSalvataggio(salva.stato()),/altra scheda/);
   assert.match(testoErroreSalvataggio(salva.stato()),/Condividi/);
   assert.equal(presentaSalvataggio(true,salva.stato()).fatto,false);

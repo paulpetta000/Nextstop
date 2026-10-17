@@ -3,10 +3,10 @@
 // carica i dati che arrivano dopo e, il giorno stesso, ricalcola dal vivo ogni mezzo minuto.
 import { $, ascoltaFirme, maiuscola } from './base.js';
 import { attendiStile } from '../stile.mjs';
-import { C, A, X, PRONTI, T, caricaSchede, quandoLibero, nuovo, apri, nomeLibero, ricordaBozza, gia, scriviArchivio, sostituisciArchivio, caricaDopo, VIVO, oggiNelGiorno, posizioneAttiva, adessoPer, statoPosizione, nG, erroreSalvataggio } from './stato.js';
+import { C, A, X, PRONTI, T, caricaSchede, quandoLibero, nuovo, apri, nomeLibero, ricordaBozza, gia, scriviArchivio, sostituisciArchivio, caricaDopo, VIVO, oggiNelGiorno, posizioneAttiva, adessoPer, statoPosizione, nG, erroreSalvataggio, salvataggioInCorso, quandoSalva } from './stato.js';
 import { decodifica } from '../../../lib/itinerari/link';
-import { leggi, quandoCambia, giornoSicuro, allineaArchivio } from '../memoria';
-import { S, vistaSalvata, preparaFoglio, preparaAvviso, avvisa, annuncia } from './comuni.js';
+import { leggiConRiferimento, quandoCambia, giornoSicuro, allineaArchivio, proteggiUscita } from '../memoria';
+import { S, vistaSalvata, preparaFoglio, preparaAvviso, avvisa, annuncia, rinfrescaSalvataggio } from './comuni.js';
 import { disegna, preparaViste, preparaMenu, aggiorna, aggiungi } from './viste.js';
 import { preparaScheda, schedaAperta } from './scheda.js';
 import { usaPronto } from './fogli.js';
@@ -34,6 +34,8 @@ function avvia() {
   S.g = 0;
   // un itinerario pronto scelto dalla home o dal menu (?pronto=…)
   const chiesto = PRONTI.find(p => !p.evento && p.id === W.prontoRichiesto);
+  const aggiornaUscita = proteggiUscita(() => salvataggioInCorso() || !!erroreSalvataggio());
+  quandoSalva(() => { rinfrescaSalvataggio(); aggiornaUscita(); });
   scriviArchivio(avvisa);
   preparaFoglio(); preparaAvviso(); preparaViste(); preparaMenu(); preparaScheda();
   ascoltaFirme($('#app'));
@@ -57,10 +59,10 @@ function avvia() {
 
   // ---------- un altro tab ha cambiato gli itinerari ----------
   quandoCambia(() => {
-    const n = leggi(C);
-    if (n && !schedaAperta() && !$('#foglio').open && !erroreSalvataggio()) {
+    const fonte = leggiConRiferimento(C), n = fonte.archivio;
+    if (n && !schedaAperta() && !$('#foglio').open && !erroreSalvataggio() && !salvataggioInCorso()) {
       const cambio = allineaArchivio(A, n, S.g);
-      sostituisciArchivio(cambio.archivio); S.g = cambio.giorno; disegna();
+      sostituisciArchivio(cambio.archivio, fonte); S.g = cambio.giorno; disegna();
     }
   });
 

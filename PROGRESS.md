@@ -1,8 +1,16 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 17/10/2026. Enrico ha autorizzato push e integrazione in main di tutti i blocchi completati della PR #5, inclusi i sei commit locali successivi. La nuova revisione dei salvataggi è sospesa e conservata separatamente; non fa parte di questo rilascio._
+_Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Pubblicazione su main · mandato corrente
+## Revisione corrente · salvataggi coordinati
+
+Completato il blocco tecnico ripreso: lettura/riferimento coerenti, coda e Web Locks, attesa dell'ultima modifica prima di confermare, gestione errori/eventi storage e avviso d'uscita durante scritture pendenti o fallite. Corretti anche il primo salvataggio fallito dopo il cambio itinerario e la falsa etichetta «Salvato» nelle righe di «I miei itinerari», ora aggiornate anche dopo il completamento asincrono. **251/251 test**, build di **12 pagine**, **811 link validi**, **82 risorse offline**. Prove con due worker Node realmente paralleli riuscite; nessun browser utilizzato. [Resoconto, prove e limiti](docs/storico/2026-10-18-revisione-codice-5.md).
+
+Formato v1, dati, ID, URL, temi e dipendenze conservati. Stash originale b0a35c1123918d9a1867c104a0ff793e5822dc80 conservato. La protezione coordina solo client nuovi: vecchie schede aperte non partecipano; senza Web Locks la scrittura è rifiutata. Condividi non salva visite/timbri. Avviso nativo d'uscita non garantito in ogni chiusura. Verifiche UI e tra schede reali pendenti per il vincolo sul browser; nessuna nuova misura di prestazioni o compatibilità universale.
+
+Prossimo blocco: percorsi di recupero dopo conflitto/aggiornamento esterno, poi piano unico da computer. Nessuna pubblicazione implicita; strumenti locali già presenti sufficienti. Le sezioni seguenti conservano i risultati precedenti; la simultaneità descritta come aperta nel gruppo 4 è affrontata dal blocco corrente entro i limiti sopra.
+
+## Pubblicazione precedente · 17 ottobre 2026
 
 La [PR #5](https://github.com/paulpetta000/Nextstop/pull/5) raccoglie salvataggi, calcoli, offline, dipendenze, prestazioni, blu del solo tema scuro e quattro gruppi di revisione. Versione applicativa verificata fino a 6ad8671: **225 test, build di 12 pagine e 811 link validi**. Verificare CI e deployment associati al commit prima di dichiarare il rilascio riuscito.
 

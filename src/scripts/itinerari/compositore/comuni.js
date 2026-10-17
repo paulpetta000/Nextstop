@@ -2,7 +2,7 @@
 // l'avviso in basso con «Annulla», l'annuncio per i lettori di schermo, i numeri del giorno che scorrono, il tempo del giorno,
 // le schede dei giorni con il segno che scorre, cambiare giorno senza scatti (anche col dito), le liste che scivolano.
 import { $, $$, esc, ic, piano, computer, durata, durataLunga, ora, km, range } from './base.js';
-import { G, nG, tappeDi, aPiedi, caricaSchede, schedePronte, erroreSalvataggio, statoSalvataggio } from './stato.js';
+import { A, G, nG, tappeDi, aPiedi, caricaSchede, schedePronte, erroreSalvataggio, statoSalvataggio, salvataggioInCorso } from './stato.js';
 
 // Lo stato della pagina (non va nella memoria, tranne la vista)
 export const S = { g: 0, p: 'c', attiva: null, nuova: null, tutte: false, cifre: {}, fini: {}, anima: true };
@@ -55,12 +55,21 @@ export function preparaFoglio() {
 
 // ---------- avviso in basso (3,6 secondi con «Annulla», 2,3 senza; resta se ci passi sopra o ci vai con la tastiera) ----------
 let tempoAvviso;
-export function avvisa(testo, azione) {
-  const errore = erroreSalvataggio(), stato = statoSalvataggio();
-  if (errore && !testo.includes(errore)) testo += ' ' + errore;
-  // Un altro avviso non deve coprire il mancato salvataggio o lasciare la spunta verde.
-  $$('.cmp .salva').forEach(s => s.classList.toggle('salva--fatto', stato.fatto));
+export function rinfrescaSalvataggio() {
+  const stato = statoSalvataggio(), pendente = salvataggioInCorso();
+  $$('.cmp .salva').forEach(s => { s.classList.toggle('salva--fatto', stato.fatto); s.disabled = pendente; });
   $$('.cmp [data-stato]').forEach(s => { s.dataset.stato = stato.tipo; s.querySelector('.stato__t').textContent = stato.testo; });
+  $$('#foglio [data-itinerario-stato]').forEach(el => {
+    const x = A.elenco.find(i => i.id === el.dataset.itinerarioStato);
+    if (!x) return;
+    const s = statoSalvataggio(x);
+    el.innerHTML = (s.fatto ? ic('spunta', 16) : '') + esc(s.fatto ? 'Salvato' : s.testo);
+  });
+}
+export function avvisa(testo, azione) {
+  const errore = erroreSalvataggio();
+  if (errore && !testo.includes(errore)) testo += ' ' + errore;
+  rinfrescaSalvataggio();
   const t = $('#toast');
   t.innerHTML = `<span>${esc(testo)}</span>${azione ? `<button type="button">${esc(azione.testo)}</button>` : ''}`;
   if (azione) $('button', t).onclick = () => { t.classList.remove('su'); azione.fai(); };

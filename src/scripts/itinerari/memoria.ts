@@ -28,17 +28,19 @@ function decifra(raw: string | null): Lettura {
   } catch { return { ...vuoto, stato: 'danneggiato' }; }
 }
 
-export function leggi(C: Citta): Archivio | null {
+// Riferimento e archivio devono provenire dalla stessa lettura, anche se un'altra scheda scrive subito dopo.
+export function leggiConRiferimento(C: Citta): { archivio: Archivio | null; riferimento: string | null | undefined } {
+  let riferimento: string | null | undefined;
   try {
-    const x = decifra(localStorage.getItem(CHIAVE));
-    const elenco: Itinerario[] = [];
+    riferimento = localStorage.getItem(CHIAVE);
+    const x = decifra(riferimento), elenco: Itinerario[] = [];
     for (const i of x.elenco) {
-      try { elenco.push(sistema(C, i).it); } catch { /* un record non deve impedire di recuperare gli altri */ }
+      try { elenco.push(sistema(C, i).it); } catch { /* recupera gli altri record */ }
     }
-    if (!elenco.length) return null;
-    return { attivo: elenco.some(i => i.id === x.attivo) ? x.attivo : elenco[0].id, elenco };
-  } catch { return null; }
+    return { riferimento, archivio: elenco.length ? { attivo: elenco.some(i => i.id === x.attivo) ? x.attivo : elenco[0].id, elenco } : null };
+  } catch { return { riferimento, archivio: null }; }
 }
+export const leggi = (C: Citta): Archivio | null => leggiConRiferimento(C).archivio;
 
 // I filtri dei locali non hanno la città del motore: ricevono solo i campi che usano,
 // validati con la stessa lettura. Nessuna scrittura; gli indici dei giorni restano gli stessi.
@@ -60,8 +62,8 @@ export function leggiRiepilogo(): Riepilogo | null {
 }
 
 // True soltanto dopo una scrittura riuscita. Senza spazio per la copia, l'originale resta intatto.
-export type EsitoSalvataggio = 'salvato' | 'errore' | 'conflitto';
-function scriviControllato(a: Archivio, atteso?: string | null): EsitoSalvataggio {
+export type EsitoSalvataggio = 'salvato' | 'errore' | 'conflitto' | 'in-corso';
+function scriviControllato(serializzato: string, atteso?: string | null): EsitoSalvataggio {
   try {
     const raw = localStorage.getItem(CHIAVE);
     if (atteso !== undefined && raw !== atteso) return 'conflitto';
@@ -72,39 +74,84 @@ function scriviControllato(a: Archivio, atteso?: string | null): EsitoSalvataggi
       if (copia === null) localStorage.setItem(COPIA, raw);
       else if (copia !== raw) return 'errore';
     }
-    localStorage.setItem(CHIAVE, JSON.stringify({ v: 1, ...a }));
+    localStorage.setItem(CHIAVE, serializzato);
     return 'salvato';
   } catch { return 'errore'; }
 }
-export const scrivi = (a: Archivio): boolean => scriviControllato(a) === 'salvato';
+// Scrittura diretta per compatibilità e prove; il compositore usa sempre il salvatore coordinato.
+export function scrivi(a: Archivio): boolean {
+  try { return scriviControllato(JSON.stringify({ v: 1, ...a })) === 'salvato'; } catch { return false; }
+}
 
 export function testoErroreSalvataggio(esito: EsitoSalvataggio): string {
-  if (esito === 'salvato') return '';
+  if (esito === 'salvato' || esito === 'in-corso') return '';
   if (esito === 'conflitto') return 'Gli itinerari sono cambiati in un’altra scheda. Questa modifica resta qui: usa «Condividi» prima di ricaricare la pagina.';
   return 'Questo browser non salva i dati: l’itinerario resta finché la pagina è aperta. Per tenerlo, mandalo con «Condividi».';
 }
 export function presentaSalvataggio(salvato: boolean, esito: EsitoSalvataggio) {
   const errore = esito !== 'salvato', fatto = salvato && !errore;
-  return { fatto, tipo: fatto ? 'salvato' : 'bozza', testo: errore ? 'Modifiche non salvate' : fatto ? 'Salvato in «I miei itinerari»' : 'Non ancora salvato' };
+  return { fatto, tipo: fatto ? 'salvato' : 'bozza', testo: esito === 'in-corso' ? 'Salvataggio in corso' : errore ? 'Modifiche non salvate' : fatto ? 'Salvato in «I miei itinerari»' : 'Non ancora salvato' };
 }
 
-// Rifiuta una copia obsoleta; il controllo non rende atomiche le scritture di due processi.
-export function creaSalvataggio() {
-  let avvisato = false, riferimento: string | null | undefined;
-  let esito: EsitoSalvataggio = 'salvato';
-  try { riferimento = localStorage.getItem(CHIAVE); } catch { /* accesso non disponibile */ }
-  const salva = (a: Archivio, avvisa?: (testo: string) => void): boolean => {
-    esito = riferimento === undefined ? 'errore' : scriviControllato(a, riferimento);
-    const ok = esito === 'salvato';
-    if (ok) { riferimento = JSON.stringify({ v: 1, ...a }); avvisato = false; }
-    else if (avvisa && !avvisato) { avvisato = true; avvisa(testoErroreSalvataggio(esito)); }
-    return ok;
+// Le fotografie delle modifiche attendono il turno nella stessa scheda e nello stesso origin.
+// Senza Web Locks non si ripiega su una scrittura non coordinata.
+export function creaSalvataggio(fonte?: { riferimento: string | null | undefined }) {
+  let riferimento: string | null | undefined, avvisato = false, pendenti = 0;
+  let esito: EsitoSalvataggio = 'salvato', coda = Promise.resolve();
+  if (fonte) riferimento = fonte.riferimento;
+  else try { riferimento = localStorage.getItem(CHIAVE); } catch { /* accesso non disponibile */ }
+  const salva = (a: Archivio, avvisa?: (testo: string) => void): Promise<boolean> => {
+    let serializzato: string | undefined;
+    try { serializzato = JSON.stringify({ v: 1, ...a }); } catch { /* non scrivere dati non serializzabili */ }
+    pendenti++;
+    const lavoro = coda.then(async () => {
+      let risultato: EsitoSalvataggio = 'errore';
+      try {
+        if (riferimento !== undefined && serializzato !== undefined && globalThis.navigator?.locks?.request) {
+          const stop = new AbortController(), timer = setTimeout(() => stop.abort(), 3000);
+          try {
+            risultato = await navigator.locks.request(CHIAVE, { mode: 'exclusive', signal: stop.signal }, () => {
+              const r = scriviControllato(serializzato!, riferimento);
+              if (r === 'salvato') riferimento = serializzato;
+              return r;
+            });
+          } finally { clearTimeout(timer); }
+        }
+      } catch { /* lock negato o attesa scaduta: la copia locale resta disponibile */ }
+      esito = risultato; pendenti--;
+      const ok = risultato === 'salvato';
+      if (ok) avvisato = false;
+      else if (avvisa && !avvisato) { avvisato = true; avvisa(testoErroreSalvataggio(risultato)); }
+      return ok;
+    });
+    coda = lavoro.then(() => {}, () => {});
+    return lavoro;
   };
-  return Object.assign(salva, { stato: () => esito });
+  return Object.assign(salva, { stato: (): EsitoSalvataggio => pendenti ? 'in-corso' : esito });
+}
+
+// Il browser può chiedere conferma all'uscita solo se restano scritture pendenti o fallite.
+// Il listener viene tolto dopo il recupero; non tenta scritture asincrone durante la chiusura.
+export function proteggiUscita(daSalvare: () => boolean) {
+  let attiva = false;
+  const avvisa = (e: BeforeUnloadEvent) => {
+    if (!daSalvare()) return;
+    e.preventDefault(); e.returnValue = '';
+  };
+  return () => {
+    const serve = daSalvare();
+    if (serve === attiva) return;
+    attiva = serve;
+    if (serve) addEventListener('beforeunload', avvisa);
+    else removeEventListener('beforeunload', avvisa);
+  };
 }
 
 // Un altro tab ha cambiato gli itinerari.
-export const quandoCambia = (fn: () => void) => addEventListener('storage', e => { if (e.key === CHIAVE) fn(); });
+export const quandoCambia = (fn: () => void) => addEventListener('storage', e => {
+  try { if (e.storageArea !== localStorage) return; } catch { return; }
+  if (e.key === CHIAVE || e.key === null) fn();
+});
 
 // Normalizzazione e scelta del giorno dopo aver ricevuto un archivio da un'altra scheda.
 export function giornoSicuro(valore: unknown, quanti: number) {

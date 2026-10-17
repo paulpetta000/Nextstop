@@ -2,7 +2,7 @@
 // Condividi, Elimina con «Annulla»), «Condividi», «Pause e margini», una pausa, «Data e orari», «Altro», «I giorni», gli
 // itinerari pronti (anche la giornata di regata, che vuole un giorno di regata).
 import { $, $$, esc, ic, piano, range, ora, durata, maiuscola, oggi } from './base.js';
-import { E, T, X, A, PRONTI, nG, G, daFare, tappeDi, titoloGiorno, salvato, apri, nuovo, nomeLibero, ricordaBozza, gia, dopoModifica, scriviArchivio, piuGiorni, dataLungaDi, chiusaIl, nuovoItinerario, vuotoTutto, erroreSalvataggio, statoSalvataggio } from './stato.js';
+import { E, T, X, A, PRONTI, nG, G, daFare, tappeDi, titoloGiorno, salvato, apri, nuovo, nomeLibero, ricordaBozza, gia, dopoModifica, scriviArchivio, piuGiorni, dataLungaDi, chiusaIl, nuovoItinerario, vuotoTutto, erroreSalvataggio, statoSalvataggio, salvataggioInCorso, attendiSalvataggi } from './stato.js';
 import { codifica, MAX_NOME, MAX_GIORNI, MAX_TAPPE } from '../../../lib/itinerari/link';
 import { prontoNelGiorno } from '../../../lib/itinerari/pronti';
 import { dataBreve, dataLunga } from '../../../lib/itinerari/date';
@@ -19,7 +19,7 @@ const MAX_SALVATI = 50;
 // ---------- «Salva» ----------
 const spilloSalva = `<svg class="salva__ic salva__ic--spillo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><clipPath id="spillo-clip"><path d="M12 21s-6.5-6.4-6.5-11a6.5 6.5 0 0 1 13 0C18.5 14.6 12 21 12 21z"/></clipPath></defs><g clip-path="url(#spillo-clip)"><rect class="salva__pieno" x="0" y="0" width="24" height="24" fill="currentColor"/></g><path d="M12 21s-6.5-6.4-6.5-11a6.5 6.5 0 0 1 13 0C18.5 14.6 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle class="salva__buco" cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/></svg>`;
 const segnalibro = `<svg class="salva__ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><clipPath id="salva-clip"><path d="M6.5 3.5h11v17l-5.5-4-5.5 4z"/></clipPath></defs><g clip-path="url(#salva-clip)"><rect class="salva__pieno" x="0" y="0" width="24" height="24" fill="currentColor"/></g><path d="M6.5 3.5h11v17l-5.5-4-5.5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path class="salva__spunta" d="M9 11.2l2.2 2.2 4-4.4" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-export const bottoneSalva = (cl = '') => `<button type="button" class="salva salva--${S.p} ${cl}${statoSalvataggio().fatto ? ' salva--fatto' : ''}" data-azione="salva">${S.p === 'c' ? spilloSalva : segnalibro}<span class="salva__t"><span class="salva__a">Salva</span><span class="salva__b">Salvato</span></span>${S.p === 'c' ? '<i class="salva__onda" aria-hidden="true"></i>' : '<i class="salva__inchiostro" aria-hidden="true"></i>'}</button>`;
+export const bottoneSalva = (cl = '') => `<button type="button" class="salva salva--${S.p} ${cl}${statoSalvataggio().fatto ? ' salva--fatto' : ''}" data-azione="salva"${salvataggioInCorso() ? ' disabled' : ''}>${S.p === 'c' ? spilloSalva : segnalibro}<span class="salva__t"><span class="salva__a">Salva</span><span class="salva__b">Salvato</span></span>${S.p === 'c' ? '<i class="salva__onda" aria-hidden="true"></i>' : '<i class="salva__inchiostro" aria-hidden="true"></i>'}</button>`;
 export const stato = () => { const s = statoSalvataggio(); return `<span class="stato" data-stato="${s.tipo}"><i aria-hidden="true"></i><span class="stato__t">${s.testo}</span></span>`; };
 const GENERICI = /^(Il mio itinerario|Nuovo itinerario|Itinerario ricevuto|Itinerario)( \(\d+\))?$/;
 // il nome proposto: «Napoli, 12–14 ottobre» con la data, altrimenti «Napoli in 2 giorni»
@@ -30,7 +30,8 @@ function nomeProposto(x) {
   }
   return x.giorni.length === 1 ? 'Napoli in un giorno' : `Napoli in ${x.giorni.length} giorni`;
 }
-export function salva(b) {
+export async function salva(b) {
+  if (salvataggioInCorso()) return;
   const x = X(), eraSalvato = salvato(x);
   if (eraSalvato && !erroreSalvataggio()) { apriMiei(); return; }
   const salvati = A.elenco.filter(i => salvato(i)).length;
@@ -38,15 +39,23 @@ export function salva(b) {
   x.salvato = true;
   if (!eraSalvato && GENERICI.test(x.nome)) x.nome = nomeLibero(nomeProposto(x), x.id);
   dopoModifica();
-  const ok = scriviArchivio();
-  if (!ok) { if (!eraSalvato) x.salvato = false; avvisa(erroreSalvataggio(), { testo: 'Condividi', fai: apriCondividi }); return; }
+  scriviArchivio();
+  const ok = await attendiSalvataggi();
+  const fallito = !ok || !!erroreSalvataggio();
+  if (fallito && !eraSalvato) x.salvato = false;
+  if (X() !== x) return;
+  if (fallito) { avvisa(erroreSalvataggio(), { testo: 'Condividi', fai: apriCondividi }); return; }
   mettiNome();
   $$('.cmp .salva').forEach(s => s.classList.add('salva--fatto'));
   if (b?.classList.contains('salva')) { b.classList.remove('salva--ora'); void b.offsetWidth; b.classList.add('salva--ora'); }
   $$('.cmp [data-stato]').forEach(s => { s.dataset.stato = 'salvato'; s.querySelector('.stato__t').textContent = 'Salvato in «I miei itinerari»'; });
-  setTimeout(() => {
+  setTimeout(async () => {
+    if (X() !== x) return;
     aggiorna(() => {});
-    if (erroreSalvataggio()) { avvisa(erroreSalvataggio(), { testo: 'Condividi', fai: apriCondividi }); return; }
+    const confermato = await attendiSalvataggi();
+    if (X() !== x) return;
+    if (!confermato || erroreSalvataggio()) { avvisa(erroreSalvataggio(), { testo: 'Condividi', fai: apriCondividi }); return; }
+    if (salvataggioInCorso()) return;
     const totale = A.elenco.filter(i => salvato(i)).length;
     avvisa(`Salvato: «${X().nome}». Adesso puoi segnare le tappe che hai visitato.${totale >= MAX_SALVATI - 5 ? ` Ne hai ${totale} su ${MAX_SALVATI}.` : ''}`, { testo: 'Vedi', fai: apriMiei });
   }, piano() ? 700 : 0);
@@ -181,7 +190,10 @@ export function apriQuando() {
 const contaTappe = x => x.giorni.reduce((s, D) => s + (D.gita ? 1 : D.tappe.filter(t => !E || t !== E.id).length), 0);
 const contaVisitate = x => x.giorni.reduce((s, D) => s + (D.fatte?.length ?? 0), 0);
 const descrivi = x => { const n = contaTappe(x), g = x.giorni.length; return `${g} ${g === 1 ? 'giorno' : 'giorni'}, ${n} ${n === 1 ? 'tappa' : 'tappe'}${x.data ? `, dal ${dataBreve(x.data)}` : ''}${salvato(x) && n ? `, ${contaVisitate(x)} ${contaVisitate(x) === 1 ? "visitata" : "visitate"} su ${n}` : ''}`; };
-const segno = x => `<span class="f-segno">${salvato(x) ? `${ic('spunta', 16)}Salvato` : 'Non ancora salvato'}</span>`;
+const segno = x => {
+  const s = statoSalvataggio(x);
+  return `<span class="f-segno" data-itinerario-stato="${esc(x.id)}">${s.fatto ? ic('spunta', 16) : ''}${esc(s.fatto ? 'Salvato' : s.testo)}</span>`;
+};
 // i pronti che si possono aprire adesso (la regata solo fino all'ultimo giorno di regata)
 const prontiDaAprire = () => PRONTI.filter(p => !p.evento || (E && !(oggi() > E.ultimo)));
 // dopo aver aperto o creato un altro itinerario: l'avviso dice dov'è quello di prima e offre «Torna». prima: l'itinerario

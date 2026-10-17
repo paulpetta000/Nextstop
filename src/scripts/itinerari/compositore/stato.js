@@ -6,7 +6,7 @@ import { calcolaGiorno, ordinePiuCorto, tappaDi, dataDelGiorno } from '../../../
 import { conPause } from '../../../lib/itinerari/pause';
 import { nuovoItinerario, uguali, codifica } from '../../../lib/itinerari/link';
 import { giornoSettimana, piuGiorni, dataLunga } from '../../../lib/itinerari/date';
-import { leggi, creaSalvataggio, testoErroreSalvataggio, presentaSalvataggio } from '../memoria';
+import { leggiConRiferimento, creaSalvataggio, testoErroreSalvataggio, presentaSalvataggio } from '../memoria';
 import { oggi, oraDiAdesso } from './base.js';
 import { creaCaricaJson, applicaSchede } from '../caricamento.mjs';
 
@@ -37,7 +37,8 @@ export const esiste = id => !!T(id);
 // ---------- gli itinerari sul telefono ----------
 // un itinerario nuovo parte senza data (come nelle prove): con la data si vedono le chiusure di quel giorno e, il giorno stesso, gli orari dal vivo
 export const nuovo = (nome, giorni) => ({ ...nuovoItinerario(nome, giorni), salvato: false });
-export let A = leggi(C) ?? { attivo: '', elenco: [] };
+const iniziale = leggiConRiferimento(C);
+export let A = iniziale.archivio ?? { attivo: '', elenco: [] };
 export const X = () => A.elenco.find(i => i.id === A.attivo) ?? A.elenco[0];
 export const salvato = (x = X()) => x?.salvato !== false;
 export const nG = () => X().giorni.length;
@@ -47,7 +48,7 @@ export const nelViaggio = id => giornoDi(id) >= 0;
 export const visitata = id => X().giorni.some(G => G.fatte?.includes(id));
 export const puoiSegnare = () => salvato();
 export const vuotoTutto = (x = X()) => x.giorni.every(g => !g.gita && !g.tappe.length);
-export function sostituisciArchivio(nuovoA) { A = nuovoA; salvaArchivio = creaSalvataggio(); memo.clear(); }
+export function sostituisciArchivio(nuovoA, fonte) { A = nuovoA; salvaArchivio = creaSalvataggio(fonte); memo.clear(); }
 
 // le bozze aperte in questa visita, com'erano all'apertura: se le lasci così (o vuote) spariscono quando passi a un altro itinerario
 const bozze = new Map();
@@ -76,10 +77,23 @@ export const gia = x => A.elenco.find(i => uguali(i, x));
 export { nuovoItinerario };
 
 // salvare: true se il browser lo permette (in navigazione privata o con la memoria piena no)
-let salvaArchivio = creaSalvataggio();
-export function scriviArchivio(avvisa) { return salvaArchivio(A, avvisa); }
+let salvaArchivio = creaSalvataggio(iniziale), ultimaScrittura = Promise.resolve(true), quandoSalvato;
+export const quandoSalva = fn => { quandoSalvato = fn; };
+export const salvataggioInCorso = () => salvaArchivio.stato() === 'in-corso';
+export async function attendiSalvataggi() {
+  let attesa, ok;
+  do { attesa = ultimaScrittura; ok = await attesa; } while (attesa !== ultimaScrittura);
+  return ok;
+}
+export function scriviArchivio(avvisa) {
+  const corrente = salvaArchivio;
+  const lavoro = corrente(A, avvisa);
+  quandoSalvato?.();
+  ultimaScrittura = lavoro.then(ok => { if (corrente === salvaArchivio) quandoSalvato?.(); return ok; });
+  return ultimaScrittura;
+}
 export const erroreSalvataggio = () => testoErroreSalvataggio(salvaArchivio.stato());
-export const statoSalvataggio = () => presentaSalvataggio(salvato(), salvaArchivio.stato());
+export const statoSalvataggio = (x = X()) => presentaSalvataggio(salvato(x), salvaArchivio.stato());
 // una modifica all'itinerario aperto: «visitata» vale solo per le tappe ancora nel giorno; i timbri per le tappe visitate
 export function dopoModifica() {
   const x = X();
