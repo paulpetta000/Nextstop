@@ -1,5 +1,8 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
+import { preparaSpostamento } from '../src/lib/itinerari/spostamenti.ts';
+import { prontoNelGiorno } from '../src/lib/itinerari/pronti.ts';
+import { codifica, decodifica } from '../src/lib/itinerari/link.ts';
 import { creaSalvataggio, leggi, leggiRiepilogo, scrivi } from '../src/scripts/itinerari/memoria.ts';
 
 const CHIAVE = 'itinerari-v1', COPIA = 'itinerari-v1-recupero';
@@ -124,5 +127,45 @@ test('locali: trova il record valido anche se quello attivo è danneggiato, senz
   const dati = memoria(t, raw);
   assert.deepEqual(leggiRiepilogo(), { id: 'viaggio0', nome: valido().nome, data: valido().data, giorni: [{ tappe: ['duomo'] }] });
   assert.equal(dati.get(CHIAVE), raw);
+  assert.equal(dati.has(COPIA), false);
+});
+
+test('conservazione: spostamento e pronto attraversano salvataggio e rilettura senza perdere preferenze e visite', t => {
+  const dati = memoria(t);
+  const giorno = tappe => ({ inizio: 600, fine: 1080, tappe });
+  const Citta = { tappe: ['duomo', 'museo', 'palazzo', 'castello', 'parco', 'piazza'].map(id => ({ id, tipo: 'citta' })) };
+  const x = {
+    ...valido(), posizione: 'no', margine: 10, salvato: true,
+    timbri: { museo: 1760000000000, duomo: 1760000001000 },
+    giorni: [
+      { ...giorno(['duomo', 'museo', 'palazzo']), fatte: ['museo', 'duomo'], noPasti: ['pranzo'], pause: [{ quale: 'pranzo', min: 45, dopo: 'duomo' }] },
+      { ...giorno(['castello']), pause: [{ quale: 'riposo', min: 30, dopo: 'castello' }] },
+      giorno([])
+    ]
+  };
+  const originale = structuredClone(x), altro = valido('altro000');
+  const spostato = preparaSpostamento(x, 0, 1, ['duomo', 'museo']);
+  const pronto = prontoNelGiorno({ ...x, giorni: spostato.giorni }, 2, [giorno(['parco']), giorno(['piazza'])]);
+  const aggiornato = { ...x, giorni: pronto.giorni };
+  assert.equal(scrivi({ attivo: x.id, elenco: [aggiornato, altro] }), true);
+  const letto = leggi(Citta);
+  assert.equal(letto.attivo, x.id);
+  const r = letto.elenco[0];
+  assert.equal(r.id, x.id); assert.equal(r.nome, x.nome); assert.equal(r.data, x.data);
+  assert.equal(r.posizione, 'no'); assert.equal(r.margine, 10); assert.equal(r.salvato, true);
+  assert.deepEqual(r.timbri, x.timbri);
+  assert.deepEqual(r.giorni.map(g => g.tappe), [['palazzo'], ['castello', 'duomo', 'museo'], ['parco'], ['piazza']]);
+  assert.deepEqual(r.giorni.map(g => [g.inizio, g.fine]), Array(4).fill([600, 1080]));
+  assert.deepEqual(r.giorni[0].pause, [{ quale: 'pranzo', min: 45 }]);
+  assert.deepEqual(r.giorni[0].noPasti, ['pranzo']);
+  assert.deepEqual(r.giorni[1].pause, [{ quale: 'riposo', min: 30, dopo: 'castello' }]);
+  assert.deepEqual(r.giorni[1].fatte, ['museo', 'duomo']);
+  assert.deepEqual(letto.elenco[1], altro);
+  const condiviso = decodifica(Citta, '#' + codifica(r)).it;
+  assert.deepEqual(condiviso.giorni.map(g => g.tappe), r.giorni.map(g => g.tappe));
+  assert.deepEqual(condiviso.giorni.map(g => g.pause), r.giorni.map(g => g.pause));
+  assert.equal(condiviso.timbri, undefined); assert.equal(condiviso.posizione, undefined);
+  assert.ok(condiviso.giorni.every(g => !g.fatte && !g.noPasti));
+  assert.deepEqual(x, originale);
   assert.equal(dati.has(COPIA), false);
 });

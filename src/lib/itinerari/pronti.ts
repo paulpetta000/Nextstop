@@ -34,7 +34,12 @@ export function prontoNelGiorno(x: Itinerario, g: number, pronto: Giorno[]): Pro
     let dove = k === 0 ? pos : pos + 1;
     const G = giorni[dove];
     const libero = k === 0 ? G && !G.gita : G && !G.gita && !G.tappe.length;
-    if (!libero) { if (k === 0) dove = pos + 1; giorni.splice(dove, 0, giornoVuoto(P.inizio, P.fine)); }
+    if (!libero) {
+      if (k === 0) dove = pos + 1;
+      giorni.splice(dove, 0, giornoVuoto(P.inizio, P.fine));
+      // Anche l'avviso delle tappe già presenti deve seguire i giorni che scorrono avanti.
+      for (const t of gia) if (t.giorno >= dove) t.giorno++;
+    }
     if (giorni[dove].tappe.length + tappe.length > MAX_TAPPE) return 'limite-tappe';
     giorni[dove].tappe = [...giorni[dove].tappe, ...tappe];
     if (primo < 0) primo = dove;

@@ -82,3 +82,45 @@ test('spostamento: una pausa messa dopo la tappa spostata torna al suo posto di 
   const r = preparaSpostamento(x, 0, 1, ['museo']);
   assert.deepEqual(r.giorni[0].pause, [{ quale: 'pranzo', min: 60 }]);
 });
+
+for (const prima of [true, false]) test(`spostamento verso gita: origine conservata con inserimento prima dell'origine: ${prima}`, () => {
+  const origine = { ...giorno(['duomo', 'museo']), fatte: ['duomo'], pause: [{ quale: 'pranzo', min: 45, dopo: 'duomo' }], noPasti: ['cena'] };
+  const gita = { ...giorno([]), gita: 'pompei' };
+  const x = viaggio(prima ? [gita, origine] : [origine, gita]);
+  const originale = structuredClone(x);
+  const r = preparaSpostamento(x, prima ? 1 : 0, prima ? 0 : 1, ['duomo']);
+  assert.equal(typeof r, 'object');
+  assert.equal(r.destinazione, prima ? 0 : 1);
+  assert.deepEqual(r.giorni[r.destinazione], { ...giorno(['duomo']), fatte: ['duomo'] });
+  assert.deepEqual(r.giorni[prima ? 2 : 0], { ...origine, tappe: ['museo'], fatte: [], pause: [{ quale: 'pranzo', min: 45 }] });
+  assert.deepEqual(r.giorni[prima ? 1 : 2], gita);
+  assert.deepEqual(x, originale);
+});
+
+test('spostamento verso gita: inserire un giorno non supera il limite di sette', () => {
+  const x = viaggio([giorno(['duomo']), { ...giorno([]), gita: 'pompei' }, ...Array.from({ length: MAX_GIORNI - 2 }, () => giorno([]))]);
+  const originale = structuredClone(x);
+  assert.equal(preparaSpostamento(x, 0, 1, ['duomo']), 'limite-giorni');
+  assert.deepEqual(x, originale);
+});
+
+test('spostamento: trasferire più visitate conserva il loro ordine di visita', () => {
+  const x = viaggio([{ ...giorno(['duomo', 'museo', 'castello']), fatte: ['museo', 'duomo'] }, giorno([])]);
+  const originale = structuredClone(x);
+  const r = preparaSpostamento(x, 0, 1, ['duomo', 'museo']);
+  assert.deepEqual(r.giorni[1].tappe, ['duomo', 'museo']);
+  assert.deepEqual(r.giorni[1].fatte, ['museo', 'duomo']);
+  assert.deepEqual(x, originale);
+});
+
+test('spostamento: le visite trasferite non diventano più recenti di una visita già nella destinazione', () => {
+  const x = { ...viaggio([
+    { ...giorno(['duomo', 'museo']), fatte: ['museo', 'duomo'] },
+    { ...giorno(['castello']), fatte: ['castello'] }
+  ]), timbri: { museo: 1760000000000, duomo: 1760000001000, castello: 1760000002000 } };
+  const originale = structuredClone(x);
+  const r = preparaSpostamento(x, 0, 1, ['duomo', 'museo']);
+  assert.deepEqual(r.giorni[1].fatte, ['museo', 'duomo', 'castello']);
+  assert.deepEqual(r.giorni[1].tappe, ['castello', 'duomo', 'museo']);
+  assert.deepEqual(x, originale);
+});
