@@ -1,8 +1,14 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 17/10/2026. Ramo `codex/satori-fflate`: blocchi precedenti nella PR #5 in bozza; nuovo allineamento del blu soltanto locale, sopra `5b259b1`. Nessun merge o rilascio in produzione._
+_Aggiornato il 17/10/2026. Ramo `codex/satori-fflate`: blocchi precedenti nella PR #5 in bozza; nuovi blocchi colore e revisione del codice soltanto locali, sopra `5b259b1`. Nessun merge o rilascio in produzione._
 
-## Blocco corrente · coerenza del blu
+## Revisione del codice · primo blocco concluso
+
+Enrico ha autorizzato l'avvio della revisione, tutta da computer. **Prova con uso reale di Claude rinviata a dopo main/pubblicazione, separata e non necessaria al rilascio.** Corretti due difetti con prove fallite prima: verso della passeggiata dal vivo calcolato senza il tratto dall'ultima visitata e minuti impossibili nei link convertiti in altri orari. Quattro test aggiunti; **184/184 test, build di 12 pagine e 811 link validi**. Solo calcolo.ts, link.ts e test pertinenti, oltre ai documenti. [Prove e limiti](docs/storico/2026-10-17-revisione-codice-1.md). Nessun browser, dato personale, dipendenza nuova, push, merge o deploy.
+
+Prossimo blocco proposto: trasferimenti tra giorni e inserimento dei pronti, con conservazione di visitate/pause/orari. Revisione totale ancora in corso; non ripetere i blocchi già verificati senza motivo. Restano esclusi sopralluoghi, prove con altre persone e contatti locali; Search Console solo da esportazioni scelte da Enrico.
+
+## Colore · blocco precedente locale
 
 Precisazione di Enrico: **correzione soltanto nel tema scuro**, con accenti di C Mappa allineati al blu di D Pagine; tema chiaro ripristinato dalla base `5b259b1`. Cambiano solo `compositore.css`, `ore.css` e i test pertinenti, oltre ai documenti. Prova di conservazione del chiaro fallita prima e riuscita dopo; quattro controlli su palette e contrasto passano. **180 test, build di 12 pagine e 811 link validi in locale**; worker con 82 risorse. Confronto con la base: solo dieci blocchi CSS scuri diversi, altri 1.421 identici. [Resoconto](docs/storico/2026-10-17-coerenza-colore.md). **Non verificato visivamente e non pubblicato**: browser escluso, nessun nuovo axe/Lighthouse, push o deploy. Dati, ID, URL, calcoli, memoria e dipendenze conservati.
 
@@ -32,4 +38,4 @@ Resta pendente il pezzo 3 delle rifiniture grafiche (barra «Salvato» e menu); 
 
 I blocchi precedenti sono stati pubblicati nella PR con autorizzazione. Il nuovo allineamento del blu resta locale; questo blocco non comprende un nuovo push o deploy. Main e produzione non sono stati modificati; nessuna modifica alle protezioni GitHub/Vercel. Main risultava senza protezione nel controllo precedente. L'override fflate va riesaminato al prossimo aggiornamento dei consumatori; il caso generico cache max-stale/cookie resta aperto, senza esposizione individuata nel percorso statico di Nextstop. Controllo completo dei tipi e organizzazione mirata degli archivi restano lavori separati.
 
-**Cosa fare adesso:** 1. Rivedere visivamente il colore in chiaro/scuro e sulle due viste, rispettando il browser escluso. 2. Completare Search Console dai rapporti esportati da Enrico. 3. Concordare il blocco successivo: dati/orari, protezioni GitHub o organizzazione conservativa delle cartelle; nessuna cancellazione implicita. Per una nuova anteprima restano i controlli UI previsti; merge e produzione richiedono ancora OK esplicito. Bastano gli strumenti locali già presenti e GitHub/Vercel; nessuna nuova installazione.
+**Cosa fare adesso:** 1. Proseguire, dopo OK di fine blocco, con trasferimenti tra giorni e pronti. 2. Continuare le altre aree del piano unico da computer. 3. Rivedere anteprima e controlli UI prima di proporre merge e produzione, rispettando il browser escluso. Prova reale Claude soltanto dopo il rilascio e con mandato separato. Bastano gli strumenti locali già presenti; per il rilascio serviranno GitHub/Vercel. Nessuna nuova installazione.

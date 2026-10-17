@@ -23,7 +23,11 @@ export function nuovoItinerario(nome: string, giorni: Giorno[] = [giornoVuoto()]
 }
 
 const hhmm = (m: number) => `${String(Math.floor(m / 60)).padStart(2, '0')}${String(m % 60).padStart(2, '0')}`;
-const minutiHhmm = (s: string) => (/^\d{4}$/.test(s) ? +s.slice(0, 2) * 60 + +s.slice(2) : NaN);
+const minutiHhmm = (s: string) => {
+  if (!/^\d{4}$/.test(s)) return NaN;
+  const h = +s.slice(0, 2), m = +s.slice(2);
+  return m < 60 && (h < 24 || (h === 24 && m === 0)) ? h * 60 + m : NaN;
+};
 
 const QUALI: QualePausa[] = ['pranzo', 'caffe', 'riposo', 'libero'];
 export const MARGINI_VALIDI = [5, 10, 15];

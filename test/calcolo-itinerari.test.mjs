@@ -139,3 +139,30 @@ test('calcolo dal vivo: le tappe visitate restano senza orari e si riparte dallâ
   assert.equal(r.visite, 30);
   assert.deepEqual(x, prima);
 });
+
+// Il punto da cui riparti conta anche per scegliere il verso di una passeggiata.
+// Quattro punti inventati: nessun dato personale, rete o posizione del telefono.
+for (const conTappaDopo of [false, true]) test(`dal vivo: il verso della passeggiata considera l'ultima visitata, con tappa dopo: ${conTappaDopo}`, () => {
+  const n = 4, valori = Array.from({ length: n * n }, (_, i) => Math.floor(i / n) === i % n ? 0 : 10);
+  valori[1] = conTappaDopo ? 1 : 50; valori[2] = conTappaDopo ? 50 : 1;
+  valori[1 * n + 3] = 1; valori[2 * n + 3] = 10;
+  const matrici = v => Object.fromEntries(scenari.map(s => [s, v.slice()]));
+  const C = {
+    tappe: [
+      { id: 'prima', p: 0, tipo: 'citta', durata: 30, chiuso: [] },
+      { id: 'passeggio', p: 1, pf: 2, reversibile: true, tipo: 'citta', durata: 30, chiuso: [] },
+      { id: 'dopo', p: 3, tipo: 'citta', durata: 30, chiuso: [] }
+    ],
+    tempi: { n, min: matrici(valori), metri: matrici(valori.map(v => v * 100)), mezzi: matrici(valori.map(() => '')) },
+    linee: {}, zone: {}
+  };
+  const x = viaggio({ tappe: ['prima', 'passeggio', ...(conTappaDopo ? ['dopo'] : [])], fatte: ['prima'] });
+  const originale = structuredClone(x);
+  const r = calcolaGiorno(C, x, 0, { data: x.data, ora: 720 });
+  const tratti = r.voci.filter(v => v.tipo === 'tratto');
+  assert.deepEqual(tratti.map(v => [v.da, v.a]), conTappaDopo ? [[0, 1], [2, 3]] : [[0, 2]]);
+  assert.equal(r.spostamenti, conTappaDopo ? 11 : 1);
+  assert.equal(r.fine, conTappaDopo ? 791 : 751);
+  assert.equal(r.voci.find(v => v.id === 'passeggio').indietro, conTappaDopo ? undefined : true);
+  assert.deepEqual(x, originale);
+});
