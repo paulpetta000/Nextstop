@@ -1,6 +1,12 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 17/10/2026. Ramo `codex/satori-fflate`: blocchi precedenti nella PR #5 in bozza; nuovi blocchi colore e revisione del codice soltanto locali, sopra `5b259b1`. Nessun merge o rilascio in produzione._
+_Aggiornato il 17/10/2026. Enrico ha autorizzato push e integrazione in main di tutti i blocchi completati della PR #5, inclusi i sei commit locali successivi. La nuova revisione dei salvataggi è sospesa e conservata separatamente; non fa parte di questo rilascio._
+
+## Pubblicazione su main · mandato corrente
+
+La [PR #5](https://github.com/paulpetta000/Nextstop/pull/5) raccoglie salvataggi, calcoli, offline, dipendenze, prestazioni, blu del solo tema scuro e quattro gruppi di revisione. Versione applicativa verificata fino a 6ad8671: **225 test, build di 12 pagine e 811 link validi**. Verificare CI e deployment associati al commit prima di dichiarare il rilascio riuscito.
+
+La richiesta di pubblicare precede il completamento della protezione atomica tra schede: il limite del gruppo 4 rimane dichiarato. Il lavoro Web Locks in corso è conservato localmente per riprenderlo dopo, senza essere incluso. Browser sempre escluso: nessuna nuova verifica visiva, axe o Lighthouse; i risultati precedenti non certificano le modifiche successive. Nessuna bozza di design o ricerca privata inclusa.
 
 ## Revisione del codice · salvataggi e recupero
 
@@ -56,4 +62,4 @@ Resta pendente il pezzo 3 delle rifiniture grafiche (barra «Salvato» e menu); 
 
 I blocchi precedenti sono stati pubblicati nella PR con autorizzazione. Il nuovo allineamento del blu resta locale; questo blocco non comprende un nuovo push o deploy. Main e produzione non sono stati modificati; nessuna modifica alle protezioni GitHub/Vercel. Main risultava senza protezione nel controllo precedente. L'override fflate va riesaminato al prossimo aggiornamento dei consumatori; il caso generico cache max-stale/cookie resta aperto, senza esposizione individuata nel percorso statico di Nextstop. Controllo completo dei tipi e organizzazione mirata degli archivi restano lavori separati.
 
-**Cosa fare adesso:** 1. Completare la protezione tra sessioni: lettura/scrittura coerenti, simultaneità e recupero delle due copie. La mitigazione del gruppo 4 non rende atomico localStorage. 2. Continuare il piano unico da computer, raggruppando più parti; minimo quindici minuti per queste sessioni di revisione salvo stop. 3. Completare i controlli UI prima di proporre il rilascio, rispettando il browser escluso. Prova reale Claude soltanto dopo il rilascio e con mandato separato. Strumenti locali presenti; GitHub/Vercel per un rilascio autorizzato. Nessuna nuova installazione.
+**Cosa fare dopo il rilascio richiesto:** 1. Riprendere la revisione locale sospesa e completare la protezione tra sessioni: lettura/scrittura coerenti, simultaneità e recupero delle due copie. La mitigazione del gruppo 4 non rende atomico localStorage. 2. Continuare il piano unico da computer, raggruppando più parti; minimo quindici minuti per queste sessioni di revisione salvo stop. 3. Completare i controlli UI prima di proporre il rilascio, rispettando il browser escluso. Prova reale Claude soltanto dopo il rilascio e con mandato separato. Strumenti locali presenti; GitHub/Vercel per un rilascio autorizzato. Nessuna nuova installazione.
