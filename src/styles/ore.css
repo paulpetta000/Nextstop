@@ -4,10 +4,10 @@
 html.pc .cmp { --ore-libero: #DCE2F9; --ore-tufo: #E0A51B; }
 html.pd .cmp { --ore-libero: #DFE8F6; --ore-tufo: #E0A51B; }
 @media (prefers-color-scheme: dark) {
-:root.pc:not([data-theme="light"]) .cmp { --ore-libero: #222A63; --ore-tufo: #F0BE3E; }
+:root.pc:not([data-theme="light"]) .cmp { --ore-libero: #222C40; --ore-tufo: #F0BE3E; }
 :root.pd:not([data-theme="light"]) .cmp { --ore-libero: #222C40; --ore-tufo: #F0BE3E; }
 }
-:root.pc[data-theme="dark"] .cmp { --ore-libero: #222A63; --ore-tufo: #F0BE3E; }
+:root.pc[data-theme="dark"] .cmp { --ore-libero: #222C40; --ore-tufo: #F0BE3E; }
 :root.pd[data-theme="dark"] .cmp { --ore-libero: #222C40; --ore-tufo: #F0BE3E; }
 .cmp #ore { --morbido: cubic-bezier(.32, .72, 0, 1); width: 100%; max-width: 100%; height: 100dvh; max-height: 100dvh; margin: 0; padding: 0; border: 0; background: var(--f-sup); color: var(--ink); overflow: hidden; }
 html.pd .cmp #ore { background: var(--f-sup) var(--grana); }

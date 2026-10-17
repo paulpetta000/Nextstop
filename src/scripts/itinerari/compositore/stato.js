@@ -6,8 +6,9 @@ import { calcolaGiorno, ordinePiuCorto, tappaDi, dataDelGiorno } from '../../../
 import { conPause } from '../../../lib/itinerari/pause';
 import { nuovoItinerario, uguali, codifica } from '../../../lib/itinerari/link';
 import { giornoSettimana, piuGiorni, dataLunga } from '../../../lib/itinerari/date';
-import { leggi, scrivi } from '../memoria';
+import { leggi, creaSalvataggio, testoErroreSalvataggio, presentaSalvataggio } from '../memoria';
 import { oggi, oraDiAdesso } from './base.js';
+import { creaCaricaJson, applicaSchede } from '../caricamento.mjs';
 
 const json = id => JSON.parse(document.getElementById(id)?.textContent || 'null');
 export const C = spacchetta(json('it-dati'));
@@ -46,7 +47,7 @@ export const nelViaggio = id => giornoDi(id) >= 0;
 export const visitata = id => X().giorni.some(G => G.fatte?.includes(id));
 export const puoiSegnare = () => salvato();
 export const vuotoTutto = (x = X()) => x.giorni.every(g => !g.gita && !g.tappe.length);
-export function sostituisciArchivio(nuovoA) { A = nuovoA; memo.clear(); }
+export function sostituisciArchivio(nuovoA) { A = nuovoA; salvaArchivio = creaSalvataggio(); memo.clear(); }
 
 // le bozze aperte in questa visita, com'erano all'apertura: se le lasci così (o vuote) spariscono quando passi a un altro itinerario
 const bozze = new Map();
@@ -75,13 +76,10 @@ export const gia = x => A.elenco.find(i => uguali(i, x));
 export { nuovoItinerario };
 
 // salvare: true se il browser lo permette (in navigazione privata o con la memoria piena no)
-let avvisato = false;
-export function scriviArchivio(avvisa) {
-  if (scrivi(A) || avvisato) return true;
-  avvisato = true;
-  avvisa?.('Questo browser non salva i dati: l\'itinerario resta finché la pagina è aperta. Per tenerlo, mandalo con «Condividi».');
-  return false;
-}
+let salvaArchivio = creaSalvataggio();
+export function scriviArchivio(avvisa) { return salvaArchivio(A, avvisa); }
+export const erroreSalvataggio = () => testoErroreSalvataggio(salvaArchivio.stato());
+export const statoSalvataggio = () => presentaSalvataggio(salvato(), salvaArchivio.stato());
 // una modifica all'itinerario aperto: «visitata» vale solo per le tappe ancora nel giorno; i timbri per le tappe visitate
 export function dopoModifica() {
   const x = X();
@@ -152,7 +150,7 @@ export function G(g, tappe) {
   const r = grezzo(g, tappe);
   if (!r) return null;
   const x = X(), Gg = tappe ? { ...x.giorni[g], tappe } : x.giorni[g];
-  return conPause(C, Gg, r, x.margine);
+  return conPause(C, Gg, r, x.margine, { data: dataDi(g), piedi: x.piedi });
 }
 export const tappeDi = Gx => Gx.voci.filter(v => v.tipo === 'tappa');
 export const daFare = Gx => tappeDi(Gx).filter(v => !v.fatta);
@@ -206,14 +204,14 @@ export async function caricaDopo(quandoArriva) {
   }).catch(() => { /* senza orari veri resta l'attesa media */ });
 }
 // la mappa di oggi e i percorsi tra le tappe: si caricano una volta
-let mappaDati = null, alternativi = null;
+let mappaDati = null;
 export const caricaMappa = () => (mappaDati ??= quandoLibero().then(() => Promise.all([
   fetch('/napoli/itinerari/mappa.json').then(r => { if (!r.ok) throw new Error('mappa'); return r.json(); }),
   fetch('/napoli/itinerari/percorsi.json').then(r => { if (!r.ok) throw new Error('percorsi'); return r.json(); }),
   // l'indice delle strade a pezzi: senza (vecchia copia, niente rete) la mappa resta quella di base
   fetch('/napoli/itinerari/strade/indice.json').then(r => (r.ok ? r.json() : null)).catch(() => null)
 ])).catch(e => { mappaDati = null; throw e; }));
-export const caricaAlternativi = () => (alternativi ??= fetch('/napoli/itinerari/percorsi-alternativi.json').then(r => (r.ok ? r.json() : null)).catch(() => { alternativi = null; return null; }));
+export const caricaAlternativi = creaCaricaJson('/napoli/itinerari/percorsi-alternativi.json');
 // le schede complete e i dati della ricerca (/napoli/itinerari/schede/, schede.astro): si scaricano a pagina caricata e
 // servono quando apri una scheda o cerchi. MODELLI: id → contenuto del <template> della scheda.
 export const MODELLI = new Map();
@@ -221,8 +219,6 @@ let schede = null;
 export const schedePronte = () => MODELLI.size > 0;
 export const caricaSchede = () => (schede ??= fetch('/napoli/itinerari/schede/').then(r => { if (!r.ok) throw new Error('schede'); return r.text(); }).then(html => {
   const doc = new DOMParser().parseFromString(html, 'text/html');
-  for (const t of doc.querySelectorAll('template[id^="it-t-"]')) MODELLI.set(t.id.slice(5), document.importNode(t.content, true));
-  const cerca = JSON.parse(doc.getElementById('it-cerca')?.textContent || '{}');
-  for (const [id, x] of Object.entries(cerca)) UI.tappe[id] = { ...(UI.tappe[id] ?? {}), ...x };
+  applicaSchede(doc, MODELLI, UI.tappe, content => document.importNode(content, true));
   cache.clear();
 }).catch(e => { schede = null; throw e; }));

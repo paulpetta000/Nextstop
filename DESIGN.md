@@ -27,6 +27,9 @@ Una sola cosa forte per pagina; tutto il resto quieto.
   **Da decidere vedendo l'anteprima**: l'accento del sito resta il giallo tufo o passa al pervinca del marchio.
 - Foto in tema scuro: un velo scuro leggero sopra (`--velo`), mai foto a piena luce su fondo nero.
 
+
+**Compositore · precisazione del 17/10/2026:** Enrico richiede la correzione soltanto nel tema scuro. Gli accenti scuri di Mappa sono allineati al blu già presente in Pagine (`#8FB0F0`), inclusi pannelli, percorso, calendario e ora. Tutti i blocchi del tema chiaro sono ripristinati dalla base precedente `5b259b1`, senza uniformare le due palette chiare. Fondi, impaginazioni e marchio conservati. Revisione visiva e pubblicazione pendenti: [prove e limiti](docs/storico/2026-10-17-coerenza-colore.md).
+
 ## 3. Caratteri
 Solo caratteri liberi (OFL), serviti dal sito (`public/fonts/`), mai da Google dal vivo.
 | Ruolo | Carattere | Impostazioni |

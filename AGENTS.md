@@ -3,7 +3,7 @@
 Sito statico Astro 7, Node >=22.12, in italiano. Enrico lavora anche con Claude Code.
 
 - Leggi [regole comuni](docs/REGOLE.md) e [stato attuale](PROGRESS.md), poi solo i file pertinenti. `CLAUDE.md` contiene istruzioni specifiche di Claude Code e non va letto di default.
-- Per trovare l'area giusta usa l'[indice delle letture](docs/README.md); comandi e struttura nel [README](README.md). Il compositore entra da `src/scripts/itinerari/app.ts`, calcoli e link da `src/lib/itinerari/`.
+- Per trovare l'area giusta usa l'[indice delle letture](docs/README.md); comandi e struttura nel [README](README.md). Il compositore entra da `src/scripts/itinerari/compositore/avvio.js`, calcoli e link da `src/lib/itinerari/`.
 - Rispetta il blocco autorizzato: niente dipendenze nuove, merge su `main`, push o deploy senza autorizzazione. Conserva dati, ID, URL, privacy, offline, fonti e licenze.
 - Commit: `git -c user.name="Codex" -c user.email="noreply@openai.com" commit …`; non cambiare la configurazione Git. Un solo assistente per ramo, con commit prima del passaggio all'altro.
 - Consiglia modello e ragionamento fra quelli disponibili nel client per il compito, senza tradurre le tabelle di Claude. Li cambia Enrico: non fingere di impostarli e non proporre cambi inutili durante il lavoro.

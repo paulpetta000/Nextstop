@@ -34,9 +34,9 @@ function capi(C: Citta, id: string): Capi {
 }
 
 // Il verso migliore dei percorsi a piedi lungo la giornata (programmazione dinamica sui due versi)
-function versi(C: Citta, ids: string[], s: Scenario) {
+function versi(C: Citta, ids: string[], s: Scenario, uscita: number | null = null) {
   const c = ids.map(id => capi(C, id));
-  let costo = c[0]?.map(() => 0) ?? [];
+  let costo = c[0]?.map(o => uscita == null ? 0 : minuti(C, s, uscita, o.entra)) ?? [];
   const da: number[][] = [];
   for (let k = 1; k < ids.length; k++) {
     const prima = c[k - 1], ora = c[k];
@@ -119,7 +119,7 @@ function valuta(V: Vivo, tipo: number, seg: (number | string)[], t0: number): { 
 type Tratto = Extract<Voce, { tipo: 'tratto' }>;
 // Lo spostamento da un punto all'altro partendo all'ora t: i tempi di sempre (attesa media) o, se la data è
 // nell'orario ANM, la strada migliore tra quella senza bus e quelle con il bus valutate con le partenze vere
-function spostamento(C: Citta, s: Scenario, da: number, a: number, t: number, data?: string): Tratto {
+export function spostamento(C: Citta, s: Scenario, da: number, a: number, t: number, data?: string): Tratto {
   const ij = da * C.tempi.n + a;
   const voce = (min: number, metri: number, mezzi: string): Tratto => {
     const parti = mezzi.split('+').filter(Boolean);
@@ -199,7 +199,7 @@ export function calcolaGiorno(C: Citta, it: Itinerario, g: number, adesso?: Ades
     }
   }
   const orariVeri = !it.piedi && conOrariVeri(C, data);
-  const verso = versi(C, restano, base) as Capi;
+  const verso = versi(C, restano, base, uscita) as Capi;
   restano.forEach((id, k) => {
     const v = verso[k];
     if (uscita != null) {

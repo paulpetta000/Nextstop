@@ -2,11 +2,11 @@
 // del compositore, src/scripts/itinerari/memoria.ts) serve solo a proporre il giorno, le tappe vicine e il giorno
 // a cui aggiungere un locale; non si manda a nessuno.
 import { giornoSettimana, piuGiorni, dataLunga, ilGiorno, type GiornoSettimana } from '../lib/itinerari/date';
+import { leggiRiepilogo } from './itinerari/memoria';
 const maiuscola = (s: string) => s.charAt(0).toUpperCase() + s.slice(1);
 
 type Locale = { id: string; zona: string; cucina: string[]; fascia: number; piatti: string[]; orari: (number[] | null)[]; durata: number; piedi: number[] };
 type Dati = { locali: Locale[]; tappe: string[]; nomi: Record<string, string> };
-type ItinerarioSalvato = { id: string; nome: string; data?: string; giorni: { tappe: string[]; gita?: string }[] };
 
 const GIORNI = ['lun', 'mar', 'mer', 'gio', 'ven', 'sab', 'dom'];
 const VICINO = 20;   // minuti a piedi: «vicino alle tappe»
@@ -26,11 +26,7 @@ function avvia() {
   const cucine = new Set<string>(), fasce = new Set<number>();
 
   // l'itinerario attivo sul telefono, se c'è
-  let it: ItinerarioSalvato | null = null;
-  try {
-    const a = JSON.parse(localStorage.getItem('itinerari-v1') || 'null');
-    it = a?.elenco?.find((i: ItinerarioSalvato) => i.id === a.attivo) ?? a?.elenco?.[0] ?? null;
-  } catch { /* niente memoria: si usa la pagina senza itinerario */ }
+  const it = leggiRiepilogo();
   // le tappe vere (non i locali già scelti): «vicino alle tappe» parte da quelle
   const giorniCitta = it ? it.giorni.map((g, k) => ({ k, tappe: (g.tappe || []).filter(id => D.tappe.includes(id) && !locale.has(id)), gita: !!g.gita })) : [];
 

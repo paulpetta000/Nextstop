@@ -106,3 +106,23 @@ test('link itinerari: «No, grazie» ai pasti resta sul telefono, solo pranzo e 
   assert.deepEqual(r.giorni[0].noPasti, ['cena', 'pranzo']);
   assert.doesNotMatch(codifica(r), /noPasti|cena/);
 });
+
+test('link itinerari: minuti impossibili non vengono trasformati in un altro orario valido', () => {
+  for (const orario of ['0960', '0999', '1261', '1960', '2360']) {
+    const da = decodifica(C, '#g=' + orario + '-1900.tappa0').it.giorni[0];
+    const a = decodifica(C, '#g=0930-' + orario + '.tappa0').it.giorni[0];
+    assert.equal(da.inizio, giornoVuoto().inizio, orario + ' inizio');
+    assert.equal(a.fine, giornoVuoto().fine, orario + ' fine');
+    assert.deepEqual(da.tappe, ['tappa0']);
+    assert.deepEqual(a.tappe, ['tappa0']);
+  }
+});
+
+test('link itinerari: gli orari validi al minuto e la mezzanotte restano compatibili', () => {
+  for (const [inizio, fine, a, b] of [['0500', '0600', 300, 360], ['0959', '1901', 599, 1141], ['2000', '2400', 1200, 1440]]) {
+    const r = decodifica(C, '#g=' + inizio + '-' + fine + '.tappa0').it;
+    assert.equal(r.giorni[0].inizio, a);
+    assert.equal(r.giorni[0].fine, b);
+    assert.equal(codifica(r), 'n=Itinerario+ricevuto&g=' + inizio + '-' + fine + '.tappa0');
+  }
+});

@@ -2,9 +2,10 @@
 // ricevuto, un itinerario pronto dalla home o dal menu, un locale da «Dove mangiare»), disegna la vista scelta (C o D), poi
 // carica i dati che arrivano dopo e, il giorno stesso, ricalcola dal vivo ogni mezzo minuto.
 import { $, ascoltaFirme, maiuscola } from './base.js';
-import { C, A, X, PRONTI, T, caricaSchede, quandoLibero, nuovo, apri, nomeLibero, ricordaBozza, gia, scriviArchivio, sostituisciArchivio, caricaDopo, VIVO, oggiNelGiorno, posizioneAttiva, adessoPer, statoPosizione, nG } from './stato.js';
+import { attendiStile } from '../stile.mjs';
+import { C, A, X, PRONTI, T, caricaSchede, quandoLibero, nuovo, apri, nomeLibero, ricordaBozza, gia, scriviArchivio, sostituisciArchivio, caricaDopo, VIVO, oggiNelGiorno, posizioneAttiva, adessoPer, statoPosizione, nG, erroreSalvataggio } from './stato.js';
 import { decodifica } from '../../../lib/itinerari/link';
-import { leggi, quandoCambia } from '../memoria';
+import { leggi, quandoCambia, giornoSicuro, allineaArchivio } from '../memoria';
 import { S, vistaSalvata, preparaFoglio, preparaAvviso, avvisa, annuncia } from './comuni.js';
 import { disegna, preparaViste, preparaMenu, aggiorna, aggiungi } from './viste.js';
 import { preparaScheda, schedaAperta } from './scheda.js';
@@ -36,8 +37,9 @@ function avvia() {
   scriviArchivio(avvisa);
   preparaFoglio(); preparaAvviso(); preparaViste(); preparaMenu(); preparaScheda();
   ascoltaFirme($('#app'));
-  document.documentElement.classList.add('cmp-pronto');
   if (chiesto) usaPronto(chiesto); else disegna();
+  // La parte bassa resta fuori dal primo ricalcolo del layout del compositore.
+  document.documentElement.classList.add('cmp-pronto');
   // scorrendo sotto il compositore (itinerari pronti, gite, fonti) la mappa fissa e le barre si nascondono
   new IntersectionObserver(([e]) => document.documentElement.classList.toggle('cmp-fuori', !e.isIntersecting && e.boundingClientRect.top < 0)).observe($('#compositore'));
   // appena la parte bassa entra nello schermo, le barre fisse del compositore (in basso o di lato) si tolgono: non la coprono
@@ -48,13 +50,19 @@ function avvia() {
   const richiesta = new URLSearchParams(W.daAggiungere ?? '');
   const da = richiesta.get('aggiungi');
   if (da && T(da)?.tipo === 'citta') {
-    S.g = Math.min(Math.max(0, Number(richiesta.get('g')) || 0), nG() - 1);
+    S.g = giornoSicuro(richiesta.get('g'), nG());
     if (X().giorni[S.g].tappe.includes(da)) avvisaDopo(`${maiuscola(T(da).breve)} è già nel giorno ${S.g + 1}.`);
     else { disegna(); aggiungi(S.g, da); }
   }
 
   // ---------- un altro tab ha cambiato gli itinerari ----------
-  quandoCambia(() => { const n = leggi(C); if (n && !schedaAperta() && !$('#foglio').open) { sostituisciArchivio({ ...n, attivo: A.attivo }); if (!A.elenco.some(i => i.id === A.attivo)) A.attivo = A.elenco[0].id; disegna(); } });
+  quandoCambia(() => {
+    const n = leggi(C);
+    if (n && !schedaAperta() && !$('#foglio').open && !erroreSalvataggio()) {
+      const cambio = allineaArchivio(A, n, S.g);
+      sostituisciArchivio(cambio.archivio); S.g = cambio.giorno; disegna();
+    }
+  });
 
   // ---------- dopo l'apertura: scenari e orari veri dei bus (restano salvati per l'uso senza rete) ----------
   const ridisegna = () => { if (lista()) return; if (occupato()) setTimeout(ridisegna, 5000); else aggiorna(() => {}); };
@@ -108,7 +116,8 @@ function parti() {
   performance.mark('compositore-fine');
   if (primi.length) setTimeout(() => avvisa(primi.join(' ')), 600);
 }
-if (document.getElementById('app')) {
+function preparaAvvio() {
+  if (!document.getElementById('app')) return;
   // la prima schermata dell'HTML si disegna prima che il compositore la sostituisca (chi ha già itinerari parte subito)
   // si parte appena il browser ha mostrato il primo disegno (al massimo dopo 3 secondi; subito se la scheda non si vede)
   if (document.documentElement.classList.contains('cmp-ha') || document.visibilityState === 'hidden') parti();
@@ -121,3 +130,4 @@ if (document.getElementById('app')) {
     setTimeout(via, 3000);
   }
 }
+attendiStile(document.getElementById('stile-compositore')).then(preparaAvvio).catch(error => console.error(error));

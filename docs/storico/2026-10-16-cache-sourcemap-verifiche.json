@@ -1,0 +1,134 @@
+{
+  "base": "848f717",
+  "data": "2026-10-16",
+  "versioni": {
+    "http-cache-semantics": {
+      "prima": "4.2.0",
+      "dopo": "4.3.0"
+    },
+    "source-map-js": {
+      "prima": "1.2.1",
+      "dopo": "1.2.2"
+    }
+  },
+  "revisione": [
+    {
+      "name": "http-cache-semantics",
+      "version": "4.3.0",
+      "files": 4,
+      "integrity": "sha512-M5t5LlJpS1UHMjvwRQVdFHvPISGeLAxNcrWuJkeGh0KxsqCHZ1O3NXZU/8x7cD0BDcGW8kapxMKTvwlqrNkHkA==",
+      "bytes": 50444
+    },
+    {
+      "name": "source-map-js",
+      "version": "1.2.2",
+      "files": 18,
+      "integrity": "sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==",
+      "bytes": 142723
+    }
+  ],
+  "installazione": {
+    "pacchetti": 2,
+    "isolata": true,
+    "scriptAutomatici": false,
+    "nuovaInstallazioneCompletaSito": false
+  },
+  "regressioni": {
+    "prima": {
+      "pass": 2,
+      "fail": 3
+    },
+    "dopo": {
+      "pass": 5,
+      "fail": 0
+    }
+  },
+  "suite": {
+    "pass": 164,
+    "fail": 0,
+    "skip": 0,
+    "secondi": 8.132
+  },
+  "build": {
+    "pagine": 12,
+    "secondi": 5.45,
+    "flagNode": "--no-liftoff",
+    "runtime": [
+      {
+        "name": "http-cache-semantics",
+        "version": "4.3.0"
+      },
+      {
+        "name": "source-map-js",
+        "version": "1.2.2"
+      }
+    ]
+  },
+  "output": {
+    "prima": 705,
+    "dopo": 705,
+    "differenze": []
+  },
+  "link": {
+    "html": 13,
+    "controllati": 809,
+    "rotti": 0
+  },
+  "lockfile": {
+    "modificati": [
+      "node_modules/http-cache-semantics",
+      "node_modules/source-map-js"
+    ],
+    "manifestInvariato": true
+  },
+  "audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 2,
+    "high": 0,
+    "critical": 0,
+    "total": 2,
+    "pacchetti": [
+      "fflate",
+      "satori"
+    ]
+  },
+  "cache": {
+    "difettoGenericoAncoraRiproducibile": true,
+    "proveSintetiche": [
+      {
+        "version": "4.2.0",
+        "storable": true,
+        "maxAge": 0,
+        "consenteMaxStale": true,
+        "cookieNelRisultato": "sessione=fittizia; HttpOnly"
+      },
+      {
+        "version": "4.3.0",
+        "storable": true,
+        "maxAge": 0,
+        "consenteMaxStale": true,
+        "cookieNelRisultato": "sessione=fittizia; HttpOnly"
+      }
+    ],
+    "contrattoAstro": {
+      "rispostaConCookieSenzaDurataPositiva": true,
+      "nessunHeaderRemotoRestituito": true
+    },
+    "nota": "Non è una prova di attacco a Nextstop né una certificazione di correzione della libreria. Nessun server condiviso multiutente nel progetto statico."
+  },
+  "linux": {
+    "dryRunLockRiuscito": true,
+    "esecuzioneReale": false
+  },
+  "primariaInvariata": {
+    "cache": "4.2.0",
+    "sourcemap": "1.2.1"
+  },
+  "fonti": [
+    "https://github.com/advisories/GHSA-ch52-4w7c-c8xp",
+    "https://github.com/advisories/GHSA-68fv-2mgg-jv7q",
+    "https://github.com/7rulnik/source-map-js/releases/tag/v1.2.2",
+    "https://github.com/kornelski/http-cache-semantics"
+  ]
+}

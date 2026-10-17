@@ -1,0 +1,465 @@
+{
+  "base": "81664eb",
+  "ambiente": {
+    "node": "24.21.0",
+    "npm": "11.19.0",
+    "piattaforma": "win32",
+    "architettura": "x64"
+  },
+  "sharp": {
+    "prima": "0.33.5",
+    "dopo": "0.35.5",
+    "runtime": {
+      "aom": "3.15.1",
+      "archive": "3.8.9",
+      "cairo": "1.18.6",
+      "cgif": "0.5.4",
+      "exif": "0.6.26",
+      "expat": "2.8.5",
+      "ffi": "3.8.0",
+      "fontconfig": "2.18.3",
+      "freetype": "2.14.3",
+      "fribidi": "1.0.17",
+      "glib": "2.90.0",
+      "harfbuzz": "14.5.0",
+      "heif": "1.23.5",
+      "highway": "1.4.0",
+      "imagequant": "2.4.1",
+      "lcms": "2.19.1",
+      "mozjpeg": "0826579",
+      "pango": "1.58.2",
+      "pixman": "0.46.4",
+      "png": "1.6.58",
+      "proxy-libintl": "0.5",
+      "rsvg": "2.63.2",
+      "tiff": "4.7.2",
+      "uhdr": "2.0.2",
+      "vips": "8.18.7",
+      "webp": "1.6.0",
+      "xml2": "2.15.4",
+      "zlib-ng": "2.3.3",
+      "sharp": "0.35.5"
+    }
+  },
+  "revisione": {
+    "file": 122,
+    "testi": 119,
+    "binari": 3,
+    "archivi": [
+      {
+        "pacchetto": "sharp",
+        "versione": "0.35.5",
+        "file": 47,
+        "integrita": "valido",
+        "differenze": 0
+      },
+      {
+        "pacchetto": "semver",
+        "versione": "7.8.5",
+        "file": 53,
+        "integrita": "valido",
+        "differenze": 0
+      },
+      {
+        "pacchetto": "detect-libc",
+        "versione": "2.1.2",
+        "file": 8,
+        "integrita": "valido",
+        "differenze": 0
+      },
+      {
+        "pacchetto": "@img/colour",
+        "versione": "1.1.0",
+        "file": 6,
+        "integrita": "valido",
+        "differenze": 0
+      },
+      {
+        "pacchetto": "@img/sharp-win32-x64",
+        "versione": "0.35.5",
+        "file": 8,
+        "integrita": "valido",
+        "differenze": 0
+      }
+    ]
+  },
+  "installazione": {
+    "catenaWindowsPulita": true,
+    "pacchetti": 5,
+    "comando": "npm ci --ignore-scripts --omit=optional --no-audit --no-fund",
+    "nota": "Progetto di verifica separato con cinque versioni fissate, incluso il binario Windows esplicito. Non è una nuova installazione completa del sito.",
+    "primariaInvariata": true
+  },
+  "test": {
+    "pass": 159,
+    "fail": 0,
+    "skip": 0
+  },
+  "build": {
+    "pagine": 12,
+    "secondi": 16.84,
+    "comando": "node --no-liftoff node_modules/astro/bin/astro.mjs build",
+    "telemetria": false,
+    "sharpCaricata": "0.35.5"
+  },
+  "link": {
+    "html": 13,
+    "controllati": 809,
+    "rotti": 0
+  },
+  "output": {
+    "prima": 705,
+    "dopo": 705,
+    "differenti": [],
+    "immagini": [
+      {
+        "name": "og/accessibilita.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytesPrima": 28860,
+        "bytesDopo": 28860,
+        "fileIdentico": true,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "og/fonti.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytesPrima": 23440,
+        "bytesDopo": 23440,
+        "fileIdentico": true,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "og/home.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytesPrima": 22989,
+        "bytesDopo": 22989,
+        "fileIdentico": true,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "og/napoli--dove-mangiare.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytesPrima": 30323,
+        "bytesDopo": 30323,
+        "fileIdentico": true,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "og/napoli--itinerari.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytesPrima": 23247,
+        "bytesDopo": 23247,
+        "fileIdentico": true,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "og/napoli.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytesPrima": 18567,
+        "bytesDopo": 18567,
+        "fileIdentico": true,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "og/note-legali.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytesPrima": 23005,
+        "bytesDopo": 23005,
+        "fileIdentico": true,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "og/privacy.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytesPrima": 20992,
+        "bytesDopo": 20992,
+        "fileIdentico": true,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "og/termini.png",
+        "dimensioni": [
+          1200,
+          630
+        ],
+        "bytesPrima": 22503,
+        "bytesDopo": 22503,
+        "fileIdentico": true,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "icone/apple-touch-icon.png",
+        "dimensioni": [
+          180,
+          180
+        ],
+        "bytesPrima": 4743,
+        "bytesDopo": 4961,
+        "fileIdentico": false,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "icone/favicon-96.png",
+        "dimensioni": [
+          96,
+          96
+        ],
+        "bytesPrima": 2460,
+        "bytesDopo": 2501,
+        "fileIdentico": false,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "icone/icon-192.png",
+        "dimensioni": [
+          192,
+          192
+        ],
+        "bytesPrima": 5050,
+        "bytesDopo": 5325,
+        "fileIdentico": false,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "icone/icon-512.png",
+        "dimensioni": [
+          512,
+          512
+        ],
+        "bytesPrima": 16158,
+        "bytesDopo": 19154,
+        "fileIdentico": false,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "icone/icon-maskable-512.png",
+        "dimensioni": [
+          512,
+          512
+        ],
+        "bytesPrima": 12517,
+        "bytesDopo": 16164,
+        "fileIdentico": false,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "favicon.ico/16px",
+        "dimensioni": [
+          16,
+          16
+        ],
+        "bytesPrima": 454,
+        "bytesDopo": 454,
+        "fileIdentico": false,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "favicon.ico/32px",
+        "dimensioni": [
+          32,
+          32
+        ],
+        "bytesPrima": 964,
+        "bytesDopo": 964,
+        "fileIdentico": false,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "favicon.ico/48px",
+        "dimensioni": [
+          48,
+          48
+        ],
+        "bytesPrima": 1437,
+        "bytesDopo": 1437,
+        "fileIdentico": false,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      },
+      {
+        "name": "piperno.webp",
+        "dimensioni": [
+          600,
+          840
+        ],
+        "bytesPrima": 46826,
+        "bytesDopo": 46826,
+        "fileIdentico": true,
+        "pixelDiversi": 0,
+        "pctPixelDiversi": 0,
+        "pctPixelDeltaOltre10": 0,
+        "deltaMedioCanale": 0,
+        "deltaMassimo": 0
+      }
+    ],
+    "svgIdentico": true
+  },
+  "audit": {
+    "info": 0,
+    "low": 0,
+    "moderate": 2,
+    "high": 2,
+    "critical": 0,
+    "total": 4,
+    "pacchetti": [
+      "fflate",
+      "http-cache-semantics",
+      "satori",
+      "source-map-js"
+    ]
+  },
+  "linux": {
+    "lockfileDryRun": true,
+    "installazioneEsecuzioneVerificata": false
+  },
+  "lockfile": {
+    "unicaVersioneSharp": "0.35.5",
+    "modificheLimitateAllaCatenaSharp": true,
+    "percorsi": [
+      "",
+      "node_modules/@img/colour",
+      "node_modules/@img/sharp-darwin-arm64",
+      "node_modules/@img/sharp-darwin-x64",
+      "node_modules/@img/sharp-libvips-darwin-arm64",
+      "node_modules/@img/sharp-libvips-darwin-x64",
+      "node_modules/@img/sharp-libvips-linux-arm",
+      "node_modules/@img/sharp-libvips-linux-arm64",
+      "node_modules/@img/sharp-libvips-linux-s390x",
+      "node_modules/@img/sharp-libvips-linux-x64",
+      "node_modules/@img/sharp-libvips-linuxmusl-arm64",
+      "node_modules/@img/sharp-libvips-linuxmusl-x64",
+      "node_modules/@img/sharp-linux-arm",
+      "node_modules/@img/sharp-linux-arm64",
+      "node_modules/@img/sharp-linux-s390x",
+      "node_modules/@img/sharp-linux-x64",
+      "node_modules/@img/sharp-linuxmusl-arm64",
+      "node_modules/@img/sharp-linuxmusl-x64",
+      "node_modules/@img/sharp-wasm32",
+      "node_modules/@img/sharp-win32-ia32",
+      "node_modules/@img/sharp-win32-x64",
+      "node_modules/astro/node_modules/@img/sharp-darwin-arm64",
+      "node_modules/astro/node_modules/@img/sharp-darwin-x64",
+      "node_modules/astro/node_modules/@img/sharp-libvips-darwin-arm64",
+      "node_modules/astro/node_modules/@img/sharp-libvips-darwin-x64",
+      "node_modules/astro/node_modules/@img/sharp-libvips-linux-arm",
+      "node_modules/astro/node_modules/@img/sharp-libvips-linux-arm64",
+      "node_modules/astro/node_modules/@img/sharp-libvips-linux-s390x",
+      "node_modules/astro/node_modules/@img/sharp-libvips-linux-x64",
+      "node_modules/astro/node_modules/@img/sharp-libvips-linuxmusl-arm64",
+      "node_modules/astro/node_modules/@img/sharp-libvips-linuxmusl-x64",
+      "node_modules/astro/node_modules/@img/sharp-linux-arm",
+      "node_modules/astro/node_modules/@img/sharp-linux-arm64",
+      "node_modules/astro/node_modules/@img/sharp-linux-s390x",
+      "node_modules/astro/node_modules/@img/sharp-linux-x64",
+      "node_modules/astro/node_modules/@img/sharp-linuxmusl-arm64",
+      "node_modules/astro/node_modules/@img/sharp-linuxmusl-x64",
+      "node_modules/astro/node_modules/@img/sharp-win32-ia32",
+      "node_modules/astro/node_modules/@img/sharp-win32-x64",
+      "node_modules/astro/node_modules/sharp",
+      "node_modules/color",
+      "node_modules/color-convert",
+      "node_modules/color-string",
+      "node_modules/is-arrayish",
+      "node_modules/sharp",
+      "node_modules/simple-swizzle"
+    ]
+  },
+  "fonti": [
+    "https://sharp.pixelplumbing.com/changelog/v0.35.5/",
+    "https://sharp.pixelplumbing.com/install/",
+    "https://github.com/advisories/GHSA-f88m-g3jw-g9cj",
+    "https://github.com/advisories/GHSA-rgj7-g3m4-5g8c",
+    "https://github.com/advisories/GHSA-wq5f-xc86-pv6w"
+  ]
+}

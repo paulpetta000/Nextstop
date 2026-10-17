@@ -87,3 +87,14 @@ test('pronto in un giorno con tappe: in coda, e oltre il massimo non cambia nien
   const pieno = viaggio([giorno(Array.from({ length: MAX_TAPPE - 2 }, (_, i) => `t${i}`))]);
   assert.equal(prontoNelGiorno(pieno, 0, MEZZA), 'limite-tappe');
 });
+
+test('pronto: il riepilogo delle tappe già presenti usa i giorni dopo gli inserimenti', () => {
+  const x = viaggio([giorno([]), giorno(['plebiscito']), { ...giorno(['sant-elmo']), fatte: ['sant-elmo'], pause: [] }]);
+  const originale = structuredClone(x);
+  const r = prontoNelGiorno(x, 0, DUE);
+  assert.equal(r.giorni.length, 4);
+  assert.deepEqual(r.gia, [{ id: 'sant-elmo', giorno: 3 }]);
+  assert.deepEqual(r.giorni[3], x.giorni[2]);
+  assert.deepEqual(r.giorni[1].tappe, ['san-martino', 'toledo']);
+  assert.deepEqual(x, originale);
+});

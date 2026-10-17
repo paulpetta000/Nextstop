@@ -110,16 +110,8 @@ async function carica(): Promise<Citta> {
 }
 
 // ---------- Pacco per la pagina ----------
-// Nella pagina: tempi del giorno feriale per intero. Gli altri scenari (sabato, domenica, festivi, solo a piedi)
-// arrivano dopo l'apertura da /napoli/itinerari/scenari.json (scenariPacco), per non appesantire la pagina.
-// I mezzi sono indici di un dizionario («L1+FA», «asc:Ascensore Acton»…).
-export function impacchetta(C: Citta) {
-  const dizionario: string[] = [];
-  const voce = (s: string) => { let i = dizionario.indexOf(s); if (i < 0) { i = dizionario.length; dizionario.push(s); } return i; };
-  const F = C.tempi;
-  const feriale = { min: F.min.feriale, metri: F.metri.feriale.map(m => Math.round(m / 10)), mezzi: F.mezzi.feriale.map(voce) };
-  return { tappe: C.tappe, n: F.n, dizionario, feriale, evento: C.evento, linee: C.linee, zone: C.zone };
-}
+// Pacco iniziale con feriale e tempi a piedi, senza dipendere dalla rete.
+export { impacchetta } from './pacco.ts';
 
 // Gli scenari, ognuno come differenza da quello che lo precede (PRIMA): per ogni cella che cambia, la distanza
 // dalla cella cambiata prima, i minuti, i metri (in decine) e il mezzo (indice del dizionario). Si decide sui
@@ -131,7 +123,7 @@ export function scenariPacco(C: Citta) {
   const metri = (s: Scenario, i: number) => Math.round(F.metri[s][i] / 10);
   const diff: Record<string, number[]> = {};
   for (const s of SCENARI) {
-    if (s === 'feriale') continue;
+    if (s === 'feriale' || s === 'piedi') continue;
     const p = PRIMA[s]!;
     const out: number[] = [];
     let ultimo = 0;

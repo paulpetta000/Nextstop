@@ -1,5 +1,5 @@
 # Dati scaricati da file o servizi: da dove vengono e come si rinnovano.
-# Campi: cosa · da-dove (indirizzo) · formato · licenza · aggiorna (comandi, da /home/user/pol) · cambia (file del sito)
+# Campi: cosa · da-dove (indirizzo) · formato · licenza · aggiorna (comandi, dalla radice del repository) · cambia (file del sito)
 #        · valido-fino · controllato · ricontrollare (data entro cui rifarlo) · nota
 # Le pagine web con orari e prezzi sono in src/data/fonti.yaml e src/data/fatti.yaml (la build avvisa da sola).
 
@@ -44,14 +44,16 @@
   nota: "Misura anche i tetti: lo script lo corregge (vedi commenti in costruisci.mjs)."
 
 - id: osm-mappa
-  cosa: "Disegno della mappa del sito (coste, strade, edifici)"
-  da-dove: "API di OpenStreetMap 0.6 (riquadri piccoli)"
-  formato: XML
+  cosa: "Disegno della mappa del sito (coste, strade, edifici) e strade a pezzi del compositore"
+  da-dove: "API di OpenStreetMap 0.6 (riquadri piccoli); Overpass API per le strade a pezzi"
+  formato: "XML per la base, JSON per le strade a pezzi"
   licenza: "ODbL: «© OpenStreetMap contributors»"
   aggiorna:
     - "node scripts/mappa/scarica.mjs <cartella>"
     - "node scripts/mappa/costruisci.mjs <cartella>"
-  cambia: [src/data/mappa.json]
+    - "node scripts/mappa/strade.mjs scarica <strade-osm.json>"
+    - "node scripts/mappa/strade.mjs <strade-osm.json>   (usa anche src/data/mappa.json)"
+  cambia: [src/data/mappa.json, src/data/strade.json]
   controllato: null         # non registrato: il file è nel repository dal 01/10/2026; la data dello scarico va scritta al prossimo rifacimento
   ricontrollare: 2027-04-30
 
