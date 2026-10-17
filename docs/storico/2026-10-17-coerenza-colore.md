@@ -1,22 +1,21 @@
-# Coerenza del blu del compositore · 17 ottobre 2026
+# Coerenza del blu scuro · 17 ottobre 2026
 
-Richiesta di Enrico: controllare e correggere il blu percepito come più violaceo sul telefono rispetto al computer. Base del lavoro `5b259b1`, sopra la PR #5; questo blocco rimane locale, senza push, merge o deploy.
+Enrico ha precisato che la differenza da correggere riguarda il **tema scuro**. La prima versione locale `180f0ae` aveva esteso l'allineamento anche al chiaro; questa revisione ne ripristina tutti i blocchi dalla base precedente `5b259b1`. Nessun push, merge o deploy.
 
-## Causa identificata nei file e correzione
+## Modifica finale
 
-Le viste C «Mappa» e D «Pagine» dichiaravano palette differenti: accento chiaro rispettivamente `#4B5DBE` e `#1F4FA0`, scuro `#8C9BEA` e `#8FB0F0`. La vista viene ricordata separatamente dal tema nella chiave `compositore-vista`; i valori della palette sono associati alla vista, non a una regola CSS che distingua telefono e computer. Non è stato verificato quale vista fosse aperta sui due dispositivi di Enrico: la differenza osservata nel codice spiega una possibile causa, non dimostra la configurazione dei suoi dispositivi.
+Solo gli accenti scuri di C Mappa sono allineati al blu già presente in D Pagine (`#8FB0F0`), comprese selezioni, focus, percorso e segni della mappa, pannelli, salvataggio, cammino, calendario e ora. La marcatura di tappa nuova ha una dichiarazione scura esplicita, così non eredita il pervinca chiaro. Il chiaro conserva la palette precedente: C pervinca e D blu. Non sono state verificate le viste aperte sui dispositivi di Enrico e non si attribuisce con certezza la sua osservazione a quelle impostazioni.
 
-Come riferimento si mantiene il blu già presente in D. Nei blocchi di C sono allineati accenti di azioni, selezione e focus, tracciato e segni della mappa, pannelli, salvataggio, cammino, calendario e selettore dell'ora. Sono 38 dichiarazioni in `src/styles/compositore.css` e tre in `src/styles/ore.css`. Restano i fondi, l'impaginazione, la distinzione tra le due viste e i colori del marchio. Nessun cambiamento a dati, calcoli, ID, URL, memoria locale, dipendenze o logica offline.
+File: `src/styles/compositore.css`, `src/styles/ore.css`, `test/colori-compositore.test.mjs`, DESIGN e PROGRESS. Nessuna modifica a dati, calcoli, ID, URL, memoria, logica offline o dipendenze. Fondi, geometrie e marchio conservati.
 
-## Prove reali e limiti
+## Verifiche della revisione
 
-- Prima della correzione, `test/colori-compositore.test.mjs` fallisce nei tre casi di coerenza della palette (chiaro, scuro esplicito, scuro automatico). Il contrasto principale passa già prima.
-- Dopo la correzione passano tutti i quattro casi. Sono controlli sui ruoli CSS dichiarati e sul rapporto numerico del contrasto tra accento e relativo testo (almeno 4,5:1), non una simulazione completa della cascata CSS o una verifica di ogni stato visivo.
-- Suite completa locale: **180/180 test superati**, zero falliti, 11,48 secondi.
-- Build locale riuscita con Node 24.21.0, telemetria disabilitata e `node --no-liftoff node_modules/astro/bin/astro.mjs build`: **12 pagine, 23,43 secondi**. Worker: **82 risorse**, circa 5.800 kB, versione `b2ec13ad68fd`.
-- **13 HTML, 811 link interni**, nessun link rotto. `git diff --check` senza errori.
-- **Nessun browser usato per questo blocco dopo la richiesta di Enrico di escluderlo.** Non eseguiti nuove immagini delle pagine, axe o Lighthouse; non dichiarare verificata visivamente la correzione né attribuirle i punteggi Lighthouse del blocco prestazioni precedente. La CI remota della PR rimane riferita al codice precedente, con 176 test.
+- Prima del ripristino il nuovo test di conservazione del chiaro falliva sull'accento `#1F4FA0` invece del precedente `#4B5DBE`.
+- Dopo la modifica passano i quattro controlli: coerenza scura esplicita/automatica, conservazione della palette chiara e contrasto dei comandi principali almeno 4,5:1. Sono controlli sui valori dichiarati, non una simulazione completa della cascata o una verifica di ogni stato.
+- Confronto di tutte le regole CSS con la base: **dieci blocchi scuri diversi, altri 1.421 blocchi identici**. Ogni differenza di dichiarazione riguarda il selettore di C scuro esplicito o automatico; chiaro e altri selettori invariati.
+- **180/180 test locali**, zero falliti; build di **12 pagine in 12,17 s** con Node 24.21.0, telemetria disabilitata e `node --no-liftoff node_modules/astro/bin/astro.mjs build`; **13 HTML e 811 link validi**. Worker: 82 risorse, circa 5.800 kB, versione `32735b9bd490`.
+- Nessun browser usato: mancano revisione visiva, nuove immagini, axe e Lighthouse. Non attribuire a questa correzione i punteggi del blocco prestazioni precedente. Anche il primo confronto di campioni in ricerca descrive la proposta iniziale, ora superata dalla precisazione.
 
-Prima di un'eventuale anteprima o rilascio resta la verifica visiva del risultato, in chiaro/scuro, sulle due viste e sulle larghezze previste; resta necessario il consenso di Enrico alla pubblicazione. Nessun nuovo pacchetto richiesto. Log e riproduzioni nella ricerca locale `ricerca/2026-10-16-analisi-progetto/colori-*`.
+Log `solo-scuro-prima.log`, `solo-scuro-test-finale.log`, `solo-scuro-build-finale.log` e `solo-scuro-link-finale.log` conservati nella ricerca locale. La prova precedente sui due temi resta nella storia del commit `180f0ae`. Prima di un'anteprima restano i controlli UI previsti; produzione richiede il consenso di Enrico.
 
-Riferimento per l'uso di colori per ruolo: [variabili CSS, MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties). Sono state usate le skill locali design-sito, frontend-design e modern-web-guidance; il relativo CLI non è stato installato, conservando il vincolo sulle nuove installazioni.
+Riferimento: [variabili CSS, MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Cascading_variables/Using_custom_properties). Skill locali design-sito, frontend-design e modern-web-guidance; CLI non installato, fonti ufficiali consultate e nessuna dipendenza aggiunta.

@@ -16,9 +16,14 @@ function palette(vista, tema) {
   return {...dichiarazioni(`html.p${vista} .cmp`), ...(tema === 'light' ? {} : dichiarazioni(`:root.p${vista}${tema === 'dark' ? '[data-theme="dark"]' : ':not([data-theme="light"])'} .cmp`))};
 }
 const ruoli = ['--acc', '--acc-chiaro', '--fuoco', '--sel', '--m-rotta', '--m-segno', '--f-acc', '--salva-fondo', '--nuova', '--t-cammino', '--t-acc', '--cal-fascia', '--ore-libero'];
-for (const tema of ['light', 'dark', 'auto-dark']) test(`colori: accenti blu coerenti fra Mappa e Pagine (${tema})`, () => {
+for (const tema of ['dark', 'auto-dark']) test(`colori: accenti blu coerenti fra Mappa e Pagine (${tema})`, () => {
   const c = palette('c', tema), d = palette('d', tema);
   for (const ruolo of ruoli) { assert.ok(d[ruolo], `Riferimento mancante: ${ruolo}`); assert.equal(c[ruolo], d[ruolo], ruolo); }
+});
+test('colori: il tema chiaro conserva la palette originale di Mappa', () => {
+  const attuali = palette('c', 'light');
+  const originali = {'--acc':'#4B5DBE','--acc-chiaro':'#E5E9FB','--fuoco':'#4B5DBE','--sel':'#D5DBFA','--m-rotta':'#4B5DBE','--m-segno':'#4B5DBE','--f-acc':'#4B5DBE','--salva-fondo':'#4B5DBE','--nuova':'#4B5DBE','--t-cammino':'#4B5DBE','--t-acc':'#AEB9F5','--cal-fascia':'#B5C0F0','--ore-libero':'#DCE2F9'};
+  for (const [ruolo, valore] of Object.entries(originali)) assert.equal(attuali[ruolo], valore, ruolo);
 });
 const luminanza = hex => hex.slice(1).match(/../g).map(x => parseInt(x, 16) / 255).map(x => x <= .04045 ? x / 12.92 : ((x + .055) / 1.055) ** 2.4).reduce((tot, x, i) => tot + x * [.2126, .7152, .0722][i], 0);
 test('colori: testo dei comandi principali con contrasto AA nei due temi', () => {

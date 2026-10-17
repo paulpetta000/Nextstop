@@ -212,16 +212,16 @@
 .cmp .m-segno::after { content: ""; position: absolute; inset: -7px; }
 .cmp .m-osm { position: absolute; right: 8px; bottom: 6px; padding: 2px 8px; border-radius: 6px; font-size: 11.5px; line-height: 1.5; background: color-mix(in srgb, var(--m-terra) 88%, transparent); color: var(--ink2); }
 /* =====================================================================================
-   C · MAPPA PRIMA (la mappa è la pagina; blu condiviso con D; Archivo largo)
+   C · MAPPA PRIMA (pervinca in chiaro; accenti blu condivisi con D in scuro; Archivo largo)
    ===================================================================================== */
 html.pc .cmp {
   --fondo: #E6E9F2; --sup: #FFFFFF; --sup2: #F0F2F8; --riga: #D7DBE7; --ink: #10173A; --ink2: #4B5376;
-  --acc: #1F4FA0; --su-acc: #FFFFFF; --acc-chiaro: #E6EDF8; --fuoco: #1F4FA0; --sel: #CFDDF5; --avviso: #FBEFD0; --su-avviso: #5E4300;
+  --acc: #4B5DBE; --su-acc: #FFFFFF; --acc-chiaro: #E5E9FB; --fuoco: #4B5DBE; --sel: #D5DBFA; --avviso: #FBEFD0; --su-avviso: #5E4300;
   --pin-c: #3F51B5; --pin-buco: #FFFFFF;
   --m-terra: #E8EAF0; --m-mare: #B9CBEA; --m-parco: #CFE0CB; --m-strada: #FFFFFF; --m-strada-c: #C3CAD9; --m-vicolo: #CDD2DE; --m-pedonale: #F4F1EA; --m-scala: #A3ABC0; --m-nome: #5B637F;
-  --m-casing: #FFFFFF; --m-rotta: #1F4FA0; --m-segno: #1F4FA0; --m-su-segno: #FFFFFF; --m-segno-attivo: #10173A; --m-su-attivo: #FFFFFF; --m-anello: #FFFFFF;
-  --f-sup: #FFFFFF; --f-sup2: #F0F2F8; --f-acc: #1F4FA0; --f-su-acc: #FFFFFF; --f-riga: #D7DBE7; --f-raggio: 28px; --f-titolo: "Archivo", system-ui, sans-serif;
-  --t-fondo: #10173A; --t-testo: #FFFFFF; --t-acc: #A9C3F2; --sopra-barra: 24px; --salva-fondo: #1F4FA0; --salva-testo: #FFFFFF; --nuova: #1F4FA0;
+  --m-casing: #FFFFFF; --m-rotta: #4B5DBE; --m-segno: #4B5DBE; --m-su-segno: #FFFFFF; --m-segno-attivo: #10173A; --m-su-attivo: #FFFFFF; --m-anello: #FFFFFF;
+  --f-sup: #FFFFFF; --f-sup2: #F0F2F8; --f-acc: #4B5DBE; --f-su-acc: #FFFFFF; --f-riga: #D7DBE7; --f-raggio: 28px; --f-titolo: "Archivo", system-ui, sans-serif;
+  --t-fondo: #10173A; --t-testo: #FFFFFF; --t-acc: #AEB9F5; --sopra-barra: 24px; --salva-fondo: #4B5DBE; --salva-testo: #FFFFFF; --nuova: #4B5DBE;
   color-scheme: light;
 }
 @media (prefers-color-scheme: dark) {
@@ -231,7 +231,7 @@ html.pc .cmp {
   --m-terra: #0D1330; --m-mare: #050820; --m-parco: #0E2229; --m-strada: #2A3474; --m-strada-c: #0A0F27; --m-vicolo: #1F2759; --m-pedonale: #1A2150; --m-scala: #3A4589; --m-nome: #8E97C8;
   --m-casing: #0A0F27; --m-rotta: #8FB0F0; --m-segno: #8FB0F0; --m-su-segno: #0A0F27; --m-segno-attivo: #FFFFFF; --m-su-attivo: #0A0F27; --m-anello: #0A0F27;
   --f-sup: #131A3B; --f-sup2: #1B2350; --f-acc: #8FB0F0; --f-su-acc: #0A0F27; --f-riga: #27306A;
-  --t-fondo: #EEF0FA; --t-testo: #0A0F27; --t-acc: #1F4FA0; --salva-fondo: #8FB0F0; --salva-testo: #0A0F27; color-scheme: dark; }
+  --nuova: #1F4FA0; --t-fondo: #EEF0FA; --t-testo: #0A0F27; --t-acc: #1F4FA0; --salva-fondo: #8FB0F0; --salva-testo: #0A0F27; color-scheme: dark; }
 }
 :root.pc[data-theme="dark"] .cmp {
   --fondo: #0A0F27; --sup: #131A3B; --sup2: #1B2350; --riga: #27306A; --ink: #EEF0FA; --ink2: #A8AFD3;
@@ -239,7 +239,7 @@ html.pc .cmp {
   --m-terra: #0D1330; --m-mare: #050820; --m-parco: #0E2229; --m-strada: #2A3474; --m-strada-c: #0A0F27; --m-vicolo: #1F2759; --m-pedonale: #1A2150; --m-scala: #3A4589; --m-nome: #8E97C8;
   --m-casing: #0A0F27; --m-rotta: #8FB0F0; --m-segno: #8FB0F0; --m-su-segno: #0A0F27; --m-segno-attivo: #FFFFFF; --m-su-attivo: #0A0F27; --m-anello: #0A0F27;
   --f-sup: #131A3B; --f-sup2: #1B2350; --f-acc: #8FB0F0; --f-su-acc: #0A0F27; --f-riga: #27306A;
-  --t-fondo: #EEF0FA; --t-testo: #0A0F27; --t-acc: #1F4FA0; --salva-fondo: #8FB0F0; --salva-testo: #0A0F27; color-scheme: dark; }
+  --nuova: #1F4FA0; --t-fondo: #EEF0FA; --t-testo: #0A0F27; --t-acc: #1F4FA0; --salva-fondo: #8FB0F0; --salva-testo: #0A0F27; color-scheme: dark; }
 html.pc .cmp .m-svg .m-l { stroke-width: 5px; }
 html.pc .cmp .m-svg .m-c { stroke-width: 10px; }
 /* il segnaposto del marchio, con il numero */
@@ -719,7 +719,7 @@ html.pc .cmp .c-giu__mappa { display: none !important; }
 html.pc.c-giu-su .cmp { --sopra-barra: 24px; }
 }
 /* ---------- Il tempo del giorno: la giornata in fila (visite, cammino, pause, margine) e quanto resta ---------- */
-html.pc .cmp { --t-visita: #10173A; --t-cammino: #1F4FA0; --t-pausa: #23866A; --t-margine: #4B5376; --t-pista: #E9ECF5; --t-sep: var(--sup); }
+html.pc .cmp { --t-visita: #10173A; --t-cammino: #4B5DBE; --t-pausa: #23866A; --t-margine: #4B5376; --t-pista: #E9ECF5; --t-sep: var(--sup); }
 html.pd .cmp { --t-visita: #1B1A17; --t-cammino: #1F4FA0; --t-pausa: #B4552A; --t-margine: #5F5A50; --t-pista: #EEEAE2; --t-sep: var(--carta); }
 :root.pc[data-theme="dark"] .cmp { --t-visita: #EEF0FA; --t-cammino: #8FB0F0; --t-pausa: #6FD0A8; --t-margine: #A8AFD3; --t-pista: #1B2350; }
 :root.pd[data-theme="dark"] .cmp { --t-visita: #F2EEE6; --t-cammino: #8FB0F0; --t-pausa: #F0A070; --t-margine: #B6AEA1; --t-pista: #2A2723; }
@@ -1271,7 +1271,7 @@ html.pd .cmp .consiglio--d { margin-top: 18px; padding: 16px; border-radius: 4px
 html.pd .cmp .consiglio__t { font: italic 500 21px/1.15 "Bodoni Moda", Georgia, serif; color: var(--acc); }
 html.pd .cmp .consiglio__no { color: var(--acc); box-shadow: inset 0 0 0 1.5px var(--acc); }
 /* la barra del tempo in tema chiaro: niente blu notte né nero (Enrico); le visite in un colore chiaro, il cammino più deciso */
-html.pc .cmp { --t-visita: #A9C0E8; --t-cammino: #1F4FA0; --t-pausa: #3BAA86; --t-margine: #8A91AD; --t-pista: #E9ECF5; }
+html.pc .cmp { --t-visita: #9AA7EE; --t-cammino: #4B5DBE; --t-pausa: #3BAA86; --t-margine: #8A91AD; --t-pista: #E9ECF5; }
 html.pd .cmp { --t-visita: #A9C0E8; --t-cammino: #1F4FA0; --t-pausa: #D07A4E; --t-margine: #A39C8E; --t-pista: #EEEAE2; }
 :root.pc[data-theme="dark"] .cmp { --t-visita: #EEF0FA; --t-cammino: #8FB0F0; --t-pausa: #6FD0A8; --t-margine: #A8AFD3; --t-pista: #1B2350; }
 :root.pd[data-theme="dark"] .cmp { --t-visita: #F2EEE6; --t-cammino: #8FB0F0; --t-pausa: #F0A070; --t-margine: #B6AEA1; --t-pista: #2A2723; }
@@ -1685,7 +1685,7 @@ html.pd .cmp .nome-it__b .ic { margin-bottom: .2em; }
 /* ---------- Il calendario «Tutti i mesi» (specifiche/compositore-rifiniture-2.md, scelta di Enrico del 15/10/2026) ----------
    Foglio intero sopra «Data e orari»; i giorni del viaggio su una fascia (più visibile di quella della prova), il giorno scelto
    pieno; il punto giallo dove, partendo lì, qualcosa è chiuso. */
-html.pc .cmp { --cal-fascia: #BACCEC; --cal-punto: #B07800; }
+html.pc .cmp { --cal-fascia: #B5C0F0; --cal-punto: #B07800; }
 html.pd .cmp { --cal-fascia: #BACCEC; --cal-punto: #B07800; }
 @media (prefers-color-scheme: dark) {
 :root.pc:not([data-theme="light"]) .cmp { --cal-fascia: #2C3E66; --cal-punto: #F0BE3E; }

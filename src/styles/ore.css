@@ -1,7 +1,7 @@
 /* La scelta dell'ora «Tutte le ore» del compositore (specifiche/compositore-rifiniture-2.md, scelta di Enrico del 16/10/2026, proposta
    2 del giro 2 in design/compositore/rifiniture-2/ora-giro-2/). Arriva con compositore/ore.js al primo tocco su un campo dell'ora;
    fascia e punto sono quelli del calendario (--cal-fascia, --cal-punto, in compositore.css). */
-html.pc .cmp { --ore-libero: #DFE8F6; --ore-tufo: #E0A51B; }
+html.pc .cmp { --ore-libero: #DCE2F9; --ore-tufo: #E0A51B; }
 html.pd .cmp { --ore-libero: #DFE8F6; --ore-tufo: #E0A51B; }
 @media (prefers-color-scheme: dark) {
 :root.pc:not([data-theme="light"]) .cmp { --ore-libero: #222C40; --ore-tufo: #F0BE3E; }
