@@ -60,32 +60,47 @@ export function leggiRiepilogo(): Riepilogo | null {
 }
 
 // True soltanto dopo una scrittura riuscita. Senza spazio per la copia, l'originale resta intatto.
-export function scrivi(a: Archivio): boolean {
+export type EsitoSalvataggio = 'salvato' | 'errore' | 'conflitto';
+function scriviControllato(a: Archivio, atteso?: string | null): EsitoSalvataggio {
   try {
-    const raw = localStorage.getItem(CHIAVE), x = decifra(raw);
-    if (x.stato === 'versione-ignota') return false;
+    const raw = localStorage.getItem(CHIAVE);
+    if (atteso !== undefined && raw !== atteso) return 'conflitto';
+    const x = decifra(raw);
+    if (x.stato === 'versione-ignota') return 'errore';
     if (x.stato === 'danneggiato' && raw !== null) {
       const copia = localStorage.getItem(COPIA);
       if (copia === null) localStorage.setItem(COPIA, raw);
-      else if (copia !== raw) return false;
+      else if (copia !== raw) return 'errore';
     }
     localStorage.setItem(CHIAVE, JSON.stringify({ v: 1, ...a }));
-    return true;
-  } catch { return false; }
+    return 'salvato';
+  } catch { return 'errore'; }
+}
+export const scrivi = (a: Archivio): boolean => scriviControllato(a) === 'salvato';
+
+export function testoErroreSalvataggio(esito: EsitoSalvataggio): string {
+  if (esito === 'salvato') return '';
+  if (esito === 'conflitto') return 'Gli itinerari sono cambiati in un’altra scheda. Questa modifica resta qui: usa «Condividi» prima di ricaricare la pagina.';
+  return 'Questo browser non salva i dati: l’itinerario resta finché la pagina è aperta. Per tenerlo, mandalo con «Condividi».';
+}
+export function presentaSalvataggio(salvato: boolean, esito: EsitoSalvataggio) {
+  const errore = esito !== 'salvato', fatto = salvato && !errore;
+  return { fatto, tipo: fatto ? 'salvato' : 'bozza', testo: errore ? 'Modifiche non salvate' : fatto ? 'Salvato in «I miei itinerari»' : 'Non ancora salvato' };
 }
 
-// Limitare gli avvisi ripetuti non cambia mai l'esito reale del salvataggio.
+// Rifiuta una copia obsoleta; il controllo non rende atomiche le scritture di due processi.
 export function creaSalvataggio() {
-  let avvisato = false;
-  return (a: Archivio, avvisa?: (testo: string) => void): boolean => {
-    const ok = scrivi(a);
-    if (ok) avvisato = false;
-    else if (avvisa && !avvisato) {
-      avvisato = true;
-      avvisa('Questo browser non salva i dati: l\'itinerario resta finché la pagina è aperta. Per tenerlo, mandalo con «Condividi».');
-    }
+  let avvisato = false, riferimento: string | null | undefined;
+  let esito: EsitoSalvataggio = 'salvato';
+  try { riferimento = localStorage.getItem(CHIAVE); } catch { /* accesso non disponibile */ }
+  const salva = (a: Archivio, avvisa?: (testo: string) => void): boolean => {
+    esito = riferimento === undefined ? 'errore' : scriviControllato(a, riferimento);
+    const ok = esito === 'salvato';
+    if (ok) { riferimento = JSON.stringify({ v: 1, ...a }); avvisato = false; }
+    else if (avvisa && !avvisato) { avvisato = true; avvisa(testoErroreSalvataggio(esito)); }
     return ok;
   };
+  return Object.assign(salva, { stato: () => esito });
 }
 
 // Un altro tab ha cambiato gli itinerari.

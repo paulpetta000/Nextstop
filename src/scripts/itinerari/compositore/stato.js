@@ -6,7 +6,7 @@ import { calcolaGiorno, ordinePiuCorto, tappaDi, dataDelGiorno } from '../../../
 import { conPause } from '../../../lib/itinerari/pause';
 import { nuovoItinerario, uguali, codifica } from '../../../lib/itinerari/link';
 import { giornoSettimana, piuGiorni, dataLunga } from '../../../lib/itinerari/date';
-import { leggi, creaSalvataggio } from '../memoria';
+import { leggi, creaSalvataggio, testoErroreSalvataggio, presentaSalvataggio } from '../memoria';
 import { oggi, oraDiAdesso } from './base.js';
 import { creaCaricaJson, applicaSchede } from '../caricamento.mjs';
 
@@ -47,7 +47,7 @@ export const nelViaggio = id => giornoDi(id) >= 0;
 export const visitata = id => X().giorni.some(G => G.fatte?.includes(id));
 export const puoiSegnare = () => salvato();
 export const vuotoTutto = (x = X()) => x.giorni.every(g => !g.gita && !g.tappe.length);
-export function sostituisciArchivio(nuovoA) { A = nuovoA; memo.clear(); }
+export function sostituisciArchivio(nuovoA) { A = nuovoA; salvaArchivio = creaSalvataggio(); memo.clear(); }
 
 // le bozze aperte in questa visita, com'erano all'apertura: se le lasci così (o vuote) spariscono quando passi a un altro itinerario
 const bozze = new Map();
@@ -76,8 +76,10 @@ export const gia = x => A.elenco.find(i => uguali(i, x));
 export { nuovoItinerario };
 
 // salvare: true se il browser lo permette (in navigazione privata o con la memoria piena no)
-const salvaArchivio = creaSalvataggio();
+let salvaArchivio = creaSalvataggio();
 export function scriviArchivio(avvisa) { return salvaArchivio(A, avvisa); }
+export const erroreSalvataggio = () => testoErroreSalvataggio(salvaArchivio.stato());
+export const statoSalvataggio = () => presentaSalvataggio(salvato(), salvaArchivio.stato());
 // una modifica all'itinerario aperto: «visitata» vale solo per le tappe ancora nel giorno; i timbri per le tappe visitate
 export function dopoModifica() {
   const x = X();

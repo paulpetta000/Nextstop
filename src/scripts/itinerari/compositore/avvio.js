@@ -3,7 +3,7 @@
 // carica i dati che arrivano dopo e, il giorno stesso, ricalcola dal vivo ogni mezzo minuto.
 import { $, ascoltaFirme, maiuscola } from './base.js';
 import { attendiStile } from '../stile.mjs';
-import { C, A, X, PRONTI, T, caricaSchede, quandoLibero, nuovo, apri, nomeLibero, ricordaBozza, gia, scriviArchivio, sostituisciArchivio, caricaDopo, VIVO, oggiNelGiorno, posizioneAttiva, adessoPer, statoPosizione, nG } from './stato.js';
+import { C, A, X, PRONTI, T, caricaSchede, quandoLibero, nuovo, apri, nomeLibero, ricordaBozza, gia, scriviArchivio, sostituisciArchivio, caricaDopo, VIVO, oggiNelGiorno, posizioneAttiva, adessoPer, statoPosizione, nG, erroreSalvataggio } from './stato.js';
 import { decodifica } from '../../../lib/itinerari/link';
 import { leggi, quandoCambia, giornoSicuro, allineaArchivio } from '../memoria';
 import { S, vistaSalvata, preparaFoglio, preparaAvviso, avvisa, annuncia } from './comuni.js';
@@ -58,7 +58,7 @@ function avvia() {
   // ---------- un altro tab ha cambiato gli itinerari ----------
   quandoCambia(() => {
     const n = leggi(C);
-    if (n && !schedaAperta() && !$('#foglio').open) {
+    if (n && !schedaAperta() && !$('#foglio').open && !erroreSalvataggio()) {
       const cambio = allineaArchivio(A, n, S.g);
       sostituisciArchivio(cambio.archivio); S.g = cambio.giorno; disegna();
     }

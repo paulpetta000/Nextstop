@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import { preparaSpostamento } from '../src/lib/itinerari/spostamenti.ts';
 import { prontoNelGiorno } from '../src/lib/itinerari/pronti.ts';
 import { codifica, decodifica } from '../src/lib/itinerari/link.ts';
-import { creaSalvataggio, leggi, leggiRiepilogo, scrivi } from '../src/scripts/itinerari/memoria.ts';
+import { creaSalvataggio, leggi, leggiRiepilogo, scrivi, presentaSalvataggio, testoErroreSalvataggio } from '../src/scripts/itinerari/memoria.ts';
 
 const CHIAVE = 'itinerari-v1', COPIA = 'itinerari-v1-recupero';
 const C = { tappe: [{ id: 'duomo', tipo: 'citta' }] };
@@ -168,4 +168,61 @@ test('conservazione: spostamento e pronto attraversano salvataggio e rilettura s
   assert.ok(condiviso.giorni.every(g => !g.fatte && !g.noPasti));
   assert.deepEqual(x, originale);
   assert.equal(dati.has(COPIA), false);
+});
+
+test('concorrenza: una copia obsoleta non sovrascrive la modifica salvata da un’altra sessione', t => {
+  const dati=memoria(t); scrivi(archivio());
+  const a=leggi(C), b=leggi(C), salvaA=creaSalvataggio(), salvaB=creaSalvataggio();
+  b.elenco[0].nome='Nome cambiato in B'; assert.equal(salvaB(b),true);
+  const salvato=dati.get(CHIAVE);
+  a.elenco[0].nome='Modifica locale A';
+  assert.equal(salvaA(a),false);
+  assert.equal(dati.get(CHIAVE),salvato);
+  assert.equal(a.elenco[0].nome,'Modifica locale A','La copia locale resta disponibile per Condividi');
+});
+
+test('concorrenza: non cancella nuovi itinerari aggiunti da un’altra sessione', t => {
+  const dati=memoria(t); scrivi(archivio());
+  const a=leggi(C), salvaA=creaSalvataggio();
+  const b=leggi(C); b.elenco.push(valido('nuovo000')); scrivi(b);
+  const salvato=dati.get(CHIAVE); a.elenco[0].nome='Copia vecchia';
+  assert.equal(salvaA(a),false); assert.equal(dati.get(CHIAVE),salvato);
+});
+
+test('concorrenza: non ripristina un archivio eliminato da un’altra sessione', t => {
+  const dati=memoria(t); scrivi(archivio());
+  const a=leggi(C), salvaA=creaSalvataggio(); dati.delete(CHIAVE);
+  assert.equal(salvaA(a),false); assert.equal(dati.has(CHIAVE),false);
+});
+
+test('concorrenza: scritture successive della stessa sessione e nuova lettura accettata restano valide', t => {
+  memoria(t); scrivi(archivio()); const a=leggi(C), salva=creaSalvataggio();
+  for(const nome of ['Prima','Seconda']) { a.elenco[0].nome=nome; assert.equal(salva(a),true); }
+  const b=leggi(C); b.elenco[0].nome='Altra sessione'; scrivi(b);
+  const ricevuto=leggi(C), nuovoSalva=creaSalvataggio(); ricevuto.elenco[0].nome='Dopo riallineamento';
+  assert.equal(nuovoSalva(ricevuto),true); assert.equal(leggi(C).elenco[0].nome,'Dopo riallineamento');
+});
+
+test('stato: un itinerario già salvato non dichiara salvate modifiche rifiutate e può recuperare', t => {
+  const dati=memoria(t); scrivi(archivio()); const salva=creaSalvataggio(), a=leggi(C), avvisi=[];
+  const set=localStorage.setItem;
+  t.mock.method(localStorage,'setItem',()=>{throw Error('Quota');});
+  assert.equal(salva(a, x=>avvisi.push(x)),false);
+  assert.deepEqual(presentaSalvataggio(true,salva.stato()),{fatto:false,tipo:'bozza',testo:'Modifiche non salvate'});
+  assert.match(avvisi[0],/Condividi/);
+  t.mock.method(localStorage,'setItem',(k,v)=>set(k,v));
+  assert.equal(salva(a),true);
+  assert.equal(presentaSalvataggio(true,salva.stato()).fatto,true);
+  assert.equal(testoErroreSalvataggio(salva.stato()),'');
+});
+
+test('stato: il conflitto resta visibile e la modifica locale può essere condivisa', t => {
+  const dati=memoria(t); scrivi(archivio()); const a=leggi(C), salva=creaSalvataggio();
+  const b=leggi(C); b.elenco[0].nome='Altro'; scrivi(b); a.elenco[0].nome='Locale';
+  assert.equal(salva(a),false); assert.equal(salva.stato(),'conflitto');
+  assert.match(testoErroreSalvataggio(salva.stato()),/altra scheda/);
+  assert.match(testoErroreSalvataggio(salva.stato()),/Condividi/);
+  assert.equal(presentaSalvataggio(true,salva.stato()).fatto,false);
+  assert.equal(decodifica(C,'#'+codifica(a.elenco[0])).it.nome,'Locale');
+  assert.equal(leggi(C).elenco[0].nome,'Altro');
 });
