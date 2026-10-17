@@ -90,3 +90,13 @@ export function creaSalvataggio() {
 
 // Un altro tab ha cambiato gli itinerari.
 export const quandoCambia = (fn: () => void) => addEventListener('storage', e => { if (e.key === CHIAVE) fn(); });
+
+// Normalizzazione e scelta del giorno dopo aver ricevuto un archivio da un'altra scheda.
+export function giornoSicuro(valore: unknown, quanti: number) {
+  const n = typeof valore === 'number' || typeof valore === 'string' ? Number(valore) : 0;
+  return Number.isInteger(n) ? Math.max(0, Math.min(n, quanti - 1)) : 0;
+}
+export function allineaArchivio(attuale: Archivio, nuovo: Archivio, giorno: number) {
+  const attivo = nuovo.elenco.find(i => i.id === attuale.attivo) ?? nuovo.elenco[0];
+  return { archivio: { ...nuovo, attivo: attivo.id }, giorno: giornoSicuro(giorno, attivo.giorni.length) };
+}

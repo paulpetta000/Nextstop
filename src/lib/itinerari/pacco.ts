@@ -15,16 +15,32 @@ export interface Pacco {
 // Gli scenari dei mezzi (sabato, domenica, festivi) arrivano dopo, da /napoli/itinerari/scenari.json:
 // finché non ci sono, valgono i tempi del feriale (aggiungiScenari li sostituisce).
 export interface PaccoScenari { dizionario: string[]; diff: Record<string, number[]> }
+const numeroValido = (x: unknown): x is number => typeof x === 'number' && Number.isFinite(x) && x >= 0;
+const indiceValido = (x: number, n: number) => Number.isSafeInteger(x) && x >= 0 && x < n;
+function validaDizionario(d: string[]) {
+  if (!Array.isArray(d) || d.some(x => typeof x !== 'string')) throw new Error('Dizionario dei mezzi incompleto');
+}
 export function aggiungiScenari(C: Citta, P: PaccoScenari) {
+  validaDizionario(P.dizionario);
+  if (!P.diff || typeof P.diff !== 'object' || Array.isArray(P.diff)) throw new Error('Scenari incompleti');
+  // Le matrici diventano disponibili insieme: un pacco rotto non lascia mezza città aggiornata.
+  const tempi = { ...C.tempi, min: { ...C.tempi.min }, metri: { ...C.tempi.metri }, mezzi: { ...C.tempi.mezzi } };
   for (const s of SCENARI) {
     const p = PRIMA[s];
-    if (!p || !P.diff[s]) continue;
-    const m = C.tempi.min[p].slice(), w = C.tempi.metri[p].slice(), z = C.tempi.mezzi[p].slice();
-    const d = P.diff[s] ?? [];
+    if (!p || P.diff[s] === undefined) continue;
+    const d = P.diff[s];
+    if (!Array.isArray(d) || d.length % 4) throw new Error('Scenario incompleto');
+    const m = tempi.min[p].slice(), w = tempi.metri[p].slice(), z = tempi.mezzi[p].slice();
     let ij = 0;
-    for (let k = 0; k < d.length; k += 4) { ij += d[k]; m[ij] = d[k + 1]; w[ij] = d[k + 2] * 10; z[ij] = P.dizionario[d[k + 3]]; }
-    C.tempi.min[s] = m; C.tempi.metri[s] = w; C.tempi.mezzi[s] = z;
+    for (let k = 0; k < d.length; k += 4) {
+      if (!Number.isSafeInteger(d[k]) || d[k] < 0) throw new Error('Indice dello scenario non valido');
+      ij += d[k];
+      if (!indiceValido(ij, C.tempi.n * C.tempi.n) || !numeroValido(d[k + 1]) || !numeroValido(d[k + 2]) || !indiceValido(d[k + 3], P.dizionario.length)) throw new Error('Dati dello scenario non validi');
+      m[ij] = d[k + 1]; w[ij] = d[k + 2] * 10; z[ij] = P.dizionario[d[k + 3]];
+    }
+    tempi.min[s] = m; tempi.metri[s] = w; tempi.mezzi[s] = z;
   }
+  C.tempi = tempi;
 }
 
 // Il pacco iniziale contiene il feriale e le differenze per andare solo a piedi.
@@ -46,7 +62,11 @@ export function impacchetta(C: Citta): Pacco {
 }
 export function spacchetta(P: Pacco): Citta {
   if (!Array.isArray(P.piedi)) throw new Error('Tempi a piedi mancanti');
+  validaDizionario(P.dizionario);
   const nn = P.n * P.n;
+  if (!Number.isSafeInteger(P.n) || P.n < 1 || !Number.isSafeInteger(nn)) throw new Error('Dimensione dei tempi non valida');
+  if (!P.feriale || !(['min', 'metri', 'mezzi'] as const).every(k => Array.isArray(P.feriale[k]) && P.feriale[k].length === nn)) throw new Error('Tempi incompleti');
+  if (!P.feriale.min.every(numeroValido) || !P.feriale.metri.every(numeroValido) || !P.feriale.mezzi.every(i => indiceValido(i, P.dizionario.length))) throw new Error('Tempi non validi');
   const min = {} as Record<Scenario, number[]>, metri = {} as Record<Scenario, number[]>, mezzi = {} as Record<Scenario, string[]>;
   for (const s of SCENARI) {
     const m = P.feriale.min.slice(), w = P.feriale.metri.map(x => x * 10), z = P.feriale.mezzi.map(i => P.dizionario[i]);
@@ -79,7 +99,14 @@ export function spacchettaVivo(P: PaccoVivo): Vivo {
   }
   for (const [s, v] of Object.entries(P.bus)) {
     const m = new Map<number, number[]>();
-    for (let k = 0; k < v.length;) { const n = v[k + 1]; m.set(v[k], v.slice(k + 2, k + 2 + n)); k += 2 + n; }
+    if (!Array.isArray(v)) throw new Error('Indice bus incompleto');
+    for (let k = 0; k < v.length;) {
+      const n = v[k + 1];
+      if (!Number.isSafeInteger(v[k]) || v[k] < 0 || !Number.isSafeInteger(n) || n < 0 || k + 2 + n > v.length) throw new Error('Indice bus non valido');
+      const candidati = v.slice(k + 2, k + 2 + n);
+      if (!candidati.every(i => indiceValido(i, P.candidati.length))) throw new Error('Candidato bus non valido');
+      m.set(v[k], candidati); k += 2 + n;
+    }
     bus[s as Scenario] = m;
   }
   return {

@@ -5,7 +5,7 @@ import { $, ascoltaFirme, maiuscola } from './base.js';
 import { attendiStile } from '../stile.mjs';
 import { C, A, X, PRONTI, T, caricaSchede, quandoLibero, nuovo, apri, nomeLibero, ricordaBozza, gia, scriviArchivio, sostituisciArchivio, caricaDopo, VIVO, oggiNelGiorno, posizioneAttiva, adessoPer, statoPosizione, nG } from './stato.js';
 import { decodifica } from '../../../lib/itinerari/link';
-import { leggi, quandoCambia } from '../memoria';
+import { leggi, quandoCambia, giornoSicuro, allineaArchivio } from '../memoria';
 import { S, vistaSalvata, preparaFoglio, preparaAvviso, avvisa, annuncia } from './comuni.js';
 import { disegna, preparaViste, preparaMenu, aggiorna, aggiungi } from './viste.js';
 import { preparaScheda, schedaAperta } from './scheda.js';
@@ -50,13 +50,19 @@ function avvia() {
   const richiesta = new URLSearchParams(W.daAggiungere ?? '');
   const da = richiesta.get('aggiungi');
   if (da && T(da)?.tipo === 'citta') {
-    S.g = Math.min(Math.max(0, Number(richiesta.get('g')) || 0), nG() - 1);
+    S.g = giornoSicuro(richiesta.get('g'), nG());
     if (X().giorni[S.g].tappe.includes(da)) avvisaDopo(`${maiuscola(T(da).breve)} è già nel giorno ${S.g + 1}.`);
     else { disegna(); aggiungi(S.g, da); }
   }
 
   // ---------- un altro tab ha cambiato gli itinerari ----------
-  quandoCambia(() => { const n = leggi(C); if (n && !schedaAperta() && !$('#foglio').open) { sostituisciArchivio({ ...n, attivo: A.attivo }); if (!A.elenco.some(i => i.id === A.attivo)) A.attivo = A.elenco[0].id; disegna(); } });
+  quandoCambia(() => {
+    const n = leggi(C);
+    if (n && !schedaAperta() && !$('#foglio').open) {
+      const cambio = allineaArchivio(A, n, S.g);
+      sostituisciArchivio(cambio.archivio); S.g = cambio.giorno; disegna();
+    }
+  });
 
   // ---------- dopo l'apertura: scenari e orari veri dei bus (restano salvati per l'uso senza rete) ----------
   const ridisegna = () => { if (lista()) return; if (occupato()) setTimeout(ridisegna, 5000); else aggiorna(() => {}); };

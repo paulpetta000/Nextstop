@@ -2,7 +2,13 @@
 
 _Aggiornato il 17/10/2026. Ramo `codex/satori-fflate`: blocchi precedenti nella PR #5 in bozza; nuovi blocchi colore e revisione del codice soltanto locali, sopra `5b259b1`. Nessun merge o rilascio in produzione._
 
-## Revisione del codice · gruppo di tre parti concluso
+## Revisione del codice · dati, recupero e offline conclusi
+
+Enrico chiede sessioni di revisione di almeno quindici minuti, salvo stop, con più parti collegate. Corretti pacchi incompleti e ciclo bloccante nei bus; scenari applicati insieme; nuovi tentativi dopo errori HTTP e schede preparate integralmente; ripiego su copia salvata per 5xx e rete disponibile anche con errori della cache. Estesa la revisione a indici del giorno nei link e archivi ricevuti da altre schede. **213/213 test, build di 12 pagine e 811 link validi**; decoder compatibili sui dati pubblici reali (87 punti, sei scenari, 8.793 candidati bus). [Prove e limiti](docs/storico/2026-10-17-revisione-codice-3.md). Nessun browser, dipendenza nuova, push, merge o deploy.
+
+**Rischio aperto prima del rilascio:** riprodotta con memoria finta la sovrascrittura di una modifica quando si salva un archivio letto prima di una modifica esterna. Non risolto dalla correzione dell'indice. Prossimo gruppo: conflitti tra schede, avvisi di mancato salvataggio e recupero del lavoro locale. Prova reale Claude sempre dopo main/pubblicazione, separata; nessun lavoro sul campo o con altre persone.
+
+## Revisione precedente · trasferimenti, pronti e conservazione
 
 Su richiesta di Enrico, si lavora per gruppi di due o tre parti collegate. Conclusi insieme **trasferimenti tra giorni, inserimento dei pronti e conservazione tramite salvataggio/rilettura/condivisione**. Corretti origine e limite giorni nel ramo interno delle gite, ordine e cronologia delle visite trasferite, numero del giorno nel riepilogo dei pronti. Difetti riprodotti prima; sette nuovi test, **191/191 test, build di 12 pagine e 811 link validi**, un solo ciclo finale comune. [Prove, raggiungibilità e limiti](docs/storico/2026-10-17-revisione-codice-2.md). Due moduli puri modificati; nessuna modifica a formato memoria, dati, temi o dipendenze. Nessun browser, push, merge o deploy.
 
@@ -44,4 +50,4 @@ Resta pendente il pezzo 3 delle rifiniture grafiche (barra «Salvato» e menu); 
 
 I blocchi precedenti sono stati pubblicati nella PR con autorizzazione. Il nuovo allineamento del blu resta locale; questo blocco non comprende un nuovo push o deploy. Main e produzione non sono stati modificati; nessuna modifica alle protezioni GitHub/Vercel. Main risultava senza protezione nel controllo precedente. L'override fflate va riesaminato al prossimo aggiornamento dei consumatori; il caso generico cache max-stale/cookie resta aperto, senza esposizione individuata nel percorso statico di Nextstop. Controllo completo dei tipi e organizzazione mirata degli archivi restano lavori separati.
 
-**Cosa fare adesso:** 1. Proseguire con il gruppo dati differiti/errori/offline dopo OK di fine gruppo. 2. Continuare le altre aree del piano unico da computer, sempre raggruppando due o tre parti collegate. 3. Rivedere anteprima e controlli UI prima di proporre merge e produzione, rispettando il browser escluso. Prova reale Claude soltanto dopo il rilascio e con mandato separato. Strumenti locali già presenti; GitHub/Vercel per il rilascio. Nessuna nuova installazione.
+**Cosa fare adesso:** 1. Affrontare insieme conflitti tra schede, avvisi di mancato salvataggio e recupero, con prove isolate prima delle correzioni. 2. Continuare il piano unico da computer, raggruppando più parti; minimo quindici minuti per queste sessioni di revisione salvo stop. 3. Completare i controlli UI prima di proporre il rilascio, rispettando il browser escluso. Prova reale Claude soltanto dopo il rilascio e con mandato separato. Strumenti locali presenti; GitHub/Vercel per un rilascio autorizzato. Nessuna nuova installazione.

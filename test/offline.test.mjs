@@ -92,3 +92,40 @@ test('cache piena: una risposta valida della rete resta disponibile anche se non
     await Promise.all(r.waits);
   }
 });
+
+test('navigazione: un errore temporaneo del server usa la pagina già salvata', async () => {
+  const a = ambiente(async () => new Response('Server non disponibile', { status: 503 }));
+  await a.put('pagine-prova', '/napoli/', 'PAGINA SALVATA');
+  const r = await a.request('/napoli/', 'navigate');
+  assert.equal(r.response.status, 200);
+  assert.equal(await r.response.text(), 'PAGINA SALVATA');
+  assert.equal(await (await (await a.caches.open('pagine-prova')).match('/napoli/')).text(), 'PAGINA SALVATA');
+});
+
+test('navigazione: un vero 404 resta 404 e un 503 senza copia resta un errore del server', async () => {
+  for (const status of [404, 503]) {
+    const a = ambiente(async () => new Response('ERRORE', { status }));
+    if (status === 404) await a.put('pagine-prova', '/napoli/', 'VECCHIA PAGINA');
+    const r = await a.request('/napoli/', 'navigate');
+    assert.equal(r.response.status, status);
+    assert.equal(await r.response.text(), 'ERRORE');
+  }
+});
+
+test('cache indisponibile: la rete continua a funzionare per pagine, script e dati', async () => {
+  for (const [url, mode] of [['/napoli/', 'navigate'], ['/_astro/nuovo.js', 'cors'], ['/napoli/itinerari/strade/0_0.json', 'cors']]) {
+    const a = ambiente(async () => new Response('RETE'));
+    a.caches.open = async () => { throw Error('Memoria non disponibile'); };
+    const r = await a.request(url, mode);
+    assert.equal(await r.response.text(), 'RETE');
+    await Promise.all(r.waits);
+  }
+});
+
+test('lettura cache fallita: una copia illeggibile non blocca una risposta valida della rete', async () => {
+  const a = ambiente(async () => new Response('RETE'));
+  const open = a.caches.open;
+  a.caches.open = async name => { const c = await open(name); c.match = async () => { throw Error('Lettura fallita'); }; return c; };
+  const r = await a.request('/_astro/nuovo.js');
+  assert.equal(await r.response.text(), 'RETE');
+});
