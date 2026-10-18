@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · lettori ZIP e CSV
+## Revisione corrente · corse circolari e coerenza GTFS
+
+Il generatore conserva ogni passaggio utile dalla stessa fermata, rifiuta chiavi duplicate e riferimenti mancanti, e mantiene serializzabili anche ID che coincidono con proprietà JavaScript. Prova completa fino allo spostamento del compositore, con ripiego dopo l'ultima corsa. **308/308 test**, build di **12 pagine**, **811 link validi**, **82 risorse**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-9.md). I dati generati restano invariati: la correzione del generatore richiederà la prossima rigenerazione autorizzata.
+
+La sessione continuativa prosegue con dati pedonali e quote. Browser, installazioni e pubblicazione esclusi; nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · lettori ZIP e CSV
 
 Conclusi i controlli del lettore GTFS su integrità, offset, decompressione e CSV: rifiuti espliciti per file corrotti o formati non supportati. Compatibilità verificata con stored/deflate, commenti, descrittori con/senza firma, UTF-8/BOM/CRLF; 120 mutazioni deterministiche controllate. **302/302 test**, build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove, limiti e riferimenti](docs/storico/2026-10-18-revisione-codice-8.md). Nessun dato generato o dipendenza cambiato.
 

@@ -93,10 +93,17 @@ function tabella(zip, nome, { obbligatoria = true } = {}) {
   if (!righe.length) errore('intestazione mancante');
   const h = campi(righe[0], errore).map(s => s.trim());
   if (h.some(s => !s) || new Set(h).size !== h.length) errore('colonne vuote o duplicate');
+  const chiavi = { routes: ['route_id'], trips: ['trip_id'], stops: ['stop_id'], stop_times: ['trip_id', 'stop_sequence'], calendar: ['service_id'], calendar_dates: ['service_id', 'date'], shapes: ['shape_id', 'shape_pt_sequence'] }[nome] ?? [];
+  if (chiavi.some(k => !h.includes(k))) errore('colonna identificativa mancante: ' + chiavi.join(', '));
+  const viste = new Set();
   return righe.slice(1).map((r, numero) => {
     const v = campi(r, errore);
     if (v.length !== h.length) errore('numero di campi diverso dalle colonne alla riga ' + (numero + 2));
-    return Object.fromEntries(h.map((k, i) => [k, v[i]]));
+    const riga = Object.fromEntries(h.map((k, i) => [k, v[i]]));
+    if (chiavi.some(k => !riga[k])) errore('identificativo mancante alla riga ' + (numero + 2));
+    const chiave = JSON.stringify(chiavi.map(k => riga[k]));
+    if (chiavi.length && viste.has(chiave)) errore((nome === 'stop_times' ? 'sequenza ripetuta' : 'chiave duplicata') + ' alla riga ' + (numero + 2));
+    viste.add(chiave); return riga;
   });
 }
 
@@ -128,10 +135,11 @@ const mediana = v => { const s = [...v].sort((a, b) => a - b); const k = s.lengt
 
 // I servizi attivi in ogni data (calendar.txt e calendar_dates.txt: il feed ANM usa solo il secondo)
 function calendario(zip) {
-  const date = new Map();
+  const date = new Map(), servizi = new Set();
   const add = (d, s) => { if (!date.has(d)) date.set(d, new Set()); date.get(d).add(s); };
   const GIORNI = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
   for (const c of tabella(zip, 'calendar', { obbligatoria: false })) {
+    servizi.add(c.service_id);
     const dal = dataGtfs(c.start_date, 'calendar.txt'), al = dataGtfs(c.end_date, 'calendar.txt');
     if (dal > al || !GIORNI.every(g => c[g] === '0' || c[g] === '1')) throw new Error('GTFS: intervallo o giorni non validi in calendar.txt');
     for (let t = dal; t <= al; t += 864e5) {
@@ -140,12 +148,13 @@ function calendario(zip) {
     }
   }
   for (const c of tabella(zip, 'calendar_dates', { obbligatoria: false })) {
+    servizi.add(c.service_id);
     dataGtfs(c.date, 'calendar_dates.txt');
     if (c.exception_type !== '1' && c.exception_type !== '2') throw new Error('GTFS: eccezione non valida in calendar_dates.txt');
     if (c.exception_type === '1') add(c.date, c.service_id);
     else date.get(c.date)?.delete(c.service_id);
   }
-  return date;
+  return { date, servizi };
 }
 
 // La data tipica di un gruppo di giorni: quella con l'insieme di servizi più frequente (salta feste e ponti)
@@ -173,14 +182,17 @@ export function lineeBus(file, { linee, finestre }) {
     if (r.length !== 1) throw new Error(`GTFS: la linea ${nome} c'è ${r.length} volte nel feed (attesa una)`);
     scelte.set(r[0].route_id, r[0]);
   }
-  const date = calendario(zip);
+  const { date, servizi } = calendario(zip);
   const tutte = [...date.keys()].sort();
   const tipiche = {};
   for (const [sc, f] of Object.entries(finestre)) tipiche[sc] = dataTipica(date, f.giorni);
 
-  const trips = tabella(zip, 'trips').filter(t => scelte.has(t.route_id));
+  const tutteCorse = tabella(zip, 'trips'), routeId = new Set(routes.map(r => r.route_id)), tripId = new Set(tutteCorse.map(t => t.trip_id));
+  for (const t of tutteCorse) if (!routeId.has(t.route_id) || !servizi.has(t.service_id)) throw new Error('GTFS: riferimento a linea o servizio assente in trips.txt, corsa ' + t.trip_id);
+  const trips = tutteCorse.filter(t => scelte.has(t.route_id));
   const perTrip = new Map(trips.map(t => [t.trip_id, { ...t, fermate: [] }]));
   for (const r of tabella(zip, 'stop_times')) {
+    if (!tripId.has(r.trip_id)) throw new Error('GTFS: riferimento a corsa assente in stop_times.txt: ' + r.trip_id);
     const t = perTrip.get(r.trip_id);
     if (t) t.fermate.push({ s: r.stop_id, n: sequenza(r.stop_sequence, 'stop_times.txt'), t: minuti(r.departure_time || r.arrival_time) });
   }
@@ -290,7 +302,9 @@ export function lineeBus(file, { linee, finestre }) {
       if (!perServizio.has(t.route_id)) perServizio.set(t.route_id, new Map());
       const m = perServizio.get(t.route_id);
       if (!m.has(t.service_id)) m.set(t.service_id, []);
-      m.get(t.service_id).push({ t: t.fermate.map(x => x.t), dove: new Map(t.fermate.map((x, i) => [x.s, i])) });
+      const dove = new Map();
+      t.fermate.forEach((x, i) => { if (!dove.has(x.s)) dove.set(x.s, []); dove.get(x.s).push(i); });
+      m.get(t.service_id).push({ t: t.fermate.map(x => x.t), dove });
     }
     const tipi = [], firme = new Map(), giorni = {};
     const lista = v => v.map((x, i) => (i ? x - v[i - 1] : x));
@@ -303,8 +317,11 @@ export function lineeBus(file, { linee, finestre }) {
         for (const [sv, corse] of perServizio.get(idLinea.get(lid)) || []) {
           if (!attivi.has(sv)) continue;
           for (const c of corse) {
-            const ia = c.dove.get(a), ib = c.dove.get(b);
-            if (ia != null && ib != null && ib > ia) coppie.push([Math.round(c.t[ia]), c.t[ib] - c.t[ia]]);
+            // Una corsa circolare può passare dalla stessa fermata più volte: ogni salita utile conta.
+            for (const ia of c.dove.get(a) ?? []) {
+              const ib = c.dove.get(b)?.find(i => i > ia);
+              if (ib != null) coppie.push([Math.round(c.t[ia]), c.t[ib] - c.t[ia]]);
+            }
           }
         }
         if (!coppie.length) continue;
@@ -329,7 +346,7 @@ export function lineeBus(file, { linee, finestre }) {
     // i nomi delle fermate usate, scritti per bene («ACTON - PLEBISCITO» → «Acton - Plebiscito»)
     const PICCOLE = new Set(['di', 'dei', 'del', 'della', 'delle', 'degli', 'a', 'al', 'alla', 'e', 'da', 'in']);
     const bello = s => s.toLowerCase().replace(/\s+/g, ' ').trim().split(' ').map((w, i) => (i && PICCOLE.has(w) ? w : w.replace(/(^|['(.-])(\p{L})/gu, (_, x, y) => x + y.toUpperCase()))).join(' ');
-    const fermate = {};
+    const fermate = Object.create(null);
     for (const k of chiavi) for (const sid of k.split('|').slice(1)) fermate[sid] = bello(stops.get(sid).nome);
     return { dal: tutte[0], al: tutte[tutte.length - 1], giorni, tipi, fermate };
   }

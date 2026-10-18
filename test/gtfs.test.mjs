@@ -6,6 +6,8 @@ import { tmpdir } from 'node:os';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { lineeBus } from '../scripts/itinerari/gtfs.mjs';
+import { spacchettaVivo } from '../src/lib/itinerari/pacco.ts';
+import { spostamento } from '../src/lib/itinerari/calcolo.ts';
 const { zipSync, strToU8, unzipSync } = createRequire(import.meta.url)('fflate');
 const CONFIG = { linee: ['1'], finestre: { feriale: { giorni: [6], da: 0, a: 1800 } } };
 function feed(t, cambia = {}, { manipola = b => b, livello = 6 } = {}) {
@@ -207,4 +209,57 @@ test('GTFS ZIP: mutazioni deterministiche delle intestazioni terminano con dati 
       assert.equal(G.linee[0].archi[0].tempi.feriale, 10);
     } catch (errore) { assert.match(errore.message, /^GTFS(?: ZIP|:| CSV)/, 'Nessun RangeError o arresto fuori controllo: mutazione ' + i); }
   }
+});
+
+test('GTFS partenze: una corsa che torna al capolinea conserva la salita iniziale', t => {
+  const G = feed(t, { 'stop_times.txt': 'trip_id,departure_time,stop_id,stop_sequence\nt,09:00:00,a,1\nt,09:10:00,b,2\nt,09:20:00,a,3\n' });
+  const P = G.partenze(new Set(['B1|a|b', 'B1|b|a']));
+  assert.deepEqual(P.tipi[0].salite['B1|a'], [540]);
+  assert.equal(P.tipi[0].viaggi['B1|a|b'], 10);
+  assert.deepEqual(P.tipi[0].salite['B1|b'], [550]);
+  assert.equal(P.tipi[0].viaggi['B1|b|a'], 10);
+});
+test('GTFS partenze: ogni passaggio utile dalla stessa fermata può essere una salita', t => {
+  const G = feed(t, { 'stop_times.txt': 'trip_id,departure_time,stop_id,stop_sequence\nt,09:00:00,a,1\nt,09:10:00,b,2\nt,09:20:00,a,3\nt,09:30:00,b,4\nt,09:40:00,a,5\n' });
+  const P = G.partenze(new Set(['B1|a|b']));
+  assert.deepEqual(P.tipi[0].salite['B1|a'], [540, 20]);
+  assert.equal(P.tipi[0].viaggi['B1|a|b'], 10);
+});
+test('GTFS tabelle: ID ripetuti non sostituiscono silenziosamente corse e fermate', t => {
+  for (const cambia of [
+    { 'routes.txt': 'route_id,route_short_name,route_type\nr,1,3\nr,altro,3\n' },
+    { 'trips.txt': 'route_id,service_id,trip_id\nr,s,t\nr,s,t\n' },
+    { 'stops.txt': 'stop_id,stop_name,stop_lat,stop_lon\na,A,40.8,14.2\na,Altro,0,0\nb,B,40.81,14.21\n' },
+    { 'calendar_dates.txt': 'service_id,date,exception_type\ns,20261017,1\ns,20261017,2\n' }
+  ]) assert.throws(() => feed(t, cambia), /GTFS.*(duplicat|ripetut)/i);
+});
+test('GTFS tabelle: i riferimenti a route, corse e servizi assenti fermano il generatore', t => {
+  for (const cambia of [
+    { 'trips.txt': 'route_id,service_id,trip_id\nassente,s,t\n' },
+    { 'trips.txt': 'route_id,service_id,trip_id\nr,assente,t\n' },
+    { 'stop_times.txt': 'trip_id,departure_time,stop_id,stop_sequence\nassente,09:00:00,a,1\nassente,09:10:00,b,2\n' }
+  ]) assert.throws(() => feed(t, cambia), /GTFS.*(riferimento|assente|sconosciut)/i);
+});
+test('GTFS partenze: il nome di una fermata non collide con le proprietà degli oggetti JavaScript', t => {
+  const G = feed(t, {
+    'stop_times.txt': 'trip_id,departure_time,stop_id,stop_sequence\nt,09:00:00,__proto__,1\nt,09:10:00,b,2\n',
+    'stops.txt': 'stop_id,stop_name,stop_lat,stop_lon\n__proto__,FERMATA PROVA,40.8,14.2\nb,PORTO,40.81,14.21\n'
+  });
+  const P = G.partenze(new Set(['B1|__proto__|b']));
+  assert.equal(Object.hasOwn(P.fermate, '__proto__'), true);
+  assert.equal(P.fermate.__proto__, 'Fermata Prova');
+  assert.equal(JSON.parse(JSON.stringify(P)).fermate.__proto__, 'Fermata Prova');
+});
+
+test('GTFS → pacchetto → calcolo: la salita di una corsa circolare arriva fino al compositore', t => {
+  const G = feed(t, { 'stop_times.txt': 'trip_id,departure_time,stop_id,stop_sequence\nt,09:00:00,a,1\nt,09:10:00,b,2\nt,09:20:00,a,3\n' });
+  const partenze = G.partenze(new Set(['B1|a|b']));
+  const P = { ...partenze, preferenza: 5, dizionario: ['', 'B1'], candidati: [[[0, 'B1|a|b', 0], 20, 1]], senza: { feriale: [1, 40, 100, 0] }, bus: { feriale: [1, 1, 0] } };
+  const C = { vivo: spacchettaVivo(JSON.parse(JSON.stringify(P))), tempi: { n: 2, min: { feriale: [0, 15, 15, 0] }, metri: { feriale: [0, 200, 200, 0] }, mezzi: { feriale: ['', 'B1', 'B1', ''] } } };
+  const prima = spostamento(C, 'feriale', 0, 1, 530, '2026-10-17');
+  assert.equal(prima.min, 20); assert.deepEqual(prima.mezzi, ['B1']);
+  assert.deepEqual(prima.corse, [{ linea: 'B1', da: 'Caffè, Mare', ora: 540 }]);
+  const tardi = spostamento(C, 'feriale', 0, 1, 541, '2026-10-17');
+  assert.equal(tardi.min, 40); assert.deepEqual(tardi.mezzi, []);
+  assert.equal(tardi.scartato.ora, -1);
 });
