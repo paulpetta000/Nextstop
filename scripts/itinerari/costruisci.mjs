@@ -21,6 +21,7 @@ import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
 import { firmaPosizioni } from '../../src/lib/itinerari/firma-posizioni.mjs';
 import { lineeBus } from './gtfs.mjs';
+import { validaOsm, validaQuote } from './ingressi.mjs';
 
 const RADICE = fileURLToPath(new URL('../../', import.meta.url));
 const dir = process.argv[2];
@@ -85,6 +86,7 @@ const ASCENSORI_FERIALI = /Su[^;]*?0?7:30-14:00|PH,Su 0?7:30-14:00/;
 // ---------- Dati ----------
 const osm = JSON.parse(fs.readFileSync(path.join(dir, 'osm.json'), 'utf8'));
 const dem = JSON.parse(fs.readFileSync(path.join(dir, 'quote.json'), 'utf8'));
+validaOsm(osm);
 // i punti: le tappe in città e i locali di «Dove mangiare» (src/data/locali.yaml), che nel compositore sono tappe
 const tappe = [
   ...yaml.load(fs.readFileSync(path.join(RADICE, 'src/data/tappe.yaml'), 'utf8')).filter(t => t.tipo === 'citta'),
@@ -102,9 +104,10 @@ for (const e of osm.elements) {
 }
 
 // ---------- Quote ----------
-const Q = dem.quote, W = dem.w, H = dem.h;
 // filtro delle quote: raggio in punti della griglia, percentile e media mobile lungo la strada (metri)
 const RAGGIO = +(process.env.QUOTE_RAGGIO ?? 2), PERCENTILE = +(process.env.QUOTE_PERCENTILE ?? 0.25), MEDIA = +(process.env.QUOTE_MEDIA ?? 50);
+validaQuote(dem, { raggio: RAGGIO, percentile: PERCENTILE, media: MEDIA });
+const Q = dem.quote, W = dem.w, H = dem.h;
 const grezza = (i, j) => Q[Math.min(H - 1, Math.max(0, j)) * W + Math.min(W - 1, Math.max(0, i))];
 // valore basso dei 25 punti vicini (25° percentile, circa 150 m per lato): toglie buona parte dei tetti
 const filtrata = new Float32Array(W * H);
