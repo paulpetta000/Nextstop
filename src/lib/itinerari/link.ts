@@ -30,6 +30,8 @@ const minutiHhmm = (s: string) => {
 };
 
 const QUALI: QualePausa[] = ['pranzo', 'caffe', 'riposo', 'libero'];
+// «Mangia qui» può attendere fino alla cena delle 19:30 anche dopo una giornata iniziata alle 5:00.
+const MAX_ATTESA_CENA = 19 * 60 + 30 - 5 * 60;
 export const MARGINI_VALIDI = [5, 10, 15];
 const testoPausa = (x: Pausa) => [x.quale, x.min, ...(x.dopo ? [x.dopo] : [])].join('.');
 
@@ -44,13 +46,14 @@ export function codifica(it: Itinerario): string {
   return p.toString();
 }
 
-// Pause valide: tipo conosciuto, una per tipo, da 5 minuti a 4 ore; «dopo» solo se la tappa è nel giorno
+// Pause valide: tipo conosciuto, una per tipo, da 5 minuti a 4 ore (tempo libero: anche l'attesa della cena);
+// «dopo» solo se la tappa è nel giorno. Stesso formato dei link e della memoria esistenti.
 function sistemaPause(x: unknown, tappe: string[]): Pausa[] | undefined {
   if (!Array.isArray(x)) return undefined;
   const out: Pausa[] = [];
   for (const p of x) {
     if (!p || typeof p !== 'object' || !QUALI.includes(p.quale) || out.some(y => y.quale === p.quale)) continue;
-    if (!Number.isFinite(p.min) || p.min < 5 || p.min > 240) continue;
+    if (!Number.isFinite(p.min) || p.min < 5 || p.min > (p.quale === 'libero' ? MAX_ATTESA_CENA : 240)) continue;
     out.push({ quale: p.quale, min: Math.round(p.min), ...(typeof p.dopo === 'string' && tappe.includes(p.dopo) ? { dopo: p.dopo } : {}) });
   }
   return out;

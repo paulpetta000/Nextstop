@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · preparazione delle strade
+## Revisione corrente · pasti e riepilogo
+
+Proposta e inserimento del pasto condividono il calcolo con bus, pause, margini e contesto dal vivo; risultati memorizzati invalidati correttamente, attese lunghe conservate e aperture sconosciute distinte da quelle note. **451/451 test**, **37 aggiunte** nella sessione rispetto a 414; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Gruppi, prove e limiti](docs/storico/2026-10-18-revisione-codice-26.md).
+
+Quattro gruppi collegati. Sessione richiesta di almeno **45 minuti**, interrotta dopo circa 39 minuti dal controllo automatico delle autorizzazioni per quota, ripresa su «continua» alle **17:52:34 UTC**. L'interruzione non conta come lavoro e non è una sessione ininterrotta. Nessun browser, download cartografico reale, rigenerazione dei dati sorgente, installazione o pubblicazione. Area 3 aperta: seguito sul trascinamento attuale, ricerca/filtri e registro storico. Nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · preparazione delle strade
 
 Download verificato prima della sostituzione, conservazione della copia precedente, geometrie/metadati controllati; suddivisione limitata alle celle interne e semplificazione senza ricorsione. **437/437 test**, nove aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. Confronto completo identico su 4.000 vie sintetiche. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-25.md).
 

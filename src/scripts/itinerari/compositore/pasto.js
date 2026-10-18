@@ -2,13 +2,14 @@
 // (12:30–14:30) e non c'è già un locale a quell'ora, la pausa pranzo diventa «Il menù del pranzo»; la cena (19:30–21:30) è sempre
 // facoltativa: dopo l'ultima tappa, grande se il giorno arriva almeno alle 20:30, altrimenti solo «Cena?», piccola. Toccando: un
 // foglio come la carta di un ristorante, i locali per tipo con i minuti veri dalla tappa prima e fino a che ora sono aperti (orari
-// scritti dai locali), «A piedi: 5, 10, 20 min, Tutti». «Mangia qui» mette il locale nel giorno (la pausa pranzo resta da parte e
+// scritti dai locali), «Entro: 5, 10, 20 min, Tutti». «Mangia qui» mette il locale nel giorno (la pausa pranzo resta da parte e
 // torna se lo togli; per la cena un «Tempo libero» fino alle 19:30 e il giorno si allunga); «No, grazie» toglie la proposta per quel
 // giorno, «Rimettile» la rimette. Niente si aggiunge da solo. Le ore di pranzo e cena sono una regola nostra (pagina, «Da sapere»).
 import { $, esc, ic, ora, durataLunga, dopo, piano, computer } from './base.js';
-import { C, T, X, G, grezzo, daFare, tappeDi, nelViaggio, dataDi, giornoSett, dataLungaDi, caricaSchede, schedePronte } from './stato.js';
-import { minuti, orarioLocale, scenarioDi, tappaDi } from '../../../lib/itinerari/calcolo';
-import { pauseDelGiorno, sequenza, localeDelPranzo } from '../../../lib/itinerari/pause';
+import { C, T, X, G, daFare, tappeDi, nelViaggio, dataDi, giornoSett, dataLungaDi, adessoPer, caricaSchede, schedePronte } from './stato.js';
+import { orarioLocale, tappaDi } from '../../../lib/itinerari/calcolo';
+import { preparaPasto } from '../../../lib/itinerari/pasti';
+import { sequenza, localeDelPranzo } from '../../../lib/itinerari/pause';
 import { MAX_TAPPE } from '../../../lib/itinerari/link';
 import { S, assicuraSchede, foglio, chiudiFoglio, rinfresca, avvisa, annuncia, scorri, occupato } from './comuni.js';
 import { aggiorna, conAnnulla } from './viste.js';
@@ -24,7 +25,6 @@ const tipoL = id => CUCINA_NOME[T(id).cucina?.[0]] ?? 'Locali';
 const euro = id => (T(id).fascia ? '€'.repeat(T(id).fascia) : '');
 const chiaveM = m => `${m.g}-${m.q}`;
 const nascosto = (g, q) => !!X().giorni[g]?.noPasti?.includes(q);
-const uscitaDi = v => { const t = tappaDi(C, v.id); return t.pf != null && t.pf >= 0 && !v.indietro ? t.pf : t.p; };
 const locale = id => !!tappaDi(C, id)?.categoria;
 
 // i momenti del pasto di un giorno: { g, q, dove (la tappa prima), ora (quando sei lì), min, dopo (la tappa dopo), pausa, piccola, nascosto }
@@ -61,15 +61,23 @@ function finoA(L, g, t) {
 }
 // i locali per quel momento: minuti dalla tappa prima, aperto o no all'arrivo
 const memoV = new Map();
+let tempiMemo = null, vivoMemo = null;
 function vicini(m) {
-  const x = X(), chiave = JSON.stringify([m, x.giorni[m.g].tappe, x.data, x.piedi, C.vivo ? 1 : 0]);
+  if (tempiMemo !== C.tempi || vivoMemo !== C.vivo) { memoV.clear(); tempiMemo = C.tempi; vivoMemo = C.vivo; }
+  const x = X(), adesso = adessoPer(x, m.g), chiave = JSON.stringify([x.id, m, x.giorni, x.data, x.piedi, x.margine, adesso]);
   if (memoV.has(chiave)) return memoV.get(chiave);
-  const v = tappeDi(G(m.g)).find(y => y.id === m.dove), da = uscitaDi(v), data = dataDi(m.g);
-  const s0 = scenarioDi(data, m.ora, x.piedi), scen = C.tempi.min[s0] ? s0 : 'feriale', sett = data ? giornoSett(m.g) : null;
+  const data = dataDi(m.g), sett = data ? giornoSett(m.g) : null;
   const lista = C.tappe.filter(L => L.categoria && !nelViaggio(L.id) && (L.pasto ?? []).some(p => PASTI[m.q].pasti.includes(p)) && !(m.q === 'pranzo' && L.cucina?.includes('dolci') && !L.pasto.includes('pranzo'))).map(L => {
-    const min = minuti(C, scen, da, L.p), arrivo = m.ora + min;
+    const prova = preparaPasto(C, x, m, L.id, adesso);
+    if (!prova) return null;
+    const k = prova.calcolo.voci.findIndex(v => v.tipo === 'tappa' && v.id === L.id), voce = prova.calcolo.voci[k];
+    const tratto = prova.calcolo.voci[k - 1], min = tratto?.tipo === 'tratto' ? tratto.min : 0, arrivo = voce.inizio;
     let stato = 'aperto', nota = '';
-    if (sett && L.chiuso.includes(sett)) { stato = 'chiuso'; nota = 'chiuso quel giorno'; }
+    if (arrivo >= 1440) { stato = 'ignoto'; nota = 'arrivo dopo mezzanotte: orario non verificato'; }
+    else if (sett && L.chiuso.includes(sett)) { stato = 'chiuso'; nota = 'chiuso quel giorno'; }
+    else if (!(sett ? Array.isArray(L.orari?.[GIORNI_ORARI.indexOf(sett)]) : L.orari?.some(f => Array.isArray(f)))) {
+      stato = 'ignoto'; nota = 'orario non pubblicato: controlla la scheda';
+    }
     else {
       const o = orarioLocale(L, data, arrivo, L.durata);
       if (o?.chiude != null) { stato = 'stretto'; nota = `chiude alle ${ora(o.chiude % 1440)}`; }
@@ -78,17 +86,19 @@ function vicini(m) {
     }
     const fino = stato === 'aperto' ? finoA(L, m.g, arrivo) : null;
     if (stato === 'aperto') nota = fino != null ? `aperto fino alle ${ora(fino)}` : 'aperto';
-    return { id: L.id, min, arrivo, stato, nota, mezzi: (C.tempi.mezzi?.[scen]?.[da * C.tempi.n + L.p] ?? '') !== '' };
-  }).sort((a, b) => (a.stato === 'chiuso') - (b.stato === 'chiuso') || a.min - b.min || a.id.localeCompare(b.id));
+    return { id: L.id, min, arrivo, stato, nota, mezzi: tratto?.tipo === 'tratto' && tratto.mezzi.length > 0 };
+  }).filter(Boolean).sort((a, b) => (a.stato === 'chiuso') - (b.stato === 'chiuso') || a.min - b.min || a.id.localeCompare(b.id));
   if (memoV.size > 200) memoV.clear();
   memoV.set(chiave, lista);
   return lista;
 }
-const aperti = (m, max = 10) => vicini(m).filter(x => x.stato !== 'chiuso' && x.min <= max);
+const conOrarioAperto = x => x.stato === 'aperto' || x.stato === 'stretto';
+const aperti = (m, max = 10) => vicini(m).filter(x => conOrarioAperto(x) && x.min <= max);
 function riassuntoM(m) {
   const n = aperti(m).length;
   if (n) return `${n === 1 ? 'un locale aperto' : `${n} locali aperti`} a 10 minuti da ${T(m.dove).breve}`;
-  const p = vicini(m).find(x => x.stato !== 'chiuso');
+  if (vicini(m).some(x => x.stato === 'ignoto')) return 'per alcuni locali l’apertura non è verificata: controlla le schede nel menù';
+  const p = vicini(m).find(conOrarioAperto);
   return p ? `qui vicino a quell'ora è tutto chiuso: il più vicino aperto è ${T(p.id).breve}, a ${p.min} minuti` : 'a quell\'ora non c\'è niente di aperto';
 }
 
@@ -96,19 +106,12 @@ function riassuntoM(m) {
 // per la cena, se arrivi prima delle 19:30, un «Tempo libero» fino alla cena, e il giorno si allunga fino a dopo cena.
 function mangiaQui(m, id) {
   const g = m.g, D = X().giorni[g];
+  if (!D) return;
   if (D.tappe.length >= MAX_TAPPE) { avvisa(`Al massimo ${MAX_TAPPE} tappe per giorno.`); return; }
+  const proposta = preparaPasto(C, X(), m, id, adessoPer(X(), g));
+  if (!proposta) { avvisa('La giornata è cambiata e il locale non è stato aggiunto. Riapri il menù per scegliere dove mangiare.'); return; }
   conAnnulla(`${T(id).breve}: ${m.q === 'pranzo' ? 'pranzo' : 'cena'} nel giorno ${g + 1}.`, y => {
-    const Dy = y.giorni[g], l = [...Dy.tappe];
-    l.splice(l.indexOf(m.dove) + 1, 0, id);
-    let pause = (Dy.pause ?? pauseDelGiorno(C, Dy, grezzo(g))).filter(p => p.quale !== 'libero');
-    Dy.tappe = l;
-    if (m.q === 'cena') {
-      Dy.pause = pause;
-      const v = tappeDi(G(g)).find(x => x.id === id), attesa = v ? PASTI.cena.da - v.inizio : 0;
-      if (attesa >= 10) pause = [...pause, { quale: 'libero', min: Math.round(attesa / 5) * 5, dopo: m.dove }];
-    }
-    Dy.pause = pause;
-    if (m.q === 'cena') { const fine = G(g)?.fine ?? 0; if (fine > Dy.fine) Dy.fine = Math.min(23 * 60 + 30, Math.ceil(fine / 30) * 30); }
+    y.giorni[g] = proposta.giorno;
     S.nuova = id;
   });
 }
@@ -159,9 +162,9 @@ function apriMenu(m, max = aperti(m).length ? 10 : 0) {
     ordineLocali = [...gruppi.flatMap(([, l]) => l), ...no].map(x => x.id);
     const voce = x => `<li class="mn-v${x.stato === 'chiuso' ? ' mn-v--chiuso' : ''}"><details><summary><span class="mn-nome">${esc(T(x.id).nome)}</span><span class="mn-punti" aria-hidden="true"></span><span class="mn-min num">${x.min < 2 ? 'accanto' : `${x.min} min`}</span><small class="mn-sotto">${esc(x.nota)}${euro(x.id) ? ` · ${euro(x.id)}` : ''}${x.mezzi ? ' · con i mezzi' : ''}</small></summary>
       <div class="mn-dentro"><p>${esc(T(x.id).frase || '')}</p><div class="mn-az">${x.stato === 'chiuso' ? '' : `<button type="button" class="f-bottone" data-f="scegli" data-v="${x.id}">${ic('posate', 18)}Mangia qui, dalle ${ora(x.arrivo)}</button>`}<button type="button" class="f-bottone f-bottone--contorno" data-f="scheda" data-v="${x.id}">La scheda</button></div></div></details></li>`;
-    const primo = tutti.find(x => x.stato !== 'chiuso');
+    const primo = tutti.find(conOrarioAperto);
     return `<div class="mn"><p class="mn-testa"><i>${m.q === 'pranzo' ? 'Pranzo' : 'Cena'}</i><span>dalle <span class="num">${ora(m.ora)}</span>, intorno a ${esc(T(m.dove).breve)}</span></p>
-      <div class="mn-quanto" role="group" aria-label="Quanto vuoi camminare"><span>A piedi:</span>${[5, 10, 20, 0].map(k => `<button type="button" data-f="quanto" data-v="${k}" aria-pressed="${k === mx}">${k ? `${k} min` : 'Tutti'}</button>`).join('')}</div>
+      <div class="mn-quanto" role="group" aria-label="Tempo per arrivare al locale"><span>Entro:</span>${[5, 10, 20, 0].map(k => `<button type="button" data-f="quanto" data-v="${k}" aria-pressed="${k === mx}">${k ? `${k} min` : 'Tutti'}</button>`).join('')}</div>
       ${gruppi.length ? gruppi.map(([t, l]) => `<section class="mn-gruppo"><h3>${esc(t)}</h3><ul>${l.map(voce).join('')}</ul></section>`).join('') : `<div class="mn-vuoto"><p>A ${mx} minuti, a quell'ora, è tutto chiuso. ${primo ? `Il più vicino aperto è ${esc(T(primo.id).breve)}, a ${primo.min} minuti.` : ''}</p><button type="button" class="f-bottone" data-f="quanto" data-v="0">Vedi tutti i locali, con i minuti</button></div>`}
       ${no.length ? `<section class="mn-gruppo mn-gruppo--chiusi"><h3>Chiusi a quell'ora</h3><ul>${no.map(voce).join('')}</ul></section>` : ''}
       <p class="mn-piede">Orari scritti dai locali${X().data ? `, ${dataLungaDi(m.g)}` : '; senza data valgono per i giorni in cui sono aperti'}. Le ore di pranzo (12:30–14:30) e cena (19:30–21:30) sono una regola nostra. Scegli tu: niente si aggiunge da solo.</p></div>`;
