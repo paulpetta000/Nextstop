@@ -11,6 +11,7 @@ import path from 'node:path';
 import { fromUrl } from 'geotiff';
 import { BOX } from '../mappa/riquadro.mjs';
 import { validaOsm } from './ingressi.mjs';
+import { scriviFile } from '../scrivi-file.mjs';
 
 const dir = process.argv[2];
 if (!dir) throw new Error('Indica la cartella dove salvare i dati scaricati');
@@ -60,7 +61,7 @@ out body;`;
     await new Promise(r => setTimeout(r, 15000 * (1 + Math.floor(prova / SERVER.length))));
   }
   if (!testo) throw new Error('Overpass: nessun server ha risposto');
-  fs.writeFileSync(osmFile, testo);
+  scriviFile(osmFile, testo);
   const j = datiOsm;
   console.log(`osm.json: ${(testo.length / 1e6).toFixed(1)} MB, ${j.elements.length} elementi, dati del ${j.osm3s?.timestamp_osm_base}`);
 } else console.log('osm.json già scaricato');
@@ -84,7 +85,7 @@ if (!fs.existsSync(demFile)) {
   const w = win[2] - win[0], h = win[3] - win[1];
   // quote al decimetro: bastano e il file resta piccolo
   const quote = Array.from(ras, v => Math.round(v * 10) / 10);
-  fs.writeFileSync(demFile, JSON.stringify({
+  scriviFile(demFile, JSON.stringify({
     fonte: url, licenza: 'Copernicus DEM GLO-30 (© DLR e.V. 2010-2014 e © Airbus Defence and Space GmbH 2014-2018, fornito da ESA sotto il programma Copernicus); licenza d\'uso gratuita',
     // centro del primo pixel e passo in gradi
     lon0: x0 + (win[0] + 0.5) * rx, lat0: y1 + (win[1] + 0.5) * ry, dlon: rx, dlat: ry, w, h, quote
@@ -101,7 +102,7 @@ if (!fs.existsSync(busFile)) {
   if (!res.ok) throw new Error(`ANM GTFS: risposta ${res.status}`);
   const b = Buffer.from(await res.arrayBuffer());
   if (b.length < 4 || b.readUInt32LE(0) !== 0x04034b50) throw new Error('ANM GTFS: il file scaricato non è uno zip');
-  fs.writeFileSync(busFile, b);
+  scriviFile(busFile, b);
   console.log(`anm-gtfs.zip: ${(b.length / 1e6).toFixed(1)} MB`);
 } else console.log('anm-gtfs.zip già scaricato');
 console.log('FATTO');

@@ -2,20 +2,32 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import path from 'node:path';
+import os from 'node:os';
 import { validaOsm } from '../scripts/itinerari/ingressi.mjs';
+import { scriviFile } from '../scripts/scrivi-file.mjs';
 const s = fs.readFileSync(new URL('../scripts/itinerari/scarica.mjs',import.meta.url),'utf8');
 const da=s.indexOf('const osmFile ='), a=s.indexOf('// ---------- Quote',da), daB=s.indexOf('const busFile =');
 assert.ok(da>=0&&a>da&&daB>a);
 const AsyncFunction=Object.getPrototypeOf(async function(){}).constructor;
-const scaricaOsm=new AsyncFunction('fs','path','dir','BOX','UA','fetch','console','setTimeout','validaOsm',s.slice(da,a));
-const scaricaBus=new AsyncFunction('fs','path','dir','UA','fetch','console',s.slice(daB));
+const scaricaOsm=new AsyncFunction('fs','path','dir','BOX','UA','fetch','console','setTimeout','validaOsm','scriviFile',s.slice(da,a));
+const scaricaBus=new AsyncFunction('fs','path','dir','UA','fetch','console','scriviFile',s.slice(daB));
 const valido={elements:[{type:'node',id:1,lat:1,lon:1},{type:'node',id:2,lat:1,lon:2},{type:'way',id:3,nodes:[1,2],tags:{highway:'footway'}}]};
 function ambiente(risposte,{esiste=false}={}){
   const scritture=[],richieste=[];
   const file={existsSync:()=>esiste,writeFileSync:(...args)=>scritture.push(args)};
   const fetch=async url=>{richieste.push(url);const i=Math.min(richieste.length-1,risposte.length-1);return new Response(risposte[i]);};
-  return {scritture,richieste,osm:()=>scaricaOsm(file,path,'/fittizio',{s:0,w:0,n:2,e:2},'test',fetch,{log(){}},fn=>fn(),validaOsm),bus:()=>scaricaBus(file,path,'/fittizio','test',fetch,{log(){}})};
+  return {scritture,richieste,osm:()=>scaricaOsm(file,path,'/fittizio',{s:0,w:0,n:2,e:2},'test',fetch,{log(){}},fn=>fn(),validaOsm,(...x)=>file.writeFileSync(...x)),bus:()=>scaricaBus(file,path,'/fittizio','test',fetch,{log(){}},(...x)=>file.writeFileSync(...x))};
 }
+
+for (const tipo of ['osm', 'bus']) test(`download ${tipo}: disco pieno non lascia una falsa cache completa`, async t => {
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'nextstop-download-'));
+  t.after(() => fs.rmSync(dir, {recursive:true,force:true}));
+  const io = new Proxy(fs, {get:(o,k)=>k === 'writeFileSync' ? (file,contenuto) => {fs.writeFileSync(file,'frammento'); throw Object.assign(new Error('disco pieno'),{code:'ENOSPC'});} : o[k]});
+  const scrivi = (file, contenuto) => scriviFile(file, contenuto, io);
+  const fetch = async () => new Response(tipo === 'osm' ? JSON.stringify(valido) : new Uint8Array([80,75,3,4]));
+  const lavoro = tipo === 'osm' ? scaricaOsm(io,path,dir,{s:0,w:0,n:2,e:2},'test',fetch,{log(){}},fn=>fn(),validaOsm,scrivi) : scaricaBus(io,path,dir,'test',fetch,{log(){}},scrivi);
+  await assert.rejects(lavoro,/disco pieno/); assert.deepEqual(fs.readdirSync(dir),[]);
+});
 test('download OSM: JSON non valido non viene scritto come cache',async()=>{
   const e=ambiente(['{']);await assert.rejects(e.osm());assert.equal(e.scritture.length,0);
 });

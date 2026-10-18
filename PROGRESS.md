@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · sessione continuativa del 18 ottobre
+## Revisione corrente · scrittura dei dati generati
+
+Completata preparazione delle uscite prima delle sostituzioni, scrittura tramite temporanei completi e controllo in build dei cinque file della stessa generazione. **356/356 test**, **18 prove aggiunte**; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-14.md). Dati sorgente invariati; nessun download o rigenerazione reale, browser o pubblicazione.
+
+Protezione per singolo file, non transazione su tutto il gruppo; una sostituzione interrotta viene riconosciuta dalla build per i nuovi dati marcati. Formato storico interamente senza marcatura conservato. Area 3 ancora aperta: seguito su matrici finali e riferimenti fra candidati bus, partenze e disegni. Nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · sessione continuativa del 18 ottobre
 
 Sette gruppi conclusi nella sessione richiesta da Enrico: ingressi/privacy, ZIP/CSV, corse circolari, quote/OSM, decoder mappa, coerenza dei pacchetti e download incompleti. **338/338 test**, **71 prove aggiunte** rispetto a 267; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Riepilogo, prove e seguito](docs/storico/2026-10-18-revisione-codice-13.md). Tutto locale; dati generati sorgente, ID, URL, memoria v1, CSS e dipendenze conservati.
 

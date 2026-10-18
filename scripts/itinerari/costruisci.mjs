@@ -22,6 +22,8 @@ import yaml from 'js-yaml';
 import { firmaPosizioni } from '../../src/lib/itinerari/firma-posizioni.mjs';
 import { lineeBus } from './gtfs.mjs';
 import { validaOsm, validaQuote } from './ingressi.mjs';
+import { scriviFilePreparati } from '../scrivi-file.mjs';
+import { marcaGenerazione, validaProiezione } from '../../src/lib/itinerari/generazione-dati.mjs';
 
 const RADICE = fileURLToPath(new URL('../../', import.meta.url));
 const dir = process.argv[2];
@@ -591,10 +593,12 @@ const PARTENZE = GTFS.partenze(chiaviBus);
 }
 uscita.candidati = candidati.map(({ seg, m, mezzi }) => ({ seg, m, mezzi }));
 console.log(`Strade con il bus da valutare con le partenze vere: ${candidati.length}`);
-fs.writeFileSync(path.join(RADICE, 'src/data/tempi-tappe.json'), JSON.stringify(uscita) + '\n');
-console.log(`Scritto src/data/tempi-tappe.json (${punti.length} punti)`);
-fs.writeFileSync(path.join(RADICE, 'src/data/partenze-bus.json'), JSON.stringify({ generato: uscita.generato, firma, fonte: 'ANM, feed GTFS (IODL 2.0)', ...PARTENZE }) + '\n');
-console.log(`Scritto src/data/partenze-bus.json: ${chiaviBus.size} corse, ${PARTENZE.tipi.length} tipi di giorno, ${Math.round(JSON.stringify(PARTENZE).length / 1024)} kB`);
+const fileGenerati = {
+  'tempi-tappe.json': uscita,
+  'partenze-bus.json': { generato: uscita.generato, firma, fonte: 'ANM, feed GTFS (IODL 2.0)', ...PARTENZE }
+};
+let proiezione;
+console.log(`Preparati tempi e partenze (${punti.length} punti, ${chiaviBus.size} corse, ${PARTENZE.tipi.length} tipi di giorno)`);
 
 // Tutte le fermate delle linee bus (anche quelle lontane dalle tappe di oggi), con la frequenza di ogni scenario
 // al capolinea di partenza: servono per le tappe e i locali che verranno (la fermata più vicina). La pagina non le usa.
@@ -609,8 +613,8 @@ console.log(`Scritto src/data/partenze-bus.json: ${chiaviBus.size} corse, ${PART
     nota: 'ogni: minuti tra due corse in partenza dal primo capolinea della direzione, nella fascia dello scenario (orario programmato)',
     linee: GTFS.linee.map(B => ({ id: B.id, nome: B.nome, tipo: B.tipo, direzioni: B.direzioni.map(d => ({ ...d, ogni: ogni(B, d) })) }))
   };
-  fs.writeFileSync(path.join(RADICE, 'src/data/linee-bus.json'), JSON.stringify(file, null, 1) + '\n');
-  console.log(`Scritto src/data/linee-bus.json (${GTFS.linee.length} linee)`);
+  fileGenerati['linee-bus.json'] = file;
+  console.log(`Preparato src/data/linee-bus.json (${GTFS.linee.length} linee)`);
 }
 
 // ---------- Disegno dei percorsi per la mappa degli itinerari ----------
@@ -620,6 +624,8 @@ console.log(`Scritto src/data/partenze-bus.json: ${chiaviBus.size} corse, ${PART
 // solo quando apri la mappa. Per gli scenari diversi dal giorno feriale si salva solo ciò che cambia.
 {
   const M = JSON.parse(fs.readFileSync(path.join(RADICE, 'src/data/mappa.json'), 'utf8'));
+  proiezione = { w: M.w, h: M.h, box: M.box };
+  validaProiezione(proiezione);
   const KX = M.w / (M.box.e - M.box.w), KY = M.h / (M.box.n - M.box.s);
   const SCARTO = 0.8;
   const xy = ([lat, lon]) => [(lon - M.box.w) * KX, (M.box.n - lat) * KY];
@@ -675,12 +681,12 @@ console.log(`Scritto src/data/partenze-bus.json: ${chiaviBus.size} corse, ${PART
   }
   const conBus = candidati.map(c => codifica(c.pezzi));
   const file = { generato: uscita.generato, firma, punti: uscita.punti, unita: 'src/data/mappa.json', scenari };
-  fs.writeFileSync(path.join(RADICE, 'src/data/percorsi-tappe.json'), JSON.stringify(file) + '\n');
-  console.log(`Scritto src/data/percorsi-tappe.json (${Math.round(JSON.stringify(file).length / 1024)} kB)`);
+  fileGenerati['percorsi-tappe.json'] = file;
+  console.log(`Preparato src/data/percorsi-tappe.json (${Math.round(JSON.stringify(file).length / 1024)} kB)`);
   // le strade alternative (orari veri): file a parte, la pagina lo carica solo se la mappa le deve disegnare
   const alt = { generato: uscita.generato, firma, senza, candidati: conBus };
-  fs.writeFileSync(path.join(RADICE, 'src/data/percorsi-alternativi.json'), JSON.stringify(alt) + '\n');
-  console.log(`Scritto src/data/percorsi-alternativi.json (${Math.round(JSON.stringify(alt).length / 1024)} kB)`);
+  fileGenerati['percorsi-alternativi.json'] = alt;
+  console.log(`Preparato src/data/percorsi-alternativi.json (${Math.round(JSON.stringify(alt).length / 1024)} kB)`);
 }
 
 // ---------- Rapporto delle coppie richieste ----------
@@ -698,9 +704,16 @@ for (const x of rapporto) {
   for (const r of righe) console.log(`   ${r.k.padEnd(28)} ${r.t.toFixed(1).padStart(5)} min ${r.m ? Math.round(r.m) + ' m' : ''} ${r.su > 0.5 ? '+' + Math.round(r.su) + ' m' : ''} ${[...r.nomi].slice(0, 6).join(', ')}`);
 }
 
+// Serializziamo e prepariamo ogni uscita prima di sostituire i file precedenti.
+const marcati = marcaGenerazione(fileGenerati, proiezione);
+const uscite = Object.entries(marcati).map(([nome, dati]) => ({
+  file: path.join(RADICE, 'src/data', nome),
+  contenuto: JSON.stringify(dati, null, nome === 'linee-bus.json' ? 1 : undefined) + '\n'
+}));
 // Con PERCORSI=<file> salva il disegno dei percorsi delle coppie richieste (giorno feriale): serve alle mappe
 if (process.env.PERCORSI) {
   const disegni = Object.fromEntries(rapporto.filter(x => x.scenario === 'feriale').map(x => [`${x.da}|${x.a}`, { min: Math.round(x.min), pezzi: x.pezzi }]));
-  fs.writeFileSync(process.env.PERCORSI, JSON.stringify(disegni));
-  console.log(`\nPercorsi disegnati: ${Object.keys(disegni).length} in ${process.env.PERCORSI}`);
+  uscite.push({ file: process.env.PERCORSI, contenuto: JSON.stringify(disegni) });
 }
+scriviFilePreparati(uscite);
+console.log('Scritti tutti i file generati' + (process.env.PERCORSI ? ` e ${process.env.PERCORSI}` : ''));

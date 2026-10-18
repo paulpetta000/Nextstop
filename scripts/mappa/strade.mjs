@@ -11,6 +11,7 @@ import zlib from 'node:zlib';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { BOX } from './riquadro.mjs';
+import { scriviFile } from '../scrivi-file.mjs';
 
 const QUI = path.dirname(fileURLToPath(import.meta.url));
 const RADICE = path.join(QUI, '../..');
@@ -163,7 +164,7 @@ const uscita = {
   principali
 };
 const file = path.join(RADICE, 'src/data/strade.json');
-fs.writeFileSync(file, JSON.stringify(uscita));
+scriviFile(file, JSON.stringify(uscita));
 const br = s => zlib.brotliCompressSync(s).length;
 const pesi = Object.values(uscita.pezzi).map(p => br(JSON.stringify(p))).sort((a, b) => a - b);
 console.log(`src/data/strade.json: ${vie.length} vie (scartate ${scartate}), ${pesi.length} pezzi da ${LATO * M.mPerUnit} m, ` +
