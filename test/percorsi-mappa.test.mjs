@@ -1,10 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import fs from 'node:fs';
-const source = fs.readFileSync(new URL('../src/scripts/itinerari/compositore/mappa.js', import.meta.url), 'utf8');
-const da = source.indexOf('const ALFA = '), a = source.indexOf('const traccia = ', da);
-assert.ok(da >= 0 && a > da);
-const decodifica = new Function(source.slice(da, a) + ';return decodifica;')();
+import { decodificaPercorso as decodifica } from '../src/lib/itinerari/percorsi-compressi.mjs';
 
 test('percorsi mappa: non disegna una parte di un percorso con numeri o separatori incompleti', () => {
   for (const s of ['p.AA~B1.A', 'p.A!', 'p.Ag', 'pAA', 'p.' + '_'.repeat(100) + 'A', '.AA']) {

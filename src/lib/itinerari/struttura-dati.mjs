@@ -1,6 +1,7 @@
 // Contratto delle uscite di scripts/itinerari/costruisci.mjs, prima della
 // scrittura e della build. Non certifica fonti, traffico o condizioni sul posto.
 import { leggiCalendarioBus } from './calendario-bus.mjs';
+import { decodificaPercorso } from './percorsi-compressi.mjs';
 const SCENARI = ['feriale', 'sabato', 'sabato-pomeriggio', 'domenica', 'festivo', 'piedi'];
 const record = x => !!x && typeof x === 'object' && !Array.isArray(x);
 const testo = x => typeof x === 'string' && x.length > 0;
@@ -30,6 +31,16 @@ export function verificaStruttura(dati) {
   if (!Array.isArray(T.candidati) || !lista(A.candidati,x=>typeof x==='string') || A.candidati.length !== T.candidati.length) errore('percorsi-alternativi.json','disegni dei candidati incompleti');
   if (!lista(T.linee,x=>record(x)&&testo(x.id)&&testo(x.nome)) || new Set(T.linee.map(x=>x.id)).size!==T.linee.length) errore('tempi-tappe.json','linee mancanti o ripetute');
   const linee=new Set(T.linee.map(x=>x.id));
+  const disegniValidi=new Set();
+  const disegno=(s,vuoto=false)=>{
+    if(s===''&&vuoto)return true;
+    if(typeof s!=='string'||!s||s.split('~').some(p=>!p))return false;
+    if(disegniValidi.has(s))return true;
+    const pezzi=decodificaPercorso(s);
+    if(!pezzi.length||pezzi.some(p=>!p.punti.length||(p.modo!=='p'&&!linee.has(p.modo))))return false;
+    disegniValidi.add(s);return true;
+  };
+  for(let k=0;k<A.candidati.length;k++)if(!disegno(A.candidati[k]))errore('percorsi-alternativi.json',`disegno del candidato ${k} non valido`);
   const corsa=x=>typeof x==='string' && /^[^|]+\|[^|]+\|[^|]+$/.test(x) && linee.has(x.split('|')[0]);
   for (let k=0;k<T.candidati.length;k++) {
     const c=T.candidati[k];
@@ -43,7 +54,7 @@ export function verificaStruttura(dati) {
     if (!record(s)) errore('tempi-tappe.json',`scenario ${nome} mancante`);
     for (const campo of ['min','piedi','salita']) matrice(s[campo],n,quantitativo,'tempi-tappe.json',`${nome}.${campo}`);
     if (nome!=='piedi' || s.mezzi!==undefined) matrice(s.mezzi,n,x=>typeof x==='string','tempi-tappe.json',`${nome}.mezzi`);
-    matrice(D.scenari[nome],n,x=>typeof x==='string'||(nome!=='feriale'&&x===0),'percorsi-tappe.json',nome);
+    matrice(D.scenari[nome],n,(x,i,j)=>(nome!=='feriale'&&x===0)||disegno(x,i===j),'percorsi-tappe.json',nome);
     if (nome==='piedi') continue;
     if (!record(s.senza)) errore('tempi-tappe.json',`${nome}.senza mancante`);
     for (const campo of ['min','piedi']) matrice(s.senza[campo],n,quantitativo,'tempi-tappe.json',`${nome}.senza.${campo}`);
@@ -54,7 +65,7 @@ export function verificaStruttura(dati) {
       for (const k of x) { if (!indice(k,T.candidati.length)) return false; usati.add(k); }
       return true;
     },'tempi-tappe.json',`${nome}.bus`);
-    matrice(A.senza[nome],n,x=>typeof x==='string'||x===0,'percorsi-alternativi.json',nome);
+    matrice(A.senza[nome],n,(x,i,j)=>x===0||disegno(x,i===j),'percorsi-alternativi.json',nome);
   }
   try { leggiCalendarioBus(P); }
   catch(e) { errore('partenze-bus.json',e.message); }

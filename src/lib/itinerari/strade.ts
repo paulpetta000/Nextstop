@@ -11,10 +11,21 @@ export type Pezzo = { g?: string; m?: string; p?: string; v?: string; s?: string
 
 // Un path dei pezzi: «Mx yl dx dy dx dy…» con numeri corti («.5», «-.5», separatore solo quando serve)
 export function rileggi(d: string): Punto[] {
-  const [a, b = ''] = d.slice(1).split('l');
-  const n = (s: string) => (s.match(/-?(?:\d+\.?\d*|\.\d+)/g) || []).map(Number);
-  const r = n(b), p: Punto[] = [n(a) as Punto];
-  for (let i = 0; i + 1 < r.length; i += 2) { const q = p[p.length - 1]; p.push([Math.round((q[0] + r[i]) * 10) / 10, Math.round((q[1] + r[i + 1]) * 10) / 10]); }
+  if (typeof d !== 'string' || !d.startsWith('M')) return [];
+  const parti = d.slice(1).split('l'); if (parti.length > 2) return [];
+  const n = (s: string): number[] | null => {
+    const re = /-?(?:\d+\.?\d*|\.\d+)/g;
+    if (s.replace(re, '').replace(/[\s,]/g, '')) return null;
+    const v = (s.match(re) || []).map(Number); return v.every(Number.isFinite) ? v : null;
+  };
+  const a = n(parti[0]), r = n(parti[1] ?? '');
+  if (!a || a.length !== 2 || !r || r.length % 2) return [];
+  const p: Punto[] = [a as Punto];
+  for (let i = 0; i < r.length; i += 2) {
+    const q = p[p.length - 1], x = Math.round((q[0] + r[i]) * 10) / 10, y = Math.round((q[1] + r[i + 1]) * 10) / 10;
+    if (!Number.isFinite(x) || !Number.isFinite(y)) return [];
+    p.push([x, y]);
+  }
   return p;
 }
 

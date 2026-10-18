@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · cache delle quote
+## Revisione corrente · sessione di almeno 45 minuti
+
+Otto gruppi collegati: matrici/riferimenti, calendario bus, arrivi e accessi, conversioni dei pacchi, XML, cache cartografica, quote e disegni. **414/414 test**, **58 prove aggiunte** rispetto a 356; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Riepilogo, confronti e limiti](docs/storico/2026-10-18-revisione-codice-22.md).
+
+Codice e controlli locali; nessun dato sorgente rigenerato, browser, installazione o pubblicazione. Area 3 ancora aperta: seguito sui costi della ricerca dei nomi con geometrie estreme e moduli non ancora coperti; verifiche UI separate. Nuova idea rinviata anche nell'analisi. Mandato della sessione: almeno 45 minuti senza nuovi OK fra i gruppi, nessuna automazione futura implicita.
+
+## Revisione precedente · cache delle quote
 
 Copertura, metadati, NoData, campioni e griglia finale verificati prima della cache; zero e quote negative valide conservati. **408/408 test**, sei aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-21.md).
 

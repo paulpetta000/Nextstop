@@ -11,6 +11,13 @@ test('rileggi: numeri corti e differenze', () => {
   assert.deepEqual(rileggi('M1 2l'), [[1, 2]]);
 });
 
+test('rileggi: un path incompleto o con testo estraneo non restituisce un pezzo plausibile',()=>{
+ for(const d of ['M0 0l1','M0 0l1 2errore','X0 0l1 2','M0 0l1 2l3 4','M1','M'])assert.deepEqual(rileggi(d),[],d);
+});
+test('rileggi: numeri e somme non finiti non arrivano alla geometria della mappa',()=>{
+ for(const d of ['M'+'9'.repeat(400)+' 0','M0 0l'+'9'.repeat(400)+' 0','M'+'9'.repeat(308)+' 0l'+'9'.repeat(308)+' 0'])assert.deepEqual(rileggi(d),[]);
+});
+
 test('pezziDi: solo i pezzi che toccano la vista, con il margine, e che esistono', () => {
   const esistono = new Set(['0_0', '1_0', '0_1', '1_1', '5_5']);
   assert.deepEqual(pezziDi({ x: 10, y: 10, w: 50, h: 50 }, 256, esistono), ['0_0']);

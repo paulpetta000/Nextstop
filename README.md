@@ -151,6 +151,8 @@ Il generatore prepara i cinque file prima di sostituirli e li marca come gruppo.
 - gli **ingressi del generatore pedonale**: quote, griglie, parametri e riferimenti OSM, con dati fittizi (`test/ingressi-generatore.test.mjs`);
 - le **uscite dei generatori**: preparazione completa, guasti del disco e rifiuto di generazioni miste, senza rigenerare i dati reali (`test/uscite-generatore.test.mjs`, `test/scrivi-file.test.mjs`, `test/generazione-dati.test.mjs`);
 - la **struttura degli output** prima di scrittura e build: matrici complete, punti e indici coerenti, corse usate servite (`test/struttura-dati.test.mjs`);
+- i **calendari bus**, le **conversioni dei pacchi** e i **disegni leggibili** prima della build (`test/calendario-bus.test.mjs`, `test/numeri-pacco.test.mjs`, `test/disegni-output.test.mjs`);
+- i **riquadri XML** e le **cache cartografiche/quote**, con rete e raster fittizi (`test/osm-xml.test.mjs`, `test/download-mappa.test.mjs`, `test/download-quote.test.mjs`);
 - i **dati GTFS** prima dei percorsi: orari, calendario e coordinate, con feed ZIP fittizi (`test/gtfs.test.mjs`);
 - la **firma delle posizioni**, condivisa dalla build e dal generatore in `src/lib/itinerari/firma-posizioni.mjs`: compatibilità con il formato precedente, ordine dei punti, ingressi e arrivi cambiati (`test/firma-posizioni.test.mjs`). Solo Node, senza rigenerare i dati;
 - i **calcoli degli itinerari**: orari e totali, giornata piena, scenari di calendario, apertura dei locali, ripartenza dal vivo e bus con partenze valide/mancanti/esaurite (`test/calcolo-itinerari.test.mjs`). Casi sintetici, senza rete o dati utente;
