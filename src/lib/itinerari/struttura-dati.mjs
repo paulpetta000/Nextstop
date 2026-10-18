@@ -1,5 +1,6 @@
 // Contratto delle uscite di scripts/itinerari/costruisci.mjs, prima della
 // scrittura e della build. Non certifica fonti, traffico o condizioni sul posto.
+import { leggiCalendarioBus } from './calendario-bus.mjs';
 const SCENARI = ['feriale', 'sabato', 'sabato-pomeriggio', 'domenica', 'festivo', 'piedi'];
 const record = x => !!x && typeof x === 'object' && !Array.isArray(x);
 const testo = x => typeof x === 'string' && x.length > 0;
@@ -55,17 +56,15 @@ export function verificaStruttura(dati) {
     },'tempi-tappe.json',`${nome}.bus`);
     matrice(A.senza[nome],n,x=>typeof x==='string'||x===0,'percorsi-alternativi.json',nome);
   }
-  if (!Array.isArray(P.tipi) || !record(P.giorni) || !record(P.fermate) || !Object.values(P.giorni).every(x=>indice(x,P.tipi.length))) errore('partenze-bus.json','calendario incompleto');
+  try { leggiCalendarioBus(P); }
+  catch(e) { errore('partenze-bus.json',e.message); }
   const servite=new Set();
   for (let i=0;i<P.tipi.length;i++) {
     const tipo=P.tipi[i];
-    if (!record(tipo)||!record(tipo.salite)||!record(tipo.viaggi)) errore('partenze-bus.json',`tipo ${i} incompleto`);
-    for (const [k,v] of Object.entries(tipo.viaggi)) {
+    for (const k of Object.keys(tipo.viaggi)) {
       if (!corsa(k)) errore('partenze-bus.json',`corsa ${k} non valida`);
-      const [linea,da,a]=k.split('|'), salita=linea+'|'+da;
+      const [,da,a]=k.split('|');
       if (!proprio(P.fermate,da)||!testo(P.fermate[da])||!proprio(P.fermate,a)||!testo(P.fermate[a])) errore('partenze-bus.json',`fermate mancanti per ${k}`);
-      if (!proprio(tipo.salite,salita)||!lista(tipo.salite[salita],numero)||!tipo.salite[salita].length) errore('partenze-bus.json',`salite mancanti per ${k}`);
-      if (!(numero(v)||(lista(v,numero)&&v.length>=2))) errore('partenze-bus.json',`durata o partenze non valide per ${k}`);
       servite.add(k);
     }
   }

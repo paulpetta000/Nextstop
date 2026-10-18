@@ -16,7 +16,7 @@ function ambiente(mappa = '{') {
   const dati = {
     fs: { readFileSync: () => mappa, writeFileSync: (...x) => scritture.push(x) }, path,
     RADICE: '/sito-fittizio', uscita: { generato: '2026-10-18', firma: 'stesse-posizioni', punti: ['a'], linee: [], scenari: Object.fromEntries(scenari.map(n=>[n,sc(n)])) },
-    firma: 'stesse-posizioni', candidati: [], punti: ['a'], chiaviBus: new Set(), PARTENZE: { tipi: [], giorni: {}, fermate: {} },
+    firma: 'stesse-posizioni', candidati: [], punti: ['a'], chiaviBus: new Set(), PARTENZE: { dal:'20261018', al:'20261018', tipi: [], giorni: {}, fermate: {} },
     GTFS: { feed: {}, date: [], linee: [] }, BUS: { finestre: {} },
     disegni: Object.fromEntries(scenari.map(n=>[n,[[null]]])), disegniSenza: Object.fromEntries(scenari.filter(n=>n!=='piedi').map(n=>[n,[[null]]])), SCENARI: scenari.map(nome=>({nome})), rapporto: [],
     process: { env: {} }, console: { log() {} },

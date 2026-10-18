@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · matrici e riferimenti
+## Revisione corrente · calendario e partenze bus
+
+Lettore condiviso tra generazione/build e browser: date valide, salite presenti, partenze specifiche appartenenti alla fermata e somme finite. Risultato identico sul pacco reale (8.793 candidati, 101 date, sette tipi). **368/368 test**, build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-16.md).
+
+La sessione richiesta di almeno **45 minuti** continua sulla lettura degli orari GTFS e casi collegati. Dati sorgente invariati; nessuna rigenerazione reale, browser, installazione o pubblicazione. Nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · matrici e riferimenti
 
 Controlli strutturali prima di scrittura e build, anche sui dati storici senza marcatura: sei scenari, matrici complete, numeri, punti, candidati e corse effettivamente usate. **364/364 test**, otto aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-15.md).
 

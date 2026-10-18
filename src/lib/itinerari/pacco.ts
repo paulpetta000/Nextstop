@@ -1,5 +1,5 @@
 // Riapre nella pagina il pacco della città fatto durante la build (src/lib/itinerari/napoli.ts, impacchetta)
-import { dataValida } from './date.ts';
+import { leggiCalendarioBus } from './calendario-bus.mjs';
 import { SCENARI, PRIMA, type Citta, type Evento, type Scenario, type Tappa, type Vivo } from './tipi.ts';
 
 export interface Pacco {
@@ -97,22 +97,14 @@ export interface PaccoVivo {
 
 // Le partenze arrivano come differenze: una differenza negativa romperebbe la ricerca della prima corsa.
 const record = (x: unknown): x is Record<string, unknown> => !!x && typeof x === 'object' && !Array.isArray(x);
-const dataFeed = (s: unknown): s is string => typeof s === 'string' && /^\d{8}$/.test(s) && dataValida(s.slice(0, 4) + '-' + s.slice(4, 6) + '-' + s.slice(6));
 const distanzaValida = (x: unknown): x is number => numeroValido(x) && Number.isFinite(x * 10);
 const corsaValida = (x: unknown): x is string => typeof x === 'string' && /^[^|]+\|[^|]+\|[^|]+$/.test(x);
-const somme = (v: number[]) => {
-  if (!Array.isArray(v) || !v.every(numeroValido)) throw new Error('Partenze bus non valide');
-  let c = 0;
-  return v.map(x => { c += x; if (!Number.isFinite(c)) throw new Error('Partenze bus non valide'); return c; });
-};
 
 export function spacchettaVivo(P: PaccoVivo, riferimento?: string): Vivo {
   verificaRiferimento(riferimento, P);
   validaDizionario(P.dizionario);
-  if (!numeroValido(P.preferenza) || !dataFeed(P.dal) || !dataFeed(P.al) || P.dal > P.al || !Array.isArray(P.tipi) || !record(P.giorni) || !record(P.fermate) || !Object.values(P.fermate).every(x => typeof x === 'string')) throw new Error('Calendario bus non valido');
-  for (const [d, tipo] of Object.entries(P.giorni)) {
-    if (!dataFeed(d) || d < P.dal || d > P.al || !indiceValido(tipo, P.tipi.length)) throw new Error('Giorno bus non valido');
-  }
+  if (!numeroValido(P.preferenza)) throw new Error('Calendario bus non valido');
+  const { salite, viaggi } = leggiCalendarioBus(P);
   if (!Array.isArray(P.candidati) || !record(P.senza) || !record(P.bus)) throw new Error('Percorsi bus incompleti');
   const candidati = P.candidati.map(c => {
     if (!Array.isArray(c) || c.length !== 3) throw new Error('Percorso bus incompleto');
@@ -120,18 +112,6 @@ export function spacchettaVivo(P: PaccoVivo, riferimento?: string): Vivo {
     if (!Array.isArray(seg) || !seg.length || !seg.every(x => numeroValido(x) || corsaValida(x)) || !distanzaValida(m) || !indiceValido(z, P.dizionario.length)) throw new Error('Percorso bus non valido');
     return { seg, metri: m * 10, mezzi: P.dizionario[z] };
   });
-  const salite = P.tipi.map(t => {
-    if (!record(t.salite) || !record(t.viaggi)) throw new Error('Tipo di giorno bus incompleto');
-    return new Map(Object.entries(t.salite).map(([k, v]) => [k, somme(v)]));
-  });
-  const viaggi = P.tipi.map(t => new Map<string, { min: number; partenze?: number[] }>(Object.entries(t.viaggi).map(([k, v]) => {
-    if (Array.isArray(v)) {
-      if (v.length < 2 || !numeroValido(v[0])) throw new Error('Viaggio bus non valido');
-      return [k, { min: v[0], partenze: somme(v.slice(1)) }] as const;
-    }
-    if (!numeroValido(v)) throw new Error('Viaggio bus non valido');
-    return [k, { min: v }] as const;
-  })));
   const senza: Vivo['senza'] = {}, bus: Vivo['bus'] = {};
   for (const [s, v] of Object.entries(P.senza)) {
     if (!SCENARI.includes(s as Scenario) || !Array.isArray(v) || v.length % 4) throw new Error('Percorso senza bus incompleto');
