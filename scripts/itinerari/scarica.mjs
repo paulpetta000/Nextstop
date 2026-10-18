@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fromUrl } from 'geotiff';
 import { BOX } from '../mappa/riquadro.mjs';
+import { validaOsm } from './ingressi.mjs';
 
 const dir = process.argv[2];
 if (!dir) throw new Error('Indica la cartella dove salvare i dati scaricati');
@@ -37,7 +38,7 @@ out body;`;
   console.log('OpenStreetMap: scarico strade, scale e linee (può volerci qualche minuto)…');
   // Se un server è occupato provo il successivo, poi riprovo dopo una pausa
   const SERVER = ['https://overpass-api.de/api/interpreter', 'https://overpass.kumi.systems/api/interpreter', 'https://overpass.private.coffee/api/interpreter'];
-  let testo;
+  let testo, datiOsm;
   for (let prova = 0; prova < 9 && !testo; prova++) {
     const server = SERVER[prova % SERVER.length];
     try {
@@ -48,10 +49,11 @@ out body;`;
       });
       if (res.ok) {
         const t = await res.text();
-        // alcuni server di riserva hanno dati di mesi fa: se sono più vecchi di 14 giorni provo il successivo
-        const base = t.slice(0, 2000).match(/"timestamp_osm_base":\s*"([^"]+)"/)?.[1];
+        const dati = JSON.parse(t); validaOsm(dati);
+        // alcuni server di riserva hanno dati di mesi fa: se sono più vecchi di 14 giorni provo il successivo        const base = dati.osm3s?.timestamp_osm_base;
+        if (base !== undefined && (typeof base !== 'string' || !Number.isFinite(Date.parse(base)))) throw new Error('Overpass: data dei dati non valida');
         if (base && Date.now() - Date.parse(base) > 14 * 864e5 && prova < 8) console.log(`${server}: dati vecchi (${base}), provo un altro server`);
-        else { if (base && Date.now() - Date.parse(base) > 14 * 864e5) console.log(`Attenzione: uso dati vecchi (${base}): nessun server ha dati più recenti`); testo = t; break; }
+        else { if (base && Date.now() - Date.parse(base) > 14 * 864e5) console.log(`Attenzione: uso dati vecchi (${base}): nessun server ha dati più recenti`); testo = t; datiOsm = dati; break; }
       }
       else console.log(`${server}: risposta ${res.status}, riprovo`);
     } catch (e) { console.log(`${server}: ${e.message}, riprovo`); }
@@ -59,7 +61,7 @@ out body;`;
   }
   if (!testo) throw new Error('Overpass: nessun server ha risposto');
   fs.writeFileSync(osmFile, testo);
-  const j = JSON.parse(testo);
+  const j = datiOsm;
   console.log(`osm.json: ${(testo.length / 1e6).toFixed(1)} MB, ${j.elements.length} elementi, dati del ${j.osm3s?.timestamp_osm_base}`);
 } else console.log('osm.json già scaricato');
 
@@ -98,7 +100,7 @@ if (!fs.existsSync(busFile)) {
   const res = await fetch(url, { headers: { 'User-Agent': UA } });
   if (!res.ok) throw new Error(`ANM GTFS: risposta ${res.status}`);
   const b = Buffer.from(await res.arrayBuffer());
-  if (b.readUInt32LE(0) !== 0x04034b50) throw new Error('ANM GTFS: il file scaricato non è uno zip');
+  if (b.length < 4 || b.readUInt32LE(0) !== 0x04034b50) throw new Error('ANM GTFS: il file scaricato non è uno zip');
   fs.writeFileSync(busFile, b);
   console.log(`anm-gtfs.zip: ${(b.length / 1e6).toFixed(1)} MB`);
 } else console.log('anm-gtfs.zip già scaricato');

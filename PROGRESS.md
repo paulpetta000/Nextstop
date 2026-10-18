@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · coerenza dei dati differiti
+## Revisione corrente · sessione continuativa del 18 ottobre
+
+Sette gruppi conclusi nella sessione richiesta da Enrico: ingressi/privacy, ZIP/CSV, corse circolari, quote/OSM, decoder mappa, coerenza dei pacchetti e download incompleti. **338/338 test**, **71 prove aggiunte** rispetto a 267; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Riepilogo, prove e seguito](docs/storico/2026-10-18-revisione-codice-13.md). Tutto locale; dati generati sorgente, ID, URL, memoria v1, CSS e dipendenze conservati.
+
+Sessione unica di almeno 35 minuti richiesta il 18/10, senza fermarsi fra i gruppi: nessuna automazione creata. Revisione del codice (area 3) ancora in corso; prossimo gruppo su preparazione/scrittura dei file generati e coerenza degli output. Vecchi client e verifiche browser restano limiti; nessuna pubblicazione. Nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · coerenza dei dati differiti
 
 Pagina e dati differiti ora condividono un riferimento della base dei tempi/proiezione: copie incompatibili vengono rifiutate prima di applicarle; tentativi falliti non restano successi memorizzati. **331/331 test**, build di **12 pagine**, **811 link validi**, **82 risorse**. Verificati sei pacchi e **59 pezzi** coerenti con il pacco iniziale. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-12.md). Vecchi client senza controllo esclusi dalla garanzia; URL, memoria v1 e link condivisi conservati.
 
