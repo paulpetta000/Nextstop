@@ -5,7 +5,7 @@
 import { $, ic, piano, oggi } from './base.js';
 import { T, X, nG } from './stato.js';
 import { aggiorna } from './viste.js';
-import { settimaneDelMese, chiuseDa, mesiDaMostrare, meseDopo, DATA_MIN, DATA_MAX } from '../../../lib/itinerari/calendario';
+import { settimaneDelMese, chiuseDa, mesiDaMostrare, fuocoDelCalendario, meseDopo, DATA_MIN, DATA_MAX } from '../../../lib/itinerari/calendario';
 import { piuGiorni, giornoSettimana, dataLunga, NOMI_GIORNI } from '../../../lib/itinerari/date';
 // lo stile arriva dentro questo file (così il service worker lo tiene con lui per l'uso senza rete) e si mette nella pagina la prima volta
 import STILE from '../../../styles/calendario.css?inline';
@@ -46,7 +46,7 @@ function scelta() {
 
 function disegna() {
   const d = el(), x = X(), mia = x.data ? piuGiorni(x.data, g) : null, mesi = mesiDaMostrare(oggi(), mia ?? undefined);
-  const fuoco = mia && mesi.includes(mia.slice(0, 7)) ? mia : oggi();
+  const fuoco = fuocoDelCalendario(oggi(), mia ?? undefined);
   d.innerHTML = `<div class="cal">
     <div class="cal-testa"><h2 id="cal-t">${g ? `Data del giorno ${g + 1}` : 'Quando parti?'}</h2><button type="button" class="f-chiudi" data-cal="chiudi" aria-label="Chiudi il calendario">${ic('x')}</button></div>
     <p class="cal-nota"><span class="cal-punto" aria-hidden="true"></span>Il punto giallo: ${g ? 'con quel giorno' : 'partendo quel giorno'} qualcosa è chiuso.</p>

@@ -52,3 +52,26 @@ test('i mesi non escono dai limiti del compositore (2026–2030)', () => {
   assert.equal(mesiDaMostrare('2030-06-10').at(-1), '2030-12');
   assert.equal(mesiDaMostrare('2025-12-31')[0], '2026-01');
 });
+
+test('un vecchio link fuori dai limiti conserva il proprio mese senza generare gli anni intermedi', () => {
+  for (const data of ['2025-12-31', '2031-01-01', '0100-01-01', '9999-12-31']) {
+    const mesi = mesiDaMostrare('2026-10-18', data);
+    assert.ok(mesi.includes(data.slice(0, 7)), data);
+    assert.ok(mesi.includes('2026-10'), 'resta accessibile anche la finestra ordinaria');
+    assert.ok(mesi.length <= 61, 'al massimo i 60 mesi ammessi e il mese storico');
+    assert.deepEqual(mesi, [...new Set(mesi)].sort());
+  }
+});
+
+test('anche dopo il 2030 il calendario offre giorni nei limiti invece di essere vuoto', () => {
+  assert.deepEqual(mesiDaMostrare('2031-01-01'), ['2030-12']);
+  assert.equal(mesiDaMostrare('9999-12-31')[0], '2030-12');
+});
+
+test('il numero di mesi richiesto non può superare il periodo ammesso o far sparire la griglia', () => {
+  for (const quanti of [0, -1, NaN, Infinity, 1e12]) {
+    const mesi = mesiDaMostrare('2026-10-18', undefined, quanti);
+    assert.ok(mesi.length > 0 && mesi.length <= 60, String(quanti));
+    assert.equal(mesi[0], '2026-10');
+  }
+});

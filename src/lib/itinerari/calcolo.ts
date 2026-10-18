@@ -280,7 +280,8 @@ export function lontane(C: Citta, it: Itinerario, g: number, fatte: Set<string> 
       if (k === g || A.gita) return;
       const altre = A.tappe.filter(x => tappaDi(C, x)?.tipo === 'citta');
       if (!altre.length) return;
-      const e = inserimento(C, s, altre, id);
+      const destinazione = scenarioDi(dataDelGiorno(it, k), A.inizio, it.piedi);
+      const e = inserimento(C, destinazione, altre, id);
       if (e < meglio) { meglio = e; giorno = k; }
     });
     if (giorno === it.giorni.length) {
