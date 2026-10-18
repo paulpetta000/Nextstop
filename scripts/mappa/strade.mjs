@@ -13,6 +13,32 @@ import { fileURLToPath } from 'node:url';
 import { BOX } from './riquadro.mjs';
 import { scriviFile } from '../scrivi-file.mjs';
 
+// Solo il risultato della query «way[highway]; out tags geom»: non un JSON parziale o un'altra esportazione OSM.
+function leggiStrade(contenuto) {
+  const errore = messaggio => { throw new Error('Strade OSM: ' + messaggio); };
+  let osm;
+  try { osm = JSON.parse(typeof contenuto === 'string' ? contenuto : new TextDecoder('utf-8', { fatal: true }).decode(contenuto)); }
+  catch { errore('JSON non valido o UTF-8 incompleto'); }
+  if (!osm || typeof osm !== 'object' || Array.isArray(osm) || osm.version !== 0.6 || !Array.isArray(osm.elements)) errore('risposta Overpass non valida');
+  if (Object.hasOwn(osm, 'remark')) errore('risposta Overpass parziale: ' + String(osm.remark).slice(0, 160));
+  const data = osm.osm3s?.timestamp_osm_base;
+  if (typeof data !== 'string' || !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}Z$/.test(data) ||
+      !Number.isFinite(Date.parse(data)) || new Date(data).toISOString() !== data.replace('Z', '.000Z')) errore('data della fonte assente o non valida');
+  if (!osm.elements.length) errore('nessuna via nel riquadro della città');
+  const ids = new Set();
+  for (const w of osm.elements) {
+    if (!w || w.type !== 'way' || !Number.isSafeInteger(w.id) || w.id <= 0) errore('via o ID non valido');
+    if (ids.has(w.id)) errore('ID di via ripetuto: ' + w.id);
+    ids.add(w.id);
+    if (!w.tags || typeof w.tags !== 'object' || Array.isArray(w.tags) || typeof w.tags.highway !== 'string' ||
+        Object.values(w.tags).some(v => typeof v !== 'string')) errore('tag non testuali nella via ' + w.id);
+    if (!Array.isArray(w.geometry) || w.geometry.length < 2) errore('geometria incompleta nella via ' + w.id);
+    for (const p of w.geometry) if (!p || !Number.isFinite(p.lat) || !Number.isFinite(p.lon) ||
+        Math.abs(p.lat) > 90 || Math.abs(p.lon) > 180) errore('coordinate non valide nella via ' + w.id);
+  }
+  return osm;
+}
+
 const QUI = path.dirname(fileURLToPath(import.meta.url));
 const RADICE = path.join(QUI, '../..');
 const LATO = 256; // unità: 1,28 km
@@ -21,9 +47,16 @@ if (process.argv[2] === 'scarica') {
   const f = process.argv[3];
   if (!f) throw new Error('Manca il file: node scripts/mappa/strade.mjs scarica <file.json>');
   const q = `[out:json][timeout:240];way[highway](${BOX.s},${BOX.w},${BOX.n},${BOX.e});out tags geom;`;
-  const codice = execFileSync('curl', ['-sS', '--compressed', '--max-time', '300', '-A', 'nextstop-itinerari/1.0 (map build)', '-o', f, '-w', '%{http_code}',
-    '--data-urlencode', `data=${q}`, 'https://overpass-api.de/api/interpreter']).toString();
-  if (codice !== '200') throw new Error(`Overpass ha risposto ${codice}`);
+  const temporanea = fs.mkdtempSync(path.join(path.dirname(path.resolve(f)), '.nextstop-strade-'));
+  const provvisorio = path.join(temporanea, 'risposta.json');
+  try {
+    const codice = execFileSync('curl', ['-sS', '--compressed', '--max-time', '300', '-A', 'nextstop-itinerari/1.0 (map build)', '-o', provvisorio, '-w', '%{http_code}',
+      '--data-urlencode', `data=${q}`, 'https://overpass-api.de/api/interpreter']).toString();
+    if (codice !== '200') throw new Error(`Overpass ha risposto ${codice}`);
+    const dati = fs.readFileSync(provvisorio);
+    leggiStrade(dati);
+    scriviFile(f, dati);
+  } finally { fs.rmSync(provvisorio, { force: true }); fs.rmdirSync(temporanea); }
   console.log(`${f}: ${(fs.statSync(f).size / 1e6).toFixed(1)} MB. Ora: node scripts/mappa/strade.mjs ${f}`);
   process.exit(0);
 }
@@ -32,19 +65,26 @@ const M = JSON.parse(fs.readFileSync(path.join(RADICE, 'src/data/mappa.json'), '
 if (JSON.stringify(M.box) !== JSON.stringify(BOX)) throw new Error('Il riquadro di src/data/mappa.json non è quello di riquadro.mjs: rifai prima la mappa');
 const KX = M.w / (M.box.e - M.box.w), KY = M.h / (M.box.n - M.box.s);
 const P = (lat, lon) => [(lon - M.box.w) * KX, (M.box.n - lat) * KY];
-const osm = JSON.parse(fs.readFileSync(process.argv[2], 'utf8'));
+const osm = leggiStrade(fs.readFileSync(process.argv[2]));
 
 // Douglas-Peucker: toglie i punti che non cambiano la forma più di «tol» unità (0,35 = 1,75 m)
 function semplifica(pts, tol) {
   if (pts.length < 3) return pts;
-  const [a, b] = [pts[0], pts[pts.length - 1]];
-  let max = 0, k = 0;
-  const dx = b[0] - a[0], dy = b[1] - a[1], L = Math.hypot(dx, dy) || 1e-9;
-  for (let i = 1; i < pts.length - 1; i++) {
-    const d = Math.abs(dy * pts[i][0] - dx * pts[i][1] + b[0] * a[1] - b[1] * a[0]) / L;
-    if (d > max) { max = d; k = i; }
+  // Stessi tagli di Douglas-Peucker, ma senza una chiamata annidata per ogni punto della catena.
+  const tieni = new Uint8Array(pts.length), pila = [[0, pts.length - 1]];
+  tieni[0] = tieni[pts.length - 1] = 1;
+  while (pila.length) {
+    const [da, a] = pila.pop();
+    const p = pts[da], q = pts[a];
+    let max = 0, k = da;
+    const dx = q[0] - p[0], dy = q[1] - p[1], L = Math.hypot(dx, dy) || 1e-9;
+    for (let i = da + 1; i < a; i++) {
+      const d = Math.abs(dy * pts[i][0] - dx * pts[i][1] + q[0] * p[1] - q[1] * p[0]) / L;
+      if (d > max) { max = d; k = i; }
+    }
+    if (max > tol) { tieni[k] = 1; pila.push([da, k], [k, a]); }
   }
-  return max > tol ? [...semplifica(pts.slice(0, k + 1), tol).slice(0, -1), ...semplifica(pts.slice(k), tol)] : [a, b];
+  return pts.filter((_, i) => tieni[i]);
 }
 const lunghezza = pts => pts.slice(1).reduce((s, p, i) => s + Math.hypot(p[0] - pts[i][0], p[1] - pts[i][1]), 0);
 
@@ -132,9 +172,9 @@ function taglia(pts) {
   const per = new Map();
   for (let i = 1; i < pts.length; i++) {
     const a = pts[i - 1], b = pts[i];
-    for (let x = Math.floor(Math.min(a[0], b[0]) / LATO); x <= Math.floor(Math.max(a[0], b[0]) / LATO); x++)
-      for (let y = Math.floor(Math.min(a[1], b[1]) / LATO); y <= Math.floor(Math.max(a[1], b[1]) / LATO); y++) {
-        if (x < 0 || y < 0 || x >= NX || y >= NY) continue;
+    // Le celle esterne erano già scartate: limita il ciclo prima di visitarle.
+    for (let x = Math.max(0, Math.floor(Math.min(a[0], b[0]) / LATO)); x <= Math.min(NX - 1, Math.floor(Math.max(a[0], b[0]) / LATO)); x++)
+      for (let y = Math.max(0, Math.floor(Math.min(a[1], b[1]) / LATO)); y <= Math.min(NY - 1, Math.floor(Math.max(a[1], b[1]) / LATO)); y++) {
         const k = `${x}_${y}`;
         if (!per.has(k)) per.set(k, []);
         const L = per.get(k), ult = L[L.length - 1];

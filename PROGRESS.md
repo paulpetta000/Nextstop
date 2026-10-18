@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · calendario e suggerimenti fra giorni
+## Revisione corrente · preparazione delle strade
+
+Download verificato prima della sostituzione, conservazione della copia precedente, geometrie/metadati controllati; suddivisione limitata alle celle interne e semplificazione senza ricorsione. **437/437 test**, nove aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. Confronto completo identico su 4.000 vie sintetiche. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-25.md).
+
+Continua la sessione richiesta di almeno **45 minuti** sul calcolo dei pasti. Nessun download cartografico reale, rigenerazione dei dati sorgente, browser, installazione o pubblicazione. Area 3 aperta; nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · calendario e suggerimenti fra giorni
 
 Mese storico dei vecchi link conservato, finestra limitata e ingresso da tastiera su un giorno abilitato; suggerimenti valutati con data/ora del giorno di destinazione. **428/428 test**, otto aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-24.md).
 
