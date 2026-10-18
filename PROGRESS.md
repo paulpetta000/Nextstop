@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · ingressi e dati del generatore
+## Revisione corrente · lettori ZIP e CSV
+
+Conclusi i controlli del lettore GTFS su integrità, offset, decompressione e CSV: rifiuti espliciti per file corrotti o formati non supportati. Compatibilità verificata con stored/deflate, commenti, descrittori con/senza firma, UTF-8/BOM/CRLF; 120 mutazioni deterministiche controllate. **302/302 test**, build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove, limiti e riferimenti](docs/storico/2026-10-18-revisione-codice-8.md). Nessun dato generato o dipendenza cambiato.
+
+La sessione di almeno 35 minuti continua: prossimo gruppo su coerenza delle tabelle e corse che ripassano dalla stessa fermata. Browser, installazioni e pubblicazione esclusi; nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · ingressi e dati del generatore
 
 Concluso il gruppo su pacchetto bus, generatore GTFS e privacy dei link. Valori non validi rifiutati prima del calcolo, città precedente conservata in caso di errore e nota Condividi allineata a Privacy. Risultato del decoder identico sui dati pubblici reali: 8.793 candidati e 101 date. **288/288 test**, build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-7.md). Nessun dato generato, formato, CSS o dipendenza cambiato.
 

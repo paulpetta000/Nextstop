@@ -9,47 +9,95 @@
 import fs from 'node:fs';
 import zlib from 'node:zlib';
 
-// ---------- Zip (senza librerie: directory centrale e blocchi «deflate») ----------
+// ---------- Zip ordinario (stored/deflate, senza estrarre file su disco) ----------
+// Limiti del lettore locale, non limiti dello standard GTFS: impediscono allocazioni senza controllo.
+const MAX_ARCHIVIO = 256 * 1024 * 1024, MAX_TABELLA = 256 * 1024 * 1024, MAX_TOTALE = 512 * 1024 * 1024;
 function leggiZip(file) {
+  const errore = dettaglio => { throw new Error('GTFS ZIP: ' + dettaglio); };
+  if (fs.statSync(file).size > MAX_ARCHIVIO) errore('archivio oltre il limite di 256 MiB');
   const b = fs.readFileSync(file);
+  const dentro = (p, n, limite = b.length) => Number.isSafeInteger(p) && p >= 0 && n >= 0 && p + n <= limite;
   let e = b.length - 22;
-  while (e >= 0 && b.readUInt32LE(e) !== 0x06054b50) e--;
-  if (e < 0) throw new Error(`${file}: non è un file zip`);
-  const n = b.readUInt16LE(e + 10);
-  let p = b.readUInt32LE(e + 16);
-  const out = new Map();
+  // Una firma dentro il commento non basta: commento e posizione della directory devono combaciare.
+  for (; e >= Math.max(0, b.length - 22 - 65535); e--) {
+    if (b.readUInt32LE(e) === 0x06054b50 && e + 22 + b.readUInt16LE(e + 20) === b.length && b.readUInt32LE(e + 16) + b.readUInt32LE(e + 12) === e) break;
+  }
+  if (e < Math.max(0, b.length - 22 - 65535)) errore('directory finale mancante o non valida');
+  const n = b.readUInt16LE(e + 10), inizioDir = b.readUInt32LE(e + 16);
+  if (b.readUInt16LE(e + 4) || b.readUInt16LE(e + 6) || b.readUInt16LE(e + 8) !== n || n === 0xffff || inizioDir === 0xffffffff) errore('archivi multiparte o ZIP64 non supportati');
+  let p = inizioDir, totale = 0;
+  const out = new Map(), intervalli = [];
   for (let i = 0; i < n; i++) {
-    const metodo = b.readUInt16LE(p + 10), compresso = b.readUInt32LE(p + 20);
-    const lNome = b.readUInt16LE(p + 28), lExtra = b.readUInt16LE(p + 30), lCommento = b.readUInt16LE(p + 32);
-    const locale = b.readUInt32LE(p + 42);
-    const nome = b.toString('utf8', p + 46, p + 46 + lNome);
-    const inizio = locale + 30 + b.readUInt16LE(locale + 26) + b.readUInt16LE(locale + 28);
-    const dati = b.subarray(inizio, inizio + compresso);
-    out.set(nome.split('/').pop(), () => (metodo === 0 ? dati : zlib.inflateRawSync(dati)).toString('utf8'));
+    if (!dentro(p, 46, e) || b.readUInt32LE(p) !== 0x02014b50) errore('intestazione della directory non valida');
+    const flag = b.readUInt16LE(p + 8), metodo = b.readUInt16LE(p + 10), crc = b.readUInt32LE(p + 16);
+    const compresso = b.readUInt32LE(p + 20), dimensione = b.readUInt32LE(p + 24);
+    const lNome = b.readUInt16LE(p + 28), lExtra = b.readUInt16LE(p + 30), lCommento = b.readUInt16LE(p + 32), locale = b.readUInt32LE(p + 42);
+    if (!dentro(p, 46 + lNome + lExtra + lCommento, e) || !lNome || !dentro(locale, 30, inizioDir)) errore('offset o lunghezze non validi');
+    if (flag & 0x2041 || ![0, 8].includes(metodo) || b.readUInt16LE(p + 34)) errore('cifratura, disco o metodo non supportati');
+    totale += dimensione;
+    if (dimensione > MAX_TABELLA || totale > MAX_TOTALE) errore('dimensioni delle tabelle oltre il limite');
+    if (b.readUInt32LE(locale) !== 0x04034b50 || b.readUInt16LE(locale + 6) !== flag || b.readUInt16LE(locale + 8) !== metodo) errore('intestazione locale incoerente');
+    const nomeBytes = b.subarray(p + 46, p + 46 + lNome), nome = nomeBytes.toString('utf8');
+    const nomeLocale = b.readUInt16LE(locale + 26), extraLocale = b.readUInt16LE(locale + 28);
+    const inizio = locale + 30 + nomeLocale + extraLocale, fine = inizio + compresso;
+    if (!dentro(locale, 30 + nomeLocale + extraLocale + compresso, inizioDir) || !nomeBytes.equals(b.subarray(locale + 30, locale + 30 + nomeLocale))) errore('nome o contenuto locale non valido');
+    let fineRecord = fine;
+    if (flag & 8) {
+      const descrittore = d => dentro(d, 12, inizioDir) && b.readUInt32LE(d) === crc && b.readUInt32LE(d + 4) === compresso && b.readUInt32LE(d + 8) === dimensione;
+      if (descrittore(fine)) fineRecord += 12;
+      else if (dentro(fine, 4, inizioDir) && b.readUInt32LE(fine) === 0x08074b50 && descrittore(fine + 4)) fineRecord += 16;
+      else errore('descrittore del contenuto non valido');
+    } else if (b.readUInt32LE(locale + 14) !== crc || b.readUInt32LE(locale + 18) !== compresso || b.readUInt32LE(locale + 22) !== dimensione) errore('dimensioni o CRC locali incoerenti');
+    intervalli.push([locale, fineRecord]);
+    if (!nome.endsWith('/')) {
+      const chiave = nome.split('/').pop();
+      if (out.has(chiave)) errore('tabella duplicata o omonima: ' + chiave);
+      out.set(chiave, () => {
+        let dati;
+        try { dati = metodo === 0 ? b.subarray(inizio, fine) : zlib.inflateRawSync(b.subarray(inizio, fine), { maxOutputLength: Math.max(1, dimensione) }); }
+        catch { errore('contenuto compresso non valido: ' + nome); }
+        if (dati.length !== dimensione || zlib.crc32(dati) !== crc) errore('lunghezza o CRC errati: ' + nome);
+        try { return new TextDecoder('utf-8', { fatal: true }).decode(dati); }
+        catch { errore('testo UTF-8 non valido: ' + nome); }
+      });
+    }
     p += 46 + lNome + lExtra + lCommento;
   }
+  if (p !== e) errore('dimensione della directory incoerente');
+  intervalli.sort((a, b) => a[0] - b[0]);
+  for (let i = 1; i < intervalli.length; i++) if (intervalli[i][0] < intervalli[i - 1][1]) errore('contenuti sovrapposti');
   return out;
 }
 
-// ---------- CSV (campi tra virgolette, con virgole e "" dentro) ----------
-function campi(l) {
-  const o = []; let c = '', q = false;
+// ---------- CSV GTFS: campi tra virgolette, virgole e "" dentro; niente righe interne ----------
+function campi(l, errore) {
+  const o = []; let c = '', q = false, chiusa = false;
   for (let i = 0; i < l.length; i++) {
     const ch = l[i];
-    if (q) { if (ch === '"') { if (l[i + 1] === '"') { c += '"'; i++; } else q = false; } else c += ch; }
+    if (q) {
+      if (ch === '"') { if (l[i + 1] === '"') { c += '"'; i++; } else { q = false; chiusa = true; } }
+      else c += ch;
+    } else if (ch === ',') { o.push(c); c = ''; chiusa = false; }
+    else if (chiusa || (ch === '"' && c)) errore('virgolette non valide');
     else if (ch === '"') q = true;
-    else if (ch === ',') { o.push(c); c = ''; }
     else c += ch;
   }
-  o.push(c);
-  return o;
+  if (q) errore('virgolette non chiuse');
+  o.push(c); return o;
 }
 function tabella(zip, nome, { obbligatoria = true } = {}) {
-  const f = zip.get(`${nome}.txt`);
-  if (!f) { if (obbligatoria) throw new Error(`GTFS: manca ${nome}.txt`); return []; }
-  const righe = f().replace(/^﻿/, '').split(/\r?\n/).filter(Boolean);
-  const h = campi(righe[0]).map(s => s.trim());
-  return righe.slice(1).map(r => { const v = campi(r); const o = {}; h.forEach((k, i) => { o[k] = v[i]; }); return o; });
+  const f = zip.get(nome + '.txt');
+  if (!f) { if (obbligatoria) throw new Error('GTFS: manca ' + nome + '.txt'); return []; }
+  const errore = dettaglio => { throw new Error('GTFS CSV ' + nome + '.txt: ' + dettaglio); };
+  const righe = f().replace(/^\uFEFF/, '').split(/\r?\n/).filter(Boolean);
+  if (!righe.length) errore('intestazione mancante');
+  const h = campi(righe[0], errore).map(s => s.trim());
+  if (h.some(s => !s) || new Set(h).size !== h.length) errore('colonne vuote o duplicate');
+  return righe.slice(1).map((r, numero) => {
+    const v = campi(r, errore);
+    if (v.length !== h.length) errore('numero di campi diverso dalle colonne alla riga ' + (numero + 2));
+    return Object.fromEntries(h.map((k, i) => [k, v[i]]));
+  });
 }
 
 const minuti = s => {
