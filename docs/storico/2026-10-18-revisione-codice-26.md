@@ -30,7 +30,7 @@ Un locale senza orari pubblicati o con arrivo oltre mezzanotte non viene più co
 | [25](2026-10-18-revisione-codice-25.md) | Download delle strade, geometrie, suddivisione e semplificazione | 437 |
 | Questo | Proposta e inserimento dei pasti, memoria, attesa e aperture sconosciute | 451 |
 
-Da **414 a 451 prove: 37 aggiunte**. Inizio alle **10:53:07 UTC**; interruzione forzata intorno alle **11:32 UTC**, dopo circa 39 minuti, perché il controllo automatico delle autorizzazioni non poteva completarsi per quota. Non è stato un rifiuto per rischio. Ripresa su «continua» di Enrico alle **17:52:34 UTC**: il tempo dell'interruzione non conta come lavoro e non permette di dichiarare 45 minuti ininterrotti. La chiusura della ripresa è registrata nello stato finale.
+Da **414 a 451 prove: 37 aggiunte**. Inizio alle **10:53:07 UTC**; interruzione forzata intorno alle **11:32 UTC**, dopo circa 39 minuti, perché il controllo automatico delle autorizzazioni non poteva completarsi per quota. Non è stato un rifiuto per rischio. Ripresa su «continua» di Enrico alle **17:52:34 UTC**: il tempo dell'interruzione non conta come lavoro e non permette di dichiarare 45 minuti ininterrotti. Chiusura documentale della ripresa: **2026-10-18 17:58:46 UTC**. I controlli finali sono quelli del codice 1cfb6fa; dopo di essi cambia soltanto documentazione.
 
 ## Limiti e seguito
 

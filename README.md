@@ -185,7 +185,7 @@ Il workflow non rende obbligatori i controlli prima del merge e non blocca un de
 ## Altro
 
 - Mappa: `scripts/mappa/` (dati © OpenStreetMap, ODbL). Il riquadro è in `scripts/mappa/riquadro.mjs`; per rifarla: `node scripts/mappa/scarica.mjs <cartella>` e poi `node scripts/mappa/costruisci.mjs <cartella>`.
-- Strade a pezzi per la mappa del compositore nuovo (specifica §6, pronte ma non ancora usate dalla pagina): `node scripts/mappa/strade.mjs scarica <file.json>` e poi `node scripts/mappa/strade.mjs <file.json>` scrivono `src/data/strade.json` (59 pezzi da 1,28 km con vicoli, scale, pedonali e nomi delle vie); la build li serve in `/napoli/itinerari/strade/<pezzo>.json`; i calcoli (pezzi della vista, vie del percorso) sono in `src/lib/itinerari/strade.ts`.
+- Strade a pezzi usate dalla mappa del compositore (specifica §6): `node scripts/mappa/strade.mjs scarica <file.json>` e poi `node scripts/mappa/strade.mjs <file.json>` scrivono `src/data/strade.json` (59 pezzi da 1,28 km con vicoli, scale, pedonali e nomi delle vie); la build li serve in `/napoli/itinerari/strade/<pezzo>.json`; i calcoli (pezzi della vista, vie del percorso) sono in `src/lib/itinerari/strade.ts`.
 - Font: `scripts/font/prepara.py` (licenza SIL OFL).
 - Marchio (la soglia astratta): `src/lib/marchio.mjs`, nella pagina `src/components/Marchio.astro`; icone dell'app e favicon: `node scripts/icone.mjs`.
 - Portico di piperno della home: `src/lib/portico.mjs` e `src/components/Campata.astro`; la pietra (`src/assets/pietra/piperno.webp`) si rifà con `node scripts/pietra.mjs`.

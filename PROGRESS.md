@@ -8,6 +8,8 @@ Proposta e inserimento del pasto condividono il calcolo con bus, pause, margini 
 
 Quattro gruppi collegati. Sessione richiesta di almeno **45 minuti**, interrotta dopo circa 39 minuti dal controllo automatico delle autorizzazioni per quota, ripresa su «continua» alle **17:52:34 UTC**. L'interruzione non conta come lavoro e non è una sessione ininterrotta. Nessun browser, download cartografico reale, rigenerazione dei dati sorgente, installazione o pubblicazione. Area 3 aperta: seguito sul trascinamento attuale, ricerca/filtri e registro storico. Nuova idea rinviata anche nell'analisi.
 
+Chiusura documentale della ripresa: **2026-10-18 17:58:46 UTC**. Codice verificato **1cfb6fa**; nessun controllo eseguibile da ripetere per questa sola precisazione documentale.
+
 ## Revisione precedente · preparazione delle strade
 
 Download verificato prima della sostituzione, conservazione della copia precedente, geometrie/metadati controllati; suddivisione limitata alle celle interne e semplificazione senza ricorsione. **437/437 test**, nove aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. Confronto completo identico su 4.000 vie sintetiche. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-25.md).
