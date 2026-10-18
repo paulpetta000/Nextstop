@@ -74,21 +74,49 @@ export type NomeSulPercorso = { nome: string; L: number; punti: Punto[] };
 // «vicino» unità (15 m); i tratti di almeno «minimo» unità (120 m) sulla stessa via danno il nome (un buco di due punti non li
 // interrompe). Una volta per via, il tratto più lungo, scritto da sinistra a destra lungo il percorso stesso.
 export function nomiDelPercorso(linee: Punto[][], vie: Via[], { vicino = 3, minimo = 24 } = {}): NomeSulPercorso[] {
+  // Sono etichette facoltative: con dati non validi o lavoro sproporzionato si rinuncia all'intero elenco,
+  // senza bloccare il disegno o mostrare un risultato parziale. Limiti di lavoro, non confini geografici.
+  const MAX_CAMPIONI = 100_000, MAX_RIFERIMENTI = 200_000, MAX_CONFRONTI = 2_000_000;
+  if (!Array.isArray(linee) || !Array.isArray(vie) || !linee.length || !vie.length ||
+      !Number.isFinite(vicino) || vicino <= 0 || !Number.isFinite(minimo) || minimo < 0) return [];
+  const puntoValido = (p: Punto) => Array.isArray(p) && p.length === 2 && Number.isFinite(p[0]) && Number.isFinite(p[1]);
+  let campioni = 0;
+  for (const linea of linee) {
+    if (!Array.isArray(linea)) return [];
+    for (const p of linea) if (!puntoValido(p)) return [];
+    for (let i = 1; i < linea.length; i++) {
+      campioni += Math.max(1, Math.ceil(dist(linea[i - 1], linea[i]) / 2)) + (i === 1 ? 1 : 0);
+      if (!Number.isSafeInteger(campioni) || campioni > MAX_CAMPIONI) return [];
+    }
+  }
+  if (!campioni) return [];
   const C = 16, griglia = new Map<string, [number, Punto, Punto][]>();
-  vie.forEach((v, q) => {
+  let riferimenti = 0;
+  for (let q = 0; q < vie.length; q++) {
+    const v = vie[q];
+    if (!v || typeof v.nome !== 'string' || !Array.isArray(v.punti)) return [];
+    for (const p of v.punti) if (!puntoValido(p)) return [];
     for (let i = 1; i < v.punti.length; i++) {
       const a = v.punti[i - 1], b = v.punti[i];
-      for (let x = Math.floor((Math.min(a[0], b[0]) - vicino) / C); x <= Math.floor((Math.max(a[0], b[0]) + vicino) / C); x++)
-        for (let y = Math.floor((Math.min(a[1], b[1]) - vicino) / C); y <= Math.floor((Math.max(a[1], b[1]) + vicino) / C); y++) {
+      const x0 = Math.floor((Math.min(a[0], b[0]) - vicino) / C), x1 = Math.floor((Math.max(a[0], b[0]) + vicino) / C);
+      const y0 = Math.floor((Math.min(a[1], b[1]) - vicino) / C), y1 = Math.floor((Math.max(a[1], b[1]) + vicino) / C);
+      riferimenti += (x1 - x0 + 1) * (y1 - y0 + 1);
+      if (![x0, x1, y0, y1].every(Number.isSafeInteger) || !Number.isSafeInteger(riferimenti) || riferimenti > MAX_RIFERIMENTI) return [];
+      for (let x = x0; x <= x1; x++)
+        for (let y = y0; y <= y1; y++) {
           const k = `${x},${y}`;
           if (!griglia.has(k)) griglia.set(k, []);
           griglia.get(k)!.push([q, a, b]);
         }
     }
-  });
+  }
+  let confronti = 0, esauriti = false;
   const via = (p: Punto) => {
     let nome: string | null = null, migliore = vicino;
-    for (const [q, a, b] of griglia.get(`${Math.floor(p[0] / C)},${Math.floor(p[1] / C)}`) || []) { const d = distSeg(p, a, b); if (d < migliore) { migliore = d; nome = vie[q].nome; } }
+    for (const [q, a, b] of griglia.get(`${Math.floor(p[0] / C)},${Math.floor(p[1] / C)}`) || []) {
+      if (++confronti > MAX_CONFRONTI) { esauriti = true; return null; }
+      const d = distSeg(p, a, b); if (d < migliore) { migliore = d; nome = vie[q].nome; }
+    }
     return nome;
   };
   const migliori = new Map<string, { L: number; punti: Punto[] }>();
@@ -96,7 +124,11 @@ export function nomiDelPercorso(linee: Punto[][], vie: Via[], { vicino = 3, mini
     const camp: { p: Punto; nome: string | null }[] = [];
     for (let i = 1; i < linea.length; i++) {
       const a = linea[i - 1], b = linea[i], n = Math.max(1, Math.ceil(dist(a, b) / 2));
-      for (let k = i === 1 ? 0 : 1; k <= n; k++) { const p: Punto = [a[0] + (b[0] - a[0]) * k / n, a[1] + (b[1] - a[1]) * k / n]; camp.push({ p, nome: via(p) }); }
+      for (let k = i === 1 ? 0 : 1; k <= n; k++) {
+        const p: Punto = [a[0] + (b[0] - a[0]) * k / n, a[1] + (b[1] - a[1]) * k / n];
+        camp.push({ p, nome: via(p) });
+        if (esauriti) return [];
+      }
     }
     for (let i = 0; i < camp.length;) {
       const nome = camp[i].nome;

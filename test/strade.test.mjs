@@ -84,6 +84,49 @@ const provaPezzi = corpo => {
   const r = spawnSync(process.execPath, ['--experimental-strip-types', '--no-warnings=ExperimentalWarning', '--input-type=module', '-e', codice], { encoding: 'utf8', timeout: 1500 });
   assert.equal(r.status, 0, r.error?.message || r.stderr || 'Selezione dei pezzi bloccata');
 };
+
+const provaNomi = corpo => {
+  const codice = 'import assert from "node:assert/strict";import {nomiDelPercorso} from ' + JSON.stringify(new URL('../src/lib/itinerari/strade.ts', import.meta.url).href) + ';' + corpo;
+  const r = spawnSync(process.execPath, ['--experimental-strip-types', '--no-warnings=ExperimentalWarning', '--input-type=module', '-e', codice], { encoding: 'utf8', timeout: 1500 });
+  assert.equal(r.status, 0, r.error?.message || r.stderr || 'Ricerca dei nomi bloccata');
+};
+
+test('nomiDelPercorso: una via enorme non avvia miliardi di celle', () => {
+  provaNomi('assert.deepEqual(nomiDelPercorso([[[0,0],[40,0]]],[{nome:"Via fittizia",punti:[[0,0],[1e12,0]]}]),[]);');
+});
+
+test('nomiDelPercorso: anche il campionamento di una linea enorme ha un limite', () => {
+  provaNomi('assert.deepEqual(nomiDelPercorso([[[0,0],[1e12,0]]],[{nome:"Via fittizia",punti:[[0,0],[40,0]]}]),[]);');
+});
+
+test('nomiDelPercorso: gli indici fuori dalla precisione intera non fermano il ciclo', () => {
+  provaNomi('assert.deepEqual(nomiDelPercorso([[[1e20,0],[1e20,0]]],[{nome:"Via fittizia",punti:[[1e20,0],[1e20,0]]}]),[]);');
+});
+
+test('nomiDelPercorso: opzioni e geometrie non valide non producono nomi parziali', () => {
+  const linee = [[[0, 0], [40, 0]]], vie = [{ nome: 'Via fittizia', punti: [[0, 0], [40, 0]] }];
+  for (const opzioni of [{ vicino: -1 }, { vicino: NaN }, { minimo: NaN }, { minimo: -1 }]) {
+    assert.deepEqual(nomiDelPercorso(linee, vie, opzioni), []);
+  }
+  for (const punto of [[NaN, 0], [0, Infinity], [0], null]) {
+    assert.deepEqual(nomiDelPercorso([...linee, [[0, 0], punto]], vie), []);
+    assert.deepEqual(nomiDelPercorso(linee, [...vie, { nome: 'Non valida', punti: [[0, 0], punto] }]), []);
+  }
+  provaNomi('assert.deepEqual(nomiDelPercorso([[[0,0],[40,0]]],[{nome:"Via fittizia",punti:[[0,0],[40,0]]}],{vicino:Infinity}),[]);');
+});
+
+test('nomiDelPercorso: uno stesso punto ripetuto resta valido senza inventare lunghezza', () => {
+  const vie = [{ nome: 'Via fittizia', punti: [[0, 0], [40, 0]] }];
+  assert.deepEqual(nomiDelPercorso([[[0, 0], [0, 0]]], vie), []);
+  assert.equal(nomiDelPercorso([[[0, 0], [0, 0], [40, 0]]], vie)[0].L, 40);
+});
+
+test('nomiDelPercorso: anche molti segmenti piccoli rispettano i limiti complessivi', () => {
+  const via = { nome: 'Via fittizia', punti: [[0, 0], [40, 0]] };
+  assert.deepEqual(nomiDelPercorso([via.punti], Array(25_001).fill(via)), [], 'riferimenti complessivi');
+  assert.deepEqual(nomiDelPercorso(Array(501).fill(via.punti), Array(2_001).fill(via)), [], 'confronti, senza tenere i primi nomi');
+  assert.deepEqual(nomiDelPercorso(Array(5_001).fill(via.punti), [via]), [], 'campioni complessivi');
+});
 test('pezziDi: un lato zero non blocca la pagina', () => {
   provaPezzi('assert.deepEqual(pezziDi({x:10,y:10,w:50,h:50},0,new Set(["0_0"])),[]);');
 });

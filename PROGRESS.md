@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · sessione di almeno 45 minuti
+## Revisione corrente · costi delle etichette delle strade
+
+Corretto il blocco con geometrie finite estreme: limiti complessivi a indice, campionamento e confronti, senza risultati parziali. **420/420 test**, sei aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. Risultato identico su **21.179 percorsi reali non vuoti / 152.379 etichette**, solo in memoria. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-23.md).
+
+Nuova sessione richiesta da Enrico di almeno **45 minuti**, iniziata alle 10:53:07 UTC; prosegue su calendario, suggerimenti fra giorni e dati delle strade senza nuovi OK fra i gruppi. Area 3 aperta; dati sorgente invariati. Browser, installazioni e pubblicazione esclusi; nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · sessione di almeno 45 minuti
 
 Otto gruppi collegati: matrici/riferimenti, calendario bus, arrivi e accessi, conversioni dei pacchi, XML, cache cartografica, quote e disegni. **414/414 test**, **58 prove aggiunte** rispetto a 356; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Riepilogo, confronti e limiti](docs/storico/2026-10-18-revisione-codice-22.md).
 
