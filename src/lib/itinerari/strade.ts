@@ -20,13 +20,25 @@ export function rileggi(d: string): Punto[] {
 
 // I pezzi che toccano un riquadro (più un margine in unità), solo quelli che esistono (gli altri sono mare)
 export function pezziDi(b: Riquadro, lato: number, esistono: Set<string>, margine = 0): string[] {
-  const out: string[] = [];
-  for (let i = Math.floor((b.x - margine) / lato); i <= Math.floor((b.x + b.w + margine) / lato); i++)
-    for (let j = Math.floor((b.y - margine) / lato); j <= Math.floor((b.y + b.h + margine) / lato); j++) {
-      const k = `${i}_${j}`;
-      if (esistono.has(k)) out.push(k);
-    }
-  return out;
+  if (!b || ![b.x, b.y, b.w, b.h, lato, margine].every(Number.isFinite) || lato <= 0 || b.w < 0 || b.h < 0) return [];
+  const daX = Math.floor((b.x - margine) / lato), aX = Math.floor((b.x + b.w + margine) / lato);
+  const daY = Math.floor((b.y - margine) / lato), aY = Math.floor((b.y + b.h + margine) / lato);
+  if (![daX, aX, daY, aY].every(Number.isFinite) || aX < daX || aY < daY) return [];
+  // Per una vista piccola resta il ciclo corto originale; il numero di passi è limitato dai pezzi esistenti.
+  if ([daX, aX, daY, aY].every(Number.isSafeInteger) && (aX - daX + 1) * (aY - daY + 1) <= esistono.size) {
+    const out: string[] = [];
+    for (let i = daX; i <= aX; i++) for (let j = daY; j <= aY; j++) { const k = i + '_' + j; if (esistono.has(k)) out.push(k); }
+    return out;
+  }
+  const out: [string, number, number][] = [];
+  // Visita solo i pezzi esistenti: una vista enorme o lontanissima non avvia miliardi di iterazioni.
+  for (const k of esistono) {
+    if (typeof k !== 'string') continue;
+    const [i, j] = k.split('_').map(Number);
+    if (!Number.isSafeInteger(i) || !Number.isSafeInteger(j) || k !== i + '_' + j) continue;
+    if (i >= daX && i <= aX && j >= daY && j <= aY) out.push([k, i, j]);
+  }
+  return out.sort((a, b) => a[1] - b[1] || a[2] - b[2]).map(([k]) => k);
 }
 
 // Il riquadro che contiene dei punti

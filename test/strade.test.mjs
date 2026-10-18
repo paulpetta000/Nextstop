@@ -69,3 +69,23 @@ test('src/data/strade.json: pezzi nella griglia della mappa, path che si rileggo
   assert.ok(S.principali.length > 100);
   for (const [nome, L, d] of S.principali) assert.ok(nome && L > 30 && rileggi(d).length >= 2);
 });
+
+// Il processo separato protegge la suite dal ciclo bloccante riprodotto prima della correzione.
+import { spawnSync } from 'node:child_process';
+const provaPezzi = corpo => {
+  const codice = 'import assert from "node:assert/strict";import {pezziDi} from ' + JSON.stringify(new URL('../src/lib/itinerari/strade.ts', import.meta.url).href) + ';' + corpo;
+  const r = spawnSync(process.execPath, ['--experimental-strip-types', '--no-warnings=ExperimentalWarning', '--input-type=module', '-e', codice], { encoding: 'utf8', timeout: 1500 });
+  assert.equal(r.status, 0, r.error?.message || r.stderr || 'Selezione dei pezzi bloccata');
+};
+test('pezziDi: un lato zero non blocca la pagina', () => {
+  provaPezzi('assert.deepEqual(pezziDi({x:10,y:10,w:50,h:50},0,new Set(["0_0"])),[]);');
+});
+test('pezziDi: una vista enorme visita solo i pezzi esistenti', () => {
+  provaPezzi('assert.deepEqual(pezziDi({x:-1e12,y:-1e12,w:2e12,h:2e12},256,new Set(["5_5","0_1","1_0","0_0"])),["0_0","0_1","1_0","5_5"]);');
+});
+test('pezziDi: input non finiti o chiavi non canoniche non inventano pezzi', () => {
+  const s = new Set(['0_0', '00_0', '1_0', '0_1']);
+  assert.deepEqual(pezziDi({ x: 10, y: 10, w: 50, h: 50 }, Infinity, s), []);
+  assert.deepEqual(pezziDi({ x: 10, y: 10, w: -1, h: 50 }, 256, s), []);
+  assert.deepEqual(pezziDi({ x: 0, y: 0, w: 10, h: 10 }, 256, s), ['0_0']);
+});

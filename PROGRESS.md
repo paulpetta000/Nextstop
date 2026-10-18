@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · dati pedonali e quote
+## Revisione corrente · decoder e pezzi della mappa
+
+Corretti blocchi con lato zero/viste enormi e rifiuto dei tratti compressi incompleti. Confronto identico su **21.180 percorsi e 1.332.817 punti**, più **2.000 viste** con stesso ordine dei pezzi. **322/322 test**, build di **12 pagine**, **811 link validi**, **82 risorse**. [Prove, profilo Node e limiti](docs/storico/2026-10-18-revisione-codice-11.md). Nessun CSS o dato generato cambiato.
+
+La sessione continua sulla coerenza fra città iniziale, dati differiti e copie di versioni diverse. Browser, installazioni e pubblicazione esclusi; nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · dati pedonali e quote
 
 Controlli prima del grafo e del filtro: quote mancanti/non numeriche, griglie e parametri errati, risposte OSM parziali, coordinate incoerenti e nodi mancanti nelle vie vengono rifiutati. Formule e impostazioni predefinite conservate; provati quote zero/negative e nodi ripetuti coerenti. **317/317 test**, build di **12 pagine**, **811 link validi**, **82 risorse**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-10.md).
 

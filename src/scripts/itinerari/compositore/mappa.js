@@ -9,22 +9,34 @@ import { C, T, A, salvato, visitata, nelViaggio, caricaMappa, caricaAlternativi,
 
 const ALFA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
 function decodifica(s) {
-  return s.split('~').filter(Boolean).map(pezzo => {
+  if (typeof s !== 'string') return [];
+  const out = [];
+  for (const pezzo of s.split('~').filter(Boolean)) {
     const k = pezzo.indexOf('.');
+    if (k < 1) return [];
     const nums = [];
     let z = 0, mul = 1;
     for (const c of pezzo.slice(k + 1)) {
       const v = ALFA.indexOf(c);
+      if (v < 0) return [];
       z += (v & 31) * mul;
-      if (v & 32) { mul *= 32; continue; }
+      if (!Number.isSafeInteger(z)) return [];
+      if (v & 32) { mul *= 32; if (!Number.isSafeInteger(mul)) return []; continue; }
       nums.push(z % 2 ? -(z + 1) / 2 : z / 2);
       z = 0; mul = 1;
     }
+    // Un numero troncato o una coppia incompleta non lascia disegnare metà del percorso.
+    if (mul !== 1 || nums.length % 2) return [];
     const punti = [];
     let x = 0, y = 0;
-    for (let j = 0; j + 1 < nums.length; j += 2) { x += nums[j]; y += nums[j + 1]; punti.push([x, y]); }
-    return { modo: pezzo.slice(0, k), punti };
-  });
+    for (let j = 0; j < nums.length; j += 2) {
+      x += nums[j]; y += nums[j + 1];
+      if (!Number.isSafeInteger(x) || !Number.isSafeInteger(y)) return [];
+      punti.push([x, y]);
+    }
+    out.push({ modo: pezzo.slice(0, k), punti });
+  }
+  return out;
 }
 const traccia = punti => 'M' + punti.map(p => p.join(' ')).join('L');
 const VELOCITA = 0.327;
