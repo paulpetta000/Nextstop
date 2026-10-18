@@ -112,6 +112,11 @@ const minuti = s => {
   if (!m || !Number.isSafeInteger(+m[1])) throw new Error('GTFS: orario non valido in stop_times.txt: ' + s);
   return +m[1] * 60 + +m[2] + +m[3] / 60;
 };
+const metodo = (s, campo) => {
+  if (s === undefined || s === '') return 0;
+  if (!/^[0-3]$/.test(s)) throw new Error('GTFS: metodo di ' + campo + ' non valido in stop_times.txt');
+  return +s;
+};
 const dataGtfs = (s, tabella) => {
   if (typeof s !== 'string' || !/^\d{8}$/.test(s)) throw new Error('GTFS: data non valida in ' + tabella);
   const t = Date.UTC(+s.slice(0, 4), +s.slice(4, 6) - 1, +s.slice(6));
@@ -194,13 +199,18 @@ export function lineeBus(file, { linee, finestre }) {
   for (const r of tabella(zip, 'stop_times')) {
     if (!tripId.has(r.trip_id)) throw new Error('GTFS: riferimento a corsa assente in stop_times.txt: ' + r.trip_id);
     const t = perTrip.get(r.trip_id);
-    if (t) t.fermate.push({ s: r.stop_id, n: sequenza(r.stop_sequence, 'stop_times.txt'), t: minuti(r.departure_time || r.arrival_time) });
+    if (t) {
+      const arrivo = minuti(r.arrival_time || r.departure_time), partenza = minuti(r.departure_time || r.arrival_time);
+      if (arrivo > partenza) throw new Error('GTFS: orari di arrivo dopo la partenza in stop_times.txt, corsa ' + r.trip_id);
+      t.fermate.push({ s: r.stop_id, n: sequenza(r.stop_sequence, 'stop_times.txt'), t: partenza, arrivo,
+        sale: metodo(r.pickup_type, 'salita') === 0, scende: metodo(r.drop_off_type, 'discesa') === 0 });
+    }
   }
   for (const t of perTrip.values()) {
     t.fermate.sort((a, b) => a.n - b.n);
     for (let i = 1; i < t.fermate.length; i++) {
       if (t.fermate[i].n === t.fermate[i - 1].n) throw new Error('GTFS: sequenza ripetuta in stop_times.txt, corsa ' + t.trip_id);
-      if (t.fermate[i].t < t.fermate[i - 1].t) throw new Error('GTFS: orari in discesa in stop_times.txt, corsa ' + t.trip_id);
+      if (t.fermate[i].arrivo < t.fermate[i - 1].t) throw new Error('GTFS: orari in discesa in stop_times.txt, corsa ' + t.trip_id);
     }
   }
   const usateNelFeed = new Set([...perTrip.values()].flatMap(t => t.fermate.map(f => f.s)));
@@ -243,18 +253,21 @@ export function lineeBus(file, { linee, finestre }) {
     // fermate e tratti si tengono separati per direzione: al capolinea non si «passa» da una direzione all'altra
     // restando sul bus (nel feed nessuna corsa lo fa), si scende e si riprende il bus con la sua attesa
     const passaggi = {};        // scenario -> «direzione|stop» -> numero di corse che ripartono da lì nella fascia
+    const discese = {};         // scenario -> fermate dove si può scendere dalle corse che attraversano la fascia
     const archi = new Map();    // "da>a" -> { da, a, tempi: { scenario: min }, peso: { scenario: corse }, punti }
     const usate = new Map();    // stop -> nome (tutte le fermate delle corse della linea)
     for (const [sc, f] of Object.entries(finestre)) {
       const attivi = date.get(tipiche[sc]) || new Set();
       const delGiorno = corse.filter(t => attivi.has(t.service_id));
       const p = passaggi[sc] = {};
+      const q = discese[sc] = {};
       const schemi = new Map();   // sequenza di fermate -> corse
       for (const t of delGiorno) {
         const dir = t.direction_id || '0';
-        t.fermate.forEach((x, i) => { if (i < t.fermate.length - 1 && x.t >= f.da && x.t < f.a) p[`${dir}|${x.s}`] = (p[`${dir}|${x.s}`] || 0) + 1; });
+        t.fermate.forEach((x, i) => { if (x.sale && i < t.fermate.length - 1 && x.t >= f.da && x.t < f.a) p[`${dir}|${x.s}`] = (p[`${dir}|${x.s}`] || 0) + 1; });
         // per i tempi: le corse che attraversano la fascia
-        if (t.fermate[t.fermate.length - 1].t < f.da || t.fermate[0].t >= f.a) continue;
+        if (t.fermate[t.fermate.length - 1].arrivo < f.da || t.fermate[0].t >= f.a) continue;
+        t.fermate.forEach((x,i) => { if (i > 0 && x.scende) q[`${dir}|${x.s}`] = (q[`${dir}|${x.s}`] || 0) + 1; });
         const k = `${t.direction_id || '0'} ` + t.fermate.map(x => x.s).join(' ');
         if (!schemi.has(k)) schemi.set(k, []);
         schemi.get(k).push(t);
@@ -287,7 +300,7 @@ export function lineeBus(file, { linee, finestre }) {
       const f = s => ({ id: s, nome: stops.get(s).nome, lat: stops.get(s).lat, lon: stops.get(s).lon });
       direzioni.push({ verso: dir, capolinea: stops.get(principale[principale.length - 1]).nome, fermate: principale.map(f), ...(altre.length ? { altre: altre.map(f) } : {}) });
     }
-    out.push({ id, nome, breve: r.route_short_name, tipo: r.route_type === '11' ? 'filobus' : 'bus', passaggi, archi: [...archi.values()], fermate: stops, usate, direzioni });
+    out.push({ id, nome, breve: r.route_short_name, tipo: r.route_type === '11' ? 'filobus' : 'bus', passaggi, discese, archi: [...archi.values()], fermate: stops, usate, direzioni });
   }
   // Le partenze vere di alcune corse («linea|fermata di salita|fermata di discesa»), per ogni data del feed.
   // Le date con le stesse partenze diventano un «tipo di giorno». Per ogni tipo:
@@ -304,7 +317,7 @@ export function lineeBus(file, { linee, finestre }) {
       if (!m.has(t.service_id)) m.set(t.service_id, []);
       const dove = new Map();
       t.fermate.forEach((x, i) => { if (!dove.has(x.s)) dove.set(x.s, []); dove.get(x.s).push(i); });
-      m.get(t.service_id).push({ t: t.fermate.map(x => x.t), dove });
+      m.get(t.service_id).push({ t: t.fermate.map(x => x.t), arrivi: t.fermate.map(x=>x.arrivo), sale: t.fermate.map(x=>x.sale), scende: t.fermate.map(x=>x.scende), dove });
     }
     const tipi = [], firme = new Map(), giorni = {};
     const lista = v => v.map((x, i) => (i ? x - v[i - 1] : x));
@@ -319,8 +332,9 @@ export function lineeBus(file, { linee, finestre }) {
           for (const c of corse) {
             // Una corsa circolare può passare dalla stessa fermata più volte: ogni salita utile conta.
             for (const ia of c.dove.get(a) ?? []) {
-              const ib = c.dove.get(b)?.find(i => i > ia);
-              if (ib != null) coppie.push([Math.round(c.t[ia]), c.t[ib] - c.t[ia]]);
+              if (!c.sale[ia]) continue;
+              const ib = c.dove.get(b)?.find(i => i > ia && c.scende[i]);
+              if (ib != null) coppie.push([Math.round(c.t[ia]), c.arrivi[ib] - c.t[ia]]);
             }
           }
         }

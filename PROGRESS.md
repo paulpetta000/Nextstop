@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · calendario e partenze bus
+## Revisione corrente · arrivi e accessi ai bus
+
+GTFS: arrivo distinto dalla partenza, orari fuori ordine rifiutati e accessi ordinari separati dalle limitazioni di salita/discesa. Grafo: discesa consentita anche al capolinea senza altre partenze. **377/377 test**, nove aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove, fonte tecnica e limiti](docs/storico/2026-10-18-revisione-codice-17.md).
+
+Prosegue la sessione di almeno **45 minuti**, ora su conversioni e integrità dei pacchi. Modello mediano/aggregato conservato; correzioni dei generatori in attesa della prossima rigenerazione autorizzata. Nessun JSON sorgente cambiato, browser, installazione o pubblicazione. Nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · calendario e partenze bus
 
 Lettore condiviso tra generazione/build e browser: date valide, salite presenti, partenze specifiche appartenenti alla fermata e somme finite. Risultato identico sul pacco reale (8.793 candidati, 101 date, sette tipi). **368/368 test**, build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-16.md).
 

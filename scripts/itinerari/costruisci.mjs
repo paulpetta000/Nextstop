@@ -326,14 +326,15 @@ const BUSLINEE = GTFS.linee.map(B => {
   for (const ds of serve) {
     const [dir, sid] = ds.split('|');
     const s = B.fermate.get(sid);
-    const attesa = {};
+    const attesa = {}, discese = {};
     for (const sc of Object.keys(BUS.finestre)) {
       const n = B.passaggi[sc][ds] || 0, f = BUS.finestre[sc];
       attesa[sc] = n ? (f.a - f.da) / n / 2 : null;
+      discese[sc] = (B.discese[sc][ds] || 0) > 0;
     }
     const v = vicino(s, BUS.raggio, principale);
     if (!v) { senza++; fuori.set(`${B.id}:${dir}:${sid}`, { lat: s.lat, lon: s.lon }); continue; }
-    fermate.push({ id: `${B.id}:${dir}:${sid}`, linea: B.id, nome: s.nome, lat: s.lat, lon: s.lon, accessi: [v], attesa });
+    fermate.push({ id: `${B.id}:${dir}:${sid}`, linea: B.id, nome: s.nome, lat: s.lat, lon: s.lon, accessi: [v], attesa, discese });
     L.fermate.push(s.nome);
   }
   for (const a of B.archi) corse.push({ da: `${B.id}:${a.dir}:${a.da}`, a: `${B.id}:${a.dir}:${a.a}`, t: a.tempi, linea: B.id, unVerso: true, punti: a.punti });
@@ -369,12 +370,13 @@ function rete(scenario, modo = 'media') {
       const L = MEZZI.get(f.linea);
       if (L.bus && modo === 'senza') continue;
       let attesa = (f.attesa || L.attesa)[scenario.nome];
-      if (attesa == null) continue;    // linea ferma in questo scenario
-      if (L.bus && modo === 'subito') attesa = 0;
+      const sale = attesa != null, scende = L.bus ? !!f.discese[scenario.nome] : sale;
+      if (!sale && !scende) continue;    // nessun accesso in questo scenario
+      if (L.bus && modo === 'subito' && sale) attesa = 0;
       const pen = L.bus && modo === 'media' ? BUS.preferenza : 0;
       for (const ac of f.accessi) {
-        add(ac.nodo.id, { a: f.id, t: ac.m / PIEDI.metriAlMinuto + L.accesso + attesa + pen, m: ac.m, su: 0, tipo: 'sale', linea: L.id, ...(pen ? { pen } : {}) });
-        add(f.id, { a: ac.nodo.id, t: ac.m / PIEDI.metriAlMinuto + L.uscita, m: ac.m, su: 0, tipo: 'scende', linea: L.id });
+        if (sale) add(ac.nodo.id, { a: f.id, t: ac.m / PIEDI.metriAlMinuto + L.accesso + attesa + pen, m: ac.m, su: 0, tipo: 'sale', linea: L.id, ...(pen ? { pen } : {}) });
+        if (scende) add(f.id, { a: ac.nodo.id, t: ac.m / PIEDI.metriAlMinuto + L.uscita, m: ac.m, su: 0, tipo: 'scende', linea: L.id });
       }
     }
     for (const c of corse) {

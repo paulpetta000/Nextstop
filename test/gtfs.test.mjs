@@ -51,6 +51,43 @@ test('GTFS: conserva le corse dopo mezzanotte e i secondi validi', t => {
   assert.equal(G.linee[0].archi[0].tempi.feriale, 30);
   assert.equal(G.partenze(new Set(['B1|a|b'])).tipi[0].viaggi['B1|a|b'], 30);
 });
+
+test('GTFS partenze: il viaggio termina all’arrivo, senza la sosta della destinazione',t=>{
+ const G=feed(t,{'stop_times.txt':'trip_id,arrival_time,departure_time,stop_id,stop_sequence\nt,08:58:00,09:00:00,a,1\nt,09:10:00,09:20:00,b,2\n'});
+ const P=G.partenze(new Set(['B1|a|b']));assert.equal(P.tipi[0].viaggi['B1|a|b'],10);assert.deepEqual(P.tipi[0].salite['B1|a'],[540]);
+});
+test('GTFS partenze: salita vietata e discesa vietata non vengono proposte',t=>{
+ for(const [salita,discesa] of [['1','0'],['0','1'],['2','0'],['0','3']]) {
+  const G=feed(t,{'stop_times.txt':`trip_id,departure_time,stop_id,stop_sequence,pickup_type,drop_off_type\nt,09:00:00,a,1,${salita},0\nt,09:10:00,b,2,0,${discesa}\n`});
+  const P=G.partenze(new Set(['B1|a|b']));assert.equal(Object.hasOwn(P.tipi[0].viaggi,'B1|a|b'),false);
+ }
+});
+test('GTFS partenze: una fermata intermedia vietata resta attraversabile a bordo',t=>{
+ const G=feed(t,{'stops.txt':'stop_id,stop_name,stop_lat,stop_lon\na,A,40.8,14.2\nb,B,40.81,14.21\nc,C,40.82,14.22\n','stop_times.txt':'trip_id,departure_time,stop_id,stop_sequence,pickup_type,drop_off_type\nt,09:00:00,a,1,0,0\nt,09:10:00,b,2,1,1\nt,09:20:00,c,3,0,0\n'});
+ const P=G.partenze(new Set(['B1|a|c','B1|a|b','B1|b|c']));assert.equal(P.tipi[0].viaggi['B1|a|c'],20);assert.equal(Object.hasOwn(P.tipi[0].viaggi,'B1|a|b'),false);assert.equal(Object.hasOwn(P.tipi[0].viaggi,'B1|b|c'),false);
+});
+test('GTFS: arrivi fuori ordine e metodi di salita o discesa invalidi fermano il generatore',t=>{
+ for(const righe of [
+  'trip_id,arrival_time,departure_time,stop_id,stop_sequence\nt,09:01:00,09:00:00,a,1\nt,09:10:00,09:10:00,b,2\n',
+  'trip_id,arrival_time,departure_time,stop_id,stop_sequence\nt,09:00:00,09:00:00,a,1\nt,08:59:00,09:10:00,b,2\n',
+  'trip_id,departure_time,stop_id,stop_sequence,pickup_type\nt,09:00:00,a,1,4\nt,09:10:00,b,2,0\n'
+ ])assert.throws(()=>feed(t,{'stop_times.txt':righe}),/GTFS.*(orari|salita|discesa)/i);
+});
+
+test('GTFS rete: capolinea con discesa consentita non richiede una nuova partenza',t=>{
+ const G=feed(t,{'stop_times.txt':'trip_id,departure_time,stop_id,stop_sequence,pickup_type,drop_off_type\nt,09:00:00,a,1,0,1\nt,09:10:00,b,2,1,0\n'});
+ const B=G.linee[0];assert.equal(B.passaggi.feriale['0|a'],1);assert.equal(B.passaggi.feriale['0|b'],undefined);assert.equal(B.discese.feriale['0|b'],1);assert.equal(B.discese.feriale['0|a'],undefined);
+});
+
+test('GTFS → fermate del generatore: arrivo al capolinea conserva discesa e attesa nulla',t=>{
+ const G=feed(t,{'stop_times.txt':'trip_id,departure_time,stop_id,stop_sequence,pickup_type,drop_off_type\nt,09:00:00,a,1,0,1\nt,09:10:00,b,2,1,0\n'});
+ const source=fs.readFileSync(new URL('../scripts/itinerari/costruisci.mjs',import.meta.url),'utf8');
+ const da=source.indexOf('const fuori ='),a=source.indexOf('const MEZZI =',da);assert.ok(da>0&&a>da);
+ const fermate=[],corse=[];
+ new Function('GTFS','BUS','fermate','corse','vicino','principale','console',source.slice(da,a))(G,{...CONFIG,accesso:1,uscita:0.5,raggio:80},fermate,corse,()=>({nodo:{id:1},m:0}),()=>true,{log(){}});
+ const b=fermate.find(f=>f.id==='B1:0:b'),prima=fermate.find(f=>f.id==='B1:0:a');
+ assert.equal(b.attesa.feriale,null);assert.equal(b.discese.feriale,true);assert.equal(prima.discese.feriale,false);assert.equal(corse.length,1);
+});
 test('GTFS: rifiuta date impossibili ed eccezioni diverse da aggiunta o rimozione', t => {
   for (const riga of ['s,20260230,1', 's,20261301,1', 's,20261017,3']) {
     assert.throws(() => feed(t, { 'calendar_dates.txt': `service_id,date,exception_type\ns,20261017,1\n${riga}\n` }), /GTFS.*calendar_dates/i, riga);
