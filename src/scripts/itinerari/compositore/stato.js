@@ -215,7 +215,7 @@ export async function caricaDopo(quandoArriva) {
   }).catch(() => { /* senza, valgono i tempi del feriale */ });
   fetch('/napoli/itinerari/partenze.json', { priority: 'low' }).then(r => (r.ok ? r.json() : null)).then(p => {
     if (!p) return;
-    C.vivo = spacchettaVivo(p, C.riferimento); memoOrdine.clear(); ricalcola(); quandoArriva();
+    C.vivo = spacchettaVivo(p, C.riferimento, C.tempi?.n); memoOrdine.clear(); ricalcola(); quandoArriva();
   }).catch(() => { /* senza orari veri resta l'attesa media */ });
 }
 // la mappa di oggi e i percorsi tra le tappe: si caricano una volta

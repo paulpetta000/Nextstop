@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · arrivi e accessi ai bus
+## Revisione corrente · conversioni e indici dei pacchi
+
+Rifiuti per conversioni in metri e somme che diventano infinite, coppie duplicate e indici bus esterni alla città. Provato il recupero del caricamento reale. **383/383 test**, sei aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-18.md).
+
+Continua la sessione di almeno **45 minuti** sulla lettura dei riquadri XML della mappa. Formati e dati sorgente conservati; nessun browser, installazione o pubblicazione. Nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · arrivi e accessi ai bus
 
 GTFS: arrivo distinto dalla partenza, orari fuori ordine rifiutati e accessi ordinari separati dalle limitazioni di salita/discesa. Grafo: discesa consentita anche al capolinea senza altre partenze. **377/377 test**, nove aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove, fonte tecnica e limiti](docs/storico/2026-10-18-revisione-codice-17.md).
 

@@ -121,6 +121,13 @@ const stato = fs.readFileSync(new URL('../src/scripts/itinerari/compositore/stat
 const daCarica = stato.indexOf('export async function caricaDopo('), aCarica = stato.indexOf('// la mappa di oggi', daCarica);
 assert.ok(daCarica >= 0 && aCarica > daCarica);
 const preparaCarica = new Function('d', 'const { C, fetch, quandoLibero, aggiungiScenari, spacchettaVivo, memoOrdine, ricalcola } = d; ' + stato.slice(daCarica, aCarica).replace('export ', '') + '; return caricaDopo;');
+
+test('bus: il caricamento usa la dimensione della città e conserva i dati dopo un indice esterno',async()=>{
+ const precedente={disponibile:true}, C={vivo:precedente,tempi:{n:2}}, P=vivo();P.bus.feriale[0]=4;let aggiornamenti=0;
+ const carica=preparaCarica({C,fetch:async url=>Response.json(url.endsWith('partenze.json')?P:null),quandoLibero:async()=>{},aggiungiScenari,spacchettaVivo,memoOrdine:{clear(){}},ricalcola(){}});
+ await carica(()=>aggiornamenti++);await new Promise(r=>setImmediate(r));assert.equal(C.vivo,precedente);assert.equal(aggiornamenti,0);
+ P.bus.feriale[0]=1;await carica(()=>aggiornamenti++);await new Promise(r=>setImmediate(r));assert.equal(aggiornamenti,1);assert.notEqual(C.vivo,precedente);
+});
 test('bus: il caricamento reale rifiuta il pacco rotto prima di cambiare la città e si riprende con quello valido', async () => {
   const prima = { disponibile: true }, C = { vivo: prima }, P = vivo();
   let p = structuredClone(P), ricalcoli = 0, aggiornamenti = 0, svuotamenti = 0;
