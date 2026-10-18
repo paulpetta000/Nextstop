@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · recupero dagli errori
+## Revisione corrente · ingressi e dati del generatore
+
+Concluso il gruppo su pacchetto bus, generatore GTFS e privacy dei link. Valori non validi rifiutati prima del calcolo, città precedente conservata in caso di errore e nota Condividi allineata a Privacy. Risultato del decoder identico sui dati pubblici reali: 8.793 candidati e 101 date. **288/288 test**, build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-7.md). Nessun dato generato, formato, CSS o dipendenza cambiato.
+
+Enrico ha chiesto una sessione unica di almeno 35 minuti: si prosegue con ZIP/CSV e ingressi dei generatori, senza pausa per un nuovo OK tra i gruppi. Browser, installazioni e pubblicazione restano esclusi. Idea multi-città e registro fonti rinviata anche nell'analisi.
+
+## Revisione precedente · recupero dagli errori
 
 Conclusi insieme nota di conservazione nel pannello, prove di Condividi dopo un conflitto e recupero dell'avvio senza stile completo. Corretta la promessa di persistenza durante attesa/errore; nuova nota aggiornata anche a pannello aperto. Avvio con Riprova, attesa massima dieci secondi e nessun avvio doppio, mantenendo lo stesso URL del foglio per la cache offline. **267/267 test**, build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-6.md). Nessun browser o pubblicazione; nessuna dipendenza o CSS modificati.
 

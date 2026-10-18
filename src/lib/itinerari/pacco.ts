@@ -1,4 +1,5 @@
 // Riapre nella pagina il pacco della città fatto durante la build (src/lib/itinerari/napoli.ts, impacchetta)
+import { dataValida } from './date.ts';
 import { SCENARI, PRIMA, type Citta, type Evento, type Scenario, type Tappa, type Vivo } from './tipi.ts';
 
 export interface Pacco {
@@ -87,33 +88,63 @@ export interface PaccoVivo {
   senza: Record<string, number[]>; bus: Record<string, number[]>;
 }
 
-// le partenze arrivano come differenze dalla partenza prima: qui tornano minuti dalla mezzanotte
-const somme = (v: number[]) => { let c = 0; return v.map((x, i) => (c = i ? c + x : x)); };
+// Le partenze arrivano come differenze: una differenza negativa romperebbe la ricerca della prima corsa.
+const record = (x: unknown): x is Record<string, unknown> => !!x && typeof x === 'object' && !Array.isArray(x);
+const dataFeed = (s: unknown): s is string => typeof s === 'string' && /^\d{8}$/.test(s) && dataValida(s.slice(0, 4) + '-' + s.slice(4, 6) + '-' + s.slice(6));
+const distanzaValida = (x: unknown): x is number => numeroValido(x) && Number.isFinite(x * 10);
+const corsaValida = (x: unknown): x is string => typeof x === 'string' && /^[^|]+\|[^|]+\|[^|]+$/.test(x);
+const somme = (v: number[]) => {
+  if (!Array.isArray(v) || !v.every(numeroValido)) throw new Error('Partenze bus non valide');
+  let c = 0;
+  return v.map(x => { c += x; if (!Number.isFinite(c)) throw new Error('Partenze bus non valide'); return c; });
+};
 
 export function spacchettaVivo(P: PaccoVivo): Vivo {
+  validaDizionario(P.dizionario);
+  if (!numeroValido(P.preferenza) || !dataFeed(P.dal) || !dataFeed(P.al) || P.dal > P.al || !Array.isArray(P.tipi) || !record(P.giorni) || !record(P.fermate) || !Object.values(P.fermate).every(x => typeof x === 'string')) throw new Error('Calendario bus non valido');
+  for (const [d, tipo] of Object.entries(P.giorni)) {
+    if (!dataFeed(d) || d < P.dal || d > P.al || !indiceValido(tipo, P.tipi.length)) throw new Error('Giorno bus non valido');
+  }
+  if (!Array.isArray(P.candidati) || !record(P.senza) || !record(P.bus)) throw new Error('Percorsi bus incompleti');
+  const candidati = P.candidati.map(c => {
+    if (!Array.isArray(c) || c.length !== 3) throw new Error('Percorso bus incompleto');
+    const [seg, m, z] = c;
+    if (!Array.isArray(seg) || !seg.length || !seg.every(x => numeroValido(x) || corsaValida(x)) || !distanzaValida(m) || !indiceValido(z, P.dizionario.length)) throw new Error('Percorso bus non valido');
+    return { seg, metri: m * 10, mezzi: P.dizionario[z] };
+  });
+  const salite = P.tipi.map(t => {
+    if (!record(t.salite) || !record(t.viaggi)) throw new Error('Tipo di giorno bus incompleto');
+    return new Map(Object.entries(t.salite).map(([k, v]) => [k, somme(v)]));
+  });
+  const viaggi = P.tipi.map(t => new Map<string, { min: number; partenze?: number[] }>(Object.entries(t.viaggi).map(([k, v]) => {
+    if (Array.isArray(v)) {
+      if (v.length < 2 || !numeroValido(v[0])) throw new Error('Viaggio bus non valido');
+      return [k, { min: v[0], partenze: somme(v.slice(1)) }] as const;
+    }
+    if (!numeroValido(v)) throw new Error('Viaggio bus non valido');
+    return [k, { min: v }] as const;
+  })));
   const senza: Vivo['senza'] = {}, bus: Vivo['bus'] = {};
   for (const [s, v] of Object.entries(P.senza)) {
+    if (!SCENARI.includes(s as Scenario) || !Array.isArray(v) || v.length % 4) throw new Error('Percorso senza bus incompleto');
     const m = new Map<number, { min: number; metri: number; mezzi: string }>();
-    for (let k = 0; k < v.length; k += 4) m.set(v[k], { min: v[k + 1], metri: v[k + 2] * 10, mezzi: P.dizionario[v[k + 3]] });
+    for (let k = 0; k < v.length; k += 4) {
+      if (!Number.isSafeInteger(v[k]) || v[k] < 0 || !numeroValido(v[k + 1]) || !distanzaValida(v[k + 2]) || !indiceValido(v[k + 3], P.dizionario.length)) throw new Error('Percorso senza bus non valido');
+      m.set(v[k], { min: v[k + 1], metri: v[k + 2] * 10, mezzi: P.dizionario[v[k + 3]] });
+    }
     senza[s as Scenario] = m;
   }
   for (const [s, v] of Object.entries(P.bus)) {
     const m = new Map<number, number[]>();
-    if (!Array.isArray(v)) throw new Error('Indice bus incompleto');
+    if (!SCENARI.includes(s as Scenario) || !Array.isArray(v)) throw new Error('Indice bus incompleto');
     for (let k = 0; k < v.length;) {
       const n = v[k + 1];
       if (!Number.isSafeInteger(v[k]) || v[k] < 0 || !Number.isSafeInteger(n) || n < 0 || k + 2 + n > v.length) throw new Error('Indice bus non valido');
-      const candidati = v.slice(k + 2, k + 2 + n);
-      if (!candidati.every(i => indiceValido(i, P.candidati.length))) throw new Error('Candidato bus non valido');
-      m.set(v[k], candidati); k += 2 + n;
+      const lista = v.slice(k + 2, k + 2 + n);
+      if (!lista.every(i => indiceValido(i, candidati.length))) throw new Error('Candidato bus non valido');
+      m.set(v[k], lista); k += 2 + n;
     }
     bus[s as Scenario] = m;
   }
-  return {
-    dal: P.dal, al: P.al, giorni: P.giorni, fermate: P.fermate, preferenza: P.preferenza,
-    salite: P.tipi.map(t => new Map(Object.entries(t.salite).map(([k, v]) => [k, somme(v)]))),
-    viaggi: P.tipi.map(t => new Map(Object.entries(t.viaggi).map(([k, v]) => [k, Array.isArray(v) ? { min: v[0], partenze: somme(v.slice(1)) } : { min: v }]))),
-    candidati: P.candidati.map(([seg, m, z]) => ({ seg, metri: m * 10, mezzi: P.dizionario[z] })),
-    senza, bus
-  };
+  return { dal: P.dal, al: P.al, giorni: P.giorni, fermate: P.fermate, preferenza: P.preferenza, salite, viaggi, candidati, senza, bus };
 }

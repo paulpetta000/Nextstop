@@ -52,7 +52,25 @@ function tabella(zip, nome, { obbligatoria = true } = {}) {
   return righe.slice(1).map(r => { const v = campi(r); const o = {}; h.forEach((k, i) => { o[k] = v[i]; }); return o; });
 }
 
-const minuti = s => { const [h, m, x] = s.split(':').map(Number); return h * 60 + m + (x || 0) / 60; };
+const minuti = s => {
+  const m = typeof s === 'string' && /^(\d+):([0-5]\d):([0-5]\d)$/.exec(s);
+  if (!m || !Number.isSafeInteger(+m[1])) throw new Error('GTFS: orario non valido in stop_times.txt: ' + s);
+  return +m[1] * 60 + +m[2] + +m[3] / 60;
+};
+const dataGtfs = (s, tabella) => {
+  if (typeof s !== 'string' || !/^\d{8}$/.test(s)) throw new Error('GTFS: data non valida in ' + tabella);
+  const t = Date.UTC(+s.slice(0, 4), +s.slice(4, 6) - 1, +s.slice(6));
+  if (new Date(t).toISOString().slice(0, 10).replace(/-/g, '') !== s) throw new Error('GTFS: data non valida in ' + tabella + ': ' + s);
+  return t;
+};
+const sequenza = (s, tabella) => {
+  if (typeof s !== 'string' || !/^\d+$/.test(s) || !Number.isSafeInteger(+s)) throw new Error('GTFS: sequenza non valida in ' + tabella);
+  return +s;
+};
+const coordinata = (s, limite, tabella) => {
+  if (typeof s !== 'string' || !s.trim() || !Number.isFinite(+s) || Math.abs(+s) > limite) throw new Error('GTFS: coordinata non valida in ' + tabella);
+  return +s;
+};
 const giornoDi = d => new Date(Date.UTC(+d.slice(0, 4), +d.slice(4, 6) - 1, +d.slice(6, 8))).getUTCDay();
 const dist = (a, b) => {
   const k = Math.cos(((a.lat + b.lat) / 2) * Math.PI / 180);
@@ -66,13 +84,16 @@ function calendario(zip) {
   const add = (d, s) => { if (!date.has(d)) date.set(d, new Set()); date.get(d).add(s); };
   const GIORNI = ['sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday'];
   for (const c of tabella(zip, 'calendar', { obbligatoria: false })) {
-    for (let t = Date.UTC(+c.start_date.slice(0, 4), +c.start_date.slice(4, 6) - 1, +c.start_date.slice(6)); ; t += 864e5) {
+    const dal = dataGtfs(c.start_date, 'calendar.txt'), al = dataGtfs(c.end_date, 'calendar.txt');
+    if (dal > al || !GIORNI.every(g => c[g] === '0' || c[g] === '1')) throw new Error('GTFS: intervallo o giorni non validi in calendar.txt');
+    for (let t = dal; t <= al; t += 864e5) {
       const d = new Date(t).toISOString().slice(0, 10).replace(/-/g, '');
-      if (d > c.end_date) break;
       if (c[GIORNI[giornoDi(d)]] === '1') add(d, c.service_id);
     }
   }
   for (const c of tabella(zip, 'calendar_dates', { obbligatoria: false })) {
+    dataGtfs(c.date, 'calendar_dates.txt');
+    if (c.exception_type !== '1' && c.exception_type !== '2') throw new Error('GTFS: eccezione non valida in calendar_dates.txt');
     if (c.exception_type === '1') add(c.date, c.service_id);
     else date.get(c.date)?.delete(c.service_id);
   }
@@ -113,14 +134,26 @@ export function lineeBus(file, { linee, finestre }) {
   const perTrip = new Map(trips.map(t => [t.trip_id, { ...t, fermate: [] }]));
   for (const r of tabella(zip, 'stop_times')) {
     const t = perTrip.get(r.trip_id);
-    if (t) t.fermate.push({ s: r.stop_id, n: +r.stop_sequence, t: minuti(r.departure_time || r.arrival_time) });
+    if (t) t.fermate.push({ s: r.stop_id, n: sequenza(r.stop_sequence, 'stop_times.txt'), t: minuti(r.departure_time || r.arrival_time) });
   }
-  for (const t of perTrip.values()) t.fermate.sort((a, b) => a.n - b.n);
-  const stops = new Map(tabella(zip, 'stops').map(s => [s.stop_id, { id: s.stop_id, nome: s.stop_name.trim(), lat: +s.stop_lat, lon: +s.stop_lon }]));
+  for (const t of perTrip.values()) {
+    t.fermate.sort((a, b) => a.n - b.n);
+    for (let i = 1; i < t.fermate.length; i++) {
+      if (t.fermate[i].n === t.fermate[i - 1].n) throw new Error('GTFS: sequenza ripetuta in stop_times.txt, corsa ' + t.trip_id);
+      if (t.fermate[i].t < t.fermate[i - 1].t) throw new Error('GTFS: orari in discesa in stop_times.txt, corsa ' + t.trip_id);
+    }
+  }
+  const usateNelFeed = new Set([...perTrip.values()].flatMap(t => t.fermate.map(f => f.s)));
+  const stops = new Map(tabella(zip, 'stops').map(s => [s.stop_id, {
+    id: s.stop_id, nome: s.stop_name.trim(),
+    lat: usateNelFeed.has(s.stop_id) ? coordinata(s.stop_lat, 90, 'stops.txt') : +s.stop_lat,
+    lon: usateNelFeed.has(s.stop_id) ? coordinata(s.stop_lon, 180, 'stops.txt') : +s.stop_lon
+  }]));
+  for (const id of usateNelFeed) if (!stops.has(id)) throw new Error('GTFS: fermata assente da stops.txt: ' + id);
   const shapes = new Map();
   for (const p of tabella(zip, 'shapes', { obbligatoria: false })) {
     if (!shapes.has(p.shape_id)) shapes.set(p.shape_id, []);
-    shapes.get(p.shape_id).push({ n: +p.shape_pt_sequence, lat: +p.shape_pt_lat, lon: +p.shape_pt_lon });
+    shapes.get(p.shape_id).push({ n: sequenza(p.shape_pt_sequence, 'shapes.txt'), lat: coordinata(p.shape_pt_lat, 90, 'shapes.txt'), lon: coordinata(p.shape_pt_lon, 180, 'shapes.txt') });
   }
   for (const s of shapes.values()) s.sort((a, b) => a.n - b.n);
 

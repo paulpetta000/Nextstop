@@ -1,6 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { spawnSync } from 'node:child_process';
+import fs from 'node:fs';
 import { spacchettaVivo } from '../src/lib/itinerari/pacco.ts';
 import {spacchetta,aggiungiScenari,impacchetta} from '../src/lib/itinerari/pacco.ts';
 const pack=()=>({n:2,tappe:[],linee:{},zone:{},dizionario:['B1',''],feriale:{min:[0,15,15,0],metri:[0,30,30,0],mezzi:[1,0,0,1]},piedi:[1,45,150,1,1,50,160,1]});
@@ -72,4 +73,63 @@ test('bus: un pacco valido conserva corse, viaggi, distanze e candidati', () => 
   assert.deepEqual(V.bus.feriale.get(1), [0]);
   assert.deepEqual(V.senza.feriale.get(1), { min: 30, metri: 400, mezzi: 'B1' });
   assert.deepEqual(V.candidati[0], { seg: [5, 'B1|a|b'], metri: 200, mezzi: 'B1' });
+});
+
+// Pacchi JSON incompleti non devono entrare nel calcolo delle corse.
+test('bus: rifiuta tempi, distanze e dizionari incompleti nel ripiego senza bus', () => {
+  for (const v of [[1, 30, 40], [1, -1, 40, 0], [1, 30, -1, 0], [1, 30, 40, 9], [1, 30, '40', 0]]) {
+    const P = vivo(); P.senza.feriale = v;
+    assert.throws(() => spacchettaVivo(P), JSON.stringify(v));
+  }
+});
+test('bus: rifiuta differenze negative e orari non numerici prima del calcolo', () => {
+  for (const v of [[600, -15], [600, '15'], [NaN], [Infinity], null]) {
+    const P = vivo(); P.tipi[0].salite['B1|a'] = v;
+    assert.throws(() => spacchettaVivo(P), JSON.stringify(v));
+  }
+});
+test('bus: rifiuta durate di viaggio errate e partenze parziali', () => {
+  for (const v of [-10, '10', [], [-10, 600], [10, 600, -15], [NaN, 600]]) {
+    const P = vivo(); P.tipi[0].viaggi['B1|a|b'] = v;
+    assert.throws(() => spacchettaVivo(P), JSON.stringify(v));
+  }
+});
+test('bus: rifiuta candidati con segmenti, distanze o mezzi non validi', () => {
+  for (const v of [[[5, {}], 20, 0], [[-5, 'B1|a|b'], 20, 0], [[5, 'B1|a'], 20, 0], [[5, 'B1|a|b'], -20, 0], [[5, 'B1|a|b'], 20, 9], [[5], 20], [[], 20, 0]]) {
+    const P = vivo(); P.candidati[0] = v;
+    assert.throws(() => spacchettaVivo(P), JSON.stringify(v));
+  }
+});
+test('bus: date e tipi di giorno non validi non attivano gli orari veri', () => {
+  for (const modifica of [P => P.giorni['20261017'] = 9, P => P.giorni['20261017'] = '0', P => P.giorni['20260230'] = 0, P => P.al = '20261016', P => P.preferenza = -5, P => P.fermate.a = {}]) {
+    const P = vivo(); modifica(P);
+    assert.throws(() => spacchettaVivo(P));
+  }
+});
+test('bus: partenze dopo mezzanotte, frazioni e giorni senza una corsa restano validi', () => {
+  const P = vivo(); P.tipi[0].salite['B1|a'] = [1430, 20, 0];
+  P.tipi[0].viaggi['B1|a|b'] = [10.5, 1450];
+  P.tipi.push({ salite: {}, viaggi: {} }); P.giorni['20261018'] = 1; P.al = '20261018';
+  const V = spacchettaVivo(P);
+  assert.deepEqual(V.salite[0].get('B1|a'), [1430, 1450, 1450]);
+  assert.deepEqual(V.viaggi[0].get('B1|a|b'), { min: 10.5, partenze: [1450] });
+  assert.equal(V.giorni['20261018'], 1);
+  assert.equal(V.viaggi[1].size, 0);
+});
+// Funzione reale del caricamento differito con rete e città fittizie.
+const stato = fs.readFileSync(new URL('../src/scripts/itinerari/compositore/stato.js', import.meta.url), 'utf8');
+const daCarica = stato.indexOf('export async function caricaDopo('), aCarica = stato.indexOf('// la mappa di oggi', daCarica);
+assert.ok(daCarica >= 0 && aCarica > daCarica);
+const preparaCarica = new Function('d', 'const { C, fetch, quandoLibero, aggiungiScenari, spacchettaVivo, memoOrdine, ricalcola } = d; ' + stato.slice(daCarica, aCarica).replace('export ', '') + '; return caricaDopo;');
+test('bus: il caricamento reale rifiuta il pacco rotto prima di cambiare la città e si riprende con quello valido', async () => {
+  const prima = { disponibile: true }, C = { vivo: prima }, P = vivo();
+  let p = structuredClone(P), ricalcoli = 0, aggiornamenti = 0, svuotamenti = 0;
+  p.tipi[0].viaggi['B1|a|b'] = -10;
+  const carica = preparaCarica({ C, quandoLibero: async () => {}, spacchettaVivo, aggiungiScenari, memoOrdine: { clear() { svuotamenti++; } }, ricalcola() { ricalcoli++; },
+    fetch: async url => Response.json(url.endsWith('partenze.json') ? p : null) });
+  await carica(() => aggiornamenti++); await new Promise(r => setImmediate(r));
+  assert.equal(C.vivo, prima); assert.equal(ricalcoli, 0); assert.equal(aggiornamenti, 0); assert.equal(svuotamenti, 0);
+  p = P;
+  await carica(() => aggiornamenti++); await new Promise(r => setImmediate(r));
+  assert.deepEqual(C.vivo, spacchettaVivo(P)); assert.equal(ricalcoli, 1); assert.equal(aggiornamenti, 1); assert.equal(svuotamenti, 1);
 });

@@ -306,7 +306,7 @@ export async function apriCondividi(x = X()) {
   foglio('Condividi', `<p>Chi apre il link vede lo stesso itinerario: gli stessi giorni, le stesse tappe, le pause e gli orari. Le tappe che hai visitato restano solo su questo telefono.</p>
     <div class="f-link"><label class="vh" for="f-link">Link dell'itinerario</label><input id="f-link" readonly value="${esc(l)}"><button type="button" class="f-bottone" data-f="copia">${ic('copia', 20)}Copia</button></div>
     <a class="f-bottone f-bottone--contorno" href="https://wa.me/?text=${encodeURIComponent(`${x.nome}: ${l}`)}" rel="noopener" target="_blank">Manda su WhatsApp</a>
-    <p class="f-nota">Il link porta tutto dopo il «#»: non passa da nessun server.</p>`, f => {
+    <p class="f-nota">Il percorso nel link non viene inviato al nostro server. Se lo mandi con un’app, anche quell’app può leggerlo.</p>`, f => {
     f.onclick = async e => {
       if (e.target === f) { chiudiFoglio(); return; }
       if (!e.target.closest('[data-f="copia"]')) return;

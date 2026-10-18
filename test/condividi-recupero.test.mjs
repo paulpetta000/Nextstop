@@ -60,3 +60,14 @@ test('recupero con Condividi: se la copia negli appunti è negata, seleziona il 
   assert.equal(e.selezionato(), true); assert.equal(e.focalizzato(), true);
   assert.match(e.avvisi[0], /premuto sul link/); assert.equal(e.dati.get(CHIAVE), prima);
 });
+
+test('Condividi: spiega che l’app scelta può leggere il percorso che le viene mandato', async t => {
+  const e = ambiente(t); await e.apri();
+  assert.doesNotMatch(e.f.html, /non passa da nessun server/);
+  assert.match(e.f.html, /nostro server/);
+  assert.match(e.f.html, /app.*leggerlo/);
+  const wa = new URL(e.f.html.match(/href="(https:\/\/wa.me\/[^\"]+)"/)[1]);
+  const ricevuto = wa.searchParams.get('text');
+  assert.ok(ricevuto.includes('#' + codifica(e.x)));
+  assert.doesNotMatch(ricevuto, /fatte|timbri|1234/);
+});
