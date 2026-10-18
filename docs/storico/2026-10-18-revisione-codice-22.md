@@ -31,8 +31,12 @@ Da **356 a 414 prove**, **58 aggiunte**, con otto gruppi collegati:
 
 Le prove di rete usano risposte fittizie; nessun feed, raster o riquadro reale scaricato. Nessuna rigenerazione dei JSON sorgente, installazione, delega, automazione, sessione Google, modifica di protezioni, browser, push, merge o deploy. Conservati ID, URL, memoria locale, CSS e dipendenze. Strumenti locali già disponibili sufficienti; nessun passaggio al cloud necessario.
 
+Verifiche eseguite con Node 24.21.0 locale; nessuna nuova esecuzione della CI Linux di questo ramo. I dati storici senza marcatura ora passano i controlli di struttura, calendario e disegni; resta assente la prova dell'impronta comune di generazione. README aggiornato su questa distinzione, senza riscrivere i resoconti storici.
+
 ## Parti ancora aperte
 
 L'area 3 del piano originale resta aperta. Questi controlli provano leggibilità e coerenza interna; non certificano puntualità, precisione sul posto o qualità visiva. Il modello bus resta mediano e aggregato per fascia; le correzioni dei generatori richiedono una successiva rigenerazione autorizzata. Restano verifiche nel browser e tra schede reali finché il browser è escluso.
 
 Seguito da computer: controllo dei costi della ricerca dei nomi delle vie con geometrie estreme e degli altri moduli non ancora coperti, poi parti aperte delle altre aree del piano. Nessuna dichiarazione di revisione completa o rilascio. La nuova idea multi-città e registro aggiornamenti resta rinviata, compresa analisi e stesura.
+
+Ricognizione del seguito: il calcolo preesistente nomiDelPercorso con una via fittizia da [0,0] a [1e12,0] non termina entro il limite di un secondo del processo isolato, che viene interrotto. È un limite ancora aperto su geometrie finite estreme, non una prova della suite 414 né una modifica dei dati reali. La correzione richiede un blocco dedicato sui costi di indicizzazione/campionamento; i soli controlli dei numeri finiti non la sostituiscono.
