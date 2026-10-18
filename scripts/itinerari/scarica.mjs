@@ -10,7 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fromUrl } from 'geotiff';
 import { BOX } from '../mappa/riquadro.mjs';
-import { validaOsm } from './ingressi.mjs';
+import { validaOsm, validaQuote } from './ingressi.mjs';
 import { scriviFile } from '../scrivi-file.mjs';
 
 const dir = process.argv[2];
@@ -77,19 +77,28 @@ if (!fs.existsSync(demFile)) {
   const [x0, y1] = img.getOrigin();            // angolo in alto a sinistra (lon, lat)
   const [rx, ry] = img.getResolution();         // gradi per pixel (ry negativo)
   const W = img.getWidth(), H = img.getHeight();
+  if(!Number.isSafeInteger(W)||W<1||!Number.isSafeInteger(H)||H<1||![x0,y1,rx,ry].every(Number.isFinite)||rx<=0||ry>=0||Math.abs(x0)>180||Math.abs(y1)>90) throw new Error('Quote Copernicus: metadati o orientamento del raster non validi');
+  if(BOX.w<x0-1e-9||BOX.e>x0+W*rx+1e-9||BOX.n>y1+1e-9||BOX.s<y1+H*ry-1e-9)throw new Error('Quote Copernicus: raster fuori dal riquadro richiesto');
   const M = 0.004;                              // un po' di margine intorno al riquadro
   const px = lon => Math.floor((lon - x0) / rx);
   const py = lat => Math.floor((lat - y1) / ry);
   const win = [Math.max(0, px(BOX.w - M)), Math.max(0, py(BOX.n + M)), Math.min(W, px(BOX.e + M) + 1), Math.min(H, py(BOX.s - M) + 1)];
-  const [ras] = await img.readRasters({ window: win, samples: [0] });
   const w = win[2] - win[0], h = win[3] - win[1];
+  if(!win.every(Number.isSafeInteger)||w<1||h<1||!Number.isSafeInteger(w*h))throw new Error('Quote Copernicus: finestra del raster non valida');
+  const [ras] = await img.readRasters({ window: win, samples: [0] });
+  const nodata=img.getGDALNoData();
+  if(!ras||ras.length!==w*h)throw new Error('Quote Copernicus: campioni mancanti');
+  if(!Array.from(ras).every(Number.isFinite))throw new Error('Quote Copernicus: campioni non numerici o non finiti');
+  if(nodata!==null&&nodata!==undefined&&Array.from(ras).some(v=>Object.is(v,nodata)))throw new Error('Quote Copernicus: campione NoData nel riquadro');
   // quote al decimetro: bastano e il file resta piccolo
   const quote = Array.from(ras, v => Math.round(v * 10) / 10);
-  scriviFile(demFile, JSON.stringify({
+  const datiQuote={
     fonte: url, licenza: 'Copernicus DEM GLO-30 (© DLR e.V. 2010-2014 e © Airbus Defence and Space GmbH 2014-2018, fornito da ESA sotto il programma Copernicus); licenza d\'uso gratuita',
     // centro del primo pixel e passo in gradi
     lon0: x0 + (win[0] + 0.5) * rx, lat0: y1 + (win[1] + 0.5) * ry, dlon: rx, dlat: ry, w, h, quote
-  }));
+  };
+  validaQuote(datiQuote,{raggio:0,percentile:0,media:0});
+  scriviFile(demFile, JSON.stringify(datiQuote));
   console.log(`quote.json: ${w}×${h} punti, da ${quote.reduce((a, b) => Math.min(a, b))} a ${quote.reduce((a, b) => Math.max(a, b))} m`);
 } else console.log('quote.json già scaricato');
 

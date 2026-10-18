@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · cache cartografica
+## Revisione corrente · cache delle quote
+
+Copertura, metadati, NoData, campioni e griglia finale verificati prima della cache; zero e quote negative valide conservati. **408/408 test**, sei aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-21.md).
+
+La sessione di almeno **45 minuti** prosegue sui disegni compressi prima della build. Raster e rete fittizi, dati sorgente invariati. Nessun browser, installazione o pubblicazione; nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · cache cartografica
 
 Download XML verificato prima della cache, scrittura di file completi, cache esistenti controllate e conservate, suddivisione sequenziale e pause native Node. **402/402 test**, sette aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-20.md).
 
