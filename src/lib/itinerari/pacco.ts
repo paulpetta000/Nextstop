@@ -3,6 +3,7 @@ import { dataValida } from './date.ts';
 import { SCENARI, PRIMA, type Citta, type Evento, type Scenario, type Tappa, type Vivo } from './tipi.ts';
 
 export interface Pacco {
+  riferimento?: string;
   tappe: Tappa[];
   n: number;
   dizionario: string[];
@@ -15,13 +16,17 @@ export interface Pacco {
 
 // Gli scenari dei mezzi (sabato, domenica, festivi) arrivano dopo, da /napoli/itinerari/scenari.json:
 // finché non ci sono, valgono i tempi del feriale (aggiungiScenari li sostituisce).
-export interface PaccoScenari { dizionario: string[]; diff: Record<string, number[]> }
+export interface PaccoScenari { riferimento?: string; dizionario: string[]; diff: Record<string, number[]> }
 const numeroValido = (x: unknown): x is number => typeof x === 'number' && Number.isFinite(x) && x >= 0;
 const indiceValido = (x: number, n: number) => Number.isSafeInteger(x) && x >= 0 && x < n;
 function validaDizionario(d: string[]) {
   if (!Array.isArray(d) || d.some(x => typeof x !== 'string')) throw new Error('Dizionario dei mezzi incompleto');
 }
+export function verificaRiferimento(atteso: string | undefined, P: { riferimento?: unknown } | null | undefined) {
+  if (atteso !== undefined && P?.riferimento !== atteso) throw new Error('Dati di una versione diversa dalla città aperta');
+}
 export function aggiungiScenari(C: Citta, P: PaccoScenari) {
+  verificaRiferimento(C.riferimento, P);
   validaDizionario(P.dizionario);
   if (!P.diff || typeof P.diff !== 'object' || Array.isArray(P.diff)) throw new Error('Scenari incompleti');
   // Le matrici diventano disponibili insieme: un pacco rotto non lascia mezza città aggiornata.
@@ -59,9 +64,10 @@ export function impacchetta(C: Citta): Pacco {
       piedi.push(ij - ultimo, F.min.piedi[ij], metri, mezzo); ultimo = ij;
     }
   }
-  return { tappe: C.tappe, n: F.n, dizionario, feriale, piedi, evento: C.evento, linee: C.linee, zone: C.zone };
+  return { riferimento: C.riferimento, tappe: C.tappe, n: F.n, dizionario, feriale, piedi, evento: C.evento, linee: C.linee, zone: C.zone };
 }
 export function spacchetta(P: Pacco): Citta {
+  if (P.riferimento !== undefined && (typeof P.riferimento !== 'string' || !P.riferimento)) throw new Error('Riferimento dei dati non valido');
   if (!Array.isArray(P.piedi)) throw new Error('Tempi a piedi mancanti');
   validaDizionario(P.dizionario);
   const nn = P.n * P.n;
@@ -74,13 +80,14 @@ export function spacchetta(P: Pacco): Citta {
     if (m.length !== nn) throw new Error('Tempi incompleti');
     min[s] = m; metri[s] = w; mezzi[s] = z;
   }
-  const C = { tappe: P.tappe, tempi: { n: P.n, min, metri, mezzi }, evento: P.evento, linee: P.linee, zone: P.zone };
-  aggiungiScenari(C, { dizionario: P.dizionario, diff: { piedi: P.piedi } });
+  const C = { riferimento: P.riferimento, tappe: P.tappe, tempi: { n: P.n, min, metri, mezzi }, evento: P.evento, linee: P.linee, zone: P.zone };
+  aggiungiScenari(C, { riferimento: P.riferimento, dizionario: P.dizionario, diff: { piedi: P.piedi } });
   return C;
 }
 
 // Gli orari veri dei bus, come arrivano da /napoli/itinerari/partenze.json (src/pages/napoli/itinerari/partenze.json.ts)
 export interface PaccoVivo {
+  riferimento?: string;
   preferenza: number; dal: string; al: string; giorni: Record<string, number>;
   tipi: { salite: Record<string, number[]>; viaggi: Record<string, number | number[]> }[];
   fermate: Record<string, string>; dizionario: string[];
@@ -99,7 +106,8 @@ const somme = (v: number[]) => {
   return v.map(x => { c += x; if (!Number.isFinite(c)) throw new Error('Partenze bus non valide'); return c; });
 };
 
-export function spacchettaVivo(P: PaccoVivo): Vivo {
+export function spacchettaVivo(P: PaccoVivo, riferimento?: string): Vivo {
+  verificaRiferimento(riferimento, P);
   validaDizionario(P.dizionario);
   if (!numeroValido(P.preferenza) || !dataFeed(P.dal) || !dataFeed(P.al) || P.dal > P.al || !Array.isArray(P.tipi) || !record(P.giorni) || !record(P.fermate) || !Object.values(P.fermate).every(x => typeof x === 'string')) throw new Error('Calendario bus non valido');
   for (const [d, tipo] of Object.entries(P.giorni)) {

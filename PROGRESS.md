@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · decoder e pezzi della mappa
+## Revisione corrente · coerenza dei dati differiti
+
+Pagina e dati differiti ora condividono un riferimento della base dei tempi/proiezione: copie incompatibili vengono rifiutate prima di applicarle; tentativi falliti non restano successi memorizzati. **331/331 test**, build di **12 pagine**, **811 link validi**, **82 risorse**. Verificati sei pacchi e **59 pezzi** coerenti con il pacco iniziale. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-12.md). Vecchi client senza controllo esclusi dalla garanzia; URL, memoria v1 e link condivisi conservati.
+
+La sessione continuativa prosegue sui download incompleti. Nessun browser, installazione o pubblicazione; dati generati sorgente invariati; nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · decoder e pezzi della mappa
 
 Corretti blocchi con lato zero/viste enormi e rifiuto dei tratti compressi incompleti. Confronto identico su **21.180 percorsi e 1.332.817 punti**, più **2.000 viste** con stesso ordine dei pezzi. **322/322 test**, build di **12 pagine**, **811 link validi**, **82 risorse**. [Prove, profilo Node e limiti](docs/storico/2026-10-18-revisione-codice-11.md). Nessun CSS o dato generato cambiato.
 

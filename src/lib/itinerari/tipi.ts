@@ -81,6 +81,7 @@ export interface Vivo {
 }
 
 export interface Citta {
+  riferimento?: string; // base comune per dati differiti e città già aperta
   tappe: Tappa[];
   tempi: Tempi;
   evento?: Evento;

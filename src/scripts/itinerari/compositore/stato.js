@@ -1,7 +1,7 @@
 // Lo stato del compositore: la città (pacco della build), gli itinerari sul telefono (memoria.ts, chiave «itinerari-v1»),
 // l'itinerario aperto, i giorni calcolati (calcolo.ts, poi pause e margine con pause.ts) e i dati che arrivano dopo
 // l'apertura (scenari, orari veri dei bus, mappa e percorsi). Niente DOM qui, tranne la lettura dei dati della pagina.
-import { spacchetta, spacchettaVivo, aggiungiScenari } from '../../../lib/itinerari/pacco';
+import { spacchetta, spacchettaVivo, aggiungiScenari, verificaRiferimento } from '../../../lib/itinerari/pacco';
 import { calcolaGiorno, ordinePiuCorto, tappaDi, dataDelGiorno } from '../../../lib/itinerari/calcolo';
 import { conPause } from '../../../lib/itinerari/pause';
 import { nuovoItinerario, uguali, codifica } from '../../../lib/itinerari/link';
@@ -215,7 +215,7 @@ export async function caricaDopo(quandoArriva) {
   }).catch(() => { /* senza, valgono i tempi del feriale */ });
   fetch('/napoli/itinerari/partenze.json', { priority: 'low' }).then(r => (r.ok ? r.json() : null)).then(p => {
     if (!p) return;
-    C.vivo = spacchettaVivo(p); memoOrdine.clear(); ricalcola(); quandoArriva();
+    C.vivo = spacchettaVivo(p, C.riferimento); memoOrdine.clear(); ricalcola(); quandoArriva();
   }).catch(() => { /* senza orari veri resta l'attesa media */ });
 }
 // la mappa di oggi e i percorsi tra le tappe: si caricano una volta
@@ -225,8 +225,12 @@ export const caricaMappa = () => (mappaDati ??= quandoLibero().then(() => Promis
   fetch('/napoli/itinerari/percorsi.json').then(r => { if (!r.ok) throw new Error('percorsi'); return r.json(); }),
   // l'indice delle strade a pezzi: senza (vecchia copia, niente rete) la mappa resta quella di base
   fetch('/napoli/itinerari/strade/indice.json').then(r => (r.ok ? r.json() : null)).catch(() => null)
-])).catch(e => { mappaDati = null; throw e; }));
-export const caricaAlternativi = creaCaricaJson('/napoli/itinerari/percorsi-alternativi.json');
+])).then(([mappa, percorsi, indice]) => {
+  verificaRiferimento(C.riferimento, mappa); verificaRiferimento(C.riferimento, percorsi);
+  try { if (indice) verificaRiferimento(C.riferimento, indice); } catch { indice = null; }
+  return [mappa, percorsi, indice];
+}).catch(e => { mappaDati = null; throw e; }));
+export const caricaAlternativi = creaCaricaJson('/napoli/itinerari/percorsi-alternativi.json', undefined, p => verificaRiferimento(C.riferimento, p));
 // le schede complete e i dati della ricerca (/napoli/itinerari/schede/, schede.astro): si scaricano a pagina caricata e
 // servono quando apri una scheda o cerchi. MODELLI: id → contenuto del <template> della scheda.
 export const MODELLI = new Map();

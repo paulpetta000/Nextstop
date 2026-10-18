@@ -4,6 +4,7 @@
 // e i nomi delle vie sono in pezzi da 1,28 km (specifica §6, src/lib/itinerari/strade.ts): si scaricano solo dove guardi, da vicino;
 // sempre i nomi delle vie principali e, nel colore del percorso, quelli delle vie dove passa il giorno.
 import { $, $$, esc, ic, piano, ora } from './base.js';
+import { verificaRiferimento } from '../../../lib/itinerari/pacco';
 import { rileggi, pezziDi, nomiDelPercorso } from '../../../lib/itinerari/strade';
 import { C, T, A, salvato, visitata, nelViaggio, caricaMappa, caricaAlternativi, tappeDi, daFare } from './stato.js';
 
@@ -51,7 +52,7 @@ let P = null, ALT = null, BASE = null, STRADE = null, ESISTE = new Set();
 const SOGLIA_PEZZI = 0.45; // px per unità (1 unità = 5 m): da qui in su si caricano i pezzi
 const STRATI_P = [['v', 'm-vicoli'], ['p', 'm-pedonali'], ['m', 'm-medie-c'], ['g', 'm-grandi-c'], ['m', 'm-medie'], ['g', 'm-grandi'], ['s', 'm-scale']];
 const CARICATI = new Map();
-export const prendiPezzo = k => { if (!CARICATI.has(k)) CARICATI.set(k, fetch(`/napoli/itinerari/strade/${k}.json`).then(r => (r.ok ? r.json() : null)).catch(() => null).then(d => { if (!d) CARICATI.delete(k); return d; })); return CARICATI.get(k); };
+export const prendiPezzo = k => { if (!CARICATI.has(k)) CARICATI.set(k, fetch(`/napoli/itinerari/strade/${k}.json`).then(r => (r.ok ? r.json() : null)).then(d => { verificaRiferimento(C.riferimento, d); return d; }).catch(() => null).then(d => { if (!d) CARICATI.delete(k); return d; })); return CARICATI.get(k); };
 // senza rete restano anche i pezzi delle tappe degli itinerari salvati: si scaricano in anticipo (li salva il service worker)
 export function pezziDelleTappe(punti) { if (!STRADE) return; const L = STRADE.lato; for (const k of new Set(punti.map(([x, y]) => `${Math.floor(x / L)}_${Math.floor(y / L)}`))) if (ESISTE.has(k)) prendiPezzo(k); }
 // i percorsi del giorno, una linea per tratto (e quelle dentro le tappe lunghe: Spaccanapoli, Toledo…), in fila

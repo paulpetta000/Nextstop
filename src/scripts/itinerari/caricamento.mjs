@@ -1,10 +1,10 @@
 // Caricamenti del compositore: funzioni provabili senza avviare una pagina o leggere dati personali.
-export function creaCaricaJson(url, richiedi = globalThis.fetch) {
+export function creaCaricaJson(url, richiedi = globalThis.fetch, valida = () => {}) {
   let promessa = null;
   return () => (promessa ??= richiedi(url).then(r => {
     if (!r.ok) throw new Error('Dati non disponibili');
     return r.json();
-  }).catch(() => { promessa = null; return null; }));
+  }).then(p => { valida(p); return p; }).catch(() => { promessa = null; return null; }));
 }
 
 export function applicaSchede(doc, modelli, ui, importa) {
