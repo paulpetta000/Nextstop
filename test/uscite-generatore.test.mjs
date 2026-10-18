@@ -11,12 +11,14 @@ const esegui = new Function('d', 'const {fs,path,RADICE,uscita,firma,candidati,p
 
 function ambiente(mappa = '{') {
   const scritture = [];
+  const scenari = ['feriale','sabato','sabato-pomeriggio','domenica','festivo','piedi'];
+  const sc = nome => ({ min:[[0]], piedi:[[0]], salita:[[0]], ...(nome==='piedi'?{}:{mezzi:[['']],senza:{min:[[0]],piedi:[[0]],mezzi:[['']]},bus:[[0]]}) });
   const dati = {
     fs: { readFileSync: () => mappa, writeFileSync: (...x) => scritture.push(x) }, path,
-    RADICE: '/sito-fittizio', uscita: { generato: '2026-10-18', firma: 'stesse-posizioni', punti: ['a'], scenari: {} },
-    firma: 'stesse-posizioni', candidati: [], punti: ['a'], chiaviBus: new Set(), PARTENZE: { tipi: [] },
+    RADICE: '/sito-fittizio', uscita: { generato: '2026-10-18', firma: 'stesse-posizioni', punti: ['a'], linee: [], scenari: Object.fromEntries(scenari.map(n=>[n,sc(n)])) },
+    firma: 'stesse-posizioni', candidati: [], punti: ['a'], chiaviBus: new Set(), PARTENZE: { tipi: [], giorni: {}, fermate: {} },
     GTFS: { feed: {}, date: [], linee: [] }, BUS: { finestre: {} },
-    disegni: { feriale: [[null]] }, disegniSenza: {}, SCENARI: [{ nome: 'feriale' }], rapporto: [],
+    disegni: Object.fromEntries(scenari.map(n=>[n,[[null]]])), disegniSenza: Object.fromEntries(scenari.filter(n=>n!=='piedi').map(n=>[n,[[null]]])), SCENARI: scenari.map(nome=>({nome})), rapporto: [],
     process: { env: {} }, console: { log() {} },
     scriviFilePreparati: files => scritture.push(...files.map(x => [x.file, x.contenuto])),
     marcaGenerazione, validaProiezione
@@ -36,7 +38,7 @@ test('generatore: prepara insieme tutti e cinque i file senza cambiare i loro co
   assert.deepEqual(e.scritture.map(([f]) => path.basename(f)), ['tempi-tappe.json', 'partenze-bus.json', 'linee-bus.json', 'percorsi-tappe.json', 'percorsi-alternativi.json']);
   const p = Object.fromEntries(e.scritture.map(([f, s]) => [path.basename(f), JSON.parse(s)]));
   assert.deepEqual(p['tempi-tappe.json'].candidati, []);
-  assert.deepEqual(p['percorsi-tappe.json'].scenari, { feriale: [['']] });
+  assert.deepEqual(p['percorsi-tappe.json'].scenari.feriale, [['']]);
   assert.deepEqual(p['percorsi-alternativi.json'].candidati, []);
   assert.doesNotThrow(() => verificaGenerazione(p, { w: 100, h: 100, box: { w: 0, e: 1, n: 1, s: 0 } }));
   assert.match(p['tempi-tappe.json'].generazione, /^[a-f0-9]{64}$/);

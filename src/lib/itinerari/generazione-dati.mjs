@@ -1,5 +1,6 @@
 // Solo Node/build. Questi cinque file vengono prodotti dalla stessa esecuzione.
 import { createHash } from 'node:crypto';
+import { verificaStruttura } from './struttura-dati.mjs';
 export const FILE_GENERATI = ['tempi-tappe.json', 'partenze-bus.json', 'linee-bus.json', 'percorsi-tappe.json', 'percorsi-alternativi.json'];
 export function validaProiezione(p) {
   const b = p?.box;
@@ -18,10 +19,12 @@ function impronta(dati, proiezione) {
   return hash.digest('hex');
 }
 export function marcaGenerazione(dati, proiezione) {
+  verificaStruttura(dati);
   const generazione = impronta(dati, proiezione);
   return Object.fromEntries(FILE_GENERATI.map(nome => [nome, { ...dati[nome], generazione }]));
 }
 export function verificaGenerazione(dati, proiezione) {
+  verificaStruttura(dati);
   const riferimenti = FILE_GENERATI.map(nome => dati[nome]?.generazione);
   // I dati già pubblicati, senza il nuovo campo, mantengono i controlli precedenti.
   if (riferimenti.every(x => x === undefined)) return;

@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · scrittura dei dati generati
+## Revisione corrente · matrici e riferimenti
+
+Controlli strutturali prima di scrittura e build, anche sui dati storici senza marcatura: sei scenari, matrici complete, numeri, punti, candidati e corse effettivamente usate. **364/364 test**, otto aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-15.md).
+
+Enrico richiede ora una sessione continuativa di **almeno 45 minuti**, senza fermarsi al primo risultato. Si prosegue su calendario/partenze e controlli collegati del punto 3. Nessuna automazione, browser, installazione o pubblicazione; dati sorgente invariati. Nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · scrittura dei dati generati
 
 Completata preparazione delle uscite prima delle sostituzioni, scrittura tramite temporanei completi e controllo in build dei cinque file della stessa generazione. **356/356 test**, **18 prove aggiunte**; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-18-revisione-codice-14.md). Dati sorgente invariati; nessun download o rigenerazione reale, browser o pubblicazione.
 
