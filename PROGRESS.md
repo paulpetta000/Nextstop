@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Accessi estesi e vecchia lista · 19/10/2026
+
+Su richiesta di Enrico ricontrollati tutti i 31 URL residui e tutti i sei locali della vecchia lista (quattro siti, due senza fonte del gestore verificabile). Bilancio cumulativo su 54 indirizzi: 13 originali leggibili, 31 con alternativa ufficiale leggibile anche parziale/storica, 10 senza alternativa utile; non sono conteggi di siti distinti. Recuperati MiC Floridiana, atto parchi del 22/07/2025, ordinanza Marechiaro 2026, Artecard, PDF San Carlo e schede ulteriori. Segnalati accessi intermittenti e documenti storici. [Rapporto attuale](aggiornamenti/rapporti/2026-10-19-accessi-estesi.md), [21 verifiche personali residue su 26 gruppi](da-verificare/fonti-orari.md). Cinque gruppi con fonte e orario ordinario recuperati; tutti i sei locali della vecchia lista inclusi, Da Rosetta risolta per la domenica. Registro e lista aggiornati, rapporti precedenti conservati, dati applicativi invariati e controlli completi ancora zero. Verificati YAML, copertura, conteggi, riferimenti e conservazione; nessuna build applicativa eseguita. Branch `codex/controlli-periodici-fonti`, main invariato.
+
 ## Ritentativo fonti e verifiche personali · 19/10/2026
 
 Ritentati 50 URL precedentemente non leggibili: 9 recuperati allo stesso indirizzo, 10 con alternativa ufficiale, 7 parziali e 24 ancora non verificabili. [Rapporto](aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.md) e [20 verifiche personali per Enrico](da-verificare/fonti-orari.md), con collegamenti e richieste precise. Aggiunti canali alternativi e riscontri di accesso al registro; rapporto iniziale e vecchia lista locali conservati. Nessun dato applicativo aggiornato, nessun controllo completo concluso o scadenza rinviata. Verificati YAML, riferimenti, copertura e conservazione dei file. Lavoro sul branch `codex/controlli-periodici-fonti`; main non modificato.

@@ -8,6 +8,7 @@ Registro operativo preparato il 19/10/2026, su richiesta di Enrico, per i luoghi
 
 - [Registro dei controlli](controlli-periodici.yaml): 60 tappe/gite, 32 locali e 14 gruppi di trasporto; fonti collegate agli ID esistenti, canali di scoperta, frequenze e pubblicazioni attuali/future.
 - [Rapporto iniziale](rapporti/2026-10-19-impostazione.md) e [dettaglio strutturato](rapporti/2026-10-19-impostazione.yaml): ricerca eseguita, prove limitate e problemi di accesso; non equivalgono all'aggiornamento completo degli orari.
+- [Riesame esteso, compresa tutta la vecchia lista](rapporti/2026-10-19-accessi-estesi.md): bilancio cumulativo su 54 URL, con originali, alternative e casi ancora non leggibili distinti.
 - [Ritentativo delle fonti del 19/10](rapporti/2026-10-19-ritentativo-fonti.md): accessi recuperati e alternative ufficiali; [verifiche personali residue di Enrico](../da-verificare/fonti-orari.md).
 - [Modello di rapporto](rapporti/MODELLO.yaml) da copiare per ogni controllo richiesto; conservare i precedenti.
 
