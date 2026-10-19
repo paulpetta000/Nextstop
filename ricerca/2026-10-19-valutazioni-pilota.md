@@ -21,6 +21,8 @@ Recupero diretto via HTTPS con proxy dell’ambiente e permesso di rete previsto
 
 Restano da provare con accesso autorizzato media/conteggio effettivi, dimensioni, compatibilità con la mappa locale e richieste/SKU. Il prototipo con testo semplice non sostituisce il componente ufficiale. Regole SEE e listino nella ricerca iniziale; nessun account dell’utente configurato.
 
+Approfondimento finale: [Maps Demo Key](https://developers.google.com/maps/documentation/javascript/demo-key), senza fatturazione per prototipi, con limiti giornalieri e contenuti degli utenti esclusi; non provata e non considerata accesso ai voti garantito. [Quote JavaScript/UI Kit](https://developers.google.com/maps/documentation/javascript/usage-and-billing): 6.000 Query/minuto/progetto, quota distinta dalle API sottostanti. Non confondere soglia al minuto, gratuità mensile e limite di spesa. Il [prossimo pilota](../valutazioni/pilota-google.md) propone verifiche e quantità prima di attivare un account ordinario. La verifica nel browser dello strumento dimostrativo Google si è fermata all’errore TLS del proxy; nessuna disabilitazione della verifica del certificato e nessuna chiave di un esempio riutilizzata.
+
 ## TheFork
 
 Resta valido il limite iniziale: API partner B2B non equivalente a un catalogo pubblico di aggregati. L’esistenza di un profilo o di un link di prenotazione non concede di mostrarne media, conteggio o logo. Inoltre l’eventuale vicinanza a dati Terra richiede risolvere il vincolo contrattuale sopra. Nessuna integrazione numerica realizzata.
