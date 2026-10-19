@@ -1,0 +1,69 @@
+{
+  "versione": 1,
+  "verificato_il": "2026-10-19",
+  "ambito": "identita_editoriali_pilota_non_pubblicate",
+  "numeri_abilitati": false,
+  "entita": [
+    {
+      "tipo": "locale",
+      "id": "cinquanta-kalo",
+      "sede_interna": "Piazza Sannazaro 201b, Napoli",
+      "google": { "stato": "id_da_verificare", "id_esterno": null, "url_gestore": "https://www.google.com/maps/place/50+Kal%C3%B2/@40.8283718,14.2180688,17z/data=!3m1!4b1!4m5!3m4!1s0x133b0919b76c67e5:0x22f7a9cd950e4e2c!8m2!3d40.8283718!4d14.2202575", "riscontro": "Collegamento presente nella pagina info.php del gestore; il CID nell’URL non è stato convertito in Place ID" },
+      "tripadvisor": {
+        "stato": "candidato_da_validare_con_api",
+        "profili": [
+          { "id_esterno": "6226929", "parte": "sede_sannazaro", "url": "https://www.tripadvisor.it/Restaurant_Review-g187785-d6226929-Reviews-50_Kalo_Di_Ciro_Salvo-Naples_Province_of_Naples_Campania.html", "riscontro": "Nome e indirizzo Sannazaro nella pagina del profilo; sede distinta sul sito del gestore" }
+        ],
+        "esclusi": [
+          { "id_esterno": "33255773", "motivo": "Sede di Piazza della Repubblica, non la sede dell’ID interno", "url": "https://www.tripadvisor.it/Restaurant_Review-g187785-d33255773-Reviews-50_Kalo_Di_Ciro_Salvo-Naples_Province_of_Naples_Campania.html" }
+        ]
+      },
+      "thefork": { "stato": "accesso_e_profilo_da_verificare" },
+      "fonti_identita": ["https://50kalo.it/", "https://50kalo.it/info.php", "https://50kalo.it/info_repubblica.php"],
+      "prossimo_passo": "Confermare ID Google della sede Sannazaro; non usare il profilo Repubblica. Terra solo dopo condizioni compatibili"
+    },
+    {
+      "tipo": "tappa",
+      "id": "capodimonte",
+      "parte_interna": "Museo e Real Bosco",
+      "google": { "stato": "id_e_parti_da_verificare", "id_esterno": null },
+      "tripadvisor": {
+        "stato": "candidato_da_validare_con_api",
+        "profili": [
+          { "id_esterno": "195506", "parte": "profilo_denominato_museo_e_real_bosco", "url": "https://www.tripadvisor.it/Attraction_Review-g187785-d195506-Reviews-Museo_e_Real_Bosco_di_Capodimonte-Naples_Province_of_Naples_Campania.html", "riscontro": "Nome dell’insieme e Via Miano 2 nella pagina del profilo; non equivale a un voto separato del solo bosco" }
+        ],
+        "esclusi": []
+      },
+      "thefork": { "stato": "non_applicabile_tipo_luogo" },
+      "fonti_identita": ["https://capodimonte.cultura.gov.it/"],
+      "prossimo_passo": "Verificare separatamente copertura museo/bosco e denominazione da mostrare; non trasferire il giudizio a un’altra componente"
+    },
+    {
+      "tipo": "tappa",
+      "id": "duomo",
+      "parte_interna": "Duomo e Tesoro di San Gennaro",
+      "google": { "stato": "id_e_parti_da_verificare", "id_esterno": null },
+      "tripadvisor": {
+        "stato": "candidato_da_validare_con_api",
+        "profili": [
+          { "id_esterno": "1987333", "parte": "duomo", "url": "https://www.tripadvisor.it/Attraction_Review-g187785-d1987333-Reviews-Duomo_di_Napoli-Naples_Province_of_Naples_Campania.html", "riscontro": "Profilo dedicato al Duomo; non rappresenta da solo tutte le parti della tappa" },
+          { "id_esterno": "2482136", "parte": "museo_del_tesoro", "url": "https://www.tripadvisor.it/Attraction_Review-g187785-d2482136-Reviews-Tesoro_di_San_Gennaro-Naples_Province_of_Naples_Campania.html", "riscontro": "Profilo distinto per Museo del Tesoro; non confondere con la sola Cappella del Tesoro" }
+        ],
+        "esclusi": []
+      },
+      "thefork": { "stato": "non_applicabile_tipo_luogo" },
+      "fonti_identita": ["https://www.tripadvisor.it/Attraction_Review-g187785-d1987333-Reviews-Duomo_di_Napoli-Naples_Province_of_Naples_Campania.html", "https://www.tripadvisor.it/Attraction_Review-g187785-d2482136-Reviews-Tesoro_di_San_Gennaro-Naples_Province_of_Naples_Campania.html"],
+      "prossimo_passo": "Confermare ogni parte con il suo gestore e il profilo API; se esposte, indicare due parti senza farne la media"
+    },
+    {
+      "tipo": "tappa",
+      "id": "spaccanapoli",
+      "parte_interna": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+      "google": { "stato": "insieme_non_associato", "id_esterno": null },
+      "tripadvisor": { "stato": "insieme_non_associato", "profili": [], "esclusi": [] },
+      "thefork": { "stato": "non_applicabile_tipo_luogo" },
+      "fonti_identita": [],
+      "prossimo_passo": "Prima decidere se esporre giudizi di singole componenti: un profilo della via non equivale all’intera passeggiata. Nessuna assenza di profili dichiarata"
+    }
+  ]
+}

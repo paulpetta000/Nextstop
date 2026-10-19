@@ -1,6 +1,8 @@
 # Valutazioni esterne nelle schede · proposta
 
-**Stato: proposta rivista criticamente il 19/10/2026; implementazione in attesa dell’OK di Enrico.** La pubblicazione di questo documento su main rende ufficiale il piano da discutere, non autorizza a costruire la funzione. Nessun voto reale raccolto, componente, API, account, fatturazione o logo aggiunto al sito. Fonti e limiti della ricerca nella [nota di ricerca](../ricerca/2026-10-19-valutazioni-esterne.md). Ricontrollare tariffe e condizioni prima dello sviluppo.
+**Stato: avvio del piano autorizzato da Enrico il 19/10/2026; primo blocco pilota in corso.** Presentazione scelta: righe nella scheda aperta, precisate dal riferimento visivo come fascia compatta sotto la foto, con media, scala, conteggio tra parentesi e piattaforma riconoscibile. Nessun account API attivo, come dichiarato dall’utente; nessuna spesa autorizzata. Stato operativo in [valutazioni](../valutazioni/README.md), nuove evidenze nella [ricerca del pilota](../ricerca/2026-10-19-valutazioni-pilota.md). Il sito pubblico rimane invariato; il laboratorio usa soltanto dati inventati. Questa autorizzazione avvia il lavoro, non approva il futuro rilascio in produzione.
+
+**Aggiornamento decisivo del primo blocco:** recuperati direttamente termini Terra Discover e Linking Policy. La combinazione con altre piattaforme e link di prenotazione non può essere considerata compatibile con i termini standard senza risolvere i vincoli riportati nella nuova ricerca. La lettura diretta dello schema Terra è ora riuscita. Le note precedenti sotto conservano il ragionamento iniziale, corretto da questo aggiornamento: non sono condizioni già superate per l’implementazione.
 
 ## Esito della revisione
 
@@ -29,7 +31,7 @@ Esempio solo illustrativo, con numeri inventati: “Google Maps · 4,6/5 · 1.23
 | Tripadvisor | **Terra**, API attuale; aggregati documentati in `traveler_ratings.overall` | Accesso e diritti dipendono dal pacchetto; conservazione dei contenuti vietata salvo contratto. Validare media/conteggio nella versione e nel pacchetto ottenuti; leggere Linking Policy e branding correnti |
 | TheFork | Collegamento alla scheda corretta; dati numerici soltanto con accesso/licenza adeguati | La documentazione pubblica riguarda partner e gestione ristoranti, non una libera API di voti per tutti i locali. Non dare per acquisita questa copertura |
 
-**Raccomandazione condizionata alle verifiche:** Google Maps + Tripadvisor come moduli distinti, caricati soltanto quando la persona sceglie di vedere le valutazioni esterne. TheFork rimane un’aggiunta facoltativa per i soli ristoranti presenti e autorizzati. Prima di estendere un’integrazione, mostrare a Enrico quali piattaforme superano davvero le verifiche. Se un vincolo impedisce media e conteggio, dichiarare il limite e proporre la scelta successiva senza sostituire silenziosamente l’obiettivo con soli link.
+**Percorso dopo le nuove verifiche:** primo candidato tecnico Google UI Kit; confronto con Tripadvisor subordinato a condizioni compatibili, oltre all’accesso API. TheFork rimane facoltativo per i ristoranti presenti e autorizzati. Moduli distinti e righe separate non risolvono da soli un vincolo contrattuale. Prima di estendere un’integrazione, mostrare a Enrico quali piattaforme superano davvero le verifiche. Se un vincolo impedisce media e conteggio, dichiarare il limite e proporre la scelta successiva senza sostituire silenziosamente l’obiettivo con soli link.
 
 Assunzione da confermare prima dello sviluppo: titolare e account di fatturazione in Italia/SEE. Non è stato verificato un account Google/Tripadvisor dell’utente. Non cambiare la mappa attuale di Nextstop per aggirare un vincolo: scegliere un’integrazione compatibile o lasciare il solo collegamento.
 
@@ -40,7 +42,7 @@ Assunzione da confermare prima dello sviluppo: titolare e account di fatturazion
 3. **Due riquadri affiancati:** Google e Tripadvisor, impilati sul telefono. Confronto immediato, ma maggiore altezza e attenzione ai loghi, al contrasto e al numero di richieste.
 4. **Collegamenti sempre disponibili, numeri su richiesta:** utile come avvio o ripiego quando una piattaforma manca. La semplice lista non deve fare partire script, immagini remote o richieste di valutazioni.
 
-Sono descrizioni da discutere, non bozzetti costruiti. Prima di una futura implementazione grafica rispettare il processo di confronto delle proposte del repository. La preferenza 2 non sostituisce l’OK di Enrico.
+Le quattro descrizioni conservano le alternative discusse. **Enrico ha scelto la 1**, poi precisata con immagine di riferimento: fascia compatta sotto la foto. La preferenza iniziale per la 2 è superata. Il [laboratorio](../design/valutazioni/README.md) prova tale disposizione senza dati o marchi reali; il risultato del componente ufficiale resta da verificare. Il solo tocco che apre una scheda non autorizza implicitamente tutti i servizi esterni: mantenere una scelta esplicita e comprensibile.
 
 ## Associare la scheda giusta
 
@@ -95,7 +97,7 @@ I limiti gratuiti non sono una promessa di costo zero permanente. I 92 soggetti 
 
 Il preventivo futuro deve indicare periodo di fatturazione, uso gratuito ancora disponibile, ricerche iniziali degli ID, riaperture, ritentativi, SKU aggiuntivi e costo della funzione server. Misurare le unità fatturabili nel pilota, non dedurle dal numero di clic. Definire un limite operativo conservativo e il modo effettivo di fermare le chiamate; se il provider non offre un tetto monetario certo, dichiarare il margine di incertezza prima di attivarlo. Nessun nuovo tracciamento dei visitatori: eventuali contatori tecnici di utilizzo devono essere aggregati e compatibili con le regole di privacy del progetto.
 
-## Piano di attuazione dopo un futuro OK
+## Piano di attuazione · avvio autorizzato
 
 | Passo | Lavoro e consegna | Criterio per proseguire |
 |---|---|---|
@@ -106,7 +108,7 @@ Il preventivo futuro deve indicare periodo di fatturazione, uso gratuito ancora 
 | 5. Integrazione | Modulo comune, associazioni estese alle sole entità verificabili, informativa e ripiego. Rendiconto distinto per piattaforma: profili confermati, incerti, assenti, non autorizzati | Zero richieste dai template e prima dell’azione prevista; nessuna chiave privata o cache non autorizzata. Riattivazioni misurate; limite di traffico e disattivazione provati |
 | 6. Verifica e proposta di rilascio | Controlli pertinenti, test/build/link del progetto, tastiera/lettore schermo, chiaro/scuro e mobile, rete lenta/offline, quote e 429 | Anteprima e riscontro di Enrico prima di main/produzione, secondo le regole del progetto |
 
-Prima di un eventuale sviluppo restano da decidere: una delle quattro presentazioni, Google+Tripadvisor o un avvio più limitato, budget, account disponibili e TheFork opzionale. **Questo documento chiude il lavoro di ideazione richiesto; non avvia nessuno dei passi di implementazione.**
+Presentazione decisa e avvio autorizzato. Restano da risolvere accessi, budget, condizioni compatibili per Tripadvisor e TheFork opzionale. I blocchi operativi e le prove effettivamente concluse sono nello [stato corrente](../valutazioni/stato.md); non considerare una simulazione come una piattaforma già integrata.
 
 ## Criteri di accettazione del futuro rilascio
 
