@@ -1,5 +1,11 @@
 # PROGRESS · stato attuale
 
+## Consegna su main e revisione del piano · 19/10/2026
+
+Enrico ha autorizzato l’integrazione su main dell’intero blocco fonti, coda personale e riordino, previa revisione critica del [piano delle valutazioni](specifiche/valutazioni-esterne.md). Proposta ristrutturata: fattibilità documentata distinta dalle prove ancora necessarie; schema Terra recuperato dal testo ufficiale indicizzato, condizioni di branding/link ancora da verificare; identità e cambi di sede, errori, privacy, limiti di spesa, criteri di accettazione e manutenzione esplicitati. **L’OK alla pubblicazione dei documenti non approva l’implementazione delle valutazioni.** Nessun componente del sito, voto, account o servizio a pagamento aggiunto. Verifiche di conservazione del registro e delle 26 voci, selettore e riferimenti documentali; build applicativa non ripetuta perché gli input del sito sono invariati. PR e risultato dell’integrazione vanno riscontrati su GitHub prima di dichiarare la consegna conclusa.
+
+Le voci seguenti conservano la cronologia: i riferimenti a main invariato descrivono i rispettivi passaggi precedenti.
+
 ## Riordino fonti e proposta valutazioni · 19/10/2026
 
 Registro diviso senza perdita in 106 schede e cataloghi selezionabili; 26 verifiche personali in file singoli. [Procedura breve](aggiornamenti/PROCEDURA.md), selettore Node locale senza dipendenze e [misure del riordino](aggiornamenti/riordino-2026-10-19.md). Conservati ID, stati, scadenze, canali, pubblicazioni e rapporti storici; nessun nuovo controllo degli orari o modifica ai dati applicativi. Preparati [piano delle valutazioni esterne](specifiche/valutazioni-esterne.md) e [ricerca ufficiale](ricerca/2026-10-19-valutazioni-esterne.md): Google UI Kit da valutare per SEE/mappa, Tripadvisor Terra, TheFork subordinato ad accesso. **Solo idea: nessuna implementazione, voto, API a pagamento o logo aggiunto.** Verifiche documentali e comandi locali del selettore; nessuna build applicativa. Branch del lavoro, main invariato.
