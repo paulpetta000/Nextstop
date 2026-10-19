@@ -1,0 +1,80 @@
+{
+  "id": "tappa-virgilio",
+  "nome": "Parco delle Tombe di Virgilio e Leopardi",
+  "categoria": "citta",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "virgilio"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni",
+    "prezzi_gia_pubblicati"
+  ],
+  "schede": {
+    "orari": "tp-virgilio-orari",
+    "prezzi": "tp-virgilio-prezzi"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-mic-virgilio",
+    "tp-musei-campania-virgilio",
+    "tp-mic-leopardi-day-2025"
+  ],
+  "canali_scoperta": [
+    "gestore-cultura-gov-it",
+    "gestore-museicampania-cultura-gov-it",
+    "museicampania-avvisi",
+    "accessi-estesi-virgilio"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "cultura.gov.it",
+      "museicampania.cultura.gov.it"
+    ],
+    "soggetto": "Parco delle Tombe di Virgilio e Leopardi",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "pubblicazioni_rilevate": [],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://museicampania.cultura.gov.it/parco-delle-tombe-di-virgilio-e-leopardi-temporanea-chiusura-di-alcune-aree-del-percorso-di-visita/",
+      "https://museicampania.cultura.gov.it/category/avvisi/"
+    ],
+    "verifiche_personali": [
+      "V19"
+    ],
+    "esito": "rimangono_verifiche_personali",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  },
+  "ultimo_riesame_accessi": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml",
+    "gruppi": [
+      "V19"
+    ],
+    "verifiche_personali_residue": [
+      "V19"
+    ],
+    "controllo_completo": false
+  }
+}

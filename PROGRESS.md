@@ -1,5 +1,29 @@
 # PROGRESS · stato attuale
 
+## Consegna su main e revisione del piano · 19/10/2026
+
+Enrico ha autorizzato l’integrazione su main dell’intero blocco fonti, coda personale e riordino, previa revisione critica del [piano delle valutazioni](specifiche/valutazioni-esterne.md). Proposta ristrutturata: fattibilità documentata distinta dalle prove ancora necessarie; schema Terra recuperato dal testo ufficiale indicizzato, condizioni di branding/link ancora da verificare; identità e cambi di sede, errori, privacy, limiti di spesa, criteri di accettazione e manutenzione esplicitati. **L’OK alla pubblicazione dei documenti non approva l’implementazione delle valutazioni.** Nessun componente del sito, voto, account o servizio a pagamento aggiunto. Verifiche di conservazione del registro e delle 26 voci, selettore e riferimenti documentali; build applicativa non ripetuta perché gli input del sito sono invariati. PR e risultato dell’integrazione vanno riscontrati su GitHub prima di dichiarare la consegna conclusa.
+
+Le voci seguenti conservano la cronologia: i riferimenti a main invariato descrivono i rispettivi passaggi precedenti.
+
+## Riordino fonti e proposta valutazioni · 19/10/2026
+
+Registro diviso senza perdita in 106 schede e cataloghi selezionabili; 26 verifiche personali in file singoli. [Procedura breve](aggiornamenti/PROCEDURA.md), selettore Node locale senza dipendenze e [misure del riordino](aggiornamenti/riordino-2026-10-19.md). Conservati ID, stati, scadenze, canali, pubblicazioni e rapporti storici; nessun nuovo controllo degli orari o modifica ai dati applicativi. Preparati [piano delle valutazioni esterne](specifiche/valutazioni-esterne.md) e [ricerca ufficiale](ricerca/2026-10-19-valutazioni-esterne.md): Google UI Kit da valutare per SEE/mappa, Tripadvisor Terra, TheFork subordinato ad accesso. **Solo idea: nessuna implementazione, voto, API a pagamento o logo aggiunto.** Verifiche documentali e comandi locali del selettore; nessuna build applicativa. Branch del lavoro, main invariato.
+
+## Accessi estesi e vecchia lista · 19/10/2026
+
+Su richiesta di Enrico ricontrollati tutti i 31 URL residui e tutti i sei locali della vecchia lista (quattro siti, due senza fonte del gestore verificabile). Bilancio cumulativo su 54 indirizzi: 13 originali leggibili, 31 con alternativa ufficiale leggibile anche parziale/storica, 10 senza alternativa utile; non sono conteggi di siti distinti. Recuperati MiC Floridiana, atto parchi del 22/07/2025, ordinanza Marechiaro 2026, Artecard, PDF San Carlo e schede ulteriori. Segnalati accessi intermittenti e documenti storici. [Rapporto attuale](aggiornamenti/rapporti/2026-10-19-accessi-estesi.md), [21 verifiche personali residue su 26 gruppi](da-verificare/fonti-orari.md). Cinque gruppi con fonte e orario ordinario recuperati; tutti i sei locali della vecchia lista inclusi, Da Rosetta risolta per la domenica. Registro e lista aggiornati, rapporti precedenti conservati, dati applicativi invariati e controlli completi ancora zero. Verificati YAML, copertura, conteggi, riferimenti e conservazione; nessuna build applicativa eseguita. Branch `codex/controlli-periodici-fonti`, main invariato.
+
+## Ritentativo fonti e verifiche personali · 19/10/2026
+
+Ritentati 50 URL precedentemente non leggibili: 9 recuperati allo stesso indirizzo, 10 con alternativa ufficiale, 7 parziali e 24 ancora non verificabili. [Rapporto](aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.md) e [20 verifiche personali per Enrico](da-verificare/fonti-orari.md), con collegamenti e richieste precise. Aggiunti canali alternativi e riscontri di accesso al registro; rapporto iniziale e vecchia lista locali conservati. Nessun dato applicativo aggiornato, nessun controllo completo concluso o scadenza rinviata. Verificati YAML, riferimenti, copertura e conservazione dei file. Lavoro sul branch `codex/controlli-periodici-fonti`; main non modificato.
+
+## Registro dei controlli periodici · 19/10/2026
+
+Su richiesta di Enrico, preparati [registro](aggiornamenti/controlli-periodici.yaml), [procedura condivisa Codex/Claude](aggiornamenti/PROCEDURA.md) e [rapporto iniziale](aggiornamenti/rapporti/2026-10-19-impostazione.md), secondo il piano approvato in questa chat. Copertura: 60 tappe/gite, 32 locali e 14 gruppi di trasporto, con ricerca obbligatoria di nuove pagine/PDF oltre ai vecchi URL, distinzione fra date di pubblicazione e validità, eccezioni e sedi. Prove iniziali: nuovo documento EAV dal 17 ottobre, cambio Girolamini dal 25, calendario futuro Sansevero e distinzione delle sedi Gesù Vecchio/50 Kalò. Alcuni siti non leggibili dal cloud; nessuna conferma degli orari basata sui soli risultati di ricerca. Dati applicativi e date precedenti conservati; nessuna pianificazione automatica né pubblicazione su main.
+
+**Seguito di questo blocco:** primo controllo completo su richiesta, prioritari EAV e fonti non leggibili, seguendo la procedura. Le frequenze 7/14 giorni decorrono da controlli completati; la preparazione non rinvia le scadenze. La revisione Web Locks sospesa sul computer rimane un lavoro distinto. Dettagli e verifiche nel rapporto; gli appunti seguenti descrivono il lavoro precedente del 17 ottobre.
+
 _Aggiornato il 17/10/2026. Enrico ha autorizzato push e integrazione in main di tutti i blocchi completati della PR #5, inclusi i sei commit locali successivi. La nuova revisione dei salvataggi è sospesa e conservata separatamente; non fa parte di questo rilascio._
 
 ## Pubblicazione su main · mandato corrente

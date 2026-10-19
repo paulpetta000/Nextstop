@@ -1,0 +1,57 @@
+{
+  "id": "trasporto-caremar-isole",
+  "nome": "Caremar Napoli–Capri/Ischia/Procida",
+  "categoria": "trasporto",
+  "linee_o_tratte": [
+    "Napoli-Capri",
+    "Napoli-Ischia",
+    "Napoli-Procida"
+  ],
+  "frequenza_giorni": 7,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "prima_ultima_corsa",
+    "feriale_sabato_festivo",
+    "andata_ritorno",
+    "validita_documento",
+    "rettifiche_e_sospensioni",
+    "durate_e_frequenze_usate"
+  ],
+  "schede": [
+    "tp-capri-viaggio",
+    "tp-ischia-viaggio",
+    "tp-procida-viaggio",
+    "tp-isole-2027"
+  ],
+  "fonti_esistenti": [
+    "tp-caremar-orari",
+    "tp-caremar-partenze",
+    "tp-caremar-tariffe"
+  ],
+  "canali_scoperta": [
+    "caremar-orari",
+    "caremar-avvisi"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "shop.caremar.it"
+    ],
+    "soggetto": "Caremar Napoli–Capri/Ischia/Procida",
+    "aggiungere": "Napoli-Capri Napoli-Ischia Napoli-Procida",
+    "modello": "site:{dominio} {linea_o_tratta} (orario OR nuovo orario OR avviso OR rettifica OR sospensione)",
+    "regola": "Cercare anche senza anno e verificare tutti i documenti nuovi nell’indice del gestore, non soltanto il vecchio PDF."
+  },
+  "file_interessati": [
+    "src/data/fonti.yaml",
+    "src/data/fatti.yaml",
+    "src/testi/itinerari.yaml"
+  ],
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo inventario.",
+    "Controllare data del viaggio, porto di partenza, destinazione e ritorno. Non estrapolare l’orario estivo 2027 da partenze odierne o dall’orario invernale."
+  ],
+  "pubblicazioni_rilevate": []
+}

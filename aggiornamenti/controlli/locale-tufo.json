@@ -1,0 +1,59 @@
+{
+  "id": "locale-tufo",
+  "nome": "Tufò Trattoria",
+  "categoria": "locale",
+  "entita": {
+    "file": "src/data/locali.yaml",
+    "id": "tufo"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "servizio_pranzo_cena",
+    "sede_esatta",
+    "prenotazione"
+  ],
+  "schede": {
+    "orari": "lc-tufo-orari"
+  },
+  "file_interessati": [
+    "src/data/locali.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/locali.yaml"
+  ],
+  "fonti_esistenti": [
+    "lc-tufo"
+  ],
+  "canali_scoperta": [
+    "gestore-tufotrattoria-it"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "tufotrattoria.it"
+    ],
+    "soggetto": "Tufò Trattoria",
+    "aggiungere": "Via Posillipo 268",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "sede": "Via Posillipo 268",
+  "pubblicazioni_rilevate": [],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://tufotrattoria.it/"
+    ],
+    "verifiche_personali": [],
+    "esito": "accesso_recuperato_confronto_da_completare",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  }
+}

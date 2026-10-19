@@ -1,0 +1,65 @@
+{
+  "id": "locale-cinquanta-kalo",
+  "nome": "50 Kalò",
+  "categoria": "locale",
+  "entita": {
+    "file": "src/data/locali.yaml",
+    "id": "cinquanta-kalo"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "servizio_pranzo_cena",
+    "sede_esatta",
+    "prenotazione",
+    "prezzi_gia_pubblicati"
+  ],
+  "schede": {
+    "orari": "lc-cinquanta-kalo-orari",
+    "prezzi": "lc-cinquanta-kalo-prezzi"
+  },
+  "file_interessati": [
+    "src/data/locali.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/locali.yaml"
+  ],
+  "fonti_esistenti": [
+    "lc-cinquanta-kalo",
+    "lc-cinquanta-kalo-menu"
+  ],
+  "canali_scoperta": [
+    "gestore-50kalo-it",
+    "kalo-sannazzaro"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "50kalo.it"
+    ],
+    "soggetto": "50 Kalò",
+    "aggiungere": "Piazza Sannazaro 201b",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Usare Piazza Sannazaro 201b. Il collegamento info_repubblica.php è una sede diversa: non sostituisce info.php. La variante con www della pagina della sede selezionata è stata aperta."
+  ],
+  "sede": "Piazza Sannazaro 201b",
+  "pubblicazioni_rilevate": [],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://50kalo.it/info.php"
+    ],
+    "verifiche_personali": [],
+    "esito": "accesso_recuperato_confronto_da_completare",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  }
+}

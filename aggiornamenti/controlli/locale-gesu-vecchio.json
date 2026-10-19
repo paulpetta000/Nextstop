@@ -1,0 +1,55 @@
+{
+  "id": "locale-gesu-vecchio",
+  "nome": "La Locanda Gesù Vecchio",
+  "categoria": "locale",
+  "entita": {
+    "file": "src/data/locali.yaml",
+    "id": "gesu-vecchio"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "servizio_pranzo_cena",
+    "sede_esatta",
+    "prenotazione",
+    "prezzi_gia_pubblicati"
+  ],
+  "schede": {
+    "orari": "lc-gesu-vecchio-orari",
+    "prezzi": "lc-gesu-vecchio-prezzi"
+  },
+  "file_interessati": [
+    "src/data/locali.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/locali.yaml"
+  ],
+  "fonti_esistenti": [
+    "lc-gesu-vecchio",
+    "lc-gesu-vecchio-home",
+    "lc-gesu-vecchio-menu"
+  ],
+  "canali_scoperta": [
+    "gestore-www-lalocandagesuvecchionapoli-it"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "lalocandagesuvecchionapoli.it"
+    ],
+    "soggetto": "La Locanda Gesù Vecchio",
+    "aggiungere": "Via Giovanni Paladino 26",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Usare Via Giovanni Paladino 26. Il civico 4/4A è un’altra sede e ha un diverso giorno di chiusura. Prova iniziale: confronto dell’orario ordinario; prenotazioni e avvisi restano da verificare nel controllo completo."
+  ],
+  "sede": "Via Giovanni Paladino 26",
+  "pubblicazioni_rilevate": []
+}

@@ -1,0 +1,67 @@
+{
+  "id": "trasporto-metro-l1",
+  "nome": "Metro ANM Linea 1",
+  "categoria": "trasporto",
+  "linee_o_tratte": [
+    "L1"
+  ],
+  "frequenza_giorni": 7,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "prima_ultima_corsa",
+    "feriale_sabato_festivo",
+    "andata_ritorno",
+    "validita_documento",
+    "rettifiche_e_sospensioni",
+    "durate_e_frequenze_usate"
+  ],
+  "schede": [],
+  "fonti_esistenti": [
+    "tp-anm-linea1"
+  ],
+  "canali_scoperta": [
+    "anm-portale",
+    "ritentativo-14"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "anm.it",
+      "www2.anm.it",
+      "www.anm.it"
+    ],
+    "soggetto": "Metro ANM Linea 1",
+    "aggiungere": "L1",
+    "modello": "site:{dominio} {linea_o_tratta} (orario OR nuovo orario OR avviso OR rettifica OR sospensione)",
+    "regola": "Cercare anche senza anno e verificare tutti i documenti nuovi nell’indice del gestore, non soltanto il vecchio PDF."
+  },
+  "file_interessati": [
+    "src/data/fonti.yaml",
+    "src/data/fatti.yaml",
+    "src/testi/itinerari.yaml",
+    "scripts/itinerari/costruisci.mjs",
+    "src/data/tempi-tappe.json",
+    "src/data/percorsi-tappe.json",
+    "src/data/percorsi-alternativi.json",
+    "src/data/partenze-bus.json",
+    "src/data/linee-bus.json"
+  ],
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo inventario."
+  ],
+  "pubblicazioni_rilevate": [],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://www.anm.it/s/?language=it"
+    ],
+    "verifiche_personali": [
+      "V04"
+    ],
+    "esito": "rimangono_verifiche_personali",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "id": "tappa-camaldoli",
+  "nome": "Parco dei Camaldoli",
+  "categoria": "citta",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "camaldoli"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni"
+  ],
+  "schede": {
+    "orari": "tp-parchi-orari"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-parco-camaldoli",
+    "tp-parco-poggio",
+    "tp-parco-mascagna"
+  ],
+  "canali_scoperta": [
+    "gestore-www-comune-napoli-it",
+    "comune-notizie",
+    "ritentativo-09",
+    "accessi-estesi-castelnuovo",
+    "accessi-estesi-parchi"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "comune.napoli.it",
+      "static-www.comune.napoli.it",
+      "www.campaniartecard.it"
+    ],
+    "soggetto": "Parco dei Camaldoli",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "pubblicazioni_rilevate": [
+    "parchi-ordinanza-2025-07-22"
+  ],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/",
+      "https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/",
+      "https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/",
+      "https://www.comune.napoli.it/"
+    ],
+    "verifiche_personali": [
+      "V03",
+      "V14"
+    ],
+    "esito": "rimangono_verifiche_personali",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  },
+  "ultimo_riesame_accessi": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml",
+    "gruppi": [
+      "V14"
+    ],
+    "verifiche_personali_residue": [],
+    "controllo_completo": false
+  }
+}

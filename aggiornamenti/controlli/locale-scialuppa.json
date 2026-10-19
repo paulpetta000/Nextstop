@@ -1,0 +1,49 @@
+{
+  "id": "locale-scialuppa",
+  "nome": "La Scialuppa",
+  "categoria": "locale",
+  "entita": {
+    "file": "src/data/locali.yaml",
+    "id": "scialuppa"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "servizio_pranzo_cena",
+    "sede_esatta",
+    "prenotazione"
+  ],
+  "schede": {
+    "orari": "lc-scialuppa-orari"
+  },
+  "file_interessati": [
+    "src/data/locali.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/locali.yaml"
+  ],
+  "fonti_esistenti": [
+    "lc-scialuppa"
+  ],
+  "canali_scoperta": [
+    "gestore-www-lascialuppa-net"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "lascialuppa.net"
+    ],
+    "soggetto": "La Scialuppa",
+    "aggiungere": "Piazzetta Marinari 5",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "sede": "Piazzetta Marinari 5",
+  "pubblicazioni_rilevate": []
+}

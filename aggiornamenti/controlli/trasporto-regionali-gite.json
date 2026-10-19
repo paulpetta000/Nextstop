@@ -1,0 +1,57 @@
+{
+  "id": "trasporto-regionali-gite",
+  "nome": "Treni regionali per Caserta e Pietrarsa",
+  "categoria": "trasporto",
+  "linee_o_tratte": [
+    "Napoli-Caserta",
+    "Napoli-Pietrarsa"
+  ],
+  "frequenza_giorni": 7,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "prima_ultima_corsa",
+    "feriale_sabato_festivo",
+    "andata_ritorno",
+    "validita_documento",
+    "rettifiche_e_sospensioni",
+    "durate_e_frequenze_usate"
+  ],
+  "schede": [
+    "tp-caserta-viaggio",
+    "tp-pietrarsa-viaggio"
+  ],
+  "fonti_esistenti": [
+    "tp-caserta-arrivare",
+    "tp-pietrarsa-arrivare"
+  ],
+  "canali_scoperta": [
+    "rfi-quadri",
+    "trenitalia-orari",
+    "trenitalia-lavori",
+    "trenitalia-info"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "fondazionefs.it",
+      "reggiadicaserta.cultura.gov.it",
+      "rfi.it",
+      "trenitalia.com"
+    ],
+    "soggetto": "Treni regionali per Caserta e Pietrarsa",
+    "aggiungere": "Napoli-Caserta Napoli-Pietrarsa",
+    "modello": "site:{dominio} {linea_o_tratta} (orario OR nuovo orario OR avviso OR rettifica OR sospensione)",
+    "regola": "Cercare anche senza anno e verificare tutti i documenti nuovi nell’indice del gestore, non soltanto il vecchio PDF."
+  },
+  "file_interessati": [
+    "src/data/fonti.yaml",
+    "src/data/fatti.yaml",
+    "src/testi/itinerari.yaml"
+  ],
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo inventario."
+  ],
+  "pubblicazioni_rilevate": []
+}

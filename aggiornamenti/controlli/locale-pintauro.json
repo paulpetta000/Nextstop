@@ -1,0 +1,50 @@
+{
+  "id": "locale-pintauro",
+  "nome": "Pasticceria Pintauro",
+  "categoria": "locale",
+  "entita": {
+    "file": "src/data/locali.yaml",
+    "id": "pintauro"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "servizio_pranzo_cena",
+    "sede_esatta",
+    "prenotazione"
+  ],
+  "schede": {
+    "orari": "lc-pintauro-orari"
+  },
+  "file_interessati": [
+    "src/data/locali.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/locali.yaml"
+  ],
+  "fonti_esistenti": [
+    "lc-pintauro"
+  ],
+  "canali_scoperta": [
+    "gestore-www-pasticceriapintauro1785-it",
+    "pintauro-news"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "pasticceriapintauro1785.it"
+    ],
+    "soggetto": "Pasticceria Pintauro",
+    "aggiungere": "Via Toledo 275",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "sede": "Via Toledo 275",
+  "pubblicazioni_rilevate": []
+}

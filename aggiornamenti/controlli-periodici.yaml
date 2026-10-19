@@ -1,0 +1,20 @@
+versione: 2
+schema_schede: 1
+scopo: Indice di lettura; i dati operativi sono nei file indicati. Non leggere tutta la cartella.
+ingresso: aggiornamenti/PROCEDURA.md
+strumento_locale: node aggiornamenti/leggi.mjs aiuto
+archivi:
+  controlli: aggiornamenti/controlli/<id>.json
+  canali: aggiornamenti/canali.json
+  pubblicazioni: aggiornamenti/pubblicazioni.json
+  verifiche_pregresse_locali: aggiornamenti/verifiche-pregresse-locali.json
+  metadati: aggiornamenti/metadati.json
+  casi_personali: da-verificare/indice.json
+  ordine_controlli: aggiornamenti/ordine-controlli.json
+fonti_applicative: src/data/fonti.yaml
+fatti_applicativi: src/data/fatti.yaml
+rapporto_corrente: aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml
+significato: Apertura di una fonte, orario ordinario recuperato e controllo completo sono stati distinti. Un PDF
+  storico non certifica oggi.
+migrazione: Ricostruzione senza perdita del registro versione 1; archivio integrale nel commit 58cf855c730f499909b0177b8704d38931b1eb4e.
+  Nessuna modifica di ID, fonti, scadenze o dati applicativi.

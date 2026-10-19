@@ -1,0 +1,67 @@
+{
+  "id": "tappa-vesuvio",
+  "nome": "Vesuvio, il Gran Cono",
+  "categoria": "gita",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "vesuvio"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni",
+    "prezzi_gia_pubblicati",
+    "collegamento_della_gita"
+  ],
+  "schede": {
+    "orari": "tp-vesuvio-orari",
+    "prezzi": "tp-vesuvio-prezzi",
+    "viaggio": "tp-vesuvio-viaggio"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-vesuvio-gran-cono",
+    "tp-eav-808"
+  ],
+  "canali_scoperta": [
+    "gestore-www-parconazionaledelvesuvio-it",
+    "gestore-www-eavsrl-it",
+    "eav-bus",
+    "eav-news"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "eavsrl.it",
+      "parconazionaledelvesuvio.it"
+    ],
+    "soggetto": "Vesuvio, il Gran Cono",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "pubblicazioni_rilevate": [],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://www.parconazionaledelvesuvio.it/"
+    ],
+    "verifiche_personali": [],
+    "esito": "accesso_recuperato_confronto_da_completare",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  }
+}
