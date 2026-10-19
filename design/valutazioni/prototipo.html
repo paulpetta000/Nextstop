@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; img-src 'none'; connect-src 'none'; font-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>Valutazioni · laboratorio Nextstop</title>
+  <link rel="stylesheet" href="prototipo.css">
+  <script type="module" src="dimostrazione.mjs"></script>
+</head>
+<body>
+  <header class="testata">
+    <p class="etichetta">Nextstop · laboratorio</p>
+    <h1>Valutazioni nella scheda</h1>
+    <p id="nota-dimostrazione" class="avviso"><strong>Prova con luoghi e numeri inventati.</strong> Nessun dato proviene dalle piattaforme. Nessuna connessione a servizi esterni.</p>
+  </header>
+  <main>
+    <section class="strumenti" aria-labelledby="titolo-strumenti">
+      <h2 id="titolo-strumenti">Controlli della prova</h2>
+      <div class="campi">
+        <label>Aspetto <select id="aspetto"><option value="sistema">Come il dispositivo</option><option value="chiaro">Chiaro</option><option value="scuro">Scuro</option></select></label>
+        <label>Caso da simulare <select id="scenario"><option value="normale">Dati disponibili</option><option value="vuoto">Nessuna valutazione</option><option value="mancante">Conteggio mancante</option><option value="errore">Tripadvisor non risponde</option><option value="quota">Quota Tripadvisor raggiunta</option><option value="vietato">Accesso Tripadvisor non confermato</option><option value="lento">Risposta lenta</option><option value="timeout">Tempo di attesa superato</option><option value="offline">Senza rete</option><option value="disattivato">Tripadvisor disattivato</option></select></label>
+      </div>
+      <p class="secondario">I cambi si applicano a una nuova apertura della scheda. Dodici richieste simulate per caricamento della pagina; nessun costo reale.</p>
+      <p id="contatore" role="status">Richieste simulate: 0 di 12</p>
+    </section>
+    <section aria-labelledby="titolo-schede">
+      <h2 id="titolo-schede">Apri un esempio</h2>
+      <div class="esempi">
+        <button type="button" data-apri="locale">Trattoria del Vicolo <span>Ristorante inventato</span></button>
+        <button type="button" data-apri="museo">Museo delle Arcate <span>Luogo inventato</span></button>
+        <button type="button" data-apri="composto">Museo e giardino <span>Valutazioni di una sola parte</span></button>
+        <button type="button" data-apri="incerto">Passeggiata dei Portici <span>Profilo non verificato</span></button>
+      </div>
+    </section>
+    <section id="scheda" class="scheda" aria-labelledby="titolo-scheda" hidden>
+      <div class="scheda__testata"><p class="etichetta">Esempio di scheda aperta</p><button type="button" id="chiudi">Chiudi scheda</button></div>
+      <h2 id="titolo-scheda" tabindex="-1"></h2>
+      <div class="foto-demo" role="img" aria-label="Segnaposto della foto del luogo, nessuna immagine di un ristorante reale"><span>Foto del luogo · segnaposto</span></div>
+      <h3 class="visually-hidden">Valutazioni online</h3>
+      <div id="righe"></div>
+      <p id="descrizione-scheda"></p>
+      <p class="secondario">Ogni voto mantiene la propria scala. Nella versione reale, “Mostra” contatterà soltanto la piattaforma indicata.</p>
+      <p class="nota">Numeri dimostrativi: non rappresentano il giudizio su un’attività reale. I collegamenti di questa prova rimandano a questa nota.</p>
+    </section>
+    <noscript><p>Per provare i cambi di stato serve JavaScript. Questa pagina non contiene valutazioni reali.</p></noscript>
+  </main>
+  <footer><p>Prova isolata: le schede pubbliche e gli itinerari del sito non cambiano.</p></footer>
+  <template id="riga">
+    <section class="riga">
+      <h4 class="visually-hidden"></h4>
+      <p class="risultato" role="status" aria-live="polite" aria-atomic="true">Valutazione non caricata.</p>
+      <div class="riga__azioni"><button type="button" data-mostra>Mostra</button><a href="#nota-dimostrazione">Apri · esempio</a></div>
+    </section>
+  </template>
+</body>
+</html>

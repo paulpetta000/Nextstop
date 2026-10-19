@@ -1,5 +1,19 @@
 # PROGRESS · stato attuale
 
+## Priorità: prima il sito, gli itinerari e le città · 19/10/2026
+
+Enrico rinvia **le valutazioni tramite API a una fase futura**, dopo completamento del sito, ampliamento degli itinerari e nuove città. [Roadmap aggiornata](ROADMAP.md), [materiale delle valutazioni conservato](valutazioni/README.md). Non avviare account, fatturazione, prove reali o ulteriori sviluppi delle valutazioni; l’autorizzazione precedente è sospesa per questa attività. La [PR #7](https://github.com/paulpetta000/Nextstop/pull/7) resta una bozza da conservare, senza merge del pilota in main. Le indicazioni di seguito sul “prossimo pilota Google” sono ora istruzioni per un’eventuale ripresa futura.
+
+Prossimo lavoro da definire: punto sulle parti del sito ancora aperte e scelta degli itinerari da aggiungere, poi una nuova città alla volta. Nessuna città scelta o nuovo itinerario implementato con questo aggiornamento. Solo documentazione: riferimenti e conservazione verificati, codice e dati invariati; nessuna nuova build locale necessaria.
+
+## Valutazioni · primo blocco autorizzato, 19/10/2026
+
+Enrico ha approvato l’avvio e scelto righe nella scheda aperta, poi precisate con immagine come fascia compatta sotto la foto. Nessun account API attivo, nessuna spesa autorizzata. [Entrata breve e stato](valutazioni/README.md), [quattro entità pilota](valutazioni/pilota.json), [laboratorio isolato](design/valutazioni/README.md). Recuperati direttamente termini Terra Discover, Linking Policy, schema e guida marchi: **affiancamento ad altre piattaforme e link di prenotazione da risolvere contrattualmente**, non semplice problema grafico. [Ricerca e fonti](ricerca/2026-10-19-valutazioni-pilota.md).
+
+Prototipo con luoghi/voti inventati: fascia compatta, caricamento esplicito, errori e quote indipendenti, annullamento, nessuna persistenza. Dieci test del modello passati; 118 asserzioni browser su 320/390/1280 px e chiaro/scuro, nessuna connessione esterna o errore console. Corretto il focus durante il caricamento. Axe/Lighthouse non eseguiti; nessuna certificazione del widget reale o delle condizioni di licenza. Dati e componenti pubblici invariati; nessuna chiave, API dei voti, fatturazione o logo attivato. Lavoro sul ramo `codex/valutazioni-pilota`, main invariato da questo blocco; controlli completi della PR da leggere nel relativo risultato GitHub.
+
+**Seguito:** account e quota/budget per un piccolo pilota Google UI Kit reale, conferma della resa compatta; Tripadvisor solo con condizioni compatibili, TheFork facoltativo e subordinato ad accesso. Nessun rilascio del prodotto già approvato. Il salvataggio simultaneo rimasto sul computer è un lavoro distinto.
+
 ## Consegna su main e revisione del piano · 19/10/2026
 
 Enrico ha autorizzato l’integrazione su main dell’intero blocco fonti, coda personale e riordino, previa revisione critica del [piano delle valutazioni](specifiche/valutazioni-esterne.md). Proposta ristrutturata: fattibilità documentata distinta dalle prove ancora necessarie; schema Terra recuperato dal testo ufficiale indicizzato, condizioni di branding/link ancora da verificare; identità e cambi di sede, errori, privacy, limiti di spesa, criteri di accettazione e manutenzione esplicitati. **L’OK alla pubblicazione dei documenti non approva l’implementazione delle valutazioni.** Nessun componente del sito, voto, account o servizio a pagamento aggiunto. Verifiche di conservazione del registro e delle 26 voci, selettore e riferimenti documentali; build applicativa non ripetuta perché gli input del sito sono invariati. PR e risultato dell’integrazione vanno riscontrati su GitHub prima di dichiarare la consegna conclusa.
