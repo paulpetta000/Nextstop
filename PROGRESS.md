@@ -1,5 +1,11 @@
 # PROGRESS · stato attuale
 
+## Priorità: prima il sito, gli itinerari e le città · 19/10/2026
+
+Enrico rinvia **le valutazioni tramite API a una fase futura**, dopo completamento del sito, ampliamento degli itinerari e nuove città. [Roadmap aggiornata](ROADMAP.md), [materiale delle valutazioni conservato](valutazioni/README.md). Non avviare account, fatturazione, prove reali o ulteriori sviluppi delle valutazioni; l’autorizzazione precedente è sospesa per questa attività. La [PR #7](https://github.com/paulpetta000/Nextstop/pull/7) resta una bozza da conservare, senza merge del pilota in main. Le indicazioni di seguito sul “prossimo pilota Google” sono ora istruzioni per un’eventuale ripresa futura.
+
+Prossimo lavoro da definire: punto sulle parti del sito ancora aperte e scelta degli itinerari da aggiungere, poi una nuova città alla volta. Nessuna città scelta o nuovo itinerario implementato con questo aggiornamento. Solo documentazione: riferimenti e conservazione verificati, codice e dati invariati; nessuna nuova build locale necessaria.
+
 ## Valutazioni · primo blocco autorizzato, 19/10/2026
 
 Enrico ha approvato l’avvio e scelto righe nella scheda aperta, poi precisate con immagine come fascia compatta sotto la foto. Nessun account API attivo, nessuna spesa autorizzata. [Entrata breve e stato](valutazioni/README.md), [quattro entità pilota](valutazioni/pilota.json), [laboratorio isolato](design/valutazioni/README.md). Recuperati direttamente termini Terra Discover, Linking Policy, schema e guida marchi: **affiancamento ad altre piattaforme e link di prenotazione da risolvere contrattualmente**, non semplice problema grafico. [Ricerca e fonti](ricerca/2026-10-19-valutazioni-pilota.md).

@@ -1,5 +1,7 @@
 # Laboratorio delle valutazioni
 
+**Conservato, lavoro sospeso su richiesta di Enrico.** Prima sito, itinerari e nuove città; non estendere il laboratorio o collegarlo al prodotto finché non viene chiesto di riprendere le valutazioni.
+
 **Prototipo isolato, con luoghi e numeri inventati.** Non è una pagina Astro, non entra nella build pubblica e non è collegato al compositore. Nessuna API o chiave, nessun account, dipendenza, immagine esterna o logo aggiunto. La fascia sotto il segnaposto della foto segue il riferimento di Enrico; il testo delle piattaforme è provvisorio e non certifica la futura attribuzione.
 
 ## Aprire la prova

@@ -1,6 +1,6 @@
 # Preparare il primo pilota Google
 
-Questa è una consegna per il blocco successivo: nessun account, chiave o fatturazione è stato creato. La scelta di Enrico rimane la fascia compatta sotto la foto; va verificata con il componente reale prima di estendere il catalogo.
+**Conservato per una fase futura: attività sospesa da Enrico, prima sito, itinerari e città.** Non configurare account o avviare questa prova adesso. Nessun account, chiave o fatturazione è stato creato. La scelta grafica rimane la fascia compatta sotto la foto, da verificare con il componente reale alla ripresa.
 
 ## Prima possibilità: prova senza fatturazione
 

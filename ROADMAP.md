@@ -3,6 +3,10 @@
 Ogni fase comincia con una **specifica corta** da approvare (regola di `CLAUDE.md`) e finisce con l'anteprima di Vercel e l'OK di Enrico.
 Lo stato giorno per giorno è in `PROGRESS.md`; qui solo l'ordine delle cose.
 
+## Priorità aggiornata da Enrico · 19/10/2026
+
+Prima completare il sito, ampliare gli itinerari e aggiungere altre città. **Le valutazioni esterne tramite API sono rinviate a dopo questi lavori**: non richiedono ora account, carte o budget e non bloccano l’ampliamento del sito. Ricerca, prototipo e preferenza grafica restano conservati nel ramo `codex/valutazioni-pilota` ([PR in bozza #7](https://github.com/paulpetta000/Nextstop/pull/7)); riprendere soltanto su nuova richiesta. Questa priorità non avvia automaticamente una specifica nuova città o gli altri lavori elencati sotto.
+
 ## Fase 0 · Messa a punto (adesso, 10 minuti)
 - [x] Repository `paulpetta000/Nextstop` e progetto Vercel, indirizzo `nextstop-alpha.vercel.app` (06/10/2026).
 - [x] Su GitHub il ramo principale è `main` (Enrico, 06/10/2026).
@@ -114,6 +118,12 @@ Sono rifiniture della home O4 (Codex, 11/10/2026): si parte dalla specifica `spe
 - Specifica: quale città (Roma, Milano, Torino, Venezia…), quante tappe, da dove vengono i tempi a piedi e i mezzi (OpenStreetMap, orari aperti dell'azienda dei trasporti).
 - Il compositore è già scritto per più città: la città arriva come dati.
 - Consiglio: Napoli perfetta più 1 o 2 città, poi si allarga. Per ogni città va deciso chi è l'«amico del posto» della guida di stile.
+
+## Valutazioni esterne · futuro, dopo sito, itinerari e nuove città
+
+- [ ] Riprendere media, conteggio e collegamenti di Google Maps/Tripadvisor ed eventualmente TheFork nelle schede. Aspetto desiderato: fascia compatta sotto la foto, come il riferimento di Enrico.
+- [ ] Riesaminare condizioni, prezzi e compatibilità; poi decidere eventuali account, quote e budget. Nessuna attivazione prima della ripresa esplicita del lavoro.
+- Preparazione conservata in [valutazioni](valutazioni/README.md), con [stato sospeso](valutazioni/stato.md), campione editoriale e laboratorio con dati inventati. Non ripartire da zero e non confondere il prototipo con un’integrazione reale.
 
 ## Fase 6 · SEO e crescita
 - claude-seo (solo i comandi di analisi, letto prima tutto il codice), Search Console, pagine fisse per tappe e locali se hanno senso.

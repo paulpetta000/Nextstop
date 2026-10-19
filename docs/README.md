@@ -17,7 +17,7 @@ Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [re
 | Build e uso offline | `astro.config.mjs`, `integrations/`, `scripts/check-links.mjs` | `src/scripts/sito.ts`, `public/manifest.webmanifest`; preservare il service worker |
 | Interfaccia e bozzetti, come attività approvata | [DESIGN](../DESIGN.md), [indice specifiche](../specifiche/README.md) | Solo il README del pezzo di `design/` e la skill pertinente |
 | Dipendenze, tipi e regole GitHub | [Manutenzione](MANUTENZIONE.md) | Piano di aggiornamento; nessuna installazione implicita |
-| Valutazioni Google/Tripadvisor/TheFork · pilota autorizzato | [Entrata breve](../valutazioni/README.md), [stato e vincoli](../valutazioni/stato.md) | [Specifica](../specifiche/valutazioni-esterne.md) e sola ricerca del fornitore; laboratorio con dati inventati, sito pubblico invariato |
+| Valutazioni Google/Tripadvisor/TheFork · sospese, attività futura | [Entrata breve](../valutazioni/README.md), [stato e vincoli](../valutazioni/stato.md) | Riprendere solo su richiesta, dopo sito/itinerari/città; specifica, ricerca e laboratorio conservati |
 | Lavori futuri | [ROADMAP](../ROADMAP.md) | Non è una lista di attività autorizzate per la sessione |
 | Decisioni precedenti | [Istruzioni precedenti](storico/2026-10-09-CLAUDE.md), [stato precedente](storico/2026-10-09-PROGRESS.md) | Snapshot integrali prima del Blocco 2, non istruzioni correnti |
 

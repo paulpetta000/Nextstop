@@ -1,5 +1,7 @@
 # Stato del blocco pilota · 19/10/2026
 
+**Attività sospesa su richiesta di Enrico.** Ordine deciso: completare il sito, ampliare gli itinerari, aggiungere città; solo dopo riprendere le valutazioni. Nessun account o metodo di pagamento da configurare adesso. Conservare i risultati sotto e la PR in bozza #7, senza estendere o pubblicare il pilota. I prerequisiti elencati sono per il futuro, non richieste correnti all’utente.
+
 Decisioni dell’utente: avvio del piano, righe nella scheda aperta; riferimento successivo con **fascia compatta subito sotto la foto**, voto, conteggio tra parentesi e marchio della piattaforma. Nessun account API attivo. Il riferimento guida la disposizione, non concede diritti sulle foto o sui marchi dell’app mostrata.
 
 | Blocco | Esito attuale | Per completarlo |
@@ -12,7 +14,7 @@ Decisioni dell’utente: avvio del piano, righe nella scheda aperta; riferimento
 | Laboratorio | Fascia compatta con numeri e luoghi inventati, caricamento esplicito, stati ed errori | Sostituire una simulazione soltanto dopo aver superato i vincoli della relativa piattaforma |
 | Sito pubblico | Invariato | Integrazione, informativa, controlli completi e anteprima prima dell’OK al rilascio |
 
-## Prossimo blocco concreto
+## Come riprendere, soltanto su futura richiesta
 
 1. Scegliere il percorso praticabile: primo pilota reale Google UI Kit; per Tripadvisor prima condizioni compatibili con il confronto tra piattaforme. Non aprire account a pagamento per scoprire dopo questo vincolo.
 2. Per Google definire account, indirizzo di fatturazione applicabile, budget e quota effettiva; abilitare solo quanto serve. Credenziali configurate tramite gli strumenti del progetto, mai in chat o Git.
