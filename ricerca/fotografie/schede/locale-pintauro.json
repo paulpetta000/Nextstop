@@ -1,0 +1,45 @@
+{
+  "tipo": "locale",
+  "id": "pintauro",
+  "nome": "Pasticceria Pintauro",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pintauro\" filetype:bitmap",
+      "risultatiEsaminati": 2
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via Toledo 275",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.pasticceriapintauro1785.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.pasticceriapintauro1785.it/",
+        "immagine": "https://www.pasticceriapintauro1785.it/wp-content/uploads/2026/03/pintauro_25-e1775645437903.jpg",
+        "soggettoOsservato": "Banco delle sfogliatelle",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.pasticceriapintauro1785.it/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
+  "ricercaSupplementare": {
+    "fonte": "pintauro-flickr",
+    "esito": "Fotografia pertinente trovata ma tutti i diritti riservati; non inclusa nelle candidate libere."
+  }
+}

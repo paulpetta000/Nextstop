@@ -1,0 +1,68 @@
+{
+  "tipo": "tappa",
+  "id": "sorrento",
+  "nome": "Sorrento",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-sorrento",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Sorrento\" \"Marina Grande\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-sorrento-768be1a27f",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Marina Grande di Sorrento dall'alto",
+      "titoloFonte": "I08 329 Sorrento, Bagni S. Anna.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:I08_329_Sorrento,_Bagni_S._Anna.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/ac/I08_329_Sorrento%2C_Bagni_S._Anna.jpg",
+      "autore": "Falk2",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4494,
+        2996
+      ],
+      "dataScattoDichiarata": "2011-10-12 09:46",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 799783615,
+      "sha1Originale": "a615229a3ad7b5492c07f22824ea30927b2b70ee"
+    },
+    {
+      "id": "foto-sorrento-da62654aab",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Porto antico e case di Marina Grande",
+      "titoloFonte": "Sorrento old port 1000409.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sorrento_old_port_1000409.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/73/Sorrento_old_port_1000409.jpg",
+      "autore": "SeveroAntonelli",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4592,
+        3448
+      ],
+      "dataScattoDichiarata": "2021-09-17 13:07:57",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 665236838,
+      "sha1Originale": "88fa857ce493963760a4829f64c4a3f7cce84025"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

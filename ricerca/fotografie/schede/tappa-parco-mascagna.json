@@ -1,0 +1,22 @@
+{
+  "tipo": "tappa",
+  "id": "parco-mascagna",
+  "nome": "Parco Mascagna",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Parco Mascagna\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "stato": "nessuna-candidata-libera",
+  "fontePerRichiesta": "https://static-www.comune.napoli.it/wp-content/uploads/2025/09/CittaComune_Speciale_Verde_urbano.pdf?mode=download",
+  "azioneSuccessiva": "Richiedere foto attuali del percorso/parco e licenza libera esplicita, oppure scatti propri. Nessuna richiesta inviata."
+}

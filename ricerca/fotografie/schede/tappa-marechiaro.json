@@ -1,0 +1,60 @@
+{
+  "tipo": "tappa",
+  "id": "marechiaro",
+  "nome": "Marechiaro",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-marechiaro",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Marechiaro\"",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-marechiaro-75ae8e0626",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Marechiaro visto dal mare",
+      "titoloFonte": "Marechiaro vista globale dal mare.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Marechiaro_vista_globale_dal_mare.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Marechiaro_vista_globale_dal_mare.JPG",
+      "autore": "Alexandre Albore",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        2876,
+        2048
+      ],
+      "dataScattoDichiarata": "2015-08-02 11:22:37",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    },
+    {
+      "id": "foto-marechiaro-1e8d62b52d",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Scaletta verso il mare a Marechiaro",
+      "titoloFonte": "Napoli - Marechiaro3.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Marechiaro3.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Napoli_-_Marechiaro3.jpg",
+      "autore": "Armando Mancini",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        2566,
+        3421
+      ],
+      "dataScattoDichiarata": "2009-11-14 10:23:25",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

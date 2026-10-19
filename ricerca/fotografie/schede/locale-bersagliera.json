@@ -1,0 +1,41 @@
+{
+  "tipo": "locale",
+  "id": "bersagliera",
+  "nome": "La Bersagliera",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"La Bersagliera\" filetype:bitmap",
+      "risultatiEsaminati": 9
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Borgo Marinari 10",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.labersagliera.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.labersagliera.it/la-galleria/",
+        "immagine": "https://labersagliera.it/wp-content/uploads/2019/02/IMG_3988-1024x683.jpg",
+        "soggettoOsservato": "Sala affacciata sul porticciolo",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.labersagliera.it/la-galleria/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

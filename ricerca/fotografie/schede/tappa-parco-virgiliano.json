@@ -1,0 +1,85 @@
+{
+  "tipo": "tappa",
+  "id": "parco-virgiliano",
+  "nome": "Parco Virgiliano",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-parco-virgiliano",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Parco Virgiliano\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-parco-virgiliano-68c2ae7e66",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Veduta dal Parco Virgiliano",
+      "titoloFonte": "Parco Virgiliano (Napoli) 3.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_Virgiliano_(Napoli)_3.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/14/Parco_Virgiliano_%28Napoli%29_3.JPG",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2048,
+        1536
+      ],
+      "dataScattoDichiarata": "2014-05-12 15:24:36",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1186007850,
+      "sha1Originale": "edaa17ce02de9bd875b8d1f0722d25f9d2c473c9"
+    },
+    {
+      "id": "foto-parco-virgiliano-830c0ff53b",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Costone e mare dal Parco Virgiliano",
+      "titoloFonte": "Parco Virgiliano (Napoli) 5.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_Virgiliano_(Napoli)_5.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/6d/Parco_Virgiliano_%28Napoli%29_5.JPG",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2048,
+        1536
+      ],
+      "dataScattoDichiarata": "2014-05-12 15:29:40",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1183431362,
+      "sha1Originale": "6ddb3ca2988f2c59d173df26f3181eb77629a143"
+    },
+    {
+      "id": "foto-parco-virgiliano-039bfb469f",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Anfiteatro del Parco Virgiliano, in bianco e nero",
+      "titoloFonte": "Anfiteatro del Parco Virgiliano (Napoli).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Anfiteatro_del_Parco_Virgiliano_(Napoli).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Anfiteatro_del_Parco_Virgiliano_%28Napoli%29.jpg",
+      "autore": "Dr.Conati Roberto De Martino",
+      "licenza": "Public domain",
+      "licenzaUrl": "https://commons.wikimedia.org/wiki/File:Anfiteatro_del_Parco_Virgiliano_(Napoli).jpg#Licensing",
+      "dimensioni": [
+        4000,
+        3000
+      ],
+      "dataScattoDichiarata": null,
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1068617443,
+      "sha1Originale": "3b2ace1698a8aa0ff27618ec179238ef5905a738"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

@@ -1,0 +1,85 @@
+{
+  "tipo": "tappa",
+  "id": "mann",
+  "nome": "Museo Archeologico Nazionale",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-mann",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "incategory:\"Museo Archeologico (Naples) - Interior\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-mann-2c03450f34",
+      "soggetto": "interno",
+      "didascaliaProposta": "Atrio e scalone del Museo Archeologico Nazionale",
+      "titoloFonte": "Museo Archeologico (Naples) - Interior.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_Archeologico_(Naples)_-_Interior.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/61/Museo_Archeologico_%28Naples%29_-_Interior.jpg",
+      "autore": "Yair Haklai",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2184,
+        3062
+      ],
+      "dataScattoDichiarata": "2023-09-28 11:05:43",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ]
+    },
+    {
+      "id": "foto-mann-1e692408d7",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Porticato del cortile occidentale del museo",
+      "titoloFonte": "Museo archeologico napoli cortile occidentale.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_archeologico_napoli_cortile_occidentale.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/87/Museo_archeologico_napoli_cortile_occidentale.jpg",
+      "autore": "ho visto nina volare",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        2736,
+        3648
+      ],
+      "dataScattoDichiarata": "2012-09-10 12:35:57",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ]
+    },
+    {
+      "id": "foto-mann-08d88ea1fc",
+      "soggetto": "interno",
+      "didascaliaProposta": "Passaggio fra le sale e lo scalone",
+      "titoloFonte": "Museo Archeologico (Naples) - Interior-2.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_Archeologico_(Naples)_-_Interior-2.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Museo_Archeologico_%28Naples%29_-_Interior-2.jpg",
+      "autore": "Yair-haklai",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1908,
+        4032
+      ],
+      "dataScattoDichiarata": "2023-09-28 15:33:49",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

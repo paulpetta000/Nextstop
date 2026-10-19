@@ -1,0 +1,68 @@
+{
+  "tipo": "tappa",
+  "id": "san-domenico",
+  "nome": "San Domenico Maggiore e le arche aragonesi",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-san-domenico",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"San Domenico Maggiore\" interior filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-san-domenico-667c983df7",
+      "soggetto": "interno",
+      "didascaliaProposta": "Cappella laterale di San Domenico Maggiore",
+      "titoloFonte": "Interior of San Domenico Maggiore (Naples) 25.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_of_San_Domenico_Maggiore_(Naples)_25.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Interior_of_San_Domenico_Maggiore_%28Naples%29_25.jpg",
+      "autore": "Superchilum",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3888,
+        5184
+      ],
+      "dataScattoDichiarata": "2026-05-29 14:28:21",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1272787365,
+      "sha1Originale": "044a0afe31636c1d71cff4a69ad75425be2889d5"
+    },
+    {
+      "id": "foto-san-domenico-a909cd2c19",
+      "soggetto": "interno",
+      "didascaliaProposta": "Veduta dell'interno verso l'altare maggiore",
+      "titoloFonte": "Interior of San Domenico Maggiore (Naples) 35.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_of_San_Domenico_Maggiore_(Naples)_35.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Interior_of_San_Domenico_Maggiore_%28Naples%29_35.jpg",
+      "autore": "Superchilum",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5184,
+        3888
+      ],
+      "dataScattoDichiarata": "2026-05-29 14:32:17",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1272787491,
+      "sha1Originale": "7c7f6d538af786a981a9411ad610b8edfd7a304f"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

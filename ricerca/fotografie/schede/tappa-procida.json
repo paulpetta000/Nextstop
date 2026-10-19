@@ -1,0 +1,92 @@
+{
+  "tipo": "tappa",
+  "id": "procida",
+  "nome": "Procida",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-procida",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Procida\" \"Corricella\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-procida-74d841ec3c",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Porto della Corricella a Procida",
+      "titoloFonte": "Corricella 2016, Procida (2).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Corricella_2016,_Procida_(2).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Corricella_2016%2C_Procida_%282%29.jpg",
+      "autore": "Ekrem Canli",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        13092,
+        5016
+      ],
+      "dataScattoDichiarata": "2016-06-20 14:02:23",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1112770183,
+      "sha1Originale": "92310ce4b1fef162b68a706078646d697cd39f40"
+    },
+    {
+      "id": "foto-procida-87d95c57e1",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Case colorate e barche della Corricella",
+      "titoloFonte": "Procida Corricella.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Procida_Corricella.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/79/Procida_Corricella.jpg",
+      "autore": "Porfirio",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        3072,
+        2303
+      ],
+      "dataScattoDichiarata": "2008-02-18 20:27:36",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1211070798,
+      "sha1Originale": "fc70577c40d819b714583de2d7d8c19b8445dbdf"
+    },
+    {
+      "id": "foto-procida-c9480e0f4d",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Terra Murata vista dalla costa",
+      "titoloFonte": "Procida terra murata.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Procida_terra_murata.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Procida_terra_murata.jpg",
+      "autore": "No machine-readable author provided. Retaggio assumed (based on copyright claims).",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "dimensioni": [
+        1280,
+        960
+      ],
+      "dataScattoDichiarata": "12 April 2004 (according to Exif data)",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "autore-desunto",
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1163722902,
+      "sha1Originale": "88eebc506e2a68c352a603612898fd56d0fc309d"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

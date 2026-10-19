@@ -1,0 +1,50 @@
+{
+  "tipo": "locale",
+  "id": "hosteria-toledo",
+  "nome": "Hosteria Toledo",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Hosteria Toledo\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Vico Giardinetto 78",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.hosteriatoledo.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.hosteriatoledo.it/",
+        "immagine": "https://www.hosteriatoledo.it/wp-content/uploads/2023/05/T2A9495-200x300.jpg",
+        "soggettoOsservato": "Sala con tavoli apparecchiati",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.hosteriatoledo.it/",
+        "immagine": "https://www.hosteriatoledo.it/wp-content/uploads/2023/05/T2A9511-300x200.jpg",
+        "soggettoOsservato": "Bancone e sala",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.hosteriatoledo.it/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

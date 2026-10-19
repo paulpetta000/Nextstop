@@ -1,0 +1,22 @@
+{
+  "tipo": "tappa",
+  "id": "tetti-duomo",
+  "nome": "I tetti del Duomo",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Duomo\" \"Napoli\" roof filetype:bitmap",
+      "risultatiEsaminati": 4
+    }
+  ],
+  "fotoCandidate": [],
+  "stato": "nessuna-candidata-libera",
+  "fontePerRichiesta": "https://muddnapoli.it/luoghi/visita-tetti-duomo/",
+  "azioneSuccessiva": "Richiedere foto attuali del percorso/parco e licenza libera esplicita, oppure scatti propri. Nessuna richiesta inviata."
+}

@@ -1,0 +1,65 @@
+{
+  "tipo": "locale",
+  "id": "port-alba",
+  "nome": "Antica Pizzeria Port'Alba",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pizzeria\" \"Port'Alba\" filetype:bitmap",
+      "risultatiEsaminati": 1
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-port-alba-32c9d33536",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Ingresso dell'Antica Pizzeria Port'Alba",
+      "titoloFonte": "Pizzeria Port Alba.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Pizzeria_Port_Alba.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0b/Pizzeria_Port_Alba.jpg",
+      "autore": "Alexandra Hamer",
+      "licenza": "Public domain",
+      "licenzaUrl": "https://commons.wikimedia.org/wiki/File:Pizzeria_Port_Alba.jpg#Licensing",
+      "dimensioni": [
+        314,
+        393
+      ],
+      "dataScattoDichiarata": "2007-06",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "risoluzione-ridotta"
+      ],
+      "revisioneCommons": 1248459316,
+      "sha1Originale": "9f83ba32311d9842da4e8a1ffef02e80ef2f6bae"
+    }
+  ],
+  "sede": "Via Port'Alba 18",
+  "stato": "licenza-libera-con-chiarimenti",
+  "fonteGestore": {
+    "url": "https://www.anticapizzeriaportalba.com/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.anticapizzeriaportalba.com/",
+        "immagine": "https://www.anticapizzeriaportalba.com/wp-content/uploads/2022/04/gallery4-scaled-2-400x516.jpeg",
+        "soggettoOsservato": "Spaghetti con vongole presentati nella galleria",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.anticapizzeriaportalba.com/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

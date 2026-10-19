@@ -1,0 +1,64 @@
+{
+  "tipo": "tappa",
+  "id": "sanita",
+  "nome": "Rione Sanità e Basilica della Sanità",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-sanita",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Santa Maria della Sanità\" interior",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-sanita-3c30d7f9e5",
+      "soggetto": "interno",
+      "didascaliaProposta": "Volte della Basilica di Santa Maria della Sanità",
+      "titoloFonte": "NapoliSMariaSanità-Interno2.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:NapoliSMariaSanit%C3%A0-Interno2.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/5d/NapoliSMariaSanit%C3%A0-Interno2.jpg",
+      "autore": "MM",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1418,
+        2083
+      ],
+      "dataScattoDichiarata": "2017-04-09 09:41:24",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ]
+    },
+    {
+      "id": "foto-sanita-e21910217c",
+      "soggetto": "interno",
+      "didascaliaProposta": "Navata e altare della basilica",
+      "titoloFonte": "NapoliSMariaSanità-Interno0.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:NapoliSMariaSanit%C3%A0-Interno0.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/76/NapoliSMariaSanit%C3%A0-Interno0.jpg",
+      "autore": "MM",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1661,
+        2241
+      ],
+      "dataScattoDichiarata": "2017-04-09 11:44:47",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

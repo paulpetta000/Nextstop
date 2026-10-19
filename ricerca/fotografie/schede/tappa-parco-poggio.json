@@ -1,0 +1,64 @@
+{
+  "tipo": "tappa",
+  "id": "parco-poggio",
+  "nome": "Parco del Poggio",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-poggio",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Parco del Poggio\" filetype:bitmap",
+      "risultatiEsaminati": 5
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-parco-poggio-1faaf7f70b",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Passerelle e verde del Parco del Poggio",
+      "titoloFonte": "ParcoPoggioNaples5.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:ParcoPoggioNaples5.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d9/ParcoPoggioNaples5.jpg",
+      "autore": "IlSistemone",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        1600,
+        1200
+      ],
+      "dataScattoDichiarata": "2012-09-15 12:10:04",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1212014937,
+      "sha1Originale": "f86cc8182449d2224499538bfa7fa04aeb7ffd31"
+    },
+    {
+      "id": "foto-parco-poggio-72751db0f2",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Specchio d'acqua del parco",
+      "titoloFonte": "ParcoPoggioNaples4.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:ParcoPoggioNaples4.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/51/ParcoPoggioNaples4.jpg",
+      "autore": "IlSistemone",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        1600,
+        1200
+      ],
+      "dataScattoDichiarata": "2012-09-15 12:09:00",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1082781527,
+      "sha1Originale": "d514d22d7bb435aa0ff09a4eba6894de1800defb"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

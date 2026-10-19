@@ -1,0 +1,50 @@
+{
+  "tipo": "locale",
+  "id": "fenestella",
+  "nome": "'A Fenestella",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Fenestella\" restaurant filetype:bitmap",
+      "risultatiEsaminati": 1
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via Marechiaro 23",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.ristoranteafenestella.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.ristoranteafenestella.it/",
+        "immagine": "https://www.ristoranteafenestella.it/wp-content/uploads/2018/12/Paccheri-al-coccio-2-770x550.jpg",
+        "soggettoOsservato": "Paccheri al coccio presentati sul sito",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.ristoranteafenestella.it/",
+        "immagine": "https://www.ristoranteafenestella.it/wp-content/uploads/2018/12/Risotto-alla-Pescatora-770x550.jpeg",
+        "soggettoOsservato": "Risotto alla pescatora presentato sul sito",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.ristoranteafenestella.it/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

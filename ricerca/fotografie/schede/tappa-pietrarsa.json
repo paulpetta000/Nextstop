@@ -1,0 +1,97 @@
+{
+  "tipo": "tappa",
+  "id": "pietrarsa",
+  "nome": "Museo ferroviario di Pietrarsa",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-pietrarsa",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Museo\" \"Pietrarsa\" interior filetype:bitmap",
+      "risultatiEsaminati": 2
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pietrarsa\" \"locomotive\" filetype:bitmap",
+      "risultatiEsaminati": 12
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-pietrarsa-a94c68162a",
+      "soggetto": "interno",
+      "didascaliaProposta": "Interno dell'automotrice E.107 a Pietrarsa",
+      "titoloFonte": "Museo nazionale ferroviario di Pietrarsa - automotrice E.107 - interno.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_nazionale_ferroviario_di_Pietrarsa_-_automotrice_E.107_-_interno.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Museo_nazionale_ferroviario_di_Pietrarsa_-_automotrice_E.107_-_interno.jpg",
+      "autore": "Arbalete",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1024,
+        807
+      ],
+      "dataScattoDichiarata": "Taken on 1 June 2019",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ],
+      "revisioneCommons": 1255494062,
+      "sha1Originale": "840c6f5183a2d995f2cde7a10cf2b9bb508ddf37"
+    },
+    {
+      "id": "foto-pietrarsa-218841ac60",
+      "soggetto": "interno",
+      "didascaliaProposta": "Interno dell'automotrice ALe 792.004",
+      "titoloFonte": "Museo nazionale ferroviario di Pietrarsa - automotrice ALe 792.004 - interno.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_nazionale_ferroviario_di_Pietrarsa_-_automotrice_ALe_792.004_-_interno.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/72/Museo_nazionale_ferroviario_di_Pietrarsa_-_automotrice_ALe_792.004_-_interno.jpg",
+      "autore": "Arbalete",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1024,
+        940
+      ],
+      "dataScattoDichiarata": "Taken on 1 June 2019",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ],
+      "revisioneCommons": 1255493997,
+      "sha1Originale": "d1a98999da91972d237fa13ec7f67646a12445c6"
+    },
+    {
+      "id": "foto-pietrarsa-c2cbfbf6a3",
+      "soggetto": "interno",
+      "didascaliaProposta": "Padiglione del museo ferroviario, con visitatori",
+      "titoloFonte": "Museo pietrarsa padiglione.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_pietrarsa_padiglione.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Museo_pietrarsa_padiglione.jpg",
+      "autore": "CityClass",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        604,
+        453
+      ],
+      "dataScattoDichiarata": "2009-10-04",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "risoluzione-ridotta",
+        "percorso-specifico"
+      ],
+      "revisioneCommons": 439070965,
+      "sha1Originale": "9ece920d3d5cf6a5a264b5f058572cb568ffb072"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

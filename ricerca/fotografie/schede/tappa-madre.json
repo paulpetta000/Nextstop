@@ -1,0 +1,64 @@
+{
+  "tipo": "tappa",
+  "id": "madre",
+  "nome": "Museo Madre",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-madre",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Museo Madre\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-madre-a56b72333c",
+      "soggetto": "interno",
+      "didascaliaProposta": "Corridoio con installazione al Museo Madre",
+      "titoloFonte": "Napoli - Museo d'arte contemporanea Donnaregina - 2024-09-03 23-45-50 001.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Museo_d%27arte_contemporanea_Donnaregina_-_2024-09-03_23-45-50_001.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Napoli_-_Museo_d%27arte_contemporanea_Donnaregina_-_2024-09-03_23-45-50_001.JPG",
+      "autore": "ElisabettaCastellano",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2574,
+        3854
+      ],
+      "dataScattoDichiarata": "2019-04-13",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee"
+      ]
+    },
+    {
+      "id": "foto-madre-9de95db5e4",
+      "soggetto": "interno",
+      "didascaliaProposta": "Ambiente della collezione al Museo Madre",
+      "titoloFonte": "Napoli - Museo d'arte contemporanea Donnaregina - 2024-09-03 23-43-51 001.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Museo_d%27arte_contemporanea_Donnaregina_-_2024-09-03_23-43-51_001.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Napoli_-_Museo_d%27arte_contemporanea_Donnaregina_-_2024-09-03_23-43-51_001.JPG",
+      "autore": "ElisabettaCastellano",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4240,
+        2832
+      ],
+      "dataScattoDichiarata": "2019-04-13",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

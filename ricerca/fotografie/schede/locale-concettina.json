@@ -1,0 +1,51 @@
+{
+  "tipo": "locale",
+  "id": "concettina",
+  "nome": "Concettina ai Tre Santi",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Concettina\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via Arena della Sanità 7 bis",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.concettinaaitresanti.com/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.concettinaaitresanti.com/",
+        "immagine": "https://www.concettinaaitresanti.com/wp-content/uploads/2024/05/pizza-fritta-concettina.jpg",
+        "soggettoOsservato": "Pizza fritta con decorazione sullo sfondo",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.concettinaaitresanti.com/",
+        "immagine": "https://www.concettinaaitresanti.com/wp-content/uploads/2024/05/pizza-sono-pazzo-di-te.jpg",
+        "soggettoOsservato": "Pizza Sono pazzo di te",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.concettinaaitresanti.com/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede."
+}

@@ -1,0 +1,51 @@
+{
+  "tipo": "locale",
+  "id": "salvo",
+  "nome": "Pizzeria Salvo",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pizzeria Salvo\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Riviera di Chiaia 271",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.pizzeriasalvo.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.pizzeriasalvo.it/",
+        "immagine": "https://www.pizzeriasalvo.it/wp-content/uploads/2023/02/Margherita-pop.webp",
+        "soggettoOsservato": "Pizza del marchio Salvo",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.pizzeriasalvo.it/",
+        "immagine": "https://www.pizzeriasalvo.it/wp-content/uploads/2022/11/Pizza-mare-2.webp",
+        "soggettoOsservato": "Pizza con condimenti",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.pizzeriasalvo.it/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede."
+}

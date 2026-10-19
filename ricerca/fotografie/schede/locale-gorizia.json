@@ -1,0 +1,50 @@
+{
+  "tipo": "locale",
+  "id": "gorizia",
+  "nome": "Pizzeria Gorizia 1916",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Gorizia\" pizzeria filetype:bitmap",
+      "risultatiEsaminati": 1
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via Gian Lorenzo Bernini 29",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.gorizia1916.com/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.gorizia1916.com/gallery/",
+        "immagine": "https://www.gorizia1916.com/wp-content/uploads/2026/03/2024-05-15-07-300x300.jpg",
+        "soggettoOsservato": "Pizza",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.gorizia1916.com/gallery/",
+        "immagine": "https://www.gorizia1916.com/wp-content/uploads/2026/03/2024-05-15-10-300x300.jpg",
+        "soggettoOsservato": "Tavolo con piatti",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.gorizia1916.com/gallery/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

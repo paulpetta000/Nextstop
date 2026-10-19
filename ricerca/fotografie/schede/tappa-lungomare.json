@@ -1,0 +1,86 @@
+{
+  "tipo": "tappa",
+  "id": "lungomare",
+  "nome": "Il lungomare: via Partenope, via Caracciolo e Villa Comunale",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "via-partenope",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Villa Comunale\" \"Naples\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-lungomare-53c18cca69",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Viale della Villa Comunale",
+      "titoloFonte": "Villa Comunale - panoramio (3).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Villa_Comunale_-_panoramio_(3).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/11/Villa_Comunale_-_panoramio_%283%29.jpg",
+      "autore": "Mister No",
+      "licenza": "CC BY 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/3.0",
+      "dimensioni": [
+        1656,
+        1080
+      ],
+      "dataScattoDichiarata": "Taken on 13 September 2015",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "creditoRichiesto": "Mister No"
+    },
+    {
+      "id": "foto-lungomare-83b56e1d1a",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Tempietto nella Villa Comunale",
+      "titoloFonte": "Villa Comunale di Napoli100 3011.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Villa_Comunale_di_Napoli100_3011.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Villa_Comunale_di_Napoli100_3011.JPG",
+      "autore": "Johnnyrotten",
+      "licenza": "Public domain",
+      "licenzaUrl": "https://commons.wikimedia.org/wiki/File:Villa_Comunale_di_Napoli100_3011.JPG#Licensing",
+      "dimensioni": [
+        2304,
+        1728
+      ],
+      "dataScattoDichiarata": null,
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ]
+    },
+    {
+      "id": "foto-lungomare-478388ac17",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Passeggiata alberata nella Villa Comunale",
+      "titoloFonte": "Naples, Italy 20230626 127.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Naples,_Italy_20230626_127.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/00/Naples%2C_Italy_20230626_127.jpg",
+      "autore": "Argo Navis",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4000,
+        2250
+      ],
+      "dataScattoDichiarata": "2023-06-26 18:18:29",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

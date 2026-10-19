@@ -1,0 +1,64 @@
+{
+  "tipo": "tappa",
+  "id": "palazzo-donn-anna",
+  "nome": "Palazzo Donn'Anna, da fuori",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-donn-anna",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Palazzo Donn'Anna\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-palazzo-donn-anna-e1754b013c",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Palazzo Donn'Anna dal lato del mare",
+      "titoloFonte": "Napoli - Palazzo Donnanna.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Palazzo_Donnanna.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Napoli_-_Palazzo_Donnanna.jpg",
+      "autore": "Armando Mancini",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3456,
+        2304
+      ],
+      "dataScattoDichiarata": "2008-09-27 09:04:41",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1133926603,
+      "sha1Originale": "2c05a67ea2a1caa6c821d1404b6ef955f85532ba"
+    },
+    {
+      "id": "foto-palazzo-donn-anna-cbc6357a00",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Palazzo Donn'Anna e spiaggia di Bagno Elena",
+      "titoloFonte": "Palazzo Donn'Anna e bagno Elena.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Palazzo_Donn%27Anna_e_bagno_Elena.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Palazzo_Donn%27Anna_e_bagno_Elena.jpg",
+      "autore": "Ruthven",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        6016,
+        4016
+      ],
+      "dataScattoDichiarata": "2016-09-03 10:40:39",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1207471749,
+      "sha1Originale": "58365782dc7c44589408836f9d918f1249642ac9"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

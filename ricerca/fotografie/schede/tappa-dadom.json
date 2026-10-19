@@ -1,0 +1,43 @@
+{
+  "tipo": "tappa",
+  "id": "dadom",
+  "nome": "Acquario e museo Darwin-Dohrn",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-dadom",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Aquarium\" \"Naples\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-dadom-f2ae4fda4c",
+      "soggetto": "interno",
+      "didascaliaProposta": "Sala con vasche dell'Acquario della Stazione Zoologica",
+      "titoloFonte": "Aquarium Stazione Zoologica Anton Dohrn.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Aquarium_Stazione_Zoologica_Anton_Dohrn.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/28/Aquarium_Stazione_Zoologica_Anton_Dohrn.jpg",
+      "autore": "Elke Brüser",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5376,
+        4035
+      ],
+      "dataScattoDichiarata": "2024-12-19 12:50:08",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

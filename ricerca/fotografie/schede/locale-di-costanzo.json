@@ -1,0 +1,50 @@
+{
+  "tipo": "locale",
+  "id": "di-costanzo",
+  "nome": "Pasticceria Di Costanzo",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Di Costanzo\" pasticceria filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Piazza Cavour 133",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.dicostanzopasticceria.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.dicostanzopasticceria.it/",
+        "immagine": "https://www.dicostanzopasticceria.it/wp-content/uploads/2024/05/sfogliata_riccia-500x375.webp",
+        "soggettoOsservato": "Sfogliata riccia",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.dicostanzopasticceria.it/",
+        "immagine": "https://www.dicostanzopasticceria.it/wp-content/uploads/2024/05/maritozzo-500x375.webp",
+        "soggettoOsservato": "Maritozzo",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.dicostanzopasticceria.it/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

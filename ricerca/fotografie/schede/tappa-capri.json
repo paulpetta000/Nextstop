@@ -1,0 +1,92 @@
+{
+  "tipo": "tappa",
+  "id": "capri",
+  "nome": "Capri",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-capri",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Capri\" \"Faraglioni\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-capri-3a182a6198",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Faraglioni di Capri all'alba",
+      "titoloFonte": "Faraglioni di Capri all' Alba foto di Louis Molino.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Faraglioni_di_Capri_all%27_Alba_foto_di_Louis_Molino.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/49/Faraglioni_di_Capri_all%27_Alba_foto_di_Louis_Molino.jpg",
+      "autore": "Luigi Molino alias Louis Molino",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3456,
+        2304
+      ],
+      "dataScattoDichiarata": "2011-11-18 20:16:37",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1249102331,
+      "sha1Originale": "ea8dee2bb94d057647b5166af65c3b138665fc98"
+    },
+    {
+      "id": "foto-capri-012a87eca8",
+      "soggetto": "panorama",
+      "didascaliaProposta": "I Faraglioni dalla costa di Capri",
+      "titoloFonte": "Capri, Italy, Coast of Capri island.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Capri,_Italy,_Coast_of_Capri_island.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/47/Capri%2C_Italy%2C_Coast_of_Capri_island.jpg",
+      "autore": "Vyacheslav Argenberg",
+      "licenza": "CC BY 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dimensioni": [
+        3072,
+        2048
+      ],
+      "dataScattoDichiarata": "2006-05-06 19:28:40",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "creditoRichiesto": "© Vyacheslav Argenberg / http://www.vascoplanet.com/",
+      "revisioneCommons": 1161887798,
+      "sha1Originale": "362430939b47d936aebe522a5582fde503c2cc9d"
+    },
+    {
+      "id": "foto-capri-ef7bc2cc6c",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Faraglioni, barche e mare dall'alto",
+      "titoloFonte": "Photo of the Faraglioni Rocks, Capri, Italy.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Photo_of_the_Faraglioni_Rocks,_Capri,_Italy.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/25/Photo_of_the_Faraglioni_Rocks%2C_Capri%2C_Italy.jpg",
+      "autore": "Littleballofwiki",
+      "licenza": "CC BY 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dimensioni": [
+        3024,
+        4032
+      ],
+      "dataScattoDichiarata": "2024-07-05 12:04:19",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 893656463,
+      "sha1Originale": "332c96569ce2f43ac0a02fa82473a42030cc3ada"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

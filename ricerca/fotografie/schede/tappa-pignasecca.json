@@ -1,0 +1,64 @@
+{
+  "tipo": "tappa",
+  "id": "pignasecca",
+  "nome": "Il mercato della Pignasecca",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-pignasecca",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pignasecca\" market filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-pignasecca-47eb2af690",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Banchi e strada del mercato della Pignasecca",
+      "titoloFonte": "Pignasecca market, Naples 20230622 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Pignasecca_market,_Naples_20230622_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/13/Pignasecca_market%2C_Naples_20230622_01.jpg",
+      "autore": "Argo Navis",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4000,
+        3000
+      ],
+      "dataScattoDichiarata": "2023-06-22 11:41:05",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1179131059,
+      "sha1Originale": "f8833e93cda6aa54f68052634a4f0b57828d7995"
+    },
+    {
+      "id": "foto-pignasecca-e539312519",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Slargo e bancarelle della Pignasecca",
+      "titoloFonte": "MercatoPignasecca6.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:MercatoPignasecca6.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/82/MercatoPignasecca6.jpg",
+      "autore": "IlSistemone",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2592,
+        1944
+      ],
+      "dataScattoDichiarata": "2011-10-18",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1275164423,
+      "sha1Originale": "c91420a45343f11a386ebcd1e0751922d8d39be9"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

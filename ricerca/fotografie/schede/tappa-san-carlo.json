@@ -1,0 +1,75 @@
+{
+  "tipo": "tappa",
+  "id": "san-carlo",
+  "nome": "Teatro di San Carlo",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-san-carlo",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Teatro\" \"San Carlo\" Naples",
+      "risultatiEsaminati": 16
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "incategory:\"Interior of Teatro San Carlo (Naples)\" filetype:bitmap",
+      "risultatiEsaminati": 8
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-san-carlo-6c0b9fcb26",
+      "soggetto": "interno",
+      "didascaliaProposta": "Palchi della sala del Teatro di San Carlo",
+      "titoloFonte": "Teatro de San Carlos, Nápoles, Italia, 2023-03-25, DD 217-219 HDR.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Teatro_de_San_Carlos,_N%C3%A1poles,_Italia,_2023-03-25,_DD_217-219_HDR.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/69/Teatro_de_San_Carlos%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_217-219_HDR.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        8049,
+        5366
+      ],
+      "dataScattoDichiarata": "2023-03-25 17:12:04",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ],
+      "creditoRichiesto": "Diego Delso",
+      "revisioneCommons": 1110839306,
+      "sha1Originale": "5db58b92dde35fa8689735e2b3abe277bf026529"
+    },
+    {
+      "id": "foto-san-carlo-aeb85abecd",
+      "soggetto": "interno",
+      "didascaliaProposta": "Veduta panoramica della sala e del sipario",
+      "titoloFonte": "Teatro de San Carlos, Nápoles, Italia, 2023-03-25, DD 193-210 HDR PAN.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Teatro_de_San_Carlos,_N%C3%A1poles,_Italia,_2023-03-25,_DD_193-210_HDR_PAN.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Teatro_de_San_Carlos%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_193-210_HDR_PAN.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        9522,
+        4678
+      ],
+      "dataScattoDichiarata": "2023-03-25 16:53:35",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ],
+      "creditoRichiesto": "Diego Delso",
+      "revisioneCommons": 1110839910,
+      "sha1Originale": "6fc00aa702ab3ce904cc000a0c366d3b65e96c24"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

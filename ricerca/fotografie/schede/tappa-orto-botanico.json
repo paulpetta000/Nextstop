@@ -1,0 +1,85 @@
+{
+  "tipo": "tappa",
+  "id": "orto-botanico",
+  "nome": "Orto Botanico",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-orto-botanico",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Orto botanico\" \"Naples\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-orto-botanico-c66ce5c93b",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Viale alberato dell'Orto Botanico di Napoli",
+      "titoloFonte": "Orto botanico di Napoli 213.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Orto_botanico_di_Napoli_213.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Orto_botanico_di_Napoli_213.JPG",
+      "autore": "Daniel Ventura",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        3000,
+        4000
+      ],
+      "dataScattoDichiarata": "2014-05-27",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1221755935,
+      "sha1Originale": "5f58a53ad4f223d71b0eb0ff8d04594f515980a2"
+    },
+    {
+      "id": "foto-orto-botanico-558029df20",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Piante nella collezione botanica",
+      "titoloFonte": "Orto botanico di Napoli 69.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Orto_botanico_di_Napoli_69.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Orto_botanico_di_Napoli_69.jpg",
+      "autore": "Daniel Ventura",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2560,
+        1920
+      ],
+      "dataScattoDichiarata": "2014-05-27",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1145863666,
+      "sha1Originale": "5c60d3f374732758c1980b6e6eb3678785f18603"
+    },
+    {
+      "id": "foto-orto-botanico-dca30103d6",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Sentiero e siepi dell'Orto Botanico",
+      "titoloFonte": "Orto botanico di Napoli 102.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Orto_botanico_di_Napoli_102.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Orto_botanico_di_Napoli_102.jpg",
+      "autore": "Daniel Ventura",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        1920,
+        2560
+      ],
+      "dataScattoDichiarata": "2014-05-27 16:38:09",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1167780642,
+      "sha1Originale": "581c855e27f4dc57bfd2cfa59952e9b6c5ea4418"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

@@ -1,0 +1,90 @@
+{
+  "tipo": "tappa",
+  "id": "gaiola",
+  "nome": "Parco sommerso della Gaiola",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-gaiola",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Gaiola\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "incategory:\"Gaiola (Naples)\" filetype:bitmap",
+      "risultatiEsaminati": 8
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-gaiola-405de8f05a",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Isolotto della Gaiola visto dal mare",
+      "titoloFonte": "Isoletta della Gaiola (Napoli) 02.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Isoletta_della_Gaiola_(Napoli)_02.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Isoletta_della_Gaiola_%28Napoli%29_02.jpg",
+      "autore": "Gianfranco Vitolo",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        4494,
+        3250
+      ],
+      "dataScattoDichiarata": "2017-06-09 15:32:03",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1213176718,
+      "sha1Originale": "ea292a3ca4f45109091dd0c34258d8aedeec6fa3"
+    },
+    {
+      "id": "foto-gaiola-91361499f1",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Ponticello fra gli scogli della Gaiola",
+      "titoloFonte": "Isoletta della Gaiola (Napoli) 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Isoletta_della_Gaiola_(Napoli)_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/27/Isoletta_della_Gaiola_%28Napoli%29_01.jpg",
+      "autore": "Gianfranco Vitolo",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        4459,
+        3322
+      ],
+      "dataScattoDichiarata": "2017-06-09 12:33:34",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1159163045,
+      "sha1Originale": "37b06939afb57ab4b409ddfeab8baffe253dbffe"
+    },
+    {
+      "id": "foto-gaiola-bd2eecda0d",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Isolotti e ville sulla costa della Gaiola",
+      "titoloFonte": "Villa della Gaiola.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Villa_della_Gaiola.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/da/Villa_della_Gaiola.jpg",
+      "autore": "Alexandre Albore",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        3184,
+        2020
+      ],
+      "dataScattoDichiarata": "2015-08-02 11:25:40",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1162646794,
+      "sha1Originale": "c584c564d52563077d033672830d123418c7fc48"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

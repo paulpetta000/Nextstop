@@ -1,0 +1,60 @@
+{
+  "tipo": "tappa",
+  "id": "galleria-borbonica",
+  "nome": "Galleria Borbonica",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-galleria-borbonica",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Galleria Borbonica\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-galleria-borbonica-de70915b15",
+      "soggetto": "interno",
+      "didascaliaProposta": "Cisterna e passerella della Galleria Borbonica",
+      "titoloFonte": "Galleria borbonica - Cistern and switches (Naples).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Galleria_borbonica_-_Cistern_and_switches_(Naples).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/59/Galleria_borbonica_-_Cistern_and_switches_%28Naples%29.jpg",
+      "autore": "Associazione Culturale Borbonica Sotterranea",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2362,
+        1575
+      ],
+      "dataScattoDichiarata": "2015-12-26 18:38:50",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    },
+    {
+      "id": "foto-galleria-borbonica-5ac2279501",
+      "soggetto": "interno",
+      "didascaliaProposta": "Scalinata nel percorso della Galleria Borbonica",
+      "titoloFonte": "Galleria borbonica, Naples 03.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Galleria_borbonica,_Naples_03.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/19/Galleria_borbonica%2C_Naples_03.jpg",
+      "autore": "Nemo bis",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        3456,
+        4608
+      ],
+      "dataScattoDichiarata": "2016-07-02 12:35:43",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

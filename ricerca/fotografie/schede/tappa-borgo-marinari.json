@@ -1,0 +1,64 @@
+{
+  "tipo": "tappa",
+  "id": "borgo-marinari",
+  "nome": "Borgo Marinari e Castel dell'Ovo",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-borgo-marinari",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Borgo Marinari\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-borgo-marinari-acad6b6bf3",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Porticciolo di Borgo Marinari e golfo",
+      "titoloFonte": "Naples-25.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Naples-25.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Naples-25.jpg",
+      "autore": "Poiesia",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2560,
+        1920
+      ],
+      "dataScattoDichiarata": "2014-06-10 13:53:59",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ]
+    },
+    {
+      "id": "foto-borgo-marinari-7bfe32c942",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Piazzetta con tavolini a Borgo Marinari",
+      "titoloFonte": "Piccola piazzeta del cafe .Napoli.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Piccola_piazzeta_del_cafe_.Napoli.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/07/Piccola_piazzeta_del_cafe_.Napoli.JPG",
+      "autore": "Bogomazova Ludmila",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2560,
+        1704
+      ],
+      "dataScattoDichiarata": "2012-05-16 12:11:01",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

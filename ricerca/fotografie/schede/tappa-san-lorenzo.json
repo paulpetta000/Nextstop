@@ -1,0 +1,86 @@
+{
+  "tipo": "tappa",
+  "id": "san-lorenzo",
+  "nome": "San Lorenzo Maggiore e gli scavi",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-san-lorenzo",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"San Lorenzo Maggiore\" \"Naples\" interior",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-san-lorenzo-19f1920f68",
+      "soggetto": "interno",
+      "didascaliaProposta": "Navata di San Lorenzo Maggiore",
+      "titoloFonte": "Interior San Lorenzo Maggiore 02.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_San_Lorenzo_Maggiore_02.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Interior_San_Lorenzo_Maggiore_02.JPG",
+      "autore": "Miguel Hermoso Cuesta",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3456,
+        5184
+      ],
+      "dataScattoDichiarata": "2013-06-17 15:25:56",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ]
+    },
+    {
+      "id": "foto-san-lorenzo-80221fe6ef",
+      "soggetto": "interno",
+      "didascaliaProposta": "Veduta della chiesa verso l'altare",
+      "titoloFonte": "Interior San Lorenzo Maggiore 01.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_San_Lorenzo_Maggiore_01.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/66/Interior_San_Lorenzo_Maggiore_01.JPG",
+      "autore": "Miguel Hermoso Cuesta",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3456,
+        5184
+      ],
+      "dataScattoDichiarata": "2013-06-17 15:24:07",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ]
+    },
+    {
+      "id": "foto-san-lorenzo-2a1cef6676",
+      "soggetto": "collezione",
+      "didascaliaProposta": "Particolare di un arredo decorato nel museo di San Lorenzo",
+      "titoloFonte": "Interior - San Lorenzo Maggiore Museum - Naples - Italy 2015.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_-_San_Lorenzo_Maggiore_Museum_-_Naples_-_Italy_2015.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/11/Interior_-_San_Lorenzo_Maggiore_Museum_-_Naples_-_Italy_2015.JPG",
+      "autore": "José Luiz",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5144,
+        3396
+      ],
+      "dataScattoDichiarata": "2015-02-05 15:39:51",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ],
+      "creditoRichiesto": "© José Luiz Bernardes Ribeiro"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

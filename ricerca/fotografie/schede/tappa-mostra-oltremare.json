@@ -1,0 +1,96 @@
+{
+  "tipo": "tappa",
+  "id": "mostra-oltremare",
+  "nome": "Il parco della Mostra d'Oltremare",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-mostra-oltremare",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Mostra d'Oltremare\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "incategory:\"Fontana dell'Esedra (Naples)\" filetype:bitmap",
+      "risultatiEsaminati": 5
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-mostra-oltremare-4600d7fb14",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Maioliche della Fontana dell'Esedra",
+      "titoloFonte": "MaiolicheEsedra.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:MaiolicheEsedra.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/36/MaiolicheEsedra.jpg",
+      "autore": "Spalluzza",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3872,
+        2592
+      ],
+      "dataScattoDichiarata": "2012-06-03 10:56:09",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee"
+      ],
+      "revisioneCommons": 1193763967,
+      "sha1Originale": "e7e081f900742fcf67fd104af125b98f4d9a44cb"
+    },
+    {
+      "id": "foto-mostra-oltremare-43b8d6efcb",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Vasche e verde attorno alla Fontana dell'Esedra",
+      "titoloFonte": "FontEs.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:FontEs.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/18/FontEs.jpg",
+      "autore": "Baku",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1440,
+        810
+      ],
+      "dataScattoDichiarata": "2020-03-04",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee"
+      ],
+      "revisioneCommons": 1256031432,
+      "sha1Originale": "c204dba84862d1169572992cdd2dc9666ab1236d"
+    },
+    {
+      "id": "foto-mostra-oltremare-1644b2b444",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Fontana dell'Esedra senza getti d'acqua",
+      "titoloFonte": "Font esedra 7.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Font_esedra_7.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Font_esedra_7.jpg",
+      "autore": "Baku",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        1440,
+        1080
+      ],
+      "dataScattoDichiarata": null,
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee"
+      ],
+      "revisioneCommons": 1256058510,
+      "sha1Originale": "538ad8b9235e1e32af01369e27e00748bf6df155"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

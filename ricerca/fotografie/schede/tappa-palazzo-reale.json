@@ -1,0 +1,64 @@
+{
+  "tipo": "tappa",
+  "id": "palazzo-reale",
+  "nome": "Palazzo Reale",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-palazzo-reale",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Palazzo Reale\" \"Napoli\" interior",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-palazzo-reale-d19016288d",
+      "soggetto": "interno",
+      "didascaliaProposta": "Galleria decorata del Palazzo Reale",
+      "titoloFonte": "Corridoio Palazzo Reale Napoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Corridoio_Palazzo_Reale_Napoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Corridoio_Palazzo_Reale_Napoli.jpg",
+      "autore": "Matmoga",
+      "licenza": "CC BY 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dimensioni": [
+        4284,
+        5712
+      ],
+      "dataScattoDichiarata": "2024-10-03 14:48:01",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ]
+    },
+    {
+      "id": "foto-palazzo-reale-9202f872d4",
+      "soggetto": "interno",
+      "didascaliaProposta": "Teatrino di corte del Palazzo Reale",
+      "titoloFonte": "Palazzo Reale.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Palazzo_Reale.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Palazzo_Reale.jpg",
+      "autore": "Giuseppe Guida",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        1022,
+        761
+      ],
+      "dataScattoDichiarata": "2011-03-15 21:31:31",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

@@ -1,0 +1,85 @@
+{
+  "tipo": "tappa",
+  "id": "napoli-sotterranea",
+  "nome": "Napoli Sotterranea",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-napoli-sotterranea",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Napoli sotterranea\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-napoli-sotterranea-23051f4337",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Ingresso di Napoli Sotterranea in piazza San Gaetano",
+      "titoloFonte": "Napoli sotterranea (1).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_sotterranea_(1).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/74/Napoli_sotterranea_%281%29.jpg",
+      "autore": "Sordelli",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2667,
+        4000
+      ],
+      "dataScattoDichiarata": null,
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ]
+    },
+    {
+      "id": "foto-napoli-sotterranea-57a800dcf9",
+      "soggetto": "interno",
+      "didascaliaProposta": "Cavità e passerella del percorso sotterraneo",
+      "titoloFonte": "Napoli Sotterranea 1.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_Sotterranea_1.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Napoli_Sotterranea_1.jpg",
+      "autore": "Photo2023",
+      "licenza": "CC BY 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dimensioni": [
+        4032,
+        3024
+      ],
+      "dataScattoDichiarata": "2022-09-18 10:53:43",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ]
+    },
+    {
+      "id": "foto-napoli-sotterranea-b583c81346",
+      "soggetto": "interno",
+      "didascaliaProposta": "Ambiente scavato nel tufo, fotografato nel 2016",
+      "titoloFonte": "2016 Napoli sotterranea 07.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2016_Napoli_sotterranea_07.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/58/2016_Napoli_sotterranea_07.jpg",
+      "autore": "Nemo bis",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        4608,
+        3456
+      ],
+      "dataScattoDichiarata": "2016-07-02 10:36:04",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

@@ -1,0 +1,51 @@
+{
+  "tipo": "locale",
+  "id": "petrucci-posillipo",
+  "nome": "Palazzo Petrucci Pizzeria, Posillipo",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Palazzo Petrucci\" pizzeria filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via Posillipo 16/c",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/",
+        "immagine": "https://palazzopetrucci.it/wp-content/uploads/pizzeria-Palazzo-Petrucci-Posillipo-Napoli-pizza-margherita-sul-mare.jpg",
+        "soggettoOsservato": "Pizza sul tavolo con vista mare",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/",
+        "immagine": "https://palazzopetrucci.it/wp-content/uploads/pizzeria-Palazzo-Petrucci-Posillipo-Napoli-pizza-fritta.jpg",
+        "soggettoOsservato": "Pizza fritta",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede."
+}

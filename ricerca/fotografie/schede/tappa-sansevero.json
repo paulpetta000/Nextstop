@@ -1,0 +1,86 @@
+{
+  "tipo": "tappa",
+  "id": "sansevero",
+  "nome": "Cappella Sansevero",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Sansevero\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-sansevero-ba59401085",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Portale d'ingresso della Cappella Sansevero",
+      "titoloFonte": "Cappellaentrance.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cappellaentrance.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Cappellaentrance.jpg",
+      "autore": "Hohenloh at English Wikipedia",
+      "licenza": "Public domain",
+      "licenzaUrl": "https://commons.wikimedia.org/wiki/File:Cappellaentrance.jpg#Licensing",
+      "dimensioni": [
+        375,
+        500
+      ],
+      "dataScattoDichiarata": "8 January 2009 (original upload date)",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "risoluzione-ridotta"
+      ]
+    },
+    {
+      "id": "foto-sansevero-d0df3e11d9",
+      "soggetto": "interno",
+      "didascaliaProposta": "Veduta d'insieme della Cappella Sansevero",
+      "titoloFonte": "Immagine d'insieme 2, Cappella Sansevero.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Immagine_d%27insieme_2,_Cappella_Sansevero.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/ea/Immagine_d%27insieme_2%2C_Cappella_Sansevero.jpg",
+      "autore": "David Sivyer",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        640,
+        480
+      ],
+      "dataScattoDichiarata": "2015-11-01",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "sansevero-interno",
+        "risoluzione-ridotta"
+      ]
+    },
+    {
+      "id": "foto-sansevero-b0c2d3e8e3",
+      "soggetto": "interno",
+      "didascaliaProposta": "Altare maggiore della Cappella Sansevero",
+      "titoloFonte": "Altare maggiore, Cappella Sansevero.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Altare_maggiore,_Cappella_Sansevero.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/62/Altare_maggiore%2C_Cappella_Sansevero.jpg",
+      "autore": "David Sivyer",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        667,
+        1000
+      ],
+      "dataScattoDichiarata": "2015-11-01",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "sansevero-interno"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

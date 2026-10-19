@@ -1,0 +1,31 @@
+{
+  "tipo": "locale",
+  "id": "gobbetto",
+  "nome": "Osteria Il Gobbetto",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Gobbetto\" Napoli filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Vico Sergente Maggiore 8",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://osteria-il-gobbetto3.webnode.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [],
+    "nota": "Galleria letta; logo e collage non sono una selezione di fotografie autonome. Richiedere originali di piatti e sala."
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

@@ -1,0 +1,64 @@
+{
+  "tipo": "tappa",
+  "id": "sant-elmo",
+  "nome": "Castel Sant'Elmo",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-sant-elmo",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Castel Sant'Elmo\"",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-sant-elmo-7c72799967",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Ingresso e ponte di Castel Sant'Elmo",
+      "titoloFonte": "Napoli - Castel Sant'Elmo - 202209302333 23.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Castel_Sant%27Elmo_-_202209302333_23.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Napoli_-_Castel_Sant%27Elmo_-_202209302333_23.jpg",
+      "autore": "Richard Nevell",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2268,
+        4032
+      ],
+      "dataScattoDichiarata": "2022-09-24",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ]
+    },
+    {
+      "id": "foto-sant-elmo-7b838fb2fc",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Vista della città dalle mura del castello",
+      "titoloFonte": "Napoli - vista della città da Castel Sant'Elmo.jpeg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_vista_della_citt%C3%A0_da_Castel_Sant%27Elmo.jpeg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/73/Napoli_-_vista_della_citt%C3%A0_da_Castel_Sant%27Elmo.jpeg",
+      "autore": "Ilardite",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4032,
+        3024
+      ],
+      "dataScattoDichiarata": "2022-09-05",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

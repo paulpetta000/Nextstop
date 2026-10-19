@@ -1,0 +1,73 @@
+{
+  "tipo": "locale",
+  "id": "poppella",
+  "nome": "Pasticceria Poppella",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Poppella\" filetype:bitmap",
+      "risultatiEsaminati": 4
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-poppella-5e202f031f",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Pasticceria Poppella, sede del Rione Sanità",
+      "titoloFonte": "Poppella Esterno negozio.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Poppella_Esterno_negozio.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Poppella_Esterno_negozio.jpg",
+      "autore": "Bloomediait",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3456,
+        4608
+      ],
+      "dataScattoDichiarata": "2022-11-17",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1174125750,
+      "sha1Originale": "1b588901eaf56c7aa75fa9ce6677975acb8fe597"
+    }
+  ],
+  "sede": "Via Arena della Sanità 28",
+  "stato": "licenza-libera",
+  "fonteGestore": {
+    "url": "https://www.pasticceriapoppella.com/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.pasticceriapoppella.com/",
+        "immagine": "https://www.pasticceriapoppella.com/wp-content/uploads/2017/04/MG_7616.jpg",
+        "soggettoOsservato": "Fiocchi di neve",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.pasticceriapoppella.com/",
+        "immagine": "https://www.pasticceriapoppella.com/wp-content/uploads/2017/04/MG_7534-1024x683.jpg",
+        "soggettoOsservato": "Lavorazione dell’impasto",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.pasticceriapoppella.com/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede."
+}

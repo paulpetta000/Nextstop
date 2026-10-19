@@ -1,0 +1,91 @@
+{
+  "tipo": "tappa",
+  "id": "ischia",
+  "nome": "Ischia",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-ischia",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Ischia\" \"Castello Aragonese\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-ischia-8fc87cd54d",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Castello Aragonese illuminato di notte",
+      "titoloFonte": "Ischia, castello aragonese, veduta notturna 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Ischia,_castello_aragonese,_veduta_notturna_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Ischia%2C_castello_aragonese%2C_veduta_notturna_01.jpg",
+      "autore": "Sailko",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4584,
+        3648
+      ],
+      "dataScattoDichiarata": "2021-12-19 17:54:45",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1185371742,
+      "sha1Originale": "cfb255544156da14d5815d312f73635c735ab516"
+    },
+    {
+      "id": "foto-ischia-6216f500c1",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Castello Aragonese e Spiaggia dei Pescatori",
+      "titoloFonte": "Spiaggia dei Pescatori.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Spiaggia_dei_Pescatori.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Spiaggia_dei_Pescatori.jpg",
+      "autore": "Ugeorge",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        4930,
+        3287
+      ],
+      "dataScattoDichiarata": null,
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 814335778,
+      "sha1Originale": "358c3f0b8a3440f75e2aa4b1a4ff6ac3845ef7f2"
+    },
+    {
+      "id": "foto-ischia-a097fd0fc1",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Vista sul mare da un belvedere del Castello Aragonese",
+      "titoloFonte": "Castello Aragonese, Ischia - Belvedere Chiesa dell'Ortodonico.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Castello_Aragonese,_Ischia_-_Belvedere_Chiesa_dell%27Ortodonico.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Castello_Aragonese%2C_Ischia_-_Belvedere_Chiesa_dell%27Ortodonico.jpg",
+      "autore": "Giuseppe Albano",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3543,
+        2365
+      ],
+      "dataScattoDichiarata": "2022-08-13 03:53:37",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 849975822,
+      "sha1Originale": "7ba8b2a0c1bb807f3d7f6271bb28e2bbbaecd225"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

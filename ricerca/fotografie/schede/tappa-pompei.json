@@ -1,0 +1,91 @@
+{
+  "tipo": "tappa",
+  "id": "pompei",
+  "nome": "Pompei",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-pompei",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pompeii\" \"Casa del Menandro\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-pompei-ed40733dc8",
+      "soggetto": "interno",
+      "didascaliaProposta": "Colonne e pavimento della Casa del Menandro",
+      "titoloFonte": "Casa del Menandro, Interior, Pompeii (4979).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Casa_del_Menandro,_Interior,_Pompeii_(4979).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/41/Casa_del_Menandro%2C_Interior%2C_Pompeii_%284979%29.jpg",
+      "autore": "Marco Ober",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5427,
+        3613
+      ],
+      "dataScattoDichiarata": "2020-08-12 13:52:09",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1284280838,
+      "sha1Originale": "1fd7e3e07af292cb8fc06c84132ed90746e62c8a"
+    },
+    {
+      "id": "foto-pompei-273e62b800",
+      "soggetto": "interno",
+      "didascaliaProposta": "Ambienti della Casa del Menandro",
+      "titoloFonte": "Interior of Casa del Menandro (Pompeii).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_of_Casa_del_Menandro_(Pompeii).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Interior_of_Casa_del_Menandro_%28Pompeii%29.jpg",
+      "autore": "Commonists",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        6992,
+        4984
+      ],
+      "dataScattoDichiarata": "2021-05-02 09:45:40",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1189981191,
+      "sha1Originale": "5be331544166d2553cfd528ad577e9b5ff9bccf2"
+    },
+    {
+      "id": "foto-pompei-028b1bd952",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Giardino e porticato della Casa del Menandro",
+      "titoloFonte": "Casa del Menandro, Garden, Pompeii (4970).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Casa_del_Menandro,_Garden,_Pompeii_(4970).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Casa_del_Menandro%2C_Garden%2C_Pompeii_%284970%29.jpg",
+      "autore": "Marco Ober",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5456,
+        3632
+      ],
+      "dataScattoDichiarata": "2020-08-12 13:47:43",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1116266331,
+      "sha1Originale": "39cf94a54130a521e02c0f8cc0eee949d2cdebdd"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

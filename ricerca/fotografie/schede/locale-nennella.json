@@ -1,0 +1,50 @@
+{
+  "tipo": "locale",
+  "id": "nennella",
+  "nome": "Trattoria da Nennella",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Nennella\" filetype:bitmap",
+      "risultatiEsaminati": 5
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Piazza Carità 22",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.trattorianennella.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.trattorianennella.it/",
+        "immagine": "https://www.trattorianennella.it/new/wp-content/uploads/2025/08/pastaepatate.png",
+        "soggettoOsservato": "Pasta e patate presentata sul sito",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.trattorianennella.it/",
+        "immagine": "https://www.trattorianennella.it/new/wp-content/uploads/2025/08/Centrale.jpg",
+        "soggettoOsservato": "Sala della sede di piazza Carità",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.trattorianennella.it/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

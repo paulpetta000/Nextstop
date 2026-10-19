@@ -1,0 +1,64 @@
+{
+  "tipo": "tappa",
+  "id": "via-petrarca",
+  "nome": "Il belvedere di via Petrarca",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Via Petrarca\" Napoli filetype:bitmap",
+      "risultatiEsaminati": 3
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-via-petrarca-bbb7234eaf",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Costone tufaceo e case visti da via Petrarca",
+      "titoloFonte": "Napoli Yellow Tuff 6839.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_Yellow_Tuff_6839.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Napoli_Yellow_Tuff_6839.JPG",
+      "autore": "yiftah-s",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2592,
+        3872
+      ],
+      "dataScattoDichiarata": "2010-11-09 12:38:46",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1130950856,
+      "sha1Originale": "a0297e836bcb84d04e61be980bc2ee7daabf627e"
+    },
+    {
+      "id": "foto-via-petrarca-b449395a68",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Mare e costa di Posillipo da via Petrarca",
+      "titoloFonte": "Da Via Petrarca (3196818901).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Da_Via_Petrarca_(3196818901).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Da_Via_Petrarca_%283196818901%29.jpg",
+      "autore": "Antonio Fucito",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        800,
+        450
+      ],
+      "dataScattoDichiarata": "2009-01-06",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1254270435,
+      "sha1Originale": "d5e11cf0f90d1e3713fa6b12ccdcec6a26afe9fa"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

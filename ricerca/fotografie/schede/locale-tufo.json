@@ -1,0 +1,50 @@
+{
+  "tipo": "locale",
+  "id": "tufo",
+  "nome": "Tufò Trattoria",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Tufò\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via Posillipo 268",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://tufotrattoria.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://tufotrattoria.it/",
+        "immagine": "https://tufotrattoria.it/wp-content/uploads/2025/01/2-IMG_3098-819x1024.jpg",
+        "soggettoOsservato": "Primo piatto",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://tufotrattoria.it/",
+        "immagine": "https://tufotrattoria.it/wp-content/uploads/2025/01/15-IMG_1212-768x960.jpg",
+        "soggettoOsservato": "Sala con tavoli",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://tufotrattoria.it/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

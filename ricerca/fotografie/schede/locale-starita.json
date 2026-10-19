@@ -1,0 +1,51 @@
+{
+  "tipo": "locale",
+  "id": "starita",
+  "nome": "Pizzeria Starita a Materdei",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Starita\" Naples filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via Materdei 27",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://pizzeriestarita.it/dove-siamo/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://pizzeriestarita.it/il-menu/",
+        "immagine": "https://pizzeriestarita.it/wp-content/uploads/2023/02/1_MONTANARA-505x732.png",
+        "soggettoOsservato": "Pizza montanara",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://pizzeriestarita.it/il-menu/",
+        "immagine": "https://pizzeriestarita.it/wp-content/uploads/2023/02/2_MARINARA-505x732.png",
+        "soggettoOsservato": "Pizza marinara",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://pizzeriestarita.it/il-menu/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede."
+}

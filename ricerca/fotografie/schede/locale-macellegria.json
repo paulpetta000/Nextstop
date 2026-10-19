@@ -1,0 +1,31 @@
+{
+  "tipo": "locale",
+  "id": "macellegria",
+  "nome": "Macellegria",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Macellegria\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via Pasquale Formisano 10, Fuorigrotta",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.macellegria.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [],
+    "nota": "Sito e galleria letti; illustrazioni di carne/preparazioni senza autore e senza prova del singolo piatto servito. Richiedere scatti originali del locale, senza presumere che il sito possa sublicenziare eventuali stock."
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

@@ -1,0 +1,72 @@
+{
+  "tipo": "locale",
+  "id": "brandi",
+  "nome": "Pizzeria Brandi",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pizzeria Brandi\" filetype:bitmap",
+      "risultatiEsaminati": 1
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-brandi-541f3984d9",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Targa sulla storia della pizza Margherita alla Pizzeria Brandi",
+      "titoloFonte": "TargaInvenzionePizzaMargheritaDaBrandi.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:TargaInvenzionePizzaMargheritaDaBrandi.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/05/TargaInvenzionePizzaMargheritaDaBrandi.jpg",
+      "autore": "Alessandro57",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3264,
+        1836
+      ],
+      "dataScattoDichiarata": "2019-12-30 16:50:24",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1038767670,
+      "sha1Originale": "8b14dc9f76af5097a9ce2cf744307ad29d108302"
+    }
+  ],
+  "sede": "Salita Sant'Anna di Palazzo 1",
+  "stato": "licenza-libera",
+  "fonteGestore": {
+    "url": "https://pizzeriabrandi.com/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://pizzeriabrandi.com/",
+        "immagine": "https://pizzeriabrandi.com/wp-content/uploads/brandi_000_home07.webp",
+        "soggettoOsservato": "Composizione grafica con pizza",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://pizzeriabrandi.com/",
+        "immagine": "https://pizzeriabrandi.com/wp-content/uploads/brandi_000_home06.webp",
+        "soggettoOsservato": "Veduta della strada davanti al locale",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://pizzeriabrandi.com/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

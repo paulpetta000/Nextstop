@@ -1,0 +1,65 @@
+{
+  "tipo": "tappa",
+  "id": "citta-scienza",
+  "nome": "Città della Scienza",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-citta-scienza",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Città della Scienza\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-citta-scienza-98714dc5a7",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Edificio di Corporea a Città della Scienza",
+      "titoloFonte": "Corporea.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Corporea.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Corporea.jpg",
+      "autore": "Vichingpedia",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1050,
+        681
+      ],
+      "dataScattoDichiarata": "2017-04-07 19:28:57",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 868635989,
+      "sha1Originale": "bb4c370ae35ee0b944b0bc8e472959b6790200ed"
+    },
+    {
+      "id": "foto-citta-scienza-aa077909f0",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Spazi esterni intorno a Corporea",
+      "titoloFonte": "CORPOREA Città della Scienza, Bagnoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:CORPOREA_Citt%C3%A0_della_Scienza,_Bagnoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/8a/CORPOREA_Citt%C3%A0_della_Scienza%2C_Bagnoli.jpg",
+      "autore": "Photograph: Fabio Donato Prof. Arch. Massimo Pica Ciamarra",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2126,
+        1327
+      ],
+      "dataScattoDichiarata": "2017-03-09 12:42:14",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "creditoRichiesto": "Fabio Donato",
+      "revisioneCommons": 844497672,
+      "sha1Originale": "f96d76d85039df0093d94bf8726c560d6b629cd6"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

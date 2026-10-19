@@ -1,0 +1,99 @@
+{
+  "tipo": "tappa",
+  "id": "capodimonte",
+  "nome": "Museo e Real Bosco di Capodimonte",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-capodimonte",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Museo di Capodimonte\" interior",
+      "risultatiEsaminati": 10
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Capodimonte\" \"sala\" filetype:bitmap",
+      "risultatiEsaminati": 8
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-capodimonte-b2afa05d2d",
+      "soggetto": "interno",
+      "didascaliaProposta": "Vetrine della Sala 14 del Museo di Capodimonte",
+      "titoloFonte": "Sala 14 (Museo di Capodimonte) 001.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sala_14_(Museo_di_Capodimonte)_001.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c8/Sala_14_%28Museo_di_Capodimonte%29_001.JPG",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2945,
+        1969
+      ],
+      "dataScattoDichiarata": "2015-10-01 10:51:42",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 707106693,
+      "sha1Originale": "1f0ac157761cb4510324a9fb62e58a9f7a52c09e"
+    },
+    {
+      "id": "foto-capodimonte-e09f134c3e",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Decorazioni del salottino di porcellana della regina Maria Amalia",
+      "titoloFonte": "Salottino di porcellana della regina amalia, 1757-59 ca. 08.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Salottino_di_porcellana_della_regina_amalia,_1757-59_ca._08.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/da/Salottino_di_porcellana_della_regina_amalia%2C_1757-59_ca._08.JPG",
+      "autore": "Sailko",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        3648,
+        2736
+      ],
+      "dataScattoDichiarata": "2013-11-28 15:01:17",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1178946504,
+      "sha1Originale": "4840f37ba1d09d8bd0d382f6cb6d17729a1449dd"
+    },
+    {
+      "id": "foto-capodimonte-36a8e486b6",
+      "soggetto": "interno",
+      "didascaliaProposta": "Soffitto e lampadario del Salone delle Feste",
+      "titoloFonte": "Salone delle Feste (Reggia di Capodimonte) 010.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Salone_delle_Feste_(Reggia_di_Capodimonte)_010.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/60/Salone_delle_Feste_%28Reggia_di_Capodimonte%29_010.jpg",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2956,
+        1976
+      ],
+      "dataScattoDichiarata": "2015-10-01 12:14:29",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1135365943,
+      "sha1Originale": "392c775fd1472bb0796a533ff5c8cd00533d6e9e"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

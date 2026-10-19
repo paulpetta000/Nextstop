@@ -1,0 +1,98 @@
+{
+  "tipo": "tappa",
+  "id": "purgatorio-ad-arco",
+  "nome": "Purgatorio ad Arco, chiesa e ipogeo",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-purgatorio",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Purgatorio ad Arco\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Purgatorio ad Arco\" Napoli filetype:bitmap",
+      "risultatiEsaminati": 8
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "Titoli esatti trovati nelle pagine Commons e nella galleria Napoli",
+      "risultatiEsaminati": 4
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-purgatorio-ad-arco-c0b513f664",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Teschio in bronzo all'ingresso del Purgatorio ad Arco",
+      "titoloFonte": "Bronze skull at the entrance of the Santa Maria delle Anime del Purgatorio ad Arco Church, Naples, Italy (PPL1-Corrected) julesvernex2.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Bronze_skull_at_the_entrance_of_the_Santa_Maria_delle_Anime_del_Purgatorio_ad_Arco_Church,_Naples,_Italy_(PPL1-Corrected)_julesvernex2.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/94/Bronze_skull_at_the_entrance_of_the_Santa_Maria_delle_Anime_del_Purgatorio_ad_Arco_Church%2C_Naples%2C_Italy_%28PPL1-Corrected%29_julesvernex2.jpg",
+      "autore": "Jules Verne Times Two",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5252,
+        3840
+      ],
+      "dataScattoDichiarata": "2019-09-18 11:19:44",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "creditoRichiesto": "Jules Verne Times Two / www.julesvernex2.com",
+      "revisioneCommons": 1141826876,
+      "sha1Originale": "5461506bd8d0b8a72f15e09922f8dd1b33663cf7"
+    },
+    {
+      "id": "foto-purgatorio-ad-arco-a53b1789bb",
+      "soggetto": "interno",
+      "didascaliaProposta": "Abside della chiesa del Purgatorio ad Arco",
+      "titoloFonte": "PurgatorioArcoNapoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:PurgatorioArcoNapoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d7/PurgatorioArcoNapoli.jpg",
+      "autore": "IlSistemone",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        4320,
+        3240
+      ],
+      "dataScattoDichiarata": "2013-09-21 13:43:03",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1286922794,
+      "sha1Originale": "12767ea30e98b6615023da9f98ba6623dac2eb81"
+    },
+    {
+      "id": "foto-purgatorio-ad-arco-8383e086f3",
+      "soggetto": "interno",
+      "didascaliaProposta": "Ambiente dell'ipogeo del Purgatorio ad Arco",
+      "titoloFonte": "Ipogeo Purgatorio ad Arco.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Ipogeo_Purgatorio_ad_Arco.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/63/Ipogeo_Purgatorio_ad_Arco.jpg",
+      "autore": "No machine-readable author provided. Inviaggiocommons assumed (based on copyright claims).",
+      "licenza": "Public domain",
+      "licenzaUrl": "https://commons.wikimedia.org/wiki/File:Ipogeo_Purgatorio_ad_Arco.jpg#Licensing",
+      "dimensioni": [
+        768,
+        1024
+      ],
+      "dataScattoDichiarata": "3 December 2006 (according to Exif data)",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "autore-desunto"
+      ],
+      "revisioneCommons": 1056455876,
+      "sha1Originale": "2b863ba1492b19b53d6e3243470c65a3dbcf7d65"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

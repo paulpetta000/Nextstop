@@ -1,0 +1,20 @@
+{
+  "segnalazioni": {
+    "bene-culturale": "Verificare con il gestore il regime del bene e l’uso previsto, soprattutto se commerciale. Il copyright fotografico libero non risolve da solo questo punto (fonti mic e specifica dell’ente, se presente).",
+    "opere-contemporanee": "La licenza del fotografo non documenta il permesso degli autori delle opere contemporanee o decorazioni raffigurate; chiarire prima dell’uso.",
+    "sansevero-interno": "Chiarire con fotografo/museo le condizioni delle riprese e del riuso; FAQ odierne vietano fotografare durante la visita, senza dimostrare irregolarità di scatti passati.",
+    "autore-desunto": "La pagina attribuisce l’autore per deduzione dalla vecchia registrazione, non da un campo esplicito. Confermare prima di trattare il credito come definitivo.",
+    "risoluzione-ridotta": "La risorsa disponibile ha meno di 800 px sul lato lungo: utile per valutare il soggetto, debole per ingrandimenti e schermi densi.",
+    "avviso-fonte": "La scheda del file espone un avviso aggiuntivo riportato in avvisoFonte.",
+    "percorso-specifico": "Confermare che spazi e accessi raffigurati appartengano alla visita proposta oggi, senza usare la foto come prova di apertura o accessibilità.",
+    "contesto-parziale": "La fotografia mostra solo un componente della tappa composta o della gita: mantenere la didascalia precisa.",
+    "archivio-menu": "Foto di un piatto scattata anni fa: non dimostra disponibilità o presentazione nel menu corrente."
+  },
+  "stati": {
+    "licenza-libera": "Licenza fotografica libera verificata nella scheda del file; nessuna garanzia generale sui diritti di terzi.",
+    "licenza-libera-con-chiarimenti": "Licenza fotografica libera presente, con segnalazioni specifiche aperte.",
+    "nessuna-candidata-libera": "Nessuna nuova foto libera selezionata in questo giro; non significa che non ne esistano.",
+    "da-autorizzare": "Foto del sito del gestore: manca una licenza libera verificata; non copiarla negli asset del sito.",
+    "fonte-per-richiesta": "Pagina utile per contattare il gestore o richiedere originali; nessuna foto individuale utilizzabile già selezionata."
+  }
+}

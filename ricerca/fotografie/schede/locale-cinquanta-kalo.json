@@ -1,0 +1,35 @@
+{
+  "tipo": "locale",
+  "id": "cinquanta-kalo",
+  "nome": "50 Kalò",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"50 Kalò\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Piazza Sannazaro 201b",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://50kalo.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [],
+    "limiteAccesso": "HTTP Error 403: Forbidden",
+    "galleria": "https://50kalo.it/gallery.php",
+    "canaleLettura": "ricerca-web",
+    "nota": "Galleria con sezioni di più città e download: verificare le immagini della sola sede Sannazaro. Nessuna licenza libera accertata."
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede."
+}

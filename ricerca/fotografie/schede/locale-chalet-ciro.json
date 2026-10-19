@@ -1,0 +1,51 @@
+{
+  "tipo": "locale",
+  "id": "chalet-ciro",
+  "nome": "Chalet Ciro",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Chalet Ciro\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via Caracciolo, Mergellina",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.chaletciro1952.com/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.chaletciro1952.com/",
+        "immagine": "https://www.chaletciro1952.com/wp-content/uploads/2021/10/Chalet-Ciro-1952-graffe-fritte.png",
+        "soggettoOsservato": "Graffe",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.chaletciro1952.com/",
+        "immagine": "https://www.chaletciro1952.com/wp-content/uploads/2021/10/Chalet-Ciro-1952-sfogliatella-riccia.png",
+        "soggettoOsservato": "Sfogliatella riccia",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.chaletciro1952.com/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede."
+}

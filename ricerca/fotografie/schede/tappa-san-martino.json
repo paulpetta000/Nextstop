@@ -1,0 +1,64 @@
+{
+  "tipo": "tappa",
+  "id": "san-martino",
+  "nome": "Certosa e Museo di San Martino",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-san-martino",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Certosa\" \"San Martino\" cloister",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-san-martino-f1c9d42468",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Chiostro grande della Certosa di San Martino",
+      "titoloFonte": "Il chiostro grande del Dosio a dicembre Certosa di San Martino Napoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Il_chiostro_grande_del_Dosio_a_dicembre_Certosa_di_San_Martino_Napoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Il_chiostro_grande_del_Dosio_a_dicembre_Certosa_di_San_Martino_Napoli.jpg",
+      "autore": "Tremej",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4032,
+        3024
+      ],
+      "dataScattoDichiarata": "2019-12-31 13:27:20",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ]
+    },
+    {
+      "id": "foto-san-martino-2944327a3a",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Porticato del chiostro grande",
+      "titoloFonte": "San Martino (Naples) - Main cloister - 12.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Martino_(Naples)_-_Main_cloister_-_12.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/dc/San_Martino_%28Naples%29_-_Main_cloister_-_12.jpg",
+      "autore": "Superchilum",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3888,
+        5184
+      ],
+      "dataScattoDichiarata": "2026-05-31 10:27:27",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

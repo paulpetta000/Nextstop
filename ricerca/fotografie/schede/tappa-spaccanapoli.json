@@ -1,0 +1,85 @@
+{
+  "tipo": "tappa",
+  "id": "spaccanapoli",
+  "nome": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-spaccanapoli",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"San Gregorio Armeno\" Naples",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-spaccanapoli-0224977731",
+      "soggetto": "interno",
+      "didascaliaProposta": "Cappella dell'Idria nel complesso di San Gregorio Armeno",
+      "titoloFonte": "Cappella di santa Maria dell'Idria - Napoli - Chiostro di San Gregorio Armeno 2009.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cappella_di_santa_Maria_dell%27Idria_-_Napoli_-_Chiostro_di_San_Gregorio_Armeno_2009.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Cappella_di_santa_Maria_dell%27Idria_-_Napoli_-_Chiostro_di_San_Gregorio_Armeno_2009.jpg",
+      "autore": "Armando Mancini",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        2717,
+        3623
+      ],
+      "dataScattoDichiarata": "2009-11-22 12:05:04",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ]
+    },
+    {
+      "id": "foto-spaccanapoli-1c55a08152",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Decorazione a maiolica nel complesso di San Gregorio Armeno",
+      "titoloFonte": "San Gregorio Armeno - interior (Naples) (19553929452).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Gregorio_Armeno_-_interior_(Naples)_(19553929452).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0d/San_Gregorio_Armeno_-_interior_%28Naples%29_%2819553929452%29.jpg",
+      "autore": "ho visto nina volare from Italy",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        4000,
+        3000
+      ],
+      "dataScattoDichiarata": "2015-05-15 10:04",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ]
+    },
+    {
+      "id": "foto-spaccanapoli-e448166e78",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Chiostro di San Gregorio Armeno",
+      "titoloFonte": "San Gregorio Armeno's cloister (Naples) (18911488774).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Gregorio_Armeno%27s_cloister_(Naples)_(18911488774).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/75/San_Gregorio_Armeno%27s_cloister_%28Naples%29_%2818911488774%29.jpg",
+      "autore": "ho visto nina volare from Italy",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3000,
+        4000
+      ],
+      "dataScattoDichiarata": "2015-05-15 09:40",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

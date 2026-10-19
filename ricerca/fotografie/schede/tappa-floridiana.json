@@ -1,0 +1,90 @@
+{
+  "tipo": "tappa",
+  "id": "floridiana",
+  "nome": "Villa Floridiana e il museo della ceramica",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "floridiana-viale",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Museo\" \"Duca di Martina\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-floridiana-e8f4bf2f2a",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Facciata della Villa Floridiana",
+      "titoloFonte": "Villa floridiana02.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Villa_floridiana02.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/b0/Villa_floridiana02.jpg",
+      "autore": "http://www.everyfoto.com",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2048,
+        1536
+      ],
+      "dataScattoDichiarata": "2008-03-08",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "avviso-fonte",
+        "contesto-parziale"
+      ],
+      "avvisoFonte": "ita-mibac"
+    },
+    {
+      "id": "foto-floridiana-e1344152b7",
+      "soggetto": "collezione",
+      "didascaliaProposta": "Tabacchiera settecentesca nella collezione Duca di Martina",
+      "titoloFonte": "Tabacchira con scena campestre con figure - Manifattura Du Paquier 1740 - Museo Duca di Martina di Napoli.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Tabacchira_con_scena_campestre_con_figure_-_Manifattura_Du_Paquier_1740_-_Museo_Duca_di_Martina_di_Napoli.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Tabacchira_con_scena_campestre_con_figure_-_Manifattura_Du_Paquier_1740_-_Museo_Duca_di_Martina_di_Napoli.JPG",
+      "autore": "Dispe",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        3264,
+        2448
+      ],
+      "dataScattoDichiarata": "2015-08-12 21:02:35",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "contesto-parziale"
+      ]
+    },
+    {
+      "id": "foto-floridiana-04489b70b1",
+      "soggetto": "interno",
+      "didascaliaProposta": "Sala con vetrine del Museo Duca di Martina",
+      "titoloFonte": "MUSEO DUCA DI MARTINA - LA FLORIDIANA .jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:MUSEO_DUCA_DI_MARTINA_-_LA_FLORIDIANA_.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/25/MUSEO_DUCA_DI_MARTINA_-_LA_FLORIDIANA_.jpg",
+      "autore": "AnnalisaIM",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1210,
+        809
+      ],
+      "dataScattoDichiarata": "2021-04-26",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "contesto-parziale"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

@@ -1,0 +1,50 @@
+{
+  "tipo": "locale",
+  "id": "pignatelli",
+  "nome": "Ostaria Pignatelli",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Ostaria Pignatelli\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Riviera di Chiaia 216",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.ostariapignatelli.com/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.ostariapignatelli.com/",
+        "immagine": "https://www.ostariapignatelli.com/wp-content/uploads/2020/10/Ostaria-Pignatelli-web-design-home-page-antipasti-new-1.png",
+        "soggettoOsservato": "Antipasto con mozzarella e verdure",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.ostariapignatelli.com/",
+        "immagine": "https://www.ostariapignatelli.com/wp-content/uploads/2020/10/Ostaria-Pignatelli-web-design-home-page-primi-new-1.png",
+        "soggettoOsservato": "Piatto di polpo",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.ostariapignatelli.com/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

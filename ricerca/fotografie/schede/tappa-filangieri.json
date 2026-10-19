@@ -1,0 +1,85 @@
+{
+  "tipo": "tappa",
+  "id": "filangieri",
+  "nome": "Museo Filangieri",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-filangieri",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Museo Filangieri\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-filangieri-8e74f60068",
+      "soggetto": "collezione",
+      "didascaliaProposta": "Vetrina con armi al Museo Filangieri",
+      "titoloFonte": "Napoli - Museo Gaetano Filangieri 5846.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Museo_Gaetano_Filangieri_5846.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Napoli_-_Museo_Gaetano_Filangieri_5846.jpg",
+      "autore": "Phyrexian",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3712,
+        5568
+      ],
+      "dataScattoDichiarata": "Taken on 13 June 2025",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1263584181,
+      "sha1Originale": "0adb3bd6646f39bede16e6638e8c0d4e826bd9d5"
+    },
+    {
+      "id": "foto-filangieri-904fd665e2",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Mattonella con stemma del museo",
+      "titoloFonte": "Museo filangieri, mattonelle con imprese araldiche e stemmi, opera dell'istituto d'arte di na, 1882, 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_filangieri,_mattonelle_con_imprese_araldiche_e_stemmi,_opera_dell%27istituto_d%27arte_di_na,_1882,_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Museo_filangieri%2C_mattonelle_con_imprese_araldiche_e_stemmi%2C_opera_dell%27istituto_d%27arte_di_na%2C_1882%2C_01.jpg",
+      "autore": "Francesco Bini",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3414,
+        3360
+      ],
+      "dataScattoDichiarata": "2021-12-20 16:23:40",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1278899467,
+      "sha1Originale": "be236464dcddebcb6a486bbeb10402a642d7ba25"
+    },
+    {
+      "id": "foto-filangieri-0f4008a476",
+      "soggetto": "collezione",
+      "didascaliaProposta": "Balaustra con trofei d'armi nella Sala Agata",
+      "titoloFonte": "Museo filangieri, sala superiore o sala agata, balaustra con trofei d'armi 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_filangieri,_sala_superiore_o_sala_agata,_balaustra_con_trofei_d%27armi_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/13/Museo_filangieri%2C_sala_superiore_o_sala_agata%2C_balaustra_con_trofei_d%27armi_01.jpg",
+      "autore": "Francesco Bini",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4536,
+        2880
+      ],
+      "dataScattoDichiarata": "2021-12-20 15:53:32",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1067629411,
+      "sha1Originale": "13e5eac77acfbc6065dd06c265d19b23c6b5e6e1"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

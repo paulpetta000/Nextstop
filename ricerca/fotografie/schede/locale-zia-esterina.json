@@ -1,0 +1,31 @@
+{
+  "tipo": "locale",
+  "id": "zia-esterina",
+  "nome": "Antica Pizza Fritta da Zia Esterina Sorbillo",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Zia Esterina\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Piazza Trieste e Trento 53",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.sorbillo.it/antica-pizza-fritta-da-zia-esterina-sorbillo/",
+    "stato": "pagina-generica",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [],
+    "nota": "La pagina richiesta restituisce contenuti generali Sorbillo; non attribuire automaticamente queste foto alla pizza fritta o alla sede Trieste e Trento."
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

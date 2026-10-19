@@ -1,0 +1,50 @@
+{
+  "tipo": "locale",
+  "id": "caffettiera",
+  "nome": "Gran Caffè La Caffettiera",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Gran Caffè La Caffettiera\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Piazza dei Martiri 26",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.grancaffelacaffettiera.com/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.grancaffelacaffettiera.com/",
+        "immagine": "https://images.squarespace-cdn.com/content/v1/5fc911874476a42026f8f500/fe2c300e-28b4-474c-bb11-77d9362746e7/27102021-_TTA2530.jpg",
+        "soggettoOsservato": "Ingresso del Gran Caffè La Caffettiera",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.grancaffelacaffettiera.com/",
+        "immagine": "https://images.squarespace-cdn.com/content/v1/5fc911874476a42026f8f500/1609235284281-EFQ7XV1KT608OJUTADIR/15052019-0I9A3441.jpg",
+        "soggettoOsservato": "Bevanda con accompagnamento",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.grancaffelacaffettiera.com/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

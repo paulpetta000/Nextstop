@@ -1,0 +1,109 @@
+{
+  "tipo": "locale",
+  "id": "chitarra",
+  "nome": "Osteria La Chitarra",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Osteria La Chitarra\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-chitarra-a124fa5309",
+      "soggetto": "piatto",
+      "didascaliaProposta": "Zuppa di fagioli alla maruzzara fotografata alla Chitarra nel 2016",
+      "titoloFonte": "Zuppa di fagioli alla maruzzara.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Zuppa_di_fagioli_alla_maruzzara.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/3f/Zuppa_di_fagioli_alla_maruzzara.jpg",
+      "autore": "Nemo bis",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        4608,
+        3456
+      ],
+      "dataScattoDichiarata": "2016-07-05 22:10:29",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "archivio-menu"
+      ],
+      "revisioneCommons": 1220141401,
+      "sha1Originale": "615f10d11fcfad0a1bdb574e552482b090a6f369"
+    },
+    {
+      "id": "foto-chitarra-44c15d8401",
+      "soggetto": "piatto",
+      "didascaliaProposta": "Fusilli di pasta fresca fotografati alla Chitarra nel 2016",
+      "titoloFonte": "Fusilli di pasta fresca, Napoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Fusilli_di_pasta_fresca,_Napoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Fusilli_di_pasta_fresca%2C_Napoli.jpg",
+      "autore": "Nemo bis",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        4608,
+        3456
+      ],
+      "dataScattoDichiarata": "2016-07-05 22:10:48",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "archivio-menu"
+      ],
+      "revisioneCommons": 1254259274,
+      "sha1Originale": "8dbcd87956d46efede6e5b15d4c5c2156a9718c5"
+    },
+    {
+      "id": "foto-chitarra-a569628a72",
+      "soggetto": "interno",
+      "didascaliaProposta": "Sala dell'Osteria La Chitarra",
+      "titoloFonte": "Osteria la Chitarra, Naples.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Osteria_la_Chitarra,_Naples.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/8f/Osteria_la_Chitarra%2C_Naples.jpg",
+      "autore": "Nemo bis",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        4608,
+        3456
+      ],
+      "dataScattoDichiarata": "2016-07-01 20:58:13",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1206941005,
+      "sha1Originale": "db4eb2fbc273a59175d0dfa6e6f4eb0341a9fa68"
+    }
+  ],
+  "sede": "Rampe San Giovanni Maggiore 1b",
+  "stato": "licenza-libera-con-chiarimenti",
+  "fonteGestore": {
+    "url": "https://www.osterialachitarra.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.osterialachitarra.it/",
+        "immagine": "https://www.osterialachitarra.it/wp-content/uploads/2022/01/laterale-1.jpg",
+        "soggettoOsservato": "Piatto fotografato sul sito del locale",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.osterialachitarra.it/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

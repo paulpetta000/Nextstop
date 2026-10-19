@@ -1,0 +1,41 @@
+{
+  "tipo": "tappa",
+  "id": "monte-echia",
+  "nome": "Monte Echia, il belvedere di Pizzofalcone",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "vista-monte-echia",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Monte Echia\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-monte-echia-06a67d9495",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Vicolo e rampe ai piedi di Monte Echia",
+      "titoloFonte": "Napoli - Flickr - boklm (9).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Flickr_-_boklm_(9).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Napoli_-_Flickr_-_boklm_%289%29.jpg",
+      "autore": "Nicolas Vigier from Madrid, Spain",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        3405,
+        3404
+      ],
+      "dataScattoDichiarata": null,
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

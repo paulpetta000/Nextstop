@@ -1,0 +1,80 @@
+{
+  "tipo": "tappa",
+  "id": "santa-chiara",
+  "nome": "Santa Chiara e il chiostro maiolicato",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-santa-chiara",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Santa Chiara\" \"Naples\" cloister",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-santa-chiara-c236b9e62f",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Chiostro maiolicato, colonne e giardino",
+      "titoloFonte": "Cloister of the Clarisses, Santa Chiara (Naples) 04.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cloister_of_the_Clarisses,_Santa_Chiara_(Naples)_04.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Cloister_of_the_Clarisses%2C_Santa_Chiara_%28Naples%29_04.jpg",
+      "autore": "Bernard Gagnon",
+      "licenza": "CC BY 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dimensioni": [
+        2848,
+        3355
+      ],
+      "dataScattoDichiarata": "2022-04-23",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    },
+    {
+      "id": "foto-santa-chiara-b61367fb3e",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Colonne e sedute rivestite di maioliche",
+      "titoloFonte": "Tile decorated columns - Cloister of Santa Chiara - Naples -Italy 2015 (3).JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Tile_decorated_columns_-_Cloister_of_Santa_Chiara_-_Naples_-Italy_2015_(3).JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/da/Tile_decorated_columns_-_Cloister_of_Santa_Chiara_-_Naples_-Italy_2015_%283%29.JPG",
+      "autore": "José Luiz",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3069,
+        2043
+      ],
+      "dataScattoDichiarata": "2015-02-03 16:49:32",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "creditoRichiesto": "© José Luiz Bernardes Ribeiro"
+    },
+    {
+      "id": "foto-santa-chiara-d01b6d8cf4",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Porticato affrescato del chiostro",
+      "titoloFonte": "Santa Chiara (Naples) – cloister – ambulatory and garden.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Santa_Chiara_(Naples)_%E2%80%93_cloister_%E2%80%93_ambulatory_and_garden.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Santa_Chiara_%28Naples%29_%E2%80%93_cloister_%E2%80%93_ambulatory_and_garden.jpg",
+      "autore": "Punteador",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4032,
+        3024
+      ],
+      "dataScattoDichiarata": "2026-10-09",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

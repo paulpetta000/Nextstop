@@ -1,0 +1,91 @@
+{
+  "tipo": "tappa",
+  "id": "ercolano",
+  "nome": "Ercolano",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-ercolano",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Herculaneum\" \"Neptune\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-ercolano-bcc984a0da",
+      "soggetto": "collezione",
+      "didascaliaProposta": "Ninfeo della Casa di Nettuno e Anfitrite a Ercolano",
+      "titoloFonte": "Herculanum (28472572434).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Herculanum_(28472572434).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Herculanum_%2828472572434%29.jpg",
+      "autore": "sébastien amiet;l",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        3264,
+        2448
+      ],
+      "dataScattoDichiarata": "2016-08-19 13:06",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1008033563,
+      "sha1Originale": "0898885012776f55864dd764d85a1a3307b5f2ad"
+    },
+    {
+      "id": "foto-ercolano-278671a2c4",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Mosaico con Nettuno e Anfitrite",
+      "titoloFonte": "Herculaneum — House of Neptune and Amphitrite (14918889472).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Herculaneum_%E2%80%94_House_of_Neptune_and_Amphitrite_(14918889472).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Herculaneum_%E2%80%94_House_of_Neptune_and_Amphitrite_%2814918889472%29.jpg",
+      "autore": "Amphipolis",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3984,
+        3336
+      ],
+      "dataScattoDichiarata": "2014-06-22 08:07",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1007728990,
+      "sha1Originale": "c3ea7eb03a772c8bc91c598d968a4ca6666333d3"
+    },
+    {
+      "id": "foto-ercolano-5d439883a3",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Testa decorativa nella Casa di Nettuno e Anfitrite",
+      "titoloFonte": "Casa di Nettuno e Anfitrite (Herculaneum) 02.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Casa_di_Nettuno_e_Anfitrite_(Herculaneum)_02.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/42/Casa_di_Nettuno_e_Anfitrite_%28Herculaneum%29_02.jpg",
+      "autore": "Bernard Gagnon",
+      "licenza": "CC BY 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dimensioni": [
+        3514,
+        2343
+      ],
+      "dataScattoDichiarata": "2022-04-24",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1116291680,
+      "sha1Originale": "948d3dbe6abf22a029fb92444444337758911d31"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

@@ -1,0 +1,69 @@
+{
+  "tipo": "tappa",
+  "id": "mercato-porta-nolana",
+  "nome": "Il mercato di Porta Nolana",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-porta-nolana",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Porta Nolana\" market filetype:bitmap",
+      "risultatiEsaminati": 1
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "incategory:\"Porta Nolana (Naples)\" filetype:bitmap",
+      "risultatiEsaminati": 8
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-mercato-porta-nolana-7939f41f53",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Porta Nolana all'ingresso della zona del mercato",
+      "titoloFonte": "Porta Nolana, Napoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Porta_Nolana,_Napoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/43/Porta_Nolana%2C_Napoli.jpg",
+      "autore": "Sergioizzo",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2432,
+        1574
+      ],
+      "dataScattoDichiarata": "2016-06-16",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1093537742,
+      "sha1Originale": "f37c0e16b4c34a1f59acb5da54e8be04b4f9eae4"
+    },
+    {
+      "id": "foto-mercato-porta-nolana-e96be5cacc",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Torre di Porta Nolana",
+      "titoloFonte": "Porta Nolana, torre.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Porta_Nolana,_torre.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/47/Porta_Nolana%2C_torre.jpg",
+      "autore": "Lhoon from Flickr",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        2848,
+        2136
+      ],
+      "dataScattoDichiarata": "2009-01-24",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1270666054,
+      "sha1Originale": "caa54360072b11ef0111a2ceb4e2ab796ce4a1a7"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

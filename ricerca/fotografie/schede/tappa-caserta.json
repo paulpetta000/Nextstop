@@ -1,0 +1,91 @@
+{
+  "tipo": "tappa",
+  "id": "caserta",
+  "nome": "Reggia di Caserta",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-caserta",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Royal Palace of Caserta\" interior filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-caserta-875c2b144d",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Decorazione di una volta della Reggia di Caserta",
+      "titoloFonte": "Caserta Otoño 20.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Caserta_Oto%C3%B1o_20.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d9/Caserta_Oto%C3%B1o_20.jpg",
+      "autore": "Miguel Hermoso Cuesta",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5184,
+        3170
+      ],
+      "dataScattoDichiarata": "2014-06-12 18:09:31",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1116556596,
+      "sha1Originale": "d4a6a768de364c6057704e4687bb14157f3af19a"
+    },
+    {
+      "id": "foto-caserta-2526be3047",
+      "soggetto": "interno",
+      "didascaliaProposta": "Prospettiva delle sale della Reggia",
+      "titoloFonte": "Caserta 1000 35.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Caserta_1000_35.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Caserta_1000_35.jpg",
+      "autore": "FrDr",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3648,
+        5472
+      ],
+      "dataScattoDichiarata": "2018-07-15 12:25:13",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1116554124,
+      "sha1Originale": "ebfab217ef7b565b394b1ef1a15384ba51035497"
+    },
+    {
+      "id": "foto-caserta-d2f6370c1e",
+      "soggetto": "interno",
+      "didascaliaProposta": "Vestibolo con colonne della Reggia di Caserta",
+      "titoloFonte": "Caserta (19177355836).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Caserta_(19177355836).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/45/Caserta_%2819177355836%29.jpg",
+      "autore": "ho visto nina volare from Italy",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3000,
+        4000
+      ],
+      "dataScattoDichiarata": "2015-05-21 08:38",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1093096166,
+      "sha1Originale": "3aab8417277b39f40b73014fdfa066dcf15911b1"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

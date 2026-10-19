@@ -1,0 +1,65 @@
+{
+  "controllato": "2026-10-19",
+  "fonti": {
+    "cc-by": {
+      "url": "https://creativecommons.org/licenses/by/4.0/deed.it",
+      "esito": "Attribuzione, collegamento alla licenza e indicazione delle modifiche; diritti di terzi esclusi dalla garanzia."
+    },
+    "cc-by-sa": {
+      "url": "https://creativecommons.org/licenses/by-sa/4.0/deed.it",
+      "esito": "Per gli adattamenti della foto conservare la licenza richiesta. Questo non estende automaticamente la licenza al codice del sito."
+    },
+    "commons-riuso": {
+      "url": "https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia",
+      "esito": "Controllare la singola pagina del file e le altre limitazioni; la disponibilità in Commons non è una garanzia generale."
+    },
+    "mic": {
+      "url": "https://trasparenza.cultura.gov.it/archivio5_modulistica_0_199.html",
+      "esito": "Per usi diversi da quelli liberi previsti, inclusi usi commerciali, verificare autorizzazione e possibile canone con l’istituto; distinguere diritto fotografico e uso del bene."
+    },
+    "mann": {
+      "url": "https://www.museoarcheologiconapoli.it/mann/uploads/2025/08/Image-reproduction-and-use-request-form_2024.pdf",
+      "esito": "Modulo per uso delle immagini anche web, anche se già possedute. Contatto indicato: man-na@cultura.gov.it."
+    },
+    "pompei": {
+      "url": "https://pompeiisites.org/parco-archeologico-di-pompei/autorizzazioni-e-modulistica/",
+      "esito": "Procedura specifica per immagini e riprese; verificare uso concreto e casi di esenzione. Non confondere una nuova sessione fotografica con il riuso di uno scatto esistente."
+    },
+    "sansevero": {
+      "url": "https://www.museosansevero.it/organizza-la-tua-visita/faq",
+      "esito": "FAQ: oggi le riprese durante la visita sono vietate. Il divieto non prova che una vecchia foto sia illecita: chiarire provenienza e condizioni degli interni. Ufficio stampa: press@museosansevero.it."
+    },
+    "caserta": {
+      "url": "https://reggiadicaserta.cultura.gov.it/contatti/",
+      "esito": "Ufficio concessioni e contatti per verificare l’uso previsto delle immagini della Reggia. Non è un’autorizzazione già ottenuta."
+    },
+    "capodimonte": {
+      "url": "https://acc-capodimonte.cultura.gov.it/riprese-fotografiche-e-video/",
+      "esito": "Procedura di riproduzione rintracciata nel sito istituzionale, lettura diretta intermittente: riconfermare versione corrente con il museo."
+    },
+    "tetti-duomo": {
+      "url": "https://muddnapoli.it/luoghi/visita-tetti-duomo/",
+      "esito": "Pagina ufficiale del percorso sui tetti, letta via ricerca web; richiesta diretta dal cloud 403. Non confondere con panorami da Santa Maria dei Vergini."
+    },
+    "parco-mascagna": {
+      "url": "https://static-www.comune.napoli.it/wp-content/uploads/2025/09/CittaComune_Speciale_Verde_urbano.pdf?mode=download",
+      "esito": "Pubblicazione comunale sul verde con immagini, rintracciata nell’indice web: fonte per richiedere originali e credito. Licenza delle fotografie non accertata."
+    },
+    "50-kalo": {
+      "url": "https://50kalo.it/gallery.php",
+      "esito": "Galleria letta via ricerca web, con sezioni Napoli/Roma/Londra e download. Download non equivale a licenza libera; isolare la sede Sannazaro."
+    },
+    "pintauro-flickr": {
+      "url": "https://www.flickr.com/photos/bautisterias/16459398327/",
+      "esito": "Foto di Iggi Falcon, titolo Pintauro/Sfogliatella. Pagina letta, campo della singola foto license=0 (tutti i diritti riservati). La presenza nel codice dell’elenco generale delle licenze CC non autorizza questa foto."
+    },
+    "bellavia-prodotti": {
+      "url": "https://www.bellaviavomero.it/le-specialit%C3%A0",
+      "esito": "Pagina della Bellavia di via Luca Giordano/Pozzuoli, diversa da Vincenzo Bellavia; foto di dolci senza licenza libera individuata."
+    },
+    "starita-menu": {
+      "url": "https://pizzeriestarita.it/il-menu/",
+      "esito": "Foto di pizze del marchio; richiedere file originali e conferma per la sede Materdei. Le schede delle sedi sono composizioni grafiche."
+    }
+  }
+}

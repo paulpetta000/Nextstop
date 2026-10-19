@@ -1,0 +1,41 @@
+{
+  "tipo": "locale",
+  "id": "di-matteo",
+  "nome": "Antica Pizzeria Di Matteo",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pizzeria Di Matteo\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via dei Tribunali 94",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://anticapizzeriadimatteo.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://anticapizzeriadimatteo.it/",
+        "immagine": "https://anticapizzeriadimatteo.it/wp-content/uploads/2022/07/margherita.png",
+        "soggettoOsservato": "Pizza margherita scontornata",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://anticapizzeriadimatteo.it/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

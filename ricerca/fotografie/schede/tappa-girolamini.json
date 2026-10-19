@@ -1,0 +1,94 @@
+{
+  "tipo": "tappa",
+  "id": "girolamini",
+  "nome": "Girolamini, chiesa, museo e biblioteca",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-girolamini",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Girolamini\" interior filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-girolamini-f9a42b7f48",
+      "soggetto": "interno",
+      "didascaliaProposta": "Altare laterale della chiesa dei Girolamini",
+      "titoloFonte": "San Filippo Neri dei Girolamini (Naples) - Interior 09.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Filippo_Neri_dei_Girolamini_(Naples)_-_Interior_09.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/e1/San_Filippo_Neri_dei_Girolamini_%28Naples%29_-_Interior_09.jpg",
+      "autore": "Carlo Dell'Orto",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3072,
+        4096
+      ],
+      "dataScattoDichiarata": "2024-11-19 11:06:05",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1008858953,
+      "sha1Originale": "8c6569038638cfa0e628bd6e67d204d6d4b6d35b"
+    },
+    {
+      "id": "foto-girolamini-bd0c893528",
+      "soggetto": "interno",
+      "didascaliaProposta": "Navata centrale e colonne dei Girolamini",
+      "titoloFonte": "San Filippo Neri dei Girolamini (Naples) - Interior 20.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Filippo_Neri_dei_Girolamini_(Naples)_-_Interior_20.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/ae/San_Filippo_Neri_dei_Girolamini_%28Naples%29_-_Interior_20.jpg",
+      "autore": "Carlo Dell'Orto",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4096,
+        3072
+      ],
+      "dataScattoDichiarata": "2024-11-19 11:24:03",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1008859435,
+      "sha1Originale": "bafbb6ee77262c5f9c7bec7b8df326bdc03ef4b7"
+    },
+    {
+      "id": "foto-girolamini-9d946c7d9a",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Portale interno nella chiesa dei Girolamini",
+      "titoloFonte": "San Filippo Neri dei Girolamini (Naples) - Interior 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Filippo_Neri_dei_Girolamini_(Naples)_-_Interior_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/07/San_Filippo_Neri_dei_Girolamini_%28Naples%29_-_Interior_01.jpg",
+      "autore": "Carlo Dell'Orto",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3072,
+        4096
+      ],
+      "dataScattoDichiarata": "2024-11-19 10:48:33",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1008858736,
+      "sha1Originale": "80b37687618f2d7f6bf1922b10abfd251d3aca48"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

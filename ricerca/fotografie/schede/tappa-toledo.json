@@ -1,0 +1,88 @@
+{
+  "tipo": "tappa",
+  "id": "toledo",
+  "nome": "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-toledo",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Toledo\" \"Naples Metro\"",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-toledo-c31e8e0811",
+      "soggetto": "interno",
+      "didascaliaProposta": "Scale mobili e soffitto blu della stazione Toledo",
+      "titoloFonte": "Toledo (Metropolitana di Napoli L1).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Toledo_(Metropolitana_di_Napoli_L1).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/67/Toledo_%28Metropolitana_di_Napoli_L1%29.jpg",
+      "autore": "Zaiar95",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        986,
+        660
+      ],
+      "dataScattoDichiarata": "2024-08-18",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee",
+        "contesto-parziale"
+      ]
+    },
+    {
+      "id": "foto-toledo-bc77115732",
+      "soggetto": "interno",
+      "didascaliaProposta": "Ambiente della stazione Toledo con viaggiatori",
+      "titoloFonte": "Toledo Station Mezzanine 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Toledo_Station_Mezzanine_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/3a/Toledo_Station_Mezzanine_01.jpg",
+      "autore": "Mint0ri",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        5472,
+        3080
+      ],
+      "dataScattoDichiarata": "2024-05-09 23:22:29",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee",
+        "contesto-parziale"
+      ]
+    },
+    {
+      "id": "foto-toledo-80f275c062",
+      "soggetto": "interno",
+      "didascaliaProposta": "Banchina e treno nella stazione Toledo",
+      "titoloFonte": "Toledo Station Platform 03.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Toledo_Station_Platform_03.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Toledo_Station_Platform_03.jpg",
+      "autore": "Mint0ri",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        5472,
+        3080
+      ],
+      "dataScattoDichiarata": "2024-05-09 23:20:44",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee",
+        "contesto-parziale"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

@@ -1,0 +1,79 @@
+{
+  "tipo": "tappa",
+  "id": "fontanelle",
+  "nome": "Cimitero delle Fontanelle",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-fontanelle",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Fontanelle cemetery\"",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-fontanelle-5ae49bb0bd",
+      "soggetto": "interno",
+      "didascaliaProposta": "Edicola all'interno del Cimitero delle Fontanelle",
+      "titoloFonte": "Cimitero delle Fontanelle 004.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cimitero_delle_Fontanelle_004.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Cimitero_delle_Fontanelle_004.JPG",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2992,
+        2000
+      ],
+      "dataScattoDichiarata": "2015-03-08 13:57:00",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    },
+    {
+      "id": "foto-fontanelle-52a3263a1b",
+      "soggetto": "interno",
+      "didascaliaProposta": "Grande cavità del Cimitero delle Fontanelle",
+      "titoloFonte": "Cimitero delle Fontanelle - DM - 001.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cimitero_delle_Fontanelle_-_DM_-_001.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Cimitero_delle_Fontanelle_-_DM_-_001.jpg",
+      "autore": "Dominik Matus",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        6016,
+        4000
+      ],
+      "dataScattoDichiarata": "2017-02-26 10:24:36",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    },
+    {
+      "id": "foto-fontanelle-a79f681da6",
+      "soggetto": "interno",
+      "didascaliaProposta": "Percorso fra le cavità del cimitero",
+      "titoloFonte": "Cimitero delle Fontanelle 002.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cimitero_delle_Fontanelle_002.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Cimitero_delle_Fontanelle_002.JPG",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2992,
+        2000
+      ],
+      "dataScattoDichiarata": "2015-03-08 13:56:17",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

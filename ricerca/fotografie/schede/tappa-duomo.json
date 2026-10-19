@@ -1,0 +1,65 @@
+{
+  "tipo": "tappa",
+  "id": "duomo",
+  "nome": "Duomo e Tesoro di San Gennaro",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-duomo",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Duomo\" \"Naples\" interior",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-duomo-97a7ca5b80",
+      "soggetto": "interno",
+      "didascaliaProposta": "Interno del Duomo, con altare e vetrate",
+      "titoloFonte": "Cathedral (Naples) - Interior 222.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cathedral_(Naples)_-_Interior_222.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Cathedral_%28Naples%29_-_Interior_222.jpg",
+      "autore": "Cruz.croce",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        4080,
+        1884
+      ],
+      "dataScattoDichiarata": "2024",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ]
+    },
+    {
+      "id": "foto-duomo-6c7c9c45a8",
+      "soggetto": "interno",
+      "didascaliaProposta": "Cupola della Cappella di San Gennaro",
+      "titoloFonte": "Dome interior - Cappella di San Gennaro - Duomo - Naples - Italy 2015.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Dome_interior_-_Cappella_di_San_Gennaro_-_Duomo_-_Naples_-_Italy_2015.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/17/Dome_interior_-_Cappella_di_San_Gennaro_-_Duomo_-_Naples_-_Italy_2015.JPG",
+      "autore": "José Luiz",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5184,
+        3456
+      ],
+      "dataScattoDichiarata": "2015-02-05 16:18:11",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "creditoRichiesto": "© José Luiz Bernardes Ribeiro"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

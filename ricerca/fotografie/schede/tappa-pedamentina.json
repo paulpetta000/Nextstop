@@ -1,0 +1,79 @@
+{
+  "tipo": "tappa",
+  "id": "pedamentina",
+  "nome": "La Pedamentina, da San Martino in discesa",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pedamentina\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-pedamentina-7a23f72953",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Gradini della Pedamentina",
+      "titoloFonte": "RampePed.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:RampePed.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/66/RampePed.jpg",
+      "autore": "Silvana Berardelli",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        1955,
+        1368
+      ],
+      "dataScattoDichiarata": "2010-01-16 13:13:28",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    },
+    {
+      "id": "foto-pedamentina-56e91b3431",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Tratto delle scale con case e vegetazione",
+      "titoloFonte": "Pedamentina a San Martino, Naples 20230622 02.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Pedamentina_a_San_Martino,_Naples_20230622_02.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Pedamentina_a_San_Martino%2C_Naples_20230622_02.jpg",
+      "autore": "Argo Navis",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3000,
+        4000
+      ],
+      "dataScattoDichiarata": "2023-06-22 16:06:05",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    },
+    {
+      "id": "foto-pedamentina-879366a3ee",
+      "soggetto": "panorama",
+      "didascaliaProposta": "La città vista dalle rampe della Pedamentina",
+      "titoloFonte": "Pedamentina a San Martino, Naples 20230622 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Pedamentina_a_San_Martino,_Naples_20230622_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Pedamentina_a_San_Martino%2C_Naples_20230622_01.jpg",
+      "autore": "Argo Navis",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4000,
+        3000
+      ],
+      "dataScattoDichiarata": "2023-06-22 16:05:23",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

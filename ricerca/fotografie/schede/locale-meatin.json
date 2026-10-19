@@ -1,0 +1,50 @@
+{
+  "tipo": "locale",
+  "id": "meatin",
+  "nome": "Meatin",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Meatin\" Napoli filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via Timavo 25, angolo corso Europa",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.meatin.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.meatin.it/",
+        "immagine": "https://www.meatin.it/wp-content/uploads/2021/11/piattohome1.png",
+        "soggettoOsservato": "Piatto composto",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.meatin.it/",
+        "immagine": "https://www.meatin.it/wp-content/uploads/2021/11/piattohome2.png",
+        "soggettoOsservato": "Piatto di carne",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.meatin.it/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

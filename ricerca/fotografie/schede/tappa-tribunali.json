@@ -1,0 +1,80 @@
+{
+  "tipo": "tappa",
+  "id": "tribunali",
+  "nome": "Via dei Tribunali: pizza e cibo di strada",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-tribunali",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Via dei Tribunali\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-tribunali-9bc42e936f",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Via dei Tribunali e campanile di San Pietro a Majella",
+      "titoloFonte": "Napoli - Via dei Tribunali e campanile S. Pietro a Majella.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Via_dei_Tribunali_e_campanile_S._Pietro_a_Majella.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Napoli_-_Via_dei_Tribunali_e_campanile_S._Pietro_a_Majella.JPG",
+      "autore": "Luca Aless",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1985,
+        2634
+      ],
+      "dataScattoDichiarata": "2014-07-24 10:36:24",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    },
+    {
+      "id": "foto-tribunali-b4a7a639d2",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Via dei Tribunali all'incrocio con via delle Zite",
+      "titoloFonte": "Via dei tribunali przy via delle zite.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Via_dei_tribunali_przy_via_delle_zite.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/81/Via_dei_tribunali_przy_via_delle_zite.jpg",
+      "autore": "Panek",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4564,
+        3364
+      ],
+      "dataScattoDichiarata": "2023-10-04 14:27:06",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    },
+    {
+      "id": "foto-tribunali-e59359b9f7",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Via dei Tribunali con decorazioni sospese, nel 2023",
+      "titoloFonte": "Via dei Tribunali, Nápoles, Italia, 2023-03-25, DD 103.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Via_dei_Tribunali,_N%C3%A1poles,_Italia,_2023-03-25,_DD_103.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/86/Via_dei_Tribunali%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_103.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        7744,
+        5768
+      ],
+      "dataScattoDichiarata": "2023-03-25 13:59:09",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "creditoRichiesto": "Diego Delso"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

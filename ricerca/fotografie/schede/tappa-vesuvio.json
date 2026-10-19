@@ -1,0 +1,85 @@
+{
+  "tipo": "tappa",
+  "id": "vesuvio",
+  "nome": "Vesuvio, il Gran Cono",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-vesuvio",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Vesuvius\" crater filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-vesuvio-e88cca61ff",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Rocce sul bordo del cratere del Vesuvio",
+      "titoloFonte": "Crater rim volcano Vesuvius - Campania - Italy - July 9th 2013 - 20.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Crater_rim_volcano_Vesuvius_-_Campania_-_Italy_-_July_9th_2013_-_20.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/8e/Crater_rim_volcano_Vesuvius_-_Campania_-_Italy_-_July_9th_2013_-_20.jpg",
+      "autore": "Norbert Nagel",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        3230,
+        5120
+      ],
+      "dataScattoDichiarata": "2013-07-09 11:35:07",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1262559176,
+      "sha1Originale": "c800ced5418b5f2b2e9eb8a0f4993e40ccd15c51"
+    },
+    {
+      "id": "foto-vesuvio-533d2066d8",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Vista dentro il cratere del Vesuvio",
+      "titoloFonte": "Crater Vesuvius.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Crater_Vesuvius.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/41/Crater_Vesuvius.jpg",
+      "autore": "Jebulon",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        3056,
+        4592
+      ],
+      "dataScattoDichiarata": "2015-07-26 18:04:41",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1178337551,
+      "sha1Originale": "53d164b41f02bfa5e3f4585c818732ecf7f4363d"
+    },
+    {
+      "id": "foto-vesuvio-72913c0e2f",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Parete interna e fondo del cratere",
+      "titoloFonte": "Crater rim volcano Vesuvius - Campania - Italy - July 9th 2013 - 08.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Crater_rim_volcano_Vesuvius_-_Campania_-_Italy_-_July_9th_2013_-_08.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/89/Crater_rim_volcano_Vesuvius_-_Campania_-_Italy_-_July_9th_2013_-_08.jpg",
+      "autore": "Norbert Nagel",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        4329,
+        3004
+      ],
+      "dataScattoDichiarata": "2013-07-09 11:18:16",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1262559158,
+      "sha1Originale": "79401b9f413dcfd99195b40babb67284559834de"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

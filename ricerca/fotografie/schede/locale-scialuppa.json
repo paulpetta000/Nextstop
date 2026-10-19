@@ -1,0 +1,50 @@
+{
+  "tipo": "locale",
+  "id": "scialuppa",
+  "nome": "La Scialuppa",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"La Scialuppa\" Napoli filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Piazzetta Marinari 5",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.lascialuppa.net/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.lascialuppa.net/",
+        "immagine": "https://www.lascialuppa.net/wp-content/uploads/2021/05/DSC_0236-scaled.jpg",
+        "soggettoOsservato": "Primo piatto di mare",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.lascialuppa.net/",
+        "immagine": "https://www.lascialuppa.net/wp-content/uploads/2021/05/DSC_9312-1.jpg",
+        "soggettoOsservato": "Porticciolo di Borgo Marinari: veduta di contesto",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.lascialuppa.net/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

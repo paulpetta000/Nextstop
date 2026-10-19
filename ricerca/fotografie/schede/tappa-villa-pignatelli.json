@@ -1,0 +1,91 @@
+{
+  "tipo": "tappa",
+  "id": "villa-pignatelli",
+  "nome": "Villa Pignatelli, museo e giardino",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-villa-pignatelli",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Villa Pignatelli\" interior filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-villa-pignatelli-56c18b65be",
+      "soggetto": "collezione",
+      "didascaliaProposta": "Arredi e scultura nelle sale di Villa Pignatelli",
+      "titoloFonte": "Museo Diego Aragona Pignatelli Cortes. (4055) .jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_Diego_Aragona_Pignatelli_Cortes._(4055)_.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/66/Museo_Diego_Aragona_Pignatelli_Cortes._%284055%29_.jpg",
+      "autore": "Giuseppe Guida",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3861,
+        5296
+      ],
+      "dataScattoDichiarata": "08/05/2021",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1115134379,
+      "sha1Originale": "834ec09fe89dd356844e7a5061b1f40c329c0caa"
+    },
+    {
+      "id": "foto-villa-pignatelli-797fb7c615",
+      "soggetto": "interno",
+      "didascaliaProposta": "Salone arredato di Villa Pignatelli",
+      "titoloFonte": "Napoli - Villa Pignatelli7.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Villa_Pignatelli7.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/f/f2/Napoli_-_Villa_Pignatelli7.jpg",
+      "autore": "Armando Mancini",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        2668,
+        3558
+      ],
+      "dataScattoDichiarata": "2010-02-07 11:41:03",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1135329898,
+      "sha1Originale": "0e81490aa1a935d1c99c2c60a36c0e834534ead1"
+    },
+    {
+      "id": "foto-villa-pignatelli-19c8975bfa",
+      "soggetto": "interno",
+      "didascaliaProposta": "Sala con dipinto e arredi della villa",
+      "titoloFonte": "Napoli - Villa Pignatelli12.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Villa_Pignatelli12.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Napoli_-_Villa_Pignatelli12.jpg",
+      "autore": "Armando Mancini",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3581,
+        2686
+      ],
+      "dataScattoDichiarata": "2010-02-07 11:55:26",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1200500642,
+      "sha1Originale": "aeed66ebdbf6dc5d3a00301f0415c44a03ba16ba"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

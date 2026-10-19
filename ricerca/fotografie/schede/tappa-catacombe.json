@@ -1,0 +1,62 @@
+{
+  "tipo": "tappa",
+  "id": "catacombe",
+  "nome": "Catacombe di San Gennaro",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-catacombe",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Catacombs of San Gennaro\"",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-catacombe-79ea21b2f9",
+      "soggetto": "interno",
+      "didascaliaProposta": "Vestibolo inferiore delle Catacombe di San Gennaro",
+      "titoloFonte": "Catacombe san Gennaro, vestibolo inferiore.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Catacombe_san_Gennaro,_vestibolo_inferiore.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/33/Catacombe_san_Gennaro%2C_vestibolo_inferiore.jpg",
+      "autore": "Catacombe di Napoli",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        700,
+        440
+      ],
+      "dataScattoDichiarata": "2017-01-14",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "risoluzione-ridotta"
+      ]
+    },
+    {
+      "id": "foto-catacombe-df55535328",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Affresco nelle Catacombe di San Gennaro",
+      "titoloFonte": "Catacombe di San Gennaro 021.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Catacombe_di_San_Gennaro_021.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/66/Catacombe_di_San_Gennaro_021.jpg",
+      "autore": "Dominik Matus",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        6016,
+        4000
+      ],
+      "dataScattoDichiarata": "2017-04-15 16:27:42",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": []
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

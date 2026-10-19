@@ -1,0 +1,51 @@
+{
+  "tipo": "locale",
+  "id": "bellavia",
+  "nome": "Pasticceria Bellavia",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Bellavia\" pasticceria filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via Luca Giordano 50",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://www.bellaviavomero.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.bellaviavomero.it/le-specialit%C3%A0",
+        "immagine": "https://irp.cdn-website.com//2005b948/dms3rep/multi/opt/cassata+%282%29-1920w.JPG",
+        "soggettoOsservato": "Cassata",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      },
+      {
+        "pagina": "https://www.bellaviavomero.it/le-specialit%C3%A0",
+        "immagine": "https://irp.cdn-website.com/2005b948/dms3rep/multi/opt/PHOTO-2024-07-03-15-03-21-1920w.jpg",
+        "soggettoOsservato": "Torta decorata",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://www.bellaviavomero.it/le-specialit%C3%A0"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede."
+}

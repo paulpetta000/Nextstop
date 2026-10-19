@@ -1,0 +1,86 @@
+{
+  "tipo": "tappa",
+  "id": "virgilio",
+  "nome": "Parco delle Tombe di Virgilio e Leopardi",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-virgilio",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Parco Vergiliano\"",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-virgilio-d0404d05a0",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Scalinate del Parco Vergiliano a Piedigrotta",
+      "titoloFonte": "Parco Vergiliano a Piedigrotta 4.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_Vergiliano_a_Piedigrotta_4.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Parco_Vergiliano_a_Piedigrotta_4.JPG",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2048,
+        1536
+      ],
+      "dataScattoDichiarata": "2014-05-12 12:57:36",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ]
+    },
+    {
+      "id": "foto-virgilio-562a46ac4e",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Viale del parco delle tombe di Virgilio e Leopardi",
+      "titoloFonte": "Parco Vergiliano a Piedigrotta 2.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_Vergiliano_a_Piedigrotta_2.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/57/Parco_Vergiliano_a_Piedigrotta_2.JPG",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2048,
+        1536
+      ],
+      "dataScattoDichiarata": "2014-05-12 12:21:46",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ]
+    },
+    {
+      "id": "foto-virgilio-ec61bde790",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Tomba di Giacomo Leopardi",
+      "titoloFonte": "Tomba leopardi napoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Tomba_leopardi_napoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/96/Tomba_leopardi_napoli.jpg",
+      "autore": "No machine-readable author provided. LuckyLisp~commonswiki assumed (based on copyright claims).",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "dimensioni": [
+        937,
+        1250
+      ],
+      "dataScattoDichiarata": "6 January 2006 (according to Exif data)",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "autore-desunto"
+      ]
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

@@ -1,0 +1,65 @@
+{
+  "tipo": "tappa",
+  "id": "plebiscito",
+  "nome": "Piazza del Plebiscito e Galleria Umberto I",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-plebiscito",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Galleria Umberto I\" interior",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-plebiscito-ecddfe6fab",
+      "soggetto": "interno",
+      "didascaliaProposta": "Spazio centrale della Galleria Umberto I",
+      "titoloFonte": "Galleria Umberto I, Interior, Naples (5263).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Galleria_Umberto_I,_Interior,_Naples_(5263).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/60/Galleria_Umberto_I%2C_Interior%2C_Naples_%285263%29.jpg",
+      "autore": "Marco Ober",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4991,
+        3631
+      ],
+      "dataScattoDichiarata": "2020-08-14 19:16:37",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ]
+    },
+    {
+      "id": "foto-plebiscito-de60218196",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Copertura in ferro e vetro della Galleria Umberto I",
+      "titoloFonte": "Galería Humberto I, Nápoles, Italia, 2023-03-25, DD 157-159 HDR.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Galer%C3%ADa_Humberto_I,_N%C3%A1poles,_Italia,_2023-03-25,_DD_157-159_HDR.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Galer%C3%ADa_Humberto_I%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_157-159_HDR.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5607,
+        8670
+      ],
+      "dataScattoDichiarata": "2023-03-25 15:31:02",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "creditoRichiesto": "Diego Delso"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

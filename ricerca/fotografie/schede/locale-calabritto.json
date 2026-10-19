@@ -1,0 +1,41 @@
+{
+  "tipo": "locale",
+  "id": "calabritto",
+  "nome": "Terrazza Calabritto",
+  "controllato": "2026-10-19",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Terrazza Calabritto\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Piazza Vittoria 1",
+  "stato": "nessuna-candidata-libera",
+  "fonteGestore": {
+    "url": "https://napoli.terrazzacalabritto.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "fonte-per-richiesta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://napoli.terrazzacalabritto.it/",
+        "immagine": "https://napoli.terrazzacalabritto.it/wp-content/uploads/sites/3/2022/09/CALAB-57-650x1300.jpg",
+        "soggettoOsservato": "Preparazione di polpo",
+        "stato": "da-autorizzare",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true
+      }
+    ],
+    "galleria": "https://napoli.terrazzacalabritto.it/"
+  },
+  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+}

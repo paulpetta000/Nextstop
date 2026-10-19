@@ -1,0 +1,85 @@
+{
+  "tipo": "tappa",
+  "id": "castel-nuovo",
+  "nome": "Castel Nuovo (Maschio Angioino)",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-castel-nuovo",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Castel Nuovo\" interior filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-castel-nuovo-209dcee2f9",
+      "soggetto": "interno",
+      "didascaliaProposta": "Volta gotica all'interno di Castel Nuovo",
+      "titoloFonte": "Castel Nuovo, interior. 05.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Castel_Nuovo,_interior._05.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/57/Castel_Nuovo%2C_interior._05.JPG",
+      "autore": "Miguel Hermoso Cuesta",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5184,
+        3456
+      ],
+      "dataScattoDichiarata": "2013-06-20 18:07:45",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1198308499,
+      "sha1Originale": "29b6cae736e3612bde3cec08fe0cc8366fd37b65"
+    },
+    {
+      "id": "foto-castel-nuovo-917d5d5946",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Vista verso il mare attraverso una finestra del castello",
+      "titoloFonte": "Castel Nuovo, interior. 02.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Castel_Nuovo,_interior._02.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Castel_Nuovo%2C_interior._02.JPG",
+      "autore": "Miguel Hermoso Cuesta",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5184,
+        3456
+      ],
+      "dataScattoDichiarata": "2013-06-20 17:37:00",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1198308370,
+      "sha1Originale": "4747456e9c8b4ddf4c8a1bbc0f15ef4c53de2ca9"
+    },
+    {
+      "id": "foto-castel-nuovo-8fbb0cd32b",
+      "soggetto": "interno",
+      "didascaliaProposta": "Cappella Palatina di Castel Nuovo",
+      "titoloFonte": "Palatine Chapel interior, Castel Nuovo, September 2022.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Palatine_Chapel_interior,_Castel_Nuovo,_September_2022.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Palatine_Chapel_interior%2C_Castel_Nuovo%2C_September_2022.jpg",
+      "autore": "Richard Nevell",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2268,
+        4032
+      ],
+      "dataScattoDichiarata": "2022-09-21 15:47:13",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 793163038,
+      "sha1Originale": "60ea336de548876a8c77dd3a20eda6c9768ce1e5"
+    }
+  ],
+  "stato": "licenza-libera",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}

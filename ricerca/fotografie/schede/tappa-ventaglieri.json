@@ -1,0 +1,45 @@
+{
+  "tipo": "tappa",
+  "id": "ventaglieri",
+  "nome": "Parco dei Ventaglieri",
+  "controllato": "2026-10-19",
+  "fotoEsistente": "tp-ventaglieri",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Ventaglieri\" filetype:bitmap",
+      "risultatiEsaminati": 4
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-ventaglieri-20ec24d720",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Decorazione sul suolo nella parte bassa dei Ventaglieri",
+      "titoloFonte": "Parco dei Ventaglieri, lower side, Napoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_dei_Ventaglieri,_lower_side,_Napoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Parco_dei_Ventaglieri%2C_lower_side%2C_Napoli.jpg",
+      "autore": "Mattia Luigi Nappi",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3840,
+        2880
+      ],
+      "dataScattoDichiarata": "2022-12-06",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee"
+      ],
+      "revisioneCommons": 1131326476,
+      "sha1Originale": "08d49f58a1ed175b776fa993d0058f16be3856c0"
+    }
+  ],
+  "stato": "licenza-libera-con-chiarimenti",
+  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+}
