@@ -1,0 +1,3418 @@
+tipo: impostazione_del_registro_non_aggiornamento_orari
+data: '2026-10-19'
+base_commit: 96e480dd95e45f4133fa513ad66ab30597c0a2cb
+strumenti:
+- GitHub Fetch per inventario
+- ricerca web e apertura delle pagine ufficiali
+copertura:
+  tappe_gite: 60
+  locali: 32
+  gruppi_trasporto: 14
+  canali: 108
+  fonti_collegate: 145
+  tentativi_apertura: 234
+  url_distinti_tentati: 214
+  ricerche_per_entita: 92
+fonti:
+- id: lc-bellavia
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.bellaviavomero.it/contatti
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.bellaviavomero.it/contatti
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-bellavia-store
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.bellaviavomero.it/store
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-bersagliera
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.labersagliera.it/contatti/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.labersagliera.it/contatti/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-brandi
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://pizzeriabrandi.com/information/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://pizzeriabrandi.com/information/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-caffettiera
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.grancaffelacaffettiera.com/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.grancaffelacaffettiera.com/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-calabritto
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://napoli.terrazzacalabritto.it/contatti/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://napoli.terrazzacalabritto.it/contatti/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-calabritto-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://napoli.terrazzacalabritto.it/menu/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-cantinella
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://lacantinella.it/contatti-ristorante-napoli/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://lacantinella.it/contatti-ristorante-napoli/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-cantinella-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://lacantinella.it/wp-content/uploads/2025/09/Menu-tavoli.pdf
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-chalet-ciro
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.chaletciro1952.com/sedi/mergellina/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.chaletciro1952.com/sedi/mergellina/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-chitarra
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.osterialachitarra.it/contatti/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.osterialachitarra.it/contatti/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-chitarra-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.osterialachitarra.it/menu/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-cicciotto
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.trattoriadacicciotto.it/trattoria-da-cicciotto-a-marechiaro-dal-1942/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.trattoriadacicciotto.it/trattoria-da-cicciotto-a-marechiaro-dal-1942/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-cicciotto-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.trattoriadacicciotto.it/menu/menutrattoria.pdf
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-cinquanta-kalo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://50kalo.it/info.php
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://50kalo.it/info.php
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: lc-cinquanta-kalo-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://50kalo.it/download/menu_napoli_2023.pdf
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-concettina
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.concettinaaitresanti.com/contacts/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.concettinaaitresanti.com/contacts/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-da-michele
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.damichele.net/sede-di-napoli/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.damichele.net/sede-di-napoli/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-da-michele-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.damichele.net/menu/sede_napoli/menu%20Napoli.pdf
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-di-costanzo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.dicostanzopasticceria.it/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.dicostanzopasticceria.it/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-di-matteo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://anticapizzeriadimatteo.it/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://anticapizzeriadimatteo.it/en/home-english/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-di-matteo-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://anticapizzeriadimatteo.it/wp-content/uploads/2022/07/Menu-Online-20072022.pdf
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-fenestella
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.ristoranteafenestella.it/contatti/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.ristoranteafenestella.it/contatti/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-gesu-vecchio
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.lalocandagesuvecchionapoli.it/i-nostri-contatti/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.lalocandagesuvecchionapoli.it/i-nostri-contatti/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-gesu-vecchio-home
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.lalocandagesuvecchionapoli.it/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.lalocandagesuvecchionapoli.it/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-gesu-vecchio-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.lalocandagesuvecchionapoli.it/wp-content/uploads/2026/06/MENU-LOCANDA-GIUGNO-2026-1.pdf.pdf
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-gobbetto
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://osteria-il-gobbetto3.webnode.it/contatti/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://osteria-il-gobbetto3.webnode.it/contatti/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-gorizia
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.gorizia1916.com/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.gorizia1916.com/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-hosteria-toledo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.hosteriatoledo.it/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.hosteriatoledo.it/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-hosteria-toledo-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.hosteriatoledo.it/wp-content/uploads/2023/05/HOSTERIA-TOLEDO-menu-A4-print.pdf
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-macellegria
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.macellegria.it/contatti/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.macellegria.it/contatti/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-macellegria-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.macellegria.it/menu/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-meatin
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.meatin.it/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.meatin.it/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-nennella
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.trattorianennella.it/sedi/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.trattorianennella.it/sedi/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-nennella-domande
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.trattorianennella.it/domande/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.trattorianennella.it/domande/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-petrucci-posillipo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-pignatelli
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.ostariapignatelli.com/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.ostariapignatelli.com/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-pignatelli-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.quickermenu.it/ostariapignatelli/i-primi/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-pintauro
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.pasticceriapintauro1785.it/contatti/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.pasticceriapintauro1785.it/contatti/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-poppella
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.pasticceriapoppella.com/punti-vendita/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.pasticceriapoppella.com/punti-vendita/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-port-alba
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.anticapizzeriaportalba.com/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.anticapizzeriaportalba.com/
+    nota: Timeout dello strumento; nessuna conferma del contenuto.
+- id: lc-salvo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.pizzeriasalvo.it/dove-siamo/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.pizzeriasalvo.it/dove-siamo/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-salvo-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.pizzeriasalvo.it/wp-content/uploads/2026/06/Salvo_Menu_11_05_26.pdf
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-scialuppa
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.lascialuppa.net/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.lascialuppa.net/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-starita
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://pizzeriestarita.it/dove-siamo/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://pizzeriestarita.it/dove-siamo/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-starita-menu
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://pizzeriestarita.it/wp-content/uploads/2024/11/Starita_QR_Napoli_ITA.pdf
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: lc-tufo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://tufotrattoria.it/informazioni/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://tufotrattoria.it/informazioni/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: lc-zia-esterina
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.sorbillo.it/antica-pizza-fritta-da-zia-esterina-sorbillo/
+  ultimo_controllo_precedente: '2026-10-04'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.sorbillo.it/antica-pizza-fritta-da-zia-esterina-sorbillo/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: osm
+  tipo_ereditato: dati
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.openstreetmap.org/copyright
+  ultimo_controllo_precedente: '2026-09-30'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-anm-ascensori
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=320
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=320
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-anm-centrale
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www2.anm.it/index.php?option=com_content&task=view&id=81&Itemid=98
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www2.anm.it/index.php?option=com_content&task=view&id=81&Itemid=98
+    nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+- id: tp-anm-chiaia
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www2.anm.it/index.php?option=com_content&task=view&id=82&Itemid=98
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www2.anm.it/index.php?option=com_content&task=view&id=82&Itemid=98
+    nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+- id: tp-anm-echia
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www2.anm.it/index.php?option=com_content&task=view&id=4286&Itemid=314
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www2.anm.it/index.php?option=com_content&task=view&id=4286&Itemid=314
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-anm-gtfs
+  tipo_ereditato: dati
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.anm.it/google/google-transit.zip
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-anm-linea1
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www2.anm.it/index.php?option=com_content&task=view&id=71&Itemid=98
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www2.anm.it/index.php?option=com_content&task=view&id=71&Itemid=98
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-anm-mergellina
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www2.anm.it/index.php?option=com_content&task=view&id=84&Itemid=98
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www2.anm.it/index.php?option=com_content&task=view&id=84&Itemid=98
+    nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+- id: tp-anm-metroart-toledo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://metroart.anm.it/stazioni-arte/linea-1/toledo
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://metroart.anm.it/stazioni-arte/linea-1/toledo
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-borbonica-avventura
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.galleriaborbonica.com/it/percorsi/avventura
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.galleriaborbonica.com/it/percorsi/avventura
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-borbonica-memorie
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.galleriaborbonica.com/it/percorsi/via-delle-memorie
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.galleriaborbonica.com/it/percorsi/via-delle-memorie
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-borbonica-standard
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.galleriaborbonica.com/it/percorsi/standard
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.galleriaborbonica.com/it/percorsi/standard
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-capodimonte-biglietti
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://capodimonte.cultura.gov.it/biglietti/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-capodimonte-orari
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://capodimonte.cultura.gov.it/orari/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://capodimonte.cultura.gov.it/orari/
+    nota: Timeout dello strumento; nessuna conferma del contenuto.
+- id: tp-capri-regolamento
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://museicapri.cultura.gov.it/it/regolamento-di-visita/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://museicapri.cultura.gov.it/it/regolamento-di-visita/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-caremar-orari
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://shop.caremar.it/it/orari/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://shop.caremar.it/it/orari/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-caremar-partenze
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://shop.caremar.it/it/prossime-partenze/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://shop.caremar.it/it/prossime-partenze/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-caremar-tariffe
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://shop.caremar.it/it/tariffe/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://shop.caremar.it/it/tariffe/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-caserta-arrivare
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://reggiadicaserta.cultura.gov.it/come-raggiungerci/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-caserta-biglietti
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://reggiadicaserta.cultura.gov.it/biglietti/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-caserta-orari
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://reggiadicaserta.cultura.gov.it/orari/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://reggiadicaserta.cultura.gov.it/orari/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-catacombe
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://catacombedinapoli.it/it/pianifica-visita-guidata-napoli/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://catacombedinapoli.it/it/pianifica-visita-guidata-napoli/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-catacombe-basilica
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://catacombedinapoli.it/it/luoghi/basilica-di-santa-maria-sanita-napoli/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://catacombedinapoli.it/it/luoghi/basilica-di-santa-maria-sanita-napoli/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-cittascienza-biglietteria
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.cittadellascienza.it/biglietteria/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-cittascienza-visita
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.cittadellascienza.it/organizza-una-visita/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.cittadellascienza.it/organizza-una-visita/
+    nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+- id: tp-comune-borgomarinari
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/area-pedonale-di-borgo-marinari/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/area-pedonale-di-borgo-marinari/
+    nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+- id: tp-comune-casteldellovo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/casteldellovo
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/casteldellovo
+    nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+- id: tp-comune-castelnuovo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/maschioangioino
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/maschioangioino
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-comune-echia
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/novita/entra-in-funzione-lascensore-di-monte-echia/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-comune-fontanelle
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/novita/il-cimitero-delle-fontanelle-riapre-per-sempre/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-comune-linea6
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/novita/linea-6-della-metro-nei-giorni-feriali-corse-fino-alle-21-10/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/novita/linea-6-della-metro-nei-giorni-feriali-corse-fino-alle-21-10/
+    nota: Contenuto non leggibile nello strumento; nessuna conferma.
+- id: tp-comune-montesanto
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/novita/15-maggio-2026-chiusura-funicolare-montesanto-per-manutenzione-ventennale/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/novita/15-maggio-2026-chiusura-funicolare-montesanto-per-manutenzione-ventennale/
+    nota: Contenuto non leggibile nello strumento; nessuna conferma.
+- id: tp-comune-pedamentina
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/turismo/turismo-sostenibile/percorsi-a-piedi/dalla-pedamentina-a-spaccanapoli/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/turismo/turismo-sostenibile/percorsi-a-piedi/dalla-pedamentina-a-spaccanapoli/
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-comune-villacomunale
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/vivere-il-comune/luoghi/villa-comunale/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/vivere-il-comune/luoghi/villa-comunale/
+    nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+- id: tp-comune-virgiliano
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-virgiliano/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-virgiliano/
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-comune-virgiliano-riapertura
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/novita/parco-virgiliano-dal-27-giugno-riapertura-parziale-al-pubblico/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/novita/parco-virgiliano-dal-27-giugno-riapertura-parziale-al-pubblico/
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-comune-ztl-marechiaro
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/ztl-marechiaro/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/ztl-marechiaro/
+    nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+- id: tp-correale
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.museocorreale.it/visita-il-museo/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.museocorreale.it/visita-il-museo/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-dadom-info
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://dadom.okticket.it/it/ticket/home/info
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://dadom.okticket.it/it/ticket/home/info
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-dadom-tariffe
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://dadom.okticket.it/it/biglietti/detail/236/biglietto-dadom
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-doma-biglietti
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://domasandomenicomaggiore.it/biglietteria/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-doma-info
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://domasandomenicomaggiore.it/info-e-contatti/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://domasandomenicomaggiore.it/info-e-contatti/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-eav-808
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.eavsrl.it/download/808-pompei-vesuvio/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.eavsrl.it/download/808-pompei-vesuvio/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-eav-campania-express
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.eavsrl.it/download/orari-e-tariffe-campania-express/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.eavsrl.it/download/orari-e-tariffe-campania-express/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-eav-campania-express-sospeso
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.eavsrl.it/campania-express/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.eavsrl.it/campania-express/
+    nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+- id: tp-eav-l1-orario
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/
+    nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+- id: tp-eav-teleindicatori
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://orariotreni.eavsrl.it/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://orariotreni.eavsrl.it/
+    nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+- id: tp-ercolano-biglietti
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://ercolano.cultura.gov.it/tickets/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://ercolano.cultura.gov.it/tickets/
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-fai-donn-anna
+  tipo_ereditato: altro
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://fondoambiente.it/luoghi/palazzo-donn-anna
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-filangieri
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.museofilangieri.it/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://filangierimuseo.it/en/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-fontanelle
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://cimiterodellefontanelle.it/pianifica-visita/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://cimiterodellefontanelle.it/pianifica-visita/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-gaiola-accesso
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.areamarinaprotettagaiola.it/accesso
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.areamarinaprotettagaiola.it/accesso
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-gaiola-prenotazione
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.areamarinaprotettagaiola.it/prenotazione-summer
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.areamarinaprotettagaiola.it/prenotazione-summer
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-girolamini
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://girolamini.cultura.gov.it/apertura-e-orari-dei-servizi/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://girolamini.cultura.gov.it/apertura-e-orari-dei-servizi/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-ischia-castello
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.castelloaragoneseischia.com/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.castelloaragoneseischia.com/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-italia-duomo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.italia.it/it/campania/napoli/duomo
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.italia.it/it/campania/napoli/duomo
+    nota: Timeout dello strumento; nessuna conferma del contenuto.
+- id: tp-madre
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.madrenapoli.it/visita/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.madrenapoli.it/visita/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-mann-orari
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.museoarcheologiconapoli.it/orari-e-biglietti/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.museoarcheologiconapoli.it/orari-e-biglietti/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-mercati-municipalita2
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-mic-floridiana
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-mic-leopardi-day-2025
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://cultura.gov.it/evento/leopardi-day-un-omaggio-poetico-e-inclusivo-a-giacomo-leopardi-nel-giorno-della-sua-nascita
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-mic-mann
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://cultura.gov.it/luogo/museo-archeologico-nazionale-di-napoli-1
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://cultura.gov.it/luogo/museo-archeologico-nazionale-di-napoli-1
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-mic-sanmartino
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://cultura.gov.it/luogo/certosa-e-museo-di-san-martino
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://cultura.gov.it/luogo/certosa-e-museo-di-san-martino
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-mic-santelmo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://cultura.gov.it/luogo/castel-sant-elmo-e-museo-del-novecento-a-napoli
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://cultura.gov.it/luogo/castel-sant-elmo-e-museo-del-novecento-a-napoli
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-mic-virgilio
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://cultura.gov.it/luogo/Parco%20e%20Tomba%20di%20Virgilio
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://cultura.gov.it/luogo/Parco%20e%20Tomba%20di%20Virgilio
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-mostra-oltremare
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://mostradoltremare.it/il-parco/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://mostradoltremare.it/il-parco/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-mudd-carbonara
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.muddnapoli.it/en/luoghi/san-giovanni-a-carbonara/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.muddnapoli.it/en/luoghi/san-giovanni-a-carbonara/
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-mudd-tetti
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.muddnapoli.it/en/luoghi/cathedral-roofs/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.muddnapoli.it/en/luoghi/cathedral-roofs/
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-musei-campania-virgilio
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://museicampania.cultura.gov.it/parco-delle-tombe-di-virgilio-e-leopardi-temporanea-chiusura-di-alcune-aree-del-percorso-di-visita/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://museicampania.cultura.gov.it/parco-delle-tombe-di-virgilio-e-leopardi-temporanea-chiusura-di-alcune-aree-del-percorso-di-visita/
+    nota: Timeout dello strumento; nessuna conferma del contenuto.
+- id: tp-napoliforme-galleria
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://napoliforme.comune.napoli.it/en/pois/-/poi/Galleria-Umberto-I
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://napoliforme.comune.napoli.it/en/pois/-/poi/Galleria-Umberto-I
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-napolike-gesu
+  tipo_ereditato: blog
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.napolike.it/chiesa-del-gesu-nuovo-napoli
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-napolike-sangregorio
+  tipo_ereditato: blog
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.napolike.it/point/chiesa-san-gregorio-armeno-napoli
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-orto-botanico
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.ortobotaniconapoli.it/it/visitare/giorni-e-orari-di-apertura.html
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.ortobotaniconapoli.it/it/visitare/giorni-e-orari-di-apertura.html
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-palazzoreale-info
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://palazzorealedinapoli.org/informazioni-per-la-visita/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://palazzorealedinapoli.org/informazioni-per-la-visita/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-parco-camaldoli
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/
+    nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+- id: tp-parco-mascagna
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/
+    nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+- id: tp-parco-poggio
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/
+    nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+- id: tp-parco-ventaglieri
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-ventaglieri/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-ventaglieri/
+    nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+- id: tp-pietrarsa-arrivare
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.fondazionefs.it/it/esplora-il-museo/come-arrivare.html
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-pietrarsa-tariffe
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.fondazionefs.it/it/esplora-il-museo/tariffe-abbonamenti.html
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.fondazionefs.it/it/esplora-il-museo/tariffe-abbonamenti.html
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-piomonte
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://piomontedellamisericordia.it/info-e-orari/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://piomontedellamisericordia.it/info-e-orari/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-pompei-orari
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://pompeiisites.org/en/visiting-info/timetables-and-tickets/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://pompeiisites.org/en/visiting-info/timetables-and-tickets/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-pompei-tariffe
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://pompeiisites.org/comunicati/pompei-si-esplora-con-tutti-i-sensi-accessibilita-e-nuove-tariffe-di-ingresso-dal-12-gennaio/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-purgatorio
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.purgatorioadarco.it/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.purgatorioadarco.it/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-rfi-linea2
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://prm.rfi.it/qo_prm/QO_Pdf.aspx?Tipo=P&lin=it&id=530
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://prm.rfi.it/qo_prm/QO_Pdf.aspx?Tipo=P&lin=it&id=530
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-sancarlo-visite
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.teatrosancarlo.it/visite-guidate/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.teatrosancarlo.it/visite-guidate/
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-sanlorenzo
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.laneapolissotterrata.it/Home/InfoVisite
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: non_verificabile
+    url_finale: https://www.laneapolissotterrata.it/Home/InfoVisite
+    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+- id: tp-sansevero-orari
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.museosansevero.it/organizza-la-tua-visita/orari-e-tariffe
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.museosansevero.it/organizza-la-tua-visita/orari-e-tariffe
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-santachiara-orari
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.monasterodisantachiara.it/orari/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.monasterodisantachiara.it/orari/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-sotterranea-faq
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.napolisotterranea.org/faq/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.napolisotterranea.org/faq/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-sotterranea-orari
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.napolisotterranea.org/orari/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.napolisotterranea.org/orari/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-tesoro-faq
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://tesorosangennaro.it/faq/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://tesorosangennaro.it/faq/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-tesoro-info
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://tesorosangennaro.it/info-e-tariffe/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-tetti-italpress
+  tipo_ereditato: stampa
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.italpress.com/?p=664594
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: null
+    esito: da_aprire
+    url_finale: null
+    nota: Collegamento da aprire; non attestato da questo inventario.
+- id: tp-trenitalia-linea2
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.trenitalia.com/content/trenitalia/it/informazioni/lavori-programmati/20260621-circolazione-interrotta-tra-napoli-campi-flegrei-e-puzzuoli-solfatara.html
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.trenitalia.com/content/trenitalia/it/informazioni/lavori-programmati/20260621-circolazione-interrotta-tra-napoli-campi-flegrei-e-puzzuoli-solfatara.html
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-vesuvio-gran-cono
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://www.parconazionaledelvesuvio.it/en/visit-the-park/the-paths/the-great-cono-of-vesuvius/
+  ultimo_controllo_precedente: '2026-10-02'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.parconazionaledelvesuvio.it/en/visit-the-park/the-paths/the-great-cono-of-vesuvius/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+- id: tp-villa-pignatelli
+  tipo_ereditato: ufficiale
+  url_consultabile_da: src/data/fonti.yaml
+  url_al_momento_dell_inventario: https://palazzorealedinapoli.org/sedi/villa-pignatelli/
+  ultimo_controllo_precedente: '2026-10-03'
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://palazzorealedinapoli.org/sedi/villa-pignatelli/
+    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+tentativi:
+- url: https://www.italia.it/it/campania/napoli/duomo
+  titolo: Internal Error ()
+  url_finale: https://www.italia.it/it/campania/napoli/duomo
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Timeout dello strumento; nessuna conferma del contenuto.
+  gruppo: schedules
+- url: https://tesorosangennaro.it/faq/
+  titolo: FAQ - Domande frequenti I Tesoro di San Gennaro
+  url_finale: https://tesorosangennaro.it/faq/
+  esito: aperta
+  righe_disponibili: 195
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.museosansevero.it/organizza-la-tua-visita/orari-e-tariffe
+  titolo: Orari e tariffe | Museo Cappella Sansevero
+  url_finale: https://www.museosansevero.it/organizza-la-tua-visita/orari-e-tariffe
+  esito: aperta
+  righe_disponibili: 142
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.monasterodisantachiara.it/orari/
+  titolo: Orari e Tariffe - Chiostro di Santa Chiara
+  url_finale: https://www.monasterodisantachiara.it/orari/
+  esito: aperta
+  righe_disponibili: 207
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://piomontedellamisericordia.it/info-e-orari/
+  titolo: Info e Orari - Pio Monte Della Misericordia
+  url_finale: https://piomontedellamisericordia.it/info-e-orari/
+  esito: aperta
+  righe_disponibili: 278
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.museoarcheologiconapoli.it/orari-e-biglietti/
+  titolo: Orari e biglietti - mann napoli|museo archeologico di napoli
+  url_finale: https://www.museoarcheologiconapoli.it/orari-e-biglietti/
+  esito: aperta
+  righe_disponibili: 295
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://cultura.gov.it/luogo/museo-archeologico-nazionale-di-napoli-1
+  titolo: Museo archeologico nazionale di Napoli - Ministero della cultura
+  url_finale: https://cultura.gov.it/luogo/museo-archeologico-nazionale-di-napoli-1
+  esito: aperta
+  righe_disponibili: 390
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.laneapolissotterrata.it/Home/InfoVisite
+  titolo: Internal Error ()
+  url_finale: https://www.laneapolissotterrata.it/Home/InfoVisite
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://www.napolisotterranea.org/orari/
+  titolo: Orari - Napoli Sotterranea
+  url_finale: https://www.napolisotterranea.org/orari/
+  esito: aperta
+  righe_disponibili: 158
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.napolisotterranea.org/faq/
+  titolo: Faq - Napoli Sotterranea
+  url_finale: https://www.napolisotterranea.org/faq/
+  esito: aperta
+  righe_disponibili: 368
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.madrenapoli.it/visita/
+  titolo: Visita - Madre Napoli
+  url_finale: https://www.madrenapoli.it/visita/
+  esito: aperta
+  righe_disponibili: 150
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://napoliforme.comune.napoli.it/en/pois/-/poi/Galleria-Umberto-I
+  titolo: Galleria Umberto I - NapoliForMe
+  url_finale: https://napoliforme.comune.napoli.it/en/pois/-/poi/Galleria-Umberto-I
+  esito: aperta
+  righe_disponibili: 108
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://palazzorealedinapoli.org/informazioni-per-la-visita/
+  titolo: Informazioni per la visita - Palazzo Reale di Napoli
+  url_finale: https://palazzorealedinapoli.org/informazioni-per-la-visita/
+  esito: aperta
+  righe_disponibili: 290
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.teatrosancarlo.it/visite-guidate/
+  titolo: Internal Error ()
+  url_finale: https://www.teatrosancarlo.it/visite-guidate/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/maschioangioino
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/maschioangioino
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://metroart.anm.it/stazioni-arte/linea-1/toledo
+  titolo: Toledo - Metroart
+  url_finale: https://metroart.anm.it/stazioni-arte/linea-1/toledo
+  esito: aperta
+  righe_disponibili: 98
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.galleriaborbonica.com/it/percorsi/standard
+  titolo: Standard2 - Galleria Borbonica - Bourbon Tunnel - Napoli sotterranea
+  url_finale: https://www.galleriaborbonica.com/it/percorsi/standard
+  esito: aperta
+  righe_disponibili: 127
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.galleriaborbonica.com/it/percorsi/via-delle-memorie
+  titolo: Via delle Memorie - Galleria Borbonica - Bourbon Tunnel - Napoli sotterranea
+  url_finale: https://www.galleriaborbonica.com/it/percorsi/via-delle-memorie
+  esito: aperta
+  righe_disponibili: 141
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.galleriaborbonica.com/it/percorsi/avventura
+  titolo: Percorso Avventura - Galleria Borbonica - Bourbon Tunnel - Napoli sotterranea
+  url_finale: https://www.galleriaborbonica.com/it/percorsi/avventura
+  esito: aperta
+  righe_disponibili: 112
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=4286&Itemid=314
+  titolo: Internal Error ()
+  url_finale: https://www2.anm.it/index.php?option=com_content&task=view&id=4286&Itemid=314
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/area-pedonale-di-borgo-marinari/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/area-pedonale-di-borgo-marinari/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/casteldellovo
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/casteldellovo
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/villa-comunale/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/vivere-il-comune/luoghi/villa-comunale/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+  gruppo: schedules
+- url: https://dadom.okticket.it/it/ticket/home/info
+  titolo: Biglietteria on-line ufficiale | DaDoM - Museo Darwin Dohrn
+  url_finale: https://dadom.okticket.it/it/ticket/home/info
+  esito: aperta
+  righe_disponibili: 238
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://cultura.gov.it/luogo/castel-sant-elmo-e-museo-del-novecento-a-napoli
+  titolo: Castel Sant'Elmo - Ministero della cultura
+  url_finale: https://cultura.gov.it/luogo/castel-sant-elmo-e-museo-del-novecento-a-napoli
+  esito: aperta
+  righe_disponibili: 433
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://cultura.gov.it/luogo/certosa-e-museo-di-san-martino
+  titolo: Certosa di San Martino - Ministero della cultura
+  url_finale: https://cultura.gov.it/luogo/certosa-e-museo-di-san-martino
+  esito: aperta
+  righe_disponibili: 447
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana
+  titolo: Internal Error ()
+  url_finale: https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/turismo/turismo-sostenibile/percorsi-a-piedi/dalla-pedamentina-a-spaccanapoli/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/turismo/turismo-sostenibile/percorsi-a-piedi/dalla-pedamentina-a-spaccanapoli/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://catacombedinapoli.it/it/pianifica-visita-guidata-napoli/
+  titolo: Pianifica la tua visita - Catacombe di Napoli
+  url_finale: https://catacombedinapoli.it/it/pianifica-visita-guidata-napoli/
+  esito: aperta
+  righe_disponibili: 293
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://catacombedinapoli.it/it/luoghi/basilica-di-santa-maria-sanita-napoli/
+  titolo: Basilica di Santa Maria della Sanità - il cuore del Rione
+  url_finale: https://catacombedinapoli.it/it/luoghi/basilica-di-santa-maria-sanita-napoli/
+  esito: aperta
+  righe_disponibili: 238
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=320
+  titolo: Internal Error ()
+  url_finale: https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=320
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://cimiterodellefontanelle.it/pianifica-visita/
+  titolo: Pianifica la Visita - Cimitero delle Fontanelle
+  url_finale: https://cimiterodellefontanelle.it/pianifica-visita/
+  esito: aperta
+  righe_disponibili: 382
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://capodimonte.cultura.gov.it/orari/
+  titolo: Internal Error ()
+  url_finale: https://capodimonte.cultura.gov.it/orari/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Timeout dello strumento; nessuna conferma del contenuto.
+  gruppo: schedules
+- url: https://cultura.gov.it/luogo/Parco%20e%20Tomba%20di%20Virgilio
+  titolo: Parco delle Tombe di Virgilio e Leopardi - Ministero della cultura
+  url_finale: https://cultura.gov.it/luogo/Parco%20e%20Tomba%20di%20Virgilio
+  esito: aperta
+  righe_disponibili: 286
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://museicampania.cultura.gov.it/parco-delle-tombe-di-virgilio-e-leopardi-temporanea-chiusura-di-alcune-aree-del-percorso-di-visita/
+  titolo: Internal Error ()
+  url_finale: https://museicampania.cultura.gov.it/parco-delle-tombe-di-virgilio-e-leopardi-temporanea-chiusura-di-alcune-aree-del-percorso-di-visita/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Timeout dello strumento; nessuna conferma del contenuto.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/ztl-marechiaro/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/ztl-marechiaro/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+  gruppo: schedules
+- url: https://www.areamarinaprotettagaiola.it/accesso
+  titolo: Modalità di accesso | ampgaiola
+  url_finale: https://www.areamarinaprotettagaiola.it/accesso
+  esito: aperta
+  righe_disponibili: 125
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.areamarinaprotettagaiola.it/prenotazione-summer
+  titolo: Prenotazione estate | ampgaiola
+  url_finale: https://www.areamarinaprotettagaiola.it/prenotazione-summer
+  esito: aperta
+  righe_disponibili: 160
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-virgiliano/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-virgiliano/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/novita/parco-virgiliano-dal-27-giugno-riapertura-parziale-al-pubblico/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/novita/parco-virgiliano-dal-27-giugno-riapertura-parziale-al-pubblico/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://www.cittadellascienza.it/organizza-una-visita/
+  titolo: Internal Error ()
+  url_finale: https://www.cittadellascienza.it/organizza-una-visita/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+  gruppo: schedules
+- url: https://domasandomenicomaggiore.it/info-e-contatti/
+  titolo: Info e contatti - DOMA | San Domenico Maggiore
+  url_finale: https://domasandomenicomaggiore.it/info-e-contatti/
+  esito: aperta
+  righe_disponibili: 102
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.purgatorioadarco.it/
+  titolo: Complesso monumentale Purgatorio ad Arco – Complesso monumentale Purgatorio ad Arco
+  url_finale: https://www.purgatorioadarco.it/
+  esito: aperta
+  righe_disponibili: 196
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://girolamini.cultura.gov.it/apertura-e-orari-dei-servizi/
+  titolo: Apertura e orari dei servizi - Complesso monumentale e Biblioteca dei Girolamini
+  url_finale: https://girolamini.cultura.gov.it/apertura-e-orari-dei-servizi/
+  esito: aperta
+  righe_disponibili: 106
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.muddnapoli.it/en/luoghi/cathedral-roofs/
+  titolo: Internal Error ()
+  url_finale: https://www.muddnapoli.it/en/luoghi/cathedral-roofs/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://www.museofilangieri.it/
+  titolo: Filangieri Museum - A Princely Museum
+  url_finale: https://filangierimuseo.it/en/
+  esito: aperta
+  righe_disponibili: 87
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.muddnapoli.it/en/luoghi/san-giovanni-a-carbonara/
+  titolo: Internal Error ()
+  url_finale: https://www.muddnapoli.it/en/luoghi/san-giovanni-a-carbonara/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-ventaglieri/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-ventaglieri/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+  gruppo: schedules
+- url: https://palazzorealedinapoli.org/sedi/villa-pignatelli/
+  titolo: Villa Pignatelli - Palazzo Reale di Napoli
+  url_finale: https://palazzorealedinapoli.org/sedi/villa-pignatelli/
+  esito: aperta
+  righe_disponibili: 103
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+  gruppo: schedules
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Accesso negato dallo strumento (403); non prova che la pagina sia inesistente.
+  gruppo: schedules
+- url: https://www.ortobotaniconapoli.it/it/visitare/giorni-e-orari-di-apertura.html
+  titolo: Orto Botanico di Napoli - Giorni e orari di apertura
+  url_finale: https://www.ortobotaniconapoli.it/it/visitare/giorni-e-orari-di-apertura.html
+  esito: aperta
+  righe_disponibili: 62
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://mostradoltremare.it/il-parco/
+  titolo: Il Parco - Mostra d'Oltremare
+  url_finale: https://mostradoltremare.it/il-parco/
+  esito: aperta
+  righe_disponibili: 218
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://pompeiisites.org/en/visiting-info/timetables-and-tickets/
+  titolo: Timetables and tickets - Pompeii Sites
+  url_finale: https://pompeiisites.org/en/visiting-info/timetables-and-tickets/
+  esito: aperta
+  righe_disponibili: 157
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://ercolano.cultura.gov.it/tickets/
+  titolo: Internal Error ()
+  url_finale: https://ercolano.cultura.gov.it/tickets/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://www.parconazionaledelvesuvio.it/en/visit-the-park/the-paths/the-great-cono-of-vesuvius/
+  titolo: The Great Cono | Vesuvius National Park
+  url_finale: https://www.parconazionaledelvesuvio.it/en/visit-the-park/the-paths/the-great-cono-of-vesuvius/
+  esito: aperta
+  righe_disponibili: 388
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://museicapri.cultura.gov.it/it/regolamento-di-visita/
+  titolo: Regolamento di visita - Musei e Parchi archeologici di Capri
+  url_finale: https://museicapri.cultura.gov.it/it/regolamento-di-visita/
+  esito: aperta
+  righe_disponibili: 182
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.castelloaragoneseischia.com/
+  titolo: Homepage - Castello Aragonese d'Ischia
+  url_finale: https://www.castelloaragoneseischia.com/
+  esito: aperta
+  righe_disponibili: 228
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://reggiadicaserta.cultura.gov.it/orari/
+  titolo: Orari - Reggia di Caserta
+  url_finale: https://reggiadicaserta.cultura.gov.it/orari/
+  esito: aperta
+  righe_disponibili: 278
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.fondazionefs.it/it/esplora-il-museo/tariffe-abbonamenti.html
+  titolo: Internal Error ()
+  url_finale: https://www.fondazionefs.it/it/esplora-il-museo/tariffe-abbonamenti.html
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://www.museocorreale.it/visita-il-museo/
+  titolo: Informazioni utili | Museo Correale Sorrento
+  url_finale: https://www.museocorreale.it/visita-il-museo/
+  esito: aperta
+  righe_disponibili: 142
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.damichele.net/sede-di-napoli/
+  titolo: Sede di Napoli – Pizzeria da Michele
+  url_finale: https://www.damichele.net/sede-di-napoli/
+  esito: aperta
+  righe_disponibili: 103
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.anticapizzeriaportalba.com/
+  titolo: Internal Error ()
+  url_finale: https://www.anticapizzeriaportalba.com/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Timeout dello strumento; nessuna conferma del contenuto.
+  gruppo: schedules
+- url: https://anticapizzeriadimatteo.it/
+  titolo: Antica Pizzeria Di Matteo | Pizzeria in Naples since 1936
+  url_finale: https://anticapizzeriadimatteo.it/en/home-english/
+  esito: aperta
+  righe_disponibili: 80
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.osterialachitarra.it/contatti/
+  titolo: Contatti – Osteria La Chitarra
+  url_finale: https://www.osterialachitarra.it/contatti/
+  esito: aperta
+  righe_disponibili: 88
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.lalocandagesuvecchionapoli.it/i-nostri-contatti/
+  titolo: I nostri contatti – La Locanda Gesù Vecchio
+  url_finale: https://www.lalocandagesuvecchionapoli.it/i-nostri-contatti/
+  esito: aperta
+  righe_disponibili: 67
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.lalocandagesuvecchionapoli.it/
+  titolo: La Locanda Gesù Vecchio
+  url_finale: https://www.lalocandagesuvecchionapoli.it/
+  esito: aperta
+  righe_disponibili: 118
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.dicostanzopasticceria.it/
+  titolo: Internal Error ()
+  url_finale: https://www.dicostanzopasticceria.it/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Timeout dello strumento; nessuna conferma del contenuto.
+  gruppo: schedules
+- url: https://pizzeriabrandi.com/information/
+  titolo: Info - Pizzeria Brandi
+  url_finale: https://pizzeriabrandi.com/information/
+  esito: aperta
+  righe_disponibili: 33
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.sorbillo.it/antica-pizza-fritta-da-zia-esterina-sorbillo/
+  titolo: Antica Pizza Fritta da Zia Esterina Sorbillo - Gino Sorbillo Pizzerie Napoletane
+  url_finale: https://www.sorbillo.it/antica-pizza-fritta-da-zia-esterina-sorbillo/
+  esito: aperta
+  righe_disponibili: 99
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.hosteriatoledo.it/
+  titolo: Hosteria Toledo | Antica cucina napoletana dal 1951
+  url_finale: https://www.hosteriatoledo.it/
+  esito: aperta
+  righe_disponibili: 93
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://osteria-il-gobbetto3.webnode.it/contatti/
+  titolo: 'Contatti :: Osteria il gobbetto'
+  url_finale: https://osteria-il-gobbetto3.webnode.it/contatti/
+  esito: aperta
+  righe_disponibili: 29
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.trattorianennella.it/sedi/
+  titolo: Le Sedi - Trattoria da Nennella
+  url_finale: https://www.trattorianennella.it/sedi/
+  esito: aperta
+  righe_disponibili: 83
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.trattorianennella.it/domande/
+  titolo: Domande Frequenti - Trattoria da Nennella
+  url_finale: https://www.trattorianennella.it/domande/
+  esito: aperta
+  righe_disponibili: 94
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.pasticceriapintauro1785.it/contatti/
+  titolo: Contatti - Pintauro Napoli
+  url_finale: https://www.pasticceriapintauro1785.it/contatti/
+  esito: aperta
+  righe_disponibili: 78
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://50kalo.it/info.php
+  titolo: Internal Error ()
+  url_finale: https://50kalo.it/info.php
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: schedules
+- url: https://www.pizzeriasalvo.it/dove-siamo/
+  titolo: Dove Siamo - Francesco e Salvatore Salvo
+  url_finale: https://www.pizzeriasalvo.it/dove-siamo/
+  esito: aperta
+  righe_disponibili: 109
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.ostariapignatelli.com/
+  titolo: Ostaria Pignatelli | Ristorante A'tipica Trattoria Napoletana
+  url_finale: https://www.ostariapignatelli.com/
+  esito: aperta
+  righe_disponibili: 82
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://lacantinella.it/contatti-ristorante-napoli/
+  titolo: Contatta il Ristorante per info e prenotazioni | La Cantinella
+  url_finale: https://lacantinella.it/contatti-ristorante-napoli/
+  esito: aperta
+  righe_disponibili: 82
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.labersagliera.it/contatti/
+  titolo: Contatti e prenotazioni – Ristorante La Bersagliera
+  url_finale: https://www.labersagliera.it/contatti/
+  esito: aperta
+  righe_disponibili: 22
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.lascialuppa.net/
+  titolo: Ristorante la Scialuppa - Delizie di pesce a Borgo Marinari
+  url_finale: https://www.lascialuppa.net/
+  esito: aperta
+  righe_disponibili: 134
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://napoli.terrazzacalabritto.it/contatti/
+  titolo: Contatti - Terrazza Calabritto | Napoli
+  url_finale: https://napoli.terrazzacalabritto.it/contatti/
+  esito: aperta
+  righe_disponibili: 87
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.chaletciro1952.com/sedi/mergellina/
+  titolo: Mergellina | Chalet Ciro 1952 | Una storia di cose buone
+  url_finale: https://www.chaletciro1952.com/sedi/mergellina/
+  esito: aperta
+  righe_disponibili: 150
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.grancaffelacaffettiera.com/
+  titolo: Gran Caffè La Caffettiera Napoli
+  url_finale: https://www.grancaffelacaffettiera.com/
+  esito: aperta
+  righe_disponibili: 116
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.gorizia1916.com/
+  titolo: Ristorante pizzeria Gorizia 1916
+  url_finale: https://www.gorizia1916.com/
+  esito: aperta
+  righe_disponibili: 66
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.bellaviavomero.it/contatti
+  titolo: dolci napoletani | Napoli (NA) | Bellavia Bar Pasticceria
+  url_finale: https://www.bellaviavomero.it/contatti
+  esito: aperta
+  righe_disponibili: 87
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.meatin.it/
+  titolo: Meatin
+  url_finale: https://www.meatin.it/
+  esito: aperta
+  righe_disponibili: 185
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://pizzeriestarita.it/dove-siamo/
+  titolo: Dove Siamo | Pizzerie Starita
+  url_finale: https://pizzeriestarita.it/dove-siamo/
+  esito: aperta
+  righe_disponibili: 254
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.concettinaaitresanti.com/contacts/
+  titolo: Contacts – Concettina ai Tre Santi
+  url_finale: https://www.concettinaaitresanti.com/contacts/
+  esito: aperta
+  righe_disponibili: 60
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.pasticceriapoppella.com/punti-vendita/
+  titolo: Punti vendita – Pasticceria Poppella
+  url_finale: https://www.pasticceriapoppella.com/punti-vendita/
+  esito: aperta
+  righe_disponibili: 45
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/
+  titolo: La nuova pizzeria di Palazzo Petrucci a Posillipo è sul mare
+  url_finale: https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/
+  esito: aperta
+  righe_disponibili: 179
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://tufotrattoria.it/informazioni/
+  titolo: Informazioni – Tufò
+  url_finale: https://tufotrattoria.it/informazioni/
+  esito: aperta
+  righe_disponibili: 51
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.ristoranteafenestella.it/contatti/
+  titolo: Contatti - A Fenestella
+  url_finale: https://www.ristoranteafenestella.it/contatti/
+  esito: aperta
+  righe_disponibili: 78
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.trattoriadacicciotto.it/trattoria-da-cicciotto-a-marechiaro-dal-1942/
+  titolo: trattoria da cicciotto a marechiaro dal 1942 - Cicciotto a Marechiaro dal 1942
+  url_finale: https://www.trattoriadacicciotto.it/trattoria-da-cicciotto-a-marechiaro-dal-1942/
+  esito: aperta
+  righe_disponibili: 54
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.macellegria.it/contatti/
+  titolo: Contatti - Macellegria
+  url_finale: https://www.macellegria.it/contatti/
+  esito: aperta
+  righe_disponibili: 92
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: schedules
+- url: https://www.italia.it/
+  titolo: Offizielle Tourismus-Website – Italia.it
+  url_finale: https://www.italia.it/de
+  esito: aperta
+  righe_disponibili: 411
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://tesorosangennaro.it/
+  titolo: Internal Error ()
+  url_finale: https://tesorosangennaro.it/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: roots
+- url: https://www.museosansevero.it/
+  titolo: Museo Cappella Sansevero
+  url_finale: https://www.museosansevero.it/
+  esito: aperta
+  righe_disponibili: 109
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.monasterodisantachiara.it/
+  titolo: Internal Error ()
+  url_finale: https://www.monasterodisantachiara.it/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: roots
+- url: https://piomontedellamisericordia.it/
+  titolo: Home - Pio Monte Della Misericordia
+  url_finale: https://piomontedellamisericordia.it/
+  esito: aperta
+  righe_disponibili: 226
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.museoarcheologiconapoli.it/
+  titolo: mann napoli|museo archeologico di napoli
+  url_finale: https://www.museoarcheologiconapoli.it/
+  esito: aperta
+  righe_disponibili: 263
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://cultura.gov.it/
+  titolo: Homepage - Ministero della cultura
+  url_finale: https://cultura.gov.it/
+  esito: aperta
+  righe_disponibili: 224
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.laneapolissotterrata.it/
+  titolo: Internal Error ()
+  url_finale: https://www.laneapolissotterrata.it/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: roots
+- url: https://www.napolisotterranea.org/
+  titolo: Home - Napoli Sotterranea
+  url_finale: https://www.napolisotterranea.org/
+  esito: aperta
+  righe_disponibili: 208
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.madrenapoli.it/
+  titolo: Madre Napoli
+  url_finale: https://www.madrenapoli.it/
+  esito: aperta
+  righe_disponibili: 130
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://napoliforme.comune.napoli.it/
+  titolo: Home - NapoliForMe
+  url_finale: https://napoliforme.comune.napoli.it/
+  esito: aperta
+  righe_disponibili: 145
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://palazzorealedinapoli.org/
+  titolo: Palazzo Reale di Napoli
+  url_finale: https://palazzorealedinapoli.org/
+  esito: aperta
+  righe_disponibili: 207
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.teatrosancarlo.it/
+  titolo: Security check required
+  url_finale: https://www.teatrosancarlo.it/
+  esito: non_verificabile
+  righe_disponibili: 9
+  nota: Verifica di sicurezza richiesta.
+  gruppo: roots
+- url: https://www.comune.napoli.it/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: roots
+- url: https://metroart.anm.it/
+  titolo: Metro Art ANM - Metroart
+  url_finale: https://metroart.anm.it/
+  esito: aperta
+  righe_disponibili: 122
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.galleriaborbonica.com/
+  titolo: Galleria Borbonica - Bourbon Tunnel - NAPOLI SOTTERRANEA
+  url_finale: https://www.galleriaborbonica.com/
+  esito: aperta
+  righe_disponibili: 12
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www2.anm.it/
+  titolo: ANM Web Site
+  url_finale: https://www2.anm.it/
+  esito: aperta
+  righe_disponibili: 68
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://dadom.okticket.it/
+  titolo: With this combined ticket you access a visit to the Naples Aquarium and a visit to the DadoM (Darwin-Dohrn
+    Museum) at a discounted price.
+  url_finale: https://dadom.okticket.it/en/biglietti/detail/247/ticket-aquarium-dadom
+  esito: aperta
+  righe_disponibili: 454
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://catacombedinapoli.it/
+  titolo: Catacombe di Napoli e Rione Sanità
+  url_finale: https://catacombedinapoli.it/it/
+  esito: aperta
+  righe_disponibili: 122
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://cimiterodellefontanelle.it/
+  titolo: Home - Cimitero delle Fontanelle
+  url_finale: https://cimiterodellefontanelle.it/
+  esito: aperta
+  righe_disponibili: 433
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://capodimonte.cultura.gov.it/
+  titolo: Museo e Real Bosco di Capodimonte
+  url_finale: https://capodimonte.cultura.gov.it/
+  esito: aperta
+  righe_disponibili: 331
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://museicampania.cultura.gov.it/
+  titolo: Direzione regionale Musei nazionali Campania
+  url_finale: https://museicampania.cultura.gov.it/
+  esito: aperta
+  righe_disponibili: 192
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.areamarinaprotettagaiola.it/
+  titolo: AMP Parco Sommerso di Gaiola
+  url_finale: https://www.areamarinaprotettagaiola.it/
+  esito: aperta
+  righe_disponibili: 120
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.cittadellascienza.it/
+  titolo: Internal Error ()
+  url_finale: https://www.cittadellascienza.it/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: roots
+- url: https://domasandomenicomaggiore.it/
+  titolo: DOMA | San Domenico Maggiore
+  url_finale: https://domasandomenicomaggiore.it/
+  esito: aperta
+  righe_disponibili: 139
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.purgatorioadarco.it/
+  titolo: Complesso monumentale Purgatorio ad Arco – Complesso monumentale Purgatorio ad Arco
+  url_finale: https://www.purgatorioadarco.it/
+  esito: aperta
+  righe_disponibili: 196
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://girolamini.cultura.gov.it/
+  titolo: ⚠️ Avviso ⚠️ - Complesso monumentale e Biblioteca dei Girolamini
+  url_finale: https://girolamini.cultura.gov.it/
+  esito: aperta
+  righe_disponibili: 785
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.muddnapoli.it/
+  titolo: 'MUDD Napoli - Museo Diocesano Diffuso: Scopri la Storia e Cultura Napoletana'
+  url_finale: https://muddnapoli.it/
+  esito: aperta
+  righe_disponibili: 250
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.museofilangieri.it/
+  titolo: Filangieri Museum - A Princely Museum
+  url_finale: https://filangierimuseo.it/en/
+  esito: aperta
+  righe_disponibili: 87
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.ortobotaniconapoli.it/
+  titolo: Orto Botanico di Napoli - Home
+  url_finale: https://www.ortobotaniconapoli.it/it/
+  esito: aperta
+  righe_disponibili: 134
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://mostradoltremare.it/
+  titolo: Home - Mostra d'Oltremare
+  url_finale: https://mostradoltremare.it/
+  esito: aperta
+  righe_disponibili: 343
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://pompeiisites.org/
+  titolo: Homepage - Pompeii Sites Portale Ufficiale Parco Archeologico di Pompei
+  url_finale: https://pompeiisites.org/
+  esito: aperta
+  righe_disponibili: 116
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://ercolano.cultura.gov.it/
+  titolo: Parco Archeologico di Ercolano
+  url_finale: https://ercolano.cultura.gov.it/
+  esito: aperta
+  righe_disponibili: 236
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.parconazionaledelvesuvio.it/
+  titolo: Internal Error ()
+  url_finale: https://www.parconazionaledelvesuvio.it/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Timeout dello strumento; nessuna conferma del contenuto.
+  gruppo: roots
+- url: https://museicapri.cultura.gov.it/
+  titolo: Internal Error ()
+  url_finale: https://museicapri.cultura.gov.it/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Timeout dello strumento; nessuna conferma del contenuto.
+  gruppo: roots
+- url: https://www.castelloaragoneseischia.com/
+  titolo: Homepage - Castello Aragonese d'Ischia
+  url_finale: https://www.castelloaragoneseischia.com/
+  esito: aperta
+  righe_disponibili: 228
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://reggiadicaserta.cultura.gov.it/
+  titolo: Home - Reggia di Caserta
+  url_finale: https://reggiadicaserta.cultura.gov.it/
+  esito: aperta
+  righe_disponibili: 325
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.fondazionefs.it/
+  titolo: Fondazione FS
+  url_finale: https://www.fondazionefs.it/
+  esito: aperta
+  righe_disponibili: 214
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.museocorreale.it/
+  titolo: Museo Correale di Terranova - Una Casa d'Arte a Sorrento
+  url_finale: https://www.museocorreale.it/
+  esito: aperta
+  righe_disponibili: 204
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.damichele.net/
+  titolo: Pizzeria da Michele – Il tempio della Pizza – sede storica di Napoli
+  url_finale: https://www.damichele.net/
+  esito: aperta
+  righe_disponibili: 260
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.anticapizzeriaportalba.com/
+  titolo: Internal Error ()
+  url_finale: https://www.anticapizzeriaportalba.com/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Timeout dello strumento; nessuna conferma del contenuto.
+  gruppo: roots
+- url: https://anticapizzeriadimatteo.it/
+  titolo: Antica Pizzeria Di Matteo | Pizzeria in Naples since 1936
+  url_finale: https://anticapizzeriadimatteo.it/en/home-english/
+  esito: aperta
+  righe_disponibili: 80
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.osterialachitarra.it/
+  titolo: Osteria La Chitarra – Osteria Napoli centro
+  url_finale: https://www.osterialachitarra.it/
+  esito: aperta
+  righe_disponibili: 68
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.lalocandagesuvecchionapoli.it/
+  titolo: La Locanda Gesù Vecchio
+  url_finale: https://www.lalocandagesuvecchionapoli.it/
+  esito: aperta
+  righe_disponibili: 118
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.dicostanzopasticceria.it/
+  titolo: Di Costanzo Patisserie
+  url_finale: https://www.dicostanzopasticceria.it/
+  esito: aperta
+  righe_disponibili: 205
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://pizzeriabrandi.com/
+  titolo: Pizzeria Brandi - The Home of Pizza Margherita
+  url_finale: https://pizzeriabrandi.com/
+  esito: aperta
+  righe_disponibili: 83
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.sorbillo.it/
+  titolo: Gino Sorbillo pizza napoletana nella storica sede a Via dei Tribunali
+  url_finale: https://www.sorbillo.it/
+  esito: aperta
+  righe_disponibili: 415
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.hosteriatoledo.it/
+  titolo: Hosteria Toledo | Antica cucina napoletana dal 1951
+  url_finale: https://www.hosteriatoledo.it/
+  esito: aperta
+  righe_disponibili: 93
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://osteria-il-gobbetto3.webnode.it/
+  titolo: Osteria il gobbetto
+  url_finale: https://osteria-il-gobbetto3.webnode.it/
+  esito: aperta
+  righe_disponibili: 28
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.trattorianennella.it/
+  titolo: Homepage - Trattoria da Nennella
+  url_finale: https://www.trattorianennella.it/
+  esito: aperta
+  righe_disponibili: 126
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.pasticceriapintauro1785.it/
+  titolo: Pasticceria Pintauro a Napoli dal 1785
+  url_finale: https://www.pasticceriapintauro1785.it/
+  esito: aperta
+  righe_disponibili: 77
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://50kalo.it/
+  titolo: 50 Kalò - Ciro Salvo il maestro dell'impasto
+  url_finale: https://50kalo.it/
+  esito: aperta
+  righe_disponibili: 30
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.pizzeriasalvo.it/
+  titolo: Internal Error ()
+  url_finale: https://www.pizzeriasalvo.it/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Timeout dello strumento; nessuna conferma del contenuto.
+  gruppo: roots
+- url: https://www.ostariapignatelli.com/
+  titolo: Ostaria Pignatelli | Ristorante A'tipica Trattoria Napoletana
+  url_finale: https://www.ostariapignatelli.com/
+  esito: aperta
+  righe_disponibili: 82
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://lacantinella.it/
+  titolo: Il gusto e la tradizione nel cuore di Napoli | La Cantinella
+  url_finale: https://lacantinella.it/
+  esito: aperta
+  righe_disponibili: 157
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.labersagliera.it/
+  titolo: Internal Error ()
+  url_finale: https://www.labersagliera.it/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Timeout dello strumento; nessuna conferma del contenuto.
+  gruppo: roots
+- url: https://www.lascialuppa.net/
+  titolo: Ristorante la Scialuppa - Delizie di pesce a Borgo Marinari
+  url_finale: https://www.lascialuppa.net/
+  esito: aperta
+  righe_disponibili: 134
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://napoli.terrazzacalabritto.it/
+  titolo: Home - Terrazza Calabritto | Napoli
+  url_finale: https://napoli.terrazzacalabritto.it/
+  esito: aperta
+  righe_disponibili: 96
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.chaletciro1952.com/
+  titolo: Chalet Ciro 1952 | Una storia di cose buone
+  url_finale: https://www.chaletciro1952.com/
+  esito: aperta
+  righe_disponibili: 160
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.grancaffelacaffettiera.com/
+  titolo: Gran Caffè La Caffettiera Napoli
+  url_finale: https://www.grancaffelacaffettiera.com/
+  esito: aperta
+  righe_disponibili: 116
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.gorizia1916.com/
+  titolo: Ristorante pizzeria Gorizia 1916
+  url_finale: https://www.gorizia1916.com/
+  esito: aperta
+  righe_disponibili: 66
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.bellaviavomero.it/
+  titolo: Prodotti dolciari | Napoli (NA) | Bellavia Bar Pasticceria
+  url_finale: https://www.bellaviavomero.it/
+  esito: aperta
+  righe_disponibili: 183
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.meatin.it/
+  titolo: Meatin
+  url_finale: https://www.meatin.it/
+  esito: aperta
+  righe_disponibili: 185
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://pizzeriestarita.it/
+  titolo: Home | Pizzerie Starita
+  url_finale: https://pizzeriestarita.it/
+  esito: aperta
+  righe_disponibili: 88
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.concettinaaitresanti.com/
+  titolo: Concettina ai Tre Santi
+  url_finale: https://www.concettinaaitresanti.com/
+  esito: aperta
+  righe_disponibili: 123
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.pasticceriapoppella.com/
+  titolo: Pasticceria Poppella – pasticcieri napoli
+  url_finale: https://www.pasticceriapoppella.com/
+  esito: aperta
+  righe_disponibili: 57
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://palazzopetrucci.it/
+  titolo: Palazzo Petrucci - Ristorante Pizzeria Napoli
+  url_finale: https://palazzopetrucci.it/
+  esito: aperta
+  righe_disponibili: 141
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://tufotrattoria.it/
+  titolo: Internal Error ()
+  url_finale: https://tufotrattoria.it/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Timeout dello strumento; nessuna conferma del contenuto.
+  gruppo: roots
+- url: https://www.ristoranteafenestella.it/
+  titolo: Ristorante di pesce ‘a Fenestella - a Marechiaro - prenota subito
+  url_finale: https://www.ristoranteafenestella.it/
+  esito: aperta
+  righe_disponibili: 89
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.trattoriadacicciotto.it/
+  titolo: home - Cicciotto a Marechiaro dal 1942
+  url_finale: https://www.trattoriadacicciotto.it/
+  esito: aperta
+  righe_disponibili: 27
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.macellegria.it/
+  titolo: Home - Macellegria
+  url_finale: https://www.macellegria.it/
+  esito: aperta
+  righe_disponibili: 121
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: roots
+- url: https://www.eavsrl.it/orari-autobus/
+  titolo: Orari Autobus - EAV srl
+  url_finale: https://www.eavsrl.it/orari-autobus/
+  esito: aperta
+  righe_disponibili: 270
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://www.eavsrl.it/infomobilita-autolinea/
+  titolo: Internal Error ()
+  url_finale: https://www.eavsrl.it/infomobilita-autolinea/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: extra
+- url: https://www.rfi.it/it/stazioni/pagine-stazioni/servizi-di-qualita/informazioni-al-pubblico/quadri-orario-on-line.html
+  titolo: www.rfi.it
+  url_finale: https://www.rfi.it/it/stazioni/pagine-stazioni/servizi-di-qualita/informazioni-al-pubblico/quadri-orario-on-line.html
+  esito: aperta
+  righe_disponibili: 459
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://shop.caremar.it/it/avvisi/
+  titolo: CAREMAR | 7 Porti del Golfo di Napoli collegati tutti i giorni dell'anno
+  url_finale: https://shop.caremar.it/it/avvisi/
+  esito: aperta
+  righe_disponibili: 118
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://www.monasterodisantachiara.it/blog/
+  titolo: News - Chiostro di Santa Chiara
+  url_finale: https://www.monasterodisantachiara.it/blog/
+  esito: aperta
+  righe_disponibili: 175
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://palazzorealedinapoli.org/category/avvisi/
+  titolo: 'Categoria: Avvisi - Palazzo Reale di Napoli'
+  url_finale: https://palazzorealedinapoli.org/category/avvisi/
+  esito: aperta
+  righe_disponibili: 84
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://muddnapoli.it/news/
+  titolo: News ed Eventi MUDD Napoli - Aggiornamenti sul Museo Diocesano Diffuso
+  url_finale: https://muddnapoli.it/news/
+  esito: aperta
+  righe_disponibili: 163
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://girolamini.cultura.gov.it/avvisi/
+  titolo: Internal Error ()
+  url_finale: https://girolamini.cultura.gov.it/avvisi/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: extra
+- url: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/
+  titolo: Orario Ferrovia - L1 - Napoli-Sorrento dal 17 ottobre 2026 - EAV srl
+  url_finale: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/
+  esito: aperta
+  righe_disponibili: 24
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://girolamini.cultura.gov.it/category/avvisi-e-news/
+  titolo: Avvisi Archivi - Complesso monumentale e Biblioteca dei Girolamini
+  url_finale: https://girolamini.cultura.gov.it/category/avvisi-e-news/
+  esito: aperta
+  righe_disponibili: 102
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://reggiadicaserta.cultura.gov.it/visita-sicura-e-avvisi/
+  titolo: Visita sicura e avvisi - Reggia di Caserta
+  url_finale: https://reggiadicaserta.cultura.gov.it/visita-sicura-e-avvisi/
+  esito: aperta
+  righe_disponibili: 283
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://ercolano.cultura.gov.it/orari-e-biglietti/
+  titolo: Internal Error ()
+  url_finale: https://ercolano.cultura.gov.it/orari-e-biglietti/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: extra
+- url: https://www.museosansevero.it/pianifica-la-visita/orari-e-tariffe
+  titolo: Orari e tariffe | Museo Cappella Sansevero
+  url_finale: https://www.museosansevero.it/pianifica-la-visita/orari-e-tariffe
+  esito: aperta
+  righe_disponibili: 142
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://www.50kalo.it/info_repubblica.php
+  titolo: 50 Kalò - Dove siamo e Contatti
+  url_finale: https://www.50kalo.it/info_repubblica.php
+  esito: aperta
+  righe_disponibili: 26
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://www.fondazionefs.it/it/esplora-il-museo/news-eventi.html
+  titolo: News & eventi MUSEO
+  url_finale: https://www.fondazionefs.it/it/esplora-il-museo/news-eventi.html
+  esito: aperta
+  righe_disponibili: 118
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://www.eavsrl.it/orari/
+  titolo: Internal Error ()
+  url_finale: https://www.eavsrl.it/orari/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: extra
+- url: https://www.eavsrl.it/infomobilita-autolinee/
+  titolo: Internal Error ()
+  url_finale: https://www.eavsrl.it/infomobilita-autolinee/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: extra
+- url: https://www.anm.it/s/funicolari?language=it
+  titolo: Home ANM
+  url_finale: https://www.anm.it/s/funicolari?language=it
+  esito: non_verificabile
+  righe_disponibili: 7
+  nota: Il portale restituisce una schermata tecnica; orari non leggibili.
+  gruppo: extra
+- url: https://www.trenitalia.com/it/informazioni/lavori-programmati.html
+  titolo: 'Lavori programmati: interruzioni e variazioni dei treni | Trenitalia'
+  url_finale: https://www.trenitalia.com/it/informazioni/lavori-programmati.html
+  esito: aperta
+  righe_disponibili: 745
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://www.rfi.it/it/stazioni/pagine-stazioni/servizi-di-qualita/quadri-orario.html
+  titolo: Internal Error ()
+  url_finale: https://www.rfi.it/it/stazioni/pagine-stazioni/servizi-di-qualita/quadri-orario.html
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+  gruppo: extra
+- url: https://shop.caremar.it/it/orari/
+  titolo: CAREMAR | Traghetti per Capri da Napoli, Traghetti e Aliscafi Napoli-Capri
+  url_finale: https://shop.caremar.it/it/orari/
+  esito: aperta
+  righe_disponibili: 119
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://www.eavsrl.it/orari-linee-ferroviarie/
+  titolo: Orari linee ferroviarie - EAV srl
+  url_finale: https://www.eavsrl.it/orari-linee-ferroviarie/
+  esito: aperta
+  righe_disponibili: 142
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://duomonapoli.it/vita-liturgica/
+  titolo: Vita Liturgica - Duomo di Napoli
+  url_finale: https://duomonapoli.it/vita-liturgica/
+  esito: aperta
+  righe_disponibili: 283
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://muddnapoli.it/luoghi/san-giovanni-a-carbonara/
+  titolo: 'San Giovanni a Carbonara: Luogo del MUDD Napoli - Chiese e Spazi Sacri del Museo Diocesano Diffuso'
+  url_finale: https://muddnapoli.it/luoghi/san-giovanni-a-carbonara/
+  esito: aperta
+  righe_disponibili: 343
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://muddnapoli.it/luoghi/visita-tetti-duomo/
+  titolo: 'Tetti del Duomo: Luogo del MUDD Napoli - Chiese e Spazi Sacri del Museo Diocesano Diffuso'
+  url_finale: https://muddnapoli.it/luoghi/visita-tetti-duomo/
+  esito: aperta
+  righe_disponibili: 224
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://muddnapoli.it/news/
+  titolo: News ed Eventi MUDD Napoli - Aggiornamenti sul Museo Diocesano Diffuso
+  url_finale: https://muddnapoli.it/news/
+  esito: aperta
+  righe_disponibili: 163
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://www.fondazionefs.it/it/esplora-il-museo/visita-pietrarsa.html
+  titolo: Visita Pietrarsa
+  url_finale: https://www.fondazionefs.it/it/esplora-il-museo/visita-pietrarsa.html
+  esito: aperta
+  righe_disponibili: 267
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://www.fondazionefs.it/it/esplora-il-museo/news-eventi/2026/5/31/nuovi-orari-e-visita-serale-al-museo-nazionale-ferroviario-di-pi.html
+  titolo: Nuovi orari e visita serale al Museo Nazionale Ferroviario di Pietrarsa
+  url_finale: https://www.fondazionefs.it/it/esplora-il-museo/news-eventi/2026/5/31/nuovi-orari-e-visita-serale-al-museo-nazionale-ferroviario-di-pi.html
+  esito: aperta
+  righe_disponibili: 112
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: extra
+- url: https://www.eavsrl.it/download/orari-e-tariffe-campania-express/
+  titolo: Orari e Tariffe - Campania Express - EAV srl
+  url_finale: https://www.eavsrl.it/download/orari-e-tariffe-campania-express/
+  esito: aperta
+  righe_disponibili: 28
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://www.eavsrl.it/campania-express/
+  titolo: Internal Error ()
+  url_finale: https://www.eavsrl.it/campania-express/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+  gruppo: transport-extra
+- url: https://www.eavsrl.it/download/808-pompei-vesuvio/
+  titolo: 808 Pompei-Vesuvio [dal 1.10.2026] - EAV srl
+  url_finale: https://www.eavsrl.it/download/808-pompei-vesuvio/
+  esito: aperta
+  righe_disponibili: 26
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://shop.caremar.it/it/tariffe/
+  titolo: CAREMAR | Tariffe
+  url_finale: https://shop.caremar.it/it/tariffe/
+  esito: aperta
+  righe_disponibili: 159
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://shop.caremar.it/it/prossime-partenze/
+  titolo: CAREMAR | Prossime Partenze
+  url_finale: https://shop.caremar.it/it/prossime-partenze/
+  esito: aperta
+  righe_disponibili: 190
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=71&Itemid=98
+  titolo: ANM Web Site - METRO LINEA 1
+  url_finale: https://www2.anm.it/index.php?option=com_content&task=view&id=71&Itemid=98
+  esito: aperta
+  righe_disponibili: 75
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://prm.rfi.it/qo_prm/QO_Pdf.aspx?Tipo=P&lin=it&id=530
+  titolo: ''
+  url_finale: https://prm.rfi.it/qo_prm/QO_Pdf.aspx?Tipo=P&lin=it&id=530
+  esito: aperta
+  righe_disponibili: 48
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://www.trenitalia.com/content/trenitalia/it/informazioni/lavori-programmati/20260621-circolazione-interrotta-tra-napoli-campi-flegrei-e-puzzuoli-solfatara.html
+  titolo: Linee Napoli Campi Flegrei – Villa Literno; Pozzuoli Solfatara – Napoli San Giovanni Barra; Napoli
+    Campi Flegrei – Caserta | Trenitalia
+  url_finale: https://www.trenitalia.com/content/trenitalia/it/informazioni/lavori-programmati/20260621-circolazione-interrotta-tra-napoli-campi-flegrei-e-puzzuoli-solfatara.html
+  esito: aperta
+  righe_disponibili: 670
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=81&Itemid=98
+  titolo: Internal Error ()
+  url_finale: https://www2.anm.it/index.php?option=com_content&task=view&id=81&Itemid=98
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+  gruppo: transport-extra
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=82&Itemid=98
+  titolo: Internal Error ()
+  url_finale: https://www2.anm.it/index.php?option=com_content&task=view&id=82&Itemid=98
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+  gruppo: transport-extra
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=84&Itemid=98
+  titolo: Internal Error ()
+  url_finale: https://www2.anm.it/index.php?option=com_content&task=view&id=84&Itemid=98
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+  gruppo: transport-extra
+- url: https://orariotreni.eavsrl.it/
+  titolo: Orario Treni Eav S.r.l.
+  url_finale: https://orariotreni.eavsrl.it/
+  esito: non_verificabile
+  righe_disponibili: 5
+  nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+  gruppo: transport-extra
+- url: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/
+  titolo: Internal Error ()
+  url_finale: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+  gruppo: transport-extra
+- url: https://www.anm.it/s/?language=it
+  titolo: Home ANM
+  url_finale: https://www.anm.it/s/?language=it
+  esito: non_verificabile
+  righe_disponibili: 7
+  nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+  gruppo: transport-extra
+- url: https://www.anm.it/s/funicolari?language=it
+  titolo: Home ANM
+  url_finale: https://www.anm.it/s/funicolari?language=it
+  esito: non_verificabile
+  righe_disponibili: 7
+  nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+  gruppo: transport-extra
+- url: https://www.eavsrl.it/infomobilita-ferrovia/
+  titolo: Avvisi - Infomobilità Ferrovia - EAV srl
+  url_finale: https://www.eavsrl.it/infomobilita-ferrovia/
+  esito: aperta
+  righe_disponibili: 79
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://www.eavsrl.it/category/news-home-page/
+  titolo: News Archivi - EAV srl
+  url_finale: https://www.eavsrl.it/category/news-home-page/
+  esito: aperta
+  righe_disponibili: 90
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://www.trenitalia.com/it/informazioni/Infomobilita/notizie-infomobilita.html
+  titolo: Notizie Infomobilità | Trenitalia
+  url_finale: https://www.trenitalia.com/it/informazioni/Infomobilita/notizie-infomobilita.html
+  esito: aperta
+  righe_disponibili: 1707
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://museicampania.cultura.gov.it/category/avvisi/
+  titolo: Internal Error ()
+  url_finale: https://museicampania.cultura.gov.it/category/avvisi/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+  gruppo: transport-extra
+- url: https://www.museosansevero.it/news-ed-eventi/news
+  titolo: Museo Cappella Sansevero
+  url_finale: https://www.museosansevero.it/news-ed-eventi/news
+  esito: aperta
+  righe_disponibili: 64
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://www.ortobotaniconapoli.it/it/news.html
+  titolo: Internal Error ()
+  url_finale: https://www.ortobotaniconapoli.it/it/news.html
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+  gruppo: transport-extra
+- url: https://www.osterialachitarra.it/news/
+  titolo: News – Osteria La Chitarra
+  url_finale: https://www.osterialachitarra.it/news/
+  esito: aperta
+  righe_disponibili: 53
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://www.pasticceriapintauro1785.it/blog/
+  titolo: Blog & News - Pintauro Napoli
+  url_finale: https://www.pasticceriapintauro1785.it/blog/
+  esito: aperta
+  righe_disponibili: 94
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://palazzopetrucci.it/news/
+  titolo: News - Palazzo Petrucci
+  url_finale: https://palazzopetrucci.it/news/
+  esito: aperta
+  righe_disponibili: 112
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://filangierimuseo.it/
+  titolo: Filangieri Museum - A Princely Museum
+  url_finale: https://filangierimuseo.it/en/
+  esito: aperta
+  righe_disponibili: 87
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://duomonapoli.it/pianifica-la-visita/
+  titolo: Pianifica la tua visita - Duomo di Napoli
+  url_finale: https://duomonapoli.it/pianifica-la-visita/
+  esito: aperta
+  righe_disponibili: 172
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: transport-extra
+- url: https://www.monasterodisantachiara.it/orari/
+  titolo: Orari e Tariffe - Chiostro di Santa Chiara
+  url_finale: https://www.monasterodisantachiara.it/orari/
+  esito: aperta
+  righe_disponibili: 207
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: pilot
+- url: https://girolamini.cultura.gov.it/apertura-e-orari-dei-servizi/
+  titolo: Apertura e orari dei servizi - Complesso monumentale e Biblioteca dei Girolamini
+  url_finale: https://girolamini.cultura.gov.it/apertura-e-orari-dei-servizi/
+  esito: aperta
+  righe_disponibili: 106
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: pilot
+- url: https://www.50kalo.it/info_repubblica.php
+  titolo: 50 Kalò - Dove siamo e Contatti
+  url_finale: https://www.50kalo.it/info_repubblica.php
+  esito: aperta
+  righe_disponibili: 26
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: pilot
+- url: https://www.lalocandagesuvecchionapoli.it/i-nostri-contatti/
+  titolo: I nostri contatti – La Locanda Gesù Vecchio
+  url_finale: https://www.lalocandagesuvecchionapoli.it/i-nostri-contatti/
+  esito: aperta
+  righe_disponibili: 67
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: pilot
+- url: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/
+  titolo: Orario Ferrovia - L1 - Napoli-Sorrento dal 17 ottobre 2026 - EAV srl
+  url_finale: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/
+  esito: aperta
+  righe_disponibili: 24
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: pilot
+- url: https://www.50kalo.it/info.php
+  titolo: 50 Kalò - Dove siamo e Contatti
+  url_finale: https://www.50kalo.it/info.php
+  esito: aperta
+  righe_disponibili: 26
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: finalResearch
+- url: https://www.comune.napoli.it/novita/linea-6-della-metro-nei-giorni-feriali-corse-fino-alle-21-10/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/novita/linea-6-della-metro-nei-giorni-feriali-corse-fino-alle-21-10/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Contenuto non leggibile nello strumento; nessuna conferma.
+  gruppo: finalResearch
+- url: https://www.comune.napoli.it/novita/15-maggio-2026-chiusura-funicolare-montesanto-per-manutenzione-ventennale/
+  titolo: Internal Error ()
+  url_finale: https://www.comune.napoli.it/novita/15-maggio-2026-chiusura-funicolare-montesanto-per-manutenzione-ventennale/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Contenuto non leggibile nello strumento; nessuna conferma.
+  gruppo: finalResearch
+- url: https://www.gesunuovo.it/
+  titolo: Chiesa del Gesù Nuovo di Napoli
+  url_finale: https://www.gesunuovo.it/
+  esito: non_verificabile
+  righe_disponibili: 1
+  nota: Contenuto non leggibile nello strumento; nessuna conferma.
+  gruppo: churches
+- url: https://www.chiesadinapoli.it/wd-annuario-enti/1-decanato-30-parrocchie-centro-storico-forcella-mercato-procida-1301/parrocchia-immacolata-al-gesu-nuovo-napoli-241/
+  titolo: Parrocchia Immacolata al Gesù Nuovo Napoli – Chiesa di Napoli
+  url_finale: https://www.chiesadinapoli.it/wd-annuario-enti/1-decanato-30-parrocchie-centro-storico-forcella-mercato-procida-1301/parrocchia-immacolata-al-gesu-nuovo-napoli-241/
+  esito: aperta
+  righe_disponibili: 222
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: churches
+- url: https://www.italia.it/it/campania/napoli/chiesa-di-san-gregorio-armeno
+  titolo: Chiesa di San Gregorio Armeno (Chiesa di Santa Patrizia) - Italia.it
+  url_finale: https://www.italia.it/it/campania/napoli/chiesa-di-san-gregorio-armeno
+  esito: aperta
+  righe_disponibili: 91
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: churches
+- url: https://gesuiti.it/cosa-facciamo/chiese/
+  titolo: Chiese - Gesuiti
+  url_finale: https://gesuiti.it/cosa-facciamo/chiese/
+  esito: aperta
+  righe_disponibili: 369
+  nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+  gruppo: churches
+ricerche:
+- id: duomo
+  gruppo: tappe
+  q: site:www.italia.it "Duomo e Tesoro di San Gennaro" orari apertura chiusura avvisi 2026 2027
+- id: sansevero
+  gruppo: tappe
+  q: site:www.museosansevero.it "Cappella Sansevero" orari apertura chiusura avvisi 2026 2027
+- id: santa-chiara
+  gruppo: tappe
+  q: site:www.monasterodisantachiara.it "Santa Chiara e il chiostro maiolicato" orari apertura chiusura avvisi
+    2026 2027
+- id: spaccanapoli
+  gruppo: tappe
+  q: site:comune.napoli.it "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno" orari apertura chiusura avvisi
+    2026 2027
+- id: tribunali
+  gruppo: tappe
+  q: 'site:comune.napoli.it "Via dei Tribunali: pizza e cibo di strada" orari apertura chiusura avvisi 2026
+    2027'
+- id: pio-monte
+  gruppo: tappe
+  q: site:piomontedellamisericordia.it "Pio Monte della Misericordia" orari apertura chiusura avvisi 2026 2027
+- id: mann
+  gruppo: tappe
+  q: site:www.museoarcheologiconapoli.it "Museo Archeologico Nazionale" orari apertura chiusura avvisi 2026
+    2027
+- id: san-lorenzo
+  gruppo: tappe
+  q: site:www.laneapolissotterrata.it "San Lorenzo Maggiore e gli scavi" orari apertura chiusura avvisi 2026
+    2027
+- id: napoli-sotterranea
+  gruppo: tappe
+  q: site:www.napolisotterranea.org "Napoli Sotterranea" orari apertura chiusura avvisi 2026 2027
+- id: madre
+  gruppo: tappe
+  q: site:www.madrenapoli.it "Museo Madre" orari apertura chiusura avvisi 2026 2027
+- id: plebiscito
+  gruppo: tappe
+  q: site:napoliforme.comune.napoli.it "Piazza del Plebiscito e Galleria Umberto I" orari apertura chiusura
+    avvisi 2026 2027
+- id: palazzo-reale
+  gruppo: tappe
+  q: site:palazzorealedinapoli.org "Palazzo Reale" orari apertura chiusura avvisi 2026 2027
+- id: san-carlo
+  gruppo: tappe
+  q: site:www.teatrosancarlo.it "Teatro di San Carlo" orari apertura chiusura avvisi 2026 2027
+- id: castel-nuovo
+  gruppo: tappe
+  q: site:www.comune.napoli.it "Castel Nuovo (Maschio Angioino)" orari apertura chiusura avvisi 2026 2027
+- id: toledo
+  gruppo: tappe
+  q: site:metroart.anm.it "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli" orari apertura chiusura
+    avvisi 2026 2027
+- id: galleria-borbonica
+  gruppo: tappe
+  q: site:www.galleriaborbonica.com "Galleria Borbonica" orari apertura chiusura avvisi 2026 2027
+- id: monte-echia
+  gruppo: tappe
+  q: site:www2.anm.it "Monte Echia, il belvedere di Pizzofalcone" orari apertura chiusura avvisi 2026 2027
+- id: borgo-marinari
+  gruppo: tappe
+  q: site:www.comune.napoli.it "Borgo Marinari e Castel dell'Ovo" orari apertura chiusura avvisi 2026 2027
+- id: lungomare
+  gruppo: tappe
+  q: 'site:www.comune.napoli.it "Il lungomare: via Partenope, via Caracciolo e Villa Comunale" orari apertura
+    chiusura avvisi 2026 2027'
+- id: dadom
+  gruppo: tappe
+  q: site:dadom.okticket.it "Acquario e museo Darwin-Dohrn" orari apertura chiusura avvisi 2026 2027
+- id: sant-elmo
+  gruppo: tappe
+  q: site:cultura.gov.it "Castel Sant'Elmo" orari apertura chiusura avvisi 2026 2027
+- id: san-martino
+  gruppo: tappe
+  q: site:cultura.gov.it "Certosa e Museo di San Martino" orari apertura chiusura avvisi 2026 2027
+- id: floridiana
+  gruppo: tappe
+  q: site:cultura.gov.it "Villa Floridiana e il museo della ceramica" orari apertura chiusura avvisi 2026 2027
+- id: pedamentina
+  gruppo: tappe
+  q: site:www.comune.napoli.it "La Pedamentina, da San Martino in discesa" orari apertura chiusura avvisi 2026
+    2027
+- id: catacombe
+  gruppo: tappe
+  q: site:catacombedinapoli.it "Catacombe di San Gennaro" orari apertura chiusura avvisi 2026 2027
+- id: sanita
+  gruppo: tappe
+  q: site:catacombedinapoli.it "Rione Sanità e Basilica della Sanità" orari apertura chiusura avvisi 2026 2027
+- id: fontanelle
+  gruppo: tappe
+  q: site:cimiterodellefontanelle.it "Cimitero delle Fontanelle" orari apertura chiusura avvisi 2026 2027
+- id: capodimonte
+  gruppo: tappe
+  q: site:capodimonte.cultura.gov.it "Museo e Real Bosco di Capodimonte" orari apertura chiusura avvisi 2026
+    2027
+- id: virgilio
+  gruppo: tappe
+  q: site:cultura.gov.it "Parco delle Tombe di Virgilio e Leopardi" orari apertura chiusura avvisi 2026 2027
+- id: marechiaro
+  gruppo: tappe
+  q: site:www.comune.napoli.it "Marechiaro" orari apertura chiusura avvisi 2026 2027
+- id: gaiola
+  gruppo: tappe
+  q: site:www.areamarinaprotettagaiola.it "Parco sommerso della Gaiola" orari apertura chiusura avvisi 2026
+    2027
+- id: parco-virgiliano
+  gruppo: tappe
+  q: site:www.comune.napoli.it "Parco Virgiliano" orari apertura chiusura avvisi 2026 2027
+- id: citta-scienza
+  gruppo: tappe
+  q: site:www.cittadellascienza.it "Città della Scienza" orari apertura chiusura avvisi 2026 2027
+- id: san-domenico
+  gruppo: tappe
+  q: site:domasandomenicomaggiore.it "San Domenico Maggiore e le arche aragonesi" orari apertura chiusura avvisi
+    2026 2027
+- id: purgatorio-ad-arco
+  gruppo: tappe
+  q: site:www.purgatorioadarco.it "Purgatorio ad Arco, chiesa e ipogeo" orari apertura chiusura avvisi 2026
+    2027
+- id: girolamini
+  gruppo: tappe
+  q: site:girolamini.cultura.gov.it "Girolamini, chiesa, museo e biblioteca" orari apertura chiusura avvisi
+    2026 2027
+- id: tetti-duomo
+  gruppo: tappe
+  q: site:www.muddnapoli.it "I tetti del Duomo" orari apertura chiusura avvisi 2026 2027
+- id: filangieri
+  gruppo: tappe
+  q: site:www.museofilangieri.it "Museo Filangieri" orari apertura chiusura avvisi 2026 2027
+- id: san-giovanni-a-carbonara
+  gruppo: tappe
+  q: site:www.muddnapoli.it "San Giovanni a Carbonara" orari apertura chiusura avvisi 2026 2027
+- id: mercato-porta-nolana
+  gruppo: tappe
+  q: site:www.comune.napoli.it "Il mercato di Porta Nolana" orari apertura chiusura avvisi 2026 2027
+- id: pignasecca
+  gruppo: tappe
+  q: site:www.comune.napoli.it "Il mercato della Pignasecca" orari apertura chiusura avvisi 2026 2027
+- id: ventaglieri
+  gruppo: tappe
+  q: site:www.comune.napoli.it "Parco dei Ventaglieri" orari apertura chiusura avvisi 2026 2027
+- id: villa-pignatelli
+  gruppo: tappe
+  q: site:palazzorealedinapoli.org "Villa Pignatelli, museo e giardino" orari apertura chiusura avvisi 2026
+    2027
+- id: parco-mascagna
+  gruppo: tappe
+  q: site:www.comune.napoli.it "Parco Mascagna" orari apertura chiusura avvisi 2026 2027
+- id: camaldoli
+  gruppo: tappe
+  q: site:www.comune.napoli.it "Parco dei Camaldoli" orari apertura chiusura avvisi 2026 2027
+- id: parco-poggio
+  gruppo: tappe
+  q: site:www.comune.napoli.it "Parco del Poggio" orari apertura chiusura avvisi 2026 2027
+- id: orto-botanico
+  gruppo: tappe
+  q: site:www.ortobotaniconapoli.it "Orto Botanico" orari apertura chiusura avvisi 2026 2027
+- id: sant-antonio-posillipo
+  gruppo: tappe
+  q: site:comune.napoli.it "Il belvedere di Sant'Antonio a Posillipo" orari apertura chiusura avvisi 2026 2027
+- id: via-petrarca
+  gruppo: tappe
+  q: site:comune.napoli.it "Il belvedere di via Petrarca" orari apertura chiusura avvisi 2026 2027
+- id: palazzo-donn-anna
+  gruppo: tappe
+  q: site:comune.napoli.it "Palazzo Donn'Anna, da fuori" orari apertura chiusura avvisi 2026 2027
+- id: mostra-oltremare
+  gruppo: tappe
+  q: site:mostradoltremare.it "Il parco della Mostra d'Oltremare" orari apertura chiusura avvisi 2026 2027
+- id: pompei
+  gruppo: tappe
+  q: site:pompeiisites.org "Pompei" orari apertura chiusura avvisi 2026 2027
+- id: ercolano
+  gruppo: tappe
+  q: site:ercolano.cultura.gov.it "Ercolano" orari apertura chiusura avvisi 2026 2027
+- id: vesuvio
+  gruppo: tappe
+  q: site:www.parconazionaledelvesuvio.it "Vesuvio, il Gran Cono" orari apertura chiusura avvisi 2026 2027
+- id: capri
+  gruppo: tappe
+  q: site:museicapri.cultura.gov.it "Capri" orari apertura chiusura avvisi 2026 2027
+- id: ischia
+  gruppo: tappe
+  q: site:www.castelloaragoneseischia.com "Ischia" orari apertura chiusura avvisi 2026 2027
+- id: procida
+  gruppo: tappe
+  q: site:shop.caremar.it "Procida" orari apertura chiusura avvisi 2026 2027
+- id: caserta
+  gruppo: tappe
+  q: site:reggiadicaserta.cultura.gov.it "Reggia di Caserta" orari apertura chiusura avvisi 2026 2027
+- id: pietrarsa
+  gruppo: tappe
+  q: site:www.fondazionefs.it "Museo ferroviario di Pietrarsa" orari apertura chiusura avvisi 2026 2027
+- id: sorrento
+  gruppo: tappe
+  q: site:www.museocorreale.it "Sorrento" orari apertura chiusura avvisi 2026 2027
+- id: da-michele
+  gruppo: locali
+  q: site:www.damichele.net "L'Antica Pizzeria da Michele" orari apertura chiusura avvisi 2026 2027
+- id: port-alba
+  gruppo: locali
+  q: site:www.anticapizzeriaportalba.com "Antica Pizzeria Port'Alba" orari apertura chiusura avvisi 2026 2027
+- id: di-matteo
+  gruppo: locali
+  q: site:anticapizzeriadimatteo.it "Antica Pizzeria Di Matteo" orari apertura chiusura avvisi 2026 2027
+- id: chitarra
+  gruppo: locali
+  q: site:www.osterialachitarra.it "Osteria La Chitarra" orari apertura chiusura avvisi 2026 2027
+- id: gesu-vecchio
+  gruppo: locali
+  q: site:www.lalocandagesuvecchionapoli.it "La Locanda Gesù Vecchio" orari apertura chiusura avvisi 2026 2027
+- id: di-costanzo
+  gruppo: locali
+  q: site:www.dicostanzopasticceria.it "Pasticceria Di Costanzo" orari apertura chiusura avvisi 2026 2027
+- id: brandi
+  gruppo: locali
+  q: site:pizzeriabrandi.com "Pizzeria Brandi" orari apertura chiusura avvisi 2026 2027
+- id: zia-esterina
+  gruppo: locali
+  q: site:www.sorbillo.it "Antica Pizza Fritta da Zia Esterina Sorbillo" orari apertura chiusura avvisi 2026
+    2027
+- id: hosteria-toledo
+  gruppo: locali
+  q: site:www.hosteriatoledo.it "Hosteria Toledo" orari apertura chiusura avvisi 2026 2027
+- id: gobbetto
+  gruppo: locali
+  q: site:osteria-il-gobbetto3.webnode.it "Osteria Il Gobbetto" orari apertura chiusura avvisi 2026 2027
+- id: nennella
+  gruppo: locali
+  q: site:www.trattorianennella.it "Trattoria da Nennella" orari apertura chiusura avvisi 2026 2027
+- id: pintauro
+  gruppo: locali
+  q: site:www.pasticceriapintauro1785.it "Pasticceria Pintauro" orari apertura chiusura avvisi 2026 2027
+- id: cinquanta-kalo
+  gruppo: locali
+  q: site:50kalo.it "50 Kalò" orari apertura chiusura avvisi 2026 2027
+- id: salvo
+  gruppo: locali
+  q: site:www.pizzeriasalvo.it "Pizzeria Salvo" orari apertura chiusura avvisi 2026 2027
+- id: pignatelli
+  gruppo: locali
+  q: site:www.ostariapignatelli.com "Ostaria Pignatelli" orari apertura chiusura avvisi 2026 2027
+- id: cantinella
+  gruppo: locali
+  q: site:lacantinella.it "La Cantinella" orari apertura chiusura avvisi 2026 2027
+- id: bersagliera
+  gruppo: locali
+  q: site:www.labersagliera.it "La Bersagliera" orari apertura chiusura avvisi 2026 2027
+- id: scialuppa
+  gruppo: locali
+  q: site:www.lascialuppa.net "La Scialuppa" orari apertura chiusura avvisi 2026 2027
+- id: calabritto
+  gruppo: locali
+  q: site:napoli.terrazzacalabritto.it "Terrazza Calabritto" orari apertura chiusura avvisi 2026 2027
+- id: chalet-ciro
+  gruppo: locali
+  q: site:www.chaletciro1952.com "Chalet Ciro" orari apertura chiusura avvisi 2026 2027
+- id: caffettiera
+  gruppo: locali
+  q: site:www.grancaffelacaffettiera.com "Gran Caffè La Caffettiera" orari apertura chiusura avvisi 2026 2027
+- id: gorizia
+  gruppo: locali
+  q: site:www.gorizia1916.com "Pizzeria Gorizia 1916" orari apertura chiusura avvisi 2026 2027
+- id: bellavia
+  gruppo: locali
+  q: site:www.bellaviavomero.it "Pasticceria Bellavia" orari apertura chiusura avvisi 2026 2027
+- id: meatin
+  gruppo: locali
+  q: site:www.meatin.it "Meatin" orari apertura chiusura avvisi 2026 2027
+- id: starita
+  gruppo: locali
+  q: site:pizzeriestarita.it "Pizzeria Starita a Materdei" orari apertura chiusura avvisi 2026 2027
+- id: concettina
+  gruppo: locali
+  q: site:www.concettinaaitresanti.com "Concettina ai Tre Santi" orari apertura chiusura avvisi 2026 2027
+- id: poppella
+  gruppo: locali
+  q: site:www.pasticceriapoppella.com "Pasticceria Poppella" orari apertura chiusura avvisi 2026 2027
+- id: petrucci-posillipo
+  gruppo: locali
+  q: site:palazzopetrucci.it "Palazzo Petrucci Pizzeria, Posillipo" orari apertura chiusura avvisi 2026 2027
+- id: tufo
+  gruppo: locali
+  q: site:tufotrattoria.it "Tufò Trattoria" orari apertura chiusura avvisi 2026 2027
+- id: fenestella
+  gruppo: locali
+  q: site:www.ristoranteafenestella.it "'A Fenestella" orari apertura chiusura avvisi 2026 2027
+- id: cicciotto
+  gruppo: locali
+  q: site:www.trattoriadacicciotto.it "Cicciotto a Marechiaro" orari apertura chiusura avvisi 2026 2027
+- id: macellegria
+  gruppo: locali
+  q: site:www.macellegria.it "Macellegria" orari apertura chiusura avvisi 2026 2027
+prova_iniziale:
+- controllo: tappa-sansevero
+  esito: Orario ordinario coincide con la scheda; rilevate eccezioni future. Controllo generale dei prezzi
+    non eseguito.
+- controllo: tappa-girolamini
+  esito: Confermata distinzione prima/dopo 25 ottobre e fra Biblioteca e Chiesa-Museo; cambio già menzionato
+    nella scheda.
+- controllo: locale-gesu-vecchio
+  esito: Orario ordinario della sede al civico 26 coincide; civico 4 escluso. Prenotazione e avvisi richiedono
+    confronto separato.
+- controllo: locale-cinquanta-kalo
+  esito: Fonte con www della sede Sannazaro aperta e orario ordinario coincidente. Fonte Repubblica esclusa
+    per sede diversa.
+- controllo: trasporto-vesuviane
+  esito: Nuovo documento dal 17 ottobre rintracciato tramite indice e notizia, anziché fermarsi al vecchio
+    URL. Contenuto PDF ancora da confrontare.
+fatti_applicativi_modificati: false
+controlli_completi_conclusi: 0

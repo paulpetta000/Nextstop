@@ -1,5 +1,11 @@
 # PROGRESS · stato attuale
 
+## Registro dei controlli periodici · 19/10/2026
+
+Su richiesta di Enrico, preparati [registro](aggiornamenti/controlli-periodici.yaml), [procedura condivisa Codex/Claude](aggiornamenti/PROCEDURA.md) e [rapporto iniziale](aggiornamenti/rapporti/2026-10-19-impostazione.md), secondo il piano approvato in questa chat. Copertura: 60 tappe/gite, 32 locali e 14 gruppi di trasporto, con ricerca obbligatoria di nuove pagine/PDF oltre ai vecchi URL, distinzione fra date di pubblicazione e validità, eccezioni e sedi. Prove iniziali: nuovo documento EAV dal 17 ottobre, cambio Girolamini dal 25, calendario futuro Sansevero e distinzione delle sedi Gesù Vecchio/50 Kalò. Alcuni siti non leggibili dal cloud; nessuna conferma degli orari basata sui soli risultati di ricerca. Dati applicativi e date precedenti conservati; nessuna pianificazione automatica né pubblicazione su main.
+
+**Seguito di questo blocco:** primo controllo completo su richiesta, prioritari EAV e fonti non leggibili, seguendo la procedura. Le frequenze 7/14 giorni decorrono da controlli completati; la preparazione non rinvia le scadenze. La revisione Web Locks sospesa sul computer rimane un lavoro distinto. Dettagli e verifiche nel rapporto; gli appunti seguenti descrivono il lavoro precedente del 17 ottobre.
+
 _Aggiornato il 17/10/2026. Enrico ha autorizzato push e integrazione in main di tutti i blocchi completati della PR #5, inclusi i sei commit locali successivi. La nuova revisione dei salvataggi è sospesa e conservata separatamente; non fa parte di questo rilascio._
 
 ## Pubblicazione su main · mandato corrente

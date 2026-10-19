@@ -1,0 +1,54 @@
+tipo: controllo_periodico
+data: null
+base_commit: null
+modalita: rapporto # rapporto | aggiornamento
+ambito_richiesto: null
+assistente: null
+strumenti: []
+copertura:
+  controlli_selezionati: []
+  completi: []
+  parziali: []
+  non_verificabili: []
+risultati:
+  - controllo: null # ID da controlli-periodici.yaml
+    esito: null # invariato | modifica_confermata | futura | eccezione_temporanea | nuova_pubblicazione_da_leggere | non_verificabile | contrasto | fonte_ufficiale_mancante | non_applicabile
+    completo: false
+    campi_verificati: []
+    campi_non_verificati: []
+    ricerca_novita:
+      query_eseguite: []
+      indici_consultati: []
+      paginazione_e_periodo_coperti: null
+      lacune: []
+    fonti:
+      - id_esistente: null
+        url_richiesto: null
+        url_finale: null
+        esito_accesso: null
+        letta_e_confrontata: false
+        data_pubblicazione: null
+        data_revisione: null
+        valido_dal: null
+        valido_fino: null
+        sede_linea_direzione_calendario: null
+        evidenza_sintetica: null # Parafrasi breve; collegare l'originale.
+        hash_documento_se_disponibile: null
+    nuove_pubblicazioni: [] # Ogni documento: URL, indice da cui proviene, efficacia, ambito, letto o ancora da leggere.
+    confronto:
+      prima: null
+      dopo: null
+      eccezioni: []
+      contrasti: []
+    file_interessati: []
+    modifiche_applicate: []
+    prossimo_controllo: null
+    problemi_e_azioni: []
+verifiche:
+  eseguite: []
+  non_eseguite: []
+riepilogo:
+  cambi_attuali: []
+  cambi_futuri: []
+  problemi_aperti: []
+  seguito: []
