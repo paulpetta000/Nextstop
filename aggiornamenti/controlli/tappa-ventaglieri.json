@@ -1,0 +1,76 @@
+{
+  "id": "tappa-ventaglieri",
+  "nome": "Parco dei Ventaglieri",
+  "categoria": "citta",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "ventaglieri"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni"
+  ],
+  "schede": {
+    "orari": "tp-ventaglieri-orari"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-parco-ventaglieri"
+  ],
+  "canali_scoperta": [
+    "gestore-www-comune-napoli-it",
+    "comune-notizie",
+    "ritentativo-10",
+    "accessi-estesi-castelnuovo"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "comune.napoli.it",
+      "napoliforme.comune.napoli.it",
+      "www.campaniartecard.it"
+    ],
+    "soggetto": "Parco dei Ventaglieri",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "pubblicazioni_rilevate": [],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-ventaglieri/",
+      "https://www.comune.napoli.it/"
+    ],
+    "verifiche_personali": [
+      "V03",
+      "V13"
+    ],
+    "esito": "rimangono_verifiche_personali",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  },
+  "ultimo_riesame_accessi": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml",
+    "gruppi": [
+      "V13"
+    ],
+    "verifiche_personali_residue": [],
+    "controllo_completo": false
+  }
+}

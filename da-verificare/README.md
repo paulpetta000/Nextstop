@@ -1,6 +1,5 @@
-# Verifiche personali di Enrico
+# Verifiche personali
 
-- [Fonti, orari e accessi rimasti da controllare online](fonti-orari.md): elenco aggiornato dopo i tentativi del 19/10/2026, con collegamenti e domande precise.
-- [Orari dei locali nuovi](orari-locali.md): elenco precedente, conservato.
+Partire dall’[indice corrente](fonti-orari.md), poi aprire **solo il singolo caso** in `casi/`. Per l’AI: `node aggiornamenti/leggi.mjs aperte` oppure `caso V01`.
 
-Il registro comune per Codex e Claude è in [aggiornamenti](../aggiornamenti/README.md). Spuntare un caso solo dopo aver registrato fonte, data e informazione verificata.
+La [vecchia lista locali](orari-locali.md) resta come storico con la nota di riesame. Stato e attività di oggi sono nei casi L01–L06. I rapporti di ricerca stanno in [aggiornamenti/rapporti](../aggiornamenti/README.md), fuori dal percorso di lettura ordinario.

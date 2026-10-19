@@ -1,0 +1,76 @@
+{
+  "id": "tappa-pignasecca",
+  "nome": "Il mercato della Pignasecca",
+  "categoria": "citta",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "pignasecca"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni"
+  ],
+  "schede": {
+    "orari": "tp-mercati-orari"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-mercati-municipalita2"
+  ],
+  "canali_scoperta": [
+    "gestore-www-comune-napoli-it",
+    "comune-notizie",
+    "accessi-estesi-castelnuovo"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "comune.napoli.it",
+      "www.campaniartecard.it"
+    ],
+    "soggetto": "Il mercato della Pignasecca",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_non_verificabili",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "pubblicazioni_rilevate": [],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/",
+      "https://www.comune.napoli.it/"
+    ],
+    "verifiche_personali": [
+      "V03",
+      "V12"
+    ],
+    "esito": "rimangono_verifiche_personali",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  },
+  "ultimo_riesame_accessi": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml",
+    "gruppi": [
+      "V12"
+    ],
+    "verifiche_personali_residue": [
+      "V12"
+    ],
+    "controllo_completo": false
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "id": "tappa-caserta",
+  "nome": "Reggia di Caserta",
+  "categoria": "gita",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "caserta"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni",
+    "prezzi_gia_pubblicati",
+    "collegamento_della_gita"
+  ],
+  "schede": {
+    "orari": "tp-caserta-orari",
+    "prezzi": "tp-caserta-prezzi",
+    "viaggio": "tp-caserta-viaggio"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-caserta-orari",
+    "tp-caserta-biglietti",
+    "tp-caserta-arrivare"
+  ],
+  "canali_scoperta": [
+    "gestore-reggiadicaserta-cultura-gov-it",
+    "caserta-avvisi",
+    "rfi-quadri",
+    "trenitalia-lavori"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "reggiadicaserta.cultura.gov.it",
+      "rfi.it",
+      "trenitalia.com"
+    ],
+    "soggetto": "Reggia di Caserta",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "pubblicazioni_rilevate": []
+}

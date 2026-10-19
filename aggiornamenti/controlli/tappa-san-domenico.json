@@ -1,0 +1,51 @@
+{
+  "id": "tappa-san-domenico",
+  "nome": "San Domenico Maggiore e le arche aragonesi",
+  "categoria": "citta",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "san-domenico"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni",
+    "prezzi_gia_pubblicati"
+  ],
+  "schede": {
+    "orari": "tp-sandomenico-orari",
+    "prezzi": "tp-sandomenico-prezzi"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-doma-info",
+    "tp-doma-biglietti"
+  ],
+  "canali_scoperta": [
+    "gestore-domasandomenicomaggiore-it"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "domasandomenicomaggiore.it"
+    ],
+    "soggetto": "San Domenico Maggiore e le arche aragonesi",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "pubblicazioni_rilevate": []
+}

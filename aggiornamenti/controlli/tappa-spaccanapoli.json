@@ -1,0 +1,77 @@
+{
+  "id": "tappa-spaccanapoli",
+  "nome": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+  "categoria": "citta",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "spaccanapoli"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni"
+  ],
+  "schede": {
+    "orari": "tp-spaccanapoli-orari"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-napolike-gesu",
+    "tp-napolike-sangregorio",
+    "osm"
+  ],
+  "canali_scoperta": [
+    "gesu-nuovo-diocesi",
+    "gesuiti-chiese",
+    "sangregorio-italia",
+    "comune-notizie",
+    "accessi-estesi-castelnuovo"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "chiesadinapoli.it",
+      "comune.napoli.it",
+      "gesuiti.it",
+      "italia.it",
+      "www.campaniartecard.it"
+    ],
+    "soggetto": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonte_ufficiale_da_trovare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Le due chiese nella tappa hanno nel progetto fonti non ufficiali. Lacuna esplicita: cercare le fonti del gestore per ciascuna; non sostituire gli orari con quelli delle strade pubbliche."
+  ],
+  "parti_da_distinguere": [
+    "Strade pubbliche senza orario proprio",
+    "Gesù Nuovo",
+    "San Gregorio Armeno"
+  ],
+  "pubblicazioni_rilevate": [],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://www.comune.napoli.it/"
+    ],
+    "verifiche_personali": [
+      "V03"
+    ],
+    "esito": "rimangono_verifiche_personali",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  }
+}

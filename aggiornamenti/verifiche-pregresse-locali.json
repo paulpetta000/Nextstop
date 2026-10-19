@@ -1,0 +1,90 @@
+[
+  {
+    "id": "L01",
+    "titolo": "Barbeqool",
+    "sede": "Via Giovanni Merliani 110",
+    "provenienza": "da-verificare/orari-locali.md",
+    "url_originari": [
+      "https://www.barbeqool.it/"
+    ],
+    "nuovo_esito": "resta_da_verificare",
+    "riscontro_nuovo": "Settimana completa, fasce pranzo/cena e giorni chiusi: il sito si apre ma non le pubblica.",
+    "fonti_nuove": [
+      {
+        "url": "https://www.barbeqool.it/",
+        "nota": "Sito ufficiale letto: identità, sede e contatti presenti, orari non pubblicati nel contenuto consultabile. Prenotazioni ufficialmente collegate ma solo JavaScript."
+      }
+    ]
+  },
+  {
+    "id": "L02",
+    "titolo": "Colantuono’s Steak and Grill",
+    "sede": "Via Belvedere 1/A",
+    "provenienza": "da-verificare/orari-locali.md",
+    "url_originari": [
+      "https://steakhousenapoli.it/"
+    ],
+    "nuovo_esito": "resta_da_verificare",
+    "riscontro_nuovo": "Settimana completa e differenze della domenica: sito e contatti aperti, orari non trovati.",
+    "fonti_nuove": [
+      {
+        "url": "https://steakhousenapoli.it/",
+        "nota": "Sito e pagina Contatti leggibili dopo errore iniziale 403. Indirizzo e telefono coincidono con la vecchia lista; nessuna settimana di orari trovata."
+      }
+    ]
+  },
+  {
+    "id": "L03",
+    "titolo": "Granfuoco Braceria",
+    "sede": "Viale Virgilio 1",
+    "provenienza": "da-verificare/orari-locali.md",
+    "url_originari": [
+      "https://www.granfuocobraceria.it/"
+    ],
+    "nuovo_esito": "resta_da_verificare",
+    "riscontro_nuovo": "Orari attuali e chiusure: sito recuperato ma senza orari; prenotazioni e social non leggibili.",
+    "fonti_nuove": [
+      {
+        "url": "https://www.granfuocobraceria.it/",
+        "nota": "Homepage con www recuperata dopo timeout. Contatti e collegamenti ufficiali presenti; orari assenti. Profilo Instagram segnalato dal sito limitato dallo strumento; prenotazioni 403. Collegamento estraneo al ristorante nella pagina non seguito né usato come fonte."
+      }
+    ]
+  },
+  {
+    "id": "L04",
+    "titolo": "Friggitoria Vomero",
+    "sede": "Via Domenico Cimarosa 44",
+    "provenienza": "da-verificare/orari-locali.md",
+    "url_originari": [],
+    "nuovo_esito": "resta_da_verificare",
+    "riscontro_nuovo": "Trovare un canale attribuibile al gestore e la settimana di orari. Candidato Facebook bloccato; attribuzione non verificata.",
+    "fonti_nuove": []
+  },
+  {
+    "id": "L05",
+    "titolo": "Da Rosetta",
+    "sede": "Via San Biagio dei Librai 80",
+    "provenienza": "da-verificare/orari-locali.md",
+    "url_originari": [
+      "https://darosetta.it/"
+    ],
+    "nuovo_esito": "fonte_e_orario_ordinario_recuperati",
+    "riscontro_nuovo": "Fonte ufficiale recuperata: dichiarata apertura domenica 10:00–15:30. Nessun contatto diretto effettuato.",
+    "fonti_nuove": [
+      {
+        "url": "https://darosetta.it/",
+        "nota": "Sito ufficiale leggibile, sede via San Biagio dei Librai 80: domenica e lunedì 10:00–15:30; martedì–sabato 10:00–15:00 e 18:00–22:00. Questo risolve il dubbio della vecchia lista sulla dichiarazione del gestore per la domenica."
+      }
+    ]
+  },
+  {
+    "id": "L06",
+    "titolo": "De Luca Braceria Macelleria 1920",
+    "sede": "Via Santa Teresa a Chiaia 46",
+    "provenienza": "da-verificare/orari-locali.md",
+    "url_originari": [],
+    "nuovo_esito": "resta_da_verificare",
+    "riscontro_nuovo": "Trovare una fonte del gestore e verificare apertura effettiva, giovedì e orari: aggregatori indicano situazioni differenti, senza conferma ufficiale.",
+    "fonti_nuove": []
+  }
+]

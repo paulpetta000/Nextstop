@@ -1,0 +1,53 @@
+{
+  "id": "locale-pignatelli",
+  "nome": "Ostaria Pignatelli",
+  "categoria": "locale",
+  "entita": {
+    "file": "src/data/locali.yaml",
+    "id": "pignatelli"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "servizio_pranzo_cena",
+    "sede_esatta",
+    "prenotazione",
+    "prezzi_gia_pubblicati"
+  ],
+  "schede": {
+    "orari": "lc-pignatelli-orari",
+    "prezzi": "lc-pignatelli-prezzi"
+  },
+  "file_interessati": [
+    "src/data/locali.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/locali.yaml"
+  ],
+  "fonti_esistenti": [
+    "lc-pignatelli",
+    "lc-pignatelli-menu"
+  ],
+  "canali_scoperta": [
+    "gestore-www-ostariapignatelli-com"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "ostariapignatelli.com",
+      "quickermenu.it"
+    ],
+    "soggetto": "Ostaria Pignatelli",
+    "aggiungere": "Riviera di Chiaia 216",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "sede": "Riviera di Chiaia 216",
+  "pubblicazioni_rilevate": []
+}

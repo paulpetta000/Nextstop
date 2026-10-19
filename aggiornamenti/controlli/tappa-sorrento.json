@@ -1,0 +1,87 @@
+{
+  "id": "tappa-sorrento",
+  "nome": "Sorrento",
+  "categoria": "gita",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "sorrento"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni",
+    "collegamento_della_gita"
+  ],
+  "schede": {
+    "orari": "tp-correale-orari",
+    "viaggio": "tp-sorrento-viaggio"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-correale",
+    "tp-eav-l1-orario",
+    "tp-eav-campania-express-sospeso"
+  ],
+  "canali_scoperta": [
+    "gestore-www-museocorreale-it",
+    "gestore-www-eavsrl-it",
+    "eav-ferrovie",
+    "eav-news",
+    "eav-avvisi",
+    "ritentativo-07"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "eavsrl.it",
+      "museocorreale.it",
+      "www.eavsrl.it"
+    ],
+    "soggetto": "Sorrento",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Nuovo documento EAV dal 17/10/2026 trovato. Non ricavare durate o ultime corse dal solo comunicato; leggere il PDF e le eventuali rettifiche."
+  ],
+  "pubblicazioni_rilevate": [
+    "eav-sorrento-2026-10-17"
+  ],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://www.eavsrl.it/campania-express/",
+      "https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/"
+    ],
+    "verifiche_personali": [
+      "V17"
+    ],
+    "esito": "rimangono_verifiche_personali",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  },
+  "ultimo_riesame_accessi": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml",
+    "gruppi": [
+      "V17"
+    ],
+    "verifiche_personali_residue": [
+      "V17"
+    ],
+    "controllo_completo": false
+  }
+}

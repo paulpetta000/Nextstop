@@ -1,0 +1,79 @@
+{
+  "id": "trasporto-cumana",
+  "nome": "EAV Cumana, tratto usato Montesanto–Bagnoli",
+  "categoria": "trasporto",
+  "linee_o_tratte": [
+    "CU"
+  ],
+  "frequenza_giorni": 7,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "prima_ultima_corsa",
+    "feriale_sabato_festivo",
+    "andata_ritorno",
+    "validita_documento",
+    "rettifiche_e_sospensioni",
+    "durate_e_frequenze_usate"
+  ],
+  "schede": [],
+  "fonti_esistenti": [
+    "tp-eav-teleindicatori"
+  ],
+  "canali_scoperta": [
+    "eav-ferrovie",
+    "eav-avvisi",
+    "eav-news"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "eavsrl.it",
+      "orariotreni.eavsrl.it"
+    ],
+    "soggetto": "EAV Cumana, tratto usato Montesanto–Bagnoli",
+    "aggiungere": "CU",
+    "modello": "site:{dominio} {linea_o_tratta} (orario OR nuovo orario OR avviso OR rettifica OR sospensione)",
+    "regola": "Cercare anche senza anno e verificare tutti i documenti nuovi nell’indice del gestore, non soltanto il vecchio PDF."
+  },
+  "file_interessati": [
+    "src/data/fonti.yaml",
+    "src/data/fatti.yaml",
+    "src/testi/itinerari.yaml",
+    "scripts/itinerari/costruisci.mjs",
+    "src/data/tempi-tappe.json",
+    "src/data/percorsi-tappe.json",
+    "src/data/percorsi-alternativi.json",
+    "src/data/partenze-bus.json",
+    "src/data/linee-bus.json"
+  ],
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo inventario.",
+    "Il tabellone in tempo reale non prova la frequenza ordinaria. Confrontare il PDF corrente e gli avvisi per Montesanto–Bagnoli; la riapertura dell’intera linea non autorizza ad estendere automaticamente il modello."
+  ],
+  "pubblicazioni_rilevate": [],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://orariotreni.eavsrl.it/"
+    ],
+    "verifiche_personali": [
+      "V18"
+    ],
+    "esito": "rimangono_verifiche_personali",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  },
+  "ultimo_riesame_accessi": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml",
+    "gruppi": [
+      "V18"
+    ],
+    "verifiche_personali_residue": [
+      "V18"
+    ],
+    "controllo_completo": false
+  }
+}

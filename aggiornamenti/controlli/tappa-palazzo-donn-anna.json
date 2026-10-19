@@ -1,0 +1,64 @@
+{
+  "id": "tappa-palazzo-donn-anna",
+  "nome": "Palazzo Donn'Anna, da fuori",
+  "categoria": "citta",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "palazzo-donn-anna"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni"
+  ],
+  "schede": {
+    "orari": "tp-donnanna-orari"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-fai-donn-anna"
+  ],
+  "canali_scoperta": [
+    "comune-notizie",
+    "accessi-estesi-castelnuovo"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "comune.napoli.it",
+      "www.campaniartecard.it"
+    ],
+    "soggetto": "Palazzo Donn'Anna, da fuori",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "senza_orario_proprio",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Non attribuire un orario di apertura alla strada o al punto visto dall’esterno; cercare invece limitazioni, cantieri, ordinanze e accessi effettivi."
+  ],
+  "pubblicazioni_rilevate": [],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://www.comune.napoli.it/"
+    ],
+    "verifiche_personali": [
+      "V03"
+    ],
+    "esito": "rimangono_verifiche_personali",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  }
+}

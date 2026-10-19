@@ -24,3 +24,9 @@ Il registro copre ogni entità selezionata e i servizi effettivamente usati, com
 La preparazione comprende ricerca delle fonti, verifica della loro accessibilità e prova del metodo su casi rappresentativi. Non certifica un aggiornamento applicativo completo; non cambia `controllato`, schede o orari del sito. Il rapporto distingue con precisione ciò che è stato letto e ciò che resta da confrontare.
 
 Verificare sintassi YAML, unicità degli ID, copertura dei 60/32 record e delle linee, esistenza di schede/fonti e file interessati, collegamenti documentali e conservazione degli input applicativi. Nessuna nuova dipendenza o build necessaria per questa sola documentazione operativa.
+
+## Struttura versione 2 · lettura selettiva
+
+Riordino autorizzato da Enrico il 19/10/2026: `controlli-periodici.yaml` è un manifesto, non contiene più tutte le voci. Schede in `aggiornamenti/controlli/<id>.json`, canali/pubblicazioni/metadati/vecchi locali in cataloghi JSON separati. I contenuti della versione 1 si ricostruiscono senza perdita; gli ID e le scadenze non cambiano. Le domande personali sono nei singoli `da-verificare/casi/<id>.md`, con indice di stato.
+
+`node aggiornamenti/leggi.mjs` è uno strumento locale di sola lettura, senza dipendenze: cerca e restituisce soltanto i dati richiesti. Leggere un catalogo con un programma non implica inviarlo integralmente al modello. La procedura estesa e tutti i rapporti restano disponibili, fuori dal percorso minimo. Per misure e verifiche vedere [riordino](../aggiornamenti/riordino-2026-10-19.md).

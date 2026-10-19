@@ -1,0 +1,52 @@
+{
+  "id": "locale-di-matteo",
+  "nome": "Antica Pizzeria Di Matteo",
+  "categoria": "locale",
+  "entita": {
+    "file": "src/data/locali.yaml",
+    "id": "di-matteo"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "servizio_pranzo_cena",
+    "sede_esatta",
+    "prenotazione",
+    "prezzi_gia_pubblicati"
+  ],
+  "schede": {
+    "orari": "lc-di-matteo-orari",
+    "prezzi": "lc-di-matteo-prezzi"
+  },
+  "file_interessati": [
+    "src/data/locali.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/locali.yaml"
+  ],
+  "fonti_esistenti": [
+    "lc-di-matteo",
+    "lc-di-matteo-menu"
+  ],
+  "canali_scoperta": [
+    "gestore-anticapizzeriadimatteo-it"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "anticapizzeriadimatteo.it"
+    ],
+    "soggetto": "Antica Pizzeria Di Matteo",
+    "aggiungere": "Via dei Tribunali 94",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "sede": "Via dei Tribunali 94",
+  "pubblicazioni_rilevate": []
+}

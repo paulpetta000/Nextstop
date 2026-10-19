@@ -1,0 +1,56 @@
+{
+  "id": "tappa-sansevero",
+  "nome": "Cappella Sansevero",
+  "categoria": "citta",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "sansevero"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni",
+    "prezzi_gia_pubblicati"
+  ],
+  "schede": {
+    "orari": "tp-sansevero-orari",
+    "prezzi": "tp-sansevero-prezzi"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-sansevero-orari"
+  ],
+  "canali_scoperta": [
+    "gestore-www-museosansevero-it",
+    "sansevero-orari",
+    "sansevero-news"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "museosansevero.it"
+    ],
+    "soggetto": "Cappella Sansevero",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Orario ordinario confermato nella prova limitata; calendario di eccezioni già pubblicato per fine 2026 e inizio 2027. Non cancellare la chiusura settimanale ordinaria per effetto di un singolo martedì straordinario."
+  ],
+  "pubblicazioni_rilevate": [
+    "sansevero-calendario-2026-2027"
+  ]
+}

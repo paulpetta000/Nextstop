@@ -1,0 +1,195 @@
+[
+  {
+    "id": "eav-sorrento-2026-10-17",
+    "controlli": [
+      "trasporto-vesuviane",
+      "tappa-sorrento",
+      "tappa-pompei",
+      "tappa-ercolano"
+    ],
+    "url": "https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/",
+    "pubblicato": "2026-10-15",
+    "valido_dal": "2026-10-17",
+    "valido_fino": null,
+    "tipo": "orario_ordinario",
+    "stato": "pubblicazione_trovata_contenuto_pdf_da_confrontare",
+    "ricontrollare": "2026-10-19",
+    "nota": "Pagina del nuovo documento e indice aperti; PDF non letto in questa preparazione. Durate e fermate non dedotte dal comunicato. Data di aggiornamento della pagina distinta dalla decorrenza."
+  },
+  {
+    "id": "girolamini-fino-2026-10-24",
+    "controlli": [
+      "tappa-girolamini"
+    ],
+    "url": "https://girolamini.cultura.gov.it/apertura-e-orari-dei-servizi/",
+    "pubblicato": null,
+    "valido_dal": null,
+    "valido_fino": "2026-10-24",
+    "tipo": "orario_ordinario_attuale",
+    "stato": "orario_attuale_rilevato_nella_prova_limitata",
+    "ricontrollare": "2026-10-21",
+    "dettagli": {
+      "chiesa_museo": {
+        "mar_ven": "10:00-18:30",
+        "ultimo_ingresso_mar_ven": "17:45",
+        "sab_dom_festivi": "08:30-13:30",
+        "ultimo_ingresso_sab_dom_festivi": "12:45",
+        "chiuso": [
+          "lun"
+        ]
+      }
+    },
+    "nota": "Il documento dichiara il termine ma non la decorrenza: non inventare una data iniziale. La Biblioteca ha orari distinti."
+  },
+  {
+    "id": "girolamini-inverno-2026",
+    "controlli": [
+      "tappa-girolamini"
+    ],
+    "url": "https://girolamini.cultura.gov.it/apertura-e-orari-dei-servizi/",
+    "pubblicato": null,
+    "valido_dal": "2026-10-25",
+    "valido_fino": null,
+    "tipo": "orario_ordinario_futuro",
+    "stato": "cambio_gia_citato_nella_scheda_da_gestire_per_data",
+    "ricontrollare": "2026-10-22",
+    "dettagli": {
+      "chiesa_museo": {
+        "mar_ven": "09:00-17:30",
+        "ultimo_ingresso_mar_ven": "16:45",
+        "sab_dom_festivi": "08:30-13:30",
+        "ultimo_ingresso_sab_dom_festivi": "12:45",
+        "chiuso": [
+          "lun"
+        ]
+      },
+      "biblioteca_visite": {
+        "valido_fino": "2026-12-31",
+        "mar_mer": "09:00-14:00",
+        "gio_ven": "09:00-17:30",
+        "sab_dom_festivi": "08:30-13:30"
+      }
+    },
+    "nota": "La pagina distingue anche i limiti di ultimo ingresso della Biblioteca: rileggere prima di applicare. Non applicare l’orario delle visite ai servizi bibliotecari."
+  },
+  {
+    "id": "sansevero-calendario-2026-2027",
+    "controlli": [
+      "tappa-sansevero"
+    ],
+    "url": "https://www.museosansevero.it/organizza-la-tua-visita/orari-e-tariffe",
+    "pubblicato": null,
+    "valido_dal": "2026-10-31",
+    "valido_fino": "2027-01-05",
+    "tipo": "eccezioni_datate",
+    "stato": "calendario_futuro_rilevato_da_confrontare",
+    "ricontrollare": "2026-10-28",
+    "eccezioni": [
+      {
+        "data": "2026-10-31",
+        "apertura": "09:00-20:30"
+      },
+      {
+        "data": "2026-11-01",
+        "apertura": "09:00-20:30"
+      },
+      {
+        "data": "2026-11-02",
+        "apertura": "09:00-20:30"
+      },
+      {
+        "data": "2026-11-03",
+        "apertura": "09:00-19:00"
+      },
+      {
+        "data": "2026-12-05",
+        "apertura": "09:00-20:30"
+      },
+      {
+        "data": "2026-12-06",
+        "apertura": "09:00-20:30"
+      },
+      {
+        "data": "2026-12-07",
+        "apertura": "09:00-20:30"
+      },
+      {
+        "data": "2026-12-08",
+        "apertura": "09:00-20:30"
+      },
+      {
+        "data": "2026-12-24",
+        "apertura": "09:00-14:00"
+      },
+      {
+        "data": "2026-12-25",
+        "apertura": "chiuso"
+      },
+      {
+        "data": "2026-12-26",
+        "apertura": "09:00-20:30"
+      },
+      {
+        "data": "2026-12-27",
+        "apertura": "09:00-20:30"
+      },
+      {
+        "data": "2026-12-29",
+        "apertura": "09:00-19:00"
+      },
+      {
+        "data": "2026-12-31",
+        "apertura": "09:00-14:00"
+      },
+      {
+        "data": "2027-01-01",
+        "apertura": "10:00-20:30"
+      },
+      {
+        "data": "2027-01-02",
+        "apertura": "09:00-20:30"
+      },
+      {
+        "data": "2027-01-03",
+        "apertura": "09:00-20:30"
+      },
+      {
+        "data": "2027-01-05",
+        "apertura": "09:00-19:00"
+      }
+    ],
+    "nota": "Intervallo della tabella, non apertura continuativa. Ogni riga vale solo nella data indicata; rileggere per rettifiche prima di aggiornare il sito. Nessuna estensione dell’orario ordinario ai giorni non elencati."
+  },
+  {
+    "id": "parchi-ordinanza-2025-07-22",
+    "controlli": [
+      "tappa-lungomare",
+      "tappa-parco-virgiliano",
+      "tappa-parco-mascagna",
+      "tappa-camaldoli",
+      "tappa-parco-poggio"
+    ],
+    "url": "https://static-www.comune.napoli.it/wp-content/uploads/2025/09/allegato1753165813.pdf",
+    "pubblicato": "2025-07-22",
+    "valido_dal": "2025-07-22",
+    "valido_fino": null,
+    "tipo": "orario_ordinario",
+    "stato": "testo_letto_dati_applicativi_da_confrontare",
+    "ricontrollare": "2026-10-19",
+    "nota": "Ordinanza sindacale del 22/07/2025, ORDSI/2025/0000840, immediatamente esecutiva, sostituisce i provvedimenti in contrasto. Calendari distinti per parchi centrali e Villa Comunale/Virgiliano; regole di chiusura per allerta. Da incrociare con avvisi successivi, non col vecchio prospetto preso da solo. Sostituisce in particolare i valori discordanti del prospetto annuale privo di data; non certifica assenza di successivi avvisi."
+  },
+  {
+    "id": "marechiaro-ordinanza-2026-04-30",
+    "controlli": [
+      "tappa-marechiaro"
+    ],
+    "url": "https://static-www.comune.napoli.it/wp-content/uploads/2025/05/allegato1777550695.pdf",
+    "pubblicato": "2026-04-30",
+    "valido_dal": null,
+    "valido_fino": "2026-09-27",
+    "tipo": "dispositivo_temporaneo",
+    "stato": "testo_letto_clausola_ottobre_da_chiarire",
+    "ricontrollare": "2026-10-19",
+    "nota": "Ordinanza dirigenziale n.21 del 30/04/2026 (OD/2026/0000725), letta nelle parti operative. Periodi fino al 27/09/2026; clausola di possibile attivazione in ottobre e un riferimento discordante al 2025: non dedurre automaticamente ZTL inattiva oggi."
+  }
+]

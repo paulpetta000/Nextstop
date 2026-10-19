@@ -11,7 +11,7 @@ copertura:
   parziali: []
   non_verificabili: []
 risultati:
-  - controllo: null # ID da controlli-periodici.yaml
+  - controllo: null # ID della scheda in aggiornamenti/controlli/<id>.json
     esito: null # invariato | modifica_confermata | futura | eccezione_temporanea | nuova_pubblicazione_da_leggere | non_verificabile | contrasto | fonte_ufficiale_mancante | non_applicabile
     completo: false
     campi_verificati: []

@@ -1,18 +1,22 @@
-# Aggiornamenti: da dove vengono i dati e come si rinnovano
+# Aggiornamenti · ingresso per l’AI
 
-_Creato il 03/10/2026 (idea di Enrico). Serve per **ricontrollare** i dati senza ricordare niente a memoria: si apre `fonti-dati.yaml`, si segue la riga del dato, si riscarica, si aggiorna._
+Per orari/accessi partire dalla [procedura breve](PROCEDURA.md). Non leggere tutti i rimandi: cercare il soggetto, poi aprire una sola scheda e le sue fonti.
 
-## Controlli periodici di orari e accesso
+| Cerchi | Dove / comando |
+|---|---|
+| Un luogo, locale o trasporto | `node aggiornamenti/leggi.mjs cerca "nome"`, poi `voce <id>` |
+| Voci in scadenza | `node aggiornamenti/leggi.mjs scadenze YYYY-MM-DD [categoria]` |
+| Un canale / documento | `canale <id…>` / `pubblicazione <id…>` |
+| Fonte o fatto del sito | `fonte <id…>` / `fatto <id…>` |
+| Domande rimaste a Enrico | `aperte`, poi `caso V01`; [indice](../da-verificare/fonti-orari.md) |
+| Regole dei casi particolari | `guida "4."` per trasporti; [guida conservata](riferimenti/procedura-completa.md) |
+| Struttura e rapporto corrente | [manifesto](controlli-periodici.yaml), [metadati](metadati.json) |
+| Evidenze di una ricerca precedente | [rapporti](rapporti/README.md), solo se necessari |
+| Proposta per le recensioni | [piano](../specifiche/valutazioni-esterne.md), non ancora da implementare |
 
-Registro operativo preparato il 19/10/2026, su richiesta di Enrico, per i luoghi e i servizi già scelti. Per Codex e Claude Code il punto d'ingresso è la [procedura comune](PROCEDURA.md): controllare sia i collegamenti conosciuti sia nuove pagine, PDF, avvisi e rettifiche del gestore.
+Ogni comando è preceduto da `node aggiornamenti/leggi.mjs`. `aiuto` elenca le opzioni. Lo strumento è locale, senza dipendenze, rete o scritture. I contenuti operativi sono in JSON per poterli selezionare senza caricare l’intero registro nel contesto dell’AI; i documenti applicativi originali restano YAML.
 
-- [Registro dei controlli](controlli-periodici.yaml): 60 tappe/gite, 32 locali e 14 gruppi di trasporto; fonti collegate agli ID esistenti, canali di scoperta, frequenze e pubblicazioni attuali/future.
-- [Rapporto iniziale](rapporti/2026-10-19-impostazione.md) e [dettaglio strutturato](rapporti/2026-10-19-impostazione.yaml): ricerca eseguita, prove limitate e problemi di accesso; non equivalgono all'aggiornamento completo degli orari.
-- [Riesame esteso, compresa tutta la vecchia lista](rapporti/2026-10-19-accessi-estesi.md): bilancio cumulativo su 54 URL, con originali, alternative e casi ancora non leggibili distinti.
-- [Ritentativo delle fonti del 19/10](rapporti/2026-10-19-ritentativo-fonti.md): accessi recuperati e alternative ufficiali; [verifiche personali residue di Enrico](../da-verificare/fonti-orari.md).
-- [Modello di rapporto](rapporti/MODELLO.yaml) da copiare per ogni controllo richiesto; conservare i precedenti.
-
-Richiesta breve: **«Controlla le fonti in scadenza e fammi un rapporto»**. Se vuoi applicare le variazioni confermate: **«Controlla le fonti in scadenza e aggiorna il progetto»**. Frequenza di riferimento: una settimana per i trasporti, due per luoghi/locali, prima se scade un documento o entra in vigore un cambio. Non è attivo un controllo automatico.
+La versione 2 mantiene 106 schede, 137 canali, sei pubblicazioni e tutti i riscontri. Una pagina aperta, una fonte con orari ordinari e un controllo completo sono stati diversi. Il riesame ha 54 URL di partenza (13 originali leggibili, 31 con alternative anche parziali/storiche, 10 senza alternativa utile), più due locali senza fonte ufficiale verificabile. **Nessun orario applicativo aggiornato e nessun controllo completo concluso.**
 
 ## Cosa c'è qui
 - `fonti-dati.yaml`: l'elenco dei **dati che arrivano da un file o da un servizio** (bus ANM, strade OpenStreetMap, quote del terreno, risultati). Per ognuno: da dove viene, che licenza ha, come si riscarica (il comando), quali file del sito cambiano, fino a quando vale, quando va ricontrollato.

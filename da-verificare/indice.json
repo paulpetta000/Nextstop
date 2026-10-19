@@ -1,0 +1,158 @@
+[
+  {
+    "id": "V01",
+    "nome": "San Lorenzo Maggiore / Neapolis Sotterrata",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V01.md"
+  },
+  {
+    "id": "V02",
+    "nome": "Teatro San Carlo",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V02.md"
+  },
+  {
+    "id": "V03",
+    "nome": "Castel Nuovo e notizie del Comune",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V03.md"
+  },
+  {
+    "id": "V04",
+    "nome": "ANM: ascensori, Monte Echia e avvisi",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V04.md"
+  },
+  {
+    "id": "V05",
+    "nome": "Borgo Marinari e Castel dell’Ovo",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V05.md"
+  },
+  {
+    "id": "V06",
+    "nome": "Villa Comunale",
+    "stato": "fonte_orario_recuperati",
+    "file": "da-verificare/casi/V06.md"
+  },
+  {
+    "id": "V07",
+    "nome": "Villa Floridiana e Museo Duca di Martina",
+    "stato": "fonte_orario_recuperati",
+    "file": "da-verificare/casi/V07.md"
+  },
+  {
+    "id": "V08",
+    "nome": "Pedamentina",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V08.md"
+  },
+  {
+    "id": "V09",
+    "nome": "Marechiaro: ZTL e accesso",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V09.md"
+  },
+  {
+    "id": "V10",
+    "nome": "Parco Virgiliano",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V10.md"
+  },
+  {
+    "id": "V11",
+    "nome": "Città della Scienza",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V11.md"
+  },
+  {
+    "id": "V12",
+    "nome": "Mercati Porta Nolana e Pignasecca",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V12.md"
+  },
+  {
+    "id": "V13",
+    "nome": "Parco Ventaglieri",
+    "stato": "fonte_orario_recuperati",
+    "file": "da-verificare/casi/V13.md"
+  },
+  {
+    "id": "V14",
+    "nome": "Parchi Mascagna, Camaldoli e del Poggio",
+    "stato": "fonte_orario_recuperati",
+    "file": "da-verificare/casi/V14.md"
+  },
+  {
+    "id": "V15",
+    "nome": "Metropolitana Linea 6",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V15.md"
+  },
+  {
+    "id": "V16",
+    "nome": "Funicolare Montesanto",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V16.md"
+  },
+  {
+    "id": "V17",
+    "nome": "Campania Express: sospensione e possibile ripresa",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V17.md"
+  },
+  {
+    "id": "V18",
+    "nome": "EAV: teleindicatori / Cumana",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V18.md"
+  },
+  {
+    "id": "V19",
+    "nome": "Parco delle Tombe di Virgilio e Leopardi",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V19.md"
+  },
+  {
+    "id": "V20",
+    "nome": "Musei e Parchi archeologici di Capri",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/V20.md"
+  },
+  {
+    "id": "L01",
+    "nome": "Barbeqool",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/L01.md"
+  },
+  {
+    "id": "L02",
+    "nome": "Colantuono’s Steak and Grill",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/L02.md"
+  },
+  {
+    "id": "L03",
+    "nome": "Granfuoco Braceria",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/L03.md"
+  },
+  {
+    "id": "L04",
+    "nome": "Friggitoria Vomero",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/L04.md"
+  },
+  {
+    "id": "L05",
+    "nome": "Da Rosetta",
+    "stato": "fonte_orario_recuperati",
+    "file": "da-verificare/casi/L05.md"
+  },
+  {
+    "id": "L06",
+    "nome": "De Luca Braceria Macelleria 1920",
+    "stato": "da_verificare",
+    "file": "da-verificare/casi/L06.md"
+  }
+]
