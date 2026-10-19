@@ -8,6 +8,7 @@ Registro operativo preparato il 19/10/2026, su richiesta di Enrico, per i luoghi
 
 - [Registro dei controlli](controlli-periodici.yaml): 60 tappe/gite, 32 locali e 14 gruppi di trasporto; fonti collegate agli ID esistenti, canali di scoperta, frequenze e pubblicazioni attuali/future.
 - [Rapporto iniziale](rapporti/2026-10-19-impostazione.md) e [dettaglio strutturato](rapporti/2026-10-19-impostazione.yaml): ricerca eseguita, prove limitate e problemi di accesso; non equivalgono all'aggiornamento completo degli orari.
+- [Ritentativo delle fonti del 19/10](rapporti/2026-10-19-ritentativo-fonti.md): accessi recuperati e alternative ufficiali; [verifiche personali residue di Enrico](../da-verificare/fonti-orari.md).
 - [Modello di rapporto](rapporti/MODELLO.yaml) da copiare per ogni controllo richiesto; conservare i precedenti.
 
 Richiesta breve: **«Controlla le fonti in scadenza e fammi un rapporto»**. Se vuoi applicare le variazioni confermate: **«Controlla le fonti in scadenza e aggiorna il progetto»**. Frequenza di riferimento: una settimana per i trasporti, due per luoghi/locali, prima se scade un documento o entra in vigore un cambio. Non è attivo un controllo automatico.

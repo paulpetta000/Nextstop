@@ -1,13 +1,13 @@
 versione: 1
 creato: '2026-10-19'
 base_commit: 96e480dd95e45f4133fa513ad66ab30597c0a2cb
-ambito: Le 60 tappe/gite e i 32 locali selezionati, più 14 gruppi di trasporto realmente usati. Regate e nuovi
-  luoghi esclusi.
+ambito: Le 60 tappe/gite e i 32 locali selezionati, più 14 gruppi di trasporto realmente usati. Regate e nuovi luoghi
+  esclusi.
 procedura: aggiornamenti/PROCEDURA.md
-significato_date: creato e verifica_accesso non certificano gli orari. ultimo_controllo_completo resta null
-  finché non sono confrontati dati, nuove pubblicazioni ed eccezioni.
-risoluzione_fonti: fonti_esistenti contiene ID di src/data/fonti.yaml, unica fonte degli URL già presenti.
-  catalogo_dati rimanda a fonti-dati.yaml. I canali aggiunti non cambiano le fonti pubbliche del sito.
+significato_date: creato e verifica_accesso non certificano gli orari. ultimo_controllo_completo resta null finché
+  non sono confrontati dati, nuove pubblicazioni ed eccezioni.
+risoluzione_fonti: fonti_esistenti contiene ID di src/data/fonti.yaml, unica fonte degli URL già presenti. catalogo_dati
+  rimanda a fonti-dati.yaml. I canali aggiunti non cambiano le fonti pubbliche del sito.
 frequenze:
   trasporti_giorni: 7
   luoghi_locali_giorni: 14
@@ -23,7 +23,8 @@ canali:
     data: '2026-10-19'
     esito: non_verificabile
     url_finale: https://www.anm.it/s/?language=it
-    nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il
+      problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento.
 - id: anm-funicolari
   nome: 'ANM: funicolari nel portale corrente'
   ruolo: indice_orari
@@ -33,7 +34,8 @@ canali:
     data: '2026-10-19'
     esito: non_verificabile
     url_finale: https://www.anm.it/s/funicolari?language=it
-    nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il
+      problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento.
 - id: eav-ferrovie
   nome: 'EAV: indice aggiornabile degli orari ferroviari'
   ruolo: indice_documenti
@@ -43,7 +45,8 @@ canali:
     data: '2026-10-19'
     esito: aperta
     url_finale: https://www.eavsrl.it/orari-linee-ferroviarie/
-    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
 - id: eav-bus
   nome: 'EAV: indice aggiornabile degli orari autobus'
   ruolo: indice_documenti
@@ -143,7 +146,8 @@ canali:
     data: '2026-10-19'
     esito: non_verificabile
     url_finale: https://www.comune.napoli.it/
-    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il
+      problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento.
 - id: sansevero-news
   nome: 'Sansevero: nuove notizie'
   ruolo: notizie
@@ -213,7 +217,8 @@ canali:
     data: '2026-10-19'
     esito: aperta
     url_finale: https://muddnapoli.it/luoghi/san-giovanni-a-carbonara/
-    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
 - id: mudd-tetti
   nome: 'MUDD: pagina italiana dei Tetti del Duomo'
   ruolo: orari_e_accesso
@@ -223,7 +228,8 @@ canali:
     data: '2026-10-19'
     esito: aperta
     url_finale: https://muddnapoli.it/luoghi/visita-tetti-duomo/
-    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
 - id: duomo-liturgia
   nome: 'Duomo: orari della Cattedrale e celebrazioni'
   ruolo: orari_e_accesso
@@ -283,7 +289,8 @@ canali:
     data: '2026-10-19'
     esito: non_verificabile
     url_finale: https://museicampania.cultura.gov.it/category/avvisi/
-    nota: Contenuto non leggibile o incompleto nello strumento; non conferma l'orario.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il
+      problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento.
 - id: filangieri-attuale
   nome: 'Filangieri: destinazione del rinvio del dominio precedente'
   ruolo: ingresso_gestore
@@ -333,7 +340,8 @@ canali:
     data: '2026-10-19'
     esito: aperta
     url_finale: https://www.50kalo.it/info.php
-    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
 - id: gesu-nuovo-diocesi
   nome: 'Diocesi: scheda della parrocchia al Gesù Nuovo'
   ruolo: identita_e_contatti
@@ -386,7 +394,8 @@ canali:
     data: '2026-10-19'
     esito: non_verificabile
     url_finale: https://tesorosangennaro.it/
-    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il
+      problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-www-museosansevero-it
@@ -408,9 +417,10 @@ canali:
   autorita: ereditata_da_fonti_yaml
   verifica_accesso:
     data: '2026-10-19'
-    esito: non_verificabile
+    esito: aperta
     url_finale: https://www.monasterodisantachiara.it/
-    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-piomontedellamisericordia-it
@@ -458,7 +468,8 @@ canali:
     data: '2026-10-19'
     esito: non_verificabile
     url_finale: https://www.laneapolissotterrata.it/
-    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il
+      problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-www-napolisotterranea-org
@@ -518,7 +529,8 @@ canali:
     data: '2026-10-19'
     esito: non_verificabile
     url_finale: https://www.teatrosancarlo.it/
-    nota: Verifica di sicurezza richiesta.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il
+      problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-www-comune-napoli-it
@@ -530,7 +542,8 @@ canali:
     data: '2026-10-19'
     esito: non_verificabile
     url_finale: https://www.comune.napoli.it/
-    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il
+      problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-metroart-anm-it
@@ -626,7 +639,8 @@ canali:
     data: '2026-10-19'
     esito: aperta
     url_finale: https://museicampania.cultura.gov.it/
-    nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-www-areamarinaprotettagaiola-it
@@ -650,7 +664,8 @@ canali:
     data: '2026-10-19'
     esito: non_verificabile
     url_finale: https://www.cittadellascienza.it/
-    nota: Pagina non leggibile con questo strumento; verificare da altro ambiente.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il
+      problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-domasandomenicomaggiore-it
@@ -780,9 +795,10 @@ canali:
   autorita: ereditata_da_fonti_yaml
   verifica_accesso:
     data: '2026-10-19'
-    esito: non_verificabile
+    esito: aperta
     url_finale: https://www.parconazionaledelvesuvio.it/
-    nota: Timeout dello strumento; nessuna conferma del contenuto.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-museicapri-cultura-gov-it
@@ -794,7 +810,8 @@ canali:
     data: '2026-10-19'
     esito: non_verificabile
     url_finale: https://museicapri.cultura.gov.it/
-    nota: Timeout dello strumento; nessuna conferma del contenuto.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il
+      problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-shop-caremar-it
@@ -876,9 +893,10 @@ canali:
   autorita: ereditata_da_fonti_yaml
   verifica_accesso:
     data: '2026-10-19'
-    esito: non_verificabile
+    esito: aperta
     url_finale: https://www.anticapizzeriaportalba.com/
-    nota: Timeout dello strumento; nessuna conferma del contenuto.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-anticapizzeriadimatteo-it
@@ -1020,9 +1038,10 @@ canali:
   autorita: ereditata_da_fonti_yaml
   verifica_accesso:
     data: '2026-10-19'
-    esito: non_verificabile
+    esito: aperta
     url_finale: https://www.pizzeriasalvo.it/
-    nota: Timeout dello strumento; nessuna conferma del contenuto.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-www-ostariapignatelli-com
@@ -1056,9 +1075,10 @@ canali:
   autorita: ereditata_da_fonti_yaml
   verifica_accesso:
     data: '2026-10-19'
-    esito: non_verificabile
+    esito: aperta
     url_finale: https://www.labersagliera.it/
-    nota: Timeout dello strumento; nessuna conferma del contenuto.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-www-lascialuppa-net
@@ -1200,9 +1220,10 @@ canali:
   autorita: ereditata_da_fonti_yaml
   verifica_accesso:
     data: '2026-10-19'
-    esito: non_verificabile
+    esito: aperta
     url_finale: https://tufotrattoria.it/
-    nota: Timeout dello strumento; nessuna conferma del contenuto.
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
 - id: gestore-www-ristoranteafenestella-it
@@ -1241,6 +1262,159 @@ canali:
     nota: Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari.
   nota: Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura
     di quelle sezioni; controllare anche altre pagine con ricerca sul dominio.
+- id: ritentativo-01
+  nome: 'Alternativa ufficiale: tp-anm-centrale'
+  ruolo: confronto_da_completare
+  url: https://www2.anm.it/index.php?Itemid=383&id=81&option=com_content&task=view
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www2.anm.it/index.php?Itemid=383&id=81&option=com_content&task=view
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
+- id: ritentativo-02
+  nome: 'Alternativa ufficiale: tp-anm-chiaia'
+  ruolo: confronto_da_completare
+  url: https://www2.anm.it/index.php?Itemid=385&id=82&option=com_content&task=view
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www2.anm.it/index.php?Itemid=385&id=82&option=com_content&task=view
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
+- id: ritentativo-03
+  nome: 'Alternativa ufficiale: tp-anm-mergellina'
+  ruolo: confronto_da_completare
+  url: https://www2.anm.it/index.php?Itemid=384&id=84&option=com_content&task=view
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www2.anm.it/index.php?Itemid=384&id=84&option=com_content&task=view
+    nota: 'Contenuto letto nel ritentativo; apertura distinta da conferma della validità attuale. Dettaglio: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml'
+- id: ritentativo-04
+  nome: 'Alternativa ufficiale: tp-comune-casteldellovo'
+  ruolo: candidato_validita_da_confermare
+  url: https://cultura.gov.it/luogo/castel-dell-ovo
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://cultura.gov.it/luogo/castel-dell-ovo
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
+- id: ritentativo-05
+  nome: 'Alternativa ufficiale: tp-comune-villacomunale'
+  ruolo: candidato_validita_da_confermare
+  url: https://napoliforme.comune.napoli.it/en/pois/-/poi/Villa-Comunale
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://napoliforme.comune.napoli.it/en/pois/-/poi/Villa-Comunale
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
+- id: ritentativo-06
+  nome: 'Alternativa ufficiale: tp-comune-virgiliano'
+  ruolo: candidato_validita_da_confermare
+  url: https://napoliforme.comune.napoli.it/pois/-/poi/Virgiliano-Park
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://napoliforme.comune.napoli.it/pois/-/poi/Virgiliano-Park
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
+- id: ritentativo-07
+  nome: 'Alternativa ufficiale: tp-eav-l1-orario'
+  ruolo: confronto_da_completare
+  url: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
+- id: ritentativo-08
+  nome: 'Alternativa ufficiale: tp-ercolano-biglietti'
+  ruolo: confronto_da_completare
+  url: https://ercolano.cultura.gov.it/biglietti/
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://ercolano.cultura.gov.it/biglietti/
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
+- id: ritentativo-09
+  nome: 'Alternativa ufficiale: tp-parco-camaldoli'
+  ruolo: candidato_validita_da_confermare
+  url: https://static-www.comune.napoli.it/wp-content/uploads/2025/05/orari_dei_parchi.pdf
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://static-www.comune.napoli.it/wp-content/uploads/2025/05/orari_dei_parchi.pdf
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
+- id: ritentativo-10
+  nome: 'Alternativa ufficiale: tp-parco-ventaglieri'
+  ruolo: candidato_validita_da_confermare
+  url: https://napoliforme.comune.napoli.it/pois/-/poi/Parco-Ventaglieri
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://napoliforme.comune.napoli.it/pois/-/poi/Parco-Ventaglieri
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
+- id: ritentativo-11
+  nome: 'Alternativa ufficiale: gestore-tesorosangennaro-it'
+  ruolo: confronto_da_completare
+  url: https://tesorosangennaro.it/faq/
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://tesorosangennaro.it/faq/
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
+- id: ritentativo-12
+  nome: Musei nazionali del Vomero
+  ruolo: gestore_contatti_e_ricerca_nuove_pagine
+  url: https://museinazionalivomero.cultura.gov.it/
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://museinazionalivomero.cultura.gov.it/
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
+- id: ritentativo-13
+  nome: Scheda comunale Parco del Poggio
+  ruolo: documento_storico_validita_da_confermare
+  url: https://static-www.comune.napoli.it/wp-content/uploads/2025/06/14_parco_del_poggio.pdf
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://static-www.comune.napoli.it/wp-content/uploads/2025/06/14_parco_del_poggio.pdf
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
+- id: ritentativo-14
+  nome: Carta della mobilità ANM 2025
+  ruolo: documento_storico_non_sostituisce_avvisi
+  url: https://www.anm.it/resource/1768990802000/cartadellamobilita25
+  autorita: ufficiale
+  verifica_accesso:
+    data: '2026-10-19'
+    esito: aperta
+    url_finale: https://www.anm.it/resource/1768990802000/cartadellamobilita25
+    nota: Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile;
+      validità da valutare nel controllo completo.
 pubblicazioni:
 - id: eav-sorrento-2026-10-17
   controlli:
@@ -1255,8 +1429,8 @@ pubblicazioni:
   tipo: orario_ordinario
   stato: pubblicazione_trovata_contenuto_pdf_da_confrontare
   ricontrollare: '2026-10-19'
-  nota: Pagina del nuovo documento e indice aperti; PDF non letto in questa preparazione. Durate e fermate
-    non dedotte dal comunicato. Data di aggiornamento della pagina distinta dalla decorrenza.
+  nota: Pagina del nuovo documento e indice aperti; PDF non letto in questa preparazione. Durate e fermate non dedotte
+    dal comunicato. Data di aggiornamento della pagina distinta dalla decorrenza.
 - id: girolamini-fino-2026-10-24
   controlli:
   - tappa-girolamini
@@ -1275,8 +1449,8 @@ pubblicazioni:
       ultimo_ingresso_sab_dom_festivi: '12:45'
       chiuso:
       - lun
-  nota: 'Il documento dichiara il termine ma non la decorrenza: non inventare una data iniziale. La Biblioteca
-    ha orari distinti.'
+  nota: 'Il documento dichiara il termine ma non la decorrenza: non inventare una data iniziale. La Biblioteca ha
+    orari distinti.'
 - id: girolamini-inverno-2026
   controlli:
   - tappa-girolamini
@@ -1300,8 +1474,8 @@ pubblicazioni:
       mar_mer: 09:00-14:00
       gio_ven: 09:00-17:30
       sab_dom_festivi: 08:30-13:30
-  nota: 'La pagina distingue anche i limiti di ultimo ingresso della Biblioteca: rileggere prima di applicare.
-    Non applicare l’orario delle visite ai servizi bibliotecari.'
+  nota: 'La pagina distingue anche i limiti di ultimo ingresso della Biblioteca: rileggere prima di applicare. Non
+    applicare l’orario delle visite ai servizi bibliotecari.'
 - id: sansevero-calendario-2026-2027
   controlli:
   - tappa-sansevero
@@ -1386,6 +1560,7 @@ controlli:
   - duomo-liturgia
   - duomo-visita
   - mudd-news
+  - ritentativo-11
   ricerca_novita:
     domini:
     - duomonapoli.it
@@ -1395,18 +1570,26 @@ controlli:
     soggetto: Duomo e Tesoro di San Gennaro
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - 'Nuove fonti dirette del Duomo trovate. Il riquadro «oggi» e gli orari liturgici non identificano da soli
-    l’intero orario delle visite culturali: confrontare le due pagine prima di cambiare la scheda.'
+  - 'Nuove fonti dirette del Duomo trovate. Il riquadro «oggi» e gli orari liturgici non identificano da soli l’intero
+    orario delle visite culturali: confrontare le due pagine prima di cambiare la scheda.'
   parti_da_distinguere:
   - 'Cattedrale: accesso turistico distinto dalle celebrazioni'
   - 'Museo del Tesoro: biglietti e orari propri'
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.italia.it/it/campania/napoli/duomo
+    - https://tesorosangennaro.it/
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: tappa-sansevero
   nome: Cappella Sansevero
   categoria: citta
@@ -1443,14 +1626,14 @@ controlli:
     soggetto: Cappella Sansevero
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Orario ordinario confermato nella prova limitata; calendario di eccezioni già pubblicato per fine 2026
-    e inizio 2027. Non cancellare la chiusura settimanale ordinaria per effetto di un singolo martedì straordinario.
+  - Orario ordinario confermato nella prova limitata; calendario di eccezioni già pubblicato per fine 2026 e inizio
+    2027. Non cancellare la chiusura settimanale ordinaria per effetto di un singolo martedì straordinario.
   pubblicazioni_rilevate:
   - sansevero-calendario-2026-2027
 - id: tappa-santa-chiara
@@ -1488,8 +1671,8 @@ controlli:
     soggetto: Santa Chiara e il chiostro maiolicato
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -1498,6 +1681,13 @@ controlli:
   - Chiostro e museo
   - Basilica
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.monasterodisantachiara.it/
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: tappa-spaccanapoli
   nome: Spaccanapoli, Gesù Nuovo e San Gregorio Armeno
   categoria: citta
@@ -1538,19 +1728,27 @@ controlli:
     soggetto: Spaccanapoli, Gesù Nuovo e San Gregorio Armeno
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonte_ufficiale_da_trovare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - 'Le due chiese nella tappa hanno nel progetto fonti non ufficiali. Lacuna esplicita: cercare le fonti del
-    gestore per ciascuna; non sostituire gli orari con quelli delle strade pubbliche.'
+  - 'Le due chiese nella tappa hanno nel progetto fonti non ufficiali. Lacuna esplicita: cercare le fonti del gestore
+    per ciascuna; non sostituire gli orari con quelli delle strade pubbliche.'
   parti_da_distinguere:
   - Strade pubbliche senza orario proprio
   - Gesù Nuovo
   - San Gregorio Armeno
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    esito: rimangono_verifiche_personali
 - id: tappa-tribunali
   nome: 'Via dei Tribunali: pizza e cibo di strada'
   categoria: citta
@@ -1583,8 +1781,8 @@ controlli:
     soggetto: 'Via dei Tribunali: pizza e cibo di strada'
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: senza_orario_proprio
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -1592,6 +1790,14 @@ controlli:
   - Non attribuire un orario di apertura alla strada o al punto visto dall’esterno; cercare invece limitazioni,
     cantieri, ordinanze e accessi effettivi.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    esito: rimangono_verifiche_personali
 - id: tappa-pio-monte
   nome: Pio Monte della Misericordia
   categoria: citta
@@ -1626,8 +1832,8 @@ controlli:
     soggetto: Pio Monte della Misericordia
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -1670,8 +1876,8 @@ controlli:
     soggetto: Museo Archeologico Nazionale
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -1711,13 +1917,22 @@ controlli:
     soggetto: San Lorenzo Maggiore e gli scavi
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.laneapolissotterrata.it/Home/InfoVisite
+    - https://www.laneapolissotterrata.it/
+    verifiche_personali:
+    - V01
+    esito: rimangono_verifiche_personali
 - id: tappa-napoli-sotterranea
   nome: Napoli Sotterranea
   categoria: citta
@@ -1753,8 +1968,8 @@ controlli:
     soggetto: Napoli Sotterranea
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -1794,8 +2009,8 @@ controlli:
     soggetto: Museo Madre
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -1836,8 +2051,8 @@ controlli:
     soggetto: Piazza del Plebiscito e Galleria Umberto I
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -1846,6 +2061,14 @@ controlli:
   - Piazza pubblica
   - Galleria Umberto I
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    esito: rimangono_verifiche_personali
 - id: tappa-palazzo-reale
   nome: Palazzo Reale
   categoria: citta
@@ -1881,8 +2104,8 @@ controlli:
     soggetto: Palazzo Reale
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -1922,8 +2145,8 @@ controlli:
     soggetto: Teatro di San Carlo
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -1931,6 +2154,15 @@ controlli:
   - 'Il dominio richiede una verifica di sicurezza nello strumento: il vecchio link non è confermato. Non usare
     un calendario di spettacoli o un PDF storico come orario attuale delle visite.'
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.teatrosancarlo.it/visite-guidate/
+    - https://www.teatrosancarlo.it/
+    verifiche_personali:
+    - V02
+    esito: rimangono_verifiche_personali
 - id: tappa-castel-nuovo
   nome: Castel Nuovo (Maschio Angioino)
   categoria: citta
@@ -1966,13 +2198,22 @@ controlli:
     soggetto: Castel Nuovo (Maschio Angioino)
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/maschioangioino
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    esito: rimangono_verifiche_personali
 - id: tappa-toledo
   nome: Via Toledo, la stazione dell'arte e i Quartieri Spagnoli
   categoria: citta
@@ -2008,13 +2249,21 @@ controlli:
     soggetto: Via Toledo, la stazione dell'arte e i Quartieri Spagnoli
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.anm.it/s/?language=it
+    verifiche_personali:
+    - V04
+    esito: rimangono_verifiche_personali
 - id: tappa-galleria-borbonica
   nome: Galleria Borbonica
   categoria: citta
@@ -2051,8 +2300,8 @@ controlli:
     soggetto: Galleria Borbonica
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2091,16 +2340,18 @@ controlli:
   - gestore-www-comune-napoli-it
   - anm-portale
   - comune-notizie
+  - ritentativo-14
   ricerca_novita:
     domini:
     - anm.it
     - comune.napoli.it
     - www2.anm.it
+    - www.anm.it
     soggetto: Monte Echia, il belvedere di Pizzofalcone
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2109,6 +2360,17 @@ controlli:
   - Belvedere raggiungibile a piedi
   - Ascensore ANM
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www2.anm.it/index.php?option=com_content&task=view&id=4286&Itemid=314
+    - https://www.anm.it/s/?language=it
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V04
+    esito: rimangono_verifiche_personali
 - id: tappa-borgo-marinari
   nome: Borgo Marinari e Castel dell'Ovo
   categoria: citta
@@ -2137,14 +2399,16 @@ controlli:
   canali_scoperta:
   - gestore-www-comune-napoli-it
   - comune-notizie
+  - ritentativo-04
   ricerca_novita:
     domini:
     - comune.napoli.it
+    - cultura.gov.it
     soggetto: Borgo Marinari e Castel dell'Ovo
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2153,6 +2417,17 @@ controlli:
   - Area pedonale
   - Castel dell’Ovo, accessibilità effettiva
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/area-pedonale-di-borgo-marinari/
+    - https://www.comune.napoli.it/casteldellovo
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V05
+    esito: rimangono_verifiche_personali
 - id: tappa-lungomare
   nome: 'Il lungomare: via Partenope, via Caracciolo e Villa Comunale'
   categoria: citta
@@ -2181,14 +2456,16 @@ controlli:
   canali_scoperta:
   - gestore-www-comune-napoli-it
   - comune-notizie
+  - ritentativo-05
   ricerca_novita:
     domini:
     - comune.napoli.it
+    - napoliforme.comune.napoli.it
     soggetto: 'Il lungomare: via Partenope, via Caracciolo e Villa Comunale'
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2197,6 +2474,16 @@ controlli:
   - Strade pubbliche
   - Villa Comunale con cancelli
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/vivere-il-comune/luoghi/villa-comunale/
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V06
+    esito: rimangono_verifiche_personali
 - id: tappa-dadom
   nome: Acquario e museo Darwin-Dohrn
   categoria: citta
@@ -2232,8 +2519,8 @@ controlli:
     soggetto: Acquario e museo Darwin-Dohrn
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2268,6 +2555,7 @@ controlli:
   canali_scoperta:
   - gestore-cultura-gov-it
   - museicampania-avvisi
+  - gestore-museicampania-cultura-gov-it
   ricerca_novita:
     domini:
     - cultura.gov.it
@@ -2275,8 +2563,8 @@ controlli:
     soggetto: Castel Sant'Elmo
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2285,6 +2573,13 @@ controlli:
   - Castello
   - Museo Novecento
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://museicampania.cultura.gov.it/category/avvisi/
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: tappa-san-martino
   nome: Certosa e Museo di San Martino
   categoria: citta
@@ -2314,20 +2609,30 @@ controlli:
   canali_scoperta:
   - gestore-cultura-gov-it
   - museicampania-avvisi
+  - gestore-museicampania-cultura-gov-it
+  - ritentativo-12
   ricerca_novita:
     domini:
     - cultura.gov.it
     - museicampania.cultura.gov.it
+    - museinazionalivomero.cultura.gov.it
     soggetto: Certosa e Museo di San Martino
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://museicampania.cultura.gov.it/category/avvisi/
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: tappa-floridiana
   nome: Villa Floridiana e il museo della ceramica
   categoria: citta
@@ -2357,15 +2662,18 @@ controlli:
   canali_scoperta:
   - gestore-cultura-gov-it
   - museicampania-avvisi
+  - gestore-museicampania-cultura-gov-it
+  - ritentativo-12
   ricerca_novita:
     domini:
     - cultura.gov.it
     - museicampania.cultura.gov.it
+    - museinazionalivomero.cultura.gov.it
     soggetto: Villa Floridiana e il museo della ceramica
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2374,6 +2682,15 @@ controlli:
   - Parco
   - Museo Duca di Martina
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana
+    - https://museicampania.cultura.gov.it/category/avvisi/
+    verifiche_personali:
+    - V07
+    esito: rimangono_verifiche_personali
 - id: tappa-pedamentina
   nome: La Pedamentina, da San Martino in discesa
   categoria: citta
@@ -2408,8 +2725,8 @@ controlli:
     soggetto: La Pedamentina, da San Martino in discesa
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2417,6 +2734,16 @@ controlli:
   - Non attribuire un orario di apertura alla strada o al punto visto dall’esterno; cercare invece limitazioni,
     cantieri, ordinanze e accessi effettivi.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/turismo/turismo-sostenibile/percorsi-a-piedi/dalla-pedamentina-a-spaccanapoli/
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V08
+    esito: rimangono_verifiche_personali
 - id: tappa-catacombe
   nome: Catacombe di San Gennaro
   categoria: citta
@@ -2451,8 +2778,8 @@ controlli:
     soggetto: Catacombe di San Gennaro
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2495,8 +2822,8 @@ controlli:
     soggetto: Rione Sanità e Basilica della Sanità
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2506,6 +2833,15 @@ controlli:
   - Basilica della Sanità
   - Ascensore ANM
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=320
+    - https://www.anm.it/s/?language=it
+    verifiche_personali:
+    - V04
+    esito: rimangono_verifiche_personali
 - id: tappa-fontanelle
   nome: Cimitero delle Fontanelle
   categoria: citta
@@ -2544,13 +2880,21 @@ controlli:
     soggetto: Cimitero delle Fontanelle
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    esito: rimangono_verifiche_personali
 - id: tappa-capodimonte
   nome: Museo e Real Bosco di Capodimonte
   categoria: citta
@@ -2586,16 +2930,24 @@ controlli:
     soggetto: Museo e Real Bosco di Capodimonte
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
-  stato_preparazione: fonti_non_verificabili
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
+  stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
-  note: []
+  note:
+  - '19/10: recuperata lettura della fonte precedentemente non verificabile; confronto completo ancora da eseguire.'
   parti_da_distinguere:
   - Bosco
   - Museo e singoli piani
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://capodimonte.cultura.gov.it/orari/
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: tappa-virgilio
   nome: Parco delle Tombe di Virgilio e Leopardi
   categoria: citta
@@ -2635,13 +2987,22 @@ controlli:
     soggetto: Parco delle Tombe di Virgilio e Leopardi
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://museicampania.cultura.gov.it/parco-delle-tombe-di-virgilio-e-leopardi-temporanea-chiusura-di-alcune-aree-del-percorso-di-visita/
+    - https://museicampania.cultura.gov.it/category/avvisi/
+    verifiche_personali:
+    - V19
+    esito: rimangono_verifiche_personali
 - id: tappa-marechiaro
   nome: Marechiaro
   categoria: citta
@@ -2675,8 +3036,8 @@ controlli:
     soggetto: Marechiaro
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2685,6 +3046,16 @@ controlli:
   - Accesso pedonale
   - ZTL e accessi al mare, distinti
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/ztl-marechiaro/
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V09
+    esito: rimangono_verifiche_personali
 - id: tappa-gaiola
   nome: Parco sommerso della Gaiola
   categoria: citta
@@ -2720,8 +3091,8 @@ controlli:
     soggetto: Parco sommerso della Gaiola
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2758,19 +3129,32 @@ controlli:
   canali_scoperta:
   - gestore-www-comune-napoli-it
   - comune-notizie
+  - ritentativo-06
   ricerca_novita:
     domini:
     - comune.napoli.it
+    - napoliforme.comune.napoli.it
     soggetto: Parco Virgiliano
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-virgiliano/
+    - https://www.comune.napoli.it/novita/parco-virgiliano-dal-27-giugno-riapertura-parziale-al-pubblico/
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V10
+    esito: rimangono_verifiche_personali
 - id: tappa-citta-scienza
   nome: Città della Scienza
   categoria: citta
@@ -2806,13 +3190,22 @@ controlli:
     soggetto: Città della Scienza
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.cittadellascienza.it/organizza-una-visita/
+    - https://www.cittadellascienza.it/
+    verifiche_personali:
+    - V11
+    esito: rimangono_verifiche_personali
 - id: tappa-san-domenico
   nome: San Domenico Maggiore e le arche aragonesi
   categoria: citta
@@ -2848,8 +3241,8 @@ controlli:
     soggetto: San Domenico Maggiore e le arche aragonesi
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2889,8 +3282,8 @@ controlli:
     soggetto: Purgatorio ad Arco, chiesa e ipogeo
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -2931,14 +3324,14 @@ controlli:
     soggetto: Girolamini, chiesa, museo e biblioteca
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - La stessa pagina distingue periodo fino al 24/10/2026 e periodo dal 25/10/2026. Biblioteca e Chiesa-Museo
-    hanno orari e limiti diversi; il testo applicativo cita già il cambio del 25 ottobre.
+  - La stessa pagina distingue periodo fino al 24/10/2026 e periodo dal 25/10/2026. Biblioteca e Chiesa-Museo hanno
+    orari e limiti diversi; il testo applicativo cita già il cambio del 25 ottobre.
   parti_da_distinguere:
   - Chiesa-Museo
   - 'Biblioteca: visite'
@@ -2983,13 +3376,20 @@ controlli:
     soggetto: I tetti del Duomo
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.muddnapoli.it/en/luoghi/cathedral-roofs/
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: tappa-filangieri
   nome: Museo Filangieri
   categoria: citta
@@ -3026,8 +3426,8 @@ controlli:
     soggetto: Museo Filangieri
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -3069,13 +3469,20 @@ controlli:
     soggetto: San Giovanni a Carbonara
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.muddnapoli.it/en/luoghi/san-giovanni-a-carbonara/
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: tappa-mercato-porta-nolana
   nome: Il mercato di Porta Nolana
   categoria: citta
@@ -3109,13 +3516,23 @@ controlli:
     soggetto: Il mercato di Porta Nolana
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V12
+    esito: rimangono_verifiche_personali
 - id: tappa-pignasecca
   nome: Il mercato della Pignasecca
   categoria: citta
@@ -3149,13 +3566,23 @@ controlli:
     soggetto: Il mercato della Pignasecca
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V12
+    esito: rimangono_verifiche_personali
 - id: tappa-ventaglieri
   nome: Parco dei Ventaglieri
   categoria: citta
@@ -3183,19 +3610,31 @@ controlli:
   canali_scoperta:
   - gestore-www-comune-napoli-it
   - comune-notizie
+  - ritentativo-10
   ricerca_novita:
     domini:
     - comune.napoli.it
+    - napoliforme.comune.napoli.it
     soggetto: Parco dei Ventaglieri
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-ventaglieri/
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V13
+    esito: rimangono_verifiche_personali
 - id: tappa-villa-pignatelli
   nome: Villa Pignatelli, museo e giardino
   categoria: citta
@@ -3231,8 +3670,8 @@ controlli:
     soggetto: Villa Pignatelli, museo e giardino
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -3267,19 +3706,33 @@ controlli:
   canali_scoperta:
   - gestore-www-comune-napoli-it
   - comune-notizie
+  - ritentativo-09
   ricerca_novita:
     domini:
     - comune.napoli.it
+    - static-www.comune.napoli.it
     soggetto: Parco Mascagna
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/
+    - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/
+    - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V14
+    esito: rimangono_verifiche_personali
 - id: tappa-camaldoli
   nome: Parco dei Camaldoli
   categoria: citta
@@ -3309,19 +3762,33 @@ controlli:
   canali_scoperta:
   - gestore-www-comune-napoli-it
   - comune-notizie
+  - ritentativo-09
   ricerca_novita:
     domini:
     - comune.napoli.it
+    - static-www.comune.napoli.it
     soggetto: Parco dei Camaldoli
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/
+    - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/
+    - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V14
+    esito: rimangono_verifiche_personali
 - id: tappa-parco-poggio
   nome: Parco del Poggio
   categoria: citta
@@ -3351,19 +3818,34 @@ controlli:
   canali_scoperta:
   - gestore-www-comune-napoli-it
   - comune-notizie
+  - ritentativo-09
+  - ritentativo-13
   ricerca_novita:
     domini:
     - comune.napoli.it
+    - static-www.comune.napoli.it
     soggetto: Parco del Poggio
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_non_verificabili
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/
+    - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/
+    - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V14
+    esito: rimangono_verifiche_personali
 - id: tappa-orto-botanico
   nome: Orto Botanico
   categoria: citta
@@ -3396,8 +3878,8 @@ controlli:
     soggetto: Orto Botanico
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -3435,8 +3917,8 @@ controlli:
     soggetto: Il belvedere di Sant'Antonio a Posillipo
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: senza_orario_proprio
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -3444,6 +3926,14 @@ controlli:
   - Non attribuire un orario di apertura alla strada o al punto visto dall’esterno; cercare invece limitazioni,
     cantieri, ordinanze e accessi effettivi.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    esito: rimangono_verifiche_personali
 - id: tappa-via-petrarca
   nome: Il belvedere di via Petrarca
   categoria: citta
@@ -3476,8 +3966,8 @@ controlli:
     soggetto: Il belvedere di via Petrarca
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: senza_orario_proprio
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -3485,6 +3975,14 @@ controlli:
   - Non attribuire un orario di apertura alla strada o al punto visto dall’esterno; cercare invece limitazioni,
     cantieri, ordinanze e accessi effettivi.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    esito: rimangono_verifiche_personali
 - id: tappa-palazzo-donn-anna
   nome: Palazzo Donn'Anna, da fuori
   categoria: citta
@@ -3517,8 +4015,8 @@ controlli:
     soggetto: Palazzo Donn'Anna, da fuori
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: senza_orario_proprio
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -3526,6 +4024,14 @@ controlli:
   - Non attribuire un orario di apertura alla strada o al punto visto dall’esterno; cercare invece limitazioni,
     cantieri, ordinanze e accessi effettivi.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    esito: rimangono_verifiche_personali
 - id: tappa-mostra-oltremare
   nome: Il parco della Mostra d'Oltremare
   categoria: citta
@@ -3560,14 +4066,14 @@ controlli:
     soggetto: Il parco della Mostra d'Oltremare
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - 'Conservare il dubbio sugli orari già documentato: distinguere ingressi, pagina mobile e desktop e giorni
-    di eventi, senza scegliere un numero arbitrariamente.'
+  - 'Conservare il dubbio sugli orari già documentato: distinguere ingressi, pagina mobile e desktop e giorni di
+    eventi, senza scegliere un numero arbitrariamente.'
   parti_da_distinguere:
   - Ingressi e cancelli con orari diversi
   - Parco, distinto dai singoli eventi
@@ -3616,14 +4122,22 @@ controlli:
     soggetto: Pompei
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate:
   - eav-sorrento-2026-10-17
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.eavsrl.it/campania-express/
+    verifiche_personali:
+    - V17
+    esito: rimangono_verifiche_personali
 - id: tappa-ercolano
   nome: Ercolano
   categoria: gita
@@ -3660,6 +4174,7 @@ controlli:
   - eav-ferrovie
   - eav-news
   - eav-avvisi
+  - ritentativo-08
   ricerca_novita:
     domini:
     - eavsrl.it
@@ -3667,14 +4182,23 @@ controlli:
     soggetto: Ercolano
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate:
   - eav-sorrento-2026-10-17
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.eavsrl.it/campania-express/
+    - https://ercolano.cultura.gov.it/tickets/
+    verifiche_personali:
+    - V17
+    esito: rimangono_verifiche_personali
 - id: tappa-vesuvio
   nome: Vesuvio, il Gran Cono
   categoria: gita
@@ -3716,13 +4240,20 @@ controlli:
     soggetto: Vesuvio, il Gran Cono
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.parconazionaledelvesuvio.it/
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: tappa-capri
   nome: Capri
   categoria: gita
@@ -3765,8 +4296,8 @@ controlli:
     soggetto: Capri
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -3775,6 +4306,14 @@ controlli:
   - Siti archeologici effettivamente citati nella scheda
   - Collegamento marittimo
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://museicapri.cultura.gov.it/
+    verifiche_personali:
+    - V20
+    esito: rimangono_verifiche_personali
 - id: tappa-ischia
   nome: Ischia
   categoria: gita
@@ -3817,8 +4356,8 @@ controlli:
     soggetto: Ischia
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -3863,8 +4402,8 @@ controlli:
     soggetto: Procida
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -3913,8 +4452,8 @@ controlli:
     soggetto: Reggia di Caserta
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -3963,13 +4502,20 @@ controlli:
     soggetto: Museo ferroviario di Pietrarsa
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.fondazionefs.it/it/esplora-il-museo/tariffe-abbonamenti.html
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: tappa-sorrento
   nome: Sorrento
   categoria: gita
@@ -4004,15 +4550,17 @@ controlli:
   - eav-ferrovie
   - eav-news
   - eav-avvisi
+  - ritentativo-07
   ricerca_novita:
     domini:
     - eavsrl.it
     - museocorreale.it
+    - www.eavsrl.it
     soggetto: Sorrento
     aggiungere: ''
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4021,6 +4569,15 @@ controlli:
     il PDF e le eventuali rettifiche.
   pubblicazioni_rilevate:
   - eav-sorrento-2026-10-17
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.eavsrl.it/campania-express/
+    - https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/
+    verifiche_personali:
+    - V17
+    esito: rimangono_verifiche_personali
 - id: locale-da-michele
   nome: L'Antica Pizzeria da Michele
   categoria: locale
@@ -4056,8 +4613,8 @@ controlli:
     soggetto: L'Antica Pizzeria da Michele
     aggiungere: Via Cesare Sersale 1
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4098,14 +4655,22 @@ controlli:
     soggetto: Antica Pizzeria Port'Alba
     aggiungere: Via Port'Alba 18
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
-  stato_preparazione: fonti_non_verificabili
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
+  stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
-  note: []
+  note:
+  - '19/10: recuperata lettura della fonte precedentemente non verificabile; confronto completo ancora da eseguire.'
   sede: Via Port'Alba 18
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.anticapizzeriaportalba.com/
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: locale-di-matteo
   nome: Antica Pizzeria Di Matteo
   categoria: locale
@@ -4141,8 +4706,8 @@ controlli:
     soggetto: Antica Pizzeria Di Matteo
     aggiungere: Via dei Tribunali 94
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4185,8 +4750,8 @@ controlli:
     soggetto: Osteria La Chitarra
     aggiungere: Rampe San Giovanni Maggiore 1b
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4229,14 +4794,14 @@ controlli:
     soggetto: La Locanda Gesù Vecchio
     aggiungere: Via Giovanni Paladino 26
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - 'Usare Via Giovanni Paladino 26. Il civico 4/4A è un’altra sede e ha un diverso giorno di chiusura. Prova
-    iniziale: confronto dell’orario ordinario; prenotazioni e avvisi restano da verificare nel controllo completo.'
+  - 'Usare Via Giovanni Paladino 26. Il civico 4/4A è un’altra sede e ha un diverso giorno di chiusura. Prova iniziale:
+    confronto dell’orario ordinario; prenotazioni e avvisi restano da verificare nel controllo completo.'
   sede: Via Giovanni Paladino 26
   pubblicazioni_rilevate: []
 - id: locale-di-costanzo
@@ -4271,8 +4836,8 @@ controlli:
     soggetto: Pasticceria Di Costanzo
     aggiungere: Piazza Cavour 133
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4311,8 +4876,8 @@ controlli:
     soggetto: Pizzeria Brandi
     aggiungere: Salita Sant'Anna di Palazzo 1
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4351,8 +4916,8 @@ controlli:
     soggetto: Antica Pizza Fritta da Zia Esterina Sorbillo
     aggiungere: Piazza Trieste e Trento 53
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4394,8 +4959,8 @@ controlli:
     soggetto: Hosteria Toledo
     aggiungere: Vico Giardinetto 78
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4434,8 +4999,8 @@ controlli:
     soggetto: Osteria Il Gobbetto
     aggiungere: Vico Sergente Maggiore 8
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4475,8 +5040,8 @@ controlli:
     soggetto: Trattoria da Nennella
     aggiungere: Piazza Carità 22
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4516,8 +5081,8 @@ controlli:
     soggetto: Pasticceria Pintauro
     aggiungere: Via Toledo 275
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4560,8 +5125,8 @@ controlli:
     soggetto: 50 Kalò
     aggiungere: Piazza Sannazaro 201b
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4570,6 +5135,13 @@ controlli:
     La variante con www della pagina della sede selezionata è stata aperta.'
   sede: Piazza Sannazaro 201b
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://50kalo.it/info.php
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: locale-salvo
   nome: Pizzeria Salvo
   categoria: locale
@@ -4605,14 +5177,21 @@ controlli:
     soggetto: Pizzeria Salvo
     aggiungere: Riviera di Chiaia 271
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   sede: Riviera di Chiaia 271
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.pizzeriasalvo.it/
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: locale-pignatelli
   nome: Ostaria Pignatelli
   categoria: locale
@@ -4649,8 +5228,8 @@ controlli:
     soggetto: Ostaria Pignatelli
     aggiungere: Riviera di Chiaia 216
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4692,8 +5271,8 @@ controlli:
     soggetto: La Cantinella
     aggiungere: Via Cuma 42
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4732,14 +5311,21 @@ controlli:
     soggetto: La Bersagliera
     aggiungere: Borgo Marinari 10
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   sede: Borgo Marinari 10
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.labersagliera.it/
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: locale-scialuppa
   nome: La Scialuppa
   categoria: locale
@@ -4772,8 +5358,8 @@ controlli:
     soggetto: La Scialuppa
     aggiungere: Piazzetta Marinari 5
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4815,8 +5401,8 @@ controlli:
     soggetto: Terrazza Calabritto
     aggiungere: Piazza Vittoria 1
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4855,8 +5441,8 @@ controlli:
     soggetto: Chalet Ciro
     aggiungere: Via Caracciolo, Mergellina
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4895,8 +5481,8 @@ controlli:
     soggetto: Gran Caffè La Caffettiera
     aggiungere: Piazza dei Martiri 26
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4935,8 +5521,8 @@ controlli:
     soggetto: Pizzeria Gorizia 1916
     aggiungere: Via Gian Lorenzo Bernini 29
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -4978,8 +5564,8 @@ controlli:
     soggetto: Pasticceria Bellavia
     aggiungere: Via Luca Giordano 50
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -5020,8 +5606,8 @@ controlli:
     soggetto: Meatin
     aggiungere: Via Timavo 25, angolo corso Europa
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -5063,8 +5649,8 @@ controlli:
     soggetto: Pizzeria Starita a Materdei
     aggiungere: Via Materdei 27
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -5103,8 +5689,8 @@ controlli:
     soggetto: Concettina ai Tre Santi
     aggiungere: Via Arena della Sanità 7 bis
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -5144,8 +5730,8 @@ controlli:
     soggetto: Pasticceria Poppella
     aggiungere: Via Arena della Sanità 28
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -5188,14 +5774,13 @@ controlli:
     soggetto: Palazzo Petrucci Pizzeria, Posillipo
     aggiungere: Via Posillipo 16/c
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Selezionare la pizzeria a Posillipo; non usare il ristorante gastronomico né la pizzeria di piazza San
-    Domenico.
+  - Selezionare la pizzeria a Posillipo; non usare il ristorante gastronomico né la pizzeria di piazza San Domenico.
   sede: Via Posillipo 16/c
   pubblicazioni_rilevate: []
 - id: locale-tufo
@@ -5230,14 +5815,21 @@ controlli:
     soggetto: Tufò Trattoria
     aggiungere: Via Posillipo 268
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note: []
   sede: Via Posillipo 268
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://tufotrattoria.it/
+    verifiche_personali: []
+    esito: accesso_recuperato_confronto_da_completare
 - id: locale-fenestella
   nome: '''A Fenestella'
   categoria: locale
@@ -5270,8 +5862,8 @@ controlli:
     soggetto: '''A Fenestella'
     aggiungere: Via Marechiaro 23
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -5313,8 +5905,8 @@ controlli:
     soggetto: Cicciotto a Marechiaro
     aggiungere: Calata Ponticello a Marechiaro 32
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
@@ -5356,14 +5948,14 @@ controlli:
     soggetto: Macellegria
     aggiungere: Via Pasquale Formisano 10, Fuorigrotta
     modello: site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)
-    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere
-      tutte le parole e non limitare ai risultati recenti.
+    regola: Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte
+      le parole e non limitare ai risultati recenti.
   stato_preparazione: fonti_organizzate_confronto_da_completare
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - 'La pagina riporta una fascia ampia: verificare che sia l’orario del servizio ristorazione e non quello
-    della macelleria.'
+  - 'La pagina riporta una fascia ampia: verificare che sia l’orario del servizio ristorazione e non quello della
+    macelleria.'
   sede: Via Pasquale Formisano 10, Fuorigrotta
   pubblicazioni_rilevate: []
 - id: trasporto-bus-anm
@@ -5419,13 +6011,20 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
-  - Leggere calendar.txt, calendar_dates.txt, feed_info.txt se presente e le 13 linee del feed. L’URL ZIP può
-    restare identico mentre cambiano le date e i contenuti. Hash o Last-Modified da soli non confermano gli
-    orari.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
+  - Leggere calendar.txt, calendar_dates.txt, feed_info.txt se presente e le 13 linee del feed. L’URL ZIP può restare
+    identico mentre cambiano le date e i contenuti. Hash o Last-Modified da soli non confermano gli orari.
   catalogo_dati: anm-gtfs
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.anm.it/s/?language=it
+    verifiche_personali:
+    - V04
+    esito: rimangono_verifiche_personali
 - id: trasporto-metro-l1
   nome: Metro ANM Linea 1
   categoria: trasporto
@@ -5468,9 +6067,17 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.anm.it/s/?language=it
+    verifiche_personali:
+    - V04
+    esito: rimangono_verifiche_personali
 - id: trasporto-metro-l6
   nome: Metro ANM Linea 6
   categoria: trasporto
@@ -5514,9 +6121,21 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/novita/linea-6-della-metro-nei-giorni-feriali-corse-fino-alle-21-10/
+    - https://www.anm.it/s/?language=it
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V04
+    - V15
+    esito: rimangono_verifiche_personali
 - id: trasporto-metro-l2
   nome: Trenitalia Linea 2
   categoria: trasporto
@@ -5563,10 +6182,10 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
-  - Il titolo della fonte esistente dichiara validità 14/06–12/12/2026. Verificare l’interno del PDF, che può
-    essere sostituito allo stesso URL, e le stazioni effettivamente servite.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
+  - Il titolo della fonte esistente dichiara validità 14/06–12/12/2026. Verificare l’interno del PDF, che può essere
+    sostituito allo stesso URL, e le stazioni effettivamente servite.
   pubblicazioni_rilevate: []
 - id: trasporto-funicolare-centrale
   nome: Funicolare Centrale
@@ -5588,6 +6207,7 @@ controlli:
   canali_scoperta:
   - anm-portale
   - anm-funicolari
+  - ritentativo-01
   ricerca_novita:
     domini:
     - anm.it
@@ -5611,9 +6231,19 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www2.anm.it/index.php?option=com_content&task=view&id=81&Itemid=98
+    - https://www.anm.it/s/?language=it
+    - https://www.anm.it/s/funicolari?language=it
+    verifiche_personali:
+    - V04
+    esito: rimangono_verifiche_personali
 - id: trasporto-funicolare-chiaia
   nome: Funicolare di Chiaia
   categoria: trasporto
@@ -5634,6 +6264,7 @@ controlli:
   canali_scoperta:
   - anm-portale
   - anm-funicolari
+  - ritentativo-02
   ricerca_novita:
     domini:
     - anm.it
@@ -5657,9 +6288,19 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www2.anm.it/index.php?option=com_content&task=view&id=82&Itemid=98
+    - https://www.anm.it/s/?language=it
+    - https://www.anm.it/s/funicolari?language=it
+    verifiche_personali:
+    - V04
+    esito: rimangono_verifiche_personali
 - id: trasporto-funicolare-montesanto
   nome: Funicolare di Montesanto, anche se esclusa dai calcoli per chiusura
   categoria: trasporto
@@ -5704,9 +6345,22 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.comune.napoli.it/novita/15-maggio-2026-chiusura-funicolare-montesanto-per-manutenzione-ventennale/
+    - https://www.anm.it/s/?language=it
+    - https://www.anm.it/s/funicolari?language=it
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V04
+    - V16
+    esito: rimangono_verifiche_personali
 - id: trasporto-funicolare-mergellina
   nome: Funicolare di Mergellina
   categoria: trasporto
@@ -5727,6 +6381,7 @@ controlli:
   canali_scoperta:
   - anm-portale
   - anm-funicolari
+  - ritentativo-03
   ricerca_novita:
     domini:
     - anm.it
@@ -5750,9 +6405,19 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www2.anm.it/index.php?option=com_content&task=view&id=84&Itemid=98
+    - https://www.anm.it/s/?language=it
+    - https://www.anm.it/s/funicolari?language=it
+    verifiche_personali:
+    - V04
+    esito: rimangono_verifiche_personali
 - id: trasporto-cumana
   nome: EAV Cumana, tratto usato Montesanto–Bagnoli
   categoria: trasporto
@@ -5797,11 +6462,19 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
-  - Il tabellone in tempo reale non prova la frequenza ordinaria. Confrontare il PDF corrente e gli avvisi
-    per Montesanto–Bagnoli; la riapertura dell’intera linea non autorizza ad estendere automaticamente il modello.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
+  - Il tabellone in tempo reale non prova la frequenza ordinaria. Confrontare il PDF corrente e gli avvisi per Montesanto–Bagnoli;
+    la riapertura dell’intera linea non autorizza ad estendere automaticamente il modello.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://orariotreni.eavsrl.it/
+    verifiche_personali:
+    - V18
+    esito: rimangono_verifiche_personali
 - id: trasporto-ascensori
   nome: Ascensori pubblici ANM e Monte Echia
   categoria: trasporto
@@ -5826,11 +6499,13 @@ controlli:
   canali_scoperta:
   - anm-portale
   - comune-notizie
+  - ritentativo-14
   ricerca_novita:
     domini:
     - anm.it
     - comune.napoli.it
     - www2.anm.it
+    - www.anm.it
     soggetto: Ascensori pubblici ANM e Monte Echia
     aggiungere: ascensori
     modello: site:{dominio} {linea_o_tratta} (orario OR nuovo orario OR avviso OR rettifica OR sospensione)
@@ -5850,9 +6525,21 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
   pubblicazioni_rilevate: []
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=320
+    - https://www2.anm.it/index.php?option=com_content&task=view&id=4286&Itemid=314
+    - https://www.anm.it/s/?language=it
+    - https://www.comune.napoli.it/
+    verifiche_personali:
+    - V03
+    - V04
+    esito: rimangono_verifiche_personali
 - id: trasporto-vesuviane
   nome: EAV Napoli–Sorrento, Pompei ed Ercolano; Campania Express distinto
   categoria: trasporto
@@ -5880,9 +6567,11 @@ controlli:
   - eav-ferrovie
   - eav-avvisi
   - eav-news
+  - ritentativo-07
   ricerca_novita:
     domini:
     - eavsrl.it
+    - www.eavsrl.it
     soggetto: EAV Napoli–Sorrento, Pompei ed Ercolano; Campania Express distinto
     aggiungere: Napoli-Sorrento Campania Express
     modello: site:{dominio} {linea_o_tratta} (orario OR nuovo orario OR avviso OR rettifica OR sospensione)
@@ -5896,12 +6585,21 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
   - 'Nuova pubblicazione EAV dal 17/10/2026: aprire PDF e rettifiche prima di modificare durate o ultime corse.
     Non confondere la L1 EAV con la Linea 1 ANM.'
   pubblicazioni_rilevate:
   - eav-sorrento-2026-10-17
+  ritentativo_accesso:
+    data: '2026-10-19'
+    rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+    url_ritentati:
+    - https://www.eavsrl.it/campania-express/
+    - https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/
+    verifiche_personali:
+    - V17
+    esito: rimangono_verifiche_personali
 - id: trasporto-bus-vesuvio
   nome: Bus EAV 808 Pompei–Vesuvio
   categoria: trasporto
@@ -5939,8 +6637,8 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
   pubblicazioni_rilevate: []
 - id: trasporto-regionali-gite
   nome: Treni regionali per Caserta e Pietrarsa
@@ -5987,8 +6685,8 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
   pubblicazioni_rilevate: []
 - id: trasporto-caremar-isole
   nome: Caremar Napoli–Capri/Ischia/Procida
@@ -6034,10 +6732,10 @@ controlli:
   ultimo_controllo_completo: null
   prossimo_controllo: '2026-10-19'
   note:
-  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato
-    da questo inventario.
-  - Controllare data del viaggio, porto di partenza, destinazione e ritorno. Non estrapolare l’orario estivo
-    2027 da partenze odierne o dall’orario invernale.
+  - Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo
+    inventario.
+  - Controllare data del viaggio, porto di partenza, destinazione e ritorno. Non estrapolare l’orario estivo 2027
+    da partenze odierne o dall’orario invernale.
   pubblicazioni_rilevate: []
 candidati_esclusi:
 - url: https://www.50kalo.it/info_repubblica.php
@@ -6046,7 +6744,18 @@ candidati_esclusi:
   motivo: 'Guida indipendente, non il gestore del monastero: non promossa a fonte ufficiale degli orari.'
 limiti:
 - Nessun aggiornamento degli orari applicativi, nessun processo pianificato e nessun rilascio.
-- Apertura riuscita non equivale a fonte letta integralmente né a controllo concluso. Il rapporto iniziale
-  riporta i limiti dello strumento.
-- Le ricerche non dimostrano assenza assoluta di nuove pagine; conservare query, copertura degli indici e ogni
-  lacuna.
+- Apertura riuscita non equivale a fonte letta integralmente né a controllo concluso. Il rapporto iniziale riporta
+  i limiti dello strumento.
+- Le ricerche non dimostrano assenza assoluta di nuove pagine; conservare query, copertura degli indici e ogni lacuna.
+ritentativo_fonti:
+  data: '2026-10-19'
+  rapporto: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml
+  verifiche_personali: da-verificare/fonti-orari.md
+  url_ritentati: 50
+  esiti:
+    alternativa_ufficiale: 10
+    recuperata: 9
+    non_verificabile: 24
+    parziale: 7
+  nota: Non cambia ultimo_controllo_completo né rinvia le scadenze; usare il rapporto corrente per gli esiti accesso,
+    lasciando immutato il rapporto iniziale.

@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Ritentativo fonti e verifiche personali · 19/10/2026
+
+Ritentati 50 URL precedentemente non leggibili: 9 recuperati allo stesso indirizzo, 10 con alternativa ufficiale, 7 parziali e 24 ancora non verificabili. [Rapporto](aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.md) e [20 verifiche personali per Enrico](da-verificare/fonti-orari.md), con collegamenti e richieste precise. Aggiunti canali alternativi e riscontri di accesso al registro; rapporto iniziale e vecchia lista locali conservati. Nessun dato applicativo aggiornato, nessun controllo completo concluso o scadenza rinviata. Verificati YAML, riferimenti, copertura e conservazione dei file. Lavoro sul branch `codex/controlli-periodici-fonti`; main non modificato.
+
 ## Registro dei controlli periodici · 19/10/2026
 
 Su richiesta di Enrico, preparati [registro](aggiornamenti/controlli-periodici.yaml), [procedura condivisa Codex/Claude](aggiornamenti/PROCEDURA.md) e [rapporto iniziale](aggiornamenti/rapporti/2026-10-19-impostazione.md), secondo il piano approvato in questa chat. Copertura: 60 tappe/gite, 32 locali e 14 gruppi di trasporto, con ricerca obbligatoria di nuove pagine/PDF oltre ai vecchi URL, distinzione fra date di pubblicazione e validità, eccezioni e sedi. Prove iniziali: nuovo documento EAV dal 17 ottobre, cambio Girolamini dal 25, calendario futuro Sansevero e distinzione delle sedi Gesù Vecchio/50 Kalò. Alcuni siti non leggibili dal cloud; nessuna conferma degli orari basata sui soli risultati di ricerca. Dati applicativi e date precedenti conservati; nessuna pianificazione automatica né pubblicazione su main.

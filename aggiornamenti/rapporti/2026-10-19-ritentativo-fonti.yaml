@@ -1,0 +1,1488 @@
+versione: 1
+data: '2026-10-19'
+tipo: ritentativo_accesso_fonti
+commit_precedente: 2e65a01b5cf8d5cb3a798981fbce6dcc26aba545
+ambito: 50 URL segnalati non verificabili nel rapporto iniziale; accessi alternativi e verifiche personali residue.
+metodi:
+- Nuova apertura dei 50 URL tramite servizio web.
+- Ricerche mirate sui domini ufficiali, confronto di percorsi pubblici, www e senza www, lingua italiana e query
+  menu ANM.
+- Lettura di pagine alternative e testo di PDF ufficiali; due richieste screenshot PDF non hanno restituito immagini
+  e non sono considerate verifica visiva.
+- 'Prova terminale tramite proxy configurato: proxy non raggiungibile.'
+- 'Prova browser Chromium/Playwright: arresto del browser prima della navigazione. Nessuna verifica del sito ottenuta
+  da questo metodo.'
+limiti:
+- 'Il servizio web può usare contenuti indicizzati: data del tentativo distinta da data di scansione e da validità.'
+- 403, 404, timeout, controllo di sicurezza e contenuto JavaScript sono risultati diversi; nessun aggiramento di
+  CAPTCHA o protezioni.
+- Aprire la scheda di un PDF non equivale a leggere e confrontare tutte le sue corse.
+- Una homepage recuperata non certifica tutti gli orari o gli avvisi del gestore.
+riepilogo:
+  url_originari: 50
+  esiti:
+    alternativa_ufficiale: 10
+    recuperata: 9
+    non_verificabile: 24
+    parziale: 7
+  tentativi_apertura_web: 93
+  url_distinti_tentati: 85
+  ricerche_mirate: 42
+  gruppi_verifica_personale: 20
+  canali_nuovi: 14
+esiti_per_url:
+- url: https://50kalo.it/info.php
+  fonti:
+  - lc-cinquanta-kalo
+  canali: []
+  esito: alternativa_ufficiale
+  alternativa:
+    url: https://www.50kalo.it/info.php
+    nota: Contatti e orari leggibili della sede Piazza Sannazaro 201b; non usare la sede Repubblica.
+    parziale: false
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://www.anticapizzeriaportalba.com/
+  fonti:
+  - lc-port-alba
+  canali:
+  - gestore-www-anticapizzeriaportalba-com
+  esito: recuperata
+  alternativa: null
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=320
+  fonti:
+  - tp-anm-ascensori
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V04
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=81&Itemid=98
+  fonti:
+  - tp-anm-centrale
+  canali: []
+  esito: alternativa_ufficiale
+  alternativa:
+    url: https://www2.anm.it/index.php?Itemid=383&id=81&option=com_content&task=view
+    nota: 'Scheda ANM leggibile con parametro Itemid del menu corretto; orari presenti. La pagina contiene anche
+      riferimenti storici: confrontare gli avvisi recenti prima di applicarli.'
+    parziale: false
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=82&Itemid=98
+  fonti:
+  - tp-anm-chiaia
+  canali: []
+  esito: alternativa_ufficiale
+  alternativa:
+    url: https://www2.anm.it/index.php?Itemid=385&id=82&option=com_content&task=view
+    nota: 'Scheda ANM leggibile con parametro Itemid del menu corretto; orari presenti. La pagina contiene anche
+      riferimenti storici: confrontare gli avvisi recenti prima di applicarli.'
+    parziale: false
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=4286&Itemid=314
+  fonti:
+  - tp-anm-echia
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V04
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=84&Itemid=98
+  fonti:
+  - tp-anm-mergellina
+  canali: []
+  esito: alternativa_ufficiale
+  alternativa:
+    url: https://www2.anm.it/index.php?Itemid=384&id=84&option=com_content&task=view
+    nota: 'Scheda ANM leggibile con parametro Itemid del menu corretto; orari presenti. La pagina contiene anche
+      riferimenti storici: confrontare gli avvisi recenti prima di applicarli.'
+    parziale: false
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://capodimonte.cultura.gov.it/orari/
+  fonti:
+  - tp-capodimonte-orari
+  canali: []
+  esito: recuperata
+  alternativa: null
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://www.cittadellascienza.it/organizza-una-visita/
+  fonti:
+  - tp-cittascienza-visita
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V11
+- url: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/area-pedonale-di-borgo-marinari/
+  fonti:
+  - tp-comune-borgomarinari
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V05
+- url: https://www.comune.napoli.it/casteldellovo
+  fonti:
+  - tp-comune-casteldellovo
+  canali: []
+  esito: parziale
+  alternativa:
+    url: https://cultura.gov.it/luogo/castel-dell-ovo
+    nota: Scheda MiC con orari leggibile; non dimostra la riapertura dopo i lavori né vale come orario del Borgo
+      Marinari. Serve confronto con avviso comunale recente.
+    parziale: true
+  richiede_controllo_personale: true
+  verifica_personale: V05
+- url: https://www.comune.napoli.it/maschioangioino
+  fonti:
+  - tp-comune-castelnuovo
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V03
+- url: https://www.comune.napoli.it/novita/linea-6-della-metro-nei-giorni-feriali-corse-fino-alle-21-10/
+  fonti:
+  - tp-comune-linea6
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V15
+- url: https://www.comune.napoli.it/novita/15-maggio-2026-chiusura-funicolare-montesanto-per-manutenzione-ventennale/
+  fonti:
+  - tp-comune-montesanto
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V16
+- url: https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/turismo/turismo-sostenibile/percorsi-a-piedi/dalla-pedamentina-a-spaccanapoli/
+  fonti:
+  - tp-comune-pedamentina
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V08
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/villa-comunale/
+  fonti:
+  - tp-comune-villacomunale
+  canali: []
+  esito: parziale
+  alternativa:
+    url: https://napoliforme.comune.napoli.it/en/pois/-/poi/Villa-Comunale
+    nota: Scheda del portale turistico istituzionale leggibile; orario settimanale presente ma manca una decorrenza
+      esplicita. Verificare stagionalità con prospetto comunale.
+    parziale: true
+  richiede_controllo_personale: true
+  verifica_personale: V06
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-virgiliano/
+  fonti:
+  - tp-comune-virgiliano
+  canali: []
+  esito: parziale
+  alternativa:
+    url: https://napoliforme.comune.napoli.it/pois/-/poi/Virgiliano-Park
+    nota: Scheda istituzionale leggibile; non risolve quali aree siano oggi riaperte né conferma la validità stagionale.
+    parziale: true
+  richiede_controllo_personale: true
+  verifica_personale: V10
+- url: https://www.comune.napoli.it/novita/parco-virgiliano-dal-27-giugno-riapertura-parziale-al-pubblico/
+  fonti:
+  - tp-comune-virgiliano-riapertura
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V10
+- url: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/ztl-marechiaro/
+  fonti:
+  - tp-comune-ztl-marechiaro
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V09
+- url: https://www.eavsrl.it/campania-express/
+  fonti:
+  - tp-eav-campania-express-sospeso
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V17
+- url: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/
+  fonti:
+  - tp-eav-l1-orario
+  canali: []
+  esito: alternativa_ufficiale
+  alternativa:
+    url: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/
+    nota: 'Vecchio URL dal 1 ottobre restituisce 404. Indice e nuova scheda EAV accessibili: valido dal 17 ottobre,
+      scheda aggiornata il 19 ottobre. Tabella corse del PDF non confrontata in questo passaggio.'
+    parziale: false
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://orariotreni.eavsrl.it/
+  fonti:
+  - tp-eav-teleindicatori
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V18
+- url: https://ercolano.cultura.gov.it/tickets/
+  fonti:
+  - tp-ercolano-biglietti
+  canali: []
+  esito: alternativa_ufficiale
+  alternativa:
+    url: https://ercolano.cultura.gov.it/biglietti/
+    nota: Pagina italiana accessibile con stagioni, chiusura cancelli e ultimo ingresso distinti.
+    parziale: false
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://www.italia.it/it/campania/napoli/duomo
+  fonti:
+  - tp-italia-duomo
+  canali: []
+  esito: recuperata
+  alternativa: null
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/
+  fonti:
+  - tp-mercati-municipalita2
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V12
+- url: https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana
+  fonti:
+  - tp-mic-floridiana
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V07
+- url: https://www.muddnapoli.it/en/luoghi/san-giovanni-a-carbonara/
+  fonti:
+  - tp-mudd-carbonara
+  canali: []
+  esito: alternativa_ufficiale
+  alternativa:
+    url: https://muddnapoli.it/luoghi/san-giovanni-a-carbonara/
+    nota: Pagina italiana senza www leggibile; chiesa e Sacrestia sono esperienze diverse.
+    parziale: false
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://www.muddnapoli.it/en/luoghi/cathedral-roofs/
+  fonti:
+  - tp-mudd-tetti
+  canali: []
+  esito: alternativa_ufficiale
+  alternativa:
+    url: https://muddnapoli.it/luoghi/visita-tetti-duomo/
+    nota: Pagina italiana senza www leggibile con orario e ultima visita.
+    parziale: false
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://museicampania.cultura.gov.it/parco-delle-tombe-di-virgilio-e-leopardi-temporanea-chiusura-di-alcune-aree-del-percorso-di-visita/
+  fonti:
+  - tp-musei-campania-virgilio
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V19
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/
+  fonti:
+  - tp-parco-camaldoli
+  canali: []
+  esito: parziale
+  alternativa:
+    url: https://static-www.comune.napoli.it/wp-content/uploads/2025/05/orari_dei_parchi.pdf
+    nota: 'Prospetto annuale ufficiale leggibile, senza data di entrata in vigore esplicita. Documento storico:
+      non certifica da solo gli orari vigenti nel 2026. La tabella estratta perde alcuni allineamenti; nessun valore
+      applicato.'
+    parziale: true
+  richiede_controllo_personale: true
+  verifica_personale: V14
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/
+  fonti:
+  - tp-parco-mascagna
+  canali: []
+  esito: parziale
+  alternativa:
+    url: https://static-www.comune.napoli.it/wp-content/uploads/2025/05/orari_dei_parchi.pdf
+    nota: 'Prospetto annuale ufficiale leggibile, senza data di entrata in vigore esplicita. Documento storico:
+      non certifica da solo gli orari vigenti nel 2026. La tabella estratta perde alcuni allineamenti; nessun valore
+      applicato.'
+    parziale: true
+  richiede_controllo_personale: true
+  verifica_personale: V14
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/
+  fonti:
+  - tp-parco-poggio
+  canali: []
+  esito: parziale
+  alternativa:
+    url: https://static-www.comune.napoli.it/wp-content/uploads/2025/05/orari_dei_parchi.pdf
+    nota: 'Prospetto annuale ufficiale leggibile, senza data di entrata in vigore esplicita. Documento storico:
+      non certifica da solo gli orari vigenti nel 2026. La tabella estratta perde alcuni allineamenti; nessun valore
+      applicato.'
+    parziale: true
+  richiede_controllo_personale: true
+  verifica_personale: V14
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-ventaglieri/
+  fonti:
+  - tp-parco-ventaglieri
+  canali: []
+  esito: parziale
+  alternativa:
+    url: https://napoliforme.comune.napoli.it/pois/-/poi/Parco-Ventaglieri
+    nota: Scheda istituzionale con tabella settimanale leggibile; etichetta dinamica di apertura incoerente con
+      la tabella. Validità e impianti da confermare.
+    parziale: true
+  richiede_controllo_personale: true
+  verifica_personale: V13
+- url: https://www.fondazionefs.it/it/esplora-il-museo/tariffe-abbonamenti.html
+  fonti:
+  - tp-pietrarsa-tariffe
+  canali: []
+  esito: recuperata
+  alternativa: null
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://www.teatrosancarlo.it/visite-guidate/
+  fonti:
+  - tp-sancarlo-visite
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V02
+- url: https://www.laneapolissotterrata.it/Home/InfoVisite
+  fonti:
+  - tp-sanlorenzo
+  canali: []
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V01
+- url: https://www.anm.it/s/?language=it
+  fonti: []
+  canali:
+  - anm-portale
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V04
+- url: https://www.anm.it/s/funicolari?language=it
+  fonti: []
+  canali:
+  - anm-funicolari
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V04
+- url: https://www.comune.napoli.it/
+  fonti: []
+  canali:
+  - comune-notizie
+  - gestore-www-comune-napoli-it
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V03
+- url: https://museicampania.cultura.gov.it/category/avvisi/
+  fonti: []
+  canali:
+  - museicampania-avvisi
+  esito: alternativa_ufficiale
+  alternativa:
+    url: https://museicampania.cultura.gov.it/
+    nota: 'Homepage ufficiale leggibile con notizie datate fino al 19 ottobre. Archivio avvisi ancora non leggibile:
+      la ricerca va estesa alle pagine nuove.'
+    parziale: false
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://tesorosangennaro.it/
+  fonti: []
+  canali:
+  - gestore-tesorosangennaro-it
+  esito: alternativa_ufficiale
+  alternativa:
+    url: https://tesorosangennaro.it/faq/
+    nota: FAQ ufficiali leggibili; recuperano accesso a informazioni e collegamenti del gestore. Nessuna conferma
+      globale degli orari dalla sola FAQ.
+    parziale: false
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://www.monasterodisantachiara.it/
+  fonti: []
+  canali:
+  - gestore-www-monasterodisantachiara-it
+  esito: recuperata
+  alternativa: null
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://www.laneapolissotterrata.it/
+  fonti: []
+  canali:
+  - gestore-www-laneapolissotterrata-it
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V01
+- url: https://www.teatrosancarlo.it/
+  fonti: []
+  canali:
+  - gestore-www-teatrosancarlo-it
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V02
+- url: https://www.cittadellascienza.it/
+  fonti: []
+  canali:
+  - gestore-www-cittadellascienza-it
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V11
+- url: https://www.parconazionaledelvesuvio.it/
+  fonti: []
+  canali:
+  - gestore-www-parconazionaledelvesuvio-it
+  esito: recuperata
+  alternativa: null
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://museicapri.cultura.gov.it/
+  fonti: []
+  canali:
+  - gestore-museicapri-cultura-gov-it
+  esito: non_verificabile
+  alternativa: null
+  richiede_controllo_personale: true
+  verifica_personale: V20
+- url: https://www.pizzeriasalvo.it/
+  fonti: []
+  canali:
+  - gestore-www-pizzeriasalvo-it
+  esito: recuperata
+  alternativa: null
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://www.labersagliera.it/
+  fonti: []
+  canali:
+  - gestore-www-labersagliera-it
+  esito: recuperata
+  alternativa: null
+  richiede_controllo_personale: false
+  verifica_personale: null
+- url: https://tufotrattoria.it/
+  fonti: []
+  canali:
+  - gestore-tufotrattoria-it
+  esito: recuperata
+  alternativa: null
+  richiede_controllo_personale: false
+  verifica_personale: null
+tentativi:
+- url: https://50kalo.it/info.php
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www.anticapizzeriaportalba.com/
+  titolo: Home - Antica Pizzeria Port'Alba
+  esito: aperta
+  righe_totali: 108
+  righe_restituite: 108
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=320
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=81&Itemid=98
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=82&Itemid=98
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=4286&Itemid=314
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=84&Itemid=98
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://capodimonte.cultura.gov.it/orari/
+  titolo: Orari - Museo e Real Bosco di Capodimonte
+  esito: aperta
+  righe_totali: 222
+  righe_restituite: 222
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www.cittadellascienza.it/organizza-una-visita/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.cittadellascienza.it/organizza-una-visita/: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/area-pedonale-di-borgo-marinari/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/area-pedonale-di-borgo-marinari/:
+    (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/casteldellovo
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/casteldellovo: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/maschioangioino
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/maschioangioino: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/novita/linea-6-della-metro-nei-giorni-feriali-corse-fino-alle-21-10/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/novita/linea-6-della-metro-nei-giorni-feriali-corse-fino-alle-21-10/:
+    (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/novita/15-maggio-2026-chiusura-funicolare-montesanto-per-manutenzione-ventennale/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/novita/15-maggio-2026-chiusura-funicolare-montesanto-per-manutenzione-ventennale/:
+    (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/turismo/turismo-sostenibile/percorsi-a-piedi/dalla-pedamentina-a-spaccanapoli/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/turismo/turismo-sostenibile/percorsi-a-piedi/dalla-pedamentina-a-spaccanapoli/:
+    (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/villa-comunale/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/vivere-il-comune/luoghi/villa-comunale/: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-virgiliano/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-virgiliano/: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/novita/parco-virgiliano-dal-27-giugno-riapertura-parziale-al-pubblico/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/novita/parco-virgiliano-dal-27-giugno-riapertura-parziale-al-pubblico/:
+    (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/ztl-marechiaro/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/ztl-marechiaro/:
+    (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.eavsrl.it/campania-express/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.eavsrl.it/campania-express/: (404) Not Found'
+  metodo: nuova_apertura_url_originale
+- url: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-valido-dal-1-ottobre-2026/:
+    (404) Not Found'
+  metodo: nuova_apertura_url_originale
+- url: https://orariotreni.eavsrl.it/
+  titolo: Orario Treni Eav S.r.l.
+  esito: non_verificabile
+  righe_totali: 5
+  righe_restituite: 5
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://ercolano.cultura.gov.it/tickets/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www.italia.it/it/campania/napoli/duomo
+  titolo: Duomo - Italia.it
+  esito: aperta
+  righe_totali: 124
+  righe_restituite: 124
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/:
+    (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana:
+    (400) Timeout fetching'
+  metodo: nuova_apertura_url_originale
+- url: https://www.muddnapoli.it/en/luoghi/san-giovanni-a-carbonara/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www.muddnapoli.it/en/luoghi/cathedral-roofs/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://museicampania.cultura.gov.it/parco-delle-tombe-di-virgilio-e-leopardi-temporanea-chiusura-di-alcune-aree-del-percorso-di-visita/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://museicampania.cultura.gov.it/parco-delle-tombe-di-virgilio-e-leopardi-temporanea-chiusura-di-alcune-aree-del-percorso-di-visita/:
+    (400) Timeout fetching'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-ventaglieri/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-ventaglieri/: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.fondazionefs.it/it/esplora-il-museo/tariffe-abbonamenti.html
+  titolo: Tariffe e Abbonamenti
+  esito: aperta
+  righe_totali: 234
+  righe_restituite: 234
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www.teatrosancarlo.it/visite-guidate/
+  titolo: Security check required
+  esito: non_verificabile
+  righe_totali: 9
+  righe_restituite: 9
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www.laneapolissotterrata.it/Home/InfoVisite
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.laneapolissotterrata.it/Home/InfoVisite: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.anm.it/s/?language=it
+  titolo: Home ANM
+  esito: non_verificabile
+  righe_totali: 7
+  righe_restituite: 7
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www.anm.it/s/funicolari?language=it
+  titolo: Home ANM
+  esito: non_verificabile
+  righe_totali: 7
+  righe_restituite: 7
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www.comune.napoli.it/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://museicampania.cultura.gov.it/category/avvisi/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://museicampania.cultura.gov.it/category/avvisi/: (400) Timeout fetching'
+  metodo: nuova_apertura_url_originale
+- url: https://tesorosangennaro.it/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://tesorosangennaro.it/: (400) Timeout fetching'
+  metodo: nuova_apertura_url_originale
+- url: https://www.monasterodisantachiara.it/
+  titolo: Home - Chiostro di Santa Chiara
+  esito: aperta
+  righe_totali: 134
+  righe_restituite: 134
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www.laneapolissotterrata.it/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.laneapolissotterrata.it/: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.teatrosancarlo.it/
+  titolo: Security check required
+  esito: non_verificabile
+  righe_totali: 9
+  righe_restituite: 9
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www.cittadellascienza.it/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.cittadellascienza.it/: (403) Forbidden'
+  metodo: nuova_apertura_url_originale
+- url: https://www.parconazionaledelvesuvio.it/
+  titolo: Parco Nazionale del Vesuvio | Un viaggio tra storia, geologia e natura
+  esito: aperta
+  righe_totali: 194
+  righe_restituite: 194
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://museicapri.cultura.gov.it/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://museicapri.cultura.gov.it/: (400) Timeout fetching'
+  metodo: nuova_apertura_url_originale
+- url: https://www.pizzeriasalvo.it/
+  titolo: Pizzeria Salvo - La pizza napoletana oggi
+  esito: aperta
+  righe_totali: 123
+  righe_restituite: 123
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://www.labersagliera.it/
+  titolo: Ristorante La Bersagliera – Locale storico d'Italia dal 1919
+  esito: aperta
+  righe_totali: 81
+  righe_restituite: 81
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://tufotrattoria.it/
+  titolo: Tufò
+  esito: aperta
+  righe_totali: 223
+  righe_restituite: 223
+  errore: null
+  metodo: nuova_apertura_url_originale
+- url: https://napoliforme.comune.napoli.it/pois/-/poi/Virgiliano-Park
+  titolo: Virgiliano Park - NapoliForMe
+  esito: aperta
+  righe_totali: 101
+  righe_restituite: 101
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://napoliforme.comune.napoli.it/en/pois/-/poi/Villa-Comunale
+  titolo: Villa Comunale - NapoliForMe
+  esito: aperta
+  righe_totali: 109
+  righe_restituite: 109
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://napoliforme.comune.napoli.it/pois/-/poi/Parco-Ventaglieri
+  titolo: Parco Ventaglieri - NapoliForMe
+  esito: aperta
+  righe_totali: 98
+  righe_restituite: 98
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://static-www.comune.napoli.it/wp-content/uploads/2025/06/14_parco_del_poggio.pdf
+  titolo: Diapositiva 1
+  esito: aperta
+  righe_totali: 40
+  righe_restituite: 40
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.comune.napoli.it/flex/cm/pages/ServeAttachment.php/L/IT/D/9%252Fa%252F8%252FD.2d280d91fb022a78d893/P/BLOB%3AID%3D18827/E/pdf
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/flex/cm/pages/ServeAttachment.php/L/IT/D/9%252Fa%252F8%252FD.2d280d91fb022a78d893/P/BLOB%3AID%3D18827/E/pdf:
+    (403) Forbidden'
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www2.anm.it/index.php?Itemid=385&id=82&option=com_content&task=view
+  titolo: ANM Web Site - FUNICOLARE CHIAIA
+  esito: aperta
+  righe_totali: 79
+  righe_restituite: 79
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www2.anm.it/index.php?Itemid=383&id=81&option=com_content&task=view
+  titolo: ANM Web Site - FUNICOLARE CENTRALE
+  esito: aperta
+  righe_totali: 85
+  righe_restituite: 85
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://metroart.anm.it/pagine/monte-echia
+  titolo: Ascensore di Monte Echia - Metroart
+  esito: aperta
+  righe_totali: 73
+  righe_restituite: 73
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://laneapolissotterrata.it/Home/InfoVisite
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://laneapolissotterrata.it/Home/InfoVisite: (403) Forbidden'
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://muddnapoli.it/luoghi/san-giovanni-a-carbonara/
+  titolo: 'San Giovanni a Carbonara: Luogo del MUDD Napoli - Chiese e Spazi Sacri del Museo Diocesano Diffuso'
+  esito: aperta
+  righe_totali: 343
+  righe_restituite: 150
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://muddnapoli.it/luoghi/visita-tetti-duomo/
+  titolo: 'Tetti del Duomo: Luogo del MUDD Napoli - Chiese e Spazi Sacri del Museo Diocesano Diffuso'
+  esito: metadati_senza_contenuto
+  righe_totali: 224
+  righe_restituite: 0
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.eavsrl.it/campania-express/campania-express-con-eav-e-trenitalia/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 0
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.50kalo.it/info.php
+  titolo: 50 Kalò - Dove siamo e Contatti
+  esito: aperta
+  righe_totali: 26
+  righe_restituite: 26
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://ercolano.cultura.gov.it/biglietti/
+  titolo: Biglietti – Parco Archeologico di Ercolano
+  esito: aperta
+  righe_totali: 203
+  righe_restituite: 203
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=84&Itemid=384
+  titolo: ANM Web Site
+  esito: aperta
+  righe_totali: 83
+  righe_restituite: 83
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.anm.it/s/ascensori?language=it
+  titolo: Home ANM
+  esito: non_verificabile
+  righe_totali: 7
+  righe_restituite: 7
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.eavsrl.it/download/orari-e-tariffe-campania-express/
+  titolo: Orari e Tariffe - Campania Express - EAV srl
+  esito: aperta
+  righe_totali: 28
+  righe_restituite: 28
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.eavsrl.it/orari-linee-ferroviarie/
+  titolo: Orari linee ferroviarie - EAV srl
+  esito: aperta
+  righe_totali: 140
+  righe_restituite: 140
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/
+  titolo: Orario Ferrovia - L1 - Napoli-Sorrento dal 17 ottobre 2026 - EAV srl
+  esito: aperta
+  righe_totali: 24
+  righe_restituite: 24
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://tesorosangennaro.it/faq/
+  titolo: FAQ - Domande frequenti I Tesoro di San Gennaro
+  esito: aperta
+  righe_totali: 195
+  righe_restituite: 195
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://laneapolissotterrata.it/Home/Index
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://laneapolissotterrata.it/Home/Index: (403) Forbidden'
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.teatrosancarlo.it/it/visite-guidate.html
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.cittadellascienza.it/biglietteria/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.cittadellascienza.it/biglietteria/: (403) Forbidden'
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://museicapri.cultura.gov.it/luoghi/villa-jovis/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://cultura.gov.it/luogo/castel-dell-ovo
+  titolo: Castel dell'Ovo - Ministero della cultura
+  esito: aperta
+  righe_totali: 230
+  righe_restituite: 230
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://museicampania.cultura.gov.it/
+  titolo: Direzione regionale Musei nazionali Campania
+  esito: aperta
+  righe_totali: 192
+  righe_restituite: 192
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=381
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.anm.it/resource/1768990802000/cartadellamobilita25
+  titolo: LA CARTA DELLA MOBILITÀ
+  esito: aperta
+  righe_totali: 2442
+  righe_restituite: 118
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://museicapri.cultura.gov.it/it/musei-e-parchi-archeologici-di-capri/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://museicapri.cultura.gov.it/it/musei-e-parchi-archeologici-di-capri/: (400) Timeout
+    fetching'
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://museicampania.cultura.gov.it/temporanea-chiusura-del-parco-delle-tombe-di-virgilio-e-leopardi/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://museicampania.cultura.gov.it/temporanea-chiusura-del-parco-delle-tombe-di-virgilio-e-leopardi/:
+    (400) Timeout fetching'
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana:
+    (400) Timeout fetching'
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.comune.napoli.it/ztl
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.comune.napoli.it/ztl: (403) Forbidden'
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.eavsrl.it/campania-express/
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://www.eavsrl.it/campania-express/: (404) Not Found'
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://muddnapoli.it/luoghi/visita-tetti-duomo/
+  titolo: 'Tetti del Duomo: Luogo del MUDD Napoli - Chiese e Spazi Sacri del Museo Diocesano Diffuso'
+  esito: aperta
+  righe_totali: 224
+  righe_restituite: 224
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://museinazionalivomero.cultura.gov.it/
+  titolo: Musei nazionali del Vomero
+  esito: aperta
+  righe_totali: 107
+  righe_restituite: 107
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://static-www.comune.napoli.it/wp-content/uploads/2025/05/orari_dei_parchi.pdf
+  titolo: ''
+  esito: aperta
+  righe_totali: 33
+  righe_restituite: 33
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://biglietti.comune.napoli.it/availability
+  titolo: Internal Error ()
+  esito: non_verificabile
+  righe_totali: 1
+  righe_restituite: 1
+  errore: 'Failed to fetch https://biglietti.comune.napoli.it/availability: (400) Redirect loop detected'
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://cartadeiservizi.comune.napoli.it/prestazioni
+  titolo: Comune di Napoli - Carta dei servizi - Elenco Prestazioni
+  esito: aperta
+  righe_totali: 1555
+  righe_restituite: 57
+  errore: null
+  metodo: alternativa_ufficiale_o_percorso_pubblico
+- url: https://www.labersagliera.it/
+  titolo: Ristorante La Bersagliera – Locale storico d'Italia dal 1919
+  esito: aperta
+  righe_totali: 81
+  righe_restituite: 81
+  errore: null
+  metodo: lettura_contenuto
+- url: https://tufotrattoria.it/
+  titolo: Tufò
+  esito: aperta
+  righe_totali: 223
+  righe_restituite: 223
+  errore: null
+  metodo: lettura_contenuto
+- url: https://www.parconazionaledelvesuvio.it/
+  titolo: Parco Nazionale del Vesuvio | Un viaggio tra storia, geologia e natura
+  esito: aperta
+  righe_totali: 194
+  righe_restituite: 194
+  errore: null
+  metodo: lettura_contenuto
+- url: https://www.pizzeriasalvo.it/
+  titolo: Pizzeria Salvo - La pizza napoletana oggi
+  esito: aperta
+  righe_totali: 123
+  righe_restituite: 59
+  errore: null
+  metodo: lettura_contenuto
+- url: https://www.anticapizzeriaportalba.com/
+  titolo: Home - Antica Pizzeria Port'Alba
+  esito: metadati_senza_contenuto
+  righe_totali: 108
+  righe_restituite: 0
+  errore: null
+  metodo: lettura_contenuto
+ricerche:
+- site.comune.napoli.it "Maschio Angioino" orari
+- site.comune.napoli.it "Castel dell'Ovo" chiuso
+- site.comune.napoli.it "Villa Comunale" orari
+- site.comune.napoli.it "Parco Virgiliano" orari
+- site.comune.napoli.it "Parco Mascagna"
+- site.comune.napoli.it "Parco dei Camaldoli"
+- site.comune.napoli.it "Parco del Poggio"
+- site.comune.napoli.it "Parco Ventaglieri"
+- site.comune.napoli.it "Pedamentina"
+- site.comune.napoli.it "Municipalità 2" "mercati"
+- site.comune.napoli.it "ZTL Marechiaro"
+- site.comune.napoli.it "Borgo Marinari" "pedonale"
+- site.anm.it "Funicolare Centrale" orari
+- site.anm.it "Funicolare di Chiaia" orari
+- site.anm.it "Funicolare di Mergellina" orari
+- site.anm.it "Ascensore" "Echia" orari
+- site.cittadellascienza.it orari biglietti visita
+- site.cultura.gov.it "Floridiana" "orari"
+- site.laneapolissotterrata.it "Info Visite"
+- site.teatrosancarlo.it "visite guidate" orari
+- site.ercolano.cultura.gov.it orari biglietti tickets
+- site.eavsrl.it "Campania Express" "2026"
+- site.museicampania.cultura.gov.it "Virgilio" "chiusura"
+- site.anm.it "ascensori" orari Sanità
+- site.cittadellascienza.it orari 2026 biglietti visita
+- site.teatrosancarlo.it "visite guidate" "orari" 2026
+- site.museicampania.cultura.gov.it Floridiana "orari" 2026
+- site.ercolano.cultura.gov.it "Orari" "Biglietti"
+- site.eavsrl.it "Campania Express" "2026"
+- site.anm.it "Monte Echia" "orario"
+- site.anm.it "Mergellina" "Itemid" "84"
+- site.comune.napoli.it "mercati" "Pignasecca" "orari"
+- site.napoliforme.comune.napoli.it "Maschio" "orari"
+- site.napoliforme.comune.napoli.it "Mascagna"
+- site.napoliforme.comune.napoli.it "Camaldoli"
+- site.museicampania.cultura.gov.it "Virgilio" "chiusura"
+- site.museicapri.cultura.gov.it "Orari"
+- site.laneapolissotterrata.it "InfoVisite"
+- site.napoliforme.comune.napoli.it "Castel Nuovo"
+- site.comune.napoli.it "parco Mascagna" "orari"
+- site.comune.napoli.it "parco dei Camaldoli" "orari"
+- site.museinazionalidelvomero.cultura.gov.it "Floridiana"
+verifiche_personali:
+- id: V01
+  titolo: San Lorenzo Maggiore / Neapolis Sotterrata
+  stato: da_controllare
+  url_originari:
+  - https://www.laneapolissotterrata.it/Home/InfoVisite
+  - https://www.laneapolissotterrata.it/
+  fonti:
+  - tp-sanlorenzo
+  canali:
+  - gestore-www-laneapolissotterrata-it
+  cosa_controllare: 'Aprire Info visite o la pagina nuova del gestore: giorni, fasce, ultimo ingresso, prenotazione,
+    parti comprese.'
+  contesto: 403 sia con www sia senza www; anche Home/Index non leggibile.
+  risposta_enrico: null
+- id: V02
+  titolo: Teatro San Carlo
+  stato: da_controllare
+  url_originari:
+  - https://www.teatrosancarlo.it/visite-guidate/
+  - https://www.teatrosancarlo.it/
+  fonti:
+  - tp-sancarlo-visite
+  canali:
+  - gestore-www-teatrosancarlo-it
+  cosa_controllare: Controllare i turni delle visite guidate e le eccezioni dovute agli spettacoli per il periodo
+    richiesto.
+  contesto: Pagina visite e homepage mostrano un controllo di sicurezza. I calendari storici trovati non confermano
+    dicembre 2026.
+  risposta_enrico: null
+- id: V03
+  titolo: Castel Nuovo e notizie del Comune
+  stato: da_controllare
+  url_originari:
+  - https://www.comune.napoli.it/maschioangioino
+  - https://www.comune.napoli.it/
+  fonti:
+  - tp-comune-castelnuovo
+  canali:
+  - comune-notizie
+  - gestore-www-comune-napoli-it
+  cosa_controllare: Orari attuali, giorni chiusi, ultimo ingresso e nuove comunicazioni. Cercare sul sito del Comune
+    una pagina successiva a quella salvata.
+  contesto: 403 sul portale principale; biglietteria ufficiale alternativa restituisce ciclo di reindirizzamenti.
+    Carta dei servizi accessibile ma non sufficiente per gli orari.
+  risposta_enrico: null
+- id: V04
+  titolo: 'ANM: ascensori, Monte Echia e avvisi'
+  stato: da_controllare
+  url_originari:
+  - https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=320
+  - https://www2.anm.it/index.php?option=com_content&task=view&id=4286&Itemid=314
+  - https://www.anm.it/s/?language=it
+  - https://www.anm.it/s/funicolari?language=it
+  fonti:
+  - tp-anm-ascensori
+  - tp-anm-echia
+  canali:
+  - anm-portale
+  - anm-funicolari
+  cosa_controllare: Verificare orari feriali/festivi di ciascun ascensore, servizio di Monte Echia, tariffa e avvisi
+    recenti di guasti o sospensioni; conservare URL della pagina effettivamente letta.
+  contesto: Vecchie schede non leggibili; nuovo portale restituisce solo struttura JavaScript. Metroart e Carta
+    della mobilità 2025 accessibili, ma non sostituiscono gli avvisi correnti.
+  risposta_enrico: null
+- id: V05
+  titolo: Borgo Marinari e Castel dell’Ovo
+  stato: da_controllare
+  url_originari:
+  - https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/area-pedonale-di-borgo-marinari/
+  - https://www.comune.napoli.it/casteldellovo
+  fonti:
+  - tp-comune-borgomarinari
+  - tp-comune-casteldellovo
+  canali: []
+  cosa_controllare: 'Distinguere accesso all’area pedonale e accesso al castello: verificare eventuale chiusura
+    per lavori e comunicazione recente di riapertura.'
+  contesto: 'Comune 403. Scheda MiC con orari leggibile: non basta a dimostrare la riapertura del castello.'
+  risposta_enrico: null
+- id: V06
+  titolo: Villa Comunale
+  stato: da_controllare
+  url_originari:
+  - https://www.comune.napoli.it/vivere-il-comune/luoghi/villa-comunale/
+  fonti:
+  - tp-comune-villacomunale
+  canali: []
+  cosa_controllare: Verificare orari stagionali validi nel periodo del viaggio, chiusure e ingressi utilizzabili.
+  contesto: 'NapoliForMe accessibile; tabella settimanale senza decorrenza. Esiste anche prospetto comunale annuale
+    storico: confermare quale sia attuale.'
+  risposta_enrico: null
+- id: V07
+  titolo: Villa Floridiana e Museo Duca di Martina
+  stato: da_controllare
+  url_originari:
+  - https://cultura.gov.it/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana
+  fonti:
+  - tp-mic-floridiana
+  canali: []
+  cosa_controllare: Orari distinti di parco e museo, giorno di chiusura, ultimo ingresso ed eventuali variazioni
+    dal luglio 2026; trovare pubblicazione corrente del gestore.
+  contesto: Pagina MiC in timeout; nuovo sito Musei nazionali del Vomero leggibile ma nella pagina aperta presenta
+    i luoghi e i contatti, senza orari. Avvisi di singole festività non valgono come calendario ordinario.
+  risposta_enrico: null
+- id: V08
+  titolo: Pedamentina
+  stato: da_controllare
+  url_originari:
+  - https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/turismo/turismo-sostenibile/percorsi-a-piedi/dalla-pedamentina-a-spaccanapoli/
+  fonti:
+  - tp-comune-pedamentina
+  canali: []
+  cosa_controllare: Verificare se il percorso pubblico presenta oggi chiusure, cantieri o tratti non percorribili.
+    Non attribuire un orario a una strada pubblica senza fonte.
+  contesto: Scheda Comune non leggibile e nessuna alternativa ufficiale recente sufficiente.
+  risposta_enrico: null
+- id: V09
+  titolo: 'Marechiaro: ZTL e accesso'
+  stato: da_controllare
+  url_originari:
+  - https://www.comune.napoli.it/articolo_tematico/trasporti-mobilita/ztl-e-aree-pedonali/ztl-marechiaro/
+  fonti:
+  - tp-comune-ztl-marechiaro
+  canali: []
+  cosa_controllare: Controllare ordinanza vigente e date/fasce della ZTL, distinguendo accesso ai veicoli e passaggio
+    pedonale.
+  contesto: 403 su scheda ZTL e indice ufficiale alternativo. Non usare ordinanze vecchie come prova attuale.
+  risposta_enrico: null
+- id: V10
+  titolo: Parco Virgiliano
+  stato: da_controllare
+  url_originari:
+  - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-virgiliano/
+  - https://www.comune.napoli.it/novita/parco-virgiliano-dal-27-giugno-riapertura-parziale-al-pubblico/
+  fonti:
+  - tp-comune-virgiliano
+  - tp-comune-virgiliano-riapertura
+  canali: []
+  cosa_controllare: Confermare quali aree siano aperte dopo la riapertura parziale del 27 giugno e orario stagionale
+    effettivo; cercare eventuali avvisi successivi.
+  contesto: NapoliForMe leggibile ma non chiarisce le limitazioni. Le due pagine del Comune restano bloccate.
+  risposta_enrico: null
+- id: V11
+  titolo: Città della Scienza
+  stato: da_controllare
+  url_originari:
+  - https://www.cittadellascienza.it/organizza-una-visita/
+  - https://www.cittadellascienza.it/
+  fonti:
+  - tp-cittascienza-visita
+  canali: []
+  cosa_controllare: Controllare giorni e orari ordinari, Corporea/Planetario separatamente, chiusure e prenotazione;
+    aprire anche la biglietteria o la pagina nuova.
+  contesto: 403 su visita, biglietteria e homepage. I cataloghi scolastici 2024/25 e 2025/26 trovati non certificano
+    il periodo attuale.
+  risposta_enrico: null
+- id: V12
+  titolo: Mercati Porta Nolana e Pignasecca
+  stato: da_controllare
+  url_originari:
+  - https://www.comune.napoli.it/articolo_tematico/commercio-e-artigianato/servizio-mercati/i-mercati-di-napoli/municipalita-2/
+  fonti:
+  - tp-mercati-municipalita2
+  canali: []
+  cosa_controllare: Verificare fonte comunale e orari dei mercati interessati; distinguere mercato, singoli banchi
+    e negozi. Se non esiste un orario unico, annotarlo.
+  contesto: Fonte condivisa non leggibile; ricerche trovano descrizioni di terzi, non una conferma ufficiale corrente.
+  risposta_enrico: null
+- id: V13
+  titolo: Parco Ventaglieri
+  stato: da_controllare
+  url_originari:
+  - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-ventaglieri/
+  fonti:
+  - tp-parco-ventaglieri
+  canali: []
+  cosa_controllare: Confermare orari del parco e funzionamento di scale mobili/ascensore, separatamente; chiarire
+    indicatore di apertura e tabella della scheda.
+  contesto: Scheda NapoliForMe leggibile ma indicatore dinamico incoerente; pagina principale Comune 403.
+  risposta_enrico: null
+- id: V14
+  titolo: Parchi Mascagna, Camaldoli e del Poggio
+  stato: da_controllare
+  url_originari:
+  - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-dei-camaldoli/
+  - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-mascagna/
+  - https://www.comune.napoli.it/vivere-il-comune/luoghi/parco-del-poggio/
+  fonti:
+  - tp-parco-mascagna
+  - tp-parco-camaldoli
+  - tp-parco-poggio
+  canali: []
+  cosa_controllare: Confermare calendario attuale di ciascun parco per mese e possibili chiusure. Cercare un atto
+    o una pagina nuova che confermi o superi il prospetto annuale.
+  contesto: Recuperati prospetto annuale e scheda PDF del Poggio su archivio ufficiale. File senza decorrenza esplicita;
+    il percorso upload 2025 non prova l’anno di validità.
+  risposta_enrico: null
+- id: V15
+  titolo: Metropolitana Linea 6
+  stato: da_controllare
+  url_originari:
+  - https://www.comune.napoli.it/novita/linea-6-della-metro-nei-giorni-feriali-corse-fino-alle-21-10/
+  fonti:
+  - tp-comune-linea6
+  canali: []
+  cosa_controllare: Prima e ultima corsa per direzione, differenze feriali/festivi, eventuali nuovi orari o lavori,
+    con decorrenza.
+  contesto: Notizia del Comune 403; vecchio PDF ANM non certifica gli ampliamenti successivi.
+  risposta_enrico: null
+- id: V16
+  titolo: Funicolare Montesanto
+  stato: da_controllare
+  url_originari:
+  - https://www.comune.napoli.it/novita/15-maggio-2026-chiusura-funicolare-montesanto-per-manutenzione-ventennale/
+  fonti:
+  - tp-comune-montesanto
+  canali: []
+  cosa_controllare: Stato attuale della manutenzione avviata il 15 maggio 2026, eventuale riapertura e servizio
+    sostitutivo. Cercare l’ultimo avviso ANM/Comune.
+  contesto: Avviso Comune non leggibile; non presumere che la sola notizia iniziale descriva ancora il servizio.
+  risposta_enrico: null
+- id: V17
+  titolo: 'Campania Express: sospensione e possibile ripresa'
+  stato: da_controllare
+  url_originari:
+  - https://www.eavsrl.it/campania-express/
+  fonti:
+  - tp-eav-campania-express-sospeso
+  canali: []
+  cosa_controllare: 'Aprire l’ultimo avviso EAV: la sospensione dal 1 ottobre 2026 è ancora valida? Esiste riattivazione
+    successiva? Salvare testo, data e link.'
+  contesto: 'Pagina corrente e alternativa ufficiale non aperte dal servizio; ricerca indicizza la sospensione ma
+    non viene trattata come lettura completa. Scheda tariffe di marzo leggibile: non dimostra che il servizio sia
+    attivo.'
+  risposta_enrico: null
+- id: V18
+  titolo: 'EAV: teleindicatori / Cumana'
+  stato: da_controllare
+  url_originari:
+  - https://orariotreni.eavsrl.it/
+  fonti:
+  - tp-eav-teleindicatori
+  canali: []
+  cosa_controllare: Verificare nel sito interattivo se le informazioni richieste sono disponibili; per gli orari
+    programmati usare l’indice EAV e il documento più recente della specifica linea. Non copiare le corse Napoli–Sorrento
+    sulla Cumana.
+  contesto: Restituita solo struttura JavaScript di 5 righe; una schermata in tempo reale non certifica il calendario
+    futuro.
+  risposta_enrico: null
+- id: V19
+  titolo: Parco delle Tombe di Virgilio e Leopardi
+  stato: da_controllare
+  url_originari:
+  - https://museicampania.cultura.gov.it/parco-delle-tombe-di-virgilio-e-leopardi-temporanea-chiusura-di-alcune-aree-del-percorso-di-visita/
+  fonti:
+  - tp-musei-campania-virgilio
+  canali: []
+  cosa_controllare: 'Verificare ultimo avviso di chiusura/riapertura e aree visitabili: data pubblicazione, da quando
+    vale, eventuale fine e notizie successive.'
+  contesto: Avviso originario e secondo avviso ufficiale in timeout; homepage del gestore leggibile. I risultati
+    di ricerca mostrano più chiusure, che non vanno confuse.
+  risposta_enrico: null
+- id: V20
+  titolo: Musei e Parchi archeologici di Capri
+  stato: da_controllare
+  url_originari:
+  - https://museicapri.cultura.gov.it/
+  fonti: []
+  canali:
+  - gestore-museicapri-cultura-gov-it
+  cosa_controllare: Aprire il sito italiano del gestore e identificare pagine correnti, orari e avvisi dei luoghi
+    effettivamente inclusi nella gita; controllare chiusure e prenotazioni.
+  contesto: Homepage e pagina italiana individuata non leggibili (timeout). Risultati di ricerca non equiparati
+    a pagine aperte.
+  risposta_enrico: null
+elenco_enrico: da-verificare/fonti-orari.md
+fatti_applicativi_modificati: false
+controlli_completi_conclusi: 0

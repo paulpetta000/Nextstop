@@ -67,3 +67,7 @@ Per ogni pubblicazione registrare separatamente: data di pubblicazione, eventual
 Il [rapporto iniziale](rapporti/2026-10-19-impostazione.md) documenta ricerca, accessibilità e cinque prove limitate, non un controllo completo di tutti gli orari. Le date nei dati applicativi restano precedenti; tutte le voci sono dovute per il primo controllo completo.
 
 Quando entrano nuove tappe, locali o linee autorizzate, aggiornare il registro nella stessa attività: coprire ogni ID attivo e dichiarare le lacune. Quando una fonte cambia indirizzo conservare il vecchio URL nel rapporto, aggiornare il riferimento corrente nel file appropriato e ricontrollare l'identità del gestore.
+
+## Fonti ancora non leggibili e riscontro personale
+
+Prima di rinviare una fonte a Enrico, riprovare l’apertura e cercare altri percorsi pubblici del gestore, nuove pagine e PDF ufficiali. Distinguere errori HTTP, timeout, JavaScript e problemi degli strumenti. Non aggirare controlli di sicurezza. Se il contenuto resta non verificabile o la validità non è chiara, aggiungere o aggiornare un caso in [da-verificare/fonti-orari.md](../da-verificare/fonti-orari.md) con URL, domanda precisa, prove e data; collegarlo al rapporto e al controllo nel registro. Non duplicare casi già aperti. Un’alternativa leggibile ma storica non chiude la verifica. Dopo il riscontro personale registrare fonte, data e validità, poi confrontare i dati e aggiornare lo stato; una semplice apertura della homepage non è un controllo completo.
