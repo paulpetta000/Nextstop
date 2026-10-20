@@ -325,20 +325,33 @@ export function dopoCambioItinerario() { chiudiSchede(); S.attiva = null; S.nuov
 
 // ---------- condividere ----------
 const linkDi = x => `${location.origin}${location.pathname}#${codifica(x)}`;
+let richiestaCondivisione = 0;
 export async function apriCondividi(x = X()) {
-  const l = linkDi(x);
+  const l = linkDi(x), turno = ++richiestaCondivisione, attivo = X(), aperto = contestoFoglio({ ancheChiuso: true });
+  const valido = () => turno === richiestaCondivisione && aperto() && X() === attivo;
   if (navigator.share && matchMedia('(pointer: coarse)').matches) {
     try { await navigator.share({ title: x.nome, text: `${x.nome}: il mio itinerario a Napoli`, url: l }); return; }
     catch (err) { if (err?.name === 'AbortError') return; }
   }
+  if (!valido()) return;
   foglio('Condividi', `<p>Chi apre il link vede lo stesso itinerario: gli stessi giorni, le stesse tappe, le pause e gli orari. Le tappe che hai visitato restano solo su questo telefono.</p>
     <div class="f-link"><label class="vh" for="f-link">Link dell'itinerario</label><input id="f-link" readonly value="${esc(l)}"><button type="button" class="f-bottone" data-f="copia">${ic('copia', 20)}Copia</button></div>
     <a class="f-bottone f-bottone--contorno" href="https://wa.me/?text=${encodeURIComponent(`${x.nome}: ${l}`)}" rel="noopener" target="_blank">Manda su WhatsApp</a>
     <p class="f-nota">Il percorso nel link non viene inviato al nostro server. Se lo mandi con un’app, anche quell’app può leggerlo.</p>`, f => {
+    const corrente = contestoFoglio();
+    const visibile = () => corrente() && X() === attivo && turno === richiestaCondivisione;
+    let copiando = false;
     f.onclick = async e => {
+      if (!visibile()) return;
       if (e.target === f) { chiudiFoglio(); return; }
-      if (!e.target.closest('[data-f="copia"]')) return;
-      try { await navigator.clipboard.writeText(l); avvisa('Link copiato.'); } catch { const i = $('#f-link', f); i.focus(); i.select(); avvisa('Tieni premuto sul link e scegli «Copia».'); }
+      if (!e.target.closest('[data-f="copia"]') || copiando) return;
+      copiando = true;
+      try { await navigator.clipboard.writeText(l); if (visibile()) avvisa('Link copiato.'); }
+      catch {
+        if (!visibile()) return;
+        const i = $('#f-link', f); if (!i) return;
+        i.focus(); i.select(); avvisa('Tieni premuto sul link e scegli «Copia».');
+      } finally { copiando = false; }
     };
   });
 }

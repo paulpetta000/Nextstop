@@ -6,27 +6,27 @@ import { codifica, decodifica } from '../src/lib/itinerari/link.ts';
 const source = fs.readFileSync(new URL('../src/scripts/itinerari/compositore/fogli.js', import.meta.url), 'utf8');
 const da = source.indexOf('const linkDi = '), a = source.indexOf('// ---------- «Altro»', da);
 assert.ok(da >= 0 && a > da);
-const crea = new Function('d', 'const { X, codifica, esc, ic, foglio, avvisa, $ } = d; ' + source.slice(da,a).replace('export async function', 'async function') + '; return apriCondividi;');
+const crea = new Function('d', 'const { X, codifica, esc, ic, foglio, avvisa, $, contestoFoglio, chiudiFoglio } = d; ' + source.slice(da,a).replace('export async function', 'async function') + '; return apriCondividi;');
 const CHIAVE = 'itinerari-v1', C = { tappe: [{ id: 'duomo', tipo: 'citta' }] };
-function ambiente(t, { share, copiaFallita = false } = {}) {
+function ambiente(t, { share, copiaFallita = false, scriviAppunti } = {}) {
   const x = { id: 'viaggio0', nome: 'Locale', salvato: true, creato: 1, modificato: 1, timbri: { duomo: 1234 }, giorni: [{ tappe: ['duomo'], fatte: ['duomo'], inizio: 570, fine: 1140 }] };
   const A = { attivo: x.id, elenco: [x] }, dati = new Map([[CHIAVE, JSON.stringify({ v: 1, ...A })]]);
-  let linkCopiato, aperture = 0, selezionato = false, focalizzato = false;
+  let linkCopiato, aperture = 0, selezionato = false, focalizzato = false, ciclo = 0, attivo = x, copie = 0;
   const f = {}, avvisi = [];
   for (const [nome, value] of Object.entries({
     localStorage: { getItem: k => dati.get(k) ?? null, setItem: (k, v) => dati.set(k, v) },
-    navigator: { locks: { request: async (_nome, _options, fn) => fn() }, ...(share ? { share } : {}), clipboard: { writeText: async l => { if (copiaFallita) throw Error('Accesso negato'); linkCopiato = l; } } },
+    navigator: { locks: { request: async (_nome, _options, fn) => fn() }, ...(share ? { share } : {}), clipboard: { writeText: async l => { copie++; if(scriviAppunti)await scriviAppunti(l); if (copiaFallita) throw Error('Accesso negato'); linkCopiato = l; } } },
     location: { origin: 'https://esempio.invalid', pathname: '/napoli/itinerari/' }, matchMedia: () => ({ matches: !!share })
   })) {
     const prima = Object.getOwnPropertyDescriptor(globalThis, nome);
     Object.defineProperty(globalThis, nome, { configurable: true, value });
     t.after(() => prima ? Object.defineProperty(globalThis, nome, prima) : delete globalThis[nome]);
   }
-  const apri = crea({ X: () => x, codifica, esc: s => String(s).replaceAll('&', '&amp;').replaceAll('"', '&quot;'), ic: () => '',
-    foglio: (_titolo, html, prepara) => { aperture++; f.html = html; prepara(f); }, avvisa: testo => avvisi.push(testo),
+  const apri = crea({ X: () => attivo, contestoFoglio: () => {const mio=ciclo;return()=>ciclo===mio;}, chiudiFoglio: () => {ciclo++;}, codifica, esc: s => String(s).replaceAll('&', '&amp;').replaceAll('"', '&quot;'), ic: () => '',
+    foglio: (_titolo, html, prepara) => { aperture++; ciclo++; f.html = html; prepara(f); }, avvisa: testo => avvisi.push(testo),
     $: () => ({ focus() { focalizzato = true; }, select() { selezionato = true; } }) });
   const salva = creaSalvataggio();
-  return { x, A, dati, f, avvisi, apri, salva: () => salva(A), stato: () => salva.stato(), link: () => linkCopiato, aperture: () => aperture, selezionato: () => selezionato, focalizzato: () => focalizzato,
+  return { x, A, dati, f, avvisi, apri, sostituisci: () => {ciclo++;f.html="Altro pannello";}, cambia: () => {attivo={...x,id:"altro"};}, copie: () => copie, salva: () => salva(A), stato: () => salva.stato(), link: () => linkCopiato, aperture: () => aperture, selezionato: () => selezionato, focalizzato: () => focalizzato,
     copia: () => f.onclick({ target: { closest: () => true } }) };
 }
 
@@ -71,3 +71,11 @@ test('Condividi: spiega che l’app scelta può leggere il percorso che le viene
   assert.ok(ricevuto.includes('#' + codifica(e.x)));
   assert.doesNotMatch(ricevuto, /fatte|timbri|1234/);
 });
+const attesa=()=>{let risolvi,rifiuta;const promessa=new Promise((a,b)=>{risolvi=a;rifiuta=b;});return {promessa,risolvi,rifiuta};};
+for(const cambio of ['sostituisci','cambia'])test('Condividi asincrono: errore nativo dopo '+cambio+' non apre un vecchio link',async t=>{const d=attesa(),e=ambiente(t,{share:()=>d.promessa});const p=e.apri();e[cambio]();d.rifiuta(Error('Negato'));await p;assert.equal(e.aperture(),0);});
+test('Condividi asincrono: soltanto l’ultima richiesta nativa può aprire il ripiego',async t=>{const a=attesa(),b=attesa();let n=0;const e=ambiente(t,{share:()=>++n===1?a.promessa:b.promessa});const p=e.apri(),q=e.apri();a.rifiuta(Error('Vecchia'));await p;assert.equal(e.aperture(),0);b.rifiuta(Error('Nuova'));await q;assert.equal(e.aperture(),1);});
+for(const errore of [false,true])test('Condividi asincrono: appunti '+(errore?'negati':'riusciti')+' dopo altro pannello non annunciano né focalizzano',async t=>{const d=attesa(),e=ambiente(t,{scriviAppunti:()=>d.promessa});await e.apri();const p=e.copia();e.sostituisci();if(errore)d.rifiuta(Error('Negato'));else d.risolvi();await p;assert.deepEqual(e.avvisi,[]);assert.equal(e.focalizzato(),false);assert.equal(e.selezionato(),false);});
+test('Condividi asincrono: appunti dopo cambio di viaggio non annunciano il vecchio link',async t=>{const d=attesa(),e=ambiente(t,{scriviAppunti:()=>d.promessa});await e.apri();const p=e.copia();e.cambia();d.risolvi();await p;assert.deepEqual(e.avvisi,[]);});
+test('Condividi asincrono: doppio tocco copia una volta e consente un nuovo tentativo alla fine',async t=>{const d=attesa(),e=ambiente(t,{scriviAppunti:()=>d.promessa});await e.apri();const p=e.copia(),q=e.copia();assert.equal(e.copie(),1);d.risolvi();await Promise.all([p,q]);assert.deepEqual(e.avvisi,['Link copiato.']);await e.copia();assert.equal(e.copie(),2);});
+
+test('Condividi asincrono: la copia pendente permette di chiudere il pannello',async t=>{const d=attesa(),e=ambiente(t,{scriviAppunti:()=>d.promessa});await e.apri();const p=e.copia();await e.f.onclick({target:e.f});d.risolvi();await p;assert.deepEqual(e.avvisi,[]);});
