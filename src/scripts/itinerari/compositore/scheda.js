@@ -183,8 +183,10 @@ const meta = () => Math.round(Math.min(H(), Math.max(400, innerHeight * .6)));
 let Y = 0;
 function apri(id) {
   const el = schEl();
-  if (schedaAperta()) { if (id !== sch.id) vai(ordineDi(sch.id).indexOf(id) > ordineDi(sch.id).indexOf(sch.id) ? 1 : -1, 0, id); return; }
+  if (schedaAperta() && !sch.chiude) { if (id !== sch.id) vai(ordineDi(sch.id).indexOf(id) > ordineDi(sch.id).indexOf(sch.id) ? 1 : -1, 0, id); return; }
+  if (sch?.chiude) chiudi(true);
   sch = { id, detent: 'meta' };
+  const corrente = sch;
   el.className = 'sch sch1';
   el.innerHTML = `<div class="sch1__pannello"><div class="sch1__testa"><span class="sch1__presa" aria-hidden="true"></span><button type="button" class="sch1__alza" data-azione="detent" aria-label="Leggi tutta la scheda">${ic('alza', 22)}</button><button type="button" class="sch1__chiudi" data-azione="chiudi" aria-label="Chiudi la scheda">${ic('x', 22)}</button></div><div class="sch1__corpo"><div class="sch1__pagina"></div></div><nav class="sch1__passi" aria-label="Tappe del giorno"></nav></div>`;
   riempi();
@@ -193,7 +195,7 @@ function apri(id) {
   metti('meta', false);
   if (piano()) $('.sch1__pannello', el).animate([{ transform: `translateY(${H()}px)` }, { transform: `translateY(${Y}px)` }], { duration: 420, easing: 'cubic-bezier(.16,1,.3,1)' });
   $('.sch-titolo', el)?.focus({ preventScroll: true });
-  if (S.p === 'c') { if (!computer.matches && scrollY > 0) scrollTo({ top: 0, behavior: piano() ? 'smooth' : 'auto' }); setTimeout(() => mappaC()?.centra(id), piano() ? 160 : 0); }
+  if (S.p === 'c') { if (!computer.matches && scrollY > 0) scrollTo({ top: 0, behavior: piano() ? 'smooth' : 'auto' }); setTimeout(() => { if (sch === corrente && corrente.id === id && !corrente.chiude && el.open && S.p === 'c') mappaC()?.centra(id); }, piano() ? 160 : 0); }
 }
 function metti(d, anima = true) {
   sch.detent = d;
@@ -225,11 +227,15 @@ function riempi() {
   const prima = passo(id, -1), dopoId = passo(id, 1), trDopo = dopoId && p ? trattoVerso(p.Gx, dopoId) : null;
   $('.sch1__passi', el).innerHTML = `<button type="button" class="sch1__passo" data-azione="passo" data-dir="-1"${prima ? '' : ' disabled'}>${ic('indietro', 20)}<span>${prima ? `<span class="vh">Tappa prima: </span>${esc(T(prima).breve)}` : 'Prima tappa'}</span></button><span class="sch1__dove num">${p ? `${p.i + 1} di ${p.n}` : ''}</span><button type="button" class="sch1__passo sch1__passo--dopo" data-azione="passo" data-dir="1"${dopoId ? '' : ' disabled'}><span>${dopoId ? `<span class="vh">Tappa dopo: </span>${esc(T(dopoId).breve)}` : 'Ultima tappa'}${trDopo ? `<small>${ic('piedi', 13)}${trDopo.min} min<span class="vh"> di strada</span></small>` : ''}</span>${ic('avanti', 20)}</button>`;
 }
-async function vai(dir, daX = 0, id = passo(sch.id, dir)) {
-  if (!id || occupato.si) return;
+async function vai(dir, daX = 0, id = sch && passo(sch.id, dir)) {
+  if (!sch || sch.chiude || !id || occupato.si) return;
+  const corrente = sch, itinerario = X(), g = S.g, giorno = itinerario.giorni[g], vista = S.p;
   const el = schEl(), pag = $('.sch1__pagina', el);
+  const valido = () => sch === corrente && !corrente.chiude && el.open && X() === itinerario && S.g === g && S.p === vista && itinerario.giorni[g] === giorno && giornoDi(id) === g;
   const fuoco = el.contains(document.activeElement);
-  await scorri(pag, dir, daX, () => { sch.id = id; riempi(); $('.sch1__corpo', el).scrollTop = 0; });
+  let cambiata = false;
+  await scorri(pag, dir, daX, () => { if (!valido()) return; corrente.id = id; riempi(); $('.sch1__corpo', el).scrollTop = 0; cambiata = true; });
+  if (!cambiata || !valido()) return;
   if (fuoco) $('.sch-titolo', el)?.focus({ preventScroll: true });
   S.attiva = id;
   if (S.p === 'c') mappaC()?.centra(id); else mappaC()?.evidenzia(id);
@@ -237,25 +243,40 @@ async function vai(dir, daX = 0, id = passo(sch.id, dir)) {
   annuncia(`${T(id).nome}, ${quandoTesto(id)}`);
 }
 async function chiudi(subito = false) {
-  const el = schEl();
-  if (!el.open || sch?.chiude) return;
-  sch.chiude = true;
+  const el = schEl(), corrente = sch;
+  if (!el.open || !corrente) return false;
+  richiestaScheda++;
+  if (corrente.chiude) {
+    if (!subito) return corrente.chiusura;
+    corrente.animazione?.cancel();
+    return terminaScheda(corrente, el);
+  }
+  corrente.chiude = true;
   const p = $('.sch1__pannello', el);
   document.documentElement.classList.remove('sch1-su');
-  if (piano() && !subito && p) await p.animate([{ transform: `translateY(${Y}px)` }, { transform: `translateY(${H()}px)` }], { duration: 260, easing: 'cubic-bezier(.7,0,.84,0)', fill: 'forwards' }).finished.catch(() => {});
+  if (piano() && !subito && p) {
+    corrente.animazione = p.animate([{ transform: `translateY(${Y}px)` }, { transform: `translateY(${H()}px)` }], { duration: 260, easing: 'cubic-bezier(.7,0,.84,0)', fill: 'forwards' });
+    corrente.chiusura = corrente.animazione.finished.catch(() => {}).then(() => terminaScheda(corrente, el));
+    return corrente.chiusura;
+  }
+  return terminaScheda(corrente, el);
+}
+function terminaScheda(corrente, el) {
+  if (sch !== corrente || !el.open) return false;
   el.close();
-  const id = sch.id;
+  const id = corrente.id;
   sch = null;
   const torna = $(`.giorno-attivo [data-id="${id}"][data-azione="tappa"]`) || (daDove?.isConnected ? daDove : null);
   torna?.focus({ preventScroll: true });
   if (S.p === 'c') mappaC()?.tutto();
+  return true;
 }
 
 export function preparaScheda() {
   const el = schEl();
   el.addEventListener('click', e => {
     const b = e.target.closest('[data-azione]');
-    if (!b || b.disabled || gestoScheda.tolto) return;
+    if (!sch || sch.chiude || !b || b.disabled || gestoScheda.tolto) return;
     const k = b.dataset.azione;
     if (k === 'visitata') segna(b.dataset.id);
     else if (k === 'togli') togliTappa(b.dataset.id);
@@ -270,7 +291,7 @@ export function preparaScheda() {
   addEventListener('keydown', e => { if (e.key === 'Escape' && schedaAperta() && !foglioEl().open) { e.preventDefault(); chiudi(); } });
   // i gesti: di lato = tappa prima o dopo; in su e in giù = metà, tutto, chiuso
   el.addEventListener('pointerdown', e => {
-    if (!sch || (e.pointerType === 'mouse' && e.button !== 0) || e.target.closest('a, input, summary, table')) return;
+    if (!sch || sch.chiude || (e.pointerType === 'mouse' && e.button !== 0) || e.target.closest('a, input, summary, table')) return;
     const p = $('.sch1__pannello', el), corpo = $('.sch1__corpo', el), pag = $('.sch1__pagina', el);
     const x0 = e.clientX, y0 = e.clientY, t0 = performance.now(), yP = Y, dallaTesta = !!e.target.closest('.sch1__testa');
     let dir = null, dx = 0;
