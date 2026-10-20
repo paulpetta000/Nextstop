@@ -10,7 +10,7 @@ import { TIPI_PAUSA, MARGINI, pauseDelGiorno } from '../../../lib/itinerari/paus
 import { fraseFine } from '../../../lib/itinerari/ore';
 import { grezzo } from './stato.js';
 import { C } from './stato.js';
-import { S, foglio, chiudiFoglio, contestoFoglio, rinfresca, avvisa, annuncia, tempo } from './comuni.js';
+import { S, foglio, chiudiFoglio, contestoFoglio, dopoChiusuraFoglio, rinfresca, avvisa, annuncia, tempo } from './comuni.js';
 import { aggiorna, aggiornaTutto, conAnnulla, mettiNome, NOMI_PAUSA, IC_PAUSA, nuovoGiorno, vaiAlGiorno, togliGiorno } from './viste.js';
 import { chiudiSchede } from './scheda.js';
 
@@ -153,7 +153,9 @@ export function apriQuando() {
     <div class="f-campo"><span id="f-data-et">${g ? `Data del giorno ${g + 1}` : 'Primo giorno'}</span><button type="button" id="f-data" class="f-data" data-f="calendario" aria-haspopup="dialog" aria-labelledby="f-data-et f-data-v">${campoData(g)}</button></div>
     <div id="f-vivo">${vivo()}</div>`, f => {
     const aperto = contestoFoglio();
-    const valido = () => aperto() && X() === itinerario && S.g === g && itinerario.giorni[g] === giorno;
+    const stessoGiorno = () => X() === itinerario && S.g === g && itinerario.giorni[g] === giorno;
+    const valido = () => aperto() && stessoGiorno();
+    const esegui = dopoChiusuraFoglio(stessoGiorno);
     let richiesta = 0;
     f.onchange = e => {
       if (!valido()) return;
@@ -199,7 +201,7 @@ export function apriQuando() {
         });
       }
       if (b.dataset.f === 'senza') { aggiorna(y => { delete y.data; }); $('#f-data', f).innerHTML = campoData(g); rinfresca(f, vivo()); $('#f-data', f).focus(); annuncia('Data tolta'); }
-      if (b.dataset.f === 'togli-giorno') { await chiudiFoglio(); togliGiorno(g); }
+      if (b.dataset.f === 'togli-giorno') return esegui(() => togliGiorno(g));
     };
   }, 'f--quando');
 }
@@ -262,8 +264,12 @@ export function apriMiei() {
     $('[data-f="rinomina"]', f)?.focus();
   };
   foglio('I miei itinerari', `<div id="f-vivo">${vivo()}</div>`, f => {
-    f.onkeydown = e => { if (e.target.id === 'f-nome' && e.key === 'Enter') { e.preventDefault(); nuovoNome(f); } if (e.target.id === 'f-nome' && e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); rinomina = false; rinfresca(f, vivo()); } };
+    let atteso = X();
+    const aperto = contestoFoglio(), valido = () => X() === atteso;
+    const esegui = dopoChiusuraFoglio(valido);
+    f.onkeydown = e => { if (!aperto() || !valido()) return; if (e.target.id === 'f-nome' && e.key === 'Enter') { e.preventDefault(); nuovoNome(f); } if (e.target.id === 'f-nome' && e.key === 'Escape') { e.preventDefault(); e.stopPropagation(); rinomina = false; rinfresca(f, vivo()); } };
     f.onclick = async e => {
+      if (!aperto() || !valido()) return;
       if (e.target === f) { chiudiFoglio(); return; }
       const b = e.target.closest('[data-f]');
       if (!b) return;
@@ -272,7 +278,7 @@ export function apriMiei() {
       if (k === 'nome-ok') { nuovoNome(f); return; }
       if (k === 'nome-no') { rinomina = false; rinfresca(f, vivo()); $('[data-f="rinomina"]', f)?.focus(); return; }
       if (k === 'annulla' && tolto) {
-        A.elenco = tolto.prima.elenco; A.attivo = tolto.prima.attivo; const nome = tolto.nome; tolto = null;
+        A.elenco = tolto.prima.elenco; A.attivo = tolto.prima.attivo; atteso = X(); const nome = tolto.nome; tolto = null;
         scriviArchivio(avvisa); dopoCambioItinerario(); rinfresca(f, vivo()); $('[data-f="nuovo"]', f)?.focus(); annuncia(`«${nome}» è tornato.`);
         return;
       }
@@ -280,32 +286,38 @@ export function apriMiei() {
       if (k === 'elimina-no') { const era = elimina; elimina = null; rinfresca(f, vivo()); $(`[data-f="elimina"][data-v="${era}"]`, f)?.focus(); return; }
       if (k === 'elimina-si') {
         const prima = structuredClone(A), x = A.elenco.find(i => i.id === id);
+        if (!x) return;
         A.elenco = A.elenco.filter(i => i.id !== id);
         if (!A.elenco.length) { const y = nuovo('Il mio itinerario'); A.elenco = [y]; }
         if (!A.elenco.some(i => i.id === A.attivo)) { A.attivo = [...A.elenco].sort((a, b2) => b2.modificato - a.modificato)[0].id; S.g = 0; }
+        atteso = X();
         elimina = null; tolto = { nome: x.nome, prima };
         scriviArchivio(avvisa); dopoCambioItinerario();
         rinfresca(f, vivo());
         $('[data-f="annulla"]', f)?.focus();
         return;
       }
-      if (k === 'salva') { await chiudiFoglio(); salva($('.cmp .salva')); return; }
-      if (k === 'condividi') { await chiudiFoglio(); apriCondividi(A.elenco.find(i => i.id === id)); return; }
-      if (k === 'nuovo') {
+      if (k === 'salva') return esegui(() => salva($('.cmp .salva')));
+      if (k === 'condividi') {
+        const itinerario = A.elenco.find(i => i.id === id);
+        if (itinerario) return esegui(() => { if (A.elenco.includes(itinerario)) return apriCondividi(itinerario); });
+        return;
+      }
+      if (k === 'nuovo') return esegui(() => {
         const prima = X(), y = nuovo(nomeLibero('Nuovo itinerario'));
         A.elenco.push(y); ricordaBozza(y); apri(y.id); S.g = 0;
-        scriviArchivio(avvisa); await chiudiFoglio(); dopoCambioItinerario();
-        annuncia(`Nuovo itinerario: ${y.nome}`);
-        avvisaCambio(prima);
-        return;
-      }
+        scriviArchivio(avvisa); dopoCambioItinerario();
+        annuncia(`Nuovo itinerario: ${y.nome}`); avvisaCambio(prima);
+      });
       if (k === 'nuovo-pronto') {
         const p = PRONTI.find(x => x.id === id);
-        await chiudiFoglio();
-        if (p?.evento) chiediGiornoRegata(); else if (p) usaPronto(p);
+        if (p) return esegui(() => { if (p.evento) chiediGiornoRegata(); else usaPronto(p); });
         return;
       }
-      if (k === 'apri' && id !== A.attivo) { const prima = X(); apri(id); S.g = 0; scriviArchivio(avvisa); await chiudiFoglio(); dopoCambioItinerario(); annuncia(`Aperto: ${X().nome}`); avvisaCambio(prima); return; }
+      if (k === 'apri' && id !== A.attivo) return esegui(() => {
+        if (!A.elenco.some(i => i.id === id)) return;
+        const prima = X(); apri(id); S.g = 0; scriviArchivio(avvisa); dopoCambioItinerario(); annuncia(`Aperto: ${X().nome}`); avvisaCambio(prima);
+      });
     };
   });
 }
@@ -333,7 +345,7 @@ export async function apriCondividi(x = X()) {
 
 // ---------- «Altro» e «I giorni» ----------
 export function apriAltro() {
-  const Gx = G(S.g), x = X();
+  const g = S.g, Gx = G(g), x = X(), giorno = x.giorni[g];
   const testoQuando = `${x.data ? `Da ${dataLunga(x.data)}` : 'Senza data'}, dalle ${ora(x.giorni[S.g].inizio)} alle ${ora(x.giorni[S.g].fine)}${x.piedi ? ', solo a piedi' : ''}`;
   foglio('Itinerario', `<div class="f-azioni">
     <button type="button" class="f-azione" data-f="miei">${ic('miei')}<span>I miei itinerari<small>${A.elenco.length === 1 ? 'Quello aperto' : `${A.elenco.length} su questo telefono`}</small></span></button>
@@ -342,26 +354,33 @@ export function apriAltro() {
     <button type="button" class="f-azione" data-f="quando">${ic('calendario')}<span>Data e orari<small>${esc(testoQuando)}</small></span></button>
     ${nG() < MAX_GIORNI ? `<button type="button" class="f-azione" data-f="giorno">${ic('piu')}<span>Aggiungi un giorno</span></button>` : ''}
   </div>`, f => {
+    const aperto = contestoFoglio(), valido = () => X() === x && S.g === g && x.giorni[g] === giorno;
+    const esegui = dopoChiusuraFoglio(valido);
     f.onclick = async e => {
+      if (!aperto() || !valido()) return;
       if (e.target === f) { chiudiFoglio(); return; }
       const b = e.target.closest('[data-f]');
       if (!b) return;
       if (b.dataset.f === 'tempo') { apriTempo(); return; }
       if (b.dataset.f === 'quando') { apriQuando(); return; }
-      await chiudiFoglio();
-      ({ miei: apriMiei, condividi: () => apriCondividi(), giorno: nuovoGiorno })[b.dataset.f]();
+      const azione = ({ miei: apriMiei, condividi: () => apriCondividi(x), giorno: nuovoGiorno })[b.dataset.f];
+      if (azione) return esegui(azione);
     };
   });
 }
 export function apriGiorni() {
+  const x = X(), g = S.g, giorno = x.giorni[g];
   foglio('I giorni', `<div class="f-azioni">${range(nG()).map(g => { const Gx = G(g), D = X().giorni[g]; return `<button type="button" class="f-azione" data-f="g" data-g="${g}"><span class="f-num">${g + 1}</span><span>${D.gita ? `Gita: ${esc(T(D.gita).breve)}` : Gx ? esc(titoloGiorno(Gx)) : 'Giorno vuoto'}${g === S.g ? ' (lo stai guardando)' : ''}<small>${D.gita ? 'Un giorno intero' : Gx ? `Dalle ${ora(Gx.inizio)} alle ${ora(Gx.fine)}, ${tappeDi(Gx).length} tappe, ${Gx.spostamenti} minuti di strada` : 'Ancora nessuna tappa'}</small></span></button>`; }).join('')}
     ${nG() < MAX_GIORNI ? `<button type="button" class="f-azione" data-f="nuovo">${ic('piu')}<span>Aggiungi un giorno</span></button>` : ''}</div>`, f => {
+    const aperto = contestoFoglio(), valido = () => X() === x && S.g === g && x.giorni[g] === giorno;
+    const esegui = dopoChiusuraFoglio(valido);
     f.onclick = async e => {
+      if (!aperto() || !valido()) return;
       if (e.target === f) { chiudiFoglio(); return; }
       const b = e.target.closest('[data-f]');
       if (!b) return;
-      await chiudiFoglio();
-      if (b.dataset.f === 'nuovo') nuovoGiorno(); else vaiAlGiorno(+b.dataset.g);
+      const destinazione = +b.dataset.g, scelto = x.giorni[destinazione];
+      return esegui(() => { if (b.dataset.f === 'nuovo') nuovoGiorno(); else if (scelto && x.giorni[destinazione] === scelto) vaiAlGiorno(destinazione); });
     };
   });
 }
@@ -415,17 +434,20 @@ export function chiediGiornoRegata() {
   if (!E) return;
   const p = PRONTI.find(x => x.evento);
   if (!p) return;
+  const x = X(), g = S.g, giorno = x.giorni[g];
   const giorni = Object.keys(E.giorni).sort();
   const primo = giorni.find(d => d >= oggi()) ?? giorni[0];
   foglio('Quale giorno di regata?', `<label class="f-campo" for="f-regata"><span>Giorno</span><select id="f-regata">${giorni.map(d => `<option value="${d}"${d === primo ? ' selected' : ''}>${maiuscola(dataLunga(d))}, ${esc(E.giorni[d].titolo)}${E.giorni[d].possibile ? ' (se la sfida non è già finita)' : ''}${E.giorni[d].riserva ? ' (riserva)' : ''}</option>`).join('')}</select></label>
     <p class="f-nota">Dal ${dataBreve(E.primo)} al ${dataBreve(E.ultimo)} le regate non si corrono tutti i giorni: qui ci sono solo quelli in calendario.</p>
     <div class="f-conferma"><button type="button" class="f-bottone" data-f="crea">Crea la giornata di regata</button></div>`, f => {
+    const aperto = contestoFoglio(), valido = () => X() === x && S.g === g && x.giorni[g] === giorno;
+    const esegui = dopoChiusuraFoglio(valido);
     f.onclick = async e => {
+      if (!aperto() || !valido()) return;
       if (e.target === f) { chiudiFoglio(); return; }
       if (!e.target.closest('[data-f="crea"]')) return;
       const d = $('#f-regata', f).value;
-      await chiudiFoglio();
-      usaPronto(p, d);
+      if (E.giorni[d]) return esegui(() => usaPronto(p, d));
     };
   });
 }

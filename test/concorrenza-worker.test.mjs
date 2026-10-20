@@ -3,7 +3,7 @@ import assert from 'node:assert/strict';
 import * as wt from 'node:worker_threads';
 const messaggio=(w,tipo)=>new Promise((resolve,reject)=>{const leggi=m=>{if(m.tipo===tipo){w.off('message',leggi);w.off('error',reject);resolve(m);}};w.on('message',leggi);w.once('error',reject);});
 
-test('parallelismo reale Node: due worker con lo stesso archivio non dichiarano due successi incompatibili', {skip:!wt.locks,timeout:10000}, async t=>{
+test('parallelismo reale con mutex atomico: due worker con lo stesso archivio non dichiarano due successi incompatibili', {timeout:10000}, async t=>{
  for(let giro=0;giro<4;giro++){
   const memoria=new SharedArrayBuffer(65536), h=new Int32Array(memoria,0,4), bytes=new Uint8Array(memoria,16);
   const raw=JSON.stringify({v:1,attivo:'viaggio0',elenco:[{id:'viaggio0',nome:'Base',creato:1,modificato:1,giorni:[{tappe:['duomo'],inizio:570,fine:1140}]}]});

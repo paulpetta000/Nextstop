@@ -46,6 +46,18 @@ export async function chiudiFoglio() {
   })();
   return chiusura.promessa;
 }
+// Una sola azione per apertura, solo se la chiusura riesce e il contesto dei dati è ancora quello scelto.
+export function dopoChiusuraFoglio(valido = () => true) {
+  const aperto = contestoFoglio();
+  let inCorso = false;
+  return async azione => {
+    if (inCorso || !aperto() || !valido()) return false;
+    inCorso = true;
+    if (!await chiudiFoglio() || foglioEl().open || !valido()) return false;
+    await azione();
+    return true;
+  };
+}
 // ridisegna il contenuto vivo del foglio e rimette il fuoco sullo stesso comando
 export function rinfresca(f, html, b) {
   const sel = b ? `[data-f="${b.dataset.f}"]${b.dataset.v != null ? `[data-v="${b.dataset.v}"]` : ''}` : null;

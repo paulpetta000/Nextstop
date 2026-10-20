@@ -10,7 +10,7 @@ function ambiente(){
  const f={open:false,style:{},classList:{add(){},remove(){}},showModal(){this.open=true;},close(){this.open=false;}};
  const $=sel=>{if(sel==='#foglio')return f;if(!nodi.has(sel))nodi.set(sel,{innerHTML:'',focus(){fuochi++;}});return nodi.get(sel);};
  const base={$ ,esc:String,ic:()=>'',piano:()=>false};
- const api=new Function(...Object.keys(base),ciclo+';return {foglio,chiudiFoglio,contestoFoglio};')(...Object.values(base));
+ const api=new Function(...Object.keys(base),ciclo+';return {foglio,chiudiFoglio,contestoFoglio,dopoChiusuraFoglio};')(...Object.values(base));
  const carica=tipo=>()=>new Promise((ok,no)=>attese[tipo].push({ok,no}));
  const d={...base,...api,S,X:()=>x,nG:()=>x.giorni.length,G:()=>null,T:()=>null,daFare:()=>[],ora,piuGiorni,dataLunga,oggi:()=> '2026-10-20',range:n=>Array.from({length:n},(_,k)=>k),dataLungaDi:()=>'',chiusaIl:()=>false,
   rinfresca(){rifatti++;},annuncia(){},avvisa:t=>avvisi.push(t),aggiorna:fn=>fn(x),togliGiorno(){},caricaCalendario:carica('calendario'),caricaOre:carica('ore')};

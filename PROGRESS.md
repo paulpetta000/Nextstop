@@ -2,7 +2,13 @@
 
 _Aggiornato il 20/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; main remoto ricontrollato a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
-## Stato corrente · sette gruppi e più aree (20 ottobre)
+## Continuazione corrente · azioni dei fogli (20 ottobre)
+
+Sedici prove aggiunte: **567/567 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Comandi dopo la chiusura legati al pannello e al viaggio scelti; doppi tocchi contenuti e archivio aggiornato solo dopo una chiusura riuscita. [Revisione 41, problema Node e limiti](docs/storico/2026-10-20-revisione-41.md).
+
+Ripresa dalle **15:01:33 UTC**. Seguito su condivisione e selettori. Nessun browser o rilascio; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nell’analisi.
+
+## Ripresa precedente · sette gruppi e più aree (20 ottobre)
 
 Codice **7011ac0**, **551/551 test** (51 nuove prove), build **12 pagine**, **811 link validi**, **82 risorse offline** presenti. Correzioni a fogli/selettori/schede/gesti e sitemap; quattro fatti storici verificati, avvisi **19 → 15**, 196 fonti pubbliche. Audit senza segnalazioni note e sette casi del prodotto riusciti. [Resoconto per gli otto punti, prove e lavoro rimasto](docs/storico/2026-10-20-riepilogo-aree.md).
 
