@@ -4,7 +4,7 @@ _Aggiornato il 20/10/2026 dopo la ripresa della chat interrotta. Ramo locale cod
 
 ## Revisione corrente · quattro fonti storiche (20 ottobre)
 
-Confermate sulle pubblicazioni originali quattro affermazioni su Di Matteo, Gesù Vecchio, Zia Esterina e Nennella; avvisi editoriali **20 → 16**, **196 fonti pubbliche**. Quattro testi riletti e firme dipendenti aggiornate; giudizi storici distinti da orari attuali/futuri. **531/531 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. [Fonti, prove e limiti](docs/storico/2026-10-20-revisione-38.md).
+Confermate sulle pubblicazioni originali quattro affermazioni su Di Matteo, Gesù Vecchio, Zia Esterina e Nennella; avvisi editoriali **19 → 15**, **196 fonti pubbliche**. Quattro testi riletti e firme dipendenti aggiornate; giudizi storici distinti da orari attuali/futuri. **531/531 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. [Fonti, prove e limiti](docs/storico/2026-10-20-revisione-38.md).
 
 Prosegue il minimo di **40 minuti dalle 14:19:21 UTC** su più aree; istruzioni/consumo Claude esclusi. Tutto locale, nessun browser o pubblicazione; nuova idea rinviata anche nell’analisi.
 
