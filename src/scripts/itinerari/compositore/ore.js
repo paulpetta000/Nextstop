@@ -7,7 +7,7 @@ import { $, esc, ic, piano, ora } from './base.js';
 import { X } from './stato.js';
 import { fineDelGiorno } from './fogli.js';
 import { aggiorna } from './viste.js';
-import { annuncia } from './comuni.js';
+import { S, annuncia, contestoFoglio } from './comuni.js';
 import { imposta, tocco, quarti, parti, allunga, cortoFine, fuoriFine, INIZIO_MAX, FINE_MIN, FINE_MAX, INIZIO_MIN, PASSO } from '../../../lib/itinerari/ore';
 // lo stile arriva dentro questo file (così il service worker lo tiene con lui per l'uso senza rete) e si mette nella pagina la prima volta
 import STILE from '../../../styles/ore.css?inline';
@@ -18,6 +18,13 @@ const el = () => $('#ore');
 const hh = m => `<span class="ore-h">${Math.floor(m / 60)}</span><span class="ore-m">:${String(m % 60).padStart(2, '0')}</span>`;
 
 let g = 0, modo = 'inizio', dopo = null;
+let ciclo = 0, chiusura = null, contesto = () => false;
+const valido = () => !!el()?.open && chiusura === null && contesto();
+function termina() {
+  const f = dopo, corrente = contesto(); dopo = null; ciclo++; chiusura = null;
+  el()?.classList.remove('ore--esce');
+  if (corrente) f?.(modo);
+}
 const O = () => ({ inizio: X().giorni[g].inizio, fine: X().giorni[g].fine });
 // la giornata calcolata, con la frase di quando finisci: la stessa di «Data e orari» (fogli.js)
 const giornata = () => fineDelGiorno(g) ?? { st: null, oltre: false, fuori: [], frase: '' };
@@ -88,24 +95,33 @@ const frase = (k, r) => `${NOME[k]} ${ora(O()[k])}.${r.spinta ? ` ${r.spinta ===
 let pronto = false;
 export function apriOre(giorno, k, fatto) {
   if (!pronto) { prepara(); pronto = true; }
+  const x = X(), scelto = x.giorni[giorno];
+  if (!scelto || !['inizio', 'fine'].includes(k)) return;
+  const turno = ++ciclo, padre = contestoFoglio();
+  contesto = () => turno === ciclo && padre() && X() === x && S.g === giorno && x.giorni[giorno] === scelto;
+  chiusura = null;
   g = giorno; modo = k; dopo = fatto;
+  el().classList.remove('ore--esce');
   disegna();
-  el().showModal();
+  if (!el().open) el().showModal();
   centra();
   fuoco();
 }
 async function chiudi() {
-  const d = el();
-  if (!d.open) return;
-  if (piano()) { d.classList.add('ore--esce'); await new Promise(r => setTimeout(r, 240)); d.classList.remove('ore--esce'); }
-  d.close();
+  const d = el(), turno = ciclo;
+  if (!d.open || chiusura === turno) return;
+  chiusura = turno;
+  if (piano()) { d.classList.add('ore--esce'); await new Promise(r => setTimeout(r, 240)); }
+  if (turno !== ciclo || !d.open) return;
+  d.close(); termina();
 }
+
 function prepara() {
   const d = el();
   if (!d) return;
   const s = document.createElement('style');
   s.dataset.stile = 'ore'; s.textContent = STILE; document.head.append(s);
-  d.addEventListener('close', () => { const f = dopo; dopo = null; f?.(modo); });
+  d.addEventListener('close', () => { if (!d.open) termina(); });
   d.addEventListener('cancel', e => { e.preventDefault(); chiudi(); });
   d.addEventListener('click', e => {
     if (e.target === d) { chiudi(); return; }
@@ -113,6 +129,7 @@ function prepara() {
     if (!b || b.disabled) return;
     const a = b.dataset.ore;
     if (a === 'chiudi') { chiudi(); return; }
+    if (!valido()) return;
     if (a === 'modo') { modo = b.dataset.k; stato(null, true); centra(); fuoco(); annuncia(`Scegli ${modo === 'inizio' ? "l'inizio" : 'la fine'}: ora ${ora(O()[modo])}.`); return; }
     if (a === 'allunga') { const r = imposta(O(), 'fine', +b.dataset.v); cambia(r); modo = 'fine'; stato(r.fine); fuoco(); annuncia(`Fine alle ${ora(r.fine)}. ${giornata().frase}`); return; }
     const m = b.dataset.m;
@@ -125,6 +142,7 @@ function prepara() {
   });
   // frecce di lato 15 minuti, su e giù un'ora, Pagina su e giù tre ore, Inizio e Fine della riga; Invio e spazio scelgono
   d.addEventListener('keydown', e => {
+    if (!valido()) return;
     const b = e.target.closest?.('.ore-q'); if (!b) return;
     const m = +b.dataset.m, q = m % 60;
     const y = { ArrowLeft: m - 15, ArrowRight: m + 15, ArrowUp: m - 60, ArrowDown: m + 60, PageUp: m - 180, PageDown: m + 180, Home: m - q, End: m - q + 45 }[e.key];

@@ -5,6 +5,7 @@
 import { $, ic, piano, oggi } from './base.js';
 import { T, X, nG } from './stato.js';
 import { aggiorna } from './viste.js';
+import { S, contestoFoglio } from './comuni.js';
 import { settimaneDelMese, chiuseDa, mesiDaMostrare, fuocoDelCalendario, meseDopo, DATA_MIN, DATA_MAX } from '../../../lib/itinerari/calendario';
 import { piuGiorni, giornoSettimana, dataLunga, NOMI_GIORNI } from '../../../lib/itinerari/date';
 // lo stile arriva dentro questo file (così il service worker lo tiene con lui per l'uso senza rete) e si mette nella pagina la prima volta
@@ -17,6 +18,13 @@ const giorniDiTanti = n => `${n} ${n === 1 ? 'tappa chiusa' : 'tappe chiuse'}`;
 const el = () => $('#calendario');
 
 let g = 0, dopo = null;
+let ciclo = 0, chiusura = null, contesto = () => false;
+const valido = () => !!el()?.open && chiusura === null && contesto();
+function termina() {
+  const f = dopo, corrente = contesto(); dopo = null; ciclo++; chiusura = null;
+  el()?.classList.remove('cal--esce');
+  if (corrente) f?.();
+}
 // le tappe chiuse se il giorno «g» del viaggio cade in «data»
 const chiuse = data => chiuseDa(X().giorni, piuGiorni(data, -g), id => T(id)?.chiuso);
 const quante = data => chiuse(data).reduce((n, d) => n + d.chiuse.length, 0);
@@ -59,20 +67,28 @@ function disegna() {
 let pronto = false;
 export function apriCalendario(giorno, fatto) {
   if (!pronto) { preparaCalendario(); pronto = true; }
+  const x = X(), scelto = x.giorni[giorno];
+  if (!scelto) return;
+  const turno = ++ciclo, padre = contestoFoglio();
+  contesto = () => turno === ciclo && padre() && X() === x && S.g === giorno && x.giorni[giorno] === scelto;
+  chiusura = null;
   g = giorno; dopo = fatto;
+  el().classList.remove('cal--esce');
   const d = el();
   disegna();
-  d.showModal();
+  if (!d.open) d.showModal();
   const mia = X().data ? piuGiorni(X().data, g) : oggi(), sc = $('.cal-scorre', d), sez = $(`.cal-mese[data-m="${mia.slice(0, 7)}"]`, d);
   if (sez && sez.previousElementSibling) sc.scrollTop = sez.offsetTop - sc.offsetTop - 4;
   $('.cal-g[tabindex="0"]', d)?.focus({ preventScroll: true });
 }
 
 async function chiudi() {
-  const d = el();
-  if (!d.open) return;
-  if (piano()) { d.classList.add('cal--esce'); await new Promise(r => setTimeout(r, 220)); d.classList.remove('cal--esce'); }
-  d.close();
+  const d = el(), turno = ciclo;
+  if (!d.open || chiusura === turno) return;
+  chiusura = turno;
+  if (piano()) { d.classList.add('cal--esce'); await new Promise(r => setTimeout(r, 220)); }
+  if (turno !== ciclo || !d.open) return;
+  d.close(); termina();
 }
 
 function preparaCalendario() {
@@ -80,13 +96,14 @@ function preparaCalendario() {
   if (!d) return;
   const s = document.createElement('style');
   s.dataset.stile = 'calendario'; s.textContent = STILE; document.head.append(s);
-  d.addEventListener('close', () => { const f = dopo; dopo = null; f?.(); });
+  d.addEventListener('close', () => { if (!d.open) termina(); });
   d.addEventListener('cancel', e => { e.preventDefault(); chiudi(); });
   d.addEventListener('click', e => {
     if (e.target === d) { chiudi(); return; }
     const b = e.target.closest('button');
     if (!b || b.disabled) return;
     if (b.dataset.cal === 'chiudi') { chiudi(); return; }
+    if (!valido()) return;
     const x = b.dataset.d;
     if (!x) return;
     aggiorna(y => { y.data = piuGiorni(x, -g); });
@@ -97,6 +114,7 @@ function preparaCalendario() {
   });
   // frecce, pagina su e giù per i mesi, inizio e fine della settimana
   d.addEventListener('keydown', e => {
+    if (!valido()) return;
     const b = e.target.closest?.('.cal-g'); if (!b) return;
     const x = b.dataset.d, s = (SETT.indexOf(giornoSettimana(x)));
     const mese = n => { const m = meseDopo(x.slice(0, 7), n), ultimo = new Date(Date.UTC(+m.slice(0, 4), +m.slice(5, 7), 0)).getUTCDate(); return `${m}-${String(Math.min(+x.slice(8), ultimo)).padStart(2, '0')}`; };
