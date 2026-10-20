@@ -3825,7 +3825,7 @@
     "lingua": "In inglese",
     "urlDocumento": "https://www.gamberorossointernational.com/news/where-to-eat-pasta-potatoes-and-provola-in-naples-the-8-best-restaurants-chosen-by-gambero-rosso/",
     "lettura": {
-      "data": "2026-10-12",
+      "data": "2026-10-20",
       "label": "Passaggio letto"
     },
     "prova": "Prove del Blocco 2 e descrizioni approvate nei giri Fonti.",
@@ -3848,7 +3848,10 @@
     "parole": [],
     "priorita": 5,
     "lingua": "",
-    "lettura": null,
+    "lettura": {
+      "data": "2026-10-20",
+      "label": "Passaggio letto"
+    },
     "prova": "Relazioni dichiarate in src/data/fatti.yaml, src/data/tappe.yaml e src/testi/; note del registro originale.",
     "schede": [
       "lc-di-matteo-rinomato"
@@ -3868,7 +3871,10 @@
     "parole": [],
     "priorita": 5,
     "lingua": "",
-    "lettura": null,
+    "lettura": {
+      "data": "2026-10-20",
+      "label": "Passaggio letto"
+    },
     "prova": "Relazioni dichiarate in src/data/fatti.yaml, src/data/tappe.yaml e src/testi/; note del registro originale.",
     "schede": [
       "lc-zia-esterina-perche"
@@ -4251,5 +4257,31 @@
     "testi": [
       "dove-mangiare.yaml#piatto-pastiera"
     ]
+  },
+  "lc-nennella-storia": {
+    "categoria": "cucina",
+    "luoghi": [
+      "Trattoria da Nennella"
+    ],
+    "descrizione": "La trattoria presenta la propria storia dal 1949",
+    "avviso": "",
+    "nota": "",
+    "formato": "",
+    "parole": [
+      "storia",
+      "1949"
+    ],
+    "priorita": 5,
+    "lingua": "",
+    "lettura": {
+      "data": "2026-10-20",
+      "label": "Passaggio letto"
+    },
+    "prova": "La homepage del locale riporta dal 1949; controllo del 20 ottobre 2026.",
+    "schede": [
+      "lc-nennella-perche"
+    ],
+    "durate": [],
+    "testi": []
   }
 }

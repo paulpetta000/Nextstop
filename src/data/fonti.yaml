@@ -1168,6 +1168,14 @@
   controllato: 2026-10-04
   letta: true
 
+- id: lc-nennella-storia
+  titolo: "La trattoria: dal 1949"
+  editore: Trattoria da Nennella
+  url: https://www.trattorianennella.it/
+  tipo: ufficiale
+  controllato: 2026-10-20
+  letta: true
+
 - id: lc-nennella-domande
   titolo: "Domande frequenti: prenotazione"
   editore: "Trattoria da Nennella"
@@ -1524,7 +1532,7 @@
   url: https://www.gamberorossointernational.com/?p=513457
   tipo: stampa
   pubblicato: 2024-01-23
-  controllato: 2026-10-04
+  controllato: 2026-10-20
   letta: true
 
 - id: gri-cuoppo-2024
@@ -1533,7 +1541,7 @@
   url: https://www.gamberorossointernational.com/news/the-best-cuoppo-in-naples-must-visit-spots/
   tipo: stampa
   pubblicato: 2024-07-01
-  controllato: 2026-10-04
+  controllato: 2026-10-20
   letta: true
 
 - id: gri-pizza-fritta-2023
@@ -1542,7 +1550,7 @@
   url: https://gamberorossointernational.com/?p=481956
   tipo: stampa
   pubblicato: 2023-10-13
-  controllato: 2026-10-04
+  controllato: 2026-10-20
   letta: true
 
 - id: napolitan-pasticcerie-2022

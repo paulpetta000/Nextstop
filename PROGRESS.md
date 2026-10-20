@@ -2,7 +2,13 @@
 
 _Aggiornato il 20/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · sitemap e HTTP pubblico (20 ottobre)
+## Revisione corrente · quattro fonti storiche (20 ottobre)
+
+Confermate sulle pubblicazioni originali quattro affermazioni su Di Matteo, Gesù Vecchio, Zia Esterina e Nennella; avvisi editoriali **20 → 16**, **196 fonti pubbliche**. Quattro testi riletti e firme dipendenti aggiornate; giudizi storici distinti da orari attuali/futuri. **531/531 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. [Fonti, prove e limiti](docs/storico/2026-10-20-revisione-38.md).
+
+Prosegue il minimo di **40 minuti dalle 14:19:21 UTC** su più aree; istruzioni/consumo Claude esclusi. Tutto locale, nessun browser o pubblicazione; nuova idea rinviata anche nell’analisi.
+
+## Revisione precedente · sitemap e HTTP pubblico (20 ottobre)
 
 Sitemap senza date inventate dalla build; nove URL e alternative italiane conservate. **531/531 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. HTTP pubblico: nove pagine 200 con canonical coerenti, indirizzo inesistente 404/noindex e verifica Google presente. [Prove, fonti e limiti](docs/storico/2026-10-20-revisione-37.md).
 

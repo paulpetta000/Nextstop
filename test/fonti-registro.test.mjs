@@ -7,17 +7,17 @@ import { fontiPerPagina } from '../src/lib/fonti-nextstop.mjs';
 import { normalizza, equivalente } from '../src/scripts/fonti/ricerca.mjs';
 const raw=yaml.load(fs.readFileSync(new URL('../src/data/fonti.yaml',import.meta.url),'utf8'));
 const registro=registroFonti(raw);
-test('registro completo: 195 documenti, metadati presenti, originali e date conservati',()=>{
- assert.equal(registro.length,195);
- assert.equal(new Set(registro.map(s=>s.id)).size,195);
- assert.equal(new Set(registro.map(s=>s.url)).size,195);
+test('registro completo: 196 documenti, metadati presenti, originali e date conservati',()=>{
+ assert.equal(registro.length,196);
+ assert.equal(new Set(registro.map(s=>s.id)).size,196);
+ assert.equal(new Set(registro.map(s=>s.url)).size,196);
  for(const s of registro){
   const f=raw.find(f=>f.id===s.id);
   assert.equal(s.titolo,f.titolo);assert.equal(s.url,f.url);
   assert.equal(s.data,new Date(f.controllato).toISOString().slice(0,10));
   assert.ok(s.descrizione);assert.ok(argomenti.some(t=>t.id===s.categoria));
  }
- assert.deepEqual(argomenti.map(t=>registro.filter(s=>s.categoria===t.id).length),[94,69,17,1,14]);
+ assert.deepEqual(argomenti.map(t=>registro.filter(s=>s.categoria===t.id).length),[94,70,17,1,14]);
 });
 test('originali diretti: PDF EAV e download ANM, URL registrati ancora disponibili',()=>{
  const eav=registro.find(s=>s.id==='tp-eav-l1-orario');

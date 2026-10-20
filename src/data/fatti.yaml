@@ -1260,11 +1260,10 @@
 
 - id: lc-di-matteo-rinomato
   testo: "Gambero Rosso International, nel luglio 2024, scrive che è una tappa obbligata per il cibo di strada fritto napoletano."
-  stato: stampa
+  stato: confermato
   storico: true
-  comeFatto: true
   fonti: [gri-cuoppo-2024]
-  controllato: 2026-10-04
+  controllato: 2026-10-20
 
 - id: lc-chitarra-perche
   testo: "Ha la Chiocciola di Slow Food nella guida Osterie d'Italia 2025, secondo Scatti di Gusto. Secondo il locale, l'osteria è aperta dal 1991."
@@ -1276,11 +1275,10 @@
 
 - id: lc-gesu-vecchio-perche
   testo: "Gambero Rosso la mette tra gli otto posti di Napoli per la pasta e patate con la provola, scrive Gambero Rosso International nel gennaio 2024."
-  stato: stampa
+  stato: confermato
   storico: true
-  comeFatto: true
   fonti: [gri-pasta-patate-2024]
-  controllato: 2026-10-04
+  controllato: 2026-10-20
 
 - id: lc-di-costanzo-perche
   testo: "Gambero Rosso la mette tra le sette pasticcerie di Napoli nel 2022, secondo Napolitan.it, che la descrive come una pasticceria tradizionale solida."
@@ -1299,11 +1297,10 @@
 
 - id: lc-zia-esterina-perche
   testo: "Gambero Rosso International, nell'ottobre 2023, scrive che il suo nome a Napoli è sinonimo di pizza fritta."
-  stato: stampa
+  stato: confermato
   storico: true
-  comeFatto: true
   fonti: [gri-pizza-fritta-2023]
-  controllato: 2026-10-04
+  controllato: 2026-10-20
 
 - id: lc-hosteria-toledo-perche
   testo: "Secondo il locale, fa cucina napoletana dal 1951. Nessuna guida verificata: l'abbiamo scelta noi, per la cucina di casa a due passi da via Toledo."
@@ -1321,11 +1318,10 @@
 
 - id: lc-nennella-perche
   testo: "Aperta nel 1949, scrive Gambero Rosso International, che nel gennaio 2024 la mette tra gli otto posti di Napoli per la pasta e patate con la provola."
-  stato: stampa
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [gri-pasta-patate-2024]
-  controllato: 2026-10-04
+  fonti: [gri-pasta-patate-2024, lc-nennella-storia]
+  controllato: 2026-10-20
 
 - id: lc-pintauro-perche
   testo: "Secondo il locale, fa sfogliatelle in via Toledo dal 1785. Ha riaperto con una nuova gestione alla fine di marzo 2026, scrive Scatti di Gusto."
