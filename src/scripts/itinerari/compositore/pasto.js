@@ -11,7 +11,7 @@ import { orarioLocale, tappaDi } from '../../../lib/itinerari/calcolo';
 import { preparaPasto } from '../../../lib/itinerari/pasti';
 import { sequenza, localeDelPranzo } from '../../../lib/itinerari/pause';
 import { MAX_TAPPE } from '../../../lib/itinerari/link';
-import { S, assicuraSchede, foglio, chiudiFoglio, rinfresca, avvisa, annuncia, scorri, occupato } from './comuni.js';
+import { S, foglio, chiudiFoglio, contestoFoglio, dopoChiusuraFoglio, rinfresca, avvisa, annuncia, scorri, occupato } from './comuni.js';
 import { aggiorna, conAnnulla } from './viste.js';
 import { testoScheda, sezioni, fontiScheda } from './scheda.js';
 
@@ -154,6 +154,18 @@ export function rigaPasto(m, vista, stile = '') {
 
 // ---------- il menù: i locali per tipo, con i puntini fino ai minuti; quanto vuoi camminare in cima ----------
 let ordineLocali = [];
+let richiestaSchedaPasto = 0;
+function contestoPasto(m) {
+  const x = X(), giorno = x.giorni[m.g], g = S.g, p = S.p;
+  return () => !!giorno && X() === x && x.giorni[m.g] === giorno && S.g === g && S.p === p;
+}
+function collegaPasto(f, m, torna, quanto, sfoglia) {
+  const dati = contestoPasto(m), aperto = contestoFoglio(), esegui = dopoChiusuraFoglio(dati);
+  const visibile = () => aperto() && dati();
+  f.onclick = e => { if (visibile()) return clic(e, f, m, torna, quanto, sfoglia, esegui, dati, visibile); };
+  return visibile;
+}
+
 function apriMenu(m, max = aperti(m).length ? 10 : 0) {
   let mx = max;
   const corpo = () => {
@@ -170,7 +182,7 @@ function apriMenu(m, max = aperti(m).length ? 10 : 0) {
       <p class="mn-piede">Orari scritti dai locali${X().data ? `, ${dataLungaDi(m.g)}` : '; senza data valgono per i giorni in cui sono aperti'}. Le ore di pranzo (12:30–14:30) e cena (19:30–21:30) sono una regola nostra. Scegli tu: niente si aggiunge da solo.</p></div>`;
   };
   foglio(m.q === 'pranzo' ? 'Il menù del pranzo' : 'Il menù della cena', `<div id="f-vivo">${corpo()}</div>`, f => {
-    f.onclick = e => clic(e, f, m, () => apriMenu(m, mx), k => { mx = k; rinfresca(f, corpo(), { dataset: { f: 'quanto', v: String(k) } }); });
+    collegaPasto(f, m, () => apriMenu(m, mx), k => { mx = k; rinfresca(f, corpo(), { dataset: { f: 'quanto', v: String(k) } }); });
   }, 'f--pasto f--menu');
 }
 // la scheda del locale: la scheda vera e «Mangia qui» con l'ora; in fondo «Prima» e «Dopo» (nell'ordine del menù), col dito di lato
@@ -186,23 +198,28 @@ function paginaPasto(id, m, indietro, lista) {
     ${lista.length > 1 ? `<nav class="pl-sfoglia" aria-label="Altri locali">${vai(prima, -1)}<span class="pl-sf__n num">${i + 1} di ${lista.length}</span>${vai(dopoId, 1)}</nav>` : ''}`;
 }
 async function schedaPasto(id, m, indietro) {
-  await assicuraSchede();
+  const richiesta = ++richiestaSchedaPasto, dati = contestoPasto(m), aperto = contestoFoglio({ ancheChiuso: true });
+  const attuale = () => richiesta === richiestaSchedaPasto && dati() && aperto();
+  try { if (!schedePronte()) await caricaSchede(); }
+  catch { if (attuale()) avvisa('La scheda del locale non si è caricata. Riprova dal menù.'); return; }
+  if (!attuale()) return;
   const lista = ordineLocali.includes(id) ? [...ordineLocali] : vicini(m).map(y => y.id);
-  let cur = id;
+  let cur = id, visibile = () => false;
   const sfoglia = (dir, daX = 0) => {
     const v = lista[lista.indexOf(cur) + dir], f = $('#foglio');
-    if (!v || occupato.si) return false;
+    if (!v || occupato.si || !visibile()) return false;
     cur = v;
     scorri($('.pl-pagina', f), dir, daX, () => {
+      if (!visibile()) return;
       $('.pl-pagina', f).innerHTML = paginaPasto(v, m, indietro, lista);
       $('#f-titolo', f).textContent = T(v).nome;
       f.scrollTop = 0;
       annuncia(`${T(v).nome}, ${lista.indexOf(v) + 1} di ${lista.length}`);
-    }, () => $('.pl-pagina', f));
+    }, () => visibile() ? $('.pl-pagina', f) : null);
     return true;
   };
   foglio(T(id).nome, `<div class="pl-pagina">${paginaPasto(id, m, indietro, lista)}</div>`, f => {
-    f.onclick = e => clic(e, f, m, indietro, null, sfoglia);
+    visibile = collegaPasto(f, m, indietro, null, sfoglia);
     // col dito di lato si gira pagina (come le schede delle tappe)
     let p0 = null;
     f.onpointerdown = e => { if (computer.matches || e.pointerType === 'mouse' || e.target.closest('a, summary, button, table')) { p0 = null; return; } p0 = { x: e.clientX, y: e.clientY, t: performance.now() }; };
@@ -214,16 +231,20 @@ async function schedaPasto(id, m, indietro) {
     };
   }, 'f--scheda f--fuori f--pasto');
 }
-async function clic(e, f, m, torna, quanto, sfoglia) {
+async function clic(e, f, m, torna, quanto, sfoglia, esegui, dati, visibile) {
   if (e.target === f) { chiudiFoglio(); return; }
   const b = e.target.closest('[data-f]');
   if (!b) return;
   const k = b.dataset.f, v = b.dataset.v;
   if (k === 'quanto' && quanto) quanto(+v);
   else if (k === 'scheda') schedaPasto(v, m, torna);
-  else if (k === 'sfoglia' && sfoglia) { const dir = +b.dataset.dir; sfoglia(dir); requestAnimationFrame(() => $(`.pl-sf--${dir < 0 ? 'prima' : 'dopo'}`, f)?.focus({ preventScroll: true })); }
+  else if (k === 'sfoglia' && sfoglia) { const dir = +b.dataset.dir; if (sfoglia(dir)) requestAnimationFrame(() => { if (visibile()) $(`.pl-sf--${dir < 0 ? 'prima' : 'dopo'}`, f)?.focus({ preventScroll: true }); }); }
   else if (k === 'indietro') torna?.();
-  else if (k === 'scegli') { await chiudiFoglio(); await dopo(0); mangiaQui(m, v); }
+  else if (k === 'scegli') return esegui(async () => {
+    const chiuso = contestoFoglio({ ancheChiuso: true });
+    await dopo(0);
+    if (chiuso() && dati()) mangiaQui(m, v);
+  });
 }
 
 // le azioni delle righe del pasto (in viste.js, AZ)
