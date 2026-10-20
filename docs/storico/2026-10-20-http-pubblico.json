@@ -1,0 +1,224 @@
+{
+  "data": "2026-10-20T14:22:48.731Z",
+  "origine": "https://nextstop-alpha.vercel.app",
+  "autenticazione": false,
+  "browser": false,
+  "pagine": [
+    {
+      "path": "/",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "title": "Nextstop · Itinerari in città",
+      "h1": 1,
+      "canonical": "https://nextstop-alpha.vercel.app/",
+      "robots": [],
+      "description": "Scopri Napoli con tappe già in ordine e tempi indicativi. Scegli da mezza giornata a tre giorni o componi il tuo itinerario."
+    },
+    {
+      "path": "/accessibilita/",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "title": "Accessibilità del sito · Nextstop",
+      "h1": 1,
+      "canonical": "https://nextstop-alpha.vercel.app/accessibilita/",
+      "robots": [],
+      "description": "Com'è costruito Nextstop perché lo possano usare tutti: contrasti, tastiera, lettori di schermo, movimento ridotto, uso senza rete."
+    },
+    {
+      "path": "/fonti/",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "title": "Fonti e controlli · Nextstop",
+      "h1": 1,
+      "canonical": "https://nextstop-alpha.vercel.app/fonti/",
+      "robots": [],
+      "description": "I documenti degli itinerari di Napoli: informazioni documentate, date, cautele e originali da consultare."
+    },
+    {
+      "path": "/googlee54aa324270bde6d.html",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "h1": 0,
+      "robots": []
+    },
+    {
+      "path": "/napoli/",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "title": "Napoli: itinerari e dove mangiare · Nextstop",
+      "h1": 1,
+      "canonical": "https://nextstop-alpha.vercel.app/napoli/",
+      "robots": [],
+      "description": "Itinerari a Napoli da mezza giornata a tre giorni, o fatti da te, con i tempi a piedi e con i mezzi, e i locali dove mangiare."
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "title": "Dove mangiare a Napoli: pizzerie, trattorie, pesce, friggitorie e dolci · Nextstop",
+      "h1": 1,
+      "canonical": "https://nextstop-alpha.vercel.app/napoli/dove-mangiare/",
+      "robots": [],
+      "description": "32 locali a Napoli con orari e prezzi presi dai siti ufficiali: pizzerie, trattorie, ristoranti di mare, friggitorie, pasticcerie. Filtri per cucina, prezzo, piatto, orario e zona; ogni locale si aggiunge al tuo itinerario."
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(self), interest-cohort=()"
+      },
+      "title": "Itinerari a Napoli: mezza giornata, 1, 2 e 3 giorni · Nextstop",
+      "h1": 1,
+      "canonical": "https://nextstop-alpha.vercel.app/napoli/itinerari/",
+      "robots": [],
+      "description": "Componi il tuo itinerario a Napoli: 51 tappe in città e 9 gite, con i tempi a piedi e con metro, funicolari e autobus, la mappa e gli avvisi. Itinerari pronti per mezza giornata, 1, 2 e 3 giorni e per un giorno di regata. Senza account, anche offline."
+    },
+    {
+      "path": "/non-esiste-verifica-20261020/",
+      "status": 404,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "title": "Pagina non trovata · Nextstop",
+      "h1": 1,
+      "canonical": "https://nextstop-alpha.vercel.app/404/",
+      "robots": [
+        "noindex"
+      ],
+      "description": "La pagina cercata non esiste."
+    },
+    {
+      "path": "/note-legali/",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "title": "Note legali · Nextstop",
+      "h1": 1,
+      "canonical": "https://nextstop-alpha.vercel.app/note-legali/",
+      "robots": [],
+      "description": "Note legali di Nextstop, sito indipendente di itinerari in città: marchi dei rispettivi titolari, fonti, foto e mappe con licenza libera."
+    },
+    {
+      "path": "/privacy/",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "title": "Privacy · Nextstop",
+      "h1": 1,
+      "canonical": "https://nextstop-alpha.vercel.app/privacy/",
+      "robots": [],
+      "description": "Informativa privacy di Nextstop, sito indipendente di itinerari in città: nessun cookie, nessun dato personale raccolto, visite contate in forma anonima."
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "headers": {
+        "content-type": "text/plain; charset=utf-8",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "h1": 0,
+      "robots": []
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "headers": {
+        "content-type": "application/xml",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "h1": 0,
+      "robots": []
+    },
+    {
+      "path": "/termini/",
+      "status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "location": null,
+        "x-content-type-options": "nosniff",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "title": "Termini d&#39;uso · Nextstop",
+      "h1": 1,
+      "canonical": "https://nextstop-alpha.vercel.app/termini/",
+      "robots": [],
+      "description": "Termini d'uso di Nextstop: sito indipendente e gratuito di itinerari in città, con orari, prezzi e tempi che possono cambiare. Link esterni, contenuti di terzi, diritti."
+    }
+  ],
+  "sitemap": [
+    "https://nextstop-alpha.vercel.app/",
+    "https://nextstop-alpha.vercel.app/napoli/",
+    "https://nextstop-alpha.vercel.app/napoli/itinerari/",
+    "https://nextstop-alpha.vercel.app/napoli/dove-mangiare/",
+    "https://nextstop-alpha.vercel.app/fonti/",
+    "https://nextstop-alpha.vercel.app/privacy/",
+    "https://nextstop-alpha.vercel.app/termini/",
+    "https://nextstop-alpha.vercel.app/note-legali/",
+    "https://nextstop-alpha.vercel.app/accessibilita/"
+  ],
+  "lastmod": [
+    "2026-10-20"
+  ],
+  "robots": "User-agent: *\nAllow: /\n\nSitemap: https://nextstop-alpha.vercel.app/sitemap.xml\n"
+}

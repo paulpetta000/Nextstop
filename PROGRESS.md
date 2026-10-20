@@ -2,7 +2,13 @@
 
 _Aggiornato il 20/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · schede e mandato su più aree (20 ottobre)
+## Revisione corrente · sitemap e HTTP pubblico (20 ottobre)
+
+Sitemap senza date inventate dalla build; nove URL e alternative italiane conservate. **531/531 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. HTTP pubblico: nove pagine 200 con canonical coerenti, indirizzo inesistente 404/noindex e verifica Google presente. [Prove, fonti e limiti](docs/storico/2026-10-20-revisione-37.md).
+
+Main remoto ora **b6d2a36**, con CI riuscita su quel commit; ramo locale derivato da **96e480d**, da confrontare e integrare prima di un eventuale rilascio. Nessun push/merge/deploy o impostazione remota cambiati. Prosegue il minimo di **40 minuti dalle 14:19:21 UTC** su più aree; **istruzioni e consumo Claude esclusi** e nuova idea rinviata anche nell’analisi.
+
+## Revisione precedente · schede e mandato su più aree (20 ottobre)
 
 Richieste obsolete delle schede ignorate; azioni dopo la chiusura legate al viaggio/giorno mostrato e doppio tocco contenuto. **529/529 test**, tredici aggiunte nel gruppo e **29 nella ripresa**; build **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-20-revisione-codice-36.md).
 
