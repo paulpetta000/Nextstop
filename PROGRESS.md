@@ -2,7 +2,13 @@
 
 _Aggiornato il 20/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · animazioni della scheda (20 ottobre)
+## Revisione corrente · gesti annullati (20 ottobre)
+
+Annullamenti di puntatori e tocchi separati dal rilascio; niente cambio tappa/chiusura, stato ripristinato e cattura/ascoltatori liberati. **551/551 test**, dodici aggiunte nel gruppo e **51 nella ripresa**; build **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-20-revisione-40.md).
+
+Sette gruppi collegati su aree 2/3/4/5, con manutenzione e sette casi del prodotto verificati. Continua il minimo di **40 minuti dalle 14:19:21 UTC** per riallineare piano e prove; istruzioni/consumo Claude esclusi. Nessun browser o rilascio; nuova idea rinviata anche nell’analisi.
+
+## Revisione precedente · animazioni della scheda (20 ottobre)
 
 Scorrimenti e chiusure non agiscono su una scheda chiusa o riaperta; chiusura immediata e centrature tardive coerenti. **539/539 test**, otto aggiunte nel gruppo e **39 nella ripresa**; build **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-20-revisione-39.md). Verifiche native dell’interfaccia ancora pendenti.
 

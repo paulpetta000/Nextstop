@@ -246,6 +246,7 @@ async function chiudi(subito = false) {
   const el = schEl(), corrente = sch;
   if (!el.open || !corrente) return false;
   richiestaScheda++;
+  corrente.fermaGesto?.();
   if (corrente.chiude) {
     if (!subito) return corrente.chiusura;
     corrente.animazione?.cancel();
@@ -291,12 +292,29 @@ export function preparaScheda() {
   addEventListener('keydown', e => { if (e.key === 'Escape' && schedaAperta() && !foglioEl().open) { e.preventDefault(); chiudi(); } });
   // i gesti: di lato = tappa prima o dopo; in su e in giù = metà, tutto, chiuso
   el.addEventListener('pointerdown', e => {
-    if (!sch || sch.chiude || (e.pointerType === 'mouse' && e.button !== 0) || e.target.closest('a, input, summary, table')) return;
-    const p = $('.sch1__pannello', el), corpo = $('.sch1__corpo', el), pag = $('.sch1__pagina', el);
+    if (!sch || sch.chiude || sch.fermaGesto || occupato.si || (e.pointerType === 'mouse' && e.button !== 0) || e.target.closest('a, input, summary, table')) return;
+    const corrente = sch, p = $('.sch1__pannello', el), corpo = $('.sch1__corpo', el), pag = $('.sch1__pagina', el);
     const x0 = e.clientX, y0 = e.clientY, t0 = performance.now(), yP = Y, dallaTesta = !!e.target.closest('.sch1__testa');
-    let dir = null, dx = 0;
+    let dir = null, dx = 0, concluso = false;
+    const valido = () => sch === corrente && !corrente.chiude && el.open;
+    const pulisci = () => {
+      if (concluso) return false;
+      concluso = true;
+      el.removeEventListener('pointermove', muovi); el.removeEventListener('pointerup', su); el.removeEventListener('pointercancel', annulla); el.removeEventListener('lostpointercapture', annulla);
+      removeEventListener('blur', annulla); removeEventListener('resize', annulla);
+      if (corrente.fermaGesto === annulla) corrente.fermaGesto = null;
+      try { if (el.hasPointerCapture(e.pointerId)) el.releasePointerCapture(e.pointerId); } catch { /* cattura già persa */ }
+      return true;
+    };
+    const annulla = ev => {
+      if (ev?.pointerId != null && ev.pointerId !== e.pointerId) return;
+      if (!pulisci()) return;
+      pag.style.translate = ''; pag.style.opacity = '';
+      if (valido() && dir === 'v') metti(corrente.detent, false);
+    };
     const muovi = ev => {
       if (ev.pointerId !== e.pointerId) return;
+      if (!valido()) { annulla(ev); return; }
       dx = ev.clientX - x0; const dy = ev.clientY - y0;
       if (!dir) {
         if (Math.hypot(dx, dy) < 8) return;
@@ -311,7 +329,8 @@ export function preparaScheda() {
     };
     const su = ev => {
       if (ev.pointerId !== e.pointerId) return;
-      el.removeEventListener('pointermove', muovi); el.removeEventListener('pointerup', su); el.removeEventListener('pointercancel', su);
+      if (!valido()) { annulla(ev); return; }
+      if (!pulisci()) return;
       if (dir === 'h' || dir === 'v') { gestoScheda.tolto = true; setTimeout(() => { gestoScheda.tolto = false; }, 60); }
       const v = (ev.clientY - y0) / Math.max(1, performance.now() - t0);
       if (dir === 'h') {
@@ -325,7 +344,9 @@ export function preparaScheda() {
         else if (v < -.5 || Y < mezzo / 2) metti('tutto'); else metti('meta');
       }
     };
-    el.addEventListener('pointermove', muovi); el.addEventListener('pointerup', su); el.addEventListener('pointercancel', su);
+    corrente.fermaGesto = annulla;
+    el.addEventListener('pointermove', muovi); el.addEventListener('pointerup', su); el.addEventListener('pointercancel', annulla); el.addEventListener('lostpointercapture', annulla);
+    addEventListener('blur', annulla); addEventListener('resize', annulla);
   });
   el.addEventListener('click', e => { if (gestoScheda.tolto) { e.stopPropagation(); e.preventDefault(); } }, true);
   tiraPerChiudere(el, { pronto: () => !!sch && sch.detent === 'tutto', scorre: () => $('.sch1__corpo', el), pannello: () => $('.sch1__pannello', el), chiudi: () => chiudi() });

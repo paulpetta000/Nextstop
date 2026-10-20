@@ -300,32 +300,37 @@ export function scivola(lista, prima, salta = null) {
 export const gestoScheda = { tolto: false };
 export function tiraPerChiudere(el, { pronto, scorre, pannello, chiudi }) {
   let t = null;
-  el.addEventListener('touchstart', e => {
+  const annulla = () => {
+    if (t?.dir === 'giu') { t.p.style.transition = ''; t.p.style.translate = ''; }
     t = null;
+  };
+  el.addEventListener('touchstart', e => {
+    annulla();
     if (!pronto() || computer.matches || e.touches.length !== 1 || e.target.closest('a, input, summary, .f-testa, .sch1__testa, .m, .f-chips, .r2-fila')) return;
     const sc = scorre();
-    t = { y: e.touches[0].clientY, x: e.touches[0].clientX, t: performance.now(), dir: null, dy: 0, cima: !sc || sc.scrollTop <= 0 };
+    t = { y: e.touches[0].clientY, x: e.touches[0].clientX, t: performance.now(), dir: null, dy: 0, cima: !sc || sc.scrollTop <= 0, p: pannello(), valido: contestoFoglio({ ancheChiuso: true }) };
   }, { passive: true });
   el.addEventListener('touchmove', e => {
     if (!t) return;
+    if (!pronto() || !t.valido() || t.p !== pannello() || e.touches.length !== 1) { annulla(); return; }
     const dx = e.touches[0].clientX - t.x, dy = e.touches[0].clientY - t.y;
     if (!t.dir) {
       if (Math.hypot(dx, dy) < 8) return;
       t.dir = dy > 0 && dy > Math.abs(dx) * 1.2 && t.cima ? 'giu' : 'no';
-      if (t.dir === 'giu') pannello().style.transition = 'none';
+      if (t.dir === 'giu') t.p.style.transition = 'none';
     }
     if (t.dir !== 'giu') return;
     e.preventDefault();
-    t.dy = dy; pannello().style.translate = `0 ${(dy * .6).toFixed(1)}px`;
+    t.dy = dy; t.p.style.translate = `0 ${(dy * .6).toFixed(1)}px`;
   }, { passive: false });
   const fine = () => {
-    if (!t || t.dir !== 'giu') { t = null; return; }
-    const ms = Math.max(1, performance.now() - t.t), p = pannello(), v = t.dy / ms;
+    if (!t || t.dir !== 'giu' || !pronto() || !t.valido() || t.p !== pannello()) { annulla(); return; }
+    const ms = Math.max(1, performance.now() - t.t), p = t.p, v = t.dy / ms;
     gestoScheda.tolto = true; setTimeout(() => { gestoScheda.tolto = false; }, 60);
     p.style.transition = '';
     if (t.dy > 200 || (t.dy > 110 && v > .9)) { chiudi(); setTimeout(() => { p.style.translate = ''; }, 420); }
     else { const da = p.style.translate; p.style.translate = ''; if (piano() && da) p.animate([{ translate: da }, { translate: '0 0' }], { duration: 300, easing: 'cubic-bezier(.16,1,.3,1)' }); }
     t = null;
   };
-  el.addEventListener('touchend', fine); el.addEventListener('touchcancel', fine);
+  el.addEventListener('touchend', fine); el.addEventListener('touchcancel', annulla);
 }
