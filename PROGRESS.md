@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · pasti e riepilogo
+## Revisione corrente · trascinamento (20 ottobre)
+
+Scorrimento automatico limitato alle tappe, bordi del pannello desktop rispettati e annullamento completo su perdita della cattura, Escape, cambio di finestra o dimensioni. Un secondo puntatore non avvia un gesto concorrente. **460/460 test**, nove aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-20-revisione-codice-27.md).
+
+Ripresa operativa del 20/10 alle **11:54:32 UTC**, dopo l'interruzione della chat del 18/10: l'attesa non conta come lavoro. Continua il mandato di almeno **45 minuti** sui gruppi collegati; prossimo gruppo ricerca/filtri. La compattazione iniziale e la fluidità sul telefono restano da verificare; nessun browser o pubblicazione. Nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · pasti e riepilogo
 
 Proposta e inserimento del pasto condividono il calcolo con bus, pause, margini e contesto dal vivo; risultati memorizzati invalidati correttamente, attese lunghe conservate e aperture sconosciute distinte da quelle note. **451/451 test**, **37 aggiunte** nella sessione rispetto a 414; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Gruppi, prove e limiti](docs/storico/2026-10-18-revisione-codice-26.md).
 

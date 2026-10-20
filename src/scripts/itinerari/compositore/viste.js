@@ -198,6 +198,7 @@ export function togliGiorno(g = S.g) {
 // ---------- trascinare per cambiare l'ordine (dalla maniglia; con la tastiera: frecce su e giù) ----------
 const scorritore = () => (computer.matches && S.p === 'c' ? $('#c-foglio') : null);
 function iniziaTrascina(voce, e, presa) {
+  if (gesto.trascinando) return false;
   const lista = voce.parentElement;
   const r0 = voce.getBoundingClientRect();
   lista.classList.add('in-trascina');
@@ -235,8 +236,16 @@ function iniziaTrascina(voce, e, presa) {
   };
   const scorriLista = () => {
     if (!attivo) return;
-    const margine = 80, h = innerHeight;
-    const v = y < margine + 60 ? -Math.ceil((margine + 60 - y) / 7) : y > h - margine ? Math.ceil((y - (h - margine)) / 7) : 0;
+    // Il pannello desktop ha bordi propri; la pagina non deve superare le tappe.
+    const b = sc?.getBoundingClientRect();
+    const cima = b ? Math.max(0, b.top + sc.clientTop) : 60;
+    const fondo = b ? Math.min(innerHeight, b.top + sc.clientTop + sc.clientHeight) : innerHeight;
+    const margine = Math.min(80, Math.max(0, (fondo - cima) / 2));
+    const dito = Math.max(cima, Math.min(fondo, y));
+    let v = dito < cima + margine ? -Math.ceil((cima + margine - dito) / 7) : dito > fondo - margine ? Math.ceil((dito - (fondo - margine)) / 7) : 0;
+    if (fondo <= cima) v = 0;
+    const s = sy(), ultima = r[r.length - 1];
+    v = v < 0 ? Math.max(v, Math.min(0, r[0].top - cima - s)) : Math.min(v, Math.max(0, ultima.top + ultima.h - fondo - s));
     if (v) { if (sc) sc.scrollTop += v; else scrollBy(0, v); posiziona(); }
     giro = requestAnimationFrame(scorriLista);
   };
@@ -249,6 +258,10 @@ function iniziaTrascina(voce, e, presa) {
     presa.removeEventListener('pointermove', muovi);
     presa.removeEventListener('pointerup', su);
     presa.removeEventListener('pointercancel', via);
+    presa.removeEventListener('lostpointercapture', via);
+    removeEventListener('blur', interrompi);
+    removeEventListener('resize', interrompi);
+    try { if (presa.hasPointerCapture(e.pointerId)) presa.releasePointerCapture(e.pointerId); } catch { /* già rilasciato */ }
     removeEventListener('keydown', tasto, true);
     document.removeEventListener('touchmove', ferma);
     voci.forEach(v => { v.style.transform = ''; });
@@ -259,10 +272,14 @@ function iniziaTrascina(voce, e, presa) {
   };
   const su = ev => { if (ev.pointerId === e.pointerId) chiudi(false); };
   const via = ev => { if (ev.pointerId === e.pointerId) chiudi(true); };
+  const interrompi = () => chiudi(true);
   const tasto = ev => { if (ev.key === 'Escape') { ev.preventDefault(); chiudi(true); } };
   presa.addEventListener('pointermove', muovi);
   presa.addEventListener('pointerup', su);
   presa.addEventListener('pointercancel', via);
+  presa.addEventListener('lostpointercapture', via);
+  addEventListener('blur', interrompi);
+  addEventListener('resize', interrompi);
   addEventListener('keydown', tasto, true);
   document.addEventListener('touchmove', ferma, { passive: false });
   posiziona();
