@@ -56,3 +56,11 @@ test('ricerca: gite in un gruppo a parte, e la parola trovata segnata nel testo'
   assert.equal(evidenzia(p, r.tutti[0].dove), 'Si parte da Napoli Centrale con la <mark class="r-segno">Circumvesuviana</mark>.');
   assert.equal(distanza('caravagio', 'caravaggio', 2), 1);
 });
+
+
+test('ricerca: distingue gli indici del nome breve da quelli del nome completo', () => {
+  const J = creaIndice([{ id: 'parco', nome: 'Parco dei Ventaglieri', breve: 'Parco Ventaglieri', zona: 'Centro', tipo: 'citta' }]);
+  const r = cerca(J, 'parco ventaglieri').tutti[0];
+  assert.equal(r.campo, 'breve'); assert.deepEqual(r.dove, [0, 1]);
+  assert.equal(evidenzia(J.voci[0][r.campo], r.dove), '<mark class="r-segno">Parco</mark> <mark class="r-segno">Ventaglieri</mark>');
+});

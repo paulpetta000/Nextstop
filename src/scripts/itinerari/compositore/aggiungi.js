@@ -39,7 +39,7 @@ function parolaTrovata(r) {
   if (r.tipo === 'zona') return T(r.id).zona;
   return r.nome;
 }
-const nomeTrovato = r => (r.tipo === 'nome' ? evidenzia(xDi(r.id).nome, r.dove) : esc(T(r.id).nome));
+const nomeTrovato = r => (r.tipo === 'nome' ? evidenzia(xDi(r.id)[r.campo === 'breve' ? 'breve' : 'nome'], r.dove) : esc(T(r.id).nome));
 function dettagli(r) {
   const t = T(r.id), out = [];
   if (r.gruppo === 'gite') { out.push(t.durata > 240 ? 'un giorno intero' : 'mezza giornata'); if (t.partenza) out.push(`da ${esc(t.partenza)}`); return out; }

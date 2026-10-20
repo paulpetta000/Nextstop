@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · ricerca e mappa (20 ottobre)
+## Revisione corrente · nomi brevi nella ricerca (20 ottobre)
+
+I riscontri nel nome breve conservano il campo d'origine e vengono evidenziati su quel testo: MANN non marca più Museo. **472/472 test**, due aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. Confronto su **947 ricerche / 92 luoghi / 5.308 riscontri**: stessi risultati, punteggi e ordine. [Prove e limiti](docs/storico/2026-10-20-revisione-codice-29.md).
+
+Prosegue il mandato di almeno **40 minuti dalle 12:00:35 UTC** sui suggerimenti di riordino con pause, margini e contesto dal vivo. Nessun browser o pubblicazione; area 3 ancora aperta. Nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · ricerca e mappa (20 ottobre)
 
 Elenco e mappa seguono testo e filtri della stessa ricerca; selezioni non più trovate tolte, minuti ricalcolati alle interazioni e richiami differiti disattivati alla chiusura. **470/470 test**, dieci aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-20-revisione-codice-28.md).
 

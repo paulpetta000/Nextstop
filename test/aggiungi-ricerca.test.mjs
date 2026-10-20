@@ -107,3 +107,11 @@ test('aggiungi: selezionare una foto ricalcola la scheda con gli orari più rece
   const e = ambiente(); await e.apriAggiungi({ q: 'museo' }); await e.clic({ fv: 'mappa' }); e.minuti = 42;
   e.mappe[0].opzioni.punto('museo'); assert.match(e.nodi.get('#f-scelta').innerHTML, />42 min</);
 });
+
+
+test('aggiungi: evidenzia MANN nel nome breve e non una parola diversa del nome completo', async () => {
+  const e = ambiente(); Object.assign(e.C.tappe.find(t => t.id === 'museo'), { nome: 'Museo Archeologico Nazionale', breve: 'MANN' });
+  await e.apriAggiungi({ q: 'mann' });
+  assert.ok(e.html.includes('<b><mark class="r-segno">MANN</mark></b>'));
+  assert.ok(!e.html.includes('<mark class="r-segno">Museo</mark>'));
+});
