@@ -1,8 +1,16 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 20/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
+_Aggiornato il 20/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; main remoto ricontrollato a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
-## Revisione corrente · gesti annullati (20 ottobre)
+## Stato corrente · sette gruppi e più aree (20 ottobre)
+
+Codice **7011ac0**, **551/551 test** (51 nuove prove), build **12 pagine**, **811 link validi**, **82 risorse offline** presenti. Correzioni a fogli/selettori/schede/gesti e sitemap; quattro fatti storici verificati, avvisi **19 → 15**, 196 fonti pubbliche. Audit senza segnalazioni note e sette casi del prodotto riusciti. [Resoconto per gli otto punti, prove e lavoro rimasto](docs/storico/2026-10-20-riepilogo-aree.md).
+
+Main remoto **b6d2a36**, 11 commit avanti dalla base pubblicata di questo ramo; CI riuscita su quel main, da integrare/verificare prima di un rilascio. Tutto questo lavoro resta locale. Browser escluso; Search Console attende esportazioni scelte da Enrico. **Istruzioni e consumo Claude esclusi fino a nuova richiesta.** Nuova idea rinviata anche nell’analisi.
+
+Seconda ripresa iniziata alle **14:06:49 UTC**; minimo aggiuntivo di **40 minuti dalle 14:19:21 UTC**, ancora in corso durante il riallineamento documentale. Chiusura temporale da registrare dopo la verifica finale.
+
+## Revisione precedente · gesti annullati (20 ottobre)
 
 Annullamenti di puntatori e tocchi separati dal rilascio; niente cambio tappa/chiusura, stato ripristinato e cattura/ascoltatori liberati. **551/551 test**, dodici aggiunte nel gruppo e **51 nella ripresa**; build **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-20-revisione-40.md).
 

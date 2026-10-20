@@ -1,0 +1,70 @@
+{
+  "data": "2026-10-20T14:51:11.424Z",
+  "base": "7011ac0dee36925e13f4b66c9138f258c4141bda",
+  "perimetro": "File tracciati del ramo locale prima del gruppo documentale finale; non comprende i nuovi materiali remoti.",
+  "file": 2267,
+  "byte": 243573788,
+  "MiB": 232.29,
+  "gruppi": {
+    ".agents": {
+      "file": 179,
+      "byte": 1289323
+    },
+    ".claude": {
+      "file": 182,
+      "byte": 1293367
+    },
+    ".github": {
+      "file": 1,
+      "byte": 2143
+    },
+    "radice": {
+      "file": 13,
+      "byte": 280931
+    },
+    "aggiornamenti": {
+      "file": 2,
+      "byte": 6798
+    },
+    "da-verificare": {
+      "file": 1,
+      "byte": 3185
+    },
+    "design": {
+      "file": 1227,
+      "byte": 126854983
+    },
+    "docs": {
+      "file": 266,
+      "byte": 87153055
+    },
+    "integrations": {
+      "file": 3,
+      "byte": 10387
+    },
+    "public": {
+      "file": 22,
+      "byte": 276214
+    },
+    "ricerca": {
+      "file": 68,
+      "byte": 2085074
+    },
+    "scripts": {
+      "file": 30,
+      "byte": 170245
+    },
+    "specifiche": {
+      "file": 11,
+      "byte": 151201
+    },
+    "src": {
+      "file": 186,
+      "byte": 23659726
+    },
+    "test": {
+      "file": 76,
+      "byte": 337156
+    }
+  }
+}

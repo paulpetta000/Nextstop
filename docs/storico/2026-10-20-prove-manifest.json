@@ -1,0 +1,166 @@
+{
+  "data": "2026-10-20T14:51:11.121Z",
+  "cartella": "C:/Users/Windows11/Documents/ChatGPT/New project",
+  "prove": [
+    {
+      "file": "nextstop-audit-2026-10-20.json",
+      "byte": 387,
+      "sha256": "d9bf4646e938e4f2a5015ebfd2079689ce97b34e3eae8e16e2cbc56d28dfbec4"
+    },
+    {
+      "file": "nextstop-casi-prodotto-2026-10-20.json",
+      "byte": 7141,
+      "sha256": "80ecb48453bedeccb34202f623b9fccbf20cf9c5ae783a1fbf66023218c5154f"
+    },
+    {
+      "file": "nextstop-casi-prodotto-2026-10-20.mjs",
+      "byte": 5273,
+      "sha256": "cbc5b2400208e7e512bf3883eb05a57844ccdd9fb3ad7f986a4bcec2c96e4b9e"
+    },
+    {
+      "file": "nextstop-fogli-caricamenti-build-2026-10-20.log",
+      "byte": 61873,
+      "sha256": "50bc259512f0ee64c910a9d3ed2d5628d8c732bba806915a74e0d02ef11dc12d"
+    },
+    {
+      "file": "nextstop-fogli-caricamenti-links-2026-10-20.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-fogli-caricamenti-test-2026-10-20.log",
+      "byte": 47993,
+      "sha256": "c44937fa1bef0efe4e68427f56c9ebc7292d0373e34e29513f64c32125d434a7"
+    },
+    {
+      "file": "nextstop-foglio-ciclo-build-2026-10-20.log",
+      "byte": 62012,
+      "sha256": "4e5f1e904cde38991e56b12a40128e58073b3c60798f96094ac80623b1356058"
+    },
+    {
+      "file": "nextstop-foglio-ciclo-links-2026-10-20.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-foglio-ciclo-test-2026-10-20.log",
+      "byte": 47099,
+      "sha256": "a9258799eb26158f4fadb0f43764bdd793c935b250fe2242ccab623fa27dc4bd"
+    },
+    {
+      "file": "nextstop-foglio-tocchi-prima-2026-10-20.log",
+      "byte": 4166,
+      "sha256": "8979e889c76bab4fe86243d8e8e2960b02ccb43875f5301f220f2294cbcac29d"
+    },
+    {
+      "file": "nextstop-fonti-originali-build-2026-10-20.log",
+      "byte": 61212,
+      "sha256": "ca49ff0240d9e3dca0d8228e64be4635cb69c70700aff11d6501f7d0b9304f12"
+    },
+    {
+      "file": "nextstop-fonti-originali-links-2026-10-20.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-fonti-originali-prima-registro-2026-10-20.log",
+      "byte": 50727,
+      "sha256": "299ca195f5011e786ba6025983eb5c47130a238f6ccfb452f3cb0ca9ae3f0065"
+    },
+    {
+      "file": "nextstop-fonti-originali-test-2026-10-20.log",
+      "byte": 49395,
+      "sha256": "3d70eebfd2dd0b9658047512f93c5fffec34fe18831db59bf670266364f428bb"
+    },
+    {
+      "file": "nextstop-gesti-finali-build-2026-10-20.log",
+      "byte": 61035,
+      "sha256": "f678754b19fe280782c966cf662e5aabe7a08bd8f5ed2a343b688940849f8aeb"
+    },
+    {
+      "file": "nextstop-gesti-finali-links-2026-10-20.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-gesti-finali-test-2026-10-20.log",
+      "byte": 51142,
+      "sha256": "b2606744df64f5471c31665f5b1260f5faecbe8a544d5e895bcd61704c45ab24"
+    },
+    {
+      "file": "nextstop-http-pubblico-2026-10-20.json",
+      "byte": 8615,
+      "sha256": "7cded8581668ad141507019b069f6e9c2da975fd8a9e1546069631a73749456d"
+    },
+    {
+      "file": "nextstop-scheda-animazioni-build-2026-10-20.log",
+      "byte": 60980,
+      "sha256": "ed093739d97df6359055e803d82c6853eb780c21d4100a1f9f8270fba63aac09"
+    },
+    {
+      "file": "nextstop-scheda-animazioni-links-2026-10-20.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-scheda-animazioni-prima-2026-10-20.log",
+      "byte": 6491,
+      "sha256": "8a77b7526a74e4d8f5f5b29aa0cf7511f8e2fb07d1511ecf291a20035a5198c3"
+    },
+    {
+      "file": "nextstop-scheda-animazioni-test-2026-10-20.log",
+      "byte": 50168,
+      "sha256": "f0c35fa82ad63d8059f5e6380e238ac4c4a145dd420e66a8bcff19c0852e4577"
+    },
+    {
+      "file": "nextstop-scheda-gesti-build-2026-10-20.log",
+      "byte": 61046,
+      "sha256": "5ff3b16148f314aa6107ffedd03a58279a6e7c3f9445f60dabb93d42e0a0c944"
+    },
+    {
+      "file": "nextstop-scheda-gesti-links-2026-10-20.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-scheda-gesti-prima-2026-10-20.log",
+      "byte": 8188,
+      "sha256": "e50c464c969fc2fe893d9f6d0d8914792436e18a74280f0c3b623f3f99281396"
+    },
+    {
+      "file": "nextstop-scheda-gesti-test-2026-10-20.log",
+      "byte": 50816,
+      "sha256": "03a5f9535b19197b16be9c620d14dd9cd36b2a9a5a75fc10b7645b9cd17bedc5"
+    },
+    {
+      "file": "nextstop-schede-caricamenti-build-2026-10-20.log",
+      "byte": 61965,
+      "sha256": "208b86399ab76e7e170765cba41bfcf5d5b07322b9c7e2471da765b4f1a3b129"
+    },
+    {
+      "file": "nextstop-schede-caricamenti-links-2026-10-20.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-schede-caricamenti-test-2026-10-20.log",
+      "byte": 49166,
+      "sha256": "b9035913581db93d58f6b8d6a771115ba66c3a202d60b86d9d61ba24597939d9"
+    },
+    {
+      "file": "nextstop-sitemap-build-2026-10-20.log",
+      "byte": 61877,
+      "sha256": "bc809776469ea0e1a88a4fe9c79a9685cd0a6ed495cae42deecec11b7e6305e0"
+    },
+    {
+      "file": "nextstop-sitemap-links-2026-10-20.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-sitemap-test-2026-10-20.log",
+      "byte": 49348,
+      "sha256": "f21a6a1b5637b27e52cbd7e3158dd55f2cf17e61ab65064ae8feb75a74069359"
+    }
+  ]
+}

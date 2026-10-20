@@ -1,0 +1,33 @@
+{
+  "data": "2026-10-20T14:23:59Z",
+  "main": "b6d2a36ec6260b4bed7f8dbf7dc6089c57c17991",
+  "protected": false,
+  "rulesets": [],
+  "ci": {
+    "id": 39420459957,
+    "sha": "b6d2a36ec6260b4bed7f8dbf7dc6089c57c17991",
+    "conclusion": "success",
+    "url": "https://github.com/paulpetta000/Nextstop/actions/runs/39420459957",
+    "passaggiRiusciti": [
+      "checkout del commit evento",
+      "verifica Node",
+      "npm ci senza script",
+      "test",
+      "build",
+      "link"
+    ]
+  },
+  "confronto": {
+    "base": "96e480dd95e45f4133fa513ad66ab30597c0a2cb",
+    "avanti": 11,
+    "fileRestituiti": 300,
+    "limite": "Elenco parziale; patch non riviste integralmente. Non dimostra integrabilità."
+  },
+  "gpsHttp": {
+    "data": "2026-10-20T14:52:15Z",
+    "path": "/napoli/itinerari/",
+    "status": 200,
+    "permissionsPolicy": "camera=(), microphone=(), geolocation=(self), interest-cohort=()",
+    "provaNativa": false
+  }
+}

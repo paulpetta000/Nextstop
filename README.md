@@ -180,7 +180,7 @@ Git, Bash e Node sono quelli già presenti nel runner; viene verificato Node >=2
 3. `npm run build`, con telemetria Astro disabilitata.
 4. `npm run check:links`.
 
-**Verifica reale:** la [prima esecuzione Ubuntu del 09/10](https://github.com/paulpetta000/Nextstop/actions/runs/37976226763) ha superato installazione senza script, 55 test, build e 888 link. Quel risultato è storico: il workflow aggiornato del 16/10 è verificato in locale, ma deve ancora essere eseguito su GitHub dopo il push autorizzato. Nessuna pubblicazione o configurazione remota è implicita.
+**Verifica reale:** la [CI main del 20/10](https://github.com/paulpetta000/Nextstop/actions/runs/39420459957) è riuscita sul commit b6d2a36, inclusi installazione senza script, test, build e link. Conferma quel main: il ramo locale di revisione ha modifiche successive ancora da verificare in CI sul risultato integrato. I vecchi run e i loro conteggi restano storici. Nessuna pubblicazione o configurazione remota è implicita.
 
 Il workflow non rende obbligatori i controlli prima del merge e non blocca un deploy Vercel. Stato remoto, regola consigliata e procedura per verificare il commit integrabile: [guida di manutenzione](docs/MANUTENZIONE.md#github-e-commit-verificati).
 
