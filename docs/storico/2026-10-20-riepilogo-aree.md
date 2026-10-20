@@ -1,6 +1,6 @@
 # Revisione del 20 ottobre · risultati e attività rimaste
 
-Seconda ripresa iniziata alle **14:06:49 UTC**. Enrico ha esteso il lavoro a più aree e richiesto altri **40 minuti dalle 14:19:21 UTC**. Il lavoro continua fino alla chiusura temporale registrata in PROGRESS; la pausa fra sessioni non conta. Ramo locale codex/salvataggi-coordinati-2026-10-18, codice **7011ac0**, nessun push, merge o deploy di questa sessione.
+Seconda ripresa iniziata alle **14:06:49 UTC**. Enrico ha esteso il lavoro a più aree e richiesto altri **40 minuti dalle 14:19:21 UTC**. Minimo verificato alle **14:59:34 UTC**: **40 minuti e 13 secondi** dalla richiesta aggiuntiva, **52 minuti e 45 secondi** complessivi. La pausa fra sessioni non conta. Ramo locale codex/salvataggi-coordinati-2026-10-18, codice **7011ac0**, nessun push, merge o deploy di questa sessione.
 
 ## Gli otto punti, oggi
 
@@ -31,6 +31,16 @@ Eseguiti senza rete su **Due giorni a Napoli**, con pacco pubblico di 92 luoghi 
 
 Questi casi sostengono il valore del calcolo delle conseguenze e della conservazione del piano. Il pronto scelto, il martedì, contiene anche luoghi chiusi: l’avviso funziona ma non rende da solo il percorso utilizzabile. Priorità pratica: informazioni attendibili e conseguenze comprensibili, poi prove dell’esperienza nativa. Nessun confronto esterno eseguito e nessuna superiorità dichiarata.
 
+## Seguito concreto dell’area 3
+
+Il controllo finale dei chiamanti individua questi gruppi da riprodurre prima di correggerli; non sono stati dichiarati coperti dai 551 test:
+
+1. **Azioni dopo la chiusura del foglio:** Togli giorno, Salva/Condividi/Apri in I miei itinerari e gli altri comandi di fogli.js. Verificare esito della chiusura, doppio tocco e cambio di viaggio/giorno durante l’attesa.
+2. **Finestre figlie e scelta del pasto:** chiusure/ritorni di calendario.js e ore.js, scelta in pasto.js dopo chiusura e attesa. Distinguere l’ultimo contesto da una finestra riaperta.
+3. **Temporizzazioni e stato nativo:** pulizie differite dei gesti e annullamenti delle animazioni, poi browser con tastiera, tocco, movimento ridotto e offline, quando rientrerà nel mandato.
+
+La presenza di un’attesa nel codice è una pista per la prova, non dimostra da sola un difetto. Per area 4 mancano invece i dati Search Console scelti da Enrico; per area 2 i quindici riscontri editoriali e le aperture future. Istruzioni e consumo Claude restano esclusi.
+
 ## Indice dei sette gruppi
 
 - [34 · ciclo del foglio](2026-10-20-revisione-codice-34.md), 0078be3, 506 test.
@@ -44,3 +54,5 @@ Questi casi sostengono il valore del calcolo delle conseguenze e della conservaz
 Controlli finali: **551/551**, zero fallimenti/salti/cancellazioni; build **12 pagine**, **13 documenti / 811 link validi**, worker **bd6edd46e12e**, **82 risorse offline** presenti. L’audit del lockfile è distinto dalle prove funzionali. Il confronto remoto restituisce 300 file e va trattato come parziale; non certifica l’integrazione con gli 11 commit nuovi di main.
 
 Conservati ID, URL, licenze, materiali privati e dati generati; cambiate soltanto quattro schede storiche e relative fonti/metadati/firme. Nessuna dipendenza installata, protezione attivata, automazione, delega o pubblicazione. La nuova idea su più città e sul registro degli aggiornamenti resta rinviata anche nell’analisi e nella stesura in questa chat.
+
+Chiusura documentale: controllati 90 collegamenti in nove documenti, nessun riferimento mancante; verificate le impronte dei 32 risultati grezzi. Confronto dei dati con la base della ripresa: cambiate solo le quattro schede previste, testi e ID conservati; URL preesistenti identici, sola nuova fonte lc-nennella-storia. Nessuna modifica agli input eseguibili dopo gli ultimi controlli completi; nessuna suite/build ripetuta per il solo riepilogo.

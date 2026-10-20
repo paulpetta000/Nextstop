@@ -8,7 +8,7 @@ Codice **7011ac0**, **551/551 test** (51 nuove prove), build **12 pagine**, **81
 
 Main remoto **b6d2a36**, 11 commit avanti dalla base pubblicata di questo ramo; CI riuscita su quel main, da integrare/verificare prima di un rilascio. Tutto questo lavoro resta locale. Browser escluso; Search Console attende esportazioni scelte da Enrico. **Istruzioni e consumo Claude esclusi fino a nuova richiesta.** Nuova idea rinviata anche nell’analisi.
 
-Seconda ripresa iniziata alle **14:06:49 UTC**; minimo aggiuntivo di **40 minuti dalle 14:19:21 UTC**, ancora in corso durante il riallineamento documentale. Chiusura temporale da registrare dopo la verifica finale.
+Minimo verificato alle **14:59:34 UTC**: **40 minuti e 13 secondi** dalla richiesta aggiuntiva delle 14:19:21 UTC, **52 minuti e 45 secondi** dalla ripresa delle 14:06:49 UTC. Sette gruppi senza nuovi OK; codice finale 7011ac0, seguito documentale. Collegamenti dei registri verificati e 32 prove grezze recuperabili con impronte coerenti.
 
 ## Revisione precedente · gesti annullati (20 ottobre)
 
