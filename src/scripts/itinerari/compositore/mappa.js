@@ -71,6 +71,7 @@ let nMappe = 0;
 const tutte = new Set();
 export class Mappa {
   constructor(el, opz = {}) {
+    this.attiva = true;
     this.el = el; this.opz = opz; this.tappe = []; this.vb = null; this.fuoco = null; this.n = ++nMappe; this.dita = new Map(); this.tutte = false; this.idsPunti = [];
     this.messi = new Set(); this.vie = []; this.inRotta = new Set(); this.nomi = [];
     el.classList.add('m');
@@ -99,21 +100,24 @@ export class Mappa {
   }
   // la mappa di base e i percorsi arrivano dalla rete la prima volta (poi dalla memoria del service worker)
   async base() {
+    if (!this.attiva) return;
     if (!BASE) $('.m-carico', this.el).textContent = 'Carico la mappa…';
     try {
       const [M, Pp, I] = await caricaMappa();
       BASE = M; P = Pp;
       if (I && !STRADE) {
         STRADE = I; ESISTE = new Set(I.pezzi);
-        pezziDelleTappe(A.elenco.filter(x => salvato(x)).flatMap(x => x.giorni.flatMap(g => g.tappe)).map(id => T(id)?.xy).filter(Boolean));
       }
     } catch {
+      if (!this.attiva) return;
       const c = $('.m-carico', this.el);
       c.innerHTML = 'La mappa non si è caricata: la prima volta serve la rete. <button type="button" class="m-riprova">Riprova</button>';
       c.style.pointerEvents = 'auto';
       $('.m-riprova', c).onclick = () => { c.style.pointerEvents = ''; this.base(); };
       return;
     }
+    if (!this.attiva) return;
+    pezziDelleTappe(A.elenco.filter(x => salvato(x)).flatMap(x => x.giorni.flatMap(g => g.tappe)).map(id => T(id)?.xy).filter(Boolean));
     $('.m-carico', this.el).textContent = '';
     const M = BASE;
     $('.m-base', this.svg).innerHTML = `<rect class="m-terra" x="-6000" y="-6000" width="16000" height="16000"/><path class="m-mare" d="${M.mare}"/><path class="m-isole" d="${M.isole}"/><path class="m-parco" d="${M.parchi}"/>
@@ -122,17 +126,19 @@ export class Mappa {
     this.nomi = $$('.m-nome', this.el);
     this.pezzi();
     if (this.attesa) { const a = this.attesa; this.attesa = null; this.disegna(...a); }
+    if (this.quadroInAttesa) { const q = this.quadroInAttesa; this.quadroInAttesa = null; this.inquadra(q.dur, q.ids ?? this.idsPunti); }
   }
   // i pezzi nella vista (più un quarto di pezzo intorno), solo da vicino
   pezzi() {
-    if (!STRADE || !this.vb || this.s < SOGLIA_PEZZI) return;
+    if (!this.attiva || !STRADE || !this.vb || this.s < SOGLIA_PEZZI) return;
     for (const k of pezziDi(this.vb, STRADE.lato, ESISTE, STRADE.lato / 4)) {
       if (this.messi.has(k)) continue;
       this.messi.add(k);
-      prendiPezzo(k).then(d => { if (d && this.el.isConnected) this.aggiungi(d); else this.messi.delete(k); });
+      prendiPezzo(k).then(d => { if (d && this.attiva && this.el.isConnected) this.aggiungi(d); else this.messi.delete(k); });
     }
   }
   aggiungi(d) {
+    if (!this.attiva) return;
     const strati = $$('.m-fine > g', this.svg);
     STRATI_P.forEach(([c], i) => { if (d[c]) strati[i].insertAdjacentHTML('beforeend', `<path d="${d[c]}"/>`); });
     this.vie.push(...d.n.map(([nome, , , dd]) => ({ nome, punti: rileggi(dd) })));
@@ -213,6 +219,7 @@ export class Mappa {
   }
   // Gx: la giornata (o null); altre: le linee degli altri giorni (giorno vuoto); n: il numero del giorno
   disegna(Gx, { altre = [], vola = false, n = 1, disegna = true, daLinea = null, punti = null } = {}) {
+    if (!this.attiva) return;
     if (!BASE) { this.attesa = [Gx, { altre, vola, n, disegna, daLinea, punti }]; this.gx = Gx; return; }
     this.mosso = false;
     $('.m-altre', this.svg).innerHTML = altre.map(a => lineeDi(a).map(l => `<path class="m-altra" d="${l.d}"/>`).join('')).join('');
@@ -240,7 +247,10 @@ export class Mappa {
     (this.linee || []).forEach((l, i) => { const v = this.voci[l.tappaDopo]; const si = !!v && visitata(v.id); fatto[2 * i]?.classList.toggle('m-fatta', si); fatto[2 * i + 1]?.classList.toggle('m-fatta', si); });
   }
   punti(ids) {
+    if (!this.attiva) return;
     this.idsPunti = ids;
+    if (this.attesa) this.attesa[1].punti = [...ids];
+    if (!BASE && this.quadroInAttesa?.ids) this.quadroInAttesa.ids = [...ids];
     const f = id => T(id)?.foto?.m;
     $('.m-punti', this.el).innerHTML = ids.map(id => `<button type="button" class="m-punto${nelViaggio(id) ? ' m-punto--viaggio' : ''}" data-id="${id}" aria-label="${esc(T(id).nome)}: apri la scheda"><span class="m-punto__f" aria-hidden="true">${f(id) ? `<img src="${f(id)}" alt="" decoding="async" loading="lazy">` : `<i>${esc(T(id).breve.slice(0, 1))}</i>`}</span><span class="m-punto__n" aria-hidden="true">${f(id) ? `<img src="${f(id)}" alt="" decoding="async" loading="lazy">` : ''}<b>${esc(T(id).breve)}</b></span></button>`).join('');
     $$('.m-punto', this.el).forEach(b => { b.onclick = () => this.opz.punto?.(b.dataset.id, b); });
@@ -255,7 +265,8 @@ export class Mappa {
     if (this.tutte) this.inquadra(); else this.tutto();
   }
   inquadra(dur = 700, ids = this.idsPunti) {
-    if (!BASE) return;
+    if (!this.attiva) return;
+    if (!BASE) { this.quadroInAttesa = { dur, ids: arguments.length < 2 ? null : [...ids] }; return; }
     this.fuoco = null; this.mosso = true;
     const fine = this.vbPer(riquadroXY([...ids.map(id => T(id).xy), ...this.tappe.map(xyDi)]));
     if (piano() && this.vb && dur > 0) this.vola(fine, dur); else { this.fermaVolo?.(); this.metti(fine); }
@@ -369,7 +380,13 @@ export class Mappa {
   }
   tutto() { if (!BASE || !this.box) return; this.fuoco = null; this.mosso = false; this.vola(this.vbPer(this.box), 700); this.evidenzia(null); }
   evidenzia(id) { $$('.m-segno, .m-punto', this.el).forEach(b => b.setAttribute('aria-current', String(b.dataset.id === id))); }
-  spegni() { this.ro.disconnect(); this.fermaVolo?.(); tutte.delete(this); }
+  spegni() {
+    this.attiva = false; this.attesa = null; this.quadroInAttesa = null;
+    clearTimeout(this.tP); clearTimeout(this.tNomi); this.ro.disconnect(); this.fermaVolo?.();
+    for (const id of this.dita.keys()) try { if (this.el.hasPointerCapture(id)) this.el.releasePointerCapture(id); } catch { /* già rilasciato */ }
+    this.dita.clear(); this.partenza = null; this.preso = false; this.el.classList.remove('m--muovo');
+    tutte.delete(this);
+  }
 }
 // le strade alternative degli orari veri (senza bus o con un altro bus): solo se un tratto le usa
 export async function preparaAlternativi(Gx) {

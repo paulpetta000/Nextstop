@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · recupero della ricerca e date degli eventi (20 ottobre)
+## Revisione corrente · caricamento mappa e gesti (20 ottobre)
+
+La mappa conserva ultimi punti e inquadratura mentre carica; alla chiusura annulla timer e gesti e non applica più risposte al contenitore ritirato. Trascinamento annullato se la lista viene sostituita. **496/496 test**, undici aggiunte nel gruppo e **45 nella ripresa**; build di **12 pagine**, **811 link validi**, **82 risorse offline**, tutte presenti. [Sei gruppi, prove e limiti](docs/storico/2026-10-20-revisione-codice-32.md).
+
+Il mandato di almeno **40 minuti dalle 12:00:35 UTC** prosegue con revisione finale e riallineamento del piano. Browser, pubblicazione e dati sorgente invariati; area 3 aperta e nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · recupero della ricerca e date degli eventi (20 ottobre)
 
 Indice ricostruito quando arrivano le schede complete dopo un errore; ricerche di base disponibili durante il recupero. Eventi associati alla data scelta anche nei fusi oltre UTC+12, usando la data del motore. **485/485 test**, tre aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-20-revisione-codice-31.md).
 

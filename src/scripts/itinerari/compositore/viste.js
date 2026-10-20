@@ -236,6 +236,7 @@ function iniziaTrascina(voce, e, presa) {
   };
   const scorriLista = () => {
     if (!attivo) return;
+    if (!lista.isConnected || !voce.isConnected) { chiudi(true); return; }
     // Il pannello desktop ha bordi propri; la pagina non deve superare le tappe.
     const b = sc?.getBoundingClientRect();
     const cima = b ? Math.max(0, b.top + sc.clientTop) : 60;

@@ -93,3 +93,9 @@ test('trascinamento: il rilascio conferma una volta e l’annullamento non spost
   assert.deepEqual(e.mosse, [['t0', 2]]); assert.equal(e.frame.size, 0); assert.equal(e.presa.conta(), 0);
   const a = ambiente({ numero: 4 }); a.inizia(); a.muovi(350); a.finisci('pointercancel'); assert.deepEqual(a.mosse, []);
 });
+
+
+test('trascinamento: se la lista viene sostituita il fotogramma annulla e ferma lo scorrimento', () => {
+  const e = ambiente(); e.inizia(); e.muovi(790); e.lista.isConnected = false; const prima = e.ctx.scrollY; e.fotogrammi(1);
+  assert.equal(e.frame.size, 0); assert.equal(e.ctx.scrollY, prima); assert.deepEqual(e.mosse, []); assert.equal(e.presa.conta(), 0);
+});
