@@ -190,10 +190,10 @@ export function ordineCorto(g) {
   const fatte = vivo ? (Gg.fatte ?? []).filter(id => Gg.tappe.includes(id)) : [];
   const resto = Gg.tappe.filter(id => !fatte.includes(id));
   if (resto.length < 3) return null;
-  const chiave = JSON.stringify([versione, g, resto, x.data, Gg.inizio, x.piedi]);
+  const chiave = JSON.stringify([versione, g, Gg, x.data, x.piedi, x.margine, adessoPer(x, g)]);
   if (!memoOrdine.has(chiave)) {
     const y = { ...x, giorni: x.giorni.map((G1, k) => (k === g ? { ...G1, tappe: resto } : G1)) };
-    memoOrdine.set(chiave, ordinePiuCorto(C, y, g));
+    memoOrdine.set(chiave, ordinePiuCorto(C, y, g, ordine => G(g, [...fatte, ...ordine]).spostamenti));
   }
   const o = memoOrdine.get(chiave);
   return o && Gg.lascia !== Gg.tappe.join('.') ? { ...o, fatte } : null;
