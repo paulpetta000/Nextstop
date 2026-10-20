@@ -1,26 +1,29 @@
-# Condizioni delle fotografie
+# Criteri di selezione e riuso
 
-Verifica del 19/10/2026. Le condizioni della **singola fotografia** sono nella sua scheda: non si applica automaticamente la licenza del testo di Wikipedia, del sito o di una pagina generale alle immagini che contiene.
+La licenza è già un permesso per i diritti che concede. L’assenza di una licenza dichiarata non rende libera una fotografia. Indicare il credito non autorizza a usare una foto altrimenti riservata.
 
-## Quando il diritto fotografico consente il riuso
+| Caso | Credito visibile | Decisione attuale |
+| --- | --- | --- |
+| CC0 o pubblico dominio verificato | Nessuno imposto da quel regime fotografico | Ammissibile se qualità, identità e altri diritti pertinenti lo consentono |
+| CC BY | Autore, fonte, licenza/versione e modifiche secondo le condizioni | Nessuna nuova richiesta al fotografo se si rispettano i termini |
+| CC BY-SA | Come sopra; conservare la licenza richiesta per gli adattamenti | La condizione riguarda la foto/adattamento, non automaticamente il codice del sito |
+| NC, licenza sconosciuta, tutti i diritti riservati | Il credito non risolve il limite | Esclusa; non presumere che il sito sia non commerciale |
+| Permesso ulteriore necessario o diritti incerti individuati | La licenza fotografica non basta | Esclusa dalla proposta, senza richieste o contatti |
 
-Nel catalogo sono presenti CC BY, CC BY-SA, CC0 e rilasci in pubblico dominio. Le licenze BY consentono anche usi commerciali e modifiche, rispettando versione e condizioni indicate nel file. Registrare autore, collegamento alla fonte e alla licenza, eventuale credito richiesto e modifiche. Per BY-SA conservare la licenza richiesta sulla foto adattata: il codice del sito non diventa per questo BY-SA. Non eliminare un watermark per nascondere il credito; chiedere semmai un originale autorizzato senza sovraimpressioni.
+Le [fonti primarie](fonti-diritti.json) distinguono copyright fotografico, beni culturali, beni FEC, opere contemporanee e persone riconoscibili. Non confondere il permesso di scattare una nuova foto con il riuso di una foto già scattata. Un divieto odierno di fotografare non prova che uno scatto passato sia illecito.
 
-Fonti primarie: [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.it), [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.it), [guida Commons al riuso](https://commons.wikimedia.org/wiki/Commons:Reusing_content_outside_Wikimedia). Per le versioni 2.0/3.0 usare il collegamento esatto riportato nella scheda, senza sostituirle con 4.0.
+Il tag Wiki Loves Monuments non sostituisce la lettura dell’autorizzazione pertinente. Recuperato il documento del Castello Aragonese del 20/07/2016: perimetro e condizioni sono registrati nella fonte specifica. Non estenderlo a tutta Ischia o ad altri monumenti. Per Santa Chiara, San Gregorio Armeno, San Domenico Maggiore e San Lorenzo Maggiore è emerso il regime FEC: immagini escluse fino al riscontro di una concessione pubblica adeguata, senza chiedere nuovi permessi.
 
-Le fotografie sui siti dei ristoranti non sono diventate libere perché pubbliche. Il pulsante «scarica foto» di 50 Kalò non documenta da solo i diritti. La foto Flickr di Pintauro trovata in questo giro ha `license=0`, tutti i diritti riservati: esclusa dalle candidate libere. Anche la presenza nel codice HTML dell’elenco di tutte le licenze Flickr non è un permesso per quella fotografia.
+## Qualità e sequenza
 
-## Chiarimenti concreti prima di pubblicare
+- Fotografie a colori del luogo esatto. Per i locali: piatti propri e sede corretta; panorama ripreso realmente dal locale. Un’insegna o un nome nei risultati di ricerca non bastano.
+- Originale nativo di almeno 2.000 px sul lato lungo, preferibilmente maggiore. Nessun ingrandimento artificiale. Un panorama molto largo va mantenuto intero; i pixel non garantiscono nitidezza, luce o buona composizione.
+- Escludere disegni, immagini generate, composizioni promozionali, bianco e nero, foto generiche e scatti poco curati. Non eliminare firme o filigrane per recuperare una candidata.
+- Prima contesto/ambiente principale, poi una vista complementare e un dettaglio utile. Per belvederi e paesaggi la vista è la prima foto. Evitare duplicati.
+- Originali delle 31 proposte scaricati e dimensioni verificate, rispettando l’orientamento EXIF. Osservati i provini ricavati dagli originali; l’ispezione completa al 100% non è conclusa. La professione dell’autore non è certificata per tutti: il giudizio estetico resta una proposta da vedere.
 
-| Caso | Cosa manca |
-|---|---|
-| MANN, Palazzo Reale, Sant’Elmo, San Martino, Floridiana, Capodimonte, Parco Vergiliano, Girolamini, Villa Pignatelli, Pompei, Ercolano, Caserta | Verificare il regime del bene e l’uso concreto con l’istituto, incluse esenzioni e possibile concessione per uso commerciale. Non presumere che una CC del fotografo risolva il Codice dei beni culturali. |
-| Madre, stazione Toledo, decorazione dei Ventaglieri e Mostra d’Oltremare | Verificare i diritti sulle opere/decorazioni contemporanee raffigurate, distinti da quelli del fotografo. |
-| Interni di Sansevero | Le FAQ attuali vietano fotografare durante la visita. Chiarire provenienza e condizioni degli scatti storici con autore/museo; il divieto attuale non dimostra che quegli scatti siano irregolari. |
-| Autore desunto da vecchi caricamenti | Tre file segnalati: confermare il credito anziché farlo passare per esplicitamente documentato. |
-| Foto molto piccole | Cinque file hanno lato lungo inferiore a 800 px: valutabili, ma insufficienti per una buona galleria con ingrandimento. |
-| Piatti e tappe composte | Conservare data e soggetto preciso; una foto del 2016 non conferma il menu attuale, una veduta della Corricella non documenta tutta Procida. |
+## Crediti nella futura galleria
 
-Il [MiC](https://trasparenza.cultura.gov.it/archivio5_modulistica_0_199.html) descrive il controllo distinto per le immagini dei beni statali. Il [modulo MANN](https://www.museoarcheologiconapoli.it/mann/uploads/2025/08/Image-reproduction-and-use-request-form_2024.pdf) contempla anche il web e immagini già possedute; [Pompei](https://pompeiisites.org/parco-archeologico-di-pompei/autorizzazioni-e-modulistica/) pubblica una propria procedura. Non estendere automaticamente alle immagini esistenti gli obblighi relativi a una nuova troupe fotografica. Per Capodimonte la procedura istituzionale rintracciata ha lettura intermittente: riconfermare la versione vigente.
+Per CC BY/BY-SA usare una fascia piccola ma leggibile in basso, con autore e licenza collegata; fonte, titolo e modifiche restano accessibili dai dettagli del credito. Rispettare eventuali menzioni specifiche della fonte. Evitare crediti minuscoli, tagliati o nascosti al cambio foto. Per CC0/pubblico dominio non aggiungere un obbligo visibile inesistente; conservare comunque fonte e metadati nel registro.
 
-Questa ricerca non dichiara che tutte le altre fotografie siano prive di ogni possibile diritto di terzi. Distingue le licenze fotografiche verificate dai chiarimenti rilevati nelle fonti e nelle anteprime. Nessun consenso di musei, fotografi o locali è già stato ottenuto. Gli eventuali costi dipendono dalla risposta del titolare e dall’uso, non sono spese autorizzate.
+I provini del catalogo sono ridimensionati e ricompressi, senza ritaglio. Gli originali restano separati e integri. Nel futuro sito non usare il ritaglio per mascherare una scena inadatta e non presentare una foto d’archivio come prova di menu, allestimento o accesso attuali.

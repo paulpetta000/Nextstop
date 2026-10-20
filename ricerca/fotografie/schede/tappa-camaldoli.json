@@ -40,7 +40,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1228591368,
-      "sha1Originale": "41f4fc1571a940da8a3f6861948f284c49828f1d"
+      "sha1Originale": "41f4fc1571a940da8a3f6861948f284c49828f1d",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Ruthven",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-camaldoli-b0de2decec",
@@ -61,7 +71,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1027022442,
-      "sha1Originale": "c3dde4cc79689f909e5264cd75335898bbbf1e11"
+      "sha1Originale": "c3dde4cc79689f909e5264cd75335898bbbf1e11",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Ruthven",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-camaldoli-b549751ae2",
@@ -82,9 +102,57 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1228591485,
-      "sha1Originale": "f4d718e6f3ea456a2d4c4b20e28b47c7181d2f55"
+      "sha1Originale": "f4d718e6f3ea456a2d4c4b20e28b47c7181d2f55",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Vegetazione poco leggibile come percorso e composizione troppo generica.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Ruthven",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-camaldoli",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Un viale nel bosco del Parco dei Camaldoli.",
+    "titoloFonte": "Parco dei Camaldoli - bosco.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Parco_dei_Camaldoli_-_bosco.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/1/19/Parco_dei_Camaldoli_-_bosco.jpg",
+    "autore": "Ruthven",
+    "licenza": "CC BY 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "dimensioni": [
+      2400,
+      1602
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Scatto simile alla nuova proposta: evitare ripetizioni dello stesso punto di vista.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Ruthven",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Cercare una veduta d’insieme nitida, luminosa e riferita al punto esatto."
+  ],
+  "ricercheEsterneVerificate": []
 }

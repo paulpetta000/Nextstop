@@ -33,7 +33,17 @@
       "dataScattoDichiarata": "2010-01-16 13:13:28",
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
-      "segnalazioni": []
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Silvana Berardelli",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-pedamentina-56e91b3431",
@@ -52,7 +62,26 @@
       "dataScattoDichiarata": "2023-06-22 16:06:05",
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
-      "segnalazioni": []
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Argo Navis",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-pedamentina-56e91b3431",
+        "esito": "ok",
+        "dimensioni": [
+          3000,
+          4000
+        ],
+        "sha256": "4cbc21af573b6ed186aa36cbab19392aa2280ff7f72cdcfe0ae687c351a9b2c9"
+      }
     },
     {
       "id": "foto-pedamentina-879366a3ee",
@@ -71,9 +100,37 @@
       "dataScattoDichiarata": "2023-06-22 16:05:23",
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
-      "segnalazioni": []
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scorcio meno pulito e poco diverso dalla vista già proposta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Argo Navis",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-pedamentina-56e91b3431",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Completare con una veduta diversa o un percorso di pari qualità; non ripetere lo stesso panorama."
+  ],
+  "ricercheEsterneVerificate": []
 }

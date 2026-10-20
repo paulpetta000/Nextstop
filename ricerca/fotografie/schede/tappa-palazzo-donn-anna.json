@@ -35,7 +35,26 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1133926603,
-      "sha1Originale": "2c05a67ea2a1caa6c821d1404b6ef955f85532ba"
+      "sha1Originale": "2c05a67ea2a1caa6c821d1404b6ef955f85532ba",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-palazzo-donn-anna-e1754b013c",
+        "esito": "ok",
+        "dimensioni": [
+          3456,
+          2304
+        ],
+        "sha256": "5469b71a2bf4a5504bd89d85fb44aa95494fd2102f2e2ed80dc0012d9008bf7f"
+      }
     },
     {
       "id": "foto-palazzo-donn-anna-cbc6357a00",
@@ -56,9 +75,77 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1207471749,
-      "sha1Originale": "58365782dc7c44589408836f9d918f1249642ac9"
+      "sha1Originale": "58365782dc7c44589408836f9d918f1249642ac9",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce velata e soggetto distante; preferite le due vedute più leggibili.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Ruthven",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-donn-anna",
+    "soggetto": "panorama",
+    "didascaliaProposta": "Palazzo Donn'Anna e la costa di Posillipo, visti dal mare.",
+    "titoloFonte": "Palazzo Donn'Anna visto dal mare (Napoli).jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Palazzo_Donn%27Anna_visto_dal_mare_(Napoli).jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/0/01/Palazzo_Donn%27Anna_visto_dal_mare_%28Napoli%29.jpg",
+    "autore": "Ruthven",
+    "licenza": "CC0",
+    "licenzaUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "dimensioni": [
+      5835,
+      3367
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": false,
+      "autoreSintetico": "Ruthven",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-donn-anna",
+      "esito": "ok",
+      "dimensioni": [
+        5835,
+        3367
+      ],
+      "sha256": "87efd81b2f5ac8d1ef8a47fc22ab3b2f103cd431eaa0aa269596cd72f288de10"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-palazzo-donn-anna-e1754b013c",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "esistente:tp-donn-anna",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Completare con una veduta diversa o un percorso di pari qualità; non ripetere lo stesso panorama."
+  ],
+  "ricercheEsterneVerificate": []
 }

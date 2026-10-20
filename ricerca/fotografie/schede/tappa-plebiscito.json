@@ -35,7 +35,26 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "contesto-parziale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Marco Ober",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-plebiscito-ecddfe6fab",
+        "esito": "ok",
+        "dimensioni": [
+          4991,
+          3631
+        ],
+        "sha256": "b1eed0570114e5472130c3bb1ee2daffcadfdbaaef8c5d9cf8e774b3e2065897"
+      }
     },
     {
       "id": "foto-plebiscito-de60218196",
@@ -57,9 +76,105 @@
       "segnalazioni": [
         "contesto-parziale"
       ],
-      "creditoRichiesto": "Diego Delso"
+      "creditoRichiesto": "Diego Delso",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Diego Delso",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-plebiscito-de60218196",
+        "esito": "ok",
+        "dimensioni": [
+          5607,
+          8670
+        ],
+        "sha256": "7228ca6600f342ebf5da0f829fee241e80c074991bc1e51bfc5435f08459b18a"
+      }
+    },
+    {
+      "id": "nuova:c8c37be33ba0",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Basílica de San Francesco di Paola, Nápoles, Italia, 2023-03-25, DD 255-257 HDR.jpg",
+      "titoloFonte": "Basílica de San Francesco di Paola, Nápoles, Italia, 2023-03-25, DD 255-257 HDR.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_San_Francesco_di_Paola,_N%C3%A1poles,_Italia,_2023-03-25,_DD_255-257_HDR.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Bas%C3%ADlica_de_San_Francesco_di_Paola%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_255-257_HDR.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "dimensioni": [
+        8163,
+        3157
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Fotografia d’autore di qualità; adesione WLM indicata, ma il documento specifico per questo bene non è stato reperito.",
+        "dirittiDaChiarire": [
+          "autorizzazione-bene-non-accertata"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Diego Delso",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-plebiscito",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Piazza del Plebiscito con la basilica di San Francesco di Paola.",
+    "titoloFonte": "Basilica reale pontificia di San Francesco di Paola Piazza del Plebiscito Napoli Neapel Italy Foto Wolfgang Pehlemann P1070687.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Basilica_reale_pontificia_di_San_Francesco_di_Paola_Piazza_del_Plebiscito_Napoli_Neapel_Italy_Foto_Wolfgang_Pehlemann_P1070687.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Basilica_reale_pontificia_di_San_Francesco_di_Paola_Piazza_del_Plebiscito_Napoli_Neapel_Italy_Foto_Wolfgang_Pehlemann_P1070687.jpg",
+    "autore": "Wolfgang Pehlemann",
+    "licenza": "CC BY-SA 3.0 DE",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/",
+    "dimensioni": [
+      1750,
+      725
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Originale sotto 2.000 px sul lato lungo: non proposto per la nuova galleria HD.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Wolfgang Pehlemann",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-plebiscito-ecddfe6fab",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-plebiscito-de60218196",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Vista di Piazza del Plebiscito con diritti del bene chiariti; le due proposte attuali mostrano soltanto Galleria Umberto I."
+  ],
+  "ricercheEsterneVerificate": []
 }

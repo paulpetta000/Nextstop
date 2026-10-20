@@ -43,7 +43,19 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 707106693,
-      "sha1Originale": "1f0ac157761cb4510324a9fb62e58a9f7a52c09e"
+      "sha1Originale": "1f0ac157761cb4510324a9fb62e58a9f7a52c09e",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mentnafunangann",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-capodimonte-e09f134c3e",
@@ -67,7 +79,19 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 1178946504,
-      "sha1Originale": "4840f37ba1d09d8bd0d382f6cb6d17729a1449dd"
+      "sha1Originale": "4840f37ba1d09d8bd0d382f6cb6d17729a1449dd",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Sailko",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-capodimonte-36a8e486b6",
@@ -91,9 +115,61 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 1135365943,
-      "sha1Originale": "392c775fd1472bb0796a533ff5c8cd00533d6e9e"
+      "sha1Originale": "392c775fd1472bb0796a533ff5c8cd00533d6e9e",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mentnafunangann",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-capodimonte",
+    "soggetto": "esterno",
+    "didascaliaProposta": "La Reggia di Capodimonte, sede del museo, nel Real Bosco.",
+    "titoloFonte": "Reggia di Capodimonte 1.JPG",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Reggia_di_Capodimonte_1.JPG",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/3/3d/Reggia_di_Capodimonte_1.JPG",
+    "autore": "Mentnafunangann",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      2048,
+      1536
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Mentnafunangann",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": []
 }

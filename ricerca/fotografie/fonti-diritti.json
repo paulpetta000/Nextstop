@@ -60,6 +60,38 @@
     "starita-menu": {
       "url": "https://pizzeriestarita.it/il-menu/",
       "esito": "Foto di pizze del marchio; richiedere file originali e conferma per la sede Materdei. Le schede delle sedi sono composizioni grafiche."
+    },
+    "cc0": {
+      "url": "https://creativecommons.org/publicdomain/zero/1.0/deed.it",
+      "esito": "Nessuna attribuzione richiesta per il copyright rinunciato; verificare comunque diritti ulteriori realmente pertinenti."
+    },
+    "fec-regole": {
+      "url": "https://www.interno.gov.it/it/notizie/fondo-edifici-culto-nuova-disciplina-uso-e-riproduzione-opere-e-beni",
+      "esito": "Il Ministero distingue uso di immagini e nuove riprese. La licenza del fotografo non è da sola il riscontro richiesto dal FEC."
+    },
+    "fec-luoghi": {
+      "url": "https://libertaciviliimmigrazione.dlci.interno.gov.it/le-chiese",
+      "esito": "Fonte ufficiale: Santa Chiara, San Gregorio Armeno e San Domenico Maggiore sono fra i beni FEC. Le relative immagini restano fuori dalla proposta attuale."
+    },
+    "delso": {
+      "url": "https://delso.photo/intro",
+      "esito": "Portfolio dell’autore con concessione CC BY-SA e istruzioni di credito; non pubblico dominio. Non dimostra da solo diritti ulteriori sui beni raffigurati."
+    },
+    "wlm-autorizzazioni": {
+      "url": "https://workspace.wikimedia.it/s/7wQqJ87Cy2b55oR",
+      "esito": "Archivio pubblico raggiunto anche tramite elenco WebDAV della stessa condivisione; lettura senza modifiche. Nella cartella metropolitana non è stato individuato un documento per Napoli città: nessuna autorizzazione generale dedotta."
+    },
+    "castello-aragonese-wlm-2016": {
+      "url": "https://workspace.wikimedia.it/s/7wQqJ87Cy2b55oR?path=%2FCampania%2FCitt%C3%A0%20metropolitana%20di%20Napoli%2FIschia%20%28NA%29%2FCastello%20Aragonese%20WLM%202016",
+      "documento": "Castello Aragonese Ischia 2016.pdf",
+      "data": "2016-07-20",
+      "ente": "Castello Aragonese di Nicola e Anna Mattera & C. S.a.s.",
+      "sha256": "cc8d48b91dbc6769a0fac54ea15cb45b7da0612084176beef10a9ad7ac5c6e22",
+      "esito": "Lettera firmata letta visivamente: autorizza pubblicazione Commons con CC BY-SA 4.0 e diffusione anche su siti estranei a Wikimedia. Perimetro dichiarato: parte prospettante su Ischia Ponte e pertinenze interne; ingresso a pagamento. Valida per edizioni successive fino a richiesta esplicita di esclusione. Non è un’autorizzazione per tutta Ischia, per opere di terzi o per foto di altri soggetti; mantenere la licenza del fotografo e controllare il perimetro del singolo scatto."
+    },
+    "fec-san-lorenzo": {
+      "url": "https://archiviodigitalefec.dlci.interno.it/fec/chiese/detail/IT-FEC-OA0001-002463/san-lorenzo-maggiore.html?currentNumber=0&startPage=0",
+      "esito": "Scheda ufficiale FEC di San Lorenzo Maggiore. Riscontro finale aggiunto: escluse anche le immagini di questa chiesa, inclusa la foto preesistente, dalla proposta della futura galleria. Nessuna rimozione automatica dal sito in questo blocco di ricerca."
     }
   }
 }

@@ -37,7 +37,19 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 1272787365,
-      "sha1Originale": "044a0afe31636c1d71cff4a69ad75425be2889d5"
+      "sha1Originale": "044a0afe31636c1d71cff4a69ad75425be2889d5",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio di cappella meno utile della vista generale dell’interno.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Superchilum",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-san-domenico-a909cd2c19",
@@ -60,9 +72,61 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 1272787491,
-      "sha1Originale": "7c7f6d538af786a981a9411ad610b8edfd7a304f"
+      "sha1Originale": "7c7f6d538af786a981a9411ad610b8edfd7a304f",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Superchilum",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-san-domenico",
+    "soggetto": "esterno",
+    "didascaliaProposta": "La basilica di San Domenico Maggiore.",
+    "titoloFonte": "Basilica di San Domenico Maggiore (Napoli), facciata 01.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Domenico_Maggiore_(Napoli),_facciata_01.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/3/32/Basilica_di_San_Domenico_Maggiore_%28Napoli%29%2C_facciata_01.jpg",
+    "autore": "Mongolo1984",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      6000,
+      4000
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "bene-fec"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Mongolo1984",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": []
 }

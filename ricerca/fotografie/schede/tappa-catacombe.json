@@ -35,7 +35,17 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "risoluzione-ridotta"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Catacombe di Napoli",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-catacombe-df55535328",
@@ -54,9 +64,72 @@
       "dataScattoDichiarata": "2017-04-15 16:27:42",
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
-      "segnalazioni": []
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio di affresco: non sostituisce la vista degli ambienti richiesta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Dominik Matus",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-catacombe",
+    "soggetto": "interno",
+    "didascaliaProposta": "Le Catacombe di San Gennaro.",
+    "titoloFonte": "Catacombe di San Gennaro 023.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Catacombe_di_San_Gennaro_023.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Catacombe_di_San_Gennaro_023.jpg",
+    "autore": "Dominik Matus",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      6016,
+      4000
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista ampia della cripta con pilastri e percorso; rende comprensibile l’interno.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Dominik Matus",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-catacombe",
+      "esito": "ok",
+      "dimensioni": [
+        6016,
+        4000
+      ],
+      "sha256": "25828a6a69650f8dc8ab67e07e0d05fcacb99636df78992ebe530320993d0310"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-catacombe",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": []
 }

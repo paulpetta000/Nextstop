@@ -41,7 +41,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1205539891,
-      "sha1Originale": "f9ecb4118843d8e452a46255cd00e6be5dba7923"
+      "sha1Originale": "f9ecb4118843d8e452a46255cd00e6be5dba7923",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "La fila non racconta piatti e ambiente con la qualità richiesta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Husky",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-da-michele-6e578ff392",
@@ -64,28 +74,105 @@
         "archivio-menu"
       ],
       "revisioneCommons": 1255361741,
-      "sha1Originale": "a4cdfcd281609f8f2f4a2a06fbaba37baded1d1d"
+      "sha1Originale": "a4cdfcd281609f8f2f4a2a06fbaba37baded1d1d",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Leandro Neumann Ciuffo",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
   "sede": "Via Cesare Sersale 1",
-  "stato": "licenza-libera-con-chiarimenti",
+  "stato": "da-completare",
   "fonteGestore": {
     "url": "https://www.damichele.net/sede-di-napoli/",
     "stato": "letta",
     "licenzaFoto": "non-accertata",
-    "uso": "fonte-per-richiesta",
+    "uso": "archivio-escluso-dalla-proposta",
     "risorseDaAutorizzare": [
       {
         "pagina": "https://www.damichele.net/sede-di-napoli/",
         "immagine": "https://www.damichele.net/wp-content/uploads/2023/03/mobile-napoli.jpg",
         "soggettoOsservato": "Ingresso della sede di Napoli con coda",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       }
     ],
-    "galleria": "https://www.damichele.net/sede-di-napoli/"
+    "galleria": "https://www.damichele.net/sede-di-napoli/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
   },
-  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": [
+    {
+      "entita": "da-michele",
+      "pagina": "https://www.flickr.com/photos/sami73/1856608392/",
+      "titolo": "pizza margherita at pizzeria la michele, naples",
+      "descrizione": "Mamma mia! How do you get those soft edges?",
+      "autore": "Sami Keinänen",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "codiceLicenzaFlickr": 5,
+      "originale": "https://live.staticflickr.com/2116/1856608392_003cd70132_o.jpg",
+      "larghezza": 2816,
+      "altezza": 2112,
+      "originaleDisponibile": true,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-qualita",
+      "motivo": "Foto autentica, ma inquadratura con piatto tagliato e resa da istantanea; non raggiunge il livello richiesto."
+    },
+    {
+      "entita": "da-michele",
+      "pagina": "https://www.flickr.com/photos/castefoto/15777616506/",
+      "titolo": "Pizza Margherita doppia mozzarella",
+      "descrizione": "sempre &quot;da Michele&quot;",
+      "autore": "CasteFoto",
+      "licenza": "CC BY-NC 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-nc/2.0/",
+      "codiceLicenzaFlickr": 2,
+      "originale": "https://live.staticflickr.com/5609/15777616506_d23e97a21b_o.jpg",
+      "larghezza": 1600,
+      "altezza": 1200,
+      "originaleDisponibile": true,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    },
+    {
+      "entita": "da-michele",
+      "pagina": "https://www.flickr.com/photos/32149177@N07/9995780204/",
+      "titolo": "L'Antica Pizzeria da Michele, Naples - pizza margherita",
+      "descrizione": "",
+      "autore": "Rita Ribas",
+      "licenza": "tutti-i-diritti-riservati",
+      "licenzaUrl": null,
+      "codiceLicenzaFlickr": 0,
+      "originale": "https://live.staticflickr.com/2862/9995780204_f15059935d_o.jpg",
+      "larghezza": 675,
+      "altezza": 900,
+      "originaleDisponibile": true,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    }
+  ]
 }

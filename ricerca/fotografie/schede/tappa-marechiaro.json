@@ -33,7 +33,17 @@
       "dataScattoDichiarata": "2015-08-02 11:22:37",
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
-      "segnalazioni": []
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce piatta o dettaglio di scala poco utile; non migliora la vista già presente.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Alexandre Albore",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-marechiaro-1e8d62b52d",
@@ -52,9 +62,57 @@
       "dataScattoDichiarata": "2009-11-14 10:23:25",
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
-      "segnalazioni": []
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce piatta o dettaglio di scala poco utile; non migliora la vista già presente.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-marechiaro",
+    "soggetto": "panorama",
+    "didascaliaProposta": "Marechiaro, sulla costa di Posillipo.",
+    "titoloFonte": "Napoli - Marechiaro2.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Marechiaro2.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Napoli_-_Marechiaro2.jpg",
+    "autore": "Armando Mancini",
+    "licenza": "CC BY-SA 2.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "dimensioni": [
+      3550,
+      2663
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Edificio in forte controluce: la vista non valorizza il paesaggio.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Armando Mancini",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Cercare una veduta d’insieme nitida, luminosa e riferita al punto esatto."
+  ],
+  "ricercheEsterneVerificate": []
 }

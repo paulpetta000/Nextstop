@@ -18,33 +18,49 @@
   ],
   "fotoCandidate": [],
   "sede": "Via Posillipo 268",
-  "stato": "nessuna-candidata-libera",
+  "stato": "da-completare",
   "fonteGestore": {
     "url": "https://tufotrattoria.it/",
     "stato": "letta",
     "licenzaFoto": "non-accertata",
-    "uso": "fonte-per-richiesta",
+    "uso": "archivio-escluso-dalla-proposta",
     "risorseDaAutorizzare": [
       {
         "pagina": "https://tufotrattoria.it/",
         "immagine": "https://tufotrattoria.it/wp-content/uploads/2025/01/2-IMG_3098-819x1024.jpg",
         "soggettoOsservato": "Primo piatto",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       },
       {
         "pagina": "https://tufotrattoria.it/",
         "immagine": "https://tufotrattoria.it/wp-content/uploads/2025/01/15-IMG_1212-768x960.jpg",
         "soggettoOsservato": "Sala con tavoli",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       }
     ],
-    "galleria": "https://tufotrattoria.it/"
+    "galleria": "https://tufotrattoria.it/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
   },
-  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": []
 }

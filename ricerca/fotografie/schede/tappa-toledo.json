@@ -36,7 +36,19 @@
       "segnalazioni": [
         "opere-contemporanee",
         "contesto-parziale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Zaiar95",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-toledo-bc77115732",
@@ -58,7 +70,19 @@
       "segnalazioni": [
         "opere-contemporanee",
         "contesto-parziale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Mint0ri",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-toledo-80f275c062",
@@ -80,9 +104,61 @@
       "segnalazioni": [
         "opere-contemporanee",
         "contesto-parziale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Mint0ri",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-toledo",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Via Toledo.",
+    "titoloFonte": "Via Toledo - panoramio (1).jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Via_Toledo_-_panoramio_(1).jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/5/53/Via_Toledo_-_panoramio_%281%29.jpg",
+    "autore": "Mister No",
+    "licenza": "CC BY 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "dimensioni": [
+      1600,
+      1200
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Originale sotto 2.000 px sul lato lungo: non proposto per la nuova galleria HD.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Mister No",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": []
 }

@@ -37,9 +37,59 @@
         "opere-contemporanee"
       ],
       "revisioneCommons": 1131326476,
-      "sha1Originale": "08d49f58a1ed175b776fa993d0058f16be3856c0"
+      "sha1Originale": "08d49f58a1ed175b776fa993d0058f16be3856c0",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Il pavimento con graffiti non presenta adeguatamente il parco.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mattia Luigi Nappi",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-ventaglieri",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il Parco dei Ventaglieri, a Montesanto.",
+    "titoloFonte": "Parco dei Ventaglieri, upper side, Napoli 01.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Parco_dei_Ventaglieri,_upper_side,_Napoli_01.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/1/11/Parco_dei_Ventaglieri%2C_upper_side%2C_Napoli_01.jpg",
+    "autore": "Mattia Luigi Nappi",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      4608,
+      3456
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Inquadratura poco valorizzante del parco; non raggiunge il livello richiesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Mattia Luigi Nappi",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Cercare una veduta d’insieme nitida, luminosa e riferita al punto esatto."
+  ],
+  "ricercheEsterneVerificate": []
 }

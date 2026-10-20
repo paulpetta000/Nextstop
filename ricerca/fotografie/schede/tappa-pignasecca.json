@@ -35,7 +35,19 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1179131059,
-      "sha1Originale": "f8833e93cda6aa54f68052634a4f0b57828d7995"
+      "sha1Originale": "f8833e93cda6aa54f68052634a4f0b57828d7995",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Persona riconoscibile in primo piano; preferita la scena centrata sul mercato.",
+        "dirittiDaChiarire": [
+          "persona-primo-piano"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Argo Navis",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-pignasecca-e539312519",
@@ -56,9 +68,72 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1275164423,
-      "sha1Originale": "c91420a45343f11a386ebcd1e0751922d8d39be9"
+      "sha1Originale": "c91420a45343f11a386ebcd1e0751922d8d39be9",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Preferita la scena di mercato più chiara, luminosa e leggibile.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "IlSistemone",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-pignasecca",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il mercato della Pignasecca.",
+    "titoloFonte": "Pignasecca market, Naples 20230622 02.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pignasecca_market,_Naples_20230622_02.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/9/99/Pignasecca_market%2C_Naples_20230622_02.jpg",
+    "autore": "Argo Navis",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      4000,
+      3000
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Argo Navis",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-pignasecca",
+      "esito": "ok",
+      "dimensioni": [
+        4000,
+        3000
+      ],
+      "sha256": "eb84f9b0e54c6b007b47907682404075fde066f815485ad2b9ebc1a1b9540ac6"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-pignasecca",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": []
 }

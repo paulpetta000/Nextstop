@@ -36,7 +36,17 @@
       "segnalazioni": [
         "contesto-parziale"
       ],
-      "creditoRichiesto": "Mister No"
+      "creditoRichiesto": "Mister No",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mister No",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-lungomare-83b56e1d1a",
@@ -57,7 +67,17 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "contesto-parziale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce o stato dei luoghi poco invitanti; preferita una passeggiata luminosa.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Johnnyrotten",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-lungomare-478388ac17",
@@ -78,9 +98,72 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "contesto-parziale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Viale molto in ombra, meno invitante della vista sul lungomare.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Argo Navis",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:via-partenope",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Via Partenope e la scogliera verso Castel dell'Ovo.",
+    "titoloFonte": "Via Parthenope.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Via_Parthenope.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Via_Parthenope.jpg",
+    "autore": "Baku",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      4032,
+      1908
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Baku",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:via-partenope",
+      "esito": "ok",
+      "dimensioni": [
+        4032,
+        1908
+      ],
+      "sha256": "e01486af78df5e9af894b4d5929e40aac1cd7d54f280b0f5b4998f0367394677"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "esistente:via-partenope",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Completare con una veduta diversa o un percorso di pari qualità; non ripetere lo stesso panorama."
+  ],
+  "ricercheEsterneVerificate": []
 }

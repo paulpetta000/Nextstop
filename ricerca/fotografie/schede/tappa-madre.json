@@ -35,7 +35,19 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "opere-contemporanee"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ElisabettaCastellano",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-madre-9de95db5e4",
@@ -56,9 +68,61 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "opere-contemporanee"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ElisabettaCastellano",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-madre",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il cortile di Palazzo Donnaregina, sede del museo Madre.",
+    "titoloFonte": "Museo Madre,.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Museo_Madre,.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/6/65/Museo_Madre%2C.jpg",
+    "autore": "Amedeo Benestante",
+    "licenza": "CC BY 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "dimensioni": [
+      5524,
+      3722
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Amedeo Benestante",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": []
 }

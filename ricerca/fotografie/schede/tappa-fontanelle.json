@@ -33,7 +33,17 @@
       "dataScattoDichiarata": "2015-03-08 13:57:00",
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
-      "segnalazioni": []
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Primo piano poco rappresentativo o presenza di visitatori; preferita una vista leggibile del percorso.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mentnafunangann",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-fontanelle-52a3263a1b",
@@ -52,7 +62,17 @@
       "dataScattoDichiarata": "2017-02-26 10:24:36",
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
-      "segnalazioni": []
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Primo piano poco rappresentativo o presenza di visitatori; preferita una vista leggibile del percorso.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Dominik Matus",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-fontanelle-a79f681da6",
@@ -71,9 +91,72 @@
       "dataScattoDichiarata": "2015-03-08 13:56:17",
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
-      "segnalazioni": []
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mentnafunangann",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-fontanelle-a79f681da6",
+        "esito": "ok",
+        "dimensioni": [
+          2992,
+          2000
+        ],
+        "sha256": "7bb16221846b19634cdde1e0f6d03b6580c74f4c6650f2f62fdbf02718ab84a6"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-fontanelle",
+    "soggetto": "esterno",
+    "didascaliaProposta": "L'interno del Cimitero delle Fontanelle.",
+    "titoloFonte": "Napoli - Fontanelle crocevia 1030852.JPG",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Fontanelle_crocevia_1030852.JPG",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/7/72/Napoli_-_Fontanelle_crocevia_1030852.JPG",
+    "autore": "Lalupa",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      2816,
+      2112
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Lalupa",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-fontanelle-a79f681da6",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": []
 }

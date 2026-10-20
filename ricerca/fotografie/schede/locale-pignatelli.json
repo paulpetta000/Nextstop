@@ -18,33 +18,49 @@
   ],
   "fotoCandidate": [],
   "sede": "Riviera di Chiaia 216",
-  "stato": "nessuna-candidata-libera",
+  "stato": "da-completare",
   "fonteGestore": {
     "url": "https://www.ostariapignatelli.com/",
     "stato": "letta",
     "licenzaFoto": "non-accertata",
-    "uso": "fonte-per-richiesta",
+    "uso": "archivio-escluso-dalla-proposta",
     "risorseDaAutorizzare": [
       {
         "pagina": "https://www.ostariapignatelli.com/",
         "immagine": "https://www.ostariapignatelli.com/wp-content/uploads/2020/10/Ostaria-Pignatelli-web-design-home-page-antipasti-new-1.png",
         "soggettoOsservato": "Antipasto con mozzarella e verdure",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       },
       {
         "pagina": "https://www.ostariapignatelli.com/",
         "immagine": "https://www.ostariapignatelli.com/wp-content/uploads/2020/10/Ostaria-Pignatelli-web-design-home-page-primi-new-1.png",
         "soggettoOsservato": "Piatto di polpo",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       }
     ],
-    "galleria": "https://www.ostariapignatelli.com/"
+    "galleria": "https://www.ostariapignatelli.com/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
   },
-  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": []
 }

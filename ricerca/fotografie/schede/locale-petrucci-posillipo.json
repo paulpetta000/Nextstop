@@ -18,34 +18,51 @@
   ],
   "fotoCandidate": [],
   "sede": "Via Posillipo 16/c",
-  "stato": "nessuna-candidata-libera",
+  "stato": "da-completare",
   "fonteGestore": {
     "url": "https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/",
     "stato": "letta",
     "licenzaFoto": "non-accertata",
-    "uso": "fonte-per-richiesta",
+    "uso": "archivio-escluso-dalla-proposta",
     "risorseDaAutorizzare": [
       {
         "pagina": "https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/",
         "immagine": "https://palazzopetrucci.it/wp-content/uploads/pizzeria-Palazzo-Petrucci-Posillipo-Napoli-pizza-margherita-sul-mare.jpg",
         "soggettoOsservato": "Pizza sul tavolo con vista mare",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       },
       {
         "pagina": "https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/",
         "immagine": "https://palazzopetrucci.it/wp-content/uploads/pizzeria-Palazzo-Petrucci-Posillipo-Napoli-pizza-fritta.jpg",
         "soggettoOsservato": "Pizza fritta",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       }
     ],
-    "galleria": "https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/"
+    "galleria": "https://palazzopetrucci.it/pizzeria-palazzo-petrucci-posillipo-napoli/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
   },
-  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
-  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede."
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale.",
+    "Vista realmente godibile dal locale, con punto di ripresa documentato."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": []
 }

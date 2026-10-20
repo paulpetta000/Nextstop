@@ -18,24 +18,91 @@
   ],
   "fotoCandidate": [],
   "sede": "Via dei Tribunali 94",
-  "stato": "nessuna-candidata-libera",
+  "stato": "da-completare",
   "fonteGestore": {
     "url": "https://anticapizzeriadimatteo.it/",
     "stato": "letta",
     "licenzaFoto": "non-accertata",
-    "uso": "fonte-per-richiesta",
+    "uso": "archivio-escluso-dalla-proposta",
     "risorseDaAutorizzare": [
       {
         "pagina": "https://anticapizzeriadimatteo.it/",
         "immagine": "https://anticapizzeriadimatteo.it/wp-content/uploads/2022/07/margherita.png",
         "soggettoOsservato": "Pizza margherita scontornata",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       }
     ],
-    "galleria": "https://anticapizzeriadimatteo.it/"
+    "galleria": "https://anticapizzeriadimatteo.it/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
   },
-  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": [
+    {
+      "entita": "di-matteo",
+      "pagina": "https://www.flickr.com/photos/prof_richard/8475539151/",
+      "titolo": "Pizzeria Di Matteo, Naples",
+      "descrizione": "",
+      "autore": "Richard Mortel",
+      "licenza": "CC BY-NC-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "codiceLicenzaFlickr": 1,
+      "originale": "https://live.staticflickr.com/8391/8475539151_c9654c572d_o.jpg",
+      "larghezza": 3709,
+      "altezza": 3150,
+      "originaleDisponibile": true,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    },
+    {
+      "entita": "di-matteo",
+      "pagina": "https://www.flickr.com/photos/houstonfoodie/5295665214/",
+      "titolo": "Di Matteo Pizzeria - Margherita pizza",
+      "descrizione": "",
+      "autore": "Houston Foodie",
+      "licenza": "tutti-i-diritti-riservati",
+      "licenzaUrl": null,
+      "codiceLicenzaFlickr": 0,
+      "originale": "https://live.staticflickr.com/5004/5295665214_7434b7ce7b_o.jpg",
+      "larghezza": 2848,
+      "altezza": 2136,
+      "originaleDisponibile": true,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    },
+    {
+      "entita": "di-matteo",
+      "pagina": "https://www.flickr.com/photos/houstonfoodie/5295659096/",
+      "titolo": "Di Matteo Pizzeria",
+      "descrizione": "",
+      "autore": "Houston Foodie",
+      "licenza": "tutti-i-diritti-riservati",
+      "licenzaUrl": null,
+      "codiceLicenzaFlickr": 0,
+      "originale": "https://live.staticflickr.com/5209/5295659096_c524dd8418_o.jpg",
+      "larghezza": 2848,
+      "altezza": 2136,
+      "originaleDisponibile": true,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    }
+  ]
 }

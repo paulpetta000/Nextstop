@@ -35,7 +35,19 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "percorso-specifico"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce e inquadratura non raggiungono il livello richiesto; non scelta per la nuova galleria.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Miguel Hermoso Cuesta",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-san-lorenzo-80221fe6ef",
@@ -56,7 +68,19 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "percorso-specifico"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce e inquadratura non raggiungono il livello richiesto; non scelta per la nuova galleria.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Miguel Hermoso Cuesta",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-san-lorenzo-2a1cef6676",
@@ -78,9 +102,70 @@
       "segnalazioni": [
         "percorso-specifico"
       ],
-      "creditoRichiesto": "© José Luiz Bernardes Ribeiro"
+      "creditoRichiesto": "© José Luiz Bernardes Ribeiro",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce e inquadratura non raggiungono il livello richiesto; non scelta per la nuova galleria.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "José Luiz",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-san-lorenzo",
+    "soggetto": "interno",
+    "didascaliaProposta": "Due cappelle della chiesa di San Lorenzo Maggiore.",
+    "titoloFonte": "Church San Lorenzo Maggiore Cacace and Saint Roch chapels Niccolò De Simone.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Church_San_Lorenzo_Maggiore_Cacace_and_Saint_Roch_chapels_Niccol%C3%B2_De_Simone.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/9/99/Church_San_Lorenzo_Maggiore_Cacace_and_Saint_Roch_chapels_Niccol%C3%B2_De_Simone.jpg",
+    "autore": "Wolfgang Moroder",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      7011,
+      4997
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [
+        "bene-fec"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Wolfgang Moroder",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-san-lorenzo",
+      "esito": "ok",
+      "dimensioni": [
+        7011,
+        4997
+      ],
+      "sha256": "c12cdd3804aff9cd0dceddb059950cd622c4e239b6971c54c4eb0471cb3f8572"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Vista generale e scavi: la foto esistente mostra due cappelle, non il percorso archeologico."
+  ],
+  "ricercheEsterneVerificate": []
 }

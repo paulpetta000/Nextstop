@@ -37,7 +37,19 @@
         "bene-culturale"
       ],
       "revisioneCommons": 1008033563,
-      "sha1Originale": "0898885012776f55864dd764d85a1a3307b5f2ad"
+      "sha1Originale": "0898885012776f55864dd764d85a1a3307b5f2ad",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "sébastien amiet;l",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-ercolano-278671a2c4",
@@ -60,7 +72,19 @@
         "bene-culturale"
       ],
       "revisioneCommons": 1007728990,
-      "sha1Originale": "c3ea7eb03a772c8bc91c598d968a4ca6666333d3"
+      "sha1Originale": "c3ea7eb03a772c8bc91c598d968a4ca6666333d3",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Amphipolis",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-ercolano-5d439883a3",
@@ -83,9 +107,61 @@
         "bene-culturale"
       ],
       "revisioneCommons": 1116291680,
-      "sha1Originale": "948d3dbe6abf22a029fb92444444337758911d31"
+      "sha1Originale": "948d3dbe6abf22a029fb92444444337758911d31",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Bernard Gagnon",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-ercolano",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Gli scavi di Ercolano.",
+    "titoloFonte": "Antigua ciudad de Herculano, Italia, 2023-03-27, DD 135-138 PAN.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Antigua_ciudad_de_Herculano,_Italia,_2023-03-27,_DD_135-138_PAN.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/4/47/Antigua_ciudad_de_Herculano%2C_Italia%2C_2023-03-27%2C_DD_135-138_PAN.jpg",
+    "autore": "Diego Delso",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      9958,
+      4660
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Diego Delso",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": []
 }

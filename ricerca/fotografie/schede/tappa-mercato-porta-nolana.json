@@ -40,7 +40,26 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1093537742,
-      "sha1Originale": "f37c0e16b4c34a1f59acb5da54e8be04b4f9eae4"
+      "sha1Originale": "f37c0e16b4c34a1f59acb5da54e8be04b4f9eae4",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "La porta è il soggetto centrale; la piazza e l’arco si leggono senza auto dominanti.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Sergioizzo",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-mercato-porta-nolana-7939f41f53",
+        "esito": "ok",
+        "dimensioni": [
+          2432,
+          1574
+        ],
+        "sha256": "269a426de060b34ad23a2c1d14bc501848e60a9cfa67df9e6463c678a6e43b66"
+      }
     },
     {
       "id": "foto-mercato-porta-nolana-e96be5cacc",
@@ -61,9 +80,116 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1270666054,
-      "sha1Originale": "caa54360072b11ef0111a2ceb4e2ab796ce4a1a7"
+      "sha1Originale": "caa54360072b11ef0111a2ceb4e2ab796ce4a1a7",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Lhoon from Flickr",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "nuova:088adaf23f43",
+      "soggetto": "esterno",
+      "didascaliaProposta": "PortaNola.jpg",
+      "titoloFonte": "PortaNola.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:PortaNola.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d1/PortaNola.jpg",
+      "autore": "Ken Mayer",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        2500,
+        1875
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Preferita la veduta frontale più pulita già nel bacino precedente.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Ken Mayer",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "nuova:e8dc824cdc9b",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Porta nolana.jpg",
+      "titoloFonte": "Porta nolana.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Porta_nolana.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Porta_nolana.jpg",
+      "autore": "Baku",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        1600,
+        1200
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Preferita la veduta frontale più pulita già nel bacino precedente.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Baku",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-porta-nolana",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Porta Nolana e il mercato.",
+    "titoloFonte": "Porta Nolana mercato Napoli Naples 1 May 2021.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Porta_Nolana_mercato_Napoli_Naples_1_May_2021.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/9/9e/Porta_Nolana_mercato_Napoli_Naples_1_May_2021.jpg",
+    "autore": "Rémy Lee",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      3264,
+      1836
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Auto in primo piano predominanti; cercata una veduta leggibile della porta e del mercato.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Rémy Lee",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-mercato-porta-nolana-7939f41f53",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "notaIdentita": "Questa scheda riguarda il mercato e la porta monumentale di Porta Nolana, non la stazione ferroviaria. Serve ancora una bella vista del mercato.",
+  "ricercheEsterneVerificate": []
 }

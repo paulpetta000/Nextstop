@@ -37,7 +37,19 @@
         "bene-culturale"
       ],
       "revisioneCommons": 1115134379,
-      "sha1Originale": "834ec09fe89dd356844e7a5061b1f40c329c0caa"
+      "sha1Originale": "834ec09fe89dd356844e7a5061b1f40c329c0caa",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Giuseppe Guida",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-villa-pignatelli-797fb7c615",
@@ -60,7 +72,19 @@
         "bene-culturale"
       ],
       "revisioneCommons": 1135329898,
-      "sha1Originale": "0e81490aa1a935d1c99c2c60a36c0e834534ead1"
+      "sha1Originale": "0e81490aa1a935d1c99c2c60a36c0e834534ead1",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-villa-pignatelli-19c8975bfa",
@@ -83,9 +107,61 @@
         "bene-culturale"
       ],
       "revisioneCommons": 1200500642,
-      "sha1Originale": "aeed66ebdbf6dc5d3a00301f0415c44a03ba16ba"
+      "sha1Originale": "aeed66ebdbf6dc5d3a00301f0415c44a03ba16ba",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-villa-pignatelli",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Villa Pignatelli, il lato verso il giardino.",
+    "titoloFonte": "Napoli - Villa Pignatelli5.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Villa_Pignatelli5.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/5/50/Napoli_-_Villa_Pignatelli5.jpg",
+    "autore": "Armando Mancini",
+    "licenza": "CC BY-SA 2.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "dimensioni": [
+      3450,
+      2587
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Armando Mancini",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": []
 }

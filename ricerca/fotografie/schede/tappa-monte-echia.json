@@ -33,9 +33,57 @@
       "dataScattoDichiarata": null,
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
-      "segnalazioni": []
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "La scena di strada non mostra il belvedere richiesto.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Nicolas Vigier from Madrid, Spain",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:vista-monte-echia",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Da Monte Echia: i tetti di Santa Lucia, il golfo e il Vesuvio.",
+    "titoloFonte": "Monte Echia 25 001.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Monte_Echia_25_001.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Monte_Echia_25_001.jpg",
+    "autore": "MentNFG",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      5898,
+      3932
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "MentNFG",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Cercare una veduta d’insieme nitida, luminosa e riferita al punto esatto."
+  ],
+  "ricercheEsterneVerificate": []
 }

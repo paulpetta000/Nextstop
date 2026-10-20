@@ -38,28 +38,53 @@
         "risoluzione-ridotta"
       ],
       "revisioneCommons": 1248459316,
-      "sha1Originale": "9f83ba32311d9842da4e8a1ffef02e80ef2f6bae"
+      "sha1Originale": "9f83ba32311d9842da4e8a1ffef02e80ef2f6bae",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Alexandra Hamer",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
   "sede": "Via Port'Alba 18",
-  "stato": "licenza-libera-con-chiarimenti",
+  "stato": "da-completare",
   "fonteGestore": {
     "url": "https://www.anticapizzeriaportalba.com/",
     "stato": "letta",
     "licenzaFoto": "non-accertata",
-    "uso": "fonte-per-richiesta",
+    "uso": "archivio-escluso-dalla-proposta",
     "risorseDaAutorizzare": [
       {
         "pagina": "https://www.anticapizzeriaportalba.com/",
         "immagine": "https://www.anticapizzeriaportalba.com/wp-content/uploads/2022/04/gallery4-scaled-2-400x516.jpeg",
         "soggettoOsservato": "Spaghetti con vongole presentati nella galleria",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       }
     ],
-    "galleria": "https://www.anticapizzeriaportalba.com/"
+    "galleria": "https://www.anticapizzeriaportalba.com/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
   },
-  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": []
 }

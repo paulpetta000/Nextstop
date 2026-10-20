@@ -35,7 +35,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1212014937,
-      "sha1Originale": "f86cc8182449d2224499538bfa7fa04aeb7ffd31"
+      "sha1Originale": "f86cc8182449d2224499538bfa7fa04aeb7ffd31",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "IlSistemone",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-parco-poggio-72751db0f2",
@@ -56,9 +66,57 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1082781527,
-      "sha1Originale": "d514d22d7bb435aa0ff09a4eba6894de1800defb"
+      "sha1Originale": "d514d22d7bb435aa0ff09a4eba6894de1800defb",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "IlSistemone",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-poggio",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il laghetto del Parco del Poggio, con il Vesuvio sullo sfondo.",
+    "titoloFonte": "ParcoPoggioNaples2.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:ParcoPoggioNaples2.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/3/38/ParcoPoggioNaples2.jpg",
+    "autore": "IlSistemone",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      1600,
+      1200
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Originale sotto 2.000 px sul lato lungo: non proposto per la nuova galleria HD.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "IlSistemone",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Cercare una veduta d’insieme nitida, luminosa e riferita al punto esatto."
+  ],
+  "ricercheEsterneVerificate": []
 }

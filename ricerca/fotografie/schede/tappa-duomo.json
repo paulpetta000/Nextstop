@@ -35,7 +35,26 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "contesto-parziale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Cruz.croce",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-duomo-97a7ca5b80",
+        "esito": "ok",
+        "dimensioni": [
+          4080,
+          1884
+        ],
+        "sha256": "6539cea382d2a5c49f4a569368f5376977c9a2676f7d49f78faaf285873babed"
+      }
     },
     {
       "id": "foto-duomo-6c7c9c45a8",
@@ -57,9 +76,91 @@
       "segnalazioni": [
         "contesto-parziale"
       ],
-      "creditoRichiesto": "© José Luiz Bernardes Ribeiro"
+      "creditoRichiesto": "© José Luiz Bernardes Ribeiro",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "José Luiz",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-duomo-6c7c9c45a8",
+        "esito": "ok",
+        "dimensioni": [
+          5184,
+          3456
+        ],
+        "sha256": "907e1d73704a5b66aef632a14f0421969be908517d4e7345a86db541383f1dc6"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-duomo",
+    "soggetto": "esterno",
+    "didascaliaProposta": "La facciata del Duomo, in via Duomo.",
+    "titoloFonte": "Naples duomo facade.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Naples_duomo_facade.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Naples_duomo_facade.jpg",
+    "autore": "Velvet",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      1700,
+      2837
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Velvet",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-duomo",
+      "esito": "ok",
+      "dimensioni": [
+        1700,
+        2837
+      ],
+      "sha256": "0ba95ced30e1e5b6b2b1ce9b2046c797b30a3621fb3fa8e5cd5c1dbae1ff57e2"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-duomo",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-duomo-97a7ca5b80",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-duomo-6c7c9c45a8",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Eventuale sala del Tesoro con riuso documentato; le foto del Duomo e della cappella non provano accesso o contenuti del museo."
+  ],
+  "ricercheEsterneVerificate": []
 }

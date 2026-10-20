@@ -35,7 +35,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 868635989,
-      "sha1Originale": "bb4c370ae35ee0b944b0bc8e472959b6790200ed"
+      "sha1Originale": "bb4c370ae35ee0b944b0bc8e472959b6790200ed",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Vichingpedia",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-citta-scienza-aa077909f0",
@@ -57,9 +67,57 @@
       "segnalazioni": [],
       "creditoRichiesto": "Fabio Donato",
       "revisioneCommons": 844497672,
-      "sha1Originale": "f96d76d85039df0093d94bf8726c560d6b629cd6"
+      "sha1Originale": "f96d76d85039df0093d94bf8726c560d6b629cd6",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Esterno poco rappresentativo dell’esperienza del museo; serve un interno di qualità.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Photograph: Fabio Donato Prof. Arch. Massimo Pica Ciamarra",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-citta-scienza",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il cortile di Città della Scienza, a Bagnoli.",
+    "titoloFonte": "Città della Scienza Cortile.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Citt%C3%A0_della_Scienza_Cortile.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Citt%C3%A0_della_Scienza_Cortile.jpg",
+    "autore": "Pinotto992",
+    "licenza": "Pubblico dominio",
+    "licenzaUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "dimensioni": [
+      1600,
+      1200
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Originale sotto 2.000 px sul lato lungo: non proposto per la nuova galleria HD.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": false,
+      "autoreSintetico": "Pinotto992",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": []
 }

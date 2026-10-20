@@ -18,33 +18,68 @@
   ],
   "fotoCandidate": [],
   "sede": "Via Marechiaro 23",
-  "stato": "nessuna-candidata-libera",
+  "stato": "da-completare",
   "fonteGestore": {
     "url": "https://www.ristoranteafenestella.it/",
     "stato": "letta",
     "licenzaFoto": "non-accertata",
-    "uso": "fonte-per-richiesta",
+    "uso": "archivio-escluso-dalla-proposta",
     "risorseDaAutorizzare": [
       {
         "pagina": "https://www.ristoranteafenestella.it/",
         "immagine": "https://www.ristoranteafenestella.it/wp-content/uploads/2018/12/Paccheri-al-coccio-2-770x550.jpg",
         "soggettoOsservato": "Paccheri al coccio presentati sul sito",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       },
       {
         "pagina": "https://www.ristoranteafenestella.it/",
         "immagine": "https://www.ristoranteafenestella.it/wp-content/uploads/2018/12/Risotto-alla-Pescatora-770x550.jpeg",
         "soggettoOsservato": "Risotto alla pescatora presentato sul sito",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       }
     ],
-    "galleria": "https://www.ristoranteafenestella.it/"
+    "galleria": "https://www.ristoranteafenestella.it/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
   },
-  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale.",
+    "Vista realmente godibile dal locale, con punto di ripresa documentato."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": [
+    {
+      "entita": "fenestella",
+      "pagina": "https://www.flickr.com/photos/bludevil/5770481669/",
+      "titolo": "'a fenestella a Marechiaro",
+      "descrizione": "",
+      "autore": "Cristina La Carrubba",
+      "licenza": "tutti-i-diritti-riservati",
+      "licenzaUrl": null,
+      "codiceLicenzaFlickr": 0,
+      "originale": null,
+      "larghezza": 2262,
+      "altezza": 3379,
+      "originaleDisponibile": false,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    }
+  ]
 }

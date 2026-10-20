@@ -35,7 +35,19 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "bene-culturale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Yair Haklai",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-mann-1e692408d7",
@@ -56,7 +68,19 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "bene-culturale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ho visto nina volare",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-mann-08d88ea1fc",
@@ -77,9 +101,61 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "bene-culturale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Yair-haklai",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-mann",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il Museo Archeologico Nazionale, in piazza Museo.",
+    "titoloFonte": "Museo Archeologico Nazionale di Napoli - panoramio (1).jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Museo_Archeologico_Nazionale_di_Napoli_-_panoramio_(1).jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/0/01/Museo_Archeologico_Nazionale_di_Napoli_-_panoramio_%281%29.jpg",
+    "autore": "Mister No",
+    "licenza": "CC BY 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "dimensioni": [
+      1258,
+      1126
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Originale sotto 2.000 px sul lato lungo: non proposto per la nuova galleria HD.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Mister No",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": []
 }

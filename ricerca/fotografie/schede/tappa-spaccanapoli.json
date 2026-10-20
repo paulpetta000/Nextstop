@@ -35,7 +35,19 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "contesto-parziale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-spaccanapoli-1c55a08152",
@@ -56,7 +68,19 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "contesto-parziale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio o inquadratura che non aiuta abbastanza a capire la passeggiata.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ho visto nina volare from Italy",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-spaccanapoli-e448166e78",
@@ -77,9 +101,113 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "contesto-parziale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio o inquadratura che non aiuta abbastanza a capire la passeggiata.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ho visto nina volare from Italy",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "nuova:2350c313e91a",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "San Gregorio Armeno - Naples, Campania, Italy.jpg",
+      "titoloFonte": "San Gregorio Armeno - Naples, Campania, Italy.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Gregorio_Armeno_-_Naples,_Campania,_Italy.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d3/San_Gregorio_Armeno_-_Naples%2C_Campania%2C_Italy.jpg",
+      "autore": "Mstyslav Chernov",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2343,
+        3500
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: dettaglio ripetuto o veduta che non migliora la sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mstyslav Chernov",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "nuova:f6fb266dbfb2",
+      "soggetto": "interno",
+      "didascaliaProposta": "Iglesia del Gesù Nuovo, Nápoles, Italia, 2023-03-25, DD 08-10 HDR.jpg",
+      "titoloFonte": "Iglesia del Gesù Nuovo, Nápoles, Italia, 2023-03-25, DD 08-10 HDR.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_del_Ges%C3%B9_Nuovo,_N%C3%A1poles,_Italia,_2023-03-25,_DD_08-10_HDR.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/db/Iglesia_del_Ges%C3%B9_Nuovo%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_08-10_HDR.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "dimensioni": [
+        5366,
+        8576
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Fotografia d’autore di qualità; adesione WLM indicata, ma il documento specifico per questo bene non è stato reperito.",
+        "dirittiDaChiarire": [
+          "autorizzazione-bene-non-accertata"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Diego Delso",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-spaccanapoli",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Spaccanapoli, nel centro storico.",
+    "titoloFonte": "Naples spaccanapoli.JPG",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Naples_spaccanapoli.JPG",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Naples_spaccanapoli.JPG",
+    "autore": "Velvet",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      1851,
+      2756
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Velvet",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": []
 }

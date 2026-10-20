@@ -35,7 +35,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1130950856,
-      "sha1Originale": "a0297e836bcb84d04e61be980bc2ee7daabf627e"
+      "sha1Originale": "a0297e836bcb84d04e61be980bc2ee7daabf627e",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Parete di tufo o panorama piccolo: non soddisfa la vista panoramica HD richiesta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "yiftah-s",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-via-petrarca-b449395a68",
@@ -56,9 +66,31 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1254270435,
-      "sha1Originale": "d5e11cf0f90d1e3713fa6b12ccdcec6a26afe9fa"
+      "sha1Originale": "d5e11cf0f90d1e3713fa6b12ccdcec6a26afe9fa",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Antonio Fucito",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Cercare una veduta d’insieme nitida, luminosa e riferita al punto esatto."
+  ],
+  "ricercheEsterneVerificate": []
 }

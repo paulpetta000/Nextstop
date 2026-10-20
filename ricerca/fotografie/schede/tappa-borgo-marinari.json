@@ -35,7 +35,17 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "contesto-parziale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Preferita la vista più leggibile del porticciolo; questa inquadratura è meno utile.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Poiesia",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-borgo-marinari-7bfe32c942",
@@ -56,9 +66,100 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "contesto-parziale"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Preferita la vista più leggibile del porticciolo; questa inquadratura è meno utile.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Bogomazova Ludmila",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "nuova:0d18d2ce5183",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Castillo del Huevo, Nápoles, Italia, 2023-03-25, DD 234-236 HDR.jpg",
+      "titoloFonte": "Castillo del Huevo, Nápoles, Italia, 2023-03-25, DD 234-236 HDR.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Castillo_del_Huevo,_N%C3%A1poles,_Italia,_2023-03-25,_DD_234-236_HDR.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Castillo_del_Huevo%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_234-236_HDR.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "dimensioni": [
+        8381,
+        4058
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Fotografia d’autore di qualità; adesione WLM indicata, ma il documento specifico per questo bene non è stato reperito.",
+        "dirittiDaChiarire": [
+          "autorizzazione-bene-non-accertata"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Diego Delso",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-borgo-marinari",
+    "soggetto": "panorama",
+    "didascaliaProposta": "Barche nel porticciolo del Borgo Marinari, accanto a Castel dell'Ovo.",
+    "titoloFonte": "Borgo Marinari.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Borgo_Marinari.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Borgo_Marinari.jpg",
+    "autore": "Sordelli",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      4000,
+      2667
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Sordelli",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-borgo-marinari",
+      "esito": "ok",
+      "dimensioni": [
+        4000,
+        2667
+      ],
+      "sha256": "05ff36a05f082dc9f40c501abb9a803a24be8d88f067a273f442fa84dd1831c2"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-borgo-marinari",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Completare con una veduta diversa o un percorso di pari qualità; non ripetere lo stesso panorama."
+  ],
+  "ricercheEsterneVerificate": []
 }

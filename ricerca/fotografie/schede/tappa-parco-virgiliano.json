@@ -35,7 +35,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1186007850,
-      "sha1Originale": "edaa17ce02de9bd875b8d1f0722d25f9d2c473c9"
+      "sha1Originale": "edaa17ce02de9bd875b8d1f0722d25f9d2c473c9",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Panorama velato o primo piano che copre la vista; non scelto per la galleria.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mentnafunangann",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-parco-virgiliano-830c0ff53b",
@@ -56,7 +66,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1183431362,
-      "sha1Originale": "6ddb3ca2988f2c59d173df26f3181eb77629a143"
+      "sha1Originale": "6ddb3ca2988f2c59d173df26f3181eb77629a143",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Panorama velato o primo piano che copre la vista; non scelto per la galleria.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mentnafunangann",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-parco-virgiliano-039bfb469f",
@@ -77,9 +97,138 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1068617443,
-      "sha1Originale": "3b2ace1698a8aa0ff27618ec179238ef5905a738"
+      "sha1Originale": "3b2ace1698a8aa0ff27618ec179238ef5905a738",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Panorama velato o primo piano che copre la vista; non scelto per la galleria.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Dr.Conati Roberto De Martino",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "nuova:aef32c29a4b9",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Il mare e Nisida dal Parco Virgiliano",
+      "titoloFonte": "Parco Virgiliano a Posillipo.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_Virgiliano_a_Posillipo.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/29/Parco_Virgiliano_a_Posillipo.jpg",
+      "autore": "Giuseppe Guida",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3208,
+        2372
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Panorama diurno dal parco: scogliera, Nisida e mare leggibili, diverso dalla veduta al tramonto.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Giuseppe Guida",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "nuova:aef32c29a4b9",
+        "esito": "ok",
+        "dimensioni": [
+          3208,
+          2372
+        ],
+        "sha256": "697cb5cdb49ffa4bfb9f74365cf890e59a633905fa096a0b130e32ad41ba63df"
+      }
+    },
+    {
+      "id": "nuova:f8c727c65c38",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Parco Virgiliano (Napoli) 2.JPG",
+      "titoloFonte": "Parco Virgiliano (Napoli) 2.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_Virgiliano_(Napoli)_2.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0c/Parco_Virgiliano_%28Napoli%29_2.JPG",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2048,
+        1536
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: dettaglio ripetuto o veduta che non migliora la sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mentnafunangann",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-parco-virgiliano",
+    "soggetto": "panorama",
+    "didascaliaProposta": "Il tramonto dal belvedere del Parco Virgiliano.",
+    "titoloFonte": "ParcoVirgilianoNapoli.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:ParcoVirgilianoNapoli.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/5/57/ParcoVirgilianoNapoli.jpg",
+    "autore": "Fr~itwiki",
+    "licenza": "Pubblico dominio",
+    "licenzaUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "dimensioni": [
+      2048,
+      853
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": false,
+      "autoreSintetico": "Fr~itwiki",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-parco-virgiliano",
+      "esito": "ok",
+      "dimensioni": [
+        2048,
+        853
+      ],
+      "sha256": "6a4db34c7dcb41b1b4a06a8e5781c7db67b619f2b8772506ccbac28ff296a223"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "nuova:aef32c29a4b9",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "esistente:tp-parco-virgiliano",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Eventuale percorso nel parco di pari qualità. La vista al tramonto è molto larga: mantenerla intera, senza ritaglio pesante."
+  ],
+  "ricercheEsterneVerificate": []
 }

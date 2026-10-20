@@ -40,7 +40,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1202998483,
-      "sha1Originale": "1bcdf06ad8f6d488ec23c43c54856106ad970b1b"
+      "sha1Originale": "1bcdf06ad8f6d488ec23c43c54856106ad970b1b",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "La chiesa o il suo altare non sostituiscono la vista dal belvedere.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Lucamato",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-sant-antonio-posillipo-4770dc1b43",
@@ -61,7 +71,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1134500922,
-      "sha1Originale": "d0b6f92a6236de54b84b4560ba7f126d56b2c6c3"
+      "sha1Originale": "d0b6f92a6236de54b84b4560ba7f126d56b2c6c3",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "La chiesa o il suo altare non sostituiscono la vista dal belvedere.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Lucamato",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-sant-antonio-posillipo-a5580d6f79",
@@ -82,9 +102,31 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1269111942,
-      "sha1Originale": "259acac8988516c3717af4d8a543934f84e34796"
+      "sha1Originale": "259acac8988516c3717af4d8a543934f84e34796",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "La chiesa o il suo altare non sostituiscono la vista dal belvedere.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "it:Utente:...Lord_Zarcon",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Cercare una veduta d’insieme nitida, luminosa e riferita al punto esatto."
+  ],
+  "ricercheEsterneVerificate": []
 }

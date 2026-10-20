@@ -1,61 +1,36 @@
-# Ricerca delle fotografie · 19 ottobre 2026
+# Fotografie · revisione qualitativa
 
-Ricerca svolta sulle **92 schede presenti nel progetto**: 60 tappe/gite e 32 locali. L’obiettivo è preparare più fotografie per la futura scheda aperta, comprendendo interni, collezioni e piatti. Nessuna fotografia o galleria è stata aggiunta al sito.
+**19/10/2026 · nessun inserimento nel sito, push o deploy.** La prima raccolta era troppo permissiva rispetto alla qualità richiesta: foto presenti in un archivio libero non sono automaticamente belle, HD o adatte a raccontare una visita. È stata ristretta la proposta e conservata la ricerca precedente.
 
-## Risultato verificato
+| Oggetto | Esito |
+| --- | ---: |
+| Schede rilette | 92: 60 tappe/gite e 32 locali |
+| Immagini revisionate | 225: 154 candidate iniziali, 54 esistenti, 17 aggiunte |
+| Proposte attuali | 31, distribuite su 24 tappe/gite |
+| Di queste, aggiuntive rispetto al sito | 19 |
+| Di queste, foto già presenti | 12 |
+| Escluse dalla proposta | 194: 90 con diritti aperti; 104 per altri filtri |
+| Schede senza proposte | 68: 36 tappe/gite e tutti i 32 locali |
+| Risorse dei gestori conservate fuori proposta | 49 |
+| Pagine fotografiche Flickr ulteriori verificate | 12, nessuna proposta |
+| Piatti dei ristoranti proposti | 0 |
 
-| Misura | Tappe/gite | Locali | Totale |
-|---|---:|---:|---:|
-| Schede ricercate | 60 | 32 | 92 |
-| Schede con almeno una foto già nel sito | 54 | 0 | 54 |
-| Schede con nuove candidate a licenza fotografica libera | 58 | 5 | 63 |
-| Nuovi file fotografici candidati | 146 | 8 | **154** |
-| Schede senza nuove candidate libere in questo giro | 2 | 27 | **29** |
+I numeri misurano oggetti diversi: le 49 risorse dei gestori e le 12 verifiche Flickr non fanno parte delle 225 immagini. **Nessuna galleria è dichiarata completa.** Sono proposte di selezione da vedere, non una certificazione di perfezione fotografica o di ogni possibile diritto.
 
-Nei 154 file ci sono **55 interni, 6 immagini di collezioni, 3 piatti, 27 esterni, 23 panorami, 20 percorsi e 20 dettagli**. Sono file distinti per pagina Commons, esclusi quelli già registrati nel progetto; non rappresentano 154 luoghi né gallerie tutte complete. I chiarimenti possono riguardare più fotografie della stessa scheda.
+## Cosa è migliorato
 
-Sui siti dei locali sono state selezionate separatamente **49 risorse visive per 28 locali**, osservate ma senza licenza libera accertata. Non si sommano alle 154 come foto utilizzabili. Per tutti e 32 i locali è conservata una fonte del gestore o un limite preciso della ricerca. Le immagini ufficiali non sono incorporate nel catalogo consegnato né copiate nel repository.
+Ogni scheda contiene ora una sequenza ordinata, gli obiettivi della galleria, ciò che manca e il motivo di esclusione delle singole foto. I dati storici restano consultabili, ma una futura IA deve leggere `galleriaProposta`, non prendere tutte le `fotoCandidate`.
 
-## Esempi utili
+Le proposte mantengono immagini autentiche e a colori. Scartate risorse sotto 2.000 px sul lato lungo, bianco e nero, composizioni promozionali, piatti generici e scatti poco curati. Per Porta Nolana preferita una vista della porta leggibile, senza auto dominanti: la scheda riguarda mercato e porta, non la stazione ferroviaria. Restano da cercare belle fotografie del mercato.
 
-- **MANN:** atrio, scalone e cortile; **Capodimonte:** vetrine della Sala 14, salottino di porcellana e Salone delle Feste; **Floridiana:** sala del Museo Duca di Martina e oggetto della collezione. Licenze fotografiche documentate; uso del bene da chiarire per la pubblicazione prevista.
-- **Sansevero:** ingresso e due interni, ma risoluzioni modeste e condizioni da chiarire con autore/museo.
-- **San Carlo, sotterranei, chiese e chiostri:** candidate di ambienti diversi dalla sola facciata. Le foto non confermano che ogni spazio sia visitabile oggi.
-- **Da Michele:** esterno e pizza con CC BY; **La Chitarra:** due piatti e sala con CC BY-SA. **Port’Alba, Brandi e Poppella:** solo materiale parziale rispettivamente su ingresso, targa ed esterno della Sanità.
-- **Gli altri locali:** spesso sono presenti fotografie dei piatti sui siti del gestore, ma non una licenza libera per Nextstop. La coda contiene fonte e richiesta specifica.
+Gli originali delle 31 proposte sono stati scaricati; verificate dimensioni e integrità di decodifica. Corretto l’orientamento dei provini secondo i metadati EXIF, mantenendo gli originali integri. L’esame completo al 100% resta necessario prima dell’inserimento; una foto con molti pixel può comunque essere poco nitida. Per ogni autore non è stata accertata la professione: la selezione valuta la resa osservata, senza inventare qualifiche.
 
-## Come è stata condotta
+La ricerca è stata estesa oltre Commons: [riscontri e limiti](RICERCA-ESTESA.md). Recuperato un documento pubblico del Castello Aragonese che consente la diffusione anche su siti esterni a Wikimedia, con un perimetro preciso. Aggiunte le condizioni del Fondo Edifici di Culto: immagini pertinenti escluse dalla proposta. Non sono stati inviati messaggi né richiesti permessi.
 
-Inventario ricavato da `src/data/tappe.yaml`, `locali.yaml` e `foto.yaml` della base main `24364b7`. Ricerche per tutte le 92 schede su Commons, con metadati della singola immagine; approfondimenti per categorie, nomi alternativi, gallerie e pagine esatte. Sono stati controllati i siti dei 32 locali e ulteriori pagine di gallerie/prodotti; ricerca Flickr mirata senza considerare il generico «Creative Commons» un’autorizzazione.
+## Crediti e seguito
 
-Le richieste Commons hanno incontrato limiti temporanei 429: sospensione e rallentamento, poi recupero delle risposte per tutte le 92 interrogazioni principali. Openverse ha risposto 403 ed è rimasto un canale non utilizzabile; non è la prova che manchino immagini. 50 Kalò è stato letto tramite ricerca web, con galleria di più città; la richiesta diretta era 403. MUDD è stato letto attraverso la ricerca web per i tetti; accesso diretto 403. Nessun aggiramento di autenticazioni o controlli TLS.
+Delle 31 proposte, 28 richiedono il credito fotografico e 3 non lo impongono per il regime CC0/pubblico dominio verificato. Nel catalogo la fascia visibile compare soltanto per le prime; per tutte restano accessibili fonte e metadati. [Criteri e condizioni](LICENZE.md).
 
-Osservate le anteprime delle **154 candidate libere** e delle risorse dei locali selezionate; non esaminati tutti gli originali a piena risoluzione. Autore, versione della licenza, credito aggiuntivo quando presente, dimensioni, data dichiarata, soggetto e segnalazioni sono conservati per file. Le 54 foto preesistenti sono un inventario, non una nuova certificazione delle licenze o dell’attualità.
+La ricerca dei ristoranti è ancora incompleta: gli scatti liberamente riutilizzabili trovati non raggiungono la qualità richiesta, mentre le belle foto dei gestori non hanno una concessione di riuso accertata. Non inserirle e non aprire una campagna di richieste. Cercare alternative o concessioni già pubblicate, verificando piatto e sede esatti.
 
-## Scarti e limiti che contano
-
-| Risultato trovato | Decisione |
-|---|---|
-| Gaiola in Piemonte, San Domenico di Taranto, Orto Botanico di Portici | Esclusi come luoghi diversi. |
-| «View of Naples» scattate dal tetto di Santa Maria dei Vergini | Escluse dalla scheda dei tetti del Duomo. |
-| `Negozio Poppella.jpg` | Sede Santa Brigida: esclusa dalla sede selezionata in Sanità. |
-| Foto delle sedi Starita fuori Napoli, Concettina a Capri, Bellavia omonima | Escluse o tenute fuori dall’attribuzione alla sede scelta. |
-| Fotogramma storico della Pizzeria Gorizia | Non adatto alla rappresentazione attuale; nessun affidamento alla semplice etichetta pubblico dominio. |
-| Vecchi allestimenti di Città della Scienza, immagini storiche e aree giochi abbandonate dei Camaldoli | Non selezionati come rappresentazione corrente della visita. |
-| Foto Hosteria Toledo di alloggi pubblicizzati nel sito | Escluse; recuperate invece foto della sala del ristorante. |
-| Loghi, collage, immagini decorative e ritratti al posto di piatti/sale | Non usati come sostituti della fotografia richiesta; Brandi conserva una composizione solo fra le risorse da autorizzare, richiedendo l’originale. |
-| Immagine Flickr pertinente di Pintauro | Tutti i diritti riservati; esclusa dalle foto libere. |
-
-Restano **due tappe senza nuova selezione libera**, tetti del Duomo e Parco Mascagna, e **27 locali senza alcuna candidata libera selezionata**. Anche le altre gallerie possono richiedere soggetti mancanti, immagini migliori o chiarimenti. Non è una ricerca di ogni fotografia esistente in rete, né un’autorizzazione cumulativa alla pubblicazione.
-
-## Diritti e seguito
-
-Le [condizioni](LICENZE.md) distinguono licenza del fotografo, eventuali concessioni del bene culturale, opere contemporanee e qualità delle immagini. Nessun account, servizio a pagamento, contatto con terzi o spesa è stato attivato.
-
-Per completare le gallerie usare la [coda delle richieste](DA-CHIEDERE.md), risolvere i chiarimenti e scegliere un insieme vario, preferendo gli originali. L’eventuale inserimento deve registrare crediti e testi alternativi in `src/data/foto.yaml`; dimensioni, formati e caricamento della galleria saranno parte del successivo lavoro sul sito. Non servono le API delle recensioni per questa ricerca.
-
-## Verifiche del blocco
-
-Copertura dei 92 ID, conteggi, unicità delle fonti, esclusione delle foto preesistenti, completezza di autore/licenza/dimensioni, corrispondenza delle annotazioni alle anteprime, riferimenti documentali e conservazione del codice applicativo: controlli eseguiti con esito riportato nello stato del progetto. Nessuna dipendenza installata. Sono cambiati solo documenti e dati di ricerca fuori dalla build: suite applicativa, build e controllo link del sito non ripetuti per questo blocco. Il catalogo visivo separato è verificato localmente per ricerca, filtri, crediti, rete e larghezze da telefono.
-
-Ramo locale `codex/ricerca-fotografie`, separato dal pilota sospeso delle valutazioni. Nessun push, merge o deploy effettuato.
+Per continuare: [indice](indice.md), poi la sola scheda interessata. Il sito e il suo registro fotografico sono invariati. Le eventuali sostituzioni delle foto esistenti, la galleria scorrevole e la pubblicazione GitHub restano lavori successivi; valutazioni/API ancora rinviate. Verifiche concluse il 20/10/2026 UTC, dopo l’ultimo riscontro FEC su San Lorenzo Maggiore: [VERIFICHE.md](VERIFICHE.md).

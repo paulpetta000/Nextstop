@@ -33,7 +33,26 @@
       "dataScattoDichiarata": "2014-07-24 10:36:24",
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
-      "segnalazioni": []
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Luca Aless",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-tribunali-9bc42e936f",
+        "esito": "ok",
+        "dimensioni": [
+          1985,
+          2634
+        ],
+        "sha256": "790ab1fb67ed2c99924f386a088a848d0886cbd76eb8ac7031e3359445c30846"
+      }
     },
     {
       "id": "foto-tribunali-b4a7a639d2",
@@ -52,7 +71,17 @@
       "dataScattoDichiarata": "2023-10-04 14:27:06",
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
-      "segnalazioni": []
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Panek",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-tribunali-e59359b9f7",
@@ -72,9 +101,63 @@
       "controlloVisivo": "anteprima-osservata",
       "stato": "licenza-libera",
       "segnalazioni": [],
-      "creditoRichiesto": "Diego Delso"
+      "creditoRichiesto": "Diego Delso",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Nastri e cavi dominano l’inquadratura; non descrive bene la passeggiata.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Diego Delso",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-tribunali",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il portico di Palazzo d'Avalos, in via dei Tribunali.",
+    "titoloFonte": "Palazzo d'Avalos o della Guardia. Napoli - Via dei Tribunali.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Palazzo_d%27Avalos_o_della_Guardia._Napoli_-_Via_dei_Tribunali.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/6/66/Palazzo_d%27Avalos_o_della_Guardia._Napoli_-_Via_dei_Tribunali.jpg",
+    "autore": "Armando Mancini",
+    "licenza": "CC BY-SA 2.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "dimensioni": [
+      3534,
+      2651
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Armando Mancini",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-tribunali-9bc42e936f",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": []
 }

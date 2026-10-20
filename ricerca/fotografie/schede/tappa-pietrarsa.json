@@ -42,7 +42,17 @@
         "percorso-specifico"
       ],
       "revisioneCommons": 1255494062,
-      "sha1Originale": "840c6f5183a2d995f2cde7a10cf2b9bb508ddf37"
+      "sha1Originale": "840c6f5183a2d995f2cde7a10cf2b9bb508ddf37",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Arbalete",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-pietrarsa-218841ac60",
@@ -65,7 +75,17 @@
         "percorso-specifico"
       ],
       "revisioneCommons": 1255493997,
-      "sha1Originale": "d1a98999da91972d237fa13ec7f67646a12445c6"
+      "sha1Originale": "d1a98999da91972d237fa13ec7f67646a12445c6",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Arbalete",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-pietrarsa-c2cbfbf6a3",
@@ -89,9 +109,57 @@
         "percorso-specifico"
       ],
       "revisioneCommons": 439070965,
-      "sha1Originale": "9ece920d3d5cf6a5a264b5f058572cb568ffb072"
+      "sha1Originale": "9ece920d3d5cf6a5a264b5f058572cb568ffb072",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "CityClass",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-pietrarsa",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il Museo Nazionale Ferroviario di Pietrarsa.",
+    "titoloFonte": "Pietrarsa railway museum 21.JPG",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pietrarsa_railway_museum_21.JPG",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/9/93/Pietrarsa_railway_museum_21.JPG",
+    "autore": "B.Zsolt",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      3264,
+      2448
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "B.Zsolt",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": []
 }

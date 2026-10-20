@@ -36,37 +36,116 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1038767670,
-      "sha1Originale": "8b14dc9f76af5097a9ce2cf744307ad29d108302"
+      "sha1Originale": "8b14dc9f76af5097a9ce2cf744307ad29d108302",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Una targa da sola non presenta né il ristorante né i suoi piatti.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Alessandro57",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
   "sede": "Salita Sant'Anna di Palazzo 1",
-  "stato": "licenza-libera",
+  "stato": "da-completare",
   "fonteGestore": {
     "url": "https://pizzeriabrandi.com/",
     "stato": "letta",
     "licenzaFoto": "non-accertata",
-    "uso": "fonte-per-richiesta",
+    "uso": "archivio-escluso-dalla-proposta",
     "risorseDaAutorizzare": [
       {
         "pagina": "https://pizzeriabrandi.com/",
         "immagine": "https://pizzeriabrandi.com/wp-content/uploads/brandi_000_home07.webp",
         "soggettoOsservato": "Composizione grafica con pizza",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare",
+        "esclusioneQualita": "Composizione promozionale con contorno grafico: esclusa anche per qualità e stile."
       },
       {
         "pagina": "https://pizzeriabrandi.com/",
         "immagine": "https://pizzeriabrandi.com/wp-content/uploads/brandi_000_home06.webp",
         "soggettoOsservato": "Veduta della strada davanti al locale",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       }
     ],
-    "galleria": "https://pizzeriabrandi.com/"
+    "galleria": "https://pizzeriabrandi.com/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
   },
-  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata."
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": [
+    {
+      "entita": "brandi",
+      "pagina": "https://www.flickr.com/photos/brunmarde/4619889030/",
+      "titolo": "Margherita pizza at Pizzeria Brandi",
+      "descrizione": "Pizza classique à Napoli, très bonne et située dans une belle petite rue(lle).",
+      "autore": "Mr. dale",
+      "licenza": "CC BY-NC-ND 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-nc-nd/2.0/",
+      "codiceLicenzaFlickr": 3,
+      "originale": "https://live.staticflickr.com/3326/4619889030_6fdb85bd5f_o.jpg",
+      "larghezza": 4000,
+      "altezza": 3000,
+      "originaleDisponibile": true,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    },
+    {
+      "entita": "brandi",
+      "pagina": "https://www.flickr.com/photos/89524618@N00/2872574638/",
+      "titolo": "Pizza Margherita, Casa Brandi, Napoli",
+      "descrizione": "",
+      "autore": "Henrik Skinbjerg",
+      "licenza": "tutti-i-diritti-riservati",
+      "licenzaUrl": null,
+      "codiceLicenzaFlickr": 0,
+      "originale": "https://live.staticflickr.com/3039/2872574638_3eed526795_o.jpg",
+      "larghezza": 1280,
+      "altezza": 853,
+      "originaleDisponibile": true,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    },
+    {
+      "entita": "brandi",
+      "pagina": "https://www.flickr.com/photos/98532915@N03/9231459293/",
+      "titolo": "Napoli Pizzeria Brandi",
+      "descrizione": "",
+      "autore": "Giacomo Migliore",
+      "licenza": "tutti-i-diritti-riservati",
+      "licenzaUrl": null,
+      "codiceLicenzaFlickr": 0,
+      "originale": "https://live.staticflickr.com/2868/9231459293_b765168f7d_o.jpg",
+      "larghezza": 1792,
+      "altezza": 1344,
+      "originaleDisponibile": true,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    }
+  ]
 }

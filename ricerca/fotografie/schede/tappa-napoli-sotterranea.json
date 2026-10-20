@@ -35,7 +35,17 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "percorso-specifico"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Ingresso affollato o corridoio poco rappresentativo; preferito il percorso sotterraneo.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Sordelli",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-napoli-sotterranea-57a800dcf9",
@@ -56,7 +66,17 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "percorso-specifico"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Lampada abbagliante e ringhiere in primo piano: non raggiunge la qualità richiesta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Photo2023",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-napoli-sotterranea-b583c81346",
@@ -77,9 +97,72 @@
       "stato": "licenza-libera-con-chiarimenti",
       "segnalazioni": [
         "percorso-specifico"
-      ]
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Ingresso affollato o corridoio poco rappresentativo; preferito il percorso sotterraneo.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Nemo bis",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-napoli-sotterranea",
+    "soggetto": "interno",
+    "didascaliaProposta": "Una delle scale scavate nel tufo di Napoli Sotterranea.",
+    "titoloFonte": "Napoli sotterranea (cunicolo).jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_sotterranea_(cunicolo).jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Napoli_sotterranea_%28cunicolo%29.jpg",
+    "autore": "Armando Mancini",
+    "licenza": "CC BY-SA 2.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "dimensioni": [
+      2714,
+      4086
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Armando Mancini",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-napoli-sotterranea",
+      "esito": "ok",
+      "dimensioni": [
+        2714,
+        4086
+      ],
+      "sha256": "26c90ef14066ea3d158c0ba6df923fefc892981a73db1f74456bbdddb7f22d0f"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-napoli-sotterranea",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": []
 }

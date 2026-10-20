@@ -37,7 +37,26 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 1112770183,
-      "sha1Originale": "92310ce4b1fef162b68a706078646d697cd39f40"
+      "sha1Originale": "92310ce4b1fef162b68a706078646d697cd39f40",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Ekrem Canli",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-procida-74d841ec3c",
+        "esito": "ok",
+        "dimensioni": [
+          13092,
+          5016
+        ],
+        "sha256": "fa260216de64bc1642711e2bd3be4b90c83de4b26d6ca3bb0f632e68eac6c29c"
+      }
     },
     {
       "id": "foto-procida-87d95c57e1",
@@ -60,7 +79,17 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 1211070798,
-      "sha1Originale": "fc70577c40d819b714583de2d7d8c19b8445dbdf"
+      "sha1Originale": "fc70577c40d819b714583de2d7d8c19b8445dbdf",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Veduta simile a quella già scelta o meno leggibile; evitare ripetizioni.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Porfirio",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-procida-c9480e0f4d",
@@ -84,9 +113,65 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 1163722902,
-      "sha1Originale": "88eebc506e2a68c352a603612898fd56d0fc309d"
+      "sha1Originale": "88eebc506e2a68c352a603612898fd56d0fc309d",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [
+          "autore-desunto"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "No machine-readable author provided. Retaggio assumed (based on copyright claims).",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-procida",
+    "soggetto": "panorama",
+    "didascaliaProposta": "La Marina della Corricella, a Procida.",
+    "titoloFonte": "Procida Marina Corricella.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Procida_Marina_Corricella.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Procida_Marina_Corricella.jpg",
+    "autore": "Velvet",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      5520,
+      2800
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Scatto simile alla nuova proposta: evitare ripetizioni dello stesso punto di vista.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Velvet",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-procida-74d841ec3c",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Completare con una veduta diversa o un percorso di pari qualità; non ripetere lo stesso panorama."
+  ],
+  "ricercheEsterneVerificate": []
 }

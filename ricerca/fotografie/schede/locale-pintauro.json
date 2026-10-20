@@ -18,28 +18,61 @@
   ],
   "fotoCandidate": [],
   "sede": "Via Toledo 275",
-  "stato": "nessuna-candidata-libera",
+  "stato": "da-completare",
   "fonteGestore": {
     "url": "https://www.pasticceriapintauro1785.it/",
     "stato": "letta",
     "licenzaFoto": "non-accertata",
-    "uso": "fonte-per-richiesta",
+    "uso": "archivio-escluso-dalla-proposta",
     "risorseDaAutorizzare": [
       {
         "pagina": "https://www.pasticceriapintauro1785.it/",
         "immagine": "https://www.pasticceriapintauro1785.it/wp-content/uploads/2026/03/pintauro_25-e1775645437903.jpg",
         "soggettoOsservato": "Banco delle sfogliatelle",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       }
     ],
-    "galleria": "https://www.pasticceriapintauro1785.it/"
+    "galleria": "https://www.pasticceriapintauro1785.it/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
   },
-  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
   "ricercaSupplementare": {
     "fonte": "pintauro-flickr",
     "esito": "Fotografia pertinente trovata ma tutti i diritti riservati; non inclusa nelle candidate libere."
-  }
+  },
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": [
+    {
+      "entita": "pintauro",
+      "pagina": "https://www.flickr.com/photos/bautisterias/16459398327/",
+      "titolo": "Naples - Via Toledo - Pintauro - Sfogliatella",
+      "descrizione": "REGIONE CAMPANIA",
+      "autore": "Iggi Falcon",
+      "licenza": "tutti-i-diritti-riservati",
+      "licenzaUrl": null,
+      "codiceLicenzaFlickr": 0,
+      "originale": null,
+      "larghezza": 4016,
+      "altezza": 6016,
+      "originaleDisponibile": false,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    }
+  ]
 }

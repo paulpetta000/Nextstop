@@ -1,695 +1,771 @@
 {
   "controllato": "2026-10-19",
+  "revisione": "qualita-e-riuso-v2",
   "baseGit": "24364b7e4b2242bd5e6dee244fcbc061bfe6893c",
   "conteggi": {
     "entita": 92,
     "tappe": 60,
     "locali": 32,
-    "entitaConFotoEsistente": 54,
-    "fotoLibereCandidateDistinte": 154,
-    "candidateTappe": 146,
-    "candidateLocali": 8,
-    "tappeConCandidate": 58,
-    "localiConCandidate": 5,
-    "entitaSenzaNuoveCandidate": 29,
-    "risorseSitiGestoriDaAutorizzare": 49,
-    "localiConRisorseIndividualiDelGestore": 28,
-    "licenze": {
-      "CC0": 10,
-      "CC BY-SA 4.0": 76,
-      "Public domain": 6,
-      "CC BY-SA 2.0": 17,
-      "CC BY 4.0": 10,
-      "CC BY-SA 3.0": 29,
-      "CC BY 3.0": 1,
-      "CC BY 2.0": 5
-    },
-    "soggetti": {
-      "interno": 55,
-      "esterno": 27,
-      "dettaglio": 20,
-      "percorso": 20,
-      "collezione": 6,
-      "panorama": 23,
-      "piatto": 3
-    },
-    "segnalazioni": {
-      "contesto-parziale": 39,
-      "risoluzione-ridotta": 5,
-      "sansevero-interno": 2,
-      "bene-culturale": 33,
-      "percorso-specifico": 12,
-      "opere-contemporanee": 9,
-      "avviso-fonte": 1,
-      "autore-desunto": 3,
-      "archivio-menu": 3
-    }
+    "schedeRevisionate": 92,
+    "fotoRevisionate": 225,
+    "candidateRicercaPrecedente": 154,
+    "candidateAggiunte": 17,
+    "candidateTotali": 171,
+    "fotoEsistentiRevisionate": 54,
+    "proposte": 31,
+    "proposteNuoveCandidate": 19,
+    "proposteEsistenti": 12,
+    "schedeConProposte": 24,
+    "tappeConProposte": 24,
+    "localiConProposte": 0,
+    "schedeSenzaProposte": 68,
+    "escluse": 194,
+    "escluseConDirittiAperti": 90,
+    "escluseSenzaDirittiAperti": 104,
+    "originaliProposteScaricati": 31,
+    "proposteConCredito": 28,
+    "proposteSenzaCreditoObbligatorio": 3,
+    "risorseGestoriArchiviateEscluse": 49,
+    "fotoFlickrVerificate": 12,
+    "fotoFlickrProposte": 0,
+    "piattiProposti": 0
   },
-  "perimetro": "Ricerca documentale e visiva: nessuna foto o galleria inserita nell’applicazione. Le risorse dei gestori non si sommano ai file Commons come fotografie distinte con licenza libera.",
-  "entita": [
+  "indice": [
     {
       "tipo": "tappa",
       "id": "duomo",
+      "nome": "Duomo e Tesoro di San Gennaro",
       "file": "schede/tappa-duomo.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 3
     },
     {
       "tipo": "tappa",
       "id": "sansevero",
+      "nome": "Cappella Sansevero",
       "file": "schede/tappa-sansevero.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "santa-chiara",
+      "nome": "Santa Chiara e il chiostro maiolicato",
       "file": "schede/tappa-santa-chiara.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "spaccanapoli",
+      "nome": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
       "file": "schede/tappa-spaccanapoli.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "tribunali",
+      "nome": "Via dei Tribunali: pizza e cibo di strada",
       "file": "schede/tappa-tribunali.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "pio-monte",
+      "nome": "Pio Monte della Misericordia",
       "file": "schede/tappa-pio-monte.json",
-      "candidate": 1,
-      "stato": "licenza-libera"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "mann",
+      "nome": "Museo Archeologico Nazionale",
       "file": "schede/tappa-mann.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "san-lorenzo",
+      "nome": "San Lorenzo Maggiore e gli scavi",
       "file": "schede/tappa-san-lorenzo.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "napoli-sotterranea",
+      "nome": "Napoli Sotterranea",
       "file": "schede/tappa-napoli-sotterranea.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "madre",
+      "nome": "Museo Madre",
       "file": "schede/tappa-madre.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "plebiscito",
+      "nome": "Piazza del Plebiscito e Galleria Umberto I",
       "file": "schede/tappa-plebiscito.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 2
     },
     {
       "tipo": "tappa",
       "id": "palazzo-reale",
+      "nome": "Palazzo Reale",
       "file": "schede/tappa-palazzo-reale.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "san-carlo",
+      "nome": "Teatro di San Carlo",
       "file": "schede/tappa-san-carlo.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "castel-nuovo",
+      "nome": "Castel Nuovo (Maschio Angioino)",
       "file": "schede/tappa-castel-nuovo.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "toledo",
+      "nome": "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
       "file": "schede/tappa-toledo.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "galleria-borbonica",
+      "nome": "Galleria Borbonica",
       "file": "schede/tappa-galleria-borbonica.json",
-      "candidate": 2,
-      "stato": "licenza-libera"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "monte-echia",
+      "nome": "Monte Echia, il belvedere di Pizzofalcone",
       "file": "schede/tappa-monte-echia.json",
-      "candidate": 1,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "borgo-marinari",
+      "nome": "Borgo Marinari e Castel dell'Ovo",
       "file": "schede/tappa-borgo-marinari.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "lungomare",
+      "nome": "Il lungomare: via Partenope, via Caracciolo e Villa Comunale",
       "file": "schede/tappa-lungomare.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "dadom",
+      "nome": "Acquario e museo Darwin-Dohrn",
       "file": "schede/tappa-dadom.json",
-      "candidate": 1,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "sant-elmo",
+      "nome": "Castel Sant'Elmo",
       "file": "schede/tappa-sant-elmo.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "san-martino",
+      "nome": "Certosa e Museo di San Martino",
       "file": "schede/tappa-san-martino.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "floridiana",
+      "nome": "Villa Floridiana e il museo della ceramica",
       "file": "schede/tappa-floridiana.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "pedamentina",
+      "nome": "La Pedamentina, da San Martino in discesa",
       "file": "schede/tappa-pedamentina.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "catacombe",
+      "nome": "Catacombe di San Gennaro",
       "file": "schede/tappa-catacombe.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "sanita",
+      "nome": "Rione Sanità e Basilica della Sanità",
       "file": "schede/tappa-sanita.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "fontanelle",
+      "nome": "Cimitero delle Fontanelle",
       "file": "schede/tappa-fontanelle.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "capodimonte",
+      "nome": "Museo e Real Bosco di Capodimonte",
       "file": "schede/tappa-capodimonte.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "virgilio",
+      "nome": "Parco delle Tombe di Virgilio e Leopardi",
       "file": "schede/tappa-virgilio.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "marechiaro",
+      "nome": "Marechiaro",
       "file": "schede/tappa-marechiaro.json",
-      "candidate": 2,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "gaiola",
+      "nome": "Parco sommerso della Gaiola",
       "file": "schede/tappa-gaiola.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "selezione-parziale",
+      "proposte": 2
     },
     {
       "tipo": "tappa",
       "id": "parco-virgiliano",
+      "nome": "Parco Virgiliano",
       "file": "schede/tappa-parco-virgiliano.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "selezione-parziale",
+      "proposte": 2
     },
     {
       "tipo": "tappa",
       "id": "citta-scienza",
+      "nome": "Città della Scienza",
       "file": "schede/tappa-citta-scienza.json",
-      "candidate": 2,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "san-domenico",
+      "nome": "San Domenico Maggiore e le arche aragonesi",
       "file": "schede/tappa-san-domenico.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "purgatorio-ad-arco",
+      "nome": "Purgatorio ad Arco, chiesa e ipogeo",
       "file": "schede/tappa-purgatorio-ad-arco.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "girolamini",
+      "nome": "Girolamini, chiesa, museo e biblioteca",
       "file": "schede/tappa-girolamini.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "tetti-duomo",
+      "nome": "I tetti del Duomo",
       "file": "schede/tappa-tetti-duomo.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "filangieri",
+      "nome": "Museo Filangieri",
       "file": "schede/tappa-filangieri.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "san-giovanni-a-carbonara",
+      "nome": "San Giovanni a Carbonara",
       "file": "schede/tappa-san-giovanni-a-carbonara.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "mercato-porta-nolana",
+      "nome": "Il mercato di Porta Nolana",
       "file": "schede/tappa-mercato-porta-nolana.json",
-      "candidate": 2,
-      "stato": "licenza-libera"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "pignasecca",
+      "nome": "Il mercato della Pignasecca",
       "file": "schede/tappa-pignasecca.json",
-      "candidate": 2,
-      "stato": "licenza-libera"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "ventaglieri",
+      "nome": "Parco dei Ventaglieri",
       "file": "schede/tappa-ventaglieri.json",
-      "candidate": 1,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "villa-pignatelli",
+      "nome": "Villa Pignatelli, museo e giardino",
       "file": "schede/tappa-villa-pignatelli.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "parco-mascagna",
+      "nome": "Parco Mascagna",
       "file": "schede/tappa-parco-mascagna.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "camaldoli",
+      "nome": "Parco dei Camaldoli",
       "file": "schede/tappa-camaldoli.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "parco-poggio",
+      "nome": "Parco del Poggio",
       "file": "schede/tappa-parco-poggio.json",
-      "candidate": 2,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "orto-botanico",
+      "nome": "Orto Botanico",
       "file": "schede/tappa-orto-botanico.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "sant-antonio-posillipo",
+      "nome": "Il belvedere di Sant'Antonio a Posillipo",
       "file": "schede/tappa-sant-antonio-posillipo.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "via-petrarca",
+      "nome": "Il belvedere di via Petrarca",
       "file": "schede/tappa-via-petrarca.json",
-      "candidate": 2,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "palazzo-donn-anna",
+      "nome": "Palazzo Donn'Anna, da fuori",
       "file": "schede/tappa-palazzo-donn-anna.json",
-      "candidate": 2,
-      "stato": "licenza-libera"
+      "stato": "selezione-parziale",
+      "proposte": 2
     },
     {
       "tipo": "tappa",
       "id": "mostra-oltremare",
+      "nome": "Il parco della Mostra d'Oltremare",
       "file": "schede/tappa-mostra-oltremare.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "pompei",
+      "nome": "Pompei",
       "file": "schede/tappa-pompei.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "ercolano",
+      "nome": "Ercolano",
       "file": "schede/tappa-ercolano.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "vesuvio",
+      "nome": "Vesuvio, il Gran Cono",
       "file": "schede/tappa-vesuvio.json",
-      "candidate": 3,
-      "stato": "licenza-libera"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "capri",
+      "nome": "Capri",
       "file": "schede/tappa-capri.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 2
     },
     {
       "tipo": "tappa",
       "id": "ischia",
+      "nome": "Ischia",
       "file": "schede/tappa-ischia.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "procida",
+      "nome": "Procida",
       "file": "schede/tappa-procida.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "tappa",
       "id": "caserta",
+      "nome": "Reggia di Caserta",
       "file": "schede/tappa-caserta.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "pietrarsa",
+      "nome": "Museo ferroviario di Pietrarsa",
       "file": "schede/tappa-pietrarsa.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "tappa",
       "id": "sorrento",
+      "nome": "Sorrento",
       "file": "schede/tappa-sorrento.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "selezione-parziale",
+      "proposte": 1
     },
     {
       "tipo": "locale",
       "id": "da-michele",
+      "nome": "L'Antica Pizzeria da Michele",
       "file": "schede/locale-da-michele.json",
-      "candidate": 2,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "port-alba",
+      "nome": "Antica Pizzeria Port'Alba",
       "file": "schede/locale-port-alba.json",
-      "candidate": 1,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "di-matteo",
+      "nome": "Antica Pizzeria Di Matteo",
       "file": "schede/locale-di-matteo.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "chitarra",
+      "nome": "Osteria La Chitarra",
       "file": "schede/locale-chitarra.json",
-      "candidate": 3,
-      "stato": "licenza-libera-con-chiarimenti"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "gesu-vecchio",
+      "nome": "La Locanda Gesù Vecchio",
       "file": "schede/locale-gesu-vecchio.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "di-costanzo",
+      "nome": "Pasticceria Di Costanzo",
       "file": "schede/locale-di-costanzo.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "brandi",
+      "nome": "Pizzeria Brandi",
       "file": "schede/locale-brandi.json",
-      "candidate": 1,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "zia-esterina",
+      "nome": "Antica Pizza Fritta da Zia Esterina Sorbillo",
       "file": "schede/locale-zia-esterina.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "hosteria-toledo",
+      "nome": "Hosteria Toledo",
       "file": "schede/locale-hosteria-toledo.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "gobbetto",
+      "nome": "Osteria Il Gobbetto",
       "file": "schede/locale-gobbetto.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "nennella",
+      "nome": "Trattoria da Nennella",
       "file": "schede/locale-nennella.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "pintauro",
+      "nome": "Pasticceria Pintauro",
       "file": "schede/locale-pintauro.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "cinquanta-kalo",
+      "nome": "50 Kalò",
       "file": "schede/locale-cinquanta-kalo.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "salvo",
+      "nome": "Pizzeria Salvo",
       "file": "schede/locale-salvo.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "pignatelli",
+      "nome": "Ostaria Pignatelli",
       "file": "schede/locale-pignatelli.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "cantinella",
+      "nome": "La Cantinella",
       "file": "schede/locale-cantinella.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "bersagliera",
+      "nome": "La Bersagliera",
       "file": "schede/locale-bersagliera.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "scialuppa",
+      "nome": "La Scialuppa",
       "file": "schede/locale-scialuppa.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "calabritto",
+      "nome": "Terrazza Calabritto",
       "file": "schede/locale-calabritto.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "chalet-ciro",
+      "nome": "Chalet Ciro",
       "file": "schede/locale-chalet-ciro.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "caffettiera",
+      "nome": "Gran Caffè La Caffettiera",
       "file": "schede/locale-caffettiera.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "gorizia",
+      "nome": "Pizzeria Gorizia 1916",
       "file": "schede/locale-gorizia.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "bellavia",
+      "nome": "Pasticceria Bellavia",
       "file": "schede/locale-bellavia.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "meatin",
+      "nome": "Meatin",
       "file": "schede/locale-meatin.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "starita",
+      "nome": "Pizzeria Starita a Materdei",
       "file": "schede/locale-starita.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "concettina",
+      "nome": "Concettina ai Tre Santi",
       "file": "schede/locale-concettina.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "poppella",
+      "nome": "Pasticceria Poppella",
       "file": "schede/locale-poppella.json",
-      "candidate": 1,
-      "stato": "licenza-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "petrucci-posillipo",
+      "nome": "Palazzo Petrucci Pizzeria, Posillipo",
       "file": "schede/locale-petrucci-posillipo.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "tufo",
+      "nome": "Tufò Trattoria",
       "file": "schede/locale-tufo.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "fenestella",
+      "nome": "'A Fenestella",
       "file": "schede/locale-fenestella.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "cicciotto",
+      "nome": "Cicciotto a Marechiaro",
       "file": "schede/locale-cicciotto.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     },
     {
       "tipo": "locale",
       "id": "macellegria",
+      "nome": "Macellegria",
       "file": "schede/locale-macellegria.json",
-      "candidate": 0,
-      "stato": "nessuna-candidata-libera"
+      "stato": "da-completare",
+      "proposte": 0
     }
   ]
 }

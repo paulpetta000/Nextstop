@@ -37,7 +37,17 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 799783615,
-      "sha1Originale": "a615229a3ad7b5492c07f22824ea30927b2b70ee"
+      "sha1Originale": "a615229a3ad7b5492c07f22824ea30927b2b70ee",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "La prima nuova veduta non chiarisce abbastanza il borgo; la seconda ha luce piatta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Falk2",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-sorrento-da62654aab",
@@ -60,9 +70,72 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 665236838,
-      "sha1Originale": "88fa857ce493963760a4829f64c4a3f7cce84025"
+      "sha1Originale": "88fa857ce493963760a4829f64c4a3f7cce84025",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "La prima nuova veduta non chiarisce abbastanza il borgo; la seconda ha luce piatta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "SeveroAntonelli",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-sorrento",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Piazza Tasso, a Sorrento.",
+    "titoloFonte": "Piazza Tasso - Sorrento BW 2013-05-12.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Piazza_Tasso_-_Sorrento_BW_2013-05-12.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Piazza_Tasso_-_Sorrento_BW_2013-05-12.jpg",
+    "autore": "Berthold Werner",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      3770,
+      2566
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Berthold Werner",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-sorrento",
+      "esito": "ok",
+      "dimensioni": [
+        3770,
+        2566
+      ],
+      "sha256": "a76c6f6083c9f0afb131618a8add913b393716dc4fea6c728849d34418be31e0"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-sorrento",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Completare con una veduta diversa o un percorso di pari qualità; non ripetere lo stesso panorama."
+  ],
+  "ricercheEsterneVerificate": []
 }

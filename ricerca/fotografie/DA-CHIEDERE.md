@@ -1,3 +1,5 @@
+> **ARCHIVIO STORICO · SOSPESO.** Enrico ha successivamente escluso foto che richiedono permessi aggiuntivi e contatti ai gestori. Questo file conserva la vecchia ricerca: **non eseguire le richieste o i modelli qui sotto**. Cercare soltanto alternative riutilizzabili o autorizzazioni già pubbliche. Stato attuale nel [README](README.md).
+
 # Fotografie · richieste e lacune
 
 Ricerca del 19/10/2026. Nessuna richiesta inviata. Questa coda riguarda le foto e non modifica le verifiche di orari in `da-verificare/`.

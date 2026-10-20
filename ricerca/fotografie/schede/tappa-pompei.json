@@ -37,7 +37,19 @@
         "bene-culturale"
       ],
       "revisioneCommons": 1284280838,
-      "sha1Originale": "1fd7e3e07af292cb8fc06c84132ed90746e62c8a"
+      "sha1Originale": "1fd7e3e07af292cb8fc06c84132ed90746e62c8a",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Marco Ober",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-pompei-273e62b800",
@@ -60,7 +72,19 @@
         "bene-culturale"
       ],
       "revisioneCommons": 1189981191,
-      "sha1Originale": "5be331544166d2553cfd528ad577e9b5ff9bccf2"
+      "sha1Originale": "5be331544166d2553cfd528ad577e9b5ff9bccf2",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Commonists",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-pompei-028b1bd952",
@@ -83,9 +107,61 @@
         "bene-culturale"
       ],
       "revisioneCommons": 1116266331,
-      "sha1Originale": "39cf94a54130a521e02c0f8cc0eee949d2cdebdd"
+      "sha1Originale": "39cf94a54130a521e02c0f8cc0eee949d2cdebdd",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Marco Ober",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-pompei",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il Foro di Pompei e il Vesuvio.",
+    "titoloFonte": "Forum (Pompeii) and the Vesuvio.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Forum_(Pompeii)_and_the_Vesuvio.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/3/36/Forum_%28Pompeii%29_and_the_Vesuvio.jpg",
+    "autore": "Commonists",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      8308,
+      5486
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Commonists",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": []
 }

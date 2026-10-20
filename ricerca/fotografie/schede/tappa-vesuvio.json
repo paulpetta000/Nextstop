@@ -35,7 +35,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1262559176,
-      "sha1Originale": "c800ced5418b5f2b2e9eb8a0f4993e40ccd15c51"
+      "sha1Originale": "c800ced5418b5f2b2e9eb8a0f4993e40ccd15c51",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio o luce meno efficace; preferita la vista ampia del cratere.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Norbert Nagel",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-vesuvio-533d2066d8",
@@ -56,7 +66,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1178337551,
-      "sha1Originale": "53d164b41f02bfa5e3f4585c818732ecf7f4363d"
+      "sha1Originale": "53d164b41f02bfa5e3f4585c818732ecf7f4363d",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio o luce meno efficace; preferita la vista ampia del cratere.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Jebulon",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-vesuvio-72913c0e2f",
@@ -77,9 +97,72 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1262559158,
-      "sha1Originale": "79401b9f413dcfd99195b40babb67284559834de"
+      "sha1Originale": "79401b9f413dcfd99195b40babb67284559834de",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Norbert Nagel",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-vesuvio-72913c0e2f",
+        "esito": "ok",
+        "dimensioni": [
+          4329,
+          3004
+        ],
+        "sha256": "43660f27470b331154554550f8a251622359c6bcce8b4e7361c503e4b6b935ee"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-vesuvio",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il Vesuvio dal golfo di Napoli.",
+    "titoloFonte": "Vesuvio e nave a Napoli.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Vesuvio_e_nave_a_Napoli.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/0/07/Vesuvio_e_nave_a_Napoli.jpg",
+    "autore": "PaestumPaestum",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      9352,
+      6235
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "PaestumPaestum",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-vesuvio-72913c0e2f",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Completare con una veduta diversa o un percorso di pari qualità; non ripetere lo stesso panorama."
+  ],
+  "ricercheEsterneVerificate": []
 }

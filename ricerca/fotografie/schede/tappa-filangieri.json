@@ -35,7 +35,19 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1263584181,
-      "sha1Originale": "0adb3bd6646f39bede16e6638e8c0d4e826bd9d5"
+      "sha1Originale": "0adb3bd6646f39bede16e6638e8c0d4e826bd9d5",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio isolato di vetrina o pavimento; manca una vista più invitante degli ambienti.",
+        "dirittiDaChiarire": [
+          "bene-culturale-museo-civico"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Phyrexian",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-filangieri-904fd665e2",
@@ -56,7 +68,19 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1278899467,
-      "sha1Originale": "be236464dcddebcb6a486bbeb10402a642d7ba25"
+      "sha1Originale": "be236464dcddebcb6a486bbeb10402a642d7ba25",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio isolato di vetrina o pavimento; manca una vista più invitante degli ambienti.",
+        "dirittiDaChiarire": [
+          "bene-culturale-museo-civico"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Francesco Bini",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-filangieri-0f4008a476",
@@ -77,9 +101,117 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1067629411,
-      "sha1Originale": "13e5eac77acfbc6065dd06c265d19b23c6b5e6e1"
+      "sha1Originale": "13e5eac77acfbc6065dd06c265d19b23c6b5e6e1",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio isolato di vetrina o pavimento; manca una vista più invitante degli ambienti.",
+        "dirittiDaChiarire": [
+          "bene-culturale-museo-civico"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Francesco Bini",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "nuova:f01dee273e4a",
+      "soggetto": "interno",
+      "didascaliaProposta": "Museo filangieri, sala inferiore, con mosaici della ditta venziana salviati, 05.jpg",
+      "titoloFonte": "Museo filangieri, sala inferiore, con mosaici della ditta venziana salviati, 05.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_filangieri,_sala_inferiore,_con_mosaici_della_ditta_venziana_salviati,_05.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/6b/Museo_filangieri%2C_sala_inferiore%2C_con_mosaici_della_ditta_venziana_salviati%2C_05.jpg",
+      "autore": "Francesco Bini",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5472,
+        3648
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non migliora la sequenza: inquadratura o soggetto poco adatti al racconto della visita.",
+        "dirittiDaChiarire": [
+          "bene-culturale-museo-civico"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Francesco Bini",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "nuova:b45fb18740d1",
+      "soggetto": "interno",
+      "didascaliaProposta": "Museo filangieri, sala superiore o sala agata, balaustra e vetrine.jpg",
+      "titoloFonte": "Museo filangieri, sala superiore o sala agata, balaustra e vetrine.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_filangieri,_sala_superiore_o_sala_agata,_balaustra_e_vetrine.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Museo_filangieri%2C_sala_superiore_o_sala_agata%2C_balaustra_e_vetrine.jpg",
+      "autore": "Francesco Bini",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5472,
+        3648
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Vista generale dell’interno più utile dei soli dettagli.",
+        "dirittiDaChiarire": [
+          "bene-culturale-museo-civico"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Francesco Bini",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-filangieri",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Una sala del Museo Civico Gaetano Filangieri, a Palazzo Como.",
+    "titoloFonte": "FilangieriNaples.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:FilangieriNaples.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/a/ab/FilangieriNaples.jpg",
+    "autore": "IlSistemone",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      3187,
+      2391
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "bene-culturale-museo-civico"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "IlSistemone",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": []
 }

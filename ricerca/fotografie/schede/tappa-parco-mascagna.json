@@ -16,7 +16,19 @@
     }
   ],
   "fotoCandidate": [],
-  "stato": "nessuna-candidata-libera",
+  "stato": "da-completare",
   "fontePerRichiesta": "https://static-www.comune.napoli.it/wp-content/uploads/2025/09/CittaComune_Speciale_Verde_urbano.pdf?mode=download",
-  "azioneSuccessiva": "Richiedere foto attuali del percorso/parco e licenza libera esplicita, oppure scatti propri. Nessuna richiesta inviata."
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": []
 }

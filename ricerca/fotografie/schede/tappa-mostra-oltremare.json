@@ -42,7 +42,19 @@
         "opere-contemporanee"
       ],
       "revisioneCommons": 1193763967,
-      "sha1Originale": "e7e081f900742fcf67fd104af125b98f4d9a44cb"
+      "sha1Originale": "e7e081f900742fcf67fd104af125b98f4d9a44cb",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Spalluzza",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-mostra-oltremare-43b8d6efcb",
@@ -65,7 +77,19 @@
         "opere-contemporanee"
       ],
       "revisioneCommons": 1256031432,
-      "sha1Originale": "c204dba84862d1169572992cdd2dc9666ab1236d"
+      "sha1Originale": "c204dba84862d1169572992cdd2dc9666ab1236d",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Baku",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-mostra-oltremare-1644b2b444",
@@ -88,9 +112,61 @@
         "opere-contemporanee"
       ],
       "revisioneCommons": 1256058510,
-      "sha1Originale": "538ad8b9235e1e32af01369e27e00748bf6df155"
+      "sha1Originale": "538ad8b9235e1e32af01369e27e00748bf6df155",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Baku",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-mostra-oltremare",
+    "soggetto": "esterno",
+    "didascaliaProposta": "La Fontana dell'Esedra, alla Mostra d'Oltremare.",
+    "titoloFonte": "Font EsedraNa.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Font_EsedraNa.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/8/88/Font_EsedraNa.jpg",
+    "autore": "aquila 460 (Gennaro Fusco)",
+    "licenza": "CC BY-SA 2.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "dimensioni": [
+      2272,
+      1704
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "aquila 460 (Gennaro Fusco)",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": []
 }

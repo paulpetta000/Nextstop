@@ -36,38 +36,64 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1174125750,
-      "sha1Originale": "1b588901eaf56c7aa75fa9ce6677975acb8fe597"
+      "sha1Originale": "1b588901eaf56c7aa75fa9ce6677975acb8fe597",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scatto descrittivo dell’ingresso, con parte dell’edificio tagliata; qualità insufficiente per la galleria richiesta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Bloomediait",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
   "sede": "Via Arena della Sanità 28",
-  "stato": "licenza-libera",
+  "stato": "da-completare",
   "fonteGestore": {
     "url": "https://www.pasticceriapoppella.com/",
     "stato": "letta",
     "licenzaFoto": "non-accertata",
-    "uso": "fonte-per-richiesta",
+    "uso": "archivio-escluso-dalla-proposta",
     "risorseDaAutorizzare": [
       {
         "pagina": "https://www.pasticceriapoppella.com/",
         "immagine": "https://www.pasticceriapoppella.com/wp-content/uploads/2017/04/MG_7616.jpg",
         "soggettoOsservato": "Fiocchi di neve",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       },
       {
         "pagina": "https://www.pasticceriapoppella.com/",
         "immagine": "https://www.pasticceriapoppella.com/wp-content/uploads/2017/04/MG_7534-1024x683.jpg",
         "soggettoOsservato": "Lavorazione dell’impasto",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       }
     ],
-    "galleria": "https://www.pasticceriapoppella.com/"
+    "galleria": "https://www.pasticceriapoppella.com/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
   },
-  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
-  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede."
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": []
 }

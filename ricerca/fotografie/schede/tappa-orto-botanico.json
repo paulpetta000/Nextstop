@@ -35,7 +35,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1221755935,
-      "sha1Originale": "5f58a53ad4f223d71b0eb0ff8d04594f515980a2"
+      "sha1Originale": "5f58a53ad4f223d71b0eb0ff8d04594f515980a2",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scorcio ordinario, verticale sbilanciata: serve una veduta più curata del giardino.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Daniel Ventura",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-orto-botanico-558029df20",
@@ -56,7 +66,17 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1145863666,
-      "sha1Originale": "5c60d3f374732758c1980b6e6eb3678785f18603"
+      "sha1Originale": "5c60d3f374732758c1980b6e6eb3678785f18603",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio isolato o luce poco equilibrata; preferito il percorso nel verde.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Daniel Ventura",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-orto-botanico-dca30103d6",
@@ -77,9 +97,57 @@
       "stato": "licenza-libera",
       "segnalazioni": [],
       "revisioneCommons": 1167780642,
-      "sha1Originale": "581c855e27f4dc57bfd2cfa59952e9b6c5ea4418"
+      "sha1Originale": "581c855e27f4dc57bfd2cfa59952e9b6c5ea4418",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio isolato o luce poco equilibrata; preferito il percorso nel verde.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Daniel Ventura",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "da-completare",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-orto-botanico",
+    "soggetto": "esterno",
+    "didascaliaProposta": "L'ingresso del Real Orto Botanico, in via Foria.",
+    "titoloFonte": "Napoli - Real orto botanico.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Real_orto_botanico.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Napoli_-_Real_orto_botanico.jpg",
+    "autore": "Armando Mancini",
+    "licenza": "CC BY-SA 2.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "dimensioni": [
+      3648,
+      2736
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Armando Mancini",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": []
 }

@@ -1,0 +1,695 @@
+{
+  "controllato": "2026-10-19",
+  "baseGit": "24364b7e4b2242bd5e6dee244fcbc061bfe6893c",
+  "conteggi": {
+    "entita": 92,
+    "tappe": 60,
+    "locali": 32,
+    "entitaConFotoEsistente": 54,
+    "fotoLibereCandidateDistinte": 154,
+    "candidateTappe": 146,
+    "candidateLocali": 8,
+    "tappeConCandidate": 58,
+    "localiConCandidate": 5,
+    "entitaSenzaNuoveCandidate": 29,
+    "risorseSitiGestoriDaAutorizzare": 49,
+    "localiConRisorseIndividualiDelGestore": 28,
+    "licenze": {
+      "CC0": 10,
+      "CC BY-SA 4.0": 76,
+      "Public domain": 6,
+      "CC BY-SA 2.0": 17,
+      "CC BY 4.0": 10,
+      "CC BY-SA 3.0": 29,
+      "CC BY 3.0": 1,
+      "CC BY 2.0": 5
+    },
+    "soggetti": {
+      "interno": 55,
+      "esterno": 27,
+      "dettaglio": 20,
+      "percorso": 20,
+      "collezione": 6,
+      "panorama": 23,
+      "piatto": 3
+    },
+    "segnalazioni": {
+      "contesto-parziale": 39,
+      "risoluzione-ridotta": 5,
+      "sansevero-interno": 2,
+      "bene-culturale": 33,
+      "percorso-specifico": 12,
+      "opere-contemporanee": 9,
+      "avviso-fonte": 1,
+      "autore-desunto": 3,
+      "archivio-menu": 3
+    }
+  },
+  "perimetro": "Ricerca documentale e visiva: nessuna foto o galleria inserita nell’applicazione. Le risorse dei gestori non si sommano ai file Commons come fotografie distinte con licenza libera.",
+  "entita": [
+    {
+      "tipo": "tappa",
+      "id": "duomo",
+      "file": "schede/tappa-duomo.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "sansevero",
+      "file": "schede/tappa-sansevero.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "santa-chiara",
+      "file": "schede/tappa-santa-chiara.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "spaccanapoli",
+      "file": "schede/tappa-spaccanapoli.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "tribunali",
+      "file": "schede/tappa-tribunali.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "pio-monte",
+      "file": "schede/tappa-pio-monte.json",
+      "candidate": 1,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "mann",
+      "file": "schede/tappa-mann.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "san-lorenzo",
+      "file": "schede/tappa-san-lorenzo.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "napoli-sotterranea",
+      "file": "schede/tappa-napoli-sotterranea.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "madre",
+      "file": "schede/tappa-madre.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "plebiscito",
+      "file": "schede/tappa-plebiscito.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "palazzo-reale",
+      "file": "schede/tappa-palazzo-reale.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "san-carlo",
+      "file": "schede/tappa-san-carlo.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "castel-nuovo",
+      "file": "schede/tappa-castel-nuovo.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "toledo",
+      "file": "schede/tappa-toledo.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "galleria-borbonica",
+      "file": "schede/tappa-galleria-borbonica.json",
+      "candidate": 2,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "monte-echia",
+      "file": "schede/tappa-monte-echia.json",
+      "candidate": 1,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "borgo-marinari",
+      "file": "schede/tappa-borgo-marinari.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "lungomare",
+      "file": "schede/tappa-lungomare.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "dadom",
+      "file": "schede/tappa-dadom.json",
+      "candidate": 1,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "sant-elmo",
+      "file": "schede/tappa-sant-elmo.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "san-martino",
+      "file": "schede/tappa-san-martino.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "floridiana",
+      "file": "schede/tappa-floridiana.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "pedamentina",
+      "file": "schede/tappa-pedamentina.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "catacombe",
+      "file": "schede/tappa-catacombe.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "sanita",
+      "file": "schede/tappa-sanita.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "fontanelle",
+      "file": "schede/tappa-fontanelle.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "capodimonte",
+      "file": "schede/tappa-capodimonte.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "virgilio",
+      "file": "schede/tappa-virgilio.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "marechiaro",
+      "file": "schede/tappa-marechiaro.json",
+      "candidate": 2,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "gaiola",
+      "file": "schede/tappa-gaiola.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "parco-virgiliano",
+      "file": "schede/tappa-parco-virgiliano.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "citta-scienza",
+      "file": "schede/tappa-citta-scienza.json",
+      "candidate": 2,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "san-domenico",
+      "file": "schede/tappa-san-domenico.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "purgatorio-ad-arco",
+      "file": "schede/tappa-purgatorio-ad-arco.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "girolamini",
+      "file": "schede/tappa-girolamini.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "tetti-duomo",
+      "file": "schede/tappa-tetti-duomo.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "filangieri",
+      "file": "schede/tappa-filangieri.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "san-giovanni-a-carbonara",
+      "file": "schede/tappa-san-giovanni-a-carbonara.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "mercato-porta-nolana",
+      "file": "schede/tappa-mercato-porta-nolana.json",
+      "candidate": 2,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "pignasecca",
+      "file": "schede/tappa-pignasecca.json",
+      "candidate": 2,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "ventaglieri",
+      "file": "schede/tappa-ventaglieri.json",
+      "candidate": 1,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "villa-pignatelli",
+      "file": "schede/tappa-villa-pignatelli.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "parco-mascagna",
+      "file": "schede/tappa-parco-mascagna.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "camaldoli",
+      "file": "schede/tappa-camaldoli.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "parco-poggio",
+      "file": "schede/tappa-parco-poggio.json",
+      "candidate": 2,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "orto-botanico",
+      "file": "schede/tappa-orto-botanico.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "sant-antonio-posillipo",
+      "file": "schede/tappa-sant-antonio-posillipo.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "via-petrarca",
+      "file": "schede/tappa-via-petrarca.json",
+      "candidate": 2,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "palazzo-donn-anna",
+      "file": "schede/tappa-palazzo-donn-anna.json",
+      "candidate": 2,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "mostra-oltremare",
+      "file": "schede/tappa-mostra-oltremare.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "pompei",
+      "file": "schede/tappa-pompei.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "ercolano",
+      "file": "schede/tappa-ercolano.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "vesuvio",
+      "file": "schede/tappa-vesuvio.json",
+      "candidate": 3,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "tappa",
+      "id": "capri",
+      "file": "schede/tappa-capri.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "ischia",
+      "file": "schede/tappa-ischia.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "procida",
+      "file": "schede/tappa-procida.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "caserta",
+      "file": "schede/tappa-caserta.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "pietrarsa",
+      "file": "schede/tappa-pietrarsa.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "tappa",
+      "id": "sorrento",
+      "file": "schede/tappa-sorrento.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "locale",
+      "id": "da-michele",
+      "file": "schede/locale-da-michele.json",
+      "candidate": 2,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "locale",
+      "id": "port-alba",
+      "file": "schede/locale-port-alba.json",
+      "candidate": 1,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "locale",
+      "id": "di-matteo",
+      "file": "schede/locale-di-matteo.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "chitarra",
+      "file": "schede/locale-chitarra.json",
+      "candidate": 3,
+      "stato": "licenza-libera-con-chiarimenti"
+    },
+    {
+      "tipo": "locale",
+      "id": "gesu-vecchio",
+      "file": "schede/locale-gesu-vecchio.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "di-costanzo",
+      "file": "schede/locale-di-costanzo.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "brandi",
+      "file": "schede/locale-brandi.json",
+      "candidate": 1,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "zia-esterina",
+      "file": "schede/locale-zia-esterina.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "hosteria-toledo",
+      "file": "schede/locale-hosteria-toledo.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "gobbetto",
+      "file": "schede/locale-gobbetto.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "nennella",
+      "file": "schede/locale-nennella.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "pintauro",
+      "file": "schede/locale-pintauro.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "cinquanta-kalo",
+      "file": "schede/locale-cinquanta-kalo.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "salvo",
+      "file": "schede/locale-salvo.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "pignatelli",
+      "file": "schede/locale-pignatelli.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "cantinella",
+      "file": "schede/locale-cantinella.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "bersagliera",
+      "file": "schede/locale-bersagliera.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "scialuppa",
+      "file": "schede/locale-scialuppa.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "calabritto",
+      "file": "schede/locale-calabritto.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "chalet-ciro",
+      "file": "schede/locale-chalet-ciro.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "caffettiera",
+      "file": "schede/locale-caffettiera.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "gorizia",
+      "file": "schede/locale-gorizia.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "bellavia",
+      "file": "schede/locale-bellavia.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "meatin",
+      "file": "schede/locale-meatin.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "starita",
+      "file": "schede/locale-starita.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "concettina",
+      "file": "schede/locale-concettina.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "poppella",
+      "file": "schede/locale-poppella.json",
+      "candidate": 1,
+      "stato": "licenza-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "petrucci-posillipo",
+      "file": "schede/locale-petrucci-posillipo.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "tufo",
+      "file": "schede/locale-tufo.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "fenestella",
+      "file": "schede/locale-fenestella.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "cicciotto",
+      "file": "schede/locale-cicciotto.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    },
+    {
+      "tipo": "locale",
+      "id": "macellegria",
+      "file": "schede/locale-macellegria.json",
+      "candidate": 0,
+      "stato": "nessuna-candidata-libera"
+    }
+  ]
+}

@@ -18,34 +18,50 @@
   ],
   "fotoCandidate": [],
   "sede": "Via Giovanni Paladino 26",
-  "stato": "nessuna-candidata-libera",
+  "stato": "da-completare",
   "fonteGestore": {
     "url": "https://www.lalocandagesuvecchionapoli.it/",
     "stato": "letta",
     "licenzaFoto": "non-accertata",
-    "uso": "fonte-per-richiesta",
+    "uso": "archivio-escluso-dalla-proposta",
     "risorseDaAutorizzare": [
       {
         "pagina": "https://www.lalocandagesuvecchionapoli.it/",
         "immagine": "https://www.lalocandagesuvecchionapoli.it/wp-content/uploads/elementor/thumbs/L1000063-min-scaled-r3ohipqmxsm5tpbk9ixvocz0dhj55tmcxfa86in16g.jpg",
         "soggettoOsservato": "Antipasto misto",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       },
       {
         "pagina": "https://www.lalocandagesuvecchionapoli.it/",
         "immagine": "https://www.lalocandagesuvecchionapoli.it/wp-content/uploads/elementor/thumbs/L1000142-scaled-r3ohybu4gq0rlpbnrf9p5msodlh1klk7loe97wjjwo.jpg",
         "soggettoOsservato": "Primo piatto",
-        "stato": "da-autorizzare",
+        "stato": "esclusa-licenza-non-accertata",
         "autore": "da-confermare",
         "licenza": null,
-        "anteprimaOsservata": true
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
       }
     ],
-    "galleria": "https://www.lalocandagesuvecchionapoli.it/"
+    "galleria": "https://www.lalocandagesuvecchionapoli.it/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
   },
-  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
-  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede."
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": []
 }

@@ -1,25 +1,18 @@
-# Fotografie · ricerca per le schede
+# Fotografie · punto di ingresso
 
-**19/10/2026 · ricerca, senza inserimento nel sito.** Perimetro: le 60 tappe/gite e i 32 locali presenti nei dati. Le valutazioni tramite API restano rinviate.
+**19/10/2026 · ricerca e selezione, sito invariato.** Ultima decisione di Enrico: foto reali, belle, a colori, HD, del luogo e della sede esatti; niente immagini generiche, disegni, IA o richieste di permesso. Crediti visibili soltanto quando dovuti.
 
-Risultato: **154 nuovi file candidati con licenza fotografica libera**, per 58 tappe e 5 locali. Altre **49 risorse visive dei gestori**, per 28 locali, richiedono autorizzazione e non sono conteggiate come foto libere. Le 54 foto già nel sito restano distinte e non sono state ricertificate da questo lavoro.
+**31 proposte in 24 delle 92 schede:** 19 candidate aggiuntive rispetto al sito e 12 foto già presenti. Sono bozze di selezione, non gallerie complete. Nessun piatto dei ristoranti supera ancora tutti i filtri. Le 154 candidate iniziali erano un bacino di ricerca, non immagini approvate.
 
-## Come trovare ciò che serve
+## Lettura breve per Codex e Claude
 
-1. Per Enrico: [rapporto](RAPPORTO.md), poi [indice delle 92 schede](indice.md).
-2. Per Codex/Claude: cerca nell’indice l’ID o il nome e leggi **solo** `schede/tappa-ID.json` oppure `schede/locale-ID.json`. Non caricare tutte le schede.
-3. Per interpretare una segnalazione: [condizioni di riuso](LICENZE.md), oppure il solo codice in [legenda.json](legenda.json). Le fonti comuni sono in [fonti-diritti.json](fonti-diritti.json).
-4. Per chiedere ciò che manca: [coda e modello di richiesta](DA-CHIEDERE.md). Nessun messaggio è stato inviato.
+1. Cerca nome/ID nell’[indice](indice.md); leggi soltanto `schede/tappa-ID.json` o `schede/locale-ID.json`.
+2. `galleriaProposta` dà l’ordine e i riferimenti alle foto. Risolvili in `fotoCandidate` oppure `fotoEsistenteRevisionata`. **Non usare automaticamente tutte le candidate.**
+3. `revisioneEditoriale.esito` distingue proposte ed escluse; `dirittiDaChiarire` deve essere vuoto per una proposta. Dimensioni e verifica dell’originale sono distinte dalla valutazione estetica.
+4. `sequenzaObiettivo` e `daCompletare` indicano cosa manca. Le risorse dei gestori e le verifiche Flickr escluse restano documentate, senza diventare una coda di contatti.
 
-[Esiti e conteggi](esiti.json) contiene solo l’indice per macchina, non un secondo catalogo completo. Le immagini binarie, le risposte grezze delle ricerche e i provini di analisi non sono nel repository: ogni scheda conserva collegamenti diretti, autore, licenza, dimensioni, soggetto e chiarimenti. Il catalogo visivo consegnato separatamente è una copia di consultazione; la fonte di lavoro resta questa cartella.
+[Rapporto e limiti](RAPPORTO.md) · [criteri e crediti](LICENZE.md) · [fonti dei diritti](fonti-diritti.json) · [ricerca estesa](RICERCA-ESTESA.md) · [codici](legenda.json) · [conteggi](esiti.json).
 
-## Leggere una scheda
+Il [rapporto iniziale](RAPPORTO-INIZIALE.md), gli [esiti iniziali](esiti-iniziali.json) e la [vecchia coda](DA-CHIEDERE.md) sono storici. **Non chiedere permessi e non contattare nessuno.** Per le immagini escluse proseguire soltanto la ricerca di alternative o di concessioni già pubbliche. Nessuna API delle recensioni da attivare.
 
-- `fotoEsistente`: riferimento al registro attuale, non una nuova candidata.
-- `fotoCandidate`: file Commons selezionati; `pagina` documenta fonte e licenza, `originale` serve per un successivo download. Le anteprime sono state osservate; gli originali non sono stati tutti esaminati a piena risoluzione.
-- `segnalazioni`: aspetti ancora da risolvere, anche qualità, contesto e condizioni del bene. Non cambiano la licenza dichiarata del fotografo.
-- `fonteGestore.risorseDaAutorizzare`: immagini osservate sul sito del locale, **senza licenza libera accertata**. Non copiarle negli asset.
-- `ricerche`: interrogazioni e numero di risultati esaminati; zero candidate non significa assenza assoluta di foto su Internet.
-- `richiesta` e `azioneSuccessiva`: ciò che serve per completare una galleria, senza dichiararla già completa.
-
-Prima dell’inserimento: risolvere i chiarimenti pertinenti, verificare l’originale e la sede, scegliere foto diverse fra loro, preparare testo alternativo e crediti e aggiornare [foto.yaml](../../src/data/foto.yaml). La regola comune ammette foto con licenza libera; un permesso limitato a un solo sito va conservato, ma richiede una decisione prima di diventare un’eccezione. La galleria scorrevole richiede un successivo lavoro sul prodotto.
+Immagini e originali di analisi non sono nel repository. Il catalogo HTML consegnato separatamente incorpora provini delle sole proposte; i dati di lavoro restano qui. Prima di un futuro inserimento controllare fonte corrente, originale al 100%, soggetto e condizioni pertinenti e registrare i crediti in `src/data/foto.yaml`. La galleria nel sito richiede un successivo blocco di lavoro.

@@ -37,7 +37,17 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 1185371742,
-      "sha1Originale": "cfb255544156da14d5815d312f73635c735ab516"
+      "sha1Originale": "cfb255544156da14d5815d312f73635c735ab516",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scatto notturno o finestra che limita la vista; preferite vedute aperte.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Sailko",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     },
     {
       "id": "foto-ischia-6216f500c1",
@@ -60,7 +70,26 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 814335778,
-      "sha1Originale": "358c3f0b8a3440f75e2aa4b1a4ff6ac3845ef7f2"
+      "sha1Originale": "358c3f0b8a3440f75e2aa4b1a4ff6ac3845ef7f2",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Ugeorge",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-ischia-6216f500c1",
+        "esito": "ok",
+        "dimensioni": [
+          4930,
+          3287
+        ],
+        "sha256": "a9bec96850409b2793ab0bfc0ae8b11c0cc7c000f8cdf159423570d3cbd7766c"
+      }
     },
     {
       "id": "foto-ischia-a097fd0fc1",
@@ -83,9 +112,66 @@
         "contesto-parziale"
       ],
       "revisioneCommons": 849975822,
-      "sha1Originale": "7ba8b2a0c1bb807f3d7f6271bb28e2bbbaecd225"
+      "sha1Originale": "7ba8b2a0c1bb807f3d7f6271bb28e2bbbaecd225",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scatto notturno o finestra che limita la vista; preferite vedute aperte.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Giuseppe Albano",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
     }
   ],
-  "stato": "licenza-libera-con-chiarimenti",
-  "azioneSuccessiva": "Scegliere le immagini, risolvere le segnalazioni aperte, verificare il file originale e registrare i crediti prima dell’inserimento."
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-ischia",
+    "soggetto": "panorama",
+    "didascaliaProposta": "Il Castello Aragonese di Ischia.",
+    "titoloFonte": "Castello Aragonese (Ischia).jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Castello_Aragonese_(Ischia).jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Castello_Aragonese_%28Ischia%29.jpg",
+    "autore": "Dudva",
+    "licenza": "CC0",
+    "licenzaUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "dimensioni": [
+      2590,
+      1889
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Veduta simile al nuovo scatto più curato dalla spiaggia: evitare ripetizioni.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": false,
+      "autoreSintetico": "Dudva",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-ischia-6216f500c1",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Un secondo soggetto dell’isola, diverso dal castello; verificare caso per caso il perimetro del documento WLM."
+  ],
+  "documentiRiuso": [
+    "castello-aragonese-wlm-2016"
+  ],
+  "ricercheEsterneVerificate": []
 }

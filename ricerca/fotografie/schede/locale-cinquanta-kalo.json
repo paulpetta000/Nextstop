@@ -18,18 +18,32 @@
   ],
   "fotoCandidate": [],
   "sede": "Piazza Sannazaro 201b",
-  "stato": "nessuna-candidata-libera",
+  "stato": "da-completare",
   "fonteGestore": {
     "url": "https://50kalo.it/",
     "stato": "letta",
     "licenzaFoto": "non-accertata",
-    "uso": "fonte-per-richiesta",
+    "uso": "archivio-escluso-dalla-proposta",
     "risorseDaAutorizzare": [],
     "limiteAccesso": "HTTP Error 403: Forbidden",
     "galleria": "https://50kalo.it/gallery.php",
     "canaleLettura": "ricerca-web",
-    "nota": "Galleria con sezioni di più città e download: verificare le immagini della sola sede Sannazaro. Nessuna licenza libera accertata."
+    "nota": "Galleria con sezioni di più città e download: verificare le immagini della sola sede Sannazaro. Nessuna licenza libera accertata.",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
   },
-  "azioneSuccessiva": "Richiedere originali di piatti e ambienti, conferma della sede, autore e rilascio con licenza libera compatibile; nessuna richiesta inviata.",
-  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede."
+  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede.",
+  "revisione": "qualita-e-riuso-v2",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": []
 }
