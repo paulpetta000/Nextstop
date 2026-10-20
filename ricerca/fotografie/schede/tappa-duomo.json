@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "duomo",
   "nome": "Duomo e Tesoro di San Gennaro",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-duomo",
   "richiesta": [
     "esterno",
@@ -96,11 +96,86 @@
         ],
         "sha256": "907e1d73704a5b66aef632a14f0421969be908517d4e7345a86db541383f1dc6"
       }
+    },
+    {
+      "id": "foto-duomo-f3526d31e3",
+      "soggetto": "interno",
+      "didascaliaProposta": "La navata del Duomo in una fotografia del 2015.",
+      "titoloFonte": "Nave - Duomo - Naples - Italy 2015 (4).JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Nave_-_Duomo_-_Naples_-_Italy_2015_(4).JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Nave_-_Duomo_-_Naples_-_Italy_2015_%284%29.JPG",
+      "autore": "José Luiz",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5127,
+        3370
+      ],
+      "dataScattoDichiarata": "2015-02-05 16:10:53",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Ponteggi visibili e luce scura: non migliora la sequenza del Duomo; preferito il dettaglio dell’organo.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "José Luiz",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-duomo-f3526d31e3",
+        "esito": "ok",
+        "dimensioni": [
+          5127,
+          3370
+        ],
+        "sha256": "aaa782b0759408272292737c7cc4b663ea6c7de174b59355568df80f9799d8ec"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "attribuzioneDichiarata": "© José Luiz Bernardes Ribeiro"
+    },
+    {
+      "id": "foto-duomo-fa7914174a",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "L’organo e la decorazione dorata all’interno del Duomo.",
+      "titoloFonte": "Cattedrale di Santa Maria Assunta o Duomo di Napoli. (758).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cattedrale_di_Santa_Maria_Assunta_o_Duomo_di_Napoli._(758).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/de/Cattedrale_di_Santa_Maria_Assunta_o_Duomo_di_Napoli._%28758%29.jpg",
+      "autore": "Giuseppe Guida",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3715,
+        4616
+      ],
+      "dataScattoDichiarata": "2024-05-04 11:19:19",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Giuseppe Guida",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-duomo-fa7914174a",
+        "esito": "ok",
+        "dimensioni": [
+          3715,
+          4616
+        ],
+        "sha256": "e448be05f0f5e270f4e4fed0cf9e72d17dce3a35bbe2c14a98461445c5a9be4b"
+      },
+      "ricercaAggiunta": "2026-10-20"
     }
   ],
-  "stato": "selezione-parziale",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-duomo",
@@ -152,6 +227,11 @@
       "ordine": 3,
       "foto": "foto-duomo-6c7c9c45a8",
       "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 4,
+      "foto": "foto-duomo-fa7914174a",
+      "ruolo": "approfondimento"
     }
   ],
   "sequenzaObiettivo": [
@@ -160,7 +240,41 @@
     "Dettaglio utile, senza ripetizioni."
   ],
   "daCompletare": [
-    "Eventuale sala del Tesoro con riuso documentato; le foto del Duomo e della cappella non provano accesso o contenuti del museo."
+    "Manca una veduta riconoscibile del Tesoro: la soglia numerica non copre ancora tutte le componenti del biglietto.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-duomo",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-duomo-97a7ca5b80",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-duomo-6c7c9c45a8",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 4,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 0,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "pio-monte",
   "nome": "Pio Monte della Misericordia",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-pio-monte",
   "richiesta": [
     "esterno",
@@ -79,11 +79,85 @@
         ],
         "sha256": "51f3e491b3b6328bc91419b6262bc339b21882d4e8c28370389843bb0604d969"
       }
+    },
+    {
+      "id": "foto-pio-monte-c6224c23de",
+      "soggetto": "collezione",
+      "didascaliaProposta": "Le Sette opere di Misericordia di Caravaggio, nella cornice dell’altare.",
+      "titoloFonte": "The Seven Works of Mercy - Caravaggio (Pio Monte della Misericordia - Naples) (19681799545).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:The_Seven_Works_of_Mercy_-_Caravaggio_(Pio_Monte_della_Misericordia_-_Naples)_(19681799545).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/1b/The_Seven_Works_of_Mercy_-_Caravaggio_%28Pio_Monte_della_Misericordia_-_Naples%29_%2819681799545%29.jpg",
+      "autore": "ho visto nina volare from Italy",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3000,
+        4000
+      ],
+      "dataScattoDichiarata": "2015-05-19 10:24",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ho visto nina volare from Italy",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-pio-monte-c6224c23de",
+        "esito": "ok",
+        "dimensioni": [
+          3000,
+          4000
+        ],
+        "sha256": "121a903cded1c9de58379f11019158c9726469ab5a3d2e9078c00870efd451e3"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    },
+    {
+      "id": "foto-pio-monte-f295a4bb77",
+      "soggetto": "percorso",
+      "didascaliaProposta": "L’ingresso e la scalinata del Pio Monte della Misericordia.",
+      "titoloFonte": "Napoli - Pio Monte della Misericordia.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Pio_Monte_della_Misericordia.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d4/Napoli_-_Pio_Monte_della_Misericordia.jpg",
+      "autore": "Armando Mancini",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        2616,
+        3488
+      ],
+      "dataScattoDichiarata": "2009-06-14 11:11:10",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-pio-monte-f295a4bb77",
+        "esito": "ok",
+        "dimensioni": [
+          2616,
+          3488
+        ],
+        "sha256": "ae50083a262a3eec5170d1eee819771ac7bdfe1cde19e3718281593ba935a796"
+      },
+      "ricercaAggiunta": "2026-10-20"
     }
   ],
-  "stato": "selezione-parziale",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-pio-monte",
@@ -116,6 +190,16 @@
       "ordine": 1,
       "foto": "nuova:07c23bce84da",
       "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-pio-monte-c6224c23de",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-pio-monte-f295a4bb77",
+      "ruolo": "approfondimento"
     }
   ],
   "sequenzaObiettivo": [
@@ -124,7 +208,31 @@
     "Collezione o dettaglio rappresentativo, quando riutilizzabile."
   ],
   "daCompletare": [
-    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+    "La scalinata documenta l’accesso; manca una sala della quadreria.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "nuova:07c23bce84da",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 3,
+    "risultatiLetti": 57,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

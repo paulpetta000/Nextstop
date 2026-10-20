@@ -1,5 +1,13 @@
 # PROGRESS · stato attuale
 
+## Fotografie · obiettivo tre/quattro per scheda · 20/10/2026
+
+Su richiesta di Enrico, ricerca approfondita sulle 92 entità: 230 interrogazioni, 658 provini osservati anche con scarti/omonimi, 88 nuove pagine fotografiche Flickr verificate e 52 nuovi originali esaminati. **76 proposte per 26 tappe/gite**, da 31 precedenti: 48 aggiunte alla selezione e tre sostituite. **19 schede con almeno tre foto, 7 di queste con quattro; 73 ancora sotto il minimo**, inclusi tutti i 32 locali. Nessun nuovo piatto conforme: ristoranti ancora scoperti per qualità, sede o riuso. Non presentare la ricerca come completata per tutti i luoghi.
+
+[Entrata breve](ricerca/fotografie/README.md), [indice con mancanti](ricerca/fotografie/indice.md), [rapporto](ricerca/fotografie/RAPPORTO.md). Le schede distinguono soglia numerica e lacune della visita; conservate candidate, fonti, 49 risorse dei gestori escluse e rapporti precedenti. Originali delle proposte scaricati, dimensioni native e impronte registrate; resta l’esame completo al 100%. Catalogo offline separato dal sito, con sequenze, crediti dovuti e filtri tre/quattro. Esiti dei controlli documentali e browser nel [registro](ricerca/fotografie/VERIFICHE.md).
+
+Codice, dati e foto applicativi invariati; nessun acquisto, contatto, richiesta, account API, push, merge o deploy. Ramo locale `codex/ricerca-fotografie`. Il seguito resta la ricerca di alternative con concessione già pubblica, soprattutto locali e schede sotto minimo; il catalogo rende verificabili le scelte già fatte. Browser e strumenti presenti bastano per la ricerca in cloud; gallerie nel sito e pubblicazione sono un blocco successivo.
+
 ## Ricerca fotografie · revisione qualitativa · 19/10/2026
 
 Ultima richiesta di Enrico: foto belle, reali, a colori, HD e della sede esatta; crediti soltanto quando dovuti, niente richieste di permesso. [Entrata breve](ricerca/fotografie/README.md), [indice](ricerca/fotografie/indice.md), [rapporto](ricerca/fotografie/RAPPORTO.md). Rilette tutte le 92 schede e 225 immagini (154 candidate iniziali, 54 esistenti e 17 aggiunte): **31 proposte per 24 tappe/gite**, di cui 19 candidate aggiuntive e 12 foto già nel sito. 194 escluse; nessuna galleria completa e nessun piatto proposto. Le 49 risorse dei gestori restano archiviate e fuori proposta. Verificate altre 12 pagine fotografiche Flickr, nessuna selezionata. Nuove fonti FEC e autorizzazione pubblica del Castello Aragonese documentate; vecchia coda di richieste sospesa.

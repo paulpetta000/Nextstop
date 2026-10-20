@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "palazzo-donn-anna",
   "nome": "Palazzo Donn'Anna, da fuori",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-donn-anna",
   "richiesta": [
     "vista_generale",
@@ -37,8 +37,8 @@
       "revisioneCommons": 1133926603,
       "sha1Originale": "2c05a67ea2a1caa6c821d1404b6ef955f85532ba",
       "revisioneEditoriale": {
-        "esito": "proposta",
-        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "esito": "esclusa",
+        "motivazione": "Sostituita nella sequenza da una nuova fotografia più utile dello stesso soggetto; archivio e licenza conservati.",
         "dirittiDaChiarire": [],
         "creditoVisibileRichiesto": true,
         "autoreSintetico": "Armando Mancini",
@@ -54,6 +54,16 @@
           2304
         ],
         "sha256": "5469b71a2bf4a5504bd89d85fb44aa95494fd2102f2e2ed80dc0012d9008bf7f"
+      },
+      "revisioneEditorialePrecedente": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
       }
     },
     {
@@ -86,11 +96,85 @@
         "controlloVisivo": "provino-da-originale-osservato",
         "controlloAl100Percento": "non-completato"
       }
+    },
+    {
+      "id": "foto-palazzo-donn-anna-5c113ad757",
+      "soggetto": "esterno",
+      "didascaliaProposta": "La facciata di Palazzo Donn’Anna affacciata sul mare.",
+      "titoloFonte": "Palazzo Donn'Anna – Via Posillipo – Napoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Palazzo_Donn%27Anna_%E2%80%93_Via_Posillipo_%E2%80%93_Napoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/56/Palazzo_Donn%27Anna_%E2%80%93_Via_Posillipo_%E2%80%93_Napoli.jpg",
+      "autore": "Armando Mancini",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3623,
+        2717
+      ],
+      "dataScattoDichiarata": "2009-07-12 11:26:42",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-palazzo-donn-anna-5c113ad757",
+        "esito": "ok",
+        "dimensioni": [
+          3623,
+          2717
+        ],
+        "sha256": "466c43cd4084688ff0f47f9c8ba59d0239814707b8187f41190be5cbfbc41c46"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    },
+    {
+      "id": "foto-palazzo-donn-anna-2cb510f5e2",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Le onde ai piedi di Palazzo Donn’Anna.",
+      "titoloFonte": "Napoli - Palazzo Donn'Anna.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Palazzo_Donn%27Anna.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c3/Napoli_-_Palazzo_Donn%27Anna.jpg",
+      "autore": "Armando Mancini",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        2736,
+        3648
+      ],
+      "dataScattoDichiarata": "2008-11-23 12:12:12",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-palazzo-donn-anna-2cb510f5e2",
+        "esito": "ok",
+        "dimensioni": [
+          2736,
+          3648
+        ],
+        "sha256": "96c0cc99d8fa15caa27b5aeea6ed9aae0b8acc2c67b04a6b5936e25d2519cd33"
+      },
+      "ricercaAggiunta": "2026-10-20"
     }
   ],
-  "stato": "selezione-parziale",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-donn-anna",
@@ -130,12 +214,17 @@
   "galleriaProposta": [
     {
       "ordine": 1,
-      "foto": "foto-palazzo-donn-anna-e1754b013c",
+      "foto": "foto-palazzo-donn-anna-5c113ad757",
       "ruolo": "apertura"
     },
     {
       "ordine": 2,
       "foto": "esistente:tp-donn-anna",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-palazzo-donn-anna-2cb510f5e2",
       "ruolo": "approfondimento"
     }
   ],
@@ -145,7 +234,36 @@
     "Dettaglio significativo solo se aggiunge informazioni."
   ],
   "daCompletare": [
-    "Completare con una veduta diversa o un percorso di pari qualità; non ripetere lo stesso panorama."
+    "Le vedute sono solo esterne; una quarta immagine serve soltanto se aggiunge il contesto della spiaggia o della passeggiata.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "foto-palazzo-donn-anna-e1754b013c",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "esistente:tp-donn-anna",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "parco-virgiliano",
   "nome": "Parco Virgiliano",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-parco-virgiliano",
   "richiesta": [
     "vista_generale",
@@ -169,11 +169,48 @@
         "controlloVisivo": "provino-da-originale-osservato",
         "controlloAl100Percento": "non-completato"
       }
+    },
+    {
+      "id": "foto-parco-virgiliano-0fb13eb593",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Il panorama dal Parco Virgiliano verso Bagnoli e la costa flegrea.",
+      "titoloFonte": "View from atop Parco Virgiliano (6782459931).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:View_from_atop_Parco_Virgiliano_(6782459931).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/a6/View_from_atop_Parco_Virgiliano_%286782459931%29.jpg",
+      "autore": "jimmyweee",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        3600,
+        1890
+      ],
+      "dataScattoDichiarata": "2012-01-29 13:21",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "jimmyweee",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-parco-virgiliano-0fb13eb593",
+        "esito": "ok",
+        "dimensioni": [
+          3600,
+          1890
+        ],
+        "sha256": "6b3e3a3537bd715dd29c20006a48b718ebbf6b57d9c40923899a027df5f9f934"
+      },
+      "ricercaAggiunta": "2026-10-20"
     }
   ],
-  "stato": "selezione-parziale",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-parco-virgiliano",
@@ -220,6 +257,11 @@
       "ordine": 2,
       "foto": "esistente:tp-parco-virgiliano",
       "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-parco-virgiliano-0fb13eb593",
+      "ruolo": "approfondimento"
     }
   ],
   "sequenzaObiettivo": [
@@ -228,7 +270,36 @@
     "Dettaglio significativo solo se aggiunge informazioni."
   ],
   "daCompletare": [
-    "Eventuale percorso nel parco di pari qualità. La vista al tramonto è molto larga: mantenerla intera, senza ritaglio pesante."
+    "Manca una buona fotografia dei percorsi e delle terrazze del parco, oltre ai panorami.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "nuova:aef32c29a4b9",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "esistente:tp-parco-virgiliano",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 2,
+    "risultatiLetti": 39,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

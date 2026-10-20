@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "ischia",
   "nome": "Ischia",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-ischia",
   "richiesta": [
     "vista_generale",
@@ -123,11 +123,122 @@
         "controlloVisivo": "anteprima-osservata",
         "controlloAl100Percento": "non-completato"
       }
+    },
+    {
+      "id": "foto-ischia-1e5b5641f4",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Il Castello Aragonese di Ischia e il ponte di accesso.",
+      "titoloFonte": "Aragonese Castle Island of Ischia (53929679155).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Aragonese_Castle_Island_of_Ischia_(53929679155).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/00/Aragonese_Castle_Island_of_Ischia_%2853929679155%29.jpg",
+      "autore": "Steve Jurvetson",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        2978,
+        1680
+      ],
+      "dataScattoDichiarata": "2024-06-28 16:39:42",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Steve Jurvetson",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-ischia-1e5b5641f4",
+        "esito": "ok",
+        "dimensioni": [
+          2978,
+          1680
+        ],
+        "sha256": "3b1fe360f4eca2667bd7b2ca1abbc1a8982358997d4eb3ce6ff653218d556371"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    },
+    {
+      "id": "foto-ischia-0b5d44f78e",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Uno scorcio del mare e della baia da una terrazza del Castello Aragonese.",
+      "titoloFonte": "Castello Aragonese 03.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Castello_Aragonese_03.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Castello_Aragonese_03.jpg",
+      "autore": "Saverio.G",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3264,
+        2448
+      ],
+      "dataScattoDichiarata": "2018-09-15",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Terrazza e muratura occupano una parte importante dell’immagine: panorama meno pulito del livello richiesto.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Saverio.G",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-ischia-0b5d44f78e",
+        "esito": "ok",
+        "dimensioni": [
+          3264,
+          2448
+        ],
+        "sha256": "4f1587a28e5d85a3e8c469d52b5ee9db0f20ec4be804ad3b632db93b604051a0"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    },
+    {
+      "id": "foto-ischia-45e26cc0d5",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Sant'Angelo.l'Antico borgo di pescatori, oggi rinomata località turistica dell'isola d'Ischia. Italia",
+      "titoloFonte": "Isola d'ischia italia.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Isola_d%27ischia_italia.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/28/Isola_d%27ischia_italia.jpg",
+      "autore": "Repuli",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5773,
+        3849
+      ],
+      "dataScattoDichiarata": "2017-05-19 17:10:55",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Repuli",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-ischia-45e26cc0d5",
+        "esito": "ok",
+        "dimensioni": [
+          5773,
+          3849
+        ],
+        "sha256": "248a2059aefcc27acaa6d52004183deb5438c89f147dcb0d1af674e5d354a2d1"
+      },
+      "ricercaAggiunta": "2026-10-20"
     }
   ],
-  "stato": "selezione-parziale",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-ischia",
@@ -160,6 +271,16 @@
       "ordine": 1,
       "foto": "foto-ischia-6216f500c1",
       "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-ischia-1e5b5641f4",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-ischia-45e26cc0d5",
+      "ruolo": "approfondimento"
     }
   ],
   "sequenzaObiettivo": [
@@ -168,10 +289,35 @@
     "Dettaglio significativo solo se aggiunge informazioni."
   ],
   "daCompletare": [
-    "Un secondo soggetto dell’isola, diverso dal castello; verificare caso per caso il perimetro del documento WLM."
+    "Serve almeno un altro luogo dell’isola, oltre al castello e alla spiaggia dei Pescatori.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
   ],
   "documentiRiuso": [
     "castello-aragonese-wlm-2016"
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "foto-ischia-6216f500c1",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 7,
+    "risultatiLetti": 128,
+    "pagineFotograficheFlickrVerificate": 9,
+    "riscontriFlickr": "../ricerche/2026-10-20-flickr.json",
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

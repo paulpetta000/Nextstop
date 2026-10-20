@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "borgo-marinari",
   "nome": "Borgo Marinari e Castel dell'Ovo",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-borgo-marinari",
   "richiesta": [
     "vista_generale",
@@ -105,11 +105,86 @@
         "controlloVisivo": "provino-da-originale-osservato",
         "controlloAl100Percento": "non-completato"
       }
+    },
+    {
+      "id": "foto-borgo-marinari-5b997821dc",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Porticciolo di Borgo Marinari e Vesuvio, visti da Castel dell’Ovo.",
+      "titoloFonte": "Borgo Marinari harbour and mount Vesuvius - Naples (2014).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Borgo_Marinari_harbour_and_mount_Vesuvius_-_Naples_(2014).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Borgo_Marinari_harbour_and_mount_Vesuvius_-_Naples_%282014%29.jpg",
+      "autore": "Poiesia",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2018,
+        947
+      ],
+      "dataScattoDichiarata": "2014-06-10 13:38",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Poiesia",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-borgo-marinari-5b997821dc",
+        "esito": "ok",
+        "dimensioni": [
+          2018,
+          947
+        ],
+        "sha256": "a6f4235fa48a64dccb416d5558f592b1e46e91e986bb8844dc49da33705127d2"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    },
+    {
+      "id": "foto-borgo-marinari-022eeae60c",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Le barche di legno ormeggiate nel Borgo Marinari.",
+      "titoloFonte": "Le barche del Borgo Marinari - panoramio.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Le_barche_del_Borgo_Marinari_-_panoramio.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/f/fc/Le_barche_del_Borgo_Marinari_-_panoramio.jpg",
+      "autore": "patano",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        4000,
+        2750
+      ],
+      "dataScattoDichiarata": "Taken on 29 November 2011",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "patano",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-borgo-marinari-022eeae60c",
+        "esito": "ok",
+        "dimensioni": [
+          4000,
+          2750
+        ],
+        "sha256": "aa4ac81cbb2681b5ff0cc72333003a97c4c33b79400d1f6f27c434cf891a8430"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "attribuzioneDichiarata": "patano"
     }
   ],
-  "stato": "selezione-parziale",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-borgo-marinari",
@@ -151,6 +226,16 @@
       "ordine": 1,
       "foto": "esistente:tp-borgo-marinari",
       "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-borgo-marinari-5b997821dc",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-borgo-marinari-022eeae60c",
+      "ruolo": "approfondimento"
     }
   ],
   "sequenzaObiettivo": [
@@ -159,7 +244,31 @@
     "Dettaglio significativo solo se aggiunge informazioni."
   ],
   "daCompletare": [
-    "Completare con una veduta diversa o un percorso di pari qualità; non ripetere lo stesso panorama."
+    "Una quarta foto dovrebbe mostrare i vicoli o la passeggiata a livello del borgo.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-borgo-marinari",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 16,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

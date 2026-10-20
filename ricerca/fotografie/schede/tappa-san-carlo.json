@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "san-carlo",
   "nome": "Teatro di San Carlo",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-san-carlo",
   "richiesta": [
     "vista_generale",
@@ -88,11 +88,126 @@
         "controlloVisivo": "anteprima-osservata",
         "controlloAl100Percento": "non-completato"
       }
+    },
+    {
+      "id": "foto-san-carlo-2ad0f01ce9",
+      "soggetto": "esterno",
+      "didascaliaProposta": "La facciata del Teatro di San Carlo.",
+      "titoloFonte": "Teatro de San Carlos, Nápoles, Italia, 2023-03-25, DD 184-186 HDR.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Teatro_de_San_Carlos,_N%C3%A1poles,_Italia,_2023-03-25,_DD_184-186_HDR.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Teatro_de_San_Carlos%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_184-186_HDR.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        6626,
+        4244
+      ],
+      "dataScattoDichiarata": "2023-03-25 16:24:26",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Diego Delso",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-san-carlo-2ad0f01ce9",
+        "esito": "ok",
+        "dimensioni": [
+          6626,
+          4244
+        ],
+        "sha256": "dd93eb2ec93f7d0189aa190af2389c81508c83ae78e2a35b30e9a30b92699112"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "creditoRichiesto": "Diego Delso · delso.photo",
+      "attribuzioneDichiarata": "Diego Delso"
+    },
+    {
+      "id": "foto-san-carlo-54b7a90945",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Il soffitto dipinto della sala del Teatro di San Carlo.",
+      "titoloFonte": "Teatro de San Carlos, Nápoles, Italia, 2023-03-25, DD 220-222 HDR.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Teatro_de_San_Carlos,_N%C3%A1poles,_Italia,_2023-03-25,_DD_220-222_HDR.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Teatro_de_San_Carlos%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_220-222_HDR.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3703,
+        3618
+      ],
+      "dataScattoDichiarata": "2023-03-25 17:24:10",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Diego Delso",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-san-carlo-54b7a90945",
+        "esito": "ok",
+        "dimensioni": [
+          3703,
+          3618
+        ],
+        "sha256": "f860358ffa12ee10cd5b091623c1cf399f0994d5c400c76045589e4f8a8ead83"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "creditoRichiesto": "Diego Delso · delso.photo",
+      "attribuzioneDichiarata": "Diego Delso"
+    },
+    {
+      "id": "foto-san-carlo-938d41befb",
+      "soggetto": "interno",
+      "didascaliaProposta": "Il palco reale del Teatro di San Carlo.",
+      "titoloFonte": "Interior of Teatro San Carlo (Naples)-2.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_of_Teatro_San_Carlo_(Naples)-2.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/95/Interior_of_Teatro_San_Carlo_%28Naples%29-2.jpg",
+      "autore": "Yair Haklai",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1908,
+        4032
+      ],
+      "dataScattoDichiarata": "2023-10-02 11:52:50",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Yair Haklai",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-san-carlo-938d41befb",
+        "esito": "ok",
+        "dimensioni": [
+          1908,
+          4032
+        ],
+        "sha256": "475351a46d63ffab8edbb3bbb2b217a1f4ce0fd39bbfd8fdba4bf21f0317e90a"
+      },
+      "ricercaAggiunta": "2026-10-20"
     }
   ],
-  "stato": "selezione-parziale",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-san-carlo",
@@ -134,6 +249,21 @@
       "ordine": 1,
       "foto": "esistente:tp-san-carlo",
       "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-san-carlo-2ad0f01ce9",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-san-carlo-54b7a90945",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 4,
+      "foto": "foto-san-carlo-938d41befb",
+      "ruolo": "approfondimento"
     }
   ],
   "sequenzaObiettivo": [
@@ -142,7 +272,31 @@
     "Collezione o dettaglio rappresentativo, quando riutilizzabile."
   ],
   "daCompletare": [
-    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+    "Cercare una scena complementare del luogo esatto, evitando duplicati e fotografie sotto il livello richiesto.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-san-carlo",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 4,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 0,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 2,
+    "risultatiLetti": 78,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

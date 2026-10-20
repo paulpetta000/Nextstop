@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "castel-nuovo",
   "nome": "Castel Nuovo (Maschio Angioino)",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-castel-nuovo",
   "richiesta": [
     "esterno",
@@ -111,8 +111,8 @@
     }
   ],
   "stato": "da-completare",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-castel-nuovo",
@@ -149,5 +149,21 @@
   "daCompletare": [
     "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

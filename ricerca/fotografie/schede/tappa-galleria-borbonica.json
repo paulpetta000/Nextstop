@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "galleria-borbonica",
   "nome": "Galleria Borbonica",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-galleria-borbonica",
   "richiesta": [
     "vista_generale",
@@ -82,11 +82,122 @@
         "controlloVisivo": "anteprima-osservata",
         "controlloAl100Percento": "non-completato"
       }
+    },
+    {
+      "id": "foto-galleria-borbonica-1358a0b889",
+      "soggetto": "interno",
+      "didascaliaProposta": "Una cisterna e la scala interna della Galleria Borbonica.",
+      "titoloFonte": "Galleria borbonica - Cistern and stairs (Naples).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Galleria_borbonica_-_Cistern_and_stairs_(Naples).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/72/Galleria_borbonica_-_Cistern_and_stairs_%28Naples%29.jpg",
+      "autore": "Associazione Culturale Borbonica Sotterranea",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2362,
+        1575
+      ],
+      "dataScattoDichiarata": "2015-12-26 19:13:33",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Associazione Culturale Borbonica Sotterranea",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-galleria-borbonica-1358a0b889",
+        "esito": "ok",
+        "dimensioni": [
+          2362,
+          1575
+        ],
+        "sha256": "08ee117ae41e05708e917f8f5ab9e91e9080d37fb5433090c67d57573a2a4038"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    },
+    {
+      "id": "foto-galleria-borbonica-ba67b20073",
+      "soggetto": "collezione",
+      "didascaliaProposta": "Motociclette storiche esposte nella Galleria Borbonica.",
+      "titoloFonte": "Galleria borbonica - Motocycles (Naples).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Galleria_borbonica_-_Motocycles_(Naples).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Galleria_borbonica_-_Motocycles_%28Naples%29.jpg",
+      "autore": "Associazione Culturale Borbonica Sotterranea",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4288,
+        2848
+      ],
+      "dataScattoDichiarata": "2016-06-25 11:03:15",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Associazione Culturale Borbonica Sotterranea",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-galleria-borbonica-ba67b20073",
+        "esito": "ok",
+        "dimensioni": [
+          4288,
+          2848
+        ],
+        "sha256": "4c4977f1195c8639b41f6700c8f397dfb87153ffc3c971d6ae8b2351c79c60a2"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    },
+    {
+      "id": "foto-galleria-borbonica-42441d7b60",
+      "soggetto": "percorso",
+      "didascaliaProposta": "La lunga scala dell’ingresso principale della Galleria Borbonica.",
+      "titoloFonte": "Galleria borbonica - Stairs (Naples).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Galleria_borbonica_-_Stairs_(Naples).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Galleria_borbonica_-_Stairs_%28Naples%29.jpg",
+      "autore": "Associazione Culturale Borbonica Sotterranea",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2362,
+        1575
+      ],
+      "dataScattoDichiarata": "2015-12-26 19:18:23",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Associazione Culturale Borbonica Sotterranea",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-galleria-borbonica-42441d7b60",
+        "esito": "ok",
+        "dimensioni": [
+          2362,
+          1575
+        ],
+        "sha256": "30694969549ad6c3cfccac311df5ca71452e8566081c131b3dd0a985aeceed1c"
+      },
+      "ricercaAggiunta": "2026-10-20"
     }
   ],
-  "stato": "selezione-parziale",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-galleria-borbonica",
@@ -119,6 +230,21 @@
       "ordine": 1,
       "foto": "foto-galleria-borbonica-de70915b15",
       "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-galleria-borbonica-42441d7b60",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-galleria-borbonica-1358a0b889",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 4,
+      "foto": "foto-galleria-borbonica-ba67b20073",
+      "ruolo": "approfondimento"
     }
   ],
   "sequenzaObiettivo": [
@@ -127,7 +253,31 @@
     "Collezione o dettaglio rappresentativo, quando riutilizzabile."
   ],
   "daCompletare": [
-    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+    "Le immagini del gestore mostrano scale, cisterne e motociclette: non implicano che ogni percorso includa ogni ambiente.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "foto-galleria-borbonica-de70915b15",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 4,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 0,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 2,
+    "risultatiLetti": 67,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

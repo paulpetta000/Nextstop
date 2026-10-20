@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "vesuvio",
   "nome": "Vesuvio, il Gran Cono",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-vesuvio",
   "richiesta": [
     "vista_generale",
@@ -117,11 +117,123 @@
         ],
         "sha256": "43660f27470b331154554550f8a251622359c6bcce8b4e7361c503e4b6b935ee"
       }
+    },
+    {
+      "id": "foto-vesuvio-67e6b2a614",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Il bordo e le pareti rocciose del cratere del Vesuvio.",
+      "titoloFonte": "Crater rim volcano Vesuvius - Campania - Italy - July 9th 2013 - 27.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Crater_rim_volcano_Vesuvius_-_Campania_-_Italy_-_July_9th_2013_-_27.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/90/Crater_rim_volcano_Vesuvius_-_Campania_-_Italy_-_July_9th_2013_-_27.jpg",
+      "autore": "Norbert Nagel",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        3355,
+        5027
+      ],
+      "dataScattoDichiarata": "2013-07-09 11:50:16",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Norbert Nagel",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-vesuvio-67e6b2a614",
+        "esito": "ok",
+        "dimensioni": [
+          3355,
+          5027
+        ],
+        "sha256": "676a3d2024abb8bbfa1a1e8908868034eb17fad80bb8316dc9ae7120120685b6"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    },
+    {
+      "id": "foto-vesuvio-2c8854321d",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Veduta aerea del cono e del cratere del Vesuvio.",
+      "titoloFonte": "Parco nazionale vesuvio.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_nazionale_vesuvio.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/84/Parco_nazionale_vesuvio.jpg",
+      "autore": "The Dronaut",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3992,
+        2992
+      ],
+      "dataScattoDichiarata": "2019-05-10",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "The Dronaut",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-vesuvio-2c8854321d",
+        "esito": "ok",
+        "dimensioni": [
+          3992,
+          2992
+        ],
+        "sha256": "d881cf8f8bfab03bc28e056c63a80528d517369a93392f6d18019770182cd05f"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    },
+    {
+      "id": "foto-vesuvio-e43bcfd523",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Il profilo del Vesuvio e del Monte Somma visto dal mare.",
+      "titoloFonte": "Il cratere del Vulcano - panoramio.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Il_cratere_del_Vulcano_-_panoramio.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Il_cratere_del_Vulcano_-_panoramio.jpg",
+      "autore": "pietro scerrato",
+      "licenza": "CC BY 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/3.0",
+      "dimensioni": [
+        3648,
+        2048
+      ],
+      "dataScattoDichiarata": "Taken on 7 January 2012",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "pietro scerrato",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-vesuvio-e43bcfd523",
+        "esito": "ok",
+        "dimensioni": [
+          3648,
+          2048
+        ],
+        "sha256": "1b558488cbbb114183f29b38d258b9ce84b95b79fe6c1786bb9184520131531d"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "attribuzioneDichiarata": "pietro scerrato"
     }
   ],
-  "stato": "selezione-parziale",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-vesuvio",
@@ -152,8 +264,23 @@
   "galleriaProposta": [
     {
       "ordine": 1,
-      "foto": "foto-vesuvio-72913c0e2f",
+      "foto": "foto-vesuvio-2c8854321d",
       "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-vesuvio-72913c0e2f",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-vesuvio-67e6b2a614",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 4,
+      "foto": "foto-vesuvio-e43bcfd523",
+      "ruolo": "approfondimento"
     }
   ],
   "sequenzaObiettivo": [
@@ -162,7 +289,31 @@
     "Dettaglio significativo solo se aggiunge informazioni."
   ],
   "daCompletare": [
-    "Completare con una veduta diversa o un percorso di pari qualità; non ripetere lo stesso panorama."
+    "La parete del cratere, il profilo da mare e la veduta aerea non vanno presentati come tre punti del percorso a piedi.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "foto-vesuvio-72913c0e2f",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 4,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 0,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

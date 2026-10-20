@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "parco-mascagna",
   "nome": "Parco Mascagna",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": null,
   "richiesta": [
     "vista_generale",
@@ -18,8 +18,8 @@
   "fotoCandidate": [],
   "stato": "da-completare",
   "fontePerRichiesta": "https://static-www.comune.napoli.it/wp-content/uploads/2025/09/CittaComune_Speciale_Verde_urbano.pdf?mode=download",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "nessuna-candidata-libera",
   "galleriaProposta": [],
   "sequenzaObiettivo": [
@@ -30,5 +30,21 @@
   "daCompletare": [
     "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 2,
+    "risultatiLetti": 0,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

@@ -1,18 +1,19 @@
 # Fotografie · punto di ingresso
 
-**19/10/2026 · ricerca e selezione, sito invariato.** Ultima decisione di Enrico: foto reali, belle, a colori, HD, del luogo e della sede esatti; niente immagini generiche, disegni, IA o richieste di permesso. Crediti visibili soltanto quando dovuti.
+**20/10/2026 · ricerca, sito invariato.** Obiettivo di Enrico: almeno **3**, preferibilmente **4** foto reali, belle, a colori e HD per ognuna delle 92 schede; del luogo e della sede esatti. Niente foto generiche, IA, disegni, acquisti o richieste di permesso. Crediti visibili quando dovuti.
 
-**31 proposte in 24 delle 92 schede:** 19 candidate aggiuntive rispetto al sito e 12 foto già presenti. Sono bozze di selezione, non gallerie complete. Nessun piatto dei ristoranti supera ancora tutti i filtri. Le 154 candidate iniziali erano un bacino di ricerca, non immagini approvate.
+**76 proposte in 26 tappe/gite:** 19 schede hanno almeno tre foto, 7 di queste ne hanno quattro. Le altre 73 schede restano sotto il minimo, compresi tutti i 32 locali. Nessun piatto supera ancora tutti i filtri. Il lavoro non è completo per tutte le schede.
 
 ## Lettura breve per Codex e Claude
 
-1. Cerca nome/ID nell’[indice](indice.md); leggi soltanto `schede/tappa-ID.json` o `schede/locale-ID.json`.
-2. `galleriaProposta` dà l’ordine e i riferimenti alle foto. Risolvili in `fotoCandidate` oppure `fotoEsistenteRevisionata`. **Non usare automaticamente tutte le candidate.**
-3. `revisioneEditoriale.esito` distingue proposte ed escluse; `dirittiDaChiarire` deve essere vuoto per una proposta. Dimensioni e verifica dell’originale sono distinte dalla valutazione estetica.
-4. `sequenzaObiettivo` e `daCompletare` indicano cosa manca. Le risorse dei gestori e le verifiche Flickr escluse restano documentate, senza diventare una coda di contatti.
+1. Trova nome/ID nell’[indice](indice.md), poi leggi solo `schede/tappa-ID.json` o `schede/locale-ID.json`.
+2. `galleriaProposta` contiene ordine e riferimenti: risolvili in `fotoCandidate` o `fotoEsistenteRevisionata`. **Non pubblicare automaticamente tutte le candidate.**
+3. `copertura` dà foto disponibili e mancanti per tre/quattro; `daCompletare` descrive le scene assenti. Tre dettagli della chiesa non sostituiscono l’ipogeo.
+4. `revisioneEditoriale.esito` distingue proposte e scarti; per una proposta i `dirittiDaChiarire` registrati sono vuoti. Nessuna pubblicazione approvata.
+5. `approfondimento20261020` rimanda ai registri estesi, da leggere solo per evitare ricerche già fatte. Non caricarli tutti per scegliere una foto.
 
-[Rapporto e limiti](RAPPORTO.md) · [criteri e crediti](LICENZE.md) · [fonti dei diritti](fonti-diritti.json) · [ricerca estesa](RICERCA-ESTESA.md) · [codici](legenda.json) · [conteggi](esiti.json).
+[Rapporto e lacune](RAPPORTO.md) · [licenze e qualità](LICENZE.md) · [fonti dei diritti](fonti-diritti.json) · [conteggi](esiti.json) · [verifiche](VERIFICHE.md) · [codici](legenda.json).
 
-Il [rapporto iniziale](RAPPORTO-INIZIALE.md), gli [esiti iniziali](esiti-iniziali.json) e la [vecchia coda](DA-CHIEDERE.md) sono storici. **Non chiedere permessi e non contattare nessuno.** Per le immagini escluse proseguire soltanto la ricerca di alternative o di concessioni già pubbliche. Nessuna API delle recensioni da attivare.
+Storico: [prima raccolta](RAPPORTO-INIZIALE.md), [revisione precedente](RAPPORTO-2026-10-19-REVISIONE.md), [ricerca estesa precedente](RICERCA-ESTESA.md), [vecchia coda sospesa](DA-CHIEDERE.md). **Non contattare nessuno e non chiedere permessi.** Le 49 risorse dei gestori senza concessione di riuso restano escluse.
 
-Immagini e originali di analisi non sono nel repository. Il catalogo HTML consegnato separatamente incorpora provini delle sole proposte; i dati di lavoro restano qui. Prima di un futuro inserimento controllare fonte corrente, originale al 100%, soggetto e condizioni pertinenti e registrare i crediti in `src/data/foto.yaml`. La galleria nel sito richiede un successivo blocco di lavoro.
+Il catalogo HTML separato incorpora provini ordinati; originali e immagini non appesantiscono il repository. Prima di un futuro inserimento servono esame al 100%, fonte corrente e controllo delle condizioni pertinenti. Galleria nel sito e pubblicazione del ramo richiedono un successivo blocco. Le API delle recensioni restano rinviate.

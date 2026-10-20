@@ -1,27 +1,29 @@
-# Verifiche della revisione fotografica
+# Verifiche · ampliamento fotografie del 20/10/2026
 
-Ricerca del 19/10/2026, verifiche concluse il 20/10/2026 UTC. Solo ricerca e documentazione: nessun input applicativo modificato, nessuna dipendenza installata. Build e suite del sito non ripetute.
+Solo ricerca e documenti: nessun input applicativo modificato, nessuna dipendenza installata. Build e suite del sito non ripetute. Le [verifiche precedenti](VERIFICHE-2026-10-19.md) restano conservate come storico.
 
-## Dati e conservazione
+## Conservazione, originali e conteggi
 
-- 92 schede, con gli stessi ID: 60 tappe/gite e 32 locali.
-- Conservati tutti i campi delle 154 candidate precedenti e tutte le 49 risorse dei gestori; i vecchi stati sostituiti sono conservati esplicitamente come precedenti.
-- 17 candidate aggiunte, 54 foto esistenti revisionate; riferimenti della sequenza risolti senza duplicati.
-- 31 proposte con originale scaricato, decodifica riuscita, dimensioni conformi e impronta SHA-256 registrata; nessuna sotto 2.000 px sul lato lungo o con chiarimenti sui diritti aperti registrati.
-- Credito fotografico richiesto per 28 proposte; non imposto per le altre 3. Nessuna foto Flickr o risorsa non autorizzata del gestore nella proposta.
-- Rapporto iniziale conservato integralmente. Nuovi stati e criteri prevalgono sulla vecchia coda di richieste, sospesa esplicitamente.
+- 92 schede e ID invariati: 60 tappe/gite, 32 locali.
+- Tutte le 171 candidate e le 54 foto esistenti della revisione precedente conservate; confrontati 3.386 campi fotografici, ammettendo soltanto le tre decisioni editoriali sostituite e conservate esplicitamente come precedenti.
+- 52 nuove fotografie di scheda: 48 proposte, quattro scarti dopo l’esame dell’originale. Tre proposte precedenti sostituite; totale 76 proposte e 201 escluse fra le 277 fotografie in scheda.
+- Tutte le 76 proposte hanno originale scaricato, dimensioni native con orientamento EXIF corretto e SHA-256 ricontrollato; nessuna sotto 2.000 px sul lato lungo, senza duplicati della fonte nella selezione e senza diritti ulteriori aperti registrati.
+- 73 attribuzioni dovute, tre immagini senza credito visibile obbligatorio per CC0/pubblico dominio. Due foto Flickr selezionate.
+- Copertura e mancanti ricalcolati per ogni scheda: 19 con almeno tre foto, sette con quattro, 73 sotto tre. Mancano 207 immagini per portare ognuna a tre, 292 per quattro.
+- 230 ricerche registrate su tutte le 92 entità; 658 provini osservati, compresi scarti, omonimi e ripetizioni. 88 nuove pagine individuali Flickr verificate, cento con il giro precedente. Le ricerche non provano l’inesistenza di alternative.
+- 49 risorse dei gestori fuori proposta conservate integralmente; rapporto iniziale, precedente revisione, verifiche e legenda storiche conservati. Nessun contatto, permesso richiesto, acquisto o account attivato.
+- 149 riferimenti locali Markdown verificati, oltre ai percorsi dei nuovi registri nelle 92 schede. `git diff --check` pulito; codice, dati, foto e dipendenze del sito invariati.
 
-L’osservazione dei provini non equivale a un’ispezione completa di ogni originale al 100%. Le verifiche automatiche non certificano bellezza, qualifica professionale dell’autore o assenza di qualsiasi diritto di terzi.
+Il controllo dei provini e delle impronte non certifica perfezione, professione dell’autore o ogni diritto di terzi. L’esame completo al 100% rimane da concludere prima dell’inserimento.
 
-## Catalogo di consultazione
+## Catalogo separato dal sito
 
-Verifica effettiva con Chromium e Playwright sul catalogo separato dal sito:
+Verificato ora in Chromium e Playwright attraverso un server locale temporaneo; il catalogo è un singolo HTML con immagini incorporate, senza servizi esterni automatici.
 
-- 92 schede presenti; filtro iniziale sulle 24 con proposte. Ricerca, categorie, 68 schede senza proposte e filtro per foto senza credito obbligatorio verificati.
-- 31 immagini incorporate decodificate senza errori; 28 fasce di credito e 3 immagini senza fascia obbligatoria.
-- Scorrimento avanti/indietro verificato anche con movimento ridotto.
-- Nessuno scorrimento orizzontale della pagina a 320, 390 e 1.280 px; lo scorrimento resta interno alla sequenza fotografica.
-- Nessun errore JavaScript e nessuna richiesta esterna automatica. Gli originali e le fonti si aprono solo attraverso link scelti dall’utente.
-- 140 riferimenti locali Markdown esistenti; `git diff --check` pulito. Codice e dati del sito invariati.
+- 92 schede presenti, filtro iniziale sulle 26 con proposte; ricerca e categorie funzionanti.
+- Filtri almeno tre (19 schede), quattro (7), sotto minimo (73), senza proposte (66) e senza credito obbligatorio (3 schede) riscontrati.
+- 76 immagini incorporate decodificate; 73 fasce di attribuzione, tre immagini senza fascia obbligatoria.
+- Scorrimento avanti/indietro verificato con movimento ridotto; nessuno scorrimento orizzontale della pagina a 320, 390 e 1.280 px.
+- Nessun errore JavaScript e nessuna richiesta esterna automatica osservati. I link alla fonte e all’originale richiedono rete solo quando aperti.
 
-Questi controlli riguardano il catalogo di ricerca, non un nuovo componente della galleria nell’applicazione. L’ultimo riscontro FEC su San Lorenzo Maggiore ha ridotto le proposte da 32/25 schede a 31/24; documenti e catalogo sono stati riallineati e ricontrollati.
+Il file HTML è un catalogo di ricerca: non è la galleria del sito e non approva la pubblicazione delle proposte. Il pacchetto separato conserva anche dati estesi compressi, ricevute dei controlli e documenti di fonte; questi file non vengono caricati dagli input della build o dalla lettura breve dell’IA.

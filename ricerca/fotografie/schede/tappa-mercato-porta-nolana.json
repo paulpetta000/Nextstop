@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "mercato-porta-nolana",
   "nome": "Il mercato di Porta Nolana",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-porta-nolana",
   "richiesta": [
     "vista_generale",
@@ -146,8 +146,8 @@
     }
   ],
   "stato": "selezione-parziale",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-porta-nolana",
@@ -191,5 +191,21 @@
     "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
   ],
   "notaIdentita": "Questa scheda riguarda il mercato e la porta monumentale di Porta Nolana, non la stazione ferroviaria. Serve ancora una bella vista del mercato.",
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 1,
+    "mancantiPerTre": 2,
+    "mancantiPerQuattro": 3,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 3,
+    "risultatiLetti": 37,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "sorrento",
   "nome": "Sorrento",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-sorrento",
   "richiesta": [
     "esterno",
@@ -81,11 +81,87 @@
         "controlloVisivo": "anteprima-osservata",
         "controlloAl100Percento": "non-completato"
       }
+    },
+    {
+      "id": "foto-sorrento-d8fa5731b5",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Marina Piccola, il porto di Sorrento.",
+      "titoloFonte": "Sorrento BW 2013-05-14 08-42-01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sorrento_BW_2013-05-14_08-42-01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Sorrento_BW_2013-05-14_08-42-01.jpg",
+      "autore": "Berthold Werner",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        3591,
+        2501
+      ],
+      "dataScattoDichiarata": "2013-05-14",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Berthold Werner",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-sorrento-d8fa5731b5",
+        "esito": "ok",
+        "dimensioni": [
+          3591,
+          2501
+        ],
+        "sha256": "489da6cb3004041fb177a3f60df95a249531c35f9117203886dd901bc882820f"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "attribuzioneDichiarata": "Berthold Werner"
+    },
+    {
+      "id": "foto-sorrento-361c53b99a",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Le falesie e gli edifici sopra Marina Piccola a Sorrento.",
+      "titoloFonte": "Sorrento BW 2013-05-14 19-00-59 DxO.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sorrento_BW_2013-05-14_19-00-59_DxO.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/da/Sorrento_BW_2013-05-14_19-00-59_DxO.jpg",
+      "autore": "Berthold Werner",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        3640,
+        2535
+      ],
+      "dataScattoDichiarata": "2013-05-14",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Berthold Werner",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-sorrento-361c53b99a",
+        "esito": "ok",
+        "dimensioni": [
+          3640,
+          2535
+        ],
+        "sha256": "48c96b4d73cf2047ecaa73955acc59df9f3dc381ac9b9846e08de5193da4e955"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "attribuzioneDichiarata": "Berthold Werner"
     }
   ],
-  "stato": "selezione-parziale",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-sorrento",
@@ -127,6 +203,16 @@
       "ordine": 1,
       "foto": "esistente:tp-sorrento",
       "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-sorrento-d8fa5731b5",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-sorrento-361c53b99a",
+      "ruolo": "approfondimento"
     }
   ],
   "sequenzaObiettivo": [
@@ -135,7 +221,31 @@
     "Dettaglio significativo solo se aggiunge informazioni."
   ],
   "daCompletare": [
-    "Completare con una veduta diversa o un percorso di pari qualità; non ripetere lo stesso panorama."
+    "Per una quarta foto preferire un vicolo o una piazza diversa dal porto e da piazza Tasso.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-sorrento",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

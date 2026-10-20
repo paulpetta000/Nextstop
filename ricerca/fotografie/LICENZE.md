@@ -20,10 +20,14 @@ Il tag Wiki Loves Monuments non sostituisce la lettura dell’autorizzazione per
 - Originale nativo di almeno 2.000 px sul lato lungo, preferibilmente maggiore. Nessun ingrandimento artificiale. Un panorama molto largo va mantenuto intero; i pixel non garantiscono nitidezza, luce o buona composizione.
 - Escludere disegni, immagini generate, composizioni promozionali, bianco e nero, foto generiche e scatti poco curati. Non eliminare firme o filigrane per recuperare una candidata.
 - Prima contesto/ambiente principale, poi una vista complementare e un dettaglio utile. Per belvederi e paesaggi la vista è la prima foto. Evitare duplicati.
-- Originali delle 31 proposte scaricati e dimensioni verificate, rispettando l’orientamento EXIF. Osservati i provini ricavati dagli originali; l’ispezione completa al 100% non è conclusa. La professione dell’autore non è certificata per tutti: il giudizio estetico resta una proposta da vedere.
+- Originali delle 76 proposte scaricati e dimensioni verificate, rispettando l’orientamento EXIF. Osservati i provini ricavati dagli originali; l’ispezione completa al 100% non è conclusa. La professione dell’autore non è certificata per tutti: il giudizio estetico resta una proposta da vedere.
 
 ## Crediti nella futura galleria
 
 Per CC BY/BY-SA usare una fascia piccola ma leggibile in basso, con autore e licenza collegata; fonte, titolo e modifiche restano accessibili dai dettagli del credito. Rispettare eventuali menzioni specifiche della fonte. Evitare crediti minuscoli, tagliati o nascosti al cambio foto. Per CC0/pubblico dominio non aggiungere un obbligo visibile inesistente; conservare comunque fonte e metadati nel registro.
 
 I provini del catalogo sono ridimensionati e ricompressi, senza ritaglio. Gli originali restano separati e integri. Nel futuro sito non usare il ritaglio per mascherare una scena inadatta e non presentare una foto d’archivio come prova di menu, allestimento o accesso attuali.
+
+## Obiettivo di copertura del 20/10/2026
+
+Almeno tre e preferibilmente quattro foto per ogni scheda. `copertura` conta i mancanti per singola entità; `daCompletare` resta decisivo per le scene non rappresentate. Una soglia numerica raggiunta non approva la pubblicazione né giustifica duplicati, un’altra sede, una foto generica o una riduzione del livello qualitativo. La ricerca delle foto dei locali non autorizza a riattivare API, acquisti o contatti.

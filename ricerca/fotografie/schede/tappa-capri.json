@@ -2,7 +2,7 @@
   "tipo": "tappa",
   "id": "capri",
   "nome": "Capri",
-  "controllato": "2026-10-19",
+  "controllato": "2026-10-20",
   "fotoEsistente": "tp-capri",
   "richiesta": [
     "vista_generale",
@@ -106,8 +106,8 @@
       "revisioneCommons": 893656463,
       "sha1Originale": "332c96569ce2f43ac0a02fa82473a42030cc3ada",
       "revisioneEditoriale": {
-        "esito": "proposta",
-        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "esito": "esclusa",
+        "motivazione": "Sostituita nella sequenza da una nuova fotografia più utile dello stesso soggetto; archivio e licenza conservati.",
         "dirittiDaChiarire": [],
         "creditoVisibileRichiesto": true,
         "autoreSintetico": "Littleballofwiki",
@@ -123,12 +123,134 @@
           4032
         ],
         "sha256": "6092682e03a0609a0af4c440bc01254cc1d70a46a7e9f13637e14e3db6277c18"
+      },
+      "revisioneEditorialePrecedente": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Littleballofwiki",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
       }
+    },
+    {
+      "id": "foto-capri-0ef26433ab",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Faraglioni, mare e vegetazione sulla costa di Capri.",
+      "titoloFonte": "Capri in a dream",
+      "pagina": "https://www.flickr.com/photos/125601701@N03/52025760239/",
+      "originale": "https://live.staticflickr.com/65535/52025760239_bef5894ea6_o.jpg",
+      "autore": "Hervé Simon",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "dimensioni": [
+        6000,
+        3494
+      ],
+      "dataScattoDichiarata": null,
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Hervé Simon",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-capri-0ef26433ab",
+        "esito": "ok",
+        "dimensioni": [
+          6000,
+          3494
+        ],
+        "sha256": "02fd21a9014f5be4853979be952bc07b8b8ca84500698f7f1916f6abe56a8393"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    },
+    {
+      "id": "foto-capri-b61be0083f",
+      "soggetto": "percorso",
+      "didascaliaProposta": "I tornanti di via Krupp fra la roccia e il mare di Capri.",
+      "titoloFonte": "Capri Via Krupp BW 2013-05-14 15-33-40 DxO.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Capri_Via_Krupp_BW_2013-05-14_15-33-40_DxO.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Capri_Via_Krupp_BW_2013-05-14_15-33-40_DxO.jpg",
+      "autore": "Berthold Werner",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        3872,
+        2592
+      ],
+      "dataScattoDichiarata": "2013-05-14",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Berthold Werner",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-capri-b61be0083f",
+        "esito": "ok",
+        "dimensioni": [
+          3872,
+          2592
+        ],
+        "sha256": "1fabe2fe575fd5c703bfc656a372ad1331d4fa6287fac5ad37e362fc3042bc25"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "attribuzioneDichiarata": "Berthold Werner"
+    },
+    {
+      "id": "foto-capri-6a9f7690d7",
+      "soggetto": "esterno",
+      "didascaliaProposta": "La Piazzetta di Capri di sera.",
+      "titoloFonte": "LA Piazzetta.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:LA_Piazzetta.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/08/LA_Piazzetta.JPG",
+      "autore": "Elenagm",
+      "licenza": "CC BY 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/3.0",
+      "dimensioni": [
+        3840,
+        2544
+      ],
+      "dataScattoDichiarata": "",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Elenagm",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-capri-6a9f7690d7",
+        "esito": "ok",
+        "dimensioni": [
+          3840,
+          2544
+        ],
+        "sha256": "4218f52110b7c92ec3f23102e945bb8a1cdac08ff98497bacaccb7a64b06bebc"
+      },
+      "ricercaAggiunta": "2026-10-20"
     }
   ],
-  "stato": "selezione-parziale",
-  "azioneSuccessiva": "Proseguire solo la ricerca di fotografie reali, HD e di qualità; usare la sequenza proposta come bozza. Escludere i diritti incerti, senza chiedere permessi. Inserimento nel sito in un blocco successivo.",
-  "revisione": "qualita-e-riuso-v2",
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
   "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
   "fotoEsistenteRevisionata": {
     "id": "esistente:tp-capri",
@@ -173,7 +295,17 @@
     },
     {
       "ordine": 2,
-      "foto": "foto-capri-ef7bc2cc6c",
+      "foto": "foto-capri-0ef26433ab",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-capri-b61be0083f",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 4,
+      "foto": "foto-capri-6a9f7690d7",
       "ruolo": "approfondimento"
     }
   ],
@@ -183,7 +315,37 @@
     "Dettaglio significativo solo se aggiunge informazioni."
   ],
   "daCompletare": [
-    "Completare con una veduta diversa o un percorso di pari qualità; non ripetere lo stesso panorama."
+    "Porto, Faraglioni, via Krupp e Piazzetta sono distinti. Le fotografie non confermano l’accessibilità attuale dei percorsi.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
   ],
-  "ricercheEsterneVerificate": []
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-capri",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-capri-ef7bc2cc6c",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 4,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 0,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 6,
+    "risultatiLetti": 181,
+    "pagineFotograficheFlickrVerificate": 9,
+    "riscontriFlickr": "../ricerche/2026-10-20-flickr.json",
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
 }

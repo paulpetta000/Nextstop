@@ -1,34 +1,45 @@
 {
-  "controllato": "2026-10-19",
-  "revisione": "qualita-e-riuso-v2",
+  "controllato": "2026-10-20",
+  "revisione": "obiettivo-3-4-v3",
   "baseGit": "24364b7e4b2242bd5e6dee244fcbc061bfe6893c",
   "conteggi": {
     "entita": 92,
     "tappe": 60,
     "locali": 32,
     "schedeRevisionate": 92,
-    "fotoRevisionate": 225,
+    "fotoRevisionate": 277,
     "candidateRicercaPrecedente": 154,
-    "candidateAggiunte": 17,
-    "candidateTotali": 171,
+    "candidateAggiunte": 69,
+    "candidateTotali": 223,
     "fotoEsistentiRevisionate": 54,
-    "proposte": 31,
-    "proposteNuoveCandidate": 19,
-    "proposteEsistenti": 12,
-    "schedeConProposte": 24,
-    "tappeConProposte": 24,
+    "proposte": 76,
+    "proposteNuoveCandidate": 65,
+    "proposteEsistenti": 11,
+    "schedeConProposte": 26,
+    "tappeConProposte": 26,
     "localiConProposte": 0,
-    "schedeSenzaProposte": 68,
-    "escluse": 194,
+    "schedeSenzaProposte": 66,
+    "escluse": 201,
     "escluseConDirittiAperti": 90,
-    "escluseSenzaDirittiAperti": 104,
-    "originaliProposteScaricati": 31,
-    "proposteConCredito": 28,
+    "escluseSenzaDirittiAperti": 111,
+    "originaliProposteScaricati": 76,
+    "proposteConCredito": 73,
     "proposteSenzaCreditoObbligatorio": 3,
     "risorseGestoriArchiviateEscluse": 49,
-    "fotoFlickrVerificate": 12,
-    "fotoFlickrProposte": 0,
-    "piattiProposti": 0
+    "fotoFlickrVerificate": 100,
+    "fotoFlickrProposte": 2,
+    "piattiProposti": 0,
+    "schedeConAlmenoTre": 19,
+    "schedeConQuattro": 7,
+    "schedeSottoTre": 73,
+    "mancantiPerTre": 207,
+    "mancantiPerQuattro": 292,
+    "nuoveFotografieEsaminateInScheda": 52,
+    "nuoveProposteQuestoGiro": 48,
+    "propostePrecedentiSostituite": 3,
+    "pagineFlickrRiletteQuestoGiro": 88,
+    "ricercheQuestoGiro": 230,
+    "proviniOsservatiQuestoGiro": 658
   },
   "indice": [
     {
@@ -36,8 +47,10 @@
       "id": "duomo",
       "nome": "Duomo e Tesoro di San Gennaro",
       "file": "schede/tappa-duomo.json",
-      "stato": "selezione-parziale",
-      "proposte": 3
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 4,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 0
     },
     {
       "tipo": "tappa",
@@ -45,7 +58,9 @@
       "nome": "Cappella Sansevero",
       "file": "schede/tappa-sansevero.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -53,7 +68,9 @@
       "nome": "Santa Chiara e il chiostro maiolicato",
       "file": "schede/tappa-santa-chiara.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -61,7 +78,9 @@
       "nome": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
       "file": "schede/tappa-spaccanapoli.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -69,15 +88,19 @@
       "nome": "Via dei Tribunali: pizza e cibo di strada",
       "file": "schede/tappa-tribunali.json",
       "stato": "selezione-parziale",
-      "proposte": 1
+      "proposte": 2,
+      "mancantiPerTre": 1,
+      "mancantiPerQuattro": 2
     },
     {
       "tipo": "tappa",
       "id": "pio-monte",
       "nome": "Pio Monte della Misericordia",
       "file": "schede/tappa-pio-monte.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 3,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 1
     },
     {
       "tipo": "tappa",
@@ -85,7 +108,9 @@
       "nome": "Museo Archeologico Nazionale",
       "file": "schede/tappa-mann.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -93,15 +118,19 @@
       "nome": "San Lorenzo Maggiore e gli scavi",
       "file": "schede/tappa-san-lorenzo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
       "id": "napoli-sotterranea",
       "nome": "Napoli Sotterranea",
       "file": "schede/tappa-napoli-sotterranea.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 3,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 1
     },
     {
       "tipo": "tappa",
@@ -109,7 +138,9 @@
       "nome": "Museo Madre",
       "file": "schede/tappa-madre.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -117,7 +148,9 @@
       "nome": "Piazza del Plebiscito e Galleria Umberto I",
       "file": "schede/tappa-plebiscito.json",
       "stato": "selezione-parziale",
-      "proposte": 2
+      "proposte": 2,
+      "mancantiPerTre": 1,
+      "mancantiPerQuattro": 2
     },
     {
       "tipo": "tappa",
@@ -125,15 +158,19 @@
       "nome": "Palazzo Reale",
       "file": "schede/tappa-palazzo-reale.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
       "id": "san-carlo",
       "nome": "Teatro di San Carlo",
       "file": "schede/tappa-san-carlo.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 4,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 0
     },
     {
       "tipo": "tappa",
@@ -141,7 +178,9 @@
       "nome": "Castel Nuovo (Maschio Angioino)",
       "file": "schede/tappa-castel-nuovo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -149,15 +188,19 @@
       "nome": "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli",
       "file": "schede/tappa-toledo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
       "id": "galleria-borbonica",
       "nome": "Galleria Borbonica",
       "file": "schede/tappa-galleria-borbonica.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 4,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 0
     },
     {
       "tipo": "tappa",
@@ -165,23 +208,29 @@
       "nome": "Monte Echia, il belvedere di Pizzofalcone",
       "file": "schede/tappa-monte-echia.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
       "id": "borgo-marinari",
       "nome": "Borgo Marinari e Castel dell'Ovo",
       "file": "schede/tappa-borgo-marinari.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 3,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 1
     },
     {
       "tipo": "tappa",
       "id": "lungomare",
       "nome": "Il lungomare: via Partenope, via Caracciolo e Villa Comunale",
       "file": "schede/tappa-lungomare.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 3,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 1
     },
     {
       "tipo": "tappa",
@@ -189,7 +238,9 @@
       "nome": "Acquario e museo Darwin-Dohrn",
       "file": "schede/tappa-dadom.json",
       "stato": "selezione-parziale",
-      "proposte": 1
+      "proposte": 1,
+      "mancantiPerTre": 2,
+      "mancantiPerQuattro": 3
     },
     {
       "tipo": "tappa",
@@ -197,7 +248,9 @@
       "nome": "Castel Sant'Elmo",
       "file": "schede/tappa-sant-elmo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -205,7 +258,9 @@
       "nome": "Certosa e Museo di San Martino",
       "file": "schede/tappa-san-martino.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -213,7 +268,9 @@
       "nome": "Villa Floridiana e il museo della ceramica",
       "file": "schede/tappa-floridiana.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -221,31 +278,39 @@
       "nome": "La Pedamentina, da San Martino in discesa",
       "file": "schede/tappa-pedamentina.json",
       "stato": "selezione-parziale",
-      "proposte": 1
+      "proposte": 2,
+      "mancantiPerTre": 1,
+      "mancantiPerQuattro": 2
     },
     {
       "tipo": "tappa",
       "id": "catacombe",
       "nome": "Catacombe di San Gennaro",
       "file": "schede/tappa-catacombe.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 4,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 0
     },
     {
       "tipo": "tappa",
       "id": "sanita",
       "nome": "Rione Sanità e Basilica della Sanità",
       "file": "schede/tappa-sanita.json",
-      "stato": "da-completare",
-      "proposte": 0
+      "stato": "selezione-parziale",
+      "proposte": 2,
+      "mancantiPerTre": 1,
+      "mancantiPerQuattro": 2
     },
     {
       "tipo": "tappa",
       "id": "fontanelle",
       "nome": "Cimitero delle Fontanelle",
       "file": "schede/tappa-fontanelle.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 3,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 1
     },
     {
       "tipo": "tappa",
@@ -253,7 +318,9 @@
       "nome": "Museo e Real Bosco di Capodimonte",
       "file": "schede/tappa-capodimonte.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -261,31 +328,39 @@
       "nome": "Parco delle Tombe di Virgilio e Leopardi",
       "file": "schede/tappa-virgilio.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
       "id": "marechiaro",
       "nome": "Marechiaro",
       "file": "schede/tappa-marechiaro.json",
-      "stato": "da-completare",
-      "proposte": 0
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 3,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 1
     },
     {
       "tipo": "tappa",
       "id": "gaiola",
       "nome": "Parco sommerso della Gaiola",
       "file": "schede/tappa-gaiola.json",
-      "stato": "selezione-parziale",
-      "proposte": 2
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 3,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 1
     },
     {
       "tipo": "tappa",
       "id": "parco-virgiliano",
       "nome": "Parco Virgiliano",
       "file": "schede/tappa-parco-virgiliano.json",
-      "stato": "selezione-parziale",
-      "proposte": 2
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 3,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 1
     },
     {
       "tipo": "tappa",
@@ -293,7 +368,9 @@
       "nome": "Città della Scienza",
       "file": "schede/tappa-citta-scienza.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -301,15 +378,19 @@
       "nome": "San Domenico Maggiore e le arche aragonesi",
       "file": "schede/tappa-san-domenico.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
       "id": "purgatorio-ad-arco",
       "nome": "Purgatorio ad Arco, chiesa e ipogeo",
       "file": "schede/tappa-purgatorio-ad-arco.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 3,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 1
     },
     {
       "tipo": "tappa",
@@ -317,7 +398,9 @@
       "nome": "Girolamini, chiesa, museo e biblioteca",
       "file": "schede/tappa-girolamini.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -325,7 +408,9 @@
       "nome": "I tetti del Duomo",
       "file": "schede/tappa-tetti-duomo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -333,7 +418,9 @@
       "nome": "Museo Filangieri",
       "file": "schede/tappa-filangieri.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -341,7 +428,9 @@
       "nome": "San Giovanni a Carbonara",
       "file": "schede/tappa-san-giovanni-a-carbonara.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -349,7 +438,9 @@
       "nome": "Il mercato di Porta Nolana",
       "file": "schede/tappa-mercato-porta-nolana.json",
       "stato": "selezione-parziale",
-      "proposte": 1
+      "proposte": 1,
+      "mancantiPerTre": 2,
+      "mancantiPerQuattro": 3
     },
     {
       "tipo": "tappa",
@@ -357,7 +448,9 @@
       "nome": "Il mercato della Pignasecca",
       "file": "schede/tappa-pignasecca.json",
       "stato": "selezione-parziale",
-      "proposte": 1
+      "proposte": 2,
+      "mancantiPerTre": 1,
+      "mancantiPerQuattro": 2
     },
     {
       "tipo": "tappa",
@@ -365,7 +458,9 @@
       "nome": "Parco dei Ventaglieri",
       "file": "schede/tappa-ventaglieri.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -373,7 +468,9 @@
       "nome": "Villa Pignatelli, museo e giardino",
       "file": "schede/tappa-villa-pignatelli.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -381,7 +478,9 @@
       "nome": "Parco Mascagna",
       "file": "schede/tappa-parco-mascagna.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -389,7 +488,9 @@
       "nome": "Parco dei Camaldoli",
       "file": "schede/tappa-camaldoli.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -397,7 +498,9 @@
       "nome": "Parco del Poggio",
       "file": "schede/tappa-parco-poggio.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -405,7 +508,9 @@
       "nome": "Orto Botanico",
       "file": "schede/tappa-orto-botanico.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -413,7 +518,9 @@
       "nome": "Il belvedere di Sant'Antonio a Posillipo",
       "file": "schede/tappa-sant-antonio-posillipo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -421,15 +528,19 @@
       "nome": "Il belvedere di via Petrarca",
       "file": "schede/tappa-via-petrarca.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
       "id": "palazzo-donn-anna",
       "nome": "Palazzo Donn'Anna, da fuori",
       "file": "schede/tappa-palazzo-donn-anna.json",
-      "stato": "selezione-parziale",
-      "proposte": 2
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 3,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 1
     },
     {
       "tipo": "tappa",
@@ -437,7 +548,9 @@
       "nome": "Il parco della Mostra d'Oltremare",
       "file": "schede/tappa-mostra-oltremare.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -445,7 +558,9 @@
       "nome": "Pompei",
       "file": "schede/tappa-pompei.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -453,39 +568,49 @@
       "nome": "Ercolano",
       "file": "schede/tappa-ercolano.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
       "id": "vesuvio",
       "nome": "Vesuvio, il Gran Cono",
       "file": "schede/tappa-vesuvio.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 4,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 0
     },
     {
       "tipo": "tappa",
       "id": "capri",
       "nome": "Capri",
       "file": "schede/tappa-capri.json",
-      "stato": "selezione-parziale",
-      "proposte": 2
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 4,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 0
     },
     {
       "tipo": "tappa",
       "id": "ischia",
       "nome": "Ischia",
       "file": "schede/tappa-ischia.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 3,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 1
     },
     {
       "tipo": "tappa",
       "id": "procida",
       "nome": "Procida",
       "file": "schede/tappa-procida.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 4,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 0
     },
     {
       "tipo": "tappa",
@@ -493,7 +618,9 @@
       "nome": "Reggia di Caserta",
       "file": "schede/tappa-caserta.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
@@ -501,15 +628,19 @@
       "nome": "Museo ferroviario di Pietrarsa",
       "file": "schede/tappa-pietrarsa.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "tappa",
       "id": "sorrento",
       "nome": "Sorrento",
       "file": "schede/tappa-sorrento.json",
-      "stato": "selezione-parziale",
-      "proposte": 1
+      "stato": "soglia-minima-raggiunta",
+      "proposte": 3,
+      "mancantiPerTre": 0,
+      "mancantiPerQuattro": 1
     },
     {
       "tipo": "locale",
@@ -517,7 +648,9 @@
       "nome": "L'Antica Pizzeria da Michele",
       "file": "schede/locale-da-michele.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -525,7 +658,9 @@
       "nome": "Antica Pizzeria Port'Alba",
       "file": "schede/locale-port-alba.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -533,7 +668,9 @@
       "nome": "Antica Pizzeria Di Matteo",
       "file": "schede/locale-di-matteo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -541,7 +678,9 @@
       "nome": "Osteria La Chitarra",
       "file": "schede/locale-chitarra.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -549,7 +688,9 @@
       "nome": "La Locanda Gesù Vecchio",
       "file": "schede/locale-gesu-vecchio.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -557,7 +698,9 @@
       "nome": "Pasticceria Di Costanzo",
       "file": "schede/locale-di-costanzo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -565,7 +708,9 @@
       "nome": "Pizzeria Brandi",
       "file": "schede/locale-brandi.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -573,7 +718,9 @@
       "nome": "Antica Pizza Fritta da Zia Esterina Sorbillo",
       "file": "schede/locale-zia-esterina.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -581,7 +728,9 @@
       "nome": "Hosteria Toledo",
       "file": "schede/locale-hosteria-toledo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -589,7 +738,9 @@
       "nome": "Osteria Il Gobbetto",
       "file": "schede/locale-gobbetto.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -597,7 +748,9 @@
       "nome": "Trattoria da Nennella",
       "file": "schede/locale-nennella.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -605,7 +758,9 @@
       "nome": "Pasticceria Pintauro",
       "file": "schede/locale-pintauro.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -613,7 +768,9 @@
       "nome": "50 Kalò",
       "file": "schede/locale-cinquanta-kalo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -621,7 +778,9 @@
       "nome": "Pizzeria Salvo",
       "file": "schede/locale-salvo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -629,7 +788,9 @@
       "nome": "Ostaria Pignatelli",
       "file": "schede/locale-pignatelli.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -637,7 +798,9 @@
       "nome": "La Cantinella",
       "file": "schede/locale-cantinella.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -645,7 +808,9 @@
       "nome": "La Bersagliera",
       "file": "schede/locale-bersagliera.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -653,7 +818,9 @@
       "nome": "La Scialuppa",
       "file": "schede/locale-scialuppa.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -661,7 +828,9 @@
       "nome": "Terrazza Calabritto",
       "file": "schede/locale-calabritto.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -669,7 +838,9 @@
       "nome": "Chalet Ciro",
       "file": "schede/locale-chalet-ciro.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -677,7 +848,9 @@
       "nome": "Gran Caffè La Caffettiera",
       "file": "schede/locale-caffettiera.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -685,7 +858,9 @@
       "nome": "Pizzeria Gorizia 1916",
       "file": "schede/locale-gorizia.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -693,7 +868,9 @@
       "nome": "Pasticceria Bellavia",
       "file": "schede/locale-bellavia.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -701,7 +878,9 @@
       "nome": "Meatin",
       "file": "schede/locale-meatin.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -709,7 +888,9 @@
       "nome": "Pizzeria Starita a Materdei",
       "file": "schede/locale-starita.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -717,7 +898,9 @@
       "nome": "Concettina ai Tre Santi",
       "file": "schede/locale-concettina.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -725,7 +908,9 @@
       "nome": "Pasticceria Poppella",
       "file": "schede/locale-poppella.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -733,7 +918,9 @@
       "nome": "Palazzo Petrucci Pizzeria, Posillipo",
       "file": "schede/locale-petrucci-posillipo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -741,7 +928,9 @@
       "nome": "Tufò Trattoria",
       "file": "schede/locale-tufo.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -749,7 +938,9 @@
       "nome": "'A Fenestella",
       "file": "schede/locale-fenestella.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -757,7 +948,9 @@
       "nome": "Cicciotto a Marechiaro",
       "file": "schede/locale-cicciotto.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     },
     {
       "tipo": "locale",
@@ -765,7 +958,9 @@
       "nome": "Macellegria",
       "file": "schede/locale-macellegria.json",
       "stato": "da-completare",
-      "proposte": 0
+      "proposte": 0,
+      "mancantiPerTre": 3,
+      "mancantiPerQuattro": 4
     }
   ]
 }

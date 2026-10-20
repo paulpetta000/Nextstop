@@ -1,36 +1,67 @@
-# Fotografie · revisione qualitativa
+# Fotografie · ampliamento del 20 ottobre 2026
 
-**19/10/2026 · nessun inserimento nel sito, push o deploy.** La prima raccolta era troppo permissiva rispetto alla qualità richiesta: foto presenti in un archivio libero non sono automaticamente belle, HD o adatte a raccontare una visita. È stata ristretta la proposta e conservata la ricerca precedente.
+L’obiettivo è **almeno tre, preferibilmente quattro foto per ogni tappa, bar o ristorante**, con scene complementari e qualità alta. La selezione passa da 31 a **76 foto in 26 tappe/gite**: 48 nuove proposte di questo giro e tre precedenti sostituite per evitare ripetizioni. Nessuna nuova foto inserita nel sito.
 
-| Oggetto | Esito |
+| Copertura delle 92 schede | Risultato |
 | --- | ---: |
-| Schede rilette | 92: 60 tappe/gite e 32 locali |
-| Immagini revisionate | 225: 154 candidate iniziali, 54 esistenti, 17 aggiunte |
-| Proposte attuali | 31, distribuite su 24 tappe/gite |
-| Di queste, aggiuntive rispetto al sito | 19 |
-| Di queste, foto già presenti | 12 |
-| Escluse dalla proposta | 194: 90 con diritti aperti; 104 per altri filtri |
-| Schede senza proposte | 68: 36 tappe/gite e tutti i 32 locali |
-| Risorse dei gestori conservate fuori proposta | 49 |
-| Pagine fotografiche Flickr ulteriori verificate | 12, nessuna proposta |
-| Piatti dei ristoranti proposti | 0 |
+| Almeno tre foto | 19 tappe/gite |
+| Quattro foto, comprese nelle 19 precedenti | 7 |
+| Una o due foto | 7 tappe/gite |
+| Nessuna proposta | 34 tappe/gite e 32 locali |
+| Ancora sotto il minimo di tre | 73 schede |
+| Foto mancanti per portare ciascuna scheda a tre | 207 |
+| Foto mancanti per portare ciascuna scheda a quattro | 292 |
 
-I numeri misurano oggetti diversi: le 49 risorse dei gestori e le 12 verifiche Flickr non fanno parte delle 225 immagini. **Nessuna galleria è dichiarata completa.** Sono proposte di selezione da vedere, non una certificazione di perfezione fotografica o di ogni possibile diritto.
+Le quattro foto di una scheda non compensano quelle mancanti in un’altra. La soglia numerica non equivale alla copertura completa della visita: per esempio, Purgatorio ad Arco ha tre foto della chiesa ma manca ancora l’ipogeo; al Duomo manca una buona veduta riconoscibile del Tesoro.
 
-## Cosa è migliorato
+## Nuove sequenze
 
-Ogni scheda contiene ora una sequenza ordinata, gli obiettivi della galleria, ciò che manca e il motivo di esclusione delle singole foto. I dati storici restano consultabili, ma una futura IA deve leggere `galleriaProposta`, non prendere tutte le `fotoCandidate`.
+Quattro immagini per Duomo, San Carlo, Galleria Borbonica, Catacombe di San Gennaro, Vesuvio, Capri e Procida. Sequenze di tre per Pio Monte, Napoli Sotterranea, Borgo Marinari, Lungomare, Fontanelle, Marechiaro, Gaiola, Parco Virgiliano, Purgatorio ad Arco, Palazzo Donn’Anna, Ischia e Sorrento.
 
-Le proposte mantengono immagini autentiche e a colori. Scartate risorse sotto 2.000 px sul lato lungo, bianco e nero, composizioni promozionali, piatti generici e scatti poco curati. Per Porta Nolana preferita una vista della porta leggibile, senza auto dominanti: la scheda riguarda mercato e porta, non la stazione ferroviaria. Restano da cercare belle fotografie del mercato.
+Esempi di composizione:
 
-Gli originali delle 31 proposte sono stati scaricati; verificate dimensioni e integrità di decodifica. Corretto l’orientamento dei provini secondo i metadati EXIF, mantenendo gli originali integri. L’esame completo al 100% resta necessario prima dell’inserimento; una foto con molti pixel può comunque essere poco nitida. Per ogni autore non è stata accertata la professione: la selezione valuta la resa osservata, senza inventare qualifiche.
+- **San Carlo:** sala, facciata, soffitto e palco reale.
+- **Galleria Borbonica:** cisterna illuminata, scala d’accesso, altra cisterna e motociclette storiche; le nuove immagini sono pubblicate dall’associazione culturale del luogo.
+- **Catacombe:** vestibolo affrescato, galleria con loculi, affresco e altra veduta generale; una nuova immagine è pubblicata da Catacombe di Napoli.
+- **Capri:** Marina Grande, Faraglioni, tornanti di via Krupp e Piazzetta di sera.
+- **Procida:** Corricella dall’alto, architettura e scalette, attività del porto e fronte dal mare.
+- **Ischia:** spiaggia dei Pescatori, Castello Aragonese e borgo di Sant’Angelo.
 
-La ricerca è stata estesa oltre Commons: [riscontri e limiti](RICERCA-ESTESA.md). Recuperato un documento pubblico del Castello Aragonese che consente la diffusione anche su siti esterni a Wikimedia, con un perimetro preciso. Aggiunte le condizioni del Fondo Edifici di Culto: immagini pertinenti escluse dalla proposta. Non sono stati inviati messaggi né richiesti permessi.
+Le didascalie distinguono una vista dall’alto o dal mare da una scena del percorso a piedi. Le immagini non provano aperture, accessibilità, stato attuale dei lavori o inclusione di ogni ambiente nel biglietto.
 
-## Crediti e seguito
+## Profondità della ricerca
 
-Delle 31 proposte, 28 richiedono il credito fotografico e 3 non lo impongono per il regime CC0/pubblico dominio verificato. Nel catalogo la fascia visibile compare soltanto per le prime; per tutte restano accessibili fonte e metadati. [Criteri e condizioni](LICENZE.md).
+**230 interrogazioni** su tutte le 92 entità: ricerche per nomi completi e brevi, categorie precise di Commons e filtri di riuso di Flickr, con ulteriori controlli mirati. Tutti i registri di interrogazione risultano letti; alcuni contengono zero risultati e varie categorie sono state lette solo nella prima pagina. Non è una scansione completa di Internet né prova che altre foto non esistano.
 
-La ricerca dei ristoranti è ancora incompleta: gli scatti liberamente riutilizzabili trovati non raggiungono la qualità richiesta, mentre le belle foto dei gestori non hanno una concessione di riuso accertata. Non inserirle e non aprire una campagna di richieste. Cercare alternative o concessioni già pubblicate, verificando piatto e sede esatti.
+**658 provini osservati in questo giro**, inclusi omonimi, ripetizioni e risultati poi scartati: non sono 658 fotografie corrette o utilizzabili dei luoghi. Verificate 88 pagine individuali Flickr; con le 12 precedenti, 100 riscontri documentati. Due immagini Flickr entrano nella proposta: Faraglioni e Corricella, entrambe di Hervé Simon con CC BY-SA 2.0 e originale HD disponibile.
 
-Per continuare: [indice](indice.md), poi la sola scheda interessata. Il sito e il suo registro fotografico sono invariati. Le eventuali sostituzioni delle foto esistenti, la galleria scorrevole e la pubblicazione GitHub restano lavori successivi; valutazioni/API ancora rinviate. Verifiche concluse il 20/10/2026 UTC, dopo l’ultimo riscontro FEC su San Lorenzo Maggiore: [VERIFICHE.md](VERIFICHE.md).
+Scaricati e decodificati 52 nuovi originali, osservati tramite provini ricavati dagli originali. Quattro scartati dopo l’esame: navata con ponteggi, veduta ripetuta del presbiterio, panorama ostruito e immagine con cornice/supporto. In totale le schede conservano **277 fotografie revisionate**: 154 candidate iniziali, 54 esistenti e 69 aggiunte nei due approfondimenti. Questo catalogo di scheda è distinto dal più grande bacino dei risultati di ricerca.
+
+Tutte le 76 proposte hanno originale scaricato, decodifica riuscita, dimensioni native e SHA-256 registrati; lato lungo almeno 2.000 px, senza ingrandimenti artificiali. I 658 provini e l’osservazione degli originali ridimensionati non sostituiscono un controllo completo al 100%. Non è stata accertata la professione di ciascun autore e non si certificano foto «perfette» sulla base dei pixel.
+
+## Bar e ristoranti: limite ancora aperto
+
+**Tutti i 32 locali sono stati cercati**, anche quelli già senza foto. Nessun locale arriva a tre foto conformi, e nessun nuovo piatto è proposto. Non è corretto dichiarare soddisfatto il requisito per i ristoranti.
+
+I nuovi riscontri aiutano a evitare errori concreti:
+
+- Da Michele: una pizza ben fotografata di Bex Walton è della sede di **Stoke Newington, Londra**; parole chiave pubbliche e GPS dell’originale lo confermano. Altri scatti napoletani sono vecchi o con luce/inquadratura sotto il livello richiesto.
+- Di Matteo: trovata una vera pizza da asporto, con tag Napoli e GPS compatibile con il centro storico. Scartata per resa da istantanea: il luogo corretto non basta a soddisfare la richiesta estetica.
+- Starita: i piatti reperiti su Flickr riguardano Torino o New York; altri risultati Commons sono il lungomare Starita di Bari.
+- Poppella: la nuova foto pulita dell’ingresso è della sede di **via Santa Brigida**, diversa da quella censita; il ritratto con il fiocco di neve non sostituisce la foto del piatto e non documenta una liberatoria.
+- Osteria La Chitarra: altri piatti reali con licenza libera, ma flash, ombre e composizione poco adatti alla galleria richiesta.
+- Brandi, Tufò, La Cantinella e altri nomi restituiscono anche targhe, artisti, paesi e locali omonimi. Questi risultati non contano come copertura.
+
+Le 49 immagini già raccolte dai siti dei gestori restano archiviate e **fuori proposta**: il fatto che siano pubblicate sul sito ufficiale non documenta una concessione al nostro sito. Non sono stati avviati contatti, richieste, acquisti o account. La ricerca corrente resta sulle alternative gratuite; non è arrivata una scelta per ampliare il perimetro a licenze acquistabili.
+
+## Riuso e crediti
+
+**73 proposte richiedono attribuzione; tre CC0/pubblico dominio non impongono una fascia di credito.** Nel catalogo i crediti sono visibili soltanto per le prime; fonte e metadati restano disponibili per tutte. Le licenze concedono i diritti fotografici nei loro limiti: non serve chiedere di nuovo gli stessi diritti. Si rispettano autore, fonte, link alla licenza e indicazione dei provini ridimensionati e ricompressi, senza ritaglio.
+
+Restano esclusi i casi già identificati con diritti ulteriori aperti: beni statali/FEC, opere contemporanee, specifiche condizioni dei luoghi o persone predominanti senza liberatoria. Nessun nuovo permesso generale è stato dedotto dalla sola presenza in Commons o dal tag Wiki Loves Monuments. Rimane documentata la concessione pubblica del Castello Aragonese entro il perimetro della lettera conservata.
+
+## Ripresa del lavoro e consegna
+
+Partire dall’[indice](indice.md), aprire una sola scheda e leggere `copertura`, `galleriaProposta` e `daCompletare`. L’[elenco delle ricerche](ricerche/2026-10-20.json) e i [riscontri Flickr](ricerche/2026-10-20-flickr.json) servono solo se si devono approfondire ricerche pregresse. I metadati estesi dei risultati e provini osservati sono conservati compressi nel pacchetto di consegna, fuori dalla lettura ordinaria dell’IA.
+
+Il catalogo HTML consegnato separatamente incorpora solo le proposte, con filtri per almeno tre/quattro foto e schede sotto il minimo. Gli originali HD sono collegati nei dettagli. Le schede dei locali vuote restano visibili scegliendo tutte le schede o quelle sotto il minimo. [Criteri](LICENZE.md), [fonti dei diritti](fonti-diritti.json), [verifiche](VERIFICHE.md), [revisione precedente conservata](RAPPORTO-2026-10-19-REVISIONE.md).
