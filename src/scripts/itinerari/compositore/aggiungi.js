@@ -124,6 +124,7 @@ export async function apriAggiungi(prima = null, tipo = null) {
   const nessuno = () => `<div class="r-vuoto"><p><b>Niente per «${esc(q)}»</b>${filtro !== 'tutte' ? ' con il filtro di adesso.' : '.'}</p>
     ${filtro !== 'tutte' ? '<button type="button" class="f-bottone f-bottone--contorno" data-f="togli-filtri">Togli i filtri</button>' : `<p class="f-nota">Prova con il nome di un'opera, di un piatto o di una zona:</p><div class="r-prova__l">${PROVA_CERCA.slice(0, 5).map(x => `<button type="button" data-f="prova" data-v="${esc(x)}">${esc(x)}</button>`).join('')}</div>`}</div>`;
   const risultati = () => {
+    memoA.clear();
     const R = cerca(indice(), q, { ok: okF, minuti: id => (gruppoDi(T(id)) === 'gite' || nelViaggio(id) || !lista(g).length || D.gita ? null : minDi(id)) });
     if (!R) { visti = new Set(); return { html: vicine(), n: null }; }
     if (!R.tutti.length) { visti = new Set(); return { html: nessuno(), n: 0 }; }
@@ -132,7 +133,10 @@ export async function apriAggiungi(prima = null, tipo = null) {
     const conta = `<p class="r-conta" id="r-conta"><span class="num">${R.tutti.length}</span> ${R.tutti.length === 1 ? 'risultato' : 'risultati'} per «${esc(q)}»</p>`;
     return { html: `<div class="r r--2 segno-4">${conta}${riquadro(R, nuovi)}</div>`, n: R.tutti.length };
   };
-  const ids = () => candidati().filter(id => T(id).tipo === 'citta');
+  const ids = () => {
+    const R = cerca(indice(), q, { ok: okF });
+    return (R ? R.tutti.map(r => r.id) : candidati()).filter(id => T(id).tipo === 'citta' && !nelViaggio(id));
+  };
   const schedina = id => {
     if (!id) return `<p class="f-scelta__vuota">${ic('spilli', 18)}<span>Tocca una foto: vedi la tappa e la aggiungi. ${ids().length} sulla mappa.</span></p>`;
     const t = T(id);
@@ -147,22 +151,23 @@ export async function apriAggiungi(prima = null, tipo = null) {
     <div id="f-mappa-box" class="f-mappa-box" hidden><div id="f-mappa" class="f-mappa"></div><div id="f-scelta" class="f-scelta" aria-live="polite">${schedina(null)}</div></div>
     <p class="f-nota">La ricerca guarda nei nomi, in parole come «panorama» o «pizzeria» e nelle frasi dei nostri testi, che hanno le fonti in fondo alla pagina. I minuti sono quelli di strada dall'ultima tappa del giorno.</p>`;
   foglio('Aggiungi una tappa', corpo, f => {
-    quandoChiudeFoglio(() => { mappaF?.spegni(); mappaF = null; });
+    let attivo = true, annuncioT, inquadraturaT;
+    quandoChiudeFoglio(() => { attivo = false; clearTimeout(annuncioT); clearTimeout(inquadraturaT); mappaF?.spegni(); mappaF = null; });
     const input = $('#f-q', f);
     if (!q) input.addEventListener('focus', () => scriviSegnaposto(input, 'Un museo, un\'opera, un piatto…'), { once: true });
-    let annuncioT;
     const rifai = (annuncia = true) => {
       const r = risultati();
       $('#f-elenco', f).innerHTML = r.html;
       $$('.r2-fila', f).forEach(x => { x.scrollLeft = 0; });
       clearTimeout(annuncioT);
       if (annuncia && r.n != null) annuncioT = setTimeout(() => annunciaF(r.n ? `${r.n} ${r.n === 1 ? 'risultato' : 'risultati'}` : `Niente per ${q}`), 500);
-      if (mappaF) { mappaF.punti(ids()); if (scelta && !ids().includes(scelta)) scelta = null; $('#f-scelta', f).innerHTML = schedina(scelta); mappaF.evidenzia(scelta); }
+      if (mappaF) { const punti = ids(); mappaF.punti(punti); if (scelta && !punti.includes(scelta)) scelta = null; $('#f-scelta', f).innerHTML = schedina(scelta); mappaF.evidenzia(scelta); }
     };
     input.addEventListener('input', e => { q = e.target.value.trim(); rifai(); });
-    if (prima) requestAnimationFrame(() => { input.focus({ preventScroll: true }); input.setSelectionRange(q.length, q.length); });
-    const sceglie = id => { scelta = id; $('#f-scelta', f).innerHTML = schedina(id); mappaF?.evidenzia(id); };
+    if (prima) requestAnimationFrame(() => { if (!attivo) return; input.focus({ preventScroll: true }); input.setSelectionRange(q.length, q.length); });
+    const sceglie = id => { memoA.clear(); scelta = id; $('#f-scelta', f).innerHTML = schedina(id); mappaF?.evidenzia(id); };
     const mostra = v => {
+      memoA.clear();
       $$('[data-fv]', f).forEach(x => x.setAttribute('aria-pressed', String(x.dataset.fv === v)));
       $('#f-elenco', f).hidden = v !== 'elenco';
       $('#f-mappa-box', f).hidden = v !== 'mappa';
@@ -170,9 +175,9 @@ export async function apriAggiungi(prima = null, tipo = null) {
         mappaF = new Mappa($('#f-mappa', f), { punto: id => sceglie(id), tocca: id => apriScheda(id), margini: () => ({ t: 34, r: 30, b: 34, l: 30 }), distanza: 30 });
         mappaF.disegna(G(g), { disegna: false, punti: ids(), n: g + 1 });
         mappaF.mostraTutte(true, false);
-        setTimeout(() => mappaF?.inquadra(0, ids().sort((a, b) => minDi(a) - minDi(b)).slice(0, 12)), 60);
+        inquadraturaT = setTimeout(() => { if (attivo) mappaF?.inquadra(0, ids().sort((a, b) => minDi(a) - minDi(b)).slice(0, 12)); }, 60);
       }
-      if (v === 'mappa') requestAnimationFrame(() => $('#f-mappa-box', f).scrollIntoView({ block: 'nearest', behavior: piano() ? 'smooth' : 'auto' }));
+      if (v === 'mappa') requestAnimationFrame(() => { if (attivo) $('#f-mappa-box', f).scrollIntoView({ block: 'nearest', behavior: piano() ? 'smooth' : 'auto' }); });
     };
     f.onclick = async e => {
       if (e.target === f) { chiudiFoglio(); return; }

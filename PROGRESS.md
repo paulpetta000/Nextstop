@@ -2,7 +2,13 @@
 
 _Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · trascinamento (20 ottobre)
+## Revisione corrente · ricerca e mappa (20 ottobre)
+
+Elenco e mappa seguono testo e filtri della stessa ricerca; selezioni non più trovate tolte, minuti ricalcolati alle interazioni e richiami differiti disattivati alla chiusura. **470/470 test**, dieci aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-20-revisione-codice-28.md).
+
+Prosegue il lavoro continuativo: Enrico ha ribadito alle **12:00:35 UTC** un minimo di **40 minuti da quella richiesta**, senza nuovi OK fra i gruppi. Nessun browser o pubblicazione. Seguito su corrispondenza dei nomi brevi e suggerimenti di riordino; area 3 aperta. Nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · trascinamento (20 ottobre)
 
 Scorrimento automatico limitato alle tappe, bordi del pannello desktop rispettati e annullamento completo su perdita della cattura, Escape, cambio di finestra o dimensioni. Un secondo puntatore non avvia un gesto concorrente. **460/460 test**, nove aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-20-revisione-codice-27.md).
 
