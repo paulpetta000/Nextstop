@@ -31,9 +31,9 @@ Da **451 a 500 prove: 49 aggiunte**. Confronto della ricerca su **947 query / 92
 
 ## Mandato e stato del piano
 
-Ripresa operativa il **20 ottobre alle 11:54:32 UTC**. La pausa della chat dal 18 ottobre non conta come lavoro. Enrico ha ribadito alle **12:00:35 UTC** almeno **40 minuti da quella richiesta**, continuando fra gruppi collegati senza nuovi OK. Chiusura e durata da annotare dopo il riallineamento del piano.
+Ripresa operativa il **20 ottobre alle 11:54:32 UTC**. La pausa della chat dal 18 ottobre non conta come lavoro. Enrico ha ribadito alle **12:00:35 UTC** almeno **40 minuti da quella richiesta**, continuando fra gruppi collegati senza nuovi OK. Minimo verificato alle **12:40:41 UTC**: oltre **46 minuti dalla ripresa** e **40 minuti dalla richiesta**, con sette gruppi e riallineamento finale. Codice verificato **b292c8b**. Gli ultimi cambiamenti sono soltanto documentali: test e build non ripetuti senza nuovi input eseguibili.
 
-Area 3 ancora aperta: seguito sui comandi asincroni dei fogli, schede e altri moduli non ancora coperti. Numero di test e build riuscita non equivalgono ad audit completo. Prove native di gesti, compattazione, focus, lettori di schermo e GPS sul telefono restano pendenti finché il browser è escluso. Righe storiche del trascinamento conservate: scorrimento corretto nel codice, prova nativa pendente; compattazione ancora aperta.
+Area 3 ancora aperta: seguito sui comandi asincroni dei fogli (ritorno dopo caricamento di calendario/ore), schede e altri moduli non ancora coperti. Numero di test e build riuscita non equivalgono ad audit completo. Prove native di gesti, compattazione, focus, lettori di schermo e GPS sul telefono restano pendenti finché il browser è escluso. Righe storiche del trascinamento conservate: scorrimento corretto nel codice, prova nativa pendente; compattazione ancora aperta.
 
 Le altre sette aree del piano originale conservano il loro stato: istruzioni/consumi solo audit statico; dati e fonti con verifiche editoriali pendenti; Search Console solo da esportazioni scelte da Enrico; interfaccia da verificare visivamente; manutenzione/CI della versione locale da eseguire al rilascio; organizzazione senza cancellazioni; valore del prodotto ancora da confrontare su casi validati.
 

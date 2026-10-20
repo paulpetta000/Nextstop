@@ -1,12 +1,12 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 18/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
+_Aggiornato il 20/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
 ## Revisione corrente · orari e sette gruppi (20 ottobre)
 
 Selettore delle ore funzionante anche per giorno vuoto o gita; frecce limitate alle ore abilitate per Inizio/Fine. **500/500 test**, quattro aggiunte nel gruppo e **49 nella ripresa**; build di **12 pagine**, **811 link validi**, **82 risorse offline** tutte presenti. [Sette gruppi, prove, errore di Node e limiti](docs/storico/2026-10-20-revisione-codice-33.md).
 
-Prosegue il minimo di **40 minuti dalle 12:00:35 UTC** con riallineamento e verifica finale del piano. Tutto locale, area 3 ancora aperta; nessun browser o pubblicazione. Dati sorgente invariati e nuova idea rinviata anche nell'analisi.
+Ripresa del 20/10 dalle **11:54:32 UTC**; minimo di 40 minuti richiesto alle **12:00:35 UTC**, verificato alle **12:40:41 UTC**: oltre **46 minuti** nella ripresa e **40 minuti dalla richiesta**, senza nuovi OK fra i gruppi. Codice verificato **b292c8b**; piano originale e registri riallineati. Tutto locale, area 3 ancora aperta; nessun browser o pubblicazione. Dati sorgente invariati e nuova idea rinviata anche nell'analisi.
 
 ## Revisione precedente · caricamento mappa e gesti (20 ottobre)
 

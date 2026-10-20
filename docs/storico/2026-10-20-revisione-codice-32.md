@@ -33,7 +33,7 @@ Da **451 a 496 prove: 45 aggiunte**, con controlli comuni alla fine di ciascun g
 
 ## Mandato, limiti e seguito
 
-Ripresa operativa del 20 ottobre alle **11:54:32 UTC**, dopo l'interruzione della chat del 18 ottobre. Il tempo dell'interruzione e delle attese non viene contato come lavoro. Enrico ha ribadito alle **12:00:35 UTC** un minimo di **40 minuti da quella richiesta**, senza nuovi OK fra i gruppi. Prosegue la revisione finale e il riallineamento dei registri; chiusura da annotare al termine.
+Ripresa operativa del 20 ottobre alle **11:54:32 UTC**, dopo l'interruzione della chat del 18 ottobre. Il tempo dell'interruzione e delle attese non viene contato come lavoro. Enrico ha ribadito alle **12:00:35 UTC** un minimo di **40 minuti da quella richiesta**, senza nuovi OK fra i gruppi. Il seguito sugli orari e la chiusura della ripresa sono nel [resoconto 33](2026-10-20-revisione-codice-33.md), con i controlli finali successivi.
 
 Area 3 ancora aperta: seguito sui comandi dei fogli/orari, schede e altri moduli non ancora coperti; nessuna percentuale di audit completo dedotta dal numero di test. Interfaccia nativa e fluidità del trascinamento, focus, GPS sul telefono e controlli visivi restano pendenti finché il browser è escluso. La riga storica sullo scorrimento è corretta nel codice locale, con verifica nativa pendente; la riga sulla compattazione resta aperta.
 
