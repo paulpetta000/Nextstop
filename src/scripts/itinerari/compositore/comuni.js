@@ -12,12 +12,16 @@ export function ricordaVista(v) { try { localStorage.setItem(CHIAVE_VISTA, v); }
 
 // ---------- il foglio che sale (finestra modale) ----------
 export const foglioEl = () => $('#foglio');
-let spegniF = null;
+let spegniF = null, cicloF = 0, chiusuraF = null;
+const ripulisciFoglio = () => { const fn = spegniF; spegniF = null; chiusuraF = null; fn?.(); };
+// Ogni apertura ha un contesto proprio, anche se riusa lo stesso elemento dialog.
+export const contestoFoglio = () => { const f = foglioEl(), ciclo = cicloF; return () => f === foglioEl() && !!f?.open && ciclo === cicloF && !chiusuraF; };
 export const quandoChiudeFoglio = fn => { spegniF = fn; };
 export function foglio(titolo, corpo, dopoAperto, cl = '') {
   const f = foglioEl();
-  spegniF?.(); spegniF = null;
+  cicloF++; ripulisciFoglio();
   f.className = cl;
+  f.classList.remove('f-esce');
   f.innerHTML = `<div class="f-testa"><span class="f-maniglia" aria-hidden="true"></span><h2 id="f-titolo">${esc(titolo)}</h2><button type="button" class="f-chiudi" aria-label="Chiudi: ${esc(titolo)}">${ic('x')}</button></div><div class="f-corpo">${corpo}</div>`;
   $('.f-chiudi', f).onclick = () => chiudiFoglio();
   f.onclick = null; f.onchange = null; f.onkeydown = null; f.oninput = null;
@@ -27,10 +31,17 @@ export function foglio(titolo, corpo, dopoAperto, cl = '') {
 }
 export async function chiudiFoglio() {
   const f = foglioEl();
-  if (!f.open) return;
-  if (piano()) { f.classList.add('f-esce'); await new Promise(r => setTimeout(r, 240)); f.classList.remove('f-esce'); }
-  f.close();
-  spegniF?.(); spegniF = null;
+  if (!f.open) return false;
+  if (chiusuraF?.ciclo === cicloF) return chiusuraF.promessa;
+  const chiusura = { ciclo: cicloF, promessa: null };
+  chiusuraF = chiusura;
+  chiusura.promessa = (async () => {
+    if (piano()) { f.classList.add('f-esce'); await new Promise(r => setTimeout(r, 240)); }
+    if (chiusura.ciclo !== cicloF || !f.open) return false;
+    f.classList.remove('f-esce'); f.close(); cicloF++; ripulisciFoglio();
+    return true;
+  })();
+  return chiusura.promessa;
 }
 // ridisegna il contenuto vivo del foglio e rimette il fuoco sullo stesso comando
 export function rinfresca(f, html, b) {
@@ -45,11 +56,12 @@ export function preparaFoglio() {
   const f = foglioEl();
   f.addEventListener('click', e => { if (e.target === f) chiudiFoglio(); });
   f.addEventListener('cancel', e => { e.preventDefault(); chiudiFoglio(); });
+  f.addEventListener('close', () => { if (f.open) return; cicloF++; f.classList.remove('f-esce'); ripulisciFoglio(); });
   // tirando giù dalla testa
   let tiro = null;
   f.addEventListener('pointerdown', e => { if (!e.target.closest('.f-testa') || e.target.closest('button')) return; tiro = { y: e.clientY }; f.setPointerCapture(e.pointerId); });
   f.addEventListener('pointermove', e => { if (!tiro) return; f.style.translate = `0 ${Math.max(0, e.clientY - tiro.y)}px`; });
-  f.addEventListener('pointerup', e => { if (!tiro) return; const dy = e.clientY - tiro.y; tiro = null; f.style.translate = ''; if (dy > 90) { f.close(); spegniF?.(); spegniF = null; } });
+  f.addEventListener('pointerup', e => { if (!tiro) return; const dy = e.clientY - tiro.y; tiro = null; f.style.translate = ''; if (dy > 90) chiudiFoglio(); });
   tiraPerChiudere(f, { pronto: () => f.open, scorre: () => f, pannello: () => f, chiudi: () => chiudiFoglio() });
 }
 

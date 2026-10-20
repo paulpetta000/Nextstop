@@ -2,7 +2,13 @@
 
 _Aggiornato il 20/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · orari e sette gruppi (20 ottobre)
+## Revisione corrente · ciclo dei fogli (20 ottobre, seconda ripresa)
+
+Chiusure animate legate alla propria apertura; richieste concorrenti condivise, pulizia nativa gestita e contesto disponibile per i caricamenti successivi. **506/506 test**, sei aggiunte; build di **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-20-revisione-codice-34.md).
+
+Nuova sessione richiesta da Enrico di almeno **40 minuti**, iniziata alle **14:06:49 UTC**. Prosegue sui caricamenti tardivi di calendario, ore e schede, senza nuovi OK fra i gruppi. Browser e pubblicazione esclusi; nuova idea rinviata anche nell'analisi.
+
+## Revisione precedente · orari e sette gruppi (20 ottobre)
 
 Selettore delle ore funzionante anche per giorno vuoto o gita; frecce limitate alle ore abilitate per Inizio/Fine. **500/500 test**, quattro aggiunte nel gruppo e **49 nella ripresa**; build di **12 pagine**, **811 link validi**, **82 risorse offline** tutte presenti. [Sette gruppi, prove, errore di Node e limiti](docs/storico/2026-10-20-revisione-codice-33.md).
 
