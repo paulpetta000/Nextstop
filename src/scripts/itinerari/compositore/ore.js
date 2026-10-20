@@ -20,7 +20,7 @@ const hh = m => `<span class="ore-h">${Math.floor(m / 60)}</span><span class="or
 let g = 0, modo = 'inizio', dopo = null;
 const O = () => ({ inizio: X().giorni[g].inizio, fine: X().giorni[g].fine });
 // la giornata calcolata, con la frase di quando finisci: la stessa di «Data e orari» (fogli.js)
-const giornata = () => fineDelGiorno(g);
+const giornata = () => fineDelGiorno(g) ?? { st: null, oltre: false, fuori: [], frase: '' };
 
 const piede = () => {
   const e = giornata(), o = O();
@@ -130,7 +130,8 @@ function prepara() {
     const y = { ArrowLeft: m - 15, ArrowRight: m + 15, ArrowUp: m - 60, ArrowDown: m + 60, PageUp: m - 180, PageDown: m + 180, Home: m - q, End: m - q + 45 }[e.key];
     if (y == null) return;
     e.preventDefault();
-    const t = $(`.ore-q[data-m="${Math.min(FINE_MAX, Math.max(INIZIO_MIN, y))}"]`, d); if (!t) return;
+    const minimo = modo === 'inizio' ? INIZIO_MIN : FINE_MIN, massimo = modo === 'inizio' ? INIZIO_MAX : FINE_MAX;
+    const t = $(`.ore-q[data-m="${Math.min(massimo, Math.max(minimo, y))}"]`, d); if (!t) return;
     b.tabIndex = -1; t.tabIndex = 0; t.focus({ preventScroll: true }); t.scrollIntoView({ block: 'nearest' });
   });
 }
