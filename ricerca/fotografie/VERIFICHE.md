@@ -27,3 +27,9 @@ Verificato ora in Chromium e Playwright attraverso un server locale temporaneo; 
 - Nessun errore JavaScript e nessuna richiesta esterna automatica osservati. I link alla fonte e all’originale richiedono rete solo quando aperti.
 
 Il file HTML è un catalogo di ricerca: non è la galleria del sito e non approva la pubblicazione delle proposte. Il pacchetto separato conserva anche dati estesi compressi, ricevute dei controlli e documenti di fonte; questi file non vengono caricati dagli input della build o dalla lettura breve dell’IA.
+
+## Salvataggio portabile richiesto nello stesso giorno
+
+Archiviati nel repository 76 originali integri (436.348.255 byte) e 76 anteprime, con indice delle licenze, crediti, percorsi nelle schede e catalogo HTML a percorsi relativi. Verificati SHA-256 e decodifica di ciascun originale, collegamenti locali, corrispondenza con la sequenza proposta, assenza di immagini escluse nell’archivio e documento del Castello Aragonese identico alla fonte scaricata. Nessun file sopra 100 MiB. Le prove estese e le ricevute precedenti sono conservate in `ricerche/`; le verifiche di conservazione del giro precedente restano riferite al loro commit. [Ricevuta dell’archivio](ricerche/verifica-archivio-2026-10-20.json). Gli input del sito rimangono invariati; l’integrazione su main è stata richiesta espressamente da Enrico.
+
+Il catalogo archiviato con immagini relative è stato ricontrollato in Chromium: 76 anteprime caricate, 73 crediti visibili, filtri e scorrimento funzionanti a 320/390/1.280 px, nessun errore JavaScript o richiesta esterna automatica. [Ricevuta del catalogo archiviato](ricerche/verifica-catalogo-archiviato-2026-10-20.json).

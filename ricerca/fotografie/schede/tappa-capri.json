@@ -170,7 +170,14 @@
         ],
         "sha256": "02fd21a9014f5be4853979be952bc07b8b8ca84500698f7f1916f6abe56a8393"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-capri/foto-capri-0ef26433ab.jpg",
+        "anteprima": "../foto/anteprime/tappa-capri/foto-capri-0ef26433ab.jpg",
+        "sha256": "02fd21a9014f5be4853979be952bc07b8b8ca84500698f7f1916f6abe56a8393",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-capri-b61be0083f",
@@ -208,7 +215,14 @@
         "sha256": "1fabe2fe575fd5c703bfc656a372ad1331d4fa6287fac5ad37e362fc3042bc25"
       },
       "ricercaAggiunta": "2026-10-20",
-      "attribuzioneDichiarata": "Berthold Werner"
+      "attribuzioneDichiarata": "Berthold Werner",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-capri/foto-capri-b61be0083f.jpg",
+        "anteprima": "../foto/anteprime/tappa-capri/foto-capri-b61be0083f.jpg",
+        "sha256": "1fabe2fe575fd5c703bfc656a372ad1331d4fa6287fac5ad37e362fc3042bc25",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-capri-6a9f7690d7",
@@ -245,7 +259,14 @@
         ],
         "sha256": "4218f52110b7c92ec3f23102e945bb8a1cdac08ff98497bacaccb7a64b06bebc"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-capri/foto-capri-6a9f7690d7.jpg",
+        "anteprima": "../foto/anteprime/tappa-capri/foto-capri-6a9f7690d7.jpg",
+        "sha256": "4218f52110b7c92ec3f23102e945bb8a1cdac08ff98497bacaccb7a64b06bebc",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",
@@ -285,6 +306,13 @@
         3557
       ],
       "sha256": "8cfd53ba454cab6ae7e8456074d924c202590fef7bf07080e050d1309938f0dc"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-capri/esistente-tp-capri.jpg",
+      "anteprima": "../foto/anteprime/tappa-capri/esistente-tp-capri.jpg",
+      "sha256": "8cfd53ba454cab6ae7e8456074d924c202590fef7bf07080e050d1309938f0dc",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
     }
   },
   "galleriaProposta": [

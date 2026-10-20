@@ -54,6 +54,13 @@
           3631
         ],
         "sha256": "b1eed0570114e5472130c3bb1ee2daffcadfdbaaef8c5d9cf8e774b3e2065897"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-plebiscito/foto-plebiscito-ecddfe6fab.jpg",
+        "anteprima": "../foto/anteprime/tappa-plebiscito/foto-plebiscito-ecddfe6fab.jpg",
+        "sha256": "b1eed0570114e5472130c3bb1ee2daffcadfdbaaef8c5d9cf8e774b3e2065897",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {
@@ -95,6 +102,13 @@
           8670
         ],
         "sha256": "7228ca6600f342ebf5da0f829fee241e80c074991bc1e51bfc5435f08459b18a"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-plebiscito/foto-plebiscito-de60218196.jpg",
+        "anteprima": "../foto/anteprime/tappa-plebiscito/foto-plebiscito-de60218196.jpg",
+        "sha256": "7228ca6600f342ebf5da0f829fee241e80c074991bc1e51bfc5435f08459b18a",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {

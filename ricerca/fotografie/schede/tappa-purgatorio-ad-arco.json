@@ -96,6 +96,13 @@
           3240
         ],
         "sha256": "684400e0097f6ef9bc51fc0821da7aab0e43794660bfb88c79085b9fdd111514"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-purgatorio-ad-arco/foto-purgatorio-ad-arco-a53b1789bb.jpg",
+        "anteprima": "../foto/anteprime/tappa-purgatorio-ad-arco/foto-purgatorio-ad-arco-a53b1789bb.jpg",
+        "sha256": "684400e0097f6ef9bc51fc0821da7aab0e43794660bfb88c79085b9fdd111514",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {
@@ -168,7 +175,14 @@
         ],
         "sha256": "1f30ea514d059a1a683212f7994cc85bbd3b170378d4f42d432c09a2d34ee07c"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-purgatorio-ad-arco/foto-purgatorio-ad-arco-8d056dbef3.jpg",
+        "anteprima": "../foto/anteprime/tappa-purgatorio-ad-arco/foto-purgatorio-ad-arco-8d056dbef3.jpg",
+        "sha256": "1f30ea514d059a1a683212f7994cc85bbd3b170378d4f42d432c09a2d34ee07c",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-purgatorio-ad-arco-7313cd3955",
@@ -205,7 +219,14 @@
         ],
         "sha256": "1c79747fcd0d9a15abdfc3cf109d9adade24337c3d8c2110220a74dce49fd544"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-purgatorio-ad-arco/foto-purgatorio-ad-arco-7313cd3955.jpg",
+        "anteprima": "../foto/anteprime/tappa-purgatorio-ad-arco/foto-purgatorio-ad-arco-7313cd3955.jpg",
+        "sha256": "1c79747fcd0d9a15abdfc3cf109d9adade24337c3d8c2110220a74dce49fd544",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-purgatorio-ad-arco-7f2b52bf99",

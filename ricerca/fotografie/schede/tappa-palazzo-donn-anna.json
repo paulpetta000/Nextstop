@@ -132,7 +132,14 @@
         ],
         "sha256": "466c43cd4084688ff0f47f9c8ba59d0239814707b8187f41190be5cbfbc41c46"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-palazzo-donn-anna/foto-palazzo-donn-anna-5c113ad757.jpg",
+        "anteprima": "../foto/anteprime/tappa-palazzo-donn-anna/foto-palazzo-donn-anna-5c113ad757.jpg",
+        "sha256": "466c43cd4084688ff0f47f9c8ba59d0239814707b8187f41190be5cbfbc41c46",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-palazzo-donn-anna-2cb510f5e2",
@@ -169,7 +176,14 @@
         ],
         "sha256": "96c0cc99d8fa15caa27b5aeea6ed9aae0b8acc2c67b04a6b5936e25d2519cd33"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-palazzo-donn-anna/foto-palazzo-donn-anna-2cb510f5e2.jpg",
+        "anteprima": "../foto/anteprime/tappa-palazzo-donn-anna/foto-palazzo-donn-anna-2cb510f5e2.jpg",
+        "sha256": "96c0cc99d8fa15caa27b5aeea6ed9aae0b8acc2c67b04a6b5936e25d2519cd33",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",
@@ -209,6 +223,13 @@
         3367
       ],
       "sha256": "87efd81b2f5ac8d1ef8a47fc22ab3b2f103cd431eaa0aa269596cd72f288de10"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-palazzo-donn-anna/esistente-tp-donn-anna.jpg",
+      "anteprima": "../foto/anteprime/tappa-palazzo-donn-anna/esistente-tp-donn-anna.jpg",
+      "sha256": "87efd81b2f5ac8d1ef8a47fc22ab3b2f103cd431eaa0aa269596cd72f288de10",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
     }
   },
   "galleriaProposta": [

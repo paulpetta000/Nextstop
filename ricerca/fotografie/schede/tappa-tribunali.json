@@ -52,6 +52,13 @@
           2634
         ],
         "sha256": "790ab1fb67ed2c99924f386a088a848d0886cbd76eb8ac7031e3359445c30846"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-tribunali/foto-tribunali-9bc42e936f.jpg",
+        "anteprima": "../foto/anteprime/tappa-tribunali/foto-tribunali-9bc42e936f.jpg",
+        "sha256": "790ab1fb67ed2c99924f386a088a848d0886cbd76eb8ac7031e3359445c30846",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {
@@ -149,7 +156,14 @@
         "sha256": "6fc42128c72437c2f5c6185718ce713cf287ef2f6aed1832eaedfc3e5911d644"
       },
       "ricercaAggiunta": "2026-10-20",
-      "attribuzioneDichiarata": "© José Luiz Bernardes Ribeiro"
+      "attribuzioneDichiarata": "© José Luiz Bernardes Ribeiro",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-tribunali/foto-tribunali-39217e52c0.jpg",
+        "anteprima": "../foto/anteprime/tappa-tribunali/foto-tribunali-39217e52c0.jpg",
+        "sha256": "6fc42128c72437c2f5c6185718ce713cf287ef2f6aed1832eaedfc3e5911d644",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "selezione-parziale",

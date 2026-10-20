@@ -118,7 +118,14 @@
         "sha256": "489da6cb3004041fb177a3f60df95a249531c35f9117203886dd901bc882820f"
       },
       "ricercaAggiunta": "2026-10-20",
-      "attribuzioneDichiarata": "Berthold Werner"
+      "attribuzioneDichiarata": "Berthold Werner",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-sorrento/foto-sorrento-d8fa5731b5.jpg",
+        "anteprima": "../foto/anteprime/tappa-sorrento/foto-sorrento-d8fa5731b5.jpg",
+        "sha256": "489da6cb3004041fb177a3f60df95a249531c35f9117203886dd901bc882820f",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-sorrento-361c53b99a",
@@ -156,7 +163,14 @@
         "sha256": "48c96b4d73cf2047ecaa73955acc59df9f3dc381ac9b9846e08de5193da4e955"
       },
       "ricercaAggiunta": "2026-10-20",
-      "attribuzioneDichiarata": "Berthold Werner"
+      "attribuzioneDichiarata": "Berthold Werner",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-sorrento/foto-sorrento-361c53b99a.jpg",
+        "anteprima": "../foto/anteprime/tappa-sorrento/foto-sorrento-361c53b99a.jpg",
+        "sha256": "48c96b4d73cf2047ecaa73955acc59df9f3dc381ac9b9846e08de5193da4e955",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",
@@ -196,6 +210,13 @@
         2566
       ],
       "sha256": "a76c6f6083c9f0afb131618a8add913b393716dc4fea6c728849d34418be31e0"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-sorrento/esistente-tp-sorrento.jpg",
+      "anteprima": "../foto/anteprime/tappa-sorrento/esistente-tp-sorrento.jpg",
+      "sha256": "a76c6f6083c9f0afb131618a8add913b393716dc4fea6c728849d34418be31e0",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
     }
   },
   "galleriaProposta": [

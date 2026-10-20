@@ -144,7 +144,14 @@
         ],
         "sha256": "393766b92542e3e21d914703e4895e00c3b890959b2d6345457f70b166eb491a"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-napoli-sotterranea/foto-napoli-sotterranea-454c96f953.jpg",
+        "anteprima": "../foto/anteprime/tappa-napoli-sotterranea/foto-napoli-sotterranea-454c96f953.jpg",
+        "sha256": "393766b92542e3e21d914703e4895e00c3b890959b2d6345457f70b166eb491a",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-napoli-sotterranea-290e1f90c9",
@@ -181,7 +188,14 @@
         ],
         "sha256": "19ccaf21abd5e0b11a3007df5afd5a02b0ab7497442483420068fdf12e21a896"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-napoli-sotterranea/foto-napoli-sotterranea-290e1f90c9.jpg",
+        "anteprima": "../foto/anteprime/tappa-napoli-sotterranea/foto-napoli-sotterranea-290e1f90c9.jpg",
+        "sha256": "19ccaf21abd5e0b11a3007df5afd5a02b0ab7497442483420068fdf12e21a896",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",
@@ -221,6 +235,13 @@
         4086
       ],
       "sha256": "26c90ef14066ea3d158c0ba6df923fefc892981a73db1f74456bbdddb7f22d0f"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-napoli-sotterranea/esistente-tp-napoli-sotterranea.jpg",
+      "anteprima": "../foto/anteprime/tappa-napoli-sotterranea/esistente-tp-napoli-sotterranea.jpg",
+      "sha256": "26c90ef14066ea3d158c0ba6df923fefc892981a73db1f74456bbdddb7f22d0f",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
     }
   },
   "galleriaProposta": [

@@ -111,7 +111,14 @@
         ],
         "sha256": "35343685011a0aa129e5025f487546ebd6f2a0f0b3a5b27a4349ac2f9abe0c49"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-catacombe/foto-catacombe-5f94fecbf6.jpg",
+        "anteprima": "../foto/anteprime/tappa-catacombe/foto-catacombe-5f94fecbf6.jpg",
+        "sha256": "35343685011a0aa129e5025f487546ebd6f2a0f0b3a5b27a4349ac2f9abe0c49",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-catacombe-b521e68286",
@@ -148,7 +155,14 @@
         ],
         "sha256": "a111a29205731c25e9bb5d4f9b71ce420a6ce15d62f02b5bd25c0a927a30868b"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-catacombe/foto-catacombe-b521e68286.jpg",
+        "anteprima": "../foto/anteprime/tappa-catacombe/foto-catacombe-b521e68286.jpg",
+        "sha256": "a111a29205731c25e9bb5d4f9b71ce420a6ce15d62f02b5bd25c0a927a30868b",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-catacombe-f213864dba",
@@ -185,7 +199,14 @@
         ],
         "sha256": "fc41bd70a041bbeb088e11763849f0ac2e2db8601aa080fcc780de32ebeac7b8"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-catacombe/foto-catacombe-f213864dba.jpg",
+        "anteprima": "../foto/anteprime/tappa-catacombe/foto-catacombe-f213864dba.jpg",
+        "sha256": "fc41bd70a041bbeb088e11763849f0ac2e2db8601aa080fcc780de32ebeac7b8",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",
@@ -225,6 +246,13 @@
         4000
       ],
       "sha256": "25828a6a69650f8dc8ab67e07e0d05fcacb99636df78992ebe530320993d0310"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-catacombe/esistente-tp-catacombe.jpg",
+      "anteprima": "../foto/anteprime/tappa-catacombe/esistente-tp-catacombe.jpg",
+      "sha256": "25828a6a69650f8dc8ab67e07e0d05fcacb99636df78992ebe530320993d0310",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
     }
   },
   "galleriaProposta": [

@@ -54,6 +54,13 @@
           4035
         ],
         "sha256": "361f8524b839887345fed8a06f14d64ed83068d09d6c9a9e967605fe46fb4525"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-dadom/foto-dadom-f2ae4fda4c.jpg",
+        "anteprima": "../foto/anteprime/tappa-dadom/foto-dadom-f2ae4fda4c.jpg",
+        "sha256": "361f8524b839887345fed8a06f14d64ed83068d09d6c9a9e967605fe46fb4525",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     }
   ],

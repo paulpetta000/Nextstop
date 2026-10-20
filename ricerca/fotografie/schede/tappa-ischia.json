@@ -89,6 +89,13 @@
           3287
         ],
         "sha256": "a9bec96850409b2793ab0bfc0ae8b11c0cc7c000f8cdf159423570d3cbd7766c"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-ischia/foto-ischia-6216f500c1.jpg",
+        "anteprima": "../foto/anteprime/tappa-ischia/foto-ischia-6216f500c1.jpg",
+        "sha256": "a9bec96850409b2793ab0bfc0ae8b11c0cc7c000f8cdf159423570d3cbd7766c",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {
@@ -159,7 +166,14 @@
         ],
         "sha256": "3b1fe360f4eca2667bd7b2ca1abbc1a8982358997d4eb3ce6ff653218d556371"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-ischia/foto-ischia-1e5b5641f4.jpg",
+        "anteprima": "../foto/anteprime/tappa-ischia/foto-ischia-1e5b5641f4.jpg",
+        "sha256": "3b1fe360f4eca2667bd7b2ca1abbc1a8982358997d4eb3ce6ff653218d556371",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-ischia-0b5d44f78e",
@@ -233,7 +247,14 @@
         ],
         "sha256": "248a2059aefcc27acaa6d52004183deb5438c89f147dcb0d1af674e5d354a2d1"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-ischia/foto-ischia-45e26cc0d5.jpg",
+        "anteprima": "../foto/anteprime/tappa-ischia/foto-ischia-45e26cc0d5.jpg",
+        "sha256": "248a2059aefcc27acaa6d52004183deb5438c89f147dcb0d1af674e5d354a2d1",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",

@@ -145,7 +145,14 @@
         ],
         "sha256": "3bcc19e71079beb0c69fbf386a482fd6b3e5cd018e830ed83978a0937687096b"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-lungomare/foto-lungomare-cdd0a39019.jpg",
+        "anteprima": "../foto/anteprime/tappa-lungomare/foto-lungomare-cdd0a39019.jpg",
+        "sha256": "3bcc19e71079beb0c69fbf386a482fd6b3e5cd018e830ed83978a0937687096b",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-lungomare-b59c0a0fbc",
@@ -182,7 +189,14 @@
         ],
         "sha256": "762e24dc016f6730dfc0db69f2aa947349313e52c681bac9f32120205ed33c18"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-lungomare/foto-lungomare-b59c0a0fbc.jpg",
+        "anteprima": "../foto/anteprime/tappa-lungomare/foto-lungomare-b59c0a0fbc.jpg",
+        "sha256": "762e24dc016f6730dfc0db69f2aa947349313e52c681bac9f32120205ed33c18",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",
@@ -222,6 +236,13 @@
         1908
       ],
       "sha256": "e01486af78df5e9af894b4d5929e40aac1cd7d54f280b0f5b4998f0367394677"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-lungomare/esistente-via-partenope.jpg",
+      "anteprima": "../foto/anteprime/tappa-lungomare/esistente-via-partenope.jpg",
+      "sha256": "e01486af78df5e9af894b4d5929e40aac1cd7d54f280b0f5b4998f0367394677",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
     }
   },
   "galleriaProposta": [

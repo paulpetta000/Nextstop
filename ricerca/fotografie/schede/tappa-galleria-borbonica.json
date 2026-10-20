@@ -52,6 +52,13 @@
           1575
         ],
         "sha256": "ce58e80ac658ab4e2824b4c0d6664c2c8c49570dc938cceecc03de33294cdecc"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-galleria-borbonica/foto-galleria-borbonica-de70915b15.jpg",
+        "anteprima": "../foto/anteprime/tappa-galleria-borbonica/foto-galleria-borbonica-de70915b15.jpg",
+        "sha256": "ce58e80ac658ab4e2824b4c0d6664c2c8c49570dc938cceecc03de33294cdecc",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {
@@ -118,7 +125,14 @@
         ],
         "sha256": "08ee117ae41e05708e917f8f5ab9e91e9080d37fb5433090c67d57573a2a4038"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-galleria-borbonica/foto-galleria-borbonica-1358a0b889.jpg",
+        "anteprima": "../foto/anteprime/tappa-galleria-borbonica/foto-galleria-borbonica-1358a0b889.jpg",
+        "sha256": "08ee117ae41e05708e917f8f5ab9e91e9080d37fb5433090c67d57573a2a4038",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-galleria-borbonica-ba67b20073",
@@ -155,7 +169,14 @@
         ],
         "sha256": "4c4977f1195c8639b41f6700c8f397dfb87153ffc3c971d6ae8b2351c79c60a2"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-galleria-borbonica/foto-galleria-borbonica-ba67b20073.jpg",
+        "anteprima": "../foto/anteprime/tappa-galleria-borbonica/foto-galleria-borbonica-ba67b20073.jpg",
+        "sha256": "4c4977f1195c8639b41f6700c8f397dfb87153ffc3c971d6ae8b2351c79c60a2",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-galleria-borbonica-42441d7b60",
@@ -192,7 +213,14 @@
         ],
         "sha256": "30694969549ad6c3cfccac311df5ca71452e8566081c131b3dd0a985aeceed1c"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-galleria-borbonica/foto-galleria-borbonica-42441d7b60.jpg",
+        "anteprima": "../foto/anteprime/tappa-galleria-borbonica/foto-galleria-borbonica-42441d7b60.jpg",
+        "sha256": "30694969549ad6c3cfccac311df5ca71452e8566081c131b3dd0a985aeceed1c",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",

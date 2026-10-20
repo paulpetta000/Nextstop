@@ -90,6 +90,13 @@
           3322
         ],
         "sha256": "92cad78ffcdd1f4057dbd7111ffdaf2c90894dc9669d1da7539f1e59dca3f22b"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-gaiola/foto-gaiola-91361499f1.jpg",
+        "anteprima": "../foto/anteprime/tappa-gaiola/foto-gaiola-91361499f1.jpg",
+        "sha256": "92cad78ffcdd1f4057dbd7111ffdaf2c90894dc9669d1da7539f1e59dca3f22b",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {
@@ -158,7 +165,14 @@
         ],
         "sha256": "4e7e92118759f30eb38a664b584968873e890324a64d12953ddc6656a206c33f"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-gaiola/foto-gaiola-f5f3708975.jpg",
+        "anteprima": "../foto/anteprime/tappa-gaiola/foto-gaiola-f5f3708975.jpg",
+        "sha256": "4e7e92118759f30eb38a664b584968873e890324a64d12953ddc6656a206c33f",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-gaiola-6f3a0cb49d",
@@ -195,7 +209,14 @@
         ],
         "sha256": "0196bebfa0e9a641d015c7d223cadfc70d1ddf04cffdfd57aaae46f3b0faa0b6"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-gaiola/foto-gaiola-6f3a0cb49d.jpg",
+        "anteprima": "../foto/anteprime/tappa-gaiola/foto-gaiola-6f3a0cb49d.jpg",
+        "sha256": "0196bebfa0e9a641d015c7d223cadfc70d1ddf04cffdfd57aaae46f3b0faa0b6",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",

@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Archivio portabile delle foto · 20/10/2026
+
+Su richiesta di Enrico, preparato il salvataggio delle 76 foto proposte: originali integri in [foto/originali](ricerca/fotografie/foto/originali), 76 anteprime, [indice con licenze e impronte](ricerca/fotografie/foto/indice.json), [crediti](ricerca/fotografie/foto/CREDITI.md) e [catalogo locale](ricerca/fotografie/catalogo.html). Circa 416 MiB di originali; le singole schede risolvono i file tramite `archivioLocale`. Conservati anche documento pubblico del Castello Aragonese, suo credito e prove estese compresse. [Istruzioni per riprendere da computer con Claude Code o Codex](ricerca/fotografie/foto/README.md): aggiornare il checkout conservando prima le modifiche locali, poi leggere indice e una sola scheda. Il sito e i suoi input sono invariati; salvare l’archivio non approva l’inserimento delle foto nelle pagine. Enrico ha confermato la destinazione **main di GitHub**; questa integrazione riguarda ricerca e archivio e non attiva le gallerie o le API. Controlli automatici e risultato del merge vanno riscontrati sul commit remoto.
+
 ## Fotografie · obiettivo tre/quattro per scheda · 20/10/2026
 
 Su richiesta di Enrico, ricerca approfondita sulle 92 entità: 230 interrogazioni, 658 provini osservati anche con scarti/omonimi, 88 nuove pagine fotografiche Flickr verificate e 52 nuovi originali esaminati. **76 proposte per 26 tappe/gite**, da 31 precedenti: 48 aggiunte alla selezione e tre sostituite. **19 schede con almeno tre foto, 7 di queste con quattro; 73 ancora sotto il minimo**, inclusi tutti i 32 locali. Nessun nuovo piatto conforme: ristoranti ancora scoperti per qualità, sede o riuso. Non presentare la ricerca come completata per tutti i luoghi.

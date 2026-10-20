@@ -115,7 +115,14 @@
         ],
         "sha256": "abaaa0cc46662c1333c4accd8b7732976c096ce5bd0780b1397c3da59e39a13a"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-pignasecca/foto-pignasecca-f11a48bb4e.jpg",
+        "anteprima": "../foto/anteprime/tappa-pignasecca/foto-pignasecca-f11a48bb4e.jpg",
+        "sha256": "abaaa0cc46662c1333c4accd8b7732976c096ce5bd0780b1397c3da59e39a13a",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "selezione-parziale",
@@ -155,6 +162,13 @@
         3000
       ],
       "sha256": "eb84f9b0e54c6b007b47907682404075fde066f815485ad2b9ebc1a1b9540ac6"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-pignasecca/esistente-tp-pignasecca.jpg",
+      "anteprima": "../foto/anteprime/tappa-pignasecca/esistente-tp-pignasecca.jpg",
+      "sha256": "eb84f9b0e54c6b007b47907682404075fde066f815485ad2b9ebc1a1b9540ac6",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
     }
   },
   "galleriaProposta": [

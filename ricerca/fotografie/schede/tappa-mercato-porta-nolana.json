@@ -59,6 +59,13 @@
           1574
         ],
         "sha256": "269a426de060b34ad23a2c1d14bc501848e60a9cfa67df9e6463c678a6e43b66"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-mercato-porta-nolana/foto-mercato-porta-nolana-7939f41f53.jpg",
+        "anteprima": "../foto/anteprime/tappa-mercato-porta-nolana/foto-mercato-porta-nolana-7939f41f53.jpg",
+        "sha256": "269a426de060b34ad23a2c1d14bc501848e60a9cfa67df9e6463c678a6e43b66",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {

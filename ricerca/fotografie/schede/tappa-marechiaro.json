@@ -109,7 +109,14 @@
         ],
         "sha256": "7a42b36e402c734067ca0a30af046c30fae70695f1f651c2ffbc7579b0890d36"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-marechiaro/foto-marechiaro-e5236d5570.jpg",
+        "anteprima": "../foto/anteprime/tappa-marechiaro/foto-marechiaro-e5236d5570.jpg",
+        "sha256": "7a42b36e402c734067ca0a30af046c30fae70695f1f651c2ffbc7579b0890d36",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-marechiaro-90a46e739d",
@@ -146,7 +153,14 @@
         ],
         "sha256": "99e8ede252852c205f62bb5287fea65eddc319c1ec3a599fdf4fc38ad54211eb"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-marechiaro/foto-marechiaro-90a46e739d.jpg",
+        "anteprima": "../foto/anteprime/tappa-marechiaro/foto-marechiaro-90a46e739d.jpg",
+        "sha256": "99e8ede252852c205f62bb5287fea65eddc319c1ec3a599fdf4fc38ad54211eb",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-marechiaro-1a06c3ab26",
@@ -183,7 +197,14 @@
         ],
         "sha256": "b36e02d5b0d385573019a397412994eba5f1c9c2aaa748f67ce1479321866811"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-marechiaro/foto-marechiaro-1a06c3ab26.jpg",
+        "anteprima": "../foto/anteprime/tappa-marechiaro/foto-marechiaro-1a06c3ab26.jpg",
+        "sha256": "b36e02d5b0d385573019a397412994eba5f1c9c2aaa748f67ce1479321866811",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",

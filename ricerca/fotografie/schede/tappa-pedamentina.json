@@ -81,6 +81,13 @@
           4000
         ],
         "sha256": "4cbc21af573b6ed186aa36cbab19392aa2280ff7f72cdcfe0ae687c351a9b2c9"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-pedamentina/foto-pedamentina-56e91b3431.jpg",
+        "anteprima": "../foto/anteprime/tappa-pedamentina/foto-pedamentina-56e91b3431.jpg",
+        "sha256": "4cbc21af573b6ed186aa36cbab19392aa2280ff7f72cdcfe0ae687c351a9b2c9",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {
@@ -147,7 +154,14 @@
         ],
         "sha256": "f739dd3e995a5836c8f196e136daa6d83cb8f77cab0971ad9cd1c32b66a2f565"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-pedamentina/foto-pedamentina-a3db10d0e6.jpg",
+        "anteprima": "../foto/anteprime/tappa-pedamentina/foto-pedamentina-a3db10d0e6.jpg",
+        "sha256": "f739dd3e995a5836c8f196e136daa6d83cb8f77cab0971ad9cd1c32b66a2f565",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-pedamentina-6b6ac9fd02",

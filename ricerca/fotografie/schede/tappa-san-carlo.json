@@ -126,7 +126,14 @@
       },
       "ricercaAggiunta": "2026-10-20",
       "creditoRichiesto": "Diego Delso · delso.photo",
-      "attribuzioneDichiarata": "Diego Delso"
+      "attribuzioneDichiarata": "Diego Delso",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-san-carlo/foto-san-carlo-2ad0f01ce9.jpg",
+        "anteprima": "../foto/anteprime/tappa-san-carlo/foto-san-carlo-2ad0f01ce9.jpg",
+        "sha256": "dd93eb2ec93f7d0189aa190af2389c81508c83ae78e2a35b30e9a30b92699112",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-san-carlo-54b7a90945",
@@ -165,7 +172,14 @@
       },
       "ricercaAggiunta": "2026-10-20",
       "creditoRichiesto": "Diego Delso · delso.photo",
-      "attribuzioneDichiarata": "Diego Delso"
+      "attribuzioneDichiarata": "Diego Delso",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-san-carlo/foto-san-carlo-54b7a90945.jpg",
+        "anteprima": "../foto/anteprime/tappa-san-carlo/foto-san-carlo-54b7a90945.jpg",
+        "sha256": "f860358ffa12ee10cd5b091623c1cf399f0994d5c400c76045589e4f8a8ead83",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-san-carlo-938d41befb",
@@ -202,7 +216,14 @@
         ],
         "sha256": "475351a46d63ffab8edbb3bbb2b217a1f4ce0fd39bbfd8fdba4bf21f0317e90a"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-san-carlo/foto-san-carlo-938d41befb.jpg",
+        "anteprima": "../foto/anteprime/tappa-san-carlo/foto-san-carlo-938d41befb.jpg",
+        "sha256": "475351a46d63ffab8edbb3bbb2b217a1f4ce0fd39bbfd8fdba4bf21f0317e90a",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",
@@ -242,6 +263,13 @@
         5543
       ],
       "sha256": "374d8966c85e578ee50916fb3a7646fe5755d0f218b7871b2301eb93dda65996"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-san-carlo/esistente-tp-san-carlo.jpg",
+      "anteprima": "../foto/anteprime/tappa-san-carlo/esistente-tp-san-carlo.jpg",
+      "sha256": "374d8966c85e578ee50916fb3a7646fe5755d0f218b7871b2301eb93dda65996",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
     }
   },
   "galleriaProposta": [

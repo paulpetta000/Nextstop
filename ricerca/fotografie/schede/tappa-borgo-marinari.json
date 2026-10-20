@@ -141,7 +141,14 @@
         ],
         "sha256": "a6f4235fa48a64dccb416d5558f592b1e46e91e986bb8844dc49da33705127d2"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-borgo-marinari/foto-borgo-marinari-5b997821dc.jpg",
+        "anteprima": "../foto/anteprime/tappa-borgo-marinari/foto-borgo-marinari-5b997821dc.jpg",
+        "sha256": "a6f4235fa48a64dccb416d5558f592b1e46e91e986bb8844dc49da33705127d2",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-borgo-marinari-022eeae60c",
@@ -179,7 +186,14 @@
         "sha256": "aa4ac81cbb2681b5ff0cc72333003a97c4c33b79400d1f6f27c434cf891a8430"
       },
       "ricercaAggiunta": "2026-10-20",
-      "attribuzioneDichiarata": "patano"
+      "attribuzioneDichiarata": "patano",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-borgo-marinari/foto-borgo-marinari-022eeae60c.jpg",
+        "anteprima": "../foto/anteprime/tappa-borgo-marinari/foto-borgo-marinari-022eeae60c.jpg",
+        "sha256": "aa4ac81cbb2681b5ff0cc72333003a97c4c33b79400d1f6f27c434cf891a8430",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",
@@ -219,6 +233,13 @@
         2667
       ],
       "sha256": "05ff36a05f082dc9f40c501abb9a803a24be8d88f067a273f442fa84dd1831c2"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-borgo-marinari/esistente-tp-borgo-marinari.jpg",
+      "anteprima": "../foto/anteprime/tappa-borgo-marinari/esistente-tp-borgo-marinari.jpg",
+      "sha256": "05ff36a05f082dc9f40c501abb9a803a24be8d88f067a273f442fa84dd1831c2",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
     }
   },
   "galleriaProposta": [

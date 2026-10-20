@@ -165,7 +165,14 @@
         ],
         "sha256": "3d750613e97d1a4505d72430fdbadfcff3835469cf211f280c23f06eea2bccf9"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-sanita/foto-sanita-5008b5c361.jpg",
+        "anteprima": "../foto/anteprime/tappa-sanita/foto-sanita-5008b5c361.jpg",
+        "sha256": "3d750613e97d1a4505d72430fdbadfcff3835469cf211f280c23f06eea2bccf9",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-sanita-c96b054906",
@@ -204,7 +211,14 @@
       },
       "ricercaAggiunta": "2026-10-20",
       "creditoRichiesto": "Diego Delso · delso.photo",
-      "attribuzioneDichiarata": "Diego Delso"
+      "attribuzioneDichiarata": "Diego Delso",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-sanita/foto-sanita-c96b054906.jpg",
+        "anteprima": "../foto/anteprime/tappa-sanita/foto-sanita-c96b054906.jpg",
+        "sha256": "74becd409f5435a8ba691cd1c65ceb73a4105cf3dbd9eb1f29904861675159ef",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "selezione-parziale",

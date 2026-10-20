@@ -110,6 +110,13 @@
           2000
         ],
         "sha256": "7bb16221846b19634cdde1e0f6d03b6580c74f4c6650f2f62fdbf02718ab84a6"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-fontanelle/foto-fontanelle-a79f681da6.jpg",
+        "anteprima": "../foto/anteprime/tappa-fontanelle/foto-fontanelle-a79f681da6.jpg",
+        "sha256": "7bb16221846b19634cdde1e0f6d03b6580c74f4c6650f2f62fdbf02718ab84a6",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {
@@ -147,7 +154,14 @@
         ],
         "sha256": "0c3d94089c5c1eb759426b75274fe93a4bf120cf0e9163d075757cec5546408b"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-fontanelle/foto-fontanelle-7bdf65c463.jpg",
+        "anteprima": "../foto/anteprime/tappa-fontanelle/foto-fontanelle-7bdf65c463.jpg",
+        "sha256": "0c3d94089c5c1eb759426b75274fe93a4bf120cf0e9163d075757cec5546408b",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-fontanelle-6dbaefcfb2",
@@ -184,7 +198,14 @@
         ],
         "sha256": "7eaddf9f384065c66706cee172311b56b9e7deb6eaa8ba7072f216a29b1d9099"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-fontanelle/foto-fontanelle-6dbaefcfb2.jpg",
+        "anteprima": "../foto/anteprime/tappa-fontanelle/foto-fontanelle-6dbaefcfb2.jpg",
+        "sha256": "7eaddf9f384065c66706cee172311b56b9e7deb6eaa8ba7072f216a29b1d9099",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",

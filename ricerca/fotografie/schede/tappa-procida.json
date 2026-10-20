@@ -56,6 +56,13 @@
           5016
         ],
         "sha256": "fa260216de64bc1642711e2bd3be4b90c83de4b26d6ca3bb0f632e68eac6c29c"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-procida/foto-procida-74d841ec3c.jpg",
+        "anteprima": "../foto/anteprime/tappa-procida/foto-procida-74d841ec3c.jpg",
+        "sha256": "fa260216de64bc1642711e2bd3be4b90c83de4b26d6ca3bb0f632e68eac6c29c",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {
@@ -162,7 +169,14 @@
         ],
         "sha256": "95ba50e73d8a4961002154782e1cb97a37a0a1cfc41e3f300f72f36927e331fb"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-procida/foto-procida-4b9c7a023c.jpg",
+        "anteprima": "../foto/anteprime/tappa-procida/foto-procida-4b9c7a023c.jpg",
+        "sha256": "95ba50e73d8a4961002154782e1cb97a37a0a1cfc41e3f300f72f36927e331fb",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-procida-df4919e3e6",
@@ -199,7 +213,14 @@
         ],
         "sha256": "3fe8f7817fe6466a3c6e380538f8630c2e278e8b690405bf5b6a1792a306bafb"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-procida/foto-procida-df4919e3e6.jpg",
+        "anteprima": "../foto/anteprime/tappa-procida/foto-procida-df4919e3e6.jpg",
+        "sha256": "3fe8f7817fe6466a3c6e380538f8630c2e278e8b690405bf5b6a1792a306bafb",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-procida-fc12a17c39",
@@ -236,7 +257,14 @@
         ],
         "sha256": "554c70b36fff3193bd7f4c55ee2f8a339473338112da64e536470c47cc5328f9"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-procida/foto-procida-fc12a17c39.jpg",
+        "anteprima": "../foto/anteprime/tappa-procida/foto-procida-fc12a17c39.jpg",
+        "sha256": "554c70b36fff3193bd7f4c55ee2f8a339473338112da64e536470c47cc5328f9",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",

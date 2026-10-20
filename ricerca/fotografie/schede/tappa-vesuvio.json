@@ -116,6 +116,13 @@
           3004
         ],
         "sha256": "43660f27470b331154554550f8a251622359c6bcce8b4e7361c503e4b6b935ee"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-vesuvio/foto-vesuvio-72913c0e2f.jpg",
+        "anteprima": "../foto/anteprime/tappa-vesuvio/foto-vesuvio-72913c0e2f.jpg",
+        "sha256": "43660f27470b331154554550f8a251622359c6bcce8b4e7361c503e4b6b935ee",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {
@@ -153,7 +160,14 @@
         ],
         "sha256": "676a3d2024abb8bbfa1a1e8908868034eb17fad80bb8316dc9ae7120120685b6"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-vesuvio/foto-vesuvio-67e6b2a614.jpg",
+        "anteprima": "../foto/anteprime/tappa-vesuvio/foto-vesuvio-67e6b2a614.jpg",
+        "sha256": "676a3d2024abb8bbfa1a1e8908868034eb17fad80bb8316dc9ae7120120685b6",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-vesuvio-2c8854321d",
@@ -190,7 +204,14 @@
         ],
         "sha256": "d881cf8f8bfab03bc28e056c63a80528d517369a93392f6d18019770182cd05f"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-vesuvio/foto-vesuvio-2c8854321d.jpg",
+        "anteprima": "../foto/anteprime/tappa-vesuvio/foto-vesuvio-2c8854321d.jpg",
+        "sha256": "d881cf8f8bfab03bc28e056c63a80528d517369a93392f6d18019770182cd05f",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-vesuvio-e43bcfd523",
@@ -228,7 +249,14 @@
         "sha256": "1b558488cbbb114183f29b38d258b9ce84b95b79fe6c1786bb9184520131531d"
       },
       "ricercaAggiunta": "2026-10-20",
-      "attribuzioneDichiarata": "pietro scerrato"
+      "attribuzioneDichiarata": "pietro scerrato",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-vesuvio/foto-vesuvio-e43bcfd523.jpg",
+        "anteprima": "../foto/anteprime/tappa-vesuvio/foto-vesuvio-e43bcfd523.jpg",
+        "sha256": "1b558488cbbb114183f29b38d258b9ce84b95b79fe6c1786bb9184520131531d",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",

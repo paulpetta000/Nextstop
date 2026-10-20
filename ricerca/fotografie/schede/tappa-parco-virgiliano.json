@@ -142,6 +142,13 @@
           2372
         ],
         "sha256": "697cb5cdb49ffa4bfb9f74365cf890e59a633905fa096a0b130e32ad41ba63df"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-parco-virgiliano/nuova-aef32c29a4b9.jpg",
+        "anteprima": "../foto/anteprime/tappa-parco-virgiliano/nuova-aef32c29a4b9.jpg",
+        "sha256": "697cb5cdb49ffa4bfb9f74365cf890e59a633905fa096a0b130e32ad41ba63df",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {
@@ -205,7 +212,14 @@
         ],
         "sha256": "6b3e3a3537bd715dd29c20006a48b718ebbf6b57d9c40923899a027df5f9f934"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-parco-virgiliano/foto-parco-virgiliano-0fb13eb593.jpg",
+        "anteprima": "../foto/anteprime/tappa-parco-virgiliano/foto-parco-virgiliano-0fb13eb593.jpg",
+        "sha256": "6b3e3a3537bd715dd29c20006a48b718ebbf6b57d9c40923899a027df5f9f934",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",
@@ -245,6 +259,13 @@
         853
       ],
       "sha256": "6a4db34c7dcb41b1b4a06a8e5781c7db67b619f2b8772506ccbac28ff296a223"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-parco-virgiliano/esistente-tp-parco-virgiliano.jpg",
+      "anteprima": "../foto/anteprime/tappa-parco-virgiliano/esistente-tp-parco-virgiliano.jpg",
+      "sha256": "6a4db34c7dcb41b1b4a06a8e5781c7db67b619f2b8772506ccbac28ff296a223",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
     }
   },
   "galleriaProposta": [

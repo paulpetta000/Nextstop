@@ -78,6 +78,13 @@
           2969
         ],
         "sha256": "51f3e491b3b6328bc91419b6262bc339b21882d4e8c28370389843bb0604d969"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-pio-monte/nuova-07c23bce84da.jpg",
+        "anteprima": "../foto/anteprime/tappa-pio-monte/nuova-07c23bce84da.jpg",
+        "sha256": "51f3e491b3b6328bc91419b6262bc339b21882d4e8c28370389843bb0604d969",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
       }
     },
     {
@@ -115,7 +122,14 @@
         ],
         "sha256": "121a903cded1c9de58379f11019158c9726469ab5a3d2e9078c00870efd451e3"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-pio-monte/foto-pio-monte-c6224c23de.jpg",
+        "anteprima": "../foto/anteprime/tappa-pio-monte/foto-pio-monte-c6224c23de.jpg",
+        "sha256": "121a903cded1c9de58379f11019158c9726469ab5a3d2e9078c00870efd451e3",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     },
     {
       "id": "foto-pio-monte-f295a4bb77",
@@ -152,7 +166,14 @@
         ],
         "sha256": "ae50083a262a3eec5170d1eee819771ac7bdfe1cde19e3718281593ba935a796"
       },
-      "ricercaAggiunta": "2026-10-20"
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-pio-monte/foto-pio-monte-f295a4bb77.jpg",
+        "anteprima": "../foto/anteprime/tappa-pio-monte/foto-pio-monte-f295a4bb77.jpg",
+        "sha256": "ae50083a262a3eec5170d1eee819771ac7bdfe1cde19e3718281593ba935a796",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
     }
   ],
   "stato": "soglia-minima-raggiunta",
