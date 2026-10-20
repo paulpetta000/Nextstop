@@ -4,13 +4,14 @@
 // I contenuti sono le schede vere della build (src/components/itinerari/Scheda.astro, SchedaLocale.astro, nei <template>).
 import { $, $$, esc, ic, soglia, piano, computer, range, ora, durata, dataScritta, GS, INGRESSO, DENTRO, SCALE, MOMENTO } from './base.js';
 import { E, T, X, MODELLI, schedePronte, caricaSchede, nG, giornoDi, nelViaggio, visitata, puoiSegnare, G, tappeDi, aggiunta, ultimaDi, chiusaIl, dataLungaDi } from './stato.js';
-import { S, assicuraSchede, foglio, chiudiFoglio, foglioEl, scorri, occupato, annuncia, tiraPerChiudere, gestoScheda } from './comuni.js';
+import { S, assicuraSchede, foglio, chiudiFoglio, foglioEl, contestoFoglio, scorri, occupato, annuncia, tiraPerChiudere, gestoScheda } from './comuni.js';
 import { segna, togliTappa, spostaGiorno, aggiungi, aggiungiGita, vaiAlGiorno, testoTratto, mappaC } from './viste.js';
 import { salva } from './fogli.js';
 import { apriAggiungi } from './aggiungi.js';
 
 const schEl = () => $('#scheda');
 let sch = null;      // la scheda aperta: { id, detent, cima }
+let richiestaScheda = 0;
 let daDove = null;   // chi l'ha aperta: torna lì il fuoco
 export const schedaAperta = () => (sch && schEl().open ? sch : null);
 
@@ -131,29 +132,47 @@ function azioniScheda(id) {
 }
 
 // ---------- aprire ----------
+function contestoCaricamentoScheda() {
+  const richiesta = ++richiestaScheda, itinerario = X(), g = S.g, giorno = itinerario.giorni[g], vista = S.p;
+  const foglioValido = contestoFoglio({ ancheChiuso: true });
+  return () => richiesta === richiestaScheda && X() === itinerario && S.g === g && S.p === vista && itinerario.giorni[g] === giorno && foglioValido();
+}
 export async function apriScheda(id, sorgente) {
-  daDove = sorgente?.closest?.('button') || document.activeElement;
+  const valido = contestoCaricamentoScheda(), torna = sorgente?.closest?.('button') || document.activeElement;
   await conSchede();
+  if (!valido()) return;
   const g = giornoDi(id);
-  if (g !== S.g) { schedaFuori(id); return; }
+  if (g !== S.g) { mostraSchedaFuori(id); return; }
+  daDove = torna;
   apri(id);
 }
-export async function chiudiSchede() { if (schedaAperta()) await chiudi(true); }
+export async function chiudiSchede() { richiestaScheda++; if (schedaAperta()) await chiudi(true); }
 // le tappe che non sono in questo giorno (dalla mappa, dalla ricerca, le gite): la scheda nel foglio, con «Aggiungi»
 export async function schedaFuori(id, indietro = null) {
+  const valido = contestoCaricamentoScheda();
   await conSchede();
+  if (valido()) mostraSchedaFuori(id, indietro);
+}
+function mostraSchedaFuori(id, indietro = null) {
+  const itinerario = X(), corrente = S.g, giorno = itinerario.giorni[corrente];
+  const stessoGiorno = () => X() === itinerario && S.g === corrente && itinerario.giorni[corrente] === giorno;
   const g = giornoDi(id);
   const corpo = `${indietro ? `<button type="button" class="r-indietro" data-f="indietro">${ic('indietro', 18)}Torna ai risultati</button>` : ''}<div class="f-scheda-foto">${fotoGrande(id, 'f-scheda-img')}</div>${credito(id)}<p class="sch-quando">${g >= 0 ? quandoTesto(id) : X().giorni.some(D => D.gita === id) ? 'È una gita del tuo itinerario' : 'Non è nel tuo itinerario'}</p>${chips(id)}<div class="sch-testo">${testoScheda(id)}</div>${sezioni(id)}${fontiScheda(id)}${g >= 0 ? `<button type="button" class="f-bottone f-bottone--contorno" data-f="vai" data-g="${g}">Vai al giorno ${g + 1}</button>` : X().giorni.some(D => D.gita === id) ? '' : azioniScheda(id)}`;
   foglio(T(id).nome, corpo, f => {
+    const aperto = contestoFoglio();
+    let azione = false;
     f.onclick = async e => {
+      if (azione || !aperto() || !stessoGiorno()) return;
       if (e.target === f) { chiudiFoglio(); return; }
       if (e.target.closest('[data-f="indietro"]')) { apriAggiungi(indietro); return; }
       const b = e.target.closest('[data-f="vai"], [data-azione="aggiungi-qui"], [data-azione="gita-qui"]');
       if (!b) return;
-      await chiudiFoglio();
-      if (b.dataset.f === 'vai') vaiAlGiorno(+b.dataset.g);
+      azione = true;
+      const destinazione = +b.dataset.g, giornoDestinazione = itinerario.giorni[destinazione];
+      if (!await chiudiFoglio() || !stessoGiorno()) return;
+      if (b.dataset.f === 'vai') { if (giornoDestinazione && itinerario.giorni[destinazione] === giornoDestinazione) vaiAlGiorno(destinazione); }
       else if (b.dataset.azione === 'gita-qui') aggiungiGita(id);
-      else aggiungi(S.g, id);
+      else aggiungi(corrente, id);
     };
   }, 'f--scheda f--fuori');
 }

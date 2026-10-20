@@ -15,7 +15,10 @@ export const foglioEl = () => $('#foglio');
 let spegniF = null, cicloF = 0, chiusuraF = null;
 const ripulisciFoglio = () => { const fn = spegniF; spegniF = null; chiusuraF = null; fn?.(); };
 // Ogni apertura ha un contesto proprio, anche se riusa lo stesso elemento dialog.
-export const contestoFoglio = () => { const f = foglioEl(), ciclo = cicloF; return () => f === foglioEl() && !!f?.open && ciclo === cicloF && !chiusuraF; };
+export const contestoFoglio = ({ ancheChiuso = false } = {}) => {
+  const f = foglioEl(), ciclo = cicloF, aperto = !!f?.open;
+  return () => f === foglioEl() && !!f && ciclo === cicloF && !chiusuraF && (ancheChiuso ? f.open === aperto : !!f.open);
+};
 export const quandoChiudeFoglio = fn => { spegniF = fn; };
 export function foglio(titolo, corpo, dopoAperto, cl = '') {
   const f = foglioEl();

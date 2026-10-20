@@ -33,3 +33,10 @@ test('foglio: un evento close già in coda non ripulisce il foglio riaperto',asy
 test('foglio: senza animazioni la chiusura riuscita conserva il comportamento ordinario',async()=>{
  const e=ambiente(false);let n=0;e.foglio('Prima','',()=>e.quandoChiudeFoglio(()=>n++));assert.equal(await e.chiudiFoglio(),true);assert.equal(e.f.open,false);assert.equal(n,1);assert.equal(await e.chiudiFoglio(),false);
 });
+
+test('foglio: un caricamento partito senza finestra resta valido solo finché non ne viene aperta una',()=>{
+ const e=ambiente();const valido=e.contesto({ancheChiuso:true});assert.equal(valido(),true);e.foglio('Nuova','');assert.equal(valido(),false);
+});
+test('foglio: il contesto di caricamento di una finestra aperta non sopravvive alla chiusura nativa',()=>{
+ const e=ambiente();e.foglio('Prima','');const valido=e.contesto({ancheChiuso:true});assert.equal(valido(),true);e.f.close();assert.equal(valido(),false);
+});

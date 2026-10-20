@@ -2,7 +2,13 @@
 
 _Aggiornato il 20/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 dalla main pubblicata 96e480d; nessun nuovo push, merge o deploy._
 
-## Revisione corrente · caricamenti dei selettori (20 ottobre)
+## Revisione corrente · schede e mandato su più aree (20 ottobre)
+
+Richieste obsolete delle schede ignorate; azioni dopo la chiusura legate al viaggio/giorno mostrato e doppio tocco contenuto. **529/529 test**, tredici aggiunte nel gruppo e **29 nella ripresa**; build **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-20-revisione-codice-36.md).
+
+Enrico autorizza di avanzare su più aree ed **esclude del tutto istruzioni e consumo Claude fino a nuova richiesta**. Nuovo minimo di **40 minuti dalle 14:19:21 UTC**; il lavoro precedente non vi rientra. Seguito su fonti, HTTP pubblico, manutenzione, cartelle e casi di valore. Nessun browser o pubblicazione; nuova idea rinviata anche nell’analisi.
+
+## Revisione precedente · caricamenti dei selettori (20 ottobre)
 
 Calendario e ore legati all’apertura, al viaggio e al giorno; richieste vecchie annullate, ritorni obsoleti ignorati ed errori di caricamento recuperabili. **516/516 test**, dieci aggiunte nel gruppo; build **12 pagine**, **811 link validi**, **82 risorse offline**. [Prove e limiti](docs/storico/2026-10-20-revisione-codice-35.md).
 
