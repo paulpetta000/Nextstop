@@ -10,7 +10,7 @@ import { TIPI_PAUSA, MARGINI, pauseDelGiorno } from '../../../lib/itinerari/paus
 import { fraseFine } from '../../../lib/itinerari/ore';
 import { grezzo } from './stato.js';
 import { C } from './stato.js';
-import { S, foglio, chiudiFoglio, rinfresca, avvisa, annuncia, tempo } from './comuni.js';
+import { S, foglio, chiudiFoglio, contestoFoglio, rinfresca, avvisa, annuncia, tempo } from './comuni.js';
 import { aggiorna, aggiornaTutto, conAnnulla, mettiNome, NOMI_PAUSA, IC_PAUSA, nuovoGiorno, vaiAlGiorno, togliGiorno } from './viste.js';
 import { chiudiSchede } from './scheda.js';
 
@@ -139,7 +139,7 @@ const campoData = g => {
   return `${ic('calendario')}<span id="f-data-v"${d ? '' : ' class="f-data__vuoto"'}>${d ? dataLunga(d, d.slice(0, 4) !== oggi().slice(0, 4)) : 'Scegli il giorno'}</span>${ic('abbassa', 18)}`;
 };
 export function apriQuando() {
-  const g = S.g;
+  const g = S.g, itinerario = X(), giorno = itinerario.giorni[g];
   const vivo = () => {
     const x = X(), D = x.giorni[g];
     return `${x.data ? `<ul class="f-date">${range(nG()).map(k => { const ch = (x.giorni[k].tappe ?? []).filter(id => chiusaIl(id, k)); return `<li><b>Giorno ${k + 1}</b><span>${dataLungaDi(k)}${x.giorni[k].gita ? `, gita: ${esc(T(x.giorni[k].gita).breve)}` : ''}</span>${ch.length ? `<span class="f-et f-et--attenzione">Chiuso: ${ch.map(id => esc(T(id).breve)).join(', ')}</span>` : '<span class="f-et">Tutto aperto</span>'}</li>`; }).join('')}</ul>` : ''}
@@ -152,20 +152,31 @@ export function apriQuando() {
   foglio('Data e orari', `<p>Con la data vedi quali tappe sono chiuse proprio quel giorno e i mezzi del sabato e della domenica. Senza data i giorni di chiusura restano nella scheda di ogni tappa.</p>
     <div class="f-campo"><span id="f-data-et">${g ? `Data del giorno ${g + 1}` : 'Primo giorno'}</span><button type="button" id="f-data" class="f-data" data-f="calendario" aria-haspopup="dialog" aria-labelledby="f-data-et f-data-v">${campoData(g)}</button></div>
     <div id="f-vivo">${vivo()}</div>`, f => {
+    const aperto = contestoFoglio();
+    const valido = () => aperto() && X() === itinerario && S.g === g && itinerario.giorni[g] === giorno;
+    let richiesta = 0;
     f.onchange = e => {
+      if (!valido()) return;
+      richiesta++;
       const t = e.target;
       if (t.id === 'f-piedi') { aggiorna(y => { if (t.checked) y.piedi = true; else delete y.piedi; }); annuncia(t.checked ? 'Solo a piedi' : 'A piedi e con i mezzi'); }
     };
     f.onclick = async e => {
+      if (!valido()) return;
       if (e.target === f) { chiudiFoglio(); return; }
       const b = e.target.closest('[data-f]');
       if (!b) return;
+      const turno = ++richiesta;
       if (b.dataset.f === 'fatto') chiudiFoglio();
       if (b.dataset.f === 'calendario') {
         const prima = X().data;
         // il calendario si scarica solo quando serve (la prima schermata resta leggera); il service worker lo tiene anche senza rete
-        const { apriCalendario } = await import('./calendario.js');
-        apriCalendario(g, () => {
+        let modulo;
+        try { modulo = await import('./calendario.js'); }
+        catch { if (valido() && turno === richiesta) avvisa('Il calendario non si è caricato. Riprova dal campo della data.'); return; }
+        if (!valido() || turno !== richiesta) return;
+        modulo.apriCalendario(g, () => {
+          if (!valido() || turno !== richiesta) return;
           const c = $('#f-data', f);
           if (!c) return;
           c.innerHTML = campoData(g); rinfresca(f, vivo()); c.focus({ preventScroll: true });
@@ -174,8 +185,13 @@ export function apriQuando() {
       }
       if (b.dataset.f === 'ore') {
         // la scelta dell'ora «Tutte le ore» si scarica solo quando serve, come il calendario
-        const { apriOre } = await import('./ore.js'), k = b.dataset.v, prima = { ...X().giorni[g] };
-        apriOre(g, k, modo => {
+        const k = b.dataset.v, prima = { ...giorno };
+        let modulo;
+        try { modulo = await import('./ore.js'); }
+        catch { if (valido() && turno === richiesta) avvisa('La scelta dell’ora non si è caricata. Riprova da Inizio o Fine.'); return; }
+        if (!valido() || turno !== richiesta) return;
+        modulo.apriOre(g, k, modo => {
+          if (!valido() || turno !== richiesta) return;
           rinfresca(f, vivo());
           $(`#f-${modo}`, f)?.focus({ preventScroll: true });
           const D = X().giorni[g];
