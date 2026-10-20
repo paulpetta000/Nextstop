@@ -1,0 +1,83 @@
+{
+  "tipo": "locale",
+  "id": "nennella",
+  "nome": "Trattoria da Nennella",
+  "controllato": "2026-10-20",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Nennella\" filetype:bitmap",
+      "risultatiEsaminati": 5
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Piazza Carità 22",
+  "stato": "da-completare",
+  "fonteGestore": {
+    "url": "https://www.trattorianennella.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "archivio-escluso-dalla-proposta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.trattorianennella.it/",
+        "immagine": "https://www.trattorianennella.it/new/wp-content/uploads/2025/08/pastaepatate.png",
+        "soggettoOsservato": "Pasta e patate presentata sul sito",
+        "stato": "esclusa-licenza-non-accertata",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
+      },
+      {
+        "pagina": "https://www.trattorianennella.it/",
+        "immagine": "https://www.trattorianennella.it/new/wp-content/uploads/2025/08/Centrale.jpg",
+        "soggettoOsservato": "Sala della sede di piazza Carità",
+        "stato": "esclusa-licenza-non-accertata",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
+      }
+    ],
+    "galleria": "https://www.trattorianennella.it/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
+  },
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 4,
+    "risultatiLetti": 10,
+    "pagineFotograficheFlickrVerificate": 3,
+    "riscontriFlickr": "../ricerche/2026-10-20-flickr.json",
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

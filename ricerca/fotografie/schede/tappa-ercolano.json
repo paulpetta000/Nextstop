@@ -1,0 +1,183 @@
+{
+  "tipo": "tappa",
+  "id": "ercolano",
+  "nome": "Ercolano",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-ercolano",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Herculaneum\" \"Neptune\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-ercolano-bcc984a0da",
+      "soggetto": "collezione",
+      "didascaliaProposta": "Ninfeo della Casa di Nettuno e Anfitrite a Ercolano",
+      "titoloFonte": "Herculanum (28472572434).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Herculanum_(28472572434).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Herculanum_%2828472572434%29.jpg",
+      "autore": "sébastien amiet;l",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        3264,
+        2448
+      ],
+      "dataScattoDichiarata": "2016-08-19 13:06",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1008033563,
+      "sha1Originale": "0898885012776f55864dd764d85a1a3307b5f2ad",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "sébastien amiet;l",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-ercolano-278671a2c4",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Mosaico con Nettuno e Anfitrite",
+      "titoloFonte": "Herculaneum — House of Neptune and Amphitrite (14918889472).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Herculaneum_%E2%80%94_House_of_Neptune_and_Amphitrite_(14918889472).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/9f/Herculaneum_%E2%80%94_House_of_Neptune_and_Amphitrite_%2814918889472%29.jpg",
+      "autore": "Amphipolis",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3984,
+        3336
+      ],
+      "dataScattoDichiarata": "2014-06-22 08:07",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1007728990,
+      "sha1Originale": "c3ea7eb03a772c8bc91c598d968a4ca6666333d3",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Amphipolis",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-ercolano-5d439883a3",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Testa decorativa nella Casa di Nettuno e Anfitrite",
+      "titoloFonte": "Casa di Nettuno e Anfitrite (Herculaneum) 02.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Casa_di_Nettuno_e_Anfitrite_(Herculaneum)_02.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/42/Casa_di_Nettuno_e_Anfitrite_%28Herculaneum%29_02.jpg",
+      "autore": "Bernard Gagnon",
+      "licenza": "CC BY 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dimensioni": [
+        3514,
+        2343
+      ],
+      "dataScattoDichiarata": "2022-04-24",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1116291680,
+      "sha1Originale": "948d3dbe6abf22a029fb92444444337758911d31",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Bernard Gagnon",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-ercolano",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Gli scavi di Ercolano.",
+    "titoloFonte": "Antigua ciudad de Herculano, Italia, 2023-03-27, DD 135-138 PAN.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Antigua_ciudad_de_Herculano,_Italia,_2023-03-27,_DD_135-138_PAN.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/4/47/Antigua_ciudad_de_Herculano%2C_Italia%2C_2023-03-27%2C_DD_135-138_PAN.jpg",
+    "autore": "Diego Delso",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      9958,
+      4660
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Diego Delso",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

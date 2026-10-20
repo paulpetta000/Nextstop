@@ -1,0 +1,169 @@
+{
+  "tipo": "tappa",
+  "id": "san-giovanni-a-carbonara",
+  "nome": "San Giovanni a Carbonara",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-carbonara",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"San Giovanni a Carbonara\" interior filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-san-giovanni-a-carbonara-f18a23351b",
+      "soggetto": "interno",
+      "didascaliaProposta": "Navata di San Giovanni a Carbonara",
+      "titoloFonte": "Carbonara interior 01.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Carbonara_interior_01.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/27/Carbonara_interior_01.JPG",
+      "autore": "Miguel Hermoso Cuesta",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3456,
+        5184
+      ],
+      "dataScattoDichiarata": "2013-07-18 10:16:14",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1237543187,
+      "sha1Originale": "63c97dd4ebeefe119e1b0f0b3563ba7ece4c060b",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce e resa del colore non raggiungono il livello richiesto.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Miguel Hermoso Cuesta",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-san-giovanni-a-carbonara-ade0ed93a5",
+      "soggetto": "interno",
+      "didascaliaProposta": "Interno verso il monumento funebre",
+      "titoloFonte": "Chiesa di San Giovanni in Carbonara (Napoli), interno 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Chiesa_di_San_Giovanni_in_Carbonara_(Napoli),_interno_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Chiesa_di_San_Giovanni_in_Carbonara_%28Napoli%29%2C_interno_01.jpg",
+      "autore": "Mongolo1984",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        6000,
+        4000
+      ],
+      "dataScattoDichiarata": "2018-11-24 15:46:55",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 856121704,
+      "sha1Originale": "9bc68381f01b44c3d07518675b1726e8f61acc06",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Navata molto scura: definizione elevata ma resa poco invitante.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mongolo1984",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-san-giovanni-a-carbonara-c29ee6d354",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Cupola cassettonata della Cappella Caracciolo di Vico",
+      "titoloFonte": "Cappella Caracciolo di Vico-Cupola cassettonata.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cappella_Caracciolo_di_Vico-Cupola_cassettonata.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Cappella_Caracciolo_di_Vico-Cupola_cassettonata.jpg",
+      "autore": "Pinotto992",
+      "licenza": "Public domain",
+      "licenzaUrl": "https://commons.wikimedia.org/wiki/File:Cappella_Caracciolo_di_Vico-Cupola_cassettonata.jpg#Licensing",
+      "dimensioni": [
+        1600,
+        1200
+      ],
+      "dataScattoDichiarata": "05/08/08",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1251236063,
+      "sha1Originale": "3861acb1bfc1d0d051158193c0c6163b47bc7436",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Pinotto992",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-carbonara",
+    "soggetto": "esterno",
+    "didascaliaProposta": "La scalinata di San Giovanni a Carbonara.",
+    "titoloFonte": "Chiesa di San Giovanni a Carbonara (Napoli), facciata 01.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Chiesa_di_San_Giovanni_a_Carbonara_(Napoli),_facciata_01.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/4/45/Chiesa_di_San_Giovanni_a_Carbonara_%28Napoli%29%2C_facciata_01.jpg",
+    "autore": "Mongolo1984",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      6000,
+      4000
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Mongolo1984",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

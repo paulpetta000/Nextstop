@@ -1,0 +1,186 @@
+{
+  "tipo": "tappa",
+  "id": "girolamini",
+  "nome": "Girolamini, chiesa, museo e biblioteca",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-girolamini",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Girolamini\" interior filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-girolamini-f9a42b7f48",
+      "soggetto": "interno",
+      "didascaliaProposta": "Altare laterale della chiesa dei Girolamini",
+      "titoloFonte": "San Filippo Neri dei Girolamini (Naples) - Interior 09.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Filippo_Neri_dei_Girolamini_(Naples)_-_Interior_09.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/e1/San_Filippo_Neri_dei_Girolamini_%28Naples%29_-_Interior_09.jpg",
+      "autore": "Carlo Dell'Orto",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3072,
+        4096
+      ],
+      "dataScattoDichiarata": "2024-11-19 11:06:05",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1008858953,
+      "sha1Originale": "8c6569038638cfa0e628bd6e67d204d6d4b6d35b",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Carlo Dell'Orto",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-girolamini-bd0c893528",
+      "soggetto": "interno",
+      "didascaliaProposta": "Navata centrale e colonne dei Girolamini",
+      "titoloFonte": "San Filippo Neri dei Girolamini (Naples) - Interior 20.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Filippo_Neri_dei_Girolamini_(Naples)_-_Interior_20.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/ae/San_Filippo_Neri_dei_Girolamini_%28Naples%29_-_Interior_20.jpg",
+      "autore": "Carlo Dell'Orto",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4096,
+        3072
+      ],
+      "dataScattoDichiarata": "2024-11-19 11:24:03",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1008859435,
+      "sha1Originale": "bafbb6ee77262c5f9c7bec7b8df326bdc03ef4b7",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Carlo Dell'Orto",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-girolamini-9d946c7d9a",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Portale interno nella chiesa dei Girolamini",
+      "titoloFonte": "San Filippo Neri dei Girolamini (Naples) - Interior 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Filippo_Neri_dei_Girolamini_(Naples)_-_Interior_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/07/San_Filippo_Neri_dei_Girolamini_%28Naples%29_-_Interior_01.jpg",
+      "autore": "Carlo Dell'Orto",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3072,
+        4096
+      ],
+      "dataScattoDichiarata": "2024-11-19 10:48:33",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1008858736,
+      "sha1Originale": "80b37687618f2d7f6bf1922b10abfd251d3aca48",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Carlo Dell'Orto",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-girolamini",
+    "soggetto": "esterno",
+    "didascaliaProposta": "La facciata della chiesa dei Girolamini, di Ferdinando Fuga.",
+    "titoloFonte": "Chiesa dei Girolamini facciata di Ferdinando Fuga Napoli.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Chiesa_dei_Girolamini_facciata_di_Ferdinando_Fuga_Napoli.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/b/bf/Chiesa_dei_Girolamini_facciata_di_Ferdinando_Fuga_Napoli.jpg",
+    "autore": "Wolfgang Moroder",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      13813,
+      8916
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Wolfgang Moroder",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

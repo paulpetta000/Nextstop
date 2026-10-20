@@ -1,0 +1,29 @@
+{
+  "esito": "pass",
+  "schede": 92,
+  "schedeConProposte": 26,
+  "schedeConAlmenoTre": 19,
+  "schedeConQuattro": 7,
+  "schedeSottoMinimo": 73,
+  "immaginiDecodificate": 76,
+  "fasceCredito": 73,
+  "immaginiSenzaFasciaObbligatoria": 3,
+  "filtri": "ricerca, categoria, proposte, minimo tre, quattro, sotto minimo, mancanti, senza credito obbligatorio",
+  "scorrimentoFoto": "avanti/indietro verificati con movimento ridotto",
+  "larghezze": {
+    "320": {
+      "scroll": 320,
+      "viewport": 320
+    },
+    "390": {
+      "scroll": 390,
+      "viewport": 390
+    },
+    "1280": {
+      "scroll": 1280,
+      "viewport": 1280
+    }
+  },
+  "erroriJavaScript": [],
+  "richiesteEsterneAutomatiche": []
+}

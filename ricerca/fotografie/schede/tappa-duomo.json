@@ -1,0 +1,308 @@
+{
+  "tipo": "tappa",
+  "id": "duomo",
+  "nome": "Duomo e Tesoro di San Gennaro",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-duomo",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Duomo\" \"Naples\" interior",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-duomo-97a7ca5b80",
+      "soggetto": "interno",
+      "didascaliaProposta": "Interno del Duomo, con altare e vetrate",
+      "titoloFonte": "Cathedral (Naples) - Interior 222.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cathedral_(Naples)_-_Interior_222.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d5/Cathedral_%28Naples%29_-_Interior_222.jpg",
+      "autore": "Cruz.croce",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        4080,
+        1884
+      ],
+      "dataScattoDichiarata": "2024",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Cruz.croce",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-duomo-97a7ca5b80",
+        "esito": "ok",
+        "dimensioni": [
+          4080,
+          1884
+        ],
+        "sha256": "6539cea382d2a5c49f4a569368f5376977c9a2676f7d49f78faaf285873babed"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-duomo/foto-duomo-97a7ca5b80.jpg",
+        "anteprima": "../foto/anteprime/tappa-duomo/foto-duomo-97a7ca5b80.jpg",
+        "sha256": "6539cea382d2a5c49f4a569368f5376977c9a2676f7d49f78faaf285873babed",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-duomo-6c7c9c45a8",
+      "soggetto": "interno",
+      "didascaliaProposta": "Cupola della Cappella di San Gennaro",
+      "titoloFonte": "Dome interior - Cappella di San Gennaro - Duomo - Naples - Italy 2015.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Dome_interior_-_Cappella_di_San_Gennaro_-_Duomo_-_Naples_-_Italy_2015.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/17/Dome_interior_-_Cappella_di_San_Gennaro_-_Duomo_-_Naples_-_Italy_2015.JPG",
+      "autore": "José Luiz",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5184,
+        3456
+      ],
+      "dataScattoDichiarata": "2015-02-05 16:18:11",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "creditoRichiesto": "© José Luiz Bernardes Ribeiro",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "José Luiz",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-duomo-6c7c9c45a8",
+        "esito": "ok",
+        "dimensioni": [
+          5184,
+          3456
+        ],
+        "sha256": "907e1d73704a5b66aef632a14f0421969be908517d4e7345a86db541383f1dc6"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-duomo/foto-duomo-6c7c9c45a8.jpg",
+        "anteprima": "../foto/anteprime/tappa-duomo/foto-duomo-6c7c9c45a8.jpg",
+        "sha256": "907e1d73704a5b66aef632a14f0421969be908517d4e7345a86db541383f1dc6",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-duomo-f3526d31e3",
+      "soggetto": "interno",
+      "didascaliaProposta": "La navata del Duomo in una fotografia del 2015.",
+      "titoloFonte": "Nave - Duomo - Naples - Italy 2015 (4).JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Nave_-_Duomo_-_Naples_-_Italy_2015_(4).JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Nave_-_Duomo_-_Naples_-_Italy_2015_%284%29.JPG",
+      "autore": "José Luiz",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5127,
+        3370
+      ],
+      "dataScattoDichiarata": "2015-02-05 16:10:53",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Ponteggi visibili e luce scura: non migliora la sequenza del Duomo; preferito il dettaglio dell’organo.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "José Luiz",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-duomo-f3526d31e3",
+        "esito": "ok",
+        "dimensioni": [
+          5127,
+          3370
+        ],
+        "sha256": "aaa782b0759408272292737c7cc4b663ea6c7de174b59355568df80f9799d8ec"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "attribuzioneDichiarata": "© José Luiz Bernardes Ribeiro"
+    },
+    {
+      "id": "foto-duomo-fa7914174a",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "L’organo e la decorazione dorata all’interno del Duomo.",
+      "titoloFonte": "Cattedrale di Santa Maria Assunta o Duomo di Napoli. (758).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cattedrale_di_Santa_Maria_Assunta_o_Duomo_di_Napoli._(758).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/de/Cattedrale_di_Santa_Maria_Assunta_o_Duomo_di_Napoli._%28758%29.jpg",
+      "autore": "Giuseppe Guida",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3715,
+        4616
+      ],
+      "dataScattoDichiarata": "2024-05-04 11:19:19",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Giuseppe Guida",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-duomo-fa7914174a",
+        "esito": "ok",
+        "dimensioni": [
+          3715,
+          4616
+        ],
+        "sha256": "e448be05f0f5e270f4e4fed0cf9e72d17dce3a35bbe2c14a98461445c5a9be4b"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-duomo/foto-duomo-fa7914174a.jpg",
+        "anteprima": "../foto/anteprime/tappa-duomo/foto-duomo-fa7914174a.jpg",
+        "sha256": "e448be05f0f5e270f4e4fed0cf9e72d17dce3a35bbe2c14a98461445c5a9be4b",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-duomo",
+    "soggetto": "esterno",
+    "didascaliaProposta": "La facciata del Duomo, in via Duomo.",
+    "titoloFonte": "Naples duomo facade.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Naples_duomo_facade.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Naples_duomo_facade.jpg",
+    "autore": "Velvet",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      1700,
+      2837
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Velvet",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-duomo",
+      "esito": "ok",
+      "dimensioni": [
+        1700,
+        2837
+      ],
+      "sha256": "0ba95ced30e1e5b6b2b1ce9b2046c797b30a3621fb3fa8e5cd5c1dbae1ff57e2"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-duomo/esistente-tp-duomo.jpg",
+      "anteprima": "../foto/anteprime/tappa-duomo/esistente-tp-duomo.jpg",
+      "sha256": "0ba95ced30e1e5b6b2b1ce9b2046c797b30a3621fb3fa8e5cd5c1dbae1ff57e2",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-duomo",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-duomo-97a7ca5b80",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-duomo-6c7c9c45a8",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 4,
+      "foto": "foto-duomo-fa7914174a",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Manca una veduta riconoscibile del Tesoro: la soglia numerica non copre ancora tutte le componenti del biglietto.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-duomo",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-duomo-97a7ca5b80",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-duomo-6c7c9c45a8",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 4,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 0,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

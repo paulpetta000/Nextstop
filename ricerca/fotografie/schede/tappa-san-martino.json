@@ -1,0 +1,144 @@
+{
+  "tipo": "tappa",
+  "id": "san-martino",
+  "nome": "Certosa e Museo di San Martino",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-san-martino",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Certosa\" \"San Martino\" cloister",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-san-martino-f1c9d42468",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Chiostro grande della Certosa di San Martino",
+      "titoloFonte": "Il chiostro grande del Dosio a dicembre Certosa di San Martino Napoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Il_chiostro_grande_del_Dosio_a_dicembre_Certosa_di_San_Martino_Napoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Il_chiostro_grande_del_Dosio_a_dicembre_Certosa_di_San_Martino_Napoli.jpg",
+      "autore": "Tremej",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4032,
+        3024
+      ],
+      "dataScattoDichiarata": "2019-12-31 13:27:20",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Tremej",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-san-martino-2944327a3a",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Porticato del chiostro grande",
+      "titoloFonte": "San Martino (Naples) - Main cloister - 12.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Martino_(Naples)_-_Main_cloister_-_12.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/dc/San_Martino_%28Naples%29_-_Main_cloister_-_12.jpg",
+      "autore": "Superchilum",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3888,
+        5184
+      ],
+      "dataScattoDichiarata": "2026-05-31 10:27:27",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Superchilum",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-san-martino",
+    "soggetto": "esterno",
+    "didascaliaProposta": "La vista da Castel Sant'Elmo sulla Certosa di San Martino, il porto e il Vesuvio.",
+    "titoloFonte": "Naples from the Castello Sant Elmo with Abbazia San Martino the port and the Vesuv.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Naples_from_the_Castello_Sant_Elmo_with_Abbazia_San_Martino_the_port_and_the_Vesuv.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/6/6f/Naples_from_the_Castello_Sant_Elmo_with_Abbazia_San_Martino_the_port_and_the_Vesuv.jpg",
+    "autore": "Wolfgang Moroder",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      7360,
+      4912
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Wolfgang Moroder",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

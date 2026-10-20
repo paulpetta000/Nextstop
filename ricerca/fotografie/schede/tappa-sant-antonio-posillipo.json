@@ -1,0 +1,148 @@
+{
+  "tipo": "tappa",
+  "id": "sant-antonio-posillipo",
+  "nome": "Il belvedere di Sant'Antonio a Posillipo",
+  "controllato": "2026-10-20",
+  "fotoEsistente": null,
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Sant'Antonio\" \"Posillipo\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "Titoli esatti trovati nelle pagine Commons e nella galleria Napoli",
+      "risultatiEsaminati": 4
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-sant-antonio-posillipo-da4e4d84ad",
+      "soggetto": "interno",
+      "didascaliaProposta": "Altare nella chiesa di Sant'Antonio a Posillipo",
+      "titoloFonte": "Napoli - Chiesa di Sant'Antonio a Posillipo - 2024-09-23 20-30-22 001.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Chiesa_di_Sant%27Antonio_a_Posillipo_-_2024-09-23_20-30-22_001.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/86/Napoli_-_Chiesa_di_Sant%27Antonio_a_Posillipo_-_2024-09-23_20-30-22_001.JPG",
+      "autore": "Lucamato",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        6000,
+        4000
+      ],
+      "dataScattoDichiarata": "2021-01-26",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1202998483,
+      "sha1Originale": "1bcdf06ad8f6d488ec23c43c54856106ad970b1b",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "La chiesa o il suo altare non sostituiscono la vista dal belvedere.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Lucamato",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-sant-antonio-posillipo-4770dc1b43",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Chiesa accanto al belvedere",
+      "titoloFonte": "Napoli - Chiesa di Sant'Antonio a Posillipo - 2024-09-23 20-30-22 003.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Chiesa_di_Sant%27Antonio_a_Posillipo_-_2024-09-23_20-30-22_003.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/77/Napoli_-_Chiesa_di_Sant%27Antonio_a_Posillipo_-_2024-09-23_20-30-22_003.JPG",
+      "autore": "Lucamato",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        6000,
+        4000
+      ],
+      "dataScattoDichiarata": "2021-01-26",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1134500922,
+      "sha1Originale": "d0b6f92a6236de54b84b4560ba7f126d56b2c6c3",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "La chiesa o il suo altare non sostituiscono la vista dal belvedere.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Lucamato",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-sant-antonio-posillipo-a5580d6f79",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Napoli e il golfo visti da Sant'Antonio a Posillipo",
+      "titoloFonte": "Napoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Napoli.jpg",
+      "autore": "it:Utente:...Lord_Zarcon",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "dimensioni": [
+        5099,
+        1430
+      ],
+      "dataScattoDichiarata": null,
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1269111942,
+      "sha1Originale": "259acac8988516c3717af4d8a543934f84e34796",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "La chiesa o il suo altare non sostituiscono la vista dal belvedere.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "it:Utente:...Lord_Zarcon",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Cercare una veduta d’insieme nitida, luminosa e riferita al punto esatto."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 4,
+    "risultatiLetti": 12,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

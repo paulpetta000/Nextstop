@@ -1,0 +1,174 @@
+{
+  "tipo": "tappa",
+  "id": "camaldoli",
+  "nome": "Parco dei Camaldoli",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-camaldoli",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Parco\" \"Camaldoli\" Naples filetype:bitmap",
+      "risultatiEsaminati": 5
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "incategory:\"Parco Urbano dei Camaldoli\" filetype:bitmap",
+      "risultatiEsaminati": 12
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-camaldoli-b17480725e",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Viale nel bosco del Parco dei Camaldoli",
+      "titoloFonte": "Parco dei Camaldoli - viale.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_dei_Camaldoli_-_viale.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/34/Parco_dei_Camaldoli_-_viale.jpg",
+      "autore": "Ruthven",
+      "licenza": "CC BY 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dimensioni": [
+        1602,
+        2400
+      ],
+      "dataScattoDichiarata": "10 June 2016, 12:49:46 (according to Exif data)",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1228591368,
+      "sha1Originale": "41f4fc1571a940da8a3f6861948f284c49828f1d",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Ruthven",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-camaldoli-b0de2decec",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Parete di tufo nel parco",
+      "titoloFonte": "Parco dei Camaldoli - cava di tufo.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_dei_Camaldoli_-_cava_di_tufo.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Parco_dei_Camaldoli_-_cava_di_tufo.jpg",
+      "autore": "Ruthven",
+      "licenza": "CC BY 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dimensioni": [
+        2400,
+        1602
+      ],
+      "dataScattoDichiarata": "2016-06-10 12:48:38",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1027022442,
+      "sha1Originale": "c3dde4cc79689f909e5264cd75335898bbbf1e11",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Ruthven",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-camaldoli-b549751ae2",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Bosco di castagni dei Camaldoli",
+      "titoloFonte": "Parco dei Camaldoli - bosco 2.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_dei_Camaldoli_-_bosco_2.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Parco_dei_Camaldoli_-_bosco_2.jpg",
+      "autore": "Ruthven",
+      "licenza": "CC BY 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dimensioni": [
+        1602,
+        2400
+      ],
+      "dataScattoDichiarata": "10 June 2016, 11:38:01 (according to Exif data)",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1228591485,
+      "sha1Originale": "f4d718e6f3ea456a2d4c4b20e28b47c7181d2f55",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Vegetazione poco leggibile come percorso e composizione troppo generica.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Ruthven",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-camaldoli",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Un viale nel bosco del Parco dei Camaldoli.",
+    "titoloFonte": "Parco dei Camaldoli - bosco.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Parco_dei_Camaldoli_-_bosco.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/1/19/Parco_dei_Camaldoli_-_bosco.jpg",
+    "autore": "Ruthven",
+    "licenza": "CC BY 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "dimensioni": [
+      2400,
+      1602
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Scatto simile alla nuova proposta: evitare ripetizioni dello stesso punto di vista.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Ruthven",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Cercare una veduta d’insieme nitida, luminosa e riferita al punto esatto."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 3,
+    "risultatiLetti": 40,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "tipo": "tappa",
+  "id": "dadom",
+  "nome": "Acquario e museo Darwin-Dohrn",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-dadom",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Aquarium\" \"Naples\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-dadom-f2ae4fda4c",
+      "soggetto": "interno",
+      "didascaliaProposta": "Sala con vasche dell'Acquario della Stazione Zoologica",
+      "titoloFonte": "Aquarium Stazione Zoologica Anton Dohrn.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Aquarium_Stazione_Zoologica_Anton_Dohrn.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/28/Aquarium_Stazione_Zoologica_Anton_Dohrn.jpg",
+      "autore": "Elke Brüser",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5376,
+        4035
+      ],
+      "dataScattoDichiarata": "2024-12-19 12:50:08",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ],
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Elke Brüser",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-dadom-f2ae4fda4c",
+        "esito": "ok",
+        "dimensioni": [
+          5376,
+          4035
+        ],
+        "sha256": "361f8524b839887345fed8a06f14d64ed83068d09d6c9a9e967605fe46fb4525"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-dadom/foto-dadom-f2ae4fda4c.jpg",
+        "anteprima": "../foto/anteprime/tappa-dadom/foto-dadom-f2ae4fda4c.jpg",
+        "sha256": "361f8524b839887345fed8a06f14d64ed83068d09d6c9a9e967605fe46fb4525",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-dadom",
+    "soggetto": "esterno",
+    "didascaliaProposta": "La Stazione Zoologica Anton Dohrn nella Villa Comunale, sede dell'acquario e del museo Darwin-Dohrn.",
+    "titoloFonte": "StazionezoologicaAntonDohrnNapoli19-12-10 1512.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:StazionezoologicaAntonDohrnNapoli19-12-10_1512.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/a/ab/StazionezoologicaAntonDohrnNapoli19-12-10_1512.jpg",
+    "autore": "TatsuoTabei",
+    "licenza": "Pubblico dominio",
+    "licenzaUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "dimensioni": [
+      1600,
+      1200
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Originale sotto 2.000 px sul lato lungo: non proposto per la nuova galleria HD.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": false,
+      "autoreSintetico": "TatsuoTabei",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-dadom-f2ae4fda4c",
+      "ruolo": "apertura"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Ambienti del Darwin-Dohrn: lo scatto proposto documenta l’Acquario, non entrambi i musei."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 1,
+    "mancantiPerTre": 2,
+    "mancantiPerQuattro": 3,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

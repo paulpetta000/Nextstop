@@ -1,0 +1,344 @@
+{
+  "tipo": "tappa",
+  "id": "ischia",
+  "nome": "Ischia",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-ischia",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Ischia\" \"Castello Aragonese\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-ischia-8fc87cd54d",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Castello Aragonese illuminato di notte",
+      "titoloFonte": "Ischia, castello aragonese, veduta notturna 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Ischia,_castello_aragonese,_veduta_notturna_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/5d/Ischia%2C_castello_aragonese%2C_veduta_notturna_01.jpg",
+      "autore": "Sailko",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4584,
+        3648
+      ],
+      "dataScattoDichiarata": "2021-12-19 17:54:45",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1185371742,
+      "sha1Originale": "cfb255544156da14d5815d312f73635c735ab516",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scatto notturno o finestra che limita la vista; preferite vedute aperte.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Sailko",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-ischia-6216f500c1",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Castello Aragonese e Spiaggia dei Pescatori",
+      "titoloFonte": "Spiaggia dei Pescatori.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Spiaggia_dei_Pescatori.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Spiaggia_dei_Pescatori.jpg",
+      "autore": "Ugeorge",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        4930,
+        3287
+      ],
+      "dataScattoDichiarata": null,
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 814335778,
+      "sha1Originale": "358c3f0b8a3440f75e2aa4b1a4ff6ac3845ef7f2",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Ugeorge",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-ischia-6216f500c1",
+        "esito": "ok",
+        "dimensioni": [
+          4930,
+          3287
+        ],
+        "sha256": "a9bec96850409b2793ab0bfc0ae8b11c0cc7c000f8cdf159423570d3cbd7766c"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-ischia/foto-ischia-6216f500c1.jpg",
+        "anteprima": "../foto/anteprime/tappa-ischia/foto-ischia-6216f500c1.jpg",
+        "sha256": "a9bec96850409b2793ab0bfc0ae8b11c0cc7c000f8cdf159423570d3cbd7766c",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-ischia-a097fd0fc1",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Vista sul mare da un belvedere del Castello Aragonese",
+      "titoloFonte": "Castello Aragonese, Ischia - Belvedere Chiesa dell'Ortodonico.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Castello_Aragonese,_Ischia_-_Belvedere_Chiesa_dell%27Ortodonico.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Castello_Aragonese%2C_Ischia_-_Belvedere_Chiesa_dell%27Ortodonico.jpg",
+      "autore": "Giuseppe Albano",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3543,
+        2365
+      ],
+      "dataScattoDichiarata": "2022-08-13 03:53:37",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 849975822,
+      "sha1Originale": "7ba8b2a0c1bb807f3d7f6271bb28e2bbbaecd225",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scatto notturno o finestra che limita la vista; preferite vedute aperte.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Giuseppe Albano",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-ischia-1e5b5641f4",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Il Castello Aragonese di Ischia e il ponte di accesso.",
+      "titoloFonte": "Aragonese Castle Island of Ischia (53929679155).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Aragonese_Castle_Island_of_Ischia_(53929679155).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/00/Aragonese_Castle_Island_of_Ischia_%2853929679155%29.jpg",
+      "autore": "Steve Jurvetson",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        2978,
+        1680
+      ],
+      "dataScattoDichiarata": "2024-06-28 16:39:42",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Steve Jurvetson",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-ischia-1e5b5641f4",
+        "esito": "ok",
+        "dimensioni": [
+          2978,
+          1680
+        ],
+        "sha256": "3b1fe360f4eca2667bd7b2ca1abbc1a8982358997d4eb3ce6ff653218d556371"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-ischia/foto-ischia-1e5b5641f4.jpg",
+        "anteprima": "../foto/anteprime/tappa-ischia/foto-ischia-1e5b5641f4.jpg",
+        "sha256": "3b1fe360f4eca2667bd7b2ca1abbc1a8982358997d4eb3ce6ff653218d556371",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-ischia-0b5d44f78e",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Uno scorcio del mare e della baia da una terrazza del Castello Aragonese.",
+      "titoloFonte": "Castello Aragonese 03.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Castello_Aragonese_03.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Castello_Aragonese_03.jpg",
+      "autore": "Saverio.G",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3264,
+        2448
+      ],
+      "dataScattoDichiarata": "2018-09-15",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Terrazza e muratura occupano una parte importante dell’immagine: panorama meno pulito del livello richiesto.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Saverio.G",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-ischia-0b5d44f78e",
+        "esito": "ok",
+        "dimensioni": [
+          3264,
+          2448
+        ],
+        "sha256": "4f1587a28e5d85a3e8c469d52b5ee9db0f20ec4be804ad3b632db93b604051a0"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    },
+    {
+      "id": "foto-ischia-45e26cc0d5",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Sant'Angelo.l'Antico borgo di pescatori, oggi rinomata località turistica dell'isola d'Ischia. Italia",
+      "titoloFonte": "Isola d'ischia italia.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Isola_d%27ischia_italia.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/28/Isola_d%27ischia_italia.jpg",
+      "autore": "Repuli",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5773,
+        3849
+      ],
+      "dataScattoDichiarata": "2017-05-19 17:10:55",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Repuli",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-ischia-45e26cc0d5",
+        "esito": "ok",
+        "dimensioni": [
+          5773,
+          3849
+        ],
+        "sha256": "248a2059aefcc27acaa6d52004183deb5438c89f147dcb0d1af674e5d354a2d1"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-ischia/foto-ischia-45e26cc0d5.jpg",
+        "anteprima": "../foto/anteprime/tappa-ischia/foto-ischia-45e26cc0d5.jpg",
+        "sha256": "248a2059aefcc27acaa6d52004183deb5438c89f147dcb0d1af674e5d354a2d1",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-ischia",
+    "soggetto": "panorama",
+    "didascaliaProposta": "Il Castello Aragonese di Ischia.",
+    "titoloFonte": "Castello Aragonese (Ischia).jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Castello_Aragonese_(Ischia).jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Castello_Aragonese_%28Ischia%29.jpg",
+    "autore": "Dudva",
+    "licenza": "CC0",
+    "licenzaUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "dimensioni": [
+      2590,
+      1889
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Veduta simile al nuovo scatto più curato dalla spiaggia: evitare ripetizioni.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": false,
+      "autoreSintetico": "Dudva",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-ischia-6216f500c1",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-ischia-1e5b5641f4",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-ischia-45e26cc0d5",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Serve almeno un altro luogo dell’isola, oltre al castello e alla spiaggia dei Pescatori.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
+  ],
+  "documentiRiuso": [
+    "castello-aragonese-wlm-2016"
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "foto-ischia-6216f500c1",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 7,
+    "risultatiLetti": 128,
+    "pagineFotograficheFlickrVerificate": 9,
+    "riscontriFlickr": "../ricerche/2026-10-20-flickr.json",
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

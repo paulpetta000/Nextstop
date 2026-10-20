@@ -1,0 +1,36 @@
+{
+  "segnalazioni": {
+    "bene-culturale": "Condizioni ulteriori del bene non risolte, soprattutto per un uso commerciale: escludere dalla proposta e cercare alternative o concessioni già pubbliche, senza contatti o richieste.",
+    "opere-contemporanee": "La licenza del fotografo non documenta il permesso degli autori delle opere contemporanee o decorazioni raffigurate; chiarire prima dell’uso.",
+    "sansevero-interno": "Condizioni delle riprese e del riuso non risolte; le FAQ attuali vietano fotografare durante la visita, senza dimostrare irregolarità di scatti passati. Esclusa dalla proposta; nessuna richiesta a fotografo o museo.",
+    "autore-desunto": "Autore ricostruito per deduzione dalla vecchia registrazione: esclusa finché non emerge un’attribuzione pubblica verificabile; nessun contatto.",
+    "risoluzione-ridotta": "Codice storico per immagini sotto 800 px sul lato lungo. La soglia attuale delle proposte è almeno 2.000 px nativi, con valutazione visiva separata.",
+    "avviso-fonte": "La scheda del file espone un avviso aggiuntivo riportato in avvisoFonte.",
+    "percorso-specifico": "Confermare che spazi e accessi raffigurati appartengano alla visita proposta oggi, senza usare la foto come prova di apertura o accessibilità.",
+    "contesto-parziale": "La fotografia mostra solo un componente della tappa composta o della gita: mantenere la didascalia precisa.",
+    "archivio-menu": "Foto di un piatto scattata anni fa: non dimostra disponibilità o presentazione nel menu corrente.",
+    "bene-fec": "Regime FEC ulteriore rispetto al copyright fotografico: immagine esclusa dalla proposta, senza richieste di permesso.",
+    "persona-primo-piano": "Persona riconoscibile predominante senza liberatoria documentata: immagine esclusa.",
+    "autorizzazione-bene-non-accertata": "Autorizzazione specifica al riuso del bene non rintracciata: esclusa; il solo tag WLM non basta.",
+    "bene-culturale-museo-civico": "Museo civico: condizioni ulteriori del bene non risolte, escluso dalla proposta.",
+    "diritti-bene-da-chiarire": "Chiarimento ulteriore già aperto: escludere, senza contatti."
+  },
+  "stati": {
+    "licenza-libera": "Licenza fotografica libera verificata nella scheda del file; nessuna garanzia generale sui diritti di terzi.",
+    "licenza-libera-con-chiarimenti": "Licenza fotografica libera presente, con segnalazioni specifiche aperte.",
+    "nessuna-candidata-libera": "Nessuna nuova foto libera selezionata in questo giro; non significa che non ne esistano.",
+    "da-autorizzare": "Foto del sito del gestore: manca una licenza libera verificata; non copiarla negli asset del sito.",
+    "fonte-per-richiesta": "Codice storico sospeso: fonte conservata, senza concessione già verificata. Non contattare il gestore o chiedere originali.",
+    "selezione-parziale": "Almeno una proposta; non significa galleria completa.",
+    "da-completare": "Nessuna foto supera oggi tutti i filtri applicati.",
+    "licenza-fotografica-verificata": "Concessione del copyright fotografico documentata; usare revisioneEditoriale e non questo stato per decidere la proposta.",
+    "esclusa-licenza-non-accertata": "Risorsa del gestore fuori proposta: nessun contatto o richiesta da fare.",
+    "archivio-escluso-dalla-proposta": "Fonte conservata come ricerca storica; non autorizza a copiarne le fotografie.",
+    "soglia-minima-raggiunta": "Almeno tre proposte nella sequenza; non certifica copertura di tutte le parti della tappa, qualità perfetta o pubblicazione approvata. Leggere daCompletare e copertura."
+  },
+  "revisioneEditoriale": {
+    "proposta": "Bozza visiva in galleriaProposta. Licenza fotografica e originali controllati; non inserita nel sito né certificata perfetta al 100%.",
+    "esclusa": "Non usare nella proposta attuale: leggere motivazione e dirittiDaChiarire. Nessuna richiesta di permesso da fare."
+  },
+  "copertura": "Obiettivo minimo tre e preferenza quattro; i mancanti sono calcolati per scheda. Non compensare una scheda vuota con foto in eccesso di un’altra."
+}

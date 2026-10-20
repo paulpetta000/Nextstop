@@ -1,0 +1,285 @@
+{
+  "tipo": "tappa",
+  "id": "marechiaro",
+  "nome": "Marechiaro",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-marechiaro",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Marechiaro\"",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-marechiaro-75ae8e0626",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Marechiaro visto dal mare",
+      "titoloFonte": "Marechiaro vista globale dal mare.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Marechiaro_vista_globale_dal_mare.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Marechiaro_vista_globale_dal_mare.JPG",
+      "autore": "Alexandre Albore",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        2876,
+        2048
+      ],
+      "dataScattoDichiarata": "2015-08-02 11:22:37",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce piatta o dettaglio di scala poco utile; non migliora la vista già presente.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Alexandre Albore",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-marechiaro-1e8d62b52d",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Scaletta verso il mare a Marechiaro",
+      "titoloFonte": "Napoli - Marechiaro3.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Marechiaro3.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0f/Napoli_-_Marechiaro3.jpg",
+      "autore": "Armando Mancini",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        2566,
+        3421
+      ],
+      "dataScattoDichiarata": "2009-11-14 10:23:25",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce piatta o dettaglio di scala poco utile; non migliora la vista già presente.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-marechiaro-e5236d5570",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Le scalette di Marechiaro incorniciano il mare.",
+      "titoloFonte": "Napoli - Marechiaro.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Marechiaro.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Napoli_-_Marechiaro.jpg",
+      "autore": "Armando Mancini",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        2616,
+        3488
+      ],
+      "dataScattoDichiarata": "2009-11-14 10:17:46",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-marechiaro-e5236d5570",
+        "esito": "ok",
+        "dimensioni": [
+          2616,
+          3488
+        ],
+        "sha256": "7a42b36e402c734067ca0a30af046c30fae70695f1f651c2ffbc7579b0890d36"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-marechiaro/foto-marechiaro-e5236d5570.jpg",
+        "anteprima": "../foto/anteprime/tappa-marechiaro/foto-marechiaro-e5236d5570.jpg",
+        "sha256": "7a42b36e402c734067ca0a30af046c30fae70695f1f651c2ffbc7579b0890d36",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-marechiaro-90a46e739d",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Lo Scoglione e la costa di Marechiaro verso Nisida.",
+      "titoloFonte": "Costa di Marechiaro Lo Scoglione verso Nisida.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Costa_di_Marechiaro_Lo_Scoglione_verso_Nisida.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/99/Costa_di_Marechiaro_Lo_Scoglione_verso_Nisida.jpg",
+      "autore": "ChristiHarri",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3264,
+        2448
+      ],
+      "dataScattoDichiarata": "2016-10-16 13:38:52",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ChristiHarri",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-marechiaro-90a46e739d",
+        "esito": "ok",
+        "dimensioni": [
+          3264,
+          2448
+        ],
+        "sha256": "99e8ede252852c205f62bb5287fea65eddc319c1ec3a599fdf4fc38ad54211eb"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-marechiaro/foto-marechiaro-90a46e739d.jpg",
+        "anteprima": "../foto/anteprime/tappa-marechiaro/foto-marechiaro-90a46e739d.jpg",
+        "sha256": "99e8ede252852c205f62bb5287fea65eddc319c1ec3a599fdf4fc38ad54211eb",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-marechiaro-1a06c3ab26",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Il mare e gli edifici lungo la discesa alla finestrella di Marechiaro.",
+      "titoloFonte": "Marechiaro1.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Marechiaro1.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/37/Marechiaro1.jpg",
+      "autore": "Baku",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1908,
+        4032
+      ],
+      "dataScattoDichiarata": "2020-10-06",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Baku",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-marechiaro-1a06c3ab26",
+        "esito": "ok",
+        "dimensioni": [
+          1908,
+          4032
+        ],
+        "sha256": "b36e02d5b0d385573019a397412994eba5f1c9c2aaa748f67ce1479321866811"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-marechiaro/foto-marechiaro-1a06c3ab26.jpg",
+        "anteprima": "../foto/anteprime/tappa-marechiaro/foto-marechiaro-1a06c3ab26.jpg",
+        "sha256": "b36e02d5b0d385573019a397412994eba5f1c9c2aaa748f67ce1479321866811",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-marechiaro",
+    "soggetto": "panorama",
+    "didascaliaProposta": "Marechiaro, sulla costa di Posillipo.",
+    "titoloFonte": "Napoli - Marechiaro2.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Marechiaro2.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/f/f4/Napoli_-_Marechiaro2.jpg",
+    "autore": "Armando Mancini",
+    "licenza": "CC BY-SA 2.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "dimensioni": [
+      3550,
+      2663
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Edificio in forte controluce: la vista non valorizza il paesaggio.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Armando Mancini",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-marechiaro-1a06c3ab26",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-marechiaro-e5236d5570",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-marechiaro-90a46e739d",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Per la quarta foto preferire il borgo o il porticciolo, senza attribuire ristoranti generici ai locali censiti.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 3,
+    "risultatiLetti": 75,
+    "pagineFotograficheFlickrVerificate": 9,
+    "riscontriFlickr": "../ricerche/2026-10-20-flickr.json",
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

@@ -1,0 +1,169 @@
+{
+  "tipo": "tappa",
+  "id": "orto-botanico",
+  "nome": "Orto Botanico",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-orto-botanico",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Orto botanico\" \"Naples\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-orto-botanico-c66ce5c93b",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Viale alberato dell'Orto Botanico di Napoli",
+      "titoloFonte": "Orto botanico di Napoli 213.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Orto_botanico_di_Napoli_213.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c4/Orto_botanico_di_Napoli_213.JPG",
+      "autore": "Daniel Ventura",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        3000,
+        4000
+      ],
+      "dataScattoDichiarata": "2014-05-27",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1221755935,
+      "sha1Originale": "5f58a53ad4f223d71b0eb0ff8d04594f515980a2",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scorcio ordinario, verticale sbilanciata: serve una veduta più curata del giardino.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Daniel Ventura",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-orto-botanico-558029df20",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Piante nella collezione botanica",
+      "titoloFonte": "Orto botanico di Napoli 69.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Orto_botanico_di_Napoli_69.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c6/Orto_botanico_di_Napoli_69.jpg",
+      "autore": "Daniel Ventura",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2560,
+        1920
+      ],
+      "dataScattoDichiarata": "2014-05-27",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1145863666,
+      "sha1Originale": "5c60d3f374732758c1980b6e6eb3678785f18603",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio isolato o luce poco equilibrata; preferito il percorso nel verde.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Daniel Ventura",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-orto-botanico-dca30103d6",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Sentiero e siepi dell'Orto Botanico",
+      "titoloFonte": "Orto botanico di Napoli 102.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Orto_botanico_di_Napoli_102.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Orto_botanico_di_Napoli_102.jpg",
+      "autore": "Daniel Ventura",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        1920,
+        2560
+      ],
+      "dataScattoDichiarata": "2014-05-27 16:38:09",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1167780642,
+      "sha1Originale": "581c855e27f4dc57bfd2cfa59952e9b6c5ea4418",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio isolato o luce poco equilibrata; preferito il percorso nel verde.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Daniel Ventura",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-orto-botanico",
+    "soggetto": "esterno",
+    "didascaliaProposta": "L'ingresso del Real Orto Botanico, in via Foria.",
+    "titoloFonte": "Napoli - Real orto botanico.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Real_orto_botanico.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/c/cb/Napoli_-_Real_orto_botanico.jpg",
+    "autore": "Armando Mancini",
+    "licenza": "CC BY-SA 2.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "dimensioni": [
+      3648,
+      2736
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Armando Mancini",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 3,
+    "risultatiLetti": 106,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

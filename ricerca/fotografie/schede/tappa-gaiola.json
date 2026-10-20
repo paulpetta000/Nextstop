@@ -1,0 +1,327 @@
+{
+  "tipo": "tappa",
+  "id": "gaiola",
+  "nome": "Parco sommerso della Gaiola",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-gaiola",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Gaiola\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "incategory:\"Gaiola (Naples)\" filetype:bitmap",
+      "risultatiEsaminati": 8
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-gaiola-405de8f05a",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Isolotto della Gaiola visto dal mare",
+      "titoloFonte": "Isoletta della Gaiola (Napoli) 02.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Isoletta_della_Gaiola_(Napoli)_02.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/ba/Isoletta_della_Gaiola_%28Napoli%29_02.jpg",
+      "autore": "Gianfranco Vitolo",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        4494,
+        3250
+      ],
+      "dataScattoDichiarata": "2017-06-09 15:32:03",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1213176718,
+      "sha1Originale": "ea292a3ca4f45109091dd0c34258d8aedeec6fa3",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio della scogliera; preferito il ponte con il mare visibile.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Gianfranco Vitolo",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-gaiola-91361499f1",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Ponticello fra gli scogli della Gaiola",
+      "titoloFonte": "Isoletta della Gaiola (Napoli) 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Isoletta_della_Gaiola_(Napoli)_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/27/Isoletta_della_Gaiola_%28Napoli%29_01.jpg",
+      "autore": "Gianfranco Vitolo",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        4459,
+        3322
+      ],
+      "dataScattoDichiarata": "2017-06-09 12:33:34",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1159163045,
+      "sha1Originale": "37b06939afb57ab4b409ddfeab8baffe253dbffe",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Ponte e acqua blu in una composizione leggibile; seconda vista dopo l’insieme degli isolotti.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Gianfranco Vitolo",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-gaiola-91361499f1",
+        "esito": "ok",
+        "dimensioni": [
+          4459,
+          3322
+        ],
+        "sha256": "92cad78ffcdd1f4057dbd7111ffdaf2c90894dc9669d1da7539f1e59dca3f22b"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-gaiola/foto-gaiola-91361499f1.jpg",
+        "anteprima": "../foto/anteprime/tappa-gaiola/foto-gaiola-91361499f1.jpg",
+        "sha256": "92cad78ffcdd1f4057dbd7111ffdaf2c90894dc9669d1da7539f1e59dca3f22b",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-gaiola-bd2eecda0d",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Isolotti e ville sulla costa della Gaiola",
+      "titoloFonte": "Villa della Gaiola.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Villa_della_Gaiola.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/da/Villa_della_Gaiola.jpg",
+      "autore": "Alexandre Albore",
+      "licenza": "CC0",
+      "licenzaUrl": "http://creativecommons.org/publicdomain/zero/1.0/deed.en",
+      "dimensioni": [
+        3184,
+        2020
+      ],
+      "dataScattoDichiarata": "2015-08-02 11:25:40",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1162646794,
+      "sha1Originale": "c584c564d52563077d033672830d123418c7fc48",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Inquadratura ripetuta o punto di vista meno utile: preferita la vista degli isolotti.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Alexandre Albore",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-gaiola-f5f3708975",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Gli isolotti della Gaiola e l’acqua trasparente, visti dal mare.",
+      "titoloFonte": "Isoletta della Gaiola (Napoli) 03.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Isoletta_della_Gaiola_(Napoli)_03.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Isoletta_della_Gaiola_%28Napoli%29_03.jpg",
+      "autore": "Gianfranco Vitolo",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        4087,
+        2738
+      ],
+      "dataScattoDichiarata": "2017-06-09 12:04:25",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Gianfranco Vitolo",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-gaiola-f5f3708975",
+        "esito": "ok",
+        "dimensioni": [
+          4087,
+          2738
+        ],
+        "sha256": "4e7e92118759f30eb38a664b584968873e890324a64d12953ddc6656a206c33f"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-gaiola/foto-gaiola-f5f3708975.jpg",
+        "anteprima": "../foto/anteprime/tappa-gaiola/foto-gaiola-f5f3708975.jpg",
+        "sha256": "4e7e92118759f30eb38a664b584968873e890324a64d12953ddc6656a206c33f",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-gaiola-6f3a0cb49d",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Il tramonto sulla costa della Gaiola, verso Nisida.",
+      "titoloFonte": "Parco delle Gaiola Tramonto.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_delle_Gaiola_Tramonto.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Parco_delle_Gaiola_Tramonto.jpg",
+      "autore": "ChristiHarri",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2592,
+        1936
+      ],
+      "dataScattoDichiarata": "2015-09-26 18:44:53",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ChristiHarri",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-gaiola-6f3a0cb49d",
+        "esito": "ok",
+        "dimensioni": [
+          2592,
+          1936
+        ],
+        "sha256": "0196bebfa0e9a641d015c7d223cadfc70d1ddf04cffdfd57aaae46f3b0faa0b6"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-gaiola/foto-gaiola-6f3a0cb49d.jpg",
+        "anteprima": "../foto/anteprime/tappa-gaiola/foto-gaiola-6f3a0cb49d.jpg",
+        "sha256": "0196bebfa0e9a641d015c7d223cadfc70d1ddf04cffdfd57aaae46f3b0faa0b6",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-gaiola",
+    "soggetto": "panorama",
+    "didascaliaProposta": "L'isolotto della Gaiola visto dalla costa di Posillipo.",
+    "titoloFonte": "Parco della Gaiola.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Parco_della_Gaiola.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/2/2a/Parco_della_Gaiola.jpg",
+    "autore": "ChristiHarri",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      2592,
+      1936
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Sostituita nella sequenza da una nuova fotografia più utile dello stesso soggetto; archivio e licenza conservati.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "ChristiHarri",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-gaiola",
+      "esito": "ok",
+      "dimensioni": [
+        2592,
+        1936
+      ],
+      "sha256": "2da356166b73e15f82929a1de72af7456aaa2f866d3896ce6e2539ced634a18f"
+    },
+    "revisioneEditorialePrecedente": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "ChristiHarri",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-gaiola-f5f3708975",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-gaiola-91361499f1",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-gaiola-6f3a0cb49d",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Manca una scena subacquea documentata: le tre immagini rappresentano la costa e gli isolotti.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-gaiola",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-gaiola-91361499f1",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 4,
+    "risultatiLetti": 56,
+    "pagineFotograficheFlickrVerificate": 2,
+    "riscontriFlickr": "../ricerche/2026-10-20-flickr.json",
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

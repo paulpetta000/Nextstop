@@ -1,0 +1,229 @@
+{
+  "tipo": "tappa",
+  "id": "spaccanapoli",
+  "nome": "Spaccanapoli, Gesù Nuovo e San Gregorio Armeno",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-spaccanapoli",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"San Gregorio Armeno\" Naples",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-spaccanapoli-0224977731",
+      "soggetto": "interno",
+      "didascaliaProposta": "Cappella dell'Idria nel complesso di San Gregorio Armeno",
+      "titoloFonte": "Cappella di santa Maria dell'Idria - Napoli - Chiostro di San Gregorio Armeno 2009.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cappella_di_santa_Maria_dell%27Idria_-_Napoli_-_Chiostro_di_San_Gregorio_Armeno_2009.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/ed/Cappella_di_santa_Maria_dell%27Idria_-_Napoli_-_Chiostro_di_San_Gregorio_Armeno_2009.jpg",
+      "autore": "Armando Mancini",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        2717,
+        3623
+      ],
+      "dataScattoDichiarata": "2009-11-22 12:05:04",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-spaccanapoli-1c55a08152",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Decorazione a maiolica nel complesso di San Gregorio Armeno",
+      "titoloFonte": "San Gregorio Armeno - interior (Naples) (19553929452).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Gregorio_Armeno_-_interior_(Naples)_(19553929452).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0d/San_Gregorio_Armeno_-_interior_%28Naples%29_%2819553929452%29.jpg",
+      "autore": "ho visto nina volare from Italy",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        4000,
+        3000
+      ],
+      "dataScattoDichiarata": "2015-05-15 10:04",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio o inquadratura che non aiuta abbastanza a capire la passeggiata.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ho visto nina volare from Italy",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-spaccanapoli-e448166e78",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Chiostro di San Gregorio Armeno",
+      "titoloFonte": "San Gregorio Armeno's cloister (Naples) (18911488774).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Gregorio_Armeno%27s_cloister_(Naples)_(18911488774).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/75/San_Gregorio_Armeno%27s_cloister_%28Naples%29_%2818911488774%29.jpg",
+      "autore": "ho visto nina volare from Italy",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3000,
+        4000
+      ],
+      "dataScattoDichiarata": "2015-05-15 09:40",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio o inquadratura che non aiuta abbastanza a capire la passeggiata.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ho visto nina volare from Italy",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "nuova:2350c313e91a",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "San Gregorio Armeno - Naples, Campania, Italy.jpg",
+      "titoloFonte": "San Gregorio Armeno - Naples, Campania, Italy.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:San_Gregorio_Armeno_-_Naples,_Campania,_Italy.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d3/San_Gregorio_Armeno_-_Naples%2C_Campania%2C_Italy.jpg",
+      "autore": "Mstyslav Chernov",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2343,
+        3500
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: dettaglio ripetuto o veduta che non migliora la sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mstyslav Chernov",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "nuova:f6fb266dbfb2",
+      "soggetto": "interno",
+      "didascaliaProposta": "Iglesia del Gesù Nuovo, Nápoles, Italia, 2023-03-25, DD 08-10 HDR.jpg",
+      "titoloFonte": "Iglesia del Gesù Nuovo, Nápoles, Italia, 2023-03-25, DD 08-10 HDR.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Iglesia_del_Ges%C3%B9_Nuovo,_N%C3%A1poles,_Italia,_2023-03-25,_DD_08-10_HDR.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/db/Iglesia_del_Ges%C3%B9_Nuovo%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_08-10_HDR.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "dimensioni": [
+        5366,
+        8576
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Fotografia d’autore di qualità; adesione WLM indicata, ma il documento specifico per questo bene non è stato reperito.",
+        "dirittiDaChiarire": [
+          "autorizzazione-bene-non-accertata"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Diego Delso",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-spaccanapoli",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Spaccanapoli, nel centro storico.",
+    "titoloFonte": "Naples spaccanapoli.JPG",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Naples_spaccanapoli.JPG",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/f/ff/Naples_spaccanapoli.JPG",
+    "autore": "Velvet",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      1851,
+      2756
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Velvet",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

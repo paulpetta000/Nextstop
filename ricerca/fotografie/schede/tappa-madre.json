@@ -1,0 +1,144 @@
+{
+  "tipo": "tappa",
+  "id": "madre",
+  "nome": "Museo Madre",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-madre",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Museo Madre\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-madre-a56b72333c",
+      "soggetto": "interno",
+      "didascaliaProposta": "Corridoio con installazione al Museo Madre",
+      "titoloFonte": "Napoli - Museo d'arte contemporanea Donnaregina - 2024-09-03 23-45-50 001.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Museo_d%27arte_contemporanea_Donnaregina_-_2024-09-03_23-45-50_001.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Napoli_-_Museo_d%27arte_contemporanea_Donnaregina_-_2024-09-03_23-45-50_001.JPG",
+      "autore": "ElisabettaCastellano",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2574,
+        3854
+      ],
+      "dataScattoDichiarata": "2019-04-13",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ElisabettaCastellano",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-madre-9de95db5e4",
+      "soggetto": "interno",
+      "didascaliaProposta": "Ambiente della collezione al Museo Madre",
+      "titoloFonte": "Napoli - Museo d'arte contemporanea Donnaregina - 2024-09-03 23-43-51 001.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Museo_d%27arte_contemporanea_Donnaregina_-_2024-09-03_23-43-51_001.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/bc/Napoli_-_Museo_d%27arte_contemporanea_Donnaregina_-_2024-09-03_23-43-51_001.JPG",
+      "autore": "ElisabettaCastellano",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4240,
+        2832
+      ],
+      "dataScattoDichiarata": "2019-04-13",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ElisabettaCastellano",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-madre",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il cortile di Palazzo Donnaregina, sede del museo Madre.",
+    "titoloFonte": "Museo Madre,.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Museo_Madre,.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/6/65/Museo_Madre%2C.jpg",
+    "autore": "Amedeo Benestante",
+    "licenza": "CC BY 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "dimensioni": [
+      5524,
+      3722
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Amedeo Benestante",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 22,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

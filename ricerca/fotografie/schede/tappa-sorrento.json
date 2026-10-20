@@ -1,0 +1,272 @@
+{
+  "tipo": "tappa",
+  "id": "sorrento",
+  "nome": "Sorrento",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-sorrento",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Sorrento\" \"Marina Grande\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-sorrento-768be1a27f",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Marina Grande di Sorrento dall'alto",
+      "titoloFonte": "I08 329 Sorrento, Bagni S. Anna.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:I08_329_Sorrento,_Bagni_S._Anna.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/ac/I08_329_Sorrento%2C_Bagni_S._Anna.jpg",
+      "autore": "Falk2",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4494,
+        2996
+      ],
+      "dataScattoDichiarata": "2011-10-12 09:46",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 799783615,
+      "sha1Originale": "a615229a3ad7b5492c07f22824ea30927b2b70ee",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "La prima nuova veduta non chiarisce abbastanza il borgo; la seconda ha luce piatta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Falk2",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-sorrento-da62654aab",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Porto antico e case di Marina Grande",
+      "titoloFonte": "Sorrento old port 1000409.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sorrento_old_port_1000409.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/73/Sorrento_old_port_1000409.jpg",
+      "autore": "SeveroAntonelli",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4592,
+        3448
+      ],
+      "dataScattoDichiarata": "2021-09-17 13:07:57",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 665236838,
+      "sha1Originale": "88fa857ce493963760a4829f64c4a3f7cce84025",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "La prima nuova veduta non chiarisce abbastanza il borgo; la seconda ha luce piatta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "SeveroAntonelli",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-sorrento-d8fa5731b5",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Marina Piccola, il porto di Sorrento.",
+      "titoloFonte": "Sorrento BW 2013-05-14 08-42-01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sorrento_BW_2013-05-14_08-42-01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Sorrento_BW_2013-05-14_08-42-01.jpg",
+      "autore": "Berthold Werner",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        3591,
+        2501
+      ],
+      "dataScattoDichiarata": "2013-05-14",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Berthold Werner",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-sorrento-d8fa5731b5",
+        "esito": "ok",
+        "dimensioni": [
+          3591,
+          2501
+        ],
+        "sha256": "489da6cb3004041fb177a3f60df95a249531c35f9117203886dd901bc882820f"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "attribuzioneDichiarata": "Berthold Werner",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-sorrento/foto-sorrento-d8fa5731b5.jpg",
+        "anteprima": "../foto/anteprime/tappa-sorrento/foto-sorrento-d8fa5731b5.jpg",
+        "sha256": "489da6cb3004041fb177a3f60df95a249531c35f9117203886dd901bc882820f",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-sorrento-361c53b99a",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Le falesie e gli edifici sopra Marina Piccola a Sorrento.",
+      "titoloFonte": "Sorrento BW 2013-05-14 19-00-59 DxO.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Sorrento_BW_2013-05-14_19-00-59_DxO.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/da/Sorrento_BW_2013-05-14_19-00-59_DxO.jpg",
+      "autore": "Berthold Werner",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        3640,
+        2535
+      ],
+      "dataScattoDichiarata": "2013-05-14",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Berthold Werner",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-sorrento-361c53b99a",
+        "esito": "ok",
+        "dimensioni": [
+          3640,
+          2535
+        ],
+        "sha256": "48c96b4d73cf2047ecaa73955acc59df9f3dc381ac9b9846e08de5193da4e955"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "attribuzioneDichiarata": "Berthold Werner",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-sorrento/foto-sorrento-361c53b99a.jpg",
+        "anteprima": "../foto/anteprime/tappa-sorrento/foto-sorrento-361c53b99a.jpg",
+        "sha256": "48c96b4d73cf2047ecaa73955acc59df9f3dc381ac9b9846e08de5193da4e955",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-sorrento",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Piazza Tasso, a Sorrento.",
+    "titoloFonte": "Piazza Tasso - Sorrento BW 2013-05-12.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Piazza_Tasso_-_Sorrento_BW_2013-05-12.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Piazza_Tasso_-_Sorrento_BW_2013-05-12.jpg",
+    "autore": "Berthold Werner",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      3770,
+      2566
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Berthold Werner",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-sorrento",
+      "esito": "ok",
+      "dimensioni": [
+        3770,
+        2566
+      ],
+      "sha256": "a76c6f6083c9f0afb131618a8add913b393716dc4fea6c728849d34418be31e0"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-sorrento/esistente-tp-sorrento.jpg",
+      "anteprima": "../foto/anteprime/tappa-sorrento/esistente-tp-sorrento.jpg",
+      "sha256": "a76c6f6083c9f0afb131618a8add913b393716dc4fea6c728849d34418be31e0",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-sorrento",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-sorrento-d8fa5731b5",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-sorrento-361c53b99a",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Per una quarta foto preferire un vicolo o una piazza diversa dal porto e da piazza Tasso.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-sorrento",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "tipo": "tappa",
+  "id": "san-domenico",
+  "nome": "San Domenico Maggiore e le arche aragonesi",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-san-domenico",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"San Domenico Maggiore\" interior filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-san-domenico-667c983df7",
+      "soggetto": "interno",
+      "didascaliaProposta": "Cappella laterale di San Domenico Maggiore",
+      "titoloFonte": "Interior of San Domenico Maggiore (Naples) 25.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_of_San_Domenico_Maggiore_(Naples)_25.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Interior_of_San_Domenico_Maggiore_%28Naples%29_25.jpg",
+      "autore": "Superchilum",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3888,
+        5184
+      ],
+      "dataScattoDichiarata": "2026-05-29 14:28:21",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1272787365,
+      "sha1Originale": "044a0afe31636c1d71cff4a69ad75425be2889d5",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio di cappella meno utile della vista generale dell’interno.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Superchilum",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-san-domenico-a909cd2c19",
+      "soggetto": "interno",
+      "didascaliaProposta": "Veduta dell'interno verso l'altare maggiore",
+      "titoloFonte": "Interior of San Domenico Maggiore (Naples) 35.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_of_San_Domenico_Maggiore_(Naples)_35.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Interior_of_San_Domenico_Maggiore_%28Naples%29_35.jpg",
+      "autore": "Superchilum",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5184,
+        3888
+      ],
+      "dataScattoDichiarata": "2026-05-29 14:32:17",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1272787491,
+      "sha1Originale": "7c7f6d538af786a981a9411ad610b8edfd7a304f",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Superchilum",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-san-domenico",
+    "soggetto": "esterno",
+    "didascaliaProposta": "La basilica di San Domenico Maggiore.",
+    "titoloFonte": "Basilica di San Domenico Maggiore (Napoli), facciata 01.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Basilica_di_San_Domenico_Maggiore_(Napoli),_facciata_01.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/3/32/Basilica_di_San_Domenico_Maggiore_%28Napoli%29%2C_facciata_01.jpg",
+    "autore": "Mongolo1984",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      6000,
+      4000
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "bene-fec"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Mongolo1984",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

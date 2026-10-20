@@ -1,0 +1,293 @@
+{
+  "tipo": "tappa",
+  "id": "sanita",
+  "nome": "Rione Sanità e Basilica della Sanità",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-sanita",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Santa Maria della Sanità\" interior",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-sanita-3c30d7f9e5",
+      "soggetto": "interno",
+      "didascaliaProposta": "Volte della Basilica di Santa Maria della Sanità",
+      "titoloFonte": "NapoliSMariaSanità-Interno2.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:NapoliSMariaSanit%C3%A0-Interno2.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/5d/NapoliSMariaSanit%C3%A0-Interno2.jpg",
+      "autore": "MM",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1418,
+        2083
+      ],
+      "dataScattoDichiarata": "2017-04-09 09:41:24",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Fotografie in bianco e nero, escluse per scelta esplicita di Enrico.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "MM",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-sanita-e21910217c",
+      "soggetto": "interno",
+      "didascaliaProposta": "Navata e altare della basilica",
+      "titoloFonte": "NapoliSMariaSanità-Interno0.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:NapoliSMariaSanit%C3%A0-Interno0.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/76/NapoliSMariaSanit%C3%A0-Interno0.jpg",
+      "autore": "MM",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1661,
+        2241
+      ],
+      "dataScattoDichiarata": "2017-04-09 11:44:47",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Fotografie in bianco e nero, escluse per scelta esplicita di Enrico.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "MM",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "nuova:3af9741cfa0d",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Santa Maria della Sanità 2012.jpg",
+      "titoloFonte": "Santa Maria della Sanità 2012.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Santa_Maria_della_Sanit%C3%A0_2012.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Santa_Maria_della_Sanit%C3%A0_2012.jpg",
+      "autore": "ho visto nina volare",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3648,
+        2736
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non migliora la sequenza: inquadratura o soggetto poco adatti al racconto della visita.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ho visto nina volare",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "nuova:2e0b824374a7",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Basilica di Santa Maria della Sanità. (9822).jpg",
+      "titoloFonte": "Basilica di Santa Maria della Sanità. (9822).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Basilica_di_Santa_Maria_della_Sanit%C3%A0._(9822).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Basilica_di_Santa_Maria_della_Sanit%C3%A0._%289822%29.jpg",
+      "autore": "Giuseppe Guida",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3663,
+        5180
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "È un dipinto, non una vista degli ambienti della basilica.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Giuseppe Guida",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-sanita-5008b5c361",
+      "soggetto": "interno",
+      "didascaliaProposta": "Il cortile e la scala ad ali di falco di Palazzo dello Spagnolo, nel Rione Sanità.",
+      "titoloFonte": "Palazzo dello Spagnolo - Naples (2).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Palazzo_dello_Spagnolo_-_Naples_(2).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/55/Palazzo_dello_Spagnolo_-_Naples_%282%29.jpg",
+      "autore": "original work: alterdimaggio1957 derivative work: A ngelus (talk)",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        2602,
+        3906
+      ],
+      "dataScattoDichiarata": "2011-09-30",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "original work: alterdimaggio1957 derivative work: A ngelus (talk)",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-sanita-5008b5c361",
+        "esito": "ok",
+        "dimensioni": [
+          2602,
+          3906
+        ],
+        "sha256": "3d750613e97d1a4505d72430fdbadfcff3835469cf211f280c23f06eea2bccf9"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-sanita/foto-sanita-5008b5c361.jpg",
+        "anteprima": "../foto/anteprime/tappa-sanita/foto-sanita-5008b5c361.jpg",
+        "sha256": "3d750613e97d1a4505d72430fdbadfcff3835469cf211f280c23f06eea2bccf9",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-sanita-c96b054906",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Le volte e i pianerottoli della scala di Palazzo dello Spagnolo.",
+      "titoloFonte": "Palazzo dello Spagnolo, Nápoles, Italia, 2023-03-25, DD 136-138 HDR.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Palazzo_dello_Spagnolo,_N%C3%A1poles,_Italia,_2023-03-25,_DD_136-138_HDR.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Palazzo_dello_Spagnolo%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_136-138_HDR.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5697,
+        8545
+      ],
+      "dataScattoDichiarata": "2023-03-25 14:40:44",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Diego Delso",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-sanita-c96b054906",
+        "esito": "ok",
+        "dimensioni": [
+          5697,
+          8545
+        ],
+        "sha256": "74becd409f5435a8ba691cd1c65ceb73a4105cf3dbd9eb1f29904861675159ef"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "creditoRichiesto": "Diego Delso · delso.photo",
+      "attribuzioneDichiarata": "Diego Delso",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-sanita/foto-sanita-c96b054906.jpg",
+        "anteprima": "../foto/anteprime/tappa-sanita/foto-sanita-c96b054906.jpg",
+        "sha256": "74becd409f5435a8ba691cd1c65ceb73a4105cf3dbd9eb1f29904861675159ef",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-sanita",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il Palazzo dello Spagnolo, nel Rione Sanità.",
+    "titoloFonte": "Palazzo dello Spagnolo, Nápoles, Italia, 2023-03-25, DD 132.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Palazzo_dello_Spagnolo,_N%C3%A1poles,_Italia,_2023-03-25,_DD_132.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Palazzo_dello_Spagnolo%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_132.jpg",
+    "autore": "Diego Delso",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      7722,
+      5011
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Diego Delso",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-sanita-5008b5c361",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-sanita-c96b054906",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Mancano 1 fotografie per il minimo di tre; 2 per arrivare a quattro.",
+    "Mancano la Basilica della Sanità e una veduta di strada: due immagini del palazzo non coprono il rione."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 2,
+    "mancantiPerTre": 1,
+    "mancantiPerQuattro": 2,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 4,
+    "risultatiLetti": 70,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

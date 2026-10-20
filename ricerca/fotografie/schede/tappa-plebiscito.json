@@ -1,0 +1,210 @@
+{
+  "tipo": "tappa",
+  "id": "plebiscito",
+  "nome": "Piazza del Plebiscito e Galleria Umberto I",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-plebiscito",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Galleria Umberto I\" interior",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-plebiscito-ecddfe6fab",
+      "soggetto": "interno",
+      "didascaliaProposta": "Spazio centrale della Galleria Umberto I",
+      "titoloFonte": "Galleria Umberto I, Interior, Naples (5263).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Galleria_Umberto_I,_Interior,_Naples_(5263).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/60/Galleria_Umberto_I%2C_Interior%2C_Naples_%285263%29.jpg",
+      "autore": "Marco Ober",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4991,
+        3631
+      ],
+      "dataScattoDichiarata": "2020-08-14 19:16:37",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Marco Ober",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-plebiscito-ecddfe6fab",
+        "esito": "ok",
+        "dimensioni": [
+          4991,
+          3631
+        ],
+        "sha256": "b1eed0570114e5472130c3bb1ee2daffcadfdbaaef8c5d9cf8e774b3e2065897"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-plebiscito/foto-plebiscito-ecddfe6fab.jpg",
+        "anteprima": "../foto/anteprime/tappa-plebiscito/foto-plebiscito-ecddfe6fab.jpg",
+        "sha256": "b1eed0570114e5472130c3bb1ee2daffcadfdbaaef8c5d9cf8e774b3e2065897",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-plebiscito-de60218196",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Copertura in ferro e vetro della Galleria Umberto I",
+      "titoloFonte": "Galería Humberto I, Nápoles, Italia, 2023-03-25, DD 157-159 HDR.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Galer%C3%ADa_Humberto_I,_N%C3%A1poles,_Italia,_2023-03-25,_DD_157-159_HDR.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/5a/Galer%C3%ADa_Humberto_I%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_157-159_HDR.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5607,
+        8670
+      ],
+      "dataScattoDichiarata": "2023-03-25 15:31:02",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "creditoRichiesto": "Diego Delso",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Diego Delso",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-plebiscito-de60218196",
+        "esito": "ok",
+        "dimensioni": [
+          5607,
+          8670
+        ],
+        "sha256": "7228ca6600f342ebf5da0f829fee241e80c074991bc1e51bfc5435f08459b18a"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-plebiscito/foto-plebiscito-de60218196.jpg",
+        "anteprima": "../foto/anteprime/tappa-plebiscito/foto-plebiscito-de60218196.jpg",
+        "sha256": "7228ca6600f342ebf5da0f829fee241e80c074991bc1e51bfc5435f08459b18a",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "nuova:c8c37be33ba0",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Basílica de San Francesco di Paola, Nápoles, Italia, 2023-03-25, DD 255-257 HDR.jpg",
+      "titoloFonte": "Basílica de San Francesco di Paola, Nápoles, Italia, 2023-03-25, DD 255-257 HDR.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Bas%C3%ADlica_de_San_Francesco_di_Paola,_N%C3%A1poles,_Italia,_2023-03-25,_DD_255-257_HDR.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/e/e8/Bas%C3%ADlica_de_San_Francesco_di_Paola%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_255-257_HDR.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "dimensioni": [
+        8163,
+        3157
+      ],
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Fotografia d’autore di qualità; adesione WLM indicata, ma il documento specifico per questo bene non è stato reperito.",
+        "dirittiDaChiarire": [
+          "autorizzazione-bene-non-accertata"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Diego Delso",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-plebiscito",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Piazza del Plebiscito con la basilica di San Francesco di Paola.",
+    "titoloFonte": "Basilica reale pontificia di San Francesco di Paola Piazza del Plebiscito Napoli Neapel Italy Foto Wolfgang Pehlemann P1070687.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Basilica_reale_pontificia_di_San_Francesco_di_Paola_Piazza_del_Plebiscito_Napoli_Neapel_Italy_Foto_Wolfgang_Pehlemann_P1070687.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c2/Basilica_reale_pontificia_di_San_Francesco_di_Paola_Piazza_del_Plebiscito_Napoli_Neapel_Italy_Foto_Wolfgang_Pehlemann_P1070687.jpg",
+    "autore": "Wolfgang Pehlemann",
+    "licenza": "CC BY-SA 3.0 DE",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/de/",
+    "dimensioni": [
+      1750,
+      725
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Originale sotto 2.000 px sul lato lungo: non proposto per la nuova galleria HD.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Wolfgang Pehlemann",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-plebiscito-ecddfe6fab",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-plebiscito-de60218196",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Vista di Piazza del Plebiscito con diritti del bene chiariti; le due proposte attuali mostrano soltanto Galleria Umberto I."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 2,
+    "mancantiPerTre": 1,
+    "mancantiPerQuattro": 2,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

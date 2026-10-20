@@ -1,0 +1,219 @@
+{
+  "tipo": "tappa",
+  "id": "pignasecca",
+  "nome": "Il mercato della Pignasecca",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-pignasecca",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pignasecca\" market filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-pignasecca-47eb2af690",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Banchi e strada del mercato della Pignasecca",
+      "titoloFonte": "Pignasecca market, Naples 20230622 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Pignasecca_market,_Naples_20230622_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/13/Pignasecca_market%2C_Naples_20230622_01.jpg",
+      "autore": "Argo Navis",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4000,
+        3000
+      ],
+      "dataScattoDichiarata": "2023-06-22 11:41:05",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1179131059,
+      "sha1Originale": "f8833e93cda6aa54f68052634a4f0b57828d7995",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Persona riconoscibile in primo piano; preferita la scena centrata sul mercato.",
+        "dirittiDaChiarire": [
+          "persona-primo-piano"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Argo Navis",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-pignasecca-e539312519",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Slargo e bancarelle della Pignasecca",
+      "titoloFonte": "MercatoPignasecca6.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:MercatoPignasecca6.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/82/MercatoPignasecca6.jpg",
+      "autore": "IlSistemone",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2592,
+        1944
+      ],
+      "dataScattoDichiarata": "2011-10-18",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1275164423,
+      "sha1Originale": "c91420a45343f11a386ebcd1e0751922d8d39be9",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Preferita la scena di mercato più chiara, luminosa e leggibile.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "IlSistemone",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-pignasecca-f11a48bb4e",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Calamari sul banco del mercato della Pignasecca: prodotti del mercato, non piatti di un ristorante.",
+      "titoloFonte": "Calamari (4122030065).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Calamari_(4122030065).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Calamari_%284122030065%29.jpg",
+      "autore": "Paul Asman and Jill Lenoble",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        3008,
+        2000
+      ],
+      "dataScattoDichiarata": "2009-10-14 03:47",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Paul Asman and Jill Lenoble",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-pignasecca-f11a48bb4e",
+        "esito": "ok",
+        "dimensioni": [
+          3008,
+          2000
+        ],
+        "sha256": "abaaa0cc46662c1333c4accd8b7732976c096ce5bd0780b1397c3da59e39a13a"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-pignasecca/foto-pignasecca-f11a48bb4e.jpg",
+        "anteprima": "../foto/anteprime/tappa-pignasecca/foto-pignasecca-f11a48bb4e.jpg",
+        "sha256": "abaaa0cc46662c1333c4accd8b7732976c096ce5bd0780b1397c3da59e39a13a",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-pignasecca",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il mercato della Pignasecca.",
+    "titoloFonte": "Pignasecca market, Naples 20230622 02.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Pignasecca_market,_Naples_20230622_02.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/9/99/Pignasecca_market%2C_Naples_20230622_02.jpg",
+    "autore": "Argo Navis",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      4000,
+      3000
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Argo Navis",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-pignasecca",
+      "esito": "ok",
+      "dimensioni": [
+        4000,
+        3000
+      ],
+      "sha256": "eb84f9b0e54c6b007b47907682404075fde066f815485ad2b9ebc1a1b9540ac6"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-pignasecca/esistente-tp-pignasecca.jpg",
+      "anteprima": "../foto/anteprime/tappa-pignasecca/esistente-tp-pignasecca.jpg",
+      "sha256": "eb84f9b0e54c6b007b47907682404075fde066f815485ad2b9ebc1a1b9540ac6",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-pignasecca",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-pignasecca-f11a48bb4e",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Mancano 1 fotografie per il minimo di tre; 2 per arrivare a quattro.",
+    "Cercare una scena complementare del luogo esatto, evitando duplicati e fotografie sotto il livello richiesto."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-pignasecca",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 2,
+    "mancantiPerTre": 1,
+    "mancantiPerQuattro": 2,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 4,
+    "risultatiLetti": 68,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

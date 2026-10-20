@@ -1,0 +1,313 @@
+{
+  "tipo": "tappa",
+  "id": "catacombe",
+  "nome": "Catacombe di San Gennaro",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-catacombe",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Catacombs of San Gennaro\"",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-catacombe-79ea21b2f9",
+      "soggetto": "interno",
+      "didascaliaProposta": "Vestibolo inferiore delle Catacombe di San Gennaro",
+      "titoloFonte": "Catacombe san Gennaro, vestibolo inferiore.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Catacombe_san_Gennaro,_vestibolo_inferiore.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/33/Catacombe_san_Gennaro%2C_vestibolo_inferiore.jpg",
+      "autore": "Catacombe di Napoli",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        700,
+        440
+      ],
+      "dataScattoDichiarata": "2017-01-14",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "risoluzione-ridotta"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Catacombe di Napoli",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-catacombe-df55535328",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Affresco nelle Catacombe di San Gennaro",
+      "titoloFonte": "Catacombe di San Gennaro 021.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Catacombe_di_San_Gennaro_021.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/66/Catacombe_di_San_Gennaro_021.jpg",
+      "autore": "Dominik Matus",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        6016,
+        4000
+      ],
+      "dataScattoDichiarata": "2017-04-15 16:27:42",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Dettaglio di affresco: non sostituisce la vista degli ambienti richiesta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Dominik Matus",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-catacombe-5f94fecbf6",
+      "soggetto": "interno",
+      "didascaliaProposta": "Il vestibolo superiore e gli affreschi delle Catacombe di San Gennaro.",
+      "titoloFonte": "CATACOMBE DI S. GENNARO VESIBOLO SUPERIORE.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:CATACOMBE_DI_S._GENNARO_VESIBOLO_SUPERIORE.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/f/f4/CATACOMBE_DI_S._GENNARO_VESIBOLO_SUPERIORE.jpg",
+      "autore": "Catacombe di Napoli",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3444,
+        2284
+      ],
+      "dataScattoDichiarata": "2017-01-14",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Catacombe di Napoli",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-catacombe-5f94fecbf6",
+        "esito": "ok",
+        "dimensioni": [
+          3444,
+          2284
+        ],
+        "sha256": "35343685011a0aa129e5025f487546ebd6f2a0f0b3a5b27a4349ac2f9abe0c49"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-catacombe/foto-catacombe-5f94fecbf6.jpg",
+        "anteprima": "../foto/anteprime/tappa-catacombe/foto-catacombe-5f94fecbf6.jpg",
+        "sha256": "35343685011a0aa129e5025f487546ebd6f2a0f0b3a5b27a4349ac2f9abe0c49",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-catacombe-b521e68286",
+      "soggetto": "interno",
+      "didascaliaProposta": "Una galleria con loculi nelle Catacombe di San Gennaro.",
+      "titoloFonte": "Catacombe di San Gennaro 001.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Catacombe_di_San_Gennaro_001.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/77/Catacombe_di_San_Gennaro_001.jpg",
+      "autore": "Dominik Matus",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        6016,
+        4000
+      ],
+      "dataScattoDichiarata": "2017-04-15 16:14:24",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Dominik Matus",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-catacombe-b521e68286",
+        "esito": "ok",
+        "dimensioni": [
+          6016,
+          4000
+        ],
+        "sha256": "a111a29205731c25e9bb5d4f9b71ce420a6ce15d62f02b5bd25c0a927a30868b"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-catacombe/foto-catacombe-b521e68286.jpg",
+        "anteprima": "../foto/anteprime/tappa-catacombe/foto-catacombe-b521e68286.jpg",
+        "sha256": "a111a29205731c25e9bb5d4f9b71ce420a6ce15d62f02b5bd25c0a927a30868b",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-catacombe-f213864dba",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Un affresco fra gli ambienti delle Catacombe di San Gennaro.",
+      "titoloFonte": "Catacombe di San Gennaro 008.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Catacombe_di_San_Gennaro_008.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/41/Catacombe_di_San_Gennaro_008.jpg",
+      "autore": "Dominik Matus",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4000,
+        6016
+      ],
+      "dataScattoDichiarata": "2017-04-15 16:20:53",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Dominik Matus",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-catacombe-f213864dba",
+        "esito": "ok",
+        "dimensioni": [
+          4000,
+          6016
+        ],
+        "sha256": "fc41bd70a041bbeb088e11763849f0ac2e2db8601aa080fcc780de32ebeac7b8"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-catacombe/foto-catacombe-f213864dba.jpg",
+        "anteprima": "../foto/anteprime/tappa-catacombe/foto-catacombe-f213864dba.jpg",
+        "sha256": "fc41bd70a041bbeb088e11763849f0ac2e2db8601aa080fcc780de32ebeac7b8",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-catacombe",
+    "soggetto": "interno",
+    "didascaliaProposta": "Le Catacombe di San Gennaro.",
+    "titoloFonte": "Catacombe di San Gennaro 023.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Catacombe_di_San_Gennaro_023.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Catacombe_di_San_Gennaro_023.jpg",
+    "autore": "Dominik Matus",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      6016,
+      4000
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista ampia della cripta con pilastri e percorso; rende comprensibile l’interno.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Dominik Matus",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-catacombe",
+      "esito": "ok",
+      "dimensioni": [
+        6016,
+        4000
+      ],
+      "sha256": "25828a6a69650f8dc8ab67e07e0d05fcacb99636df78992ebe530320993d0310"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-catacombe/esistente-tp-catacombe.jpg",
+      "anteprima": "../foto/anteprime/tappa-catacombe/esistente-tp-catacombe.jpg",
+      "sha256": "25828a6a69650f8dc8ab67e07e0d05fcacb99636df78992ebe530320993d0310",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-catacombe-5f94fecbf6",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-catacombe-b521e68286",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-catacombe-f213864dba",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 4,
+      "foto": "esistente:tp-catacombe",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Confrontare le due vedute generali e l’itinerario di visita attuale prima dell’inserimento.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-catacombe",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 4,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 0,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 2,
+    "risultatiLetti": 78,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

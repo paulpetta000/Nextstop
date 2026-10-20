@@ -1,0 +1,113 @@
+{
+  "tipo": "tappa",
+  "id": "via-petrarca",
+  "nome": "Il belvedere di via Petrarca",
+  "controllato": "2026-10-20",
+  "fotoEsistente": null,
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Via Petrarca\" Napoli filetype:bitmap",
+      "risultatiEsaminati": 3
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-via-petrarca-bbb7234eaf",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Costone tufaceo e case visti da via Petrarca",
+      "titoloFonte": "Napoli Yellow Tuff 6839.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_Yellow_Tuff_6839.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Napoli_Yellow_Tuff_6839.JPG",
+      "autore": "yiftah-s",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2592,
+        3872
+      ],
+      "dataScattoDichiarata": "2010-11-09 12:38:46",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1130950856,
+      "sha1Originale": "a0297e836bcb84d04e61be980bc2ee7daabf627e",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Parete di tufo o panorama piccolo: non soddisfa la vista panoramica HD richiesta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "yiftah-s",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-via-petrarca-b449395a68",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Mare e costa di Posillipo da via Petrarca",
+      "titoloFonte": "Da Via Petrarca (3196818901).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Da_Via_Petrarca_(3196818901).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/b9/Da_Via_Petrarca_%283196818901%29.jpg",
+      "autore": "Antonio Fucito",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        800,
+        450
+      ],
+      "dataScattoDichiarata": "2009-01-06",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1254270435,
+      "sha1Originale": "d5e11cf0f90d1e3713fa6b12ccdcec6a26afe9fa",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Antonio Fucito",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Cercare una veduta d’insieme nitida, luminosa e riferita al punto esatto."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 2,
+    "risultatiLetti": 6,
+    "pagineFotograficheFlickrVerificate": 1,
+    "riscontriFlickr": "../ricerche/2026-10-20-flickr.json",
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

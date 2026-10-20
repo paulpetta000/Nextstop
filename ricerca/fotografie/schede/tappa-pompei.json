@@ -1,0 +1,183 @@
+{
+  "tipo": "tappa",
+  "id": "pompei",
+  "nome": "Pompei",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-pompei",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pompeii\" \"Casa del Menandro\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-pompei-ed40733dc8",
+      "soggetto": "interno",
+      "didascaliaProposta": "Colonne e pavimento della Casa del Menandro",
+      "titoloFonte": "Casa del Menandro, Interior, Pompeii (4979).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Casa_del_Menandro,_Interior,_Pompeii_(4979).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/41/Casa_del_Menandro%2C_Interior%2C_Pompeii_%284979%29.jpg",
+      "autore": "Marco Ober",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5427,
+        3613
+      ],
+      "dataScattoDichiarata": "2020-08-12 13:52:09",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1284280838,
+      "sha1Originale": "1fd7e3e07af292cb8fc06c84132ed90746e62c8a",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Marco Ober",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-pompei-273e62b800",
+      "soggetto": "interno",
+      "didascaliaProposta": "Ambienti della Casa del Menandro",
+      "titoloFonte": "Interior of Casa del Menandro (Pompeii).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_of_Casa_del_Menandro_(Pompeii).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/1a/Interior_of_Casa_del_Menandro_%28Pompeii%29.jpg",
+      "autore": "Commonists",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        6992,
+        4984
+      ],
+      "dataScattoDichiarata": "2021-05-02 09:45:40",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1189981191,
+      "sha1Originale": "5be331544166d2553cfd528ad577e9b5ff9bccf2",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Commonists",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-pompei-028b1bd952",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Giardino e porticato della Casa del Menandro",
+      "titoloFonte": "Casa del Menandro, Garden, Pompeii (4970).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Casa_del_Menandro,_Garden,_Pompeii_(4970).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/9d/Casa_del_Menandro%2C_Garden%2C_Pompeii_%284970%29.jpg",
+      "autore": "Marco Ober",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5456,
+        3632
+      ],
+      "dataScattoDichiarata": "2020-08-12 13:47:43",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneCommons": 1116266331,
+      "sha1Originale": "39cf94a54130a521e02c0f8cc0eee949d2cdebdd",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Marco Ober",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-pompei",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il Foro di Pompei e il Vesuvio.",
+    "titoloFonte": "Forum (Pompeii) and the Vesuvio.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Forum_(Pompeii)_and_the_Vesuvio.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/3/36/Forum_%28Pompeii%29_and_the_Vesuvio.jpg",
+    "autore": "Commonists",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      8308,
+      5486
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Commonists",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}
