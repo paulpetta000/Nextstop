@@ -2,7 +2,7 @@
 // gite (src/lib/itinerari/ricerca.ts), in gruppi da scorrere di lato; senza parole le tappe dalla più vicina e qualche ricerca
 // da provare; elenco o mappa; i filtri. Un tocco sul risultato apre la scheda, con «Torna ai risultati».
 import { $, $$, esc, ic, piano, ora, durata, dopo } from './base.js';
-import { C, E, T, X, UI, schedePronte, caricaSchede, giornoDi, nelViaggio, lista, ultimaDi, aggiunta, G, chiusaIl, dataLungaDi } from './stato.js';
+import { C, E, T, X, UI, schedePronte, caricaSchede, giornoDi, nelViaggio, lista, ultimaDi, aggiunta, G, chiusaIl, dataLungaDi, dataDi } from './stato.js';
 import { creaIndice, cerca, evidenzia, pezzetto, gruppoDi } from '../../../lib/itinerari/ricerca';
 import { S, assicuraSchede, foglio, chiudiFoglio, annunciaF, quandoChiudeFoglio } from './comuni.js';
 import { aggiungi, aggiungiGita } from './viste.js';
@@ -19,8 +19,15 @@ const GRUPPI = { vedere: { nome: 'Da vedere', ic: 'occhio' }, mangiare: { nome: 
 const CUCINA_NOME = { pizza: 'Pizzeria', pesce: 'Pesce', dolci: 'Pasticceria e caffè', strada: 'Cibo di strada', carne: 'Carne', pasta: 'Pasta', napoletana: 'Cucina napoletana' };
 const PROVA_CERCA = ['Cristo velato', 'Caravaggio', 'sfogliatella', 'panorama', 'pizza fritta', 'gesu', 'Pompei', 'catacombe'];
 
-let INDICE = null;
-const indice = () => (INDICE ??= creaIndice(C.tappe.map(t => ({ ...T(t.id), zona: T(t.id).zona, frasi: T(t.id).frasi ?? [] })), UI.citta ?? []));
+let INDICE = null, indiceCompleto = false;
+const indice = () => {
+  const completo = schedePronte();
+  if (!INDICE || completo !== indiceCompleto) {
+    INDICE = creaIndice(C.tappe.map(t => ({ ...T(t.id), zona: T(t.id).zona, frasi: T(t.id).frasi ?? [] })), UI.citta ?? []);
+    indiceCompleto = completo;
+  }
+  return INDICE;
+};
 const xDi = id => indice().voci.find(x => x.id === id);
 const fotoDi = id => T(id)?.foto?.c;
 // perché è uscita: la frase, l'etichetta o la zona
@@ -106,9 +113,9 @@ export async function apriAggiungi(prima = null, tipo = null) {
   };
   // le regate, solo nei giorni di regata in calendario
   const regate = () => {
-    const d = X().data ? new Date(`${X().data}T12:00:00`) : null;
-    if (!E || !d || D.gita || lista(g).includes(E.id)) return '';
-    const data = new Date(d.getTime() + g * 864e5).toISOString().slice(0, 10), gr = E.giorni[data];
+    const data = dataDi(g);
+    if (!E || !data || D.gita || lista(g).includes(E.id)) return '';
+    const gr = E.giorni[data];
     if (!gr) return '';
     return `<section class="f-gruppo"><h3>Oggi in calendario</h3><ul><li class="f-tappa"><span class="f-senza" aria-hidden="true">${ic('vela', 20)}</span><button type="button" class="f-tappa__apri" data-f="apri" data-id="${E.id}"><b>${esc(E.nome)}</b><small>${esc(gr.titolo)}, dalle ${ora(E.inizio)}${gr.possibile ? ', se la sfida non è già finita' : ''}</small></button><button type="button" class="f-piu" data-f="agg" data-id="${E.id}" aria-label="Aggiungi ${esc(E.nome)}">${ic('piu', 20)}</button></li></ul></section>`;
   };
