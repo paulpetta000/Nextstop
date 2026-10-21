@@ -222,11 +222,17 @@ async function schedaPasto(id, m, indietro) {
     visibile = collegaPasto(f, m, indietro, null, sfoglia);
     // col dito di lato si gira pagina (come le schede delle tappe)
     let p0 = null;
-    f.onpointerdown = e => { if (computer.matches || e.pointerType === 'mouse' || e.target.closest('a, summary, button, table')) { p0 = null; return; } p0 = { x: e.clientX, y: e.clientY, t: performance.now() }; };
+    f.onpointerdown = e => {
+      if (p0 || !visibile() || computer.matches || e.pointerType === 'mouse' || e.target.closest('a, summary, button, table')) return;
+      p0 = { id: e.pointerId, x: e.clientX, y: e.clientY, t: performance.now() };
+    };
+    const annullaGesto = e => { if (p0?.id === e.pointerId) p0 = null; };
+    f.onpointercancel = annullaGesto; f.onlostpointercapture = annullaGesto;
     f.onpointerup = e => {
-      if (!p0) return;
-      const dx = e.clientX - p0.x, dy = e.clientY - p0.y, v = Math.abs(dx) / Math.max(1, performance.now() - p0.t);
-      p0 = null;
+      if (!p0 || e.pointerId !== p0.id) return;
+      const partenza = p0; p0 = null;
+      if (!visibile()) return;
+      const dx = e.clientX - partenza.x, dy = e.clientY - partenza.y, v = Math.abs(dx) / Math.max(1, performance.now() - partenza.t);
       if (Math.abs(dx) > Math.abs(dy) * 1.4 && (Math.abs(dx) > 70 || (v > .45 && Math.abs(dx) > 30))) sfoglia(dx < 0 ? 1 : -1, piano() ? dx * .3 : 0);
     };
   }, 'f--scheda f--fuori f--pasto');

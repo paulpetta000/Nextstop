@@ -12,8 +12,8 @@ export function ricordaVista(v) { try { localStorage.setItem(CHIAVE_VISTA, v); }
 
 // ---------- il foglio che sale (finestra modale) ----------
 export const foglioEl = () => $('#foglio');
-let spegniF = null, cicloF = 0, chiusuraF = null;
-const ripulisciFoglio = () => { const fn = spegniF; spegniF = null; chiusuraF = null; fn?.(); };
+let spegniF = null, cicloF = 0, chiusuraF = null, fermaTiroFoglio = null;
+const ripulisciFoglio = () => { const fn = spegniF; spegniF = null; chiusuraF = null; fermaTiroFoglio?.(); fn?.(); };
 // Ogni apertura ha un contesto proprio, anche se riusa lo stesso elemento dialog.
 export const contestoFoglio = ({ ancheChiuso = false } = {}) => {
   const f = foglioEl(), ciclo = cicloF, aperto = !!f?.open;
@@ -28,6 +28,7 @@ export function foglio(titolo, corpo, dopoAperto, cl = '') {
   f.innerHTML = `<div class="f-testa"><span class="f-maniglia" aria-hidden="true"></span><h2 id="f-titolo">${esc(titolo)}</h2><button type="button" class="f-chiudi" aria-label="Chiudi: ${esc(titolo)}">${ic('x')}</button></div><div class="f-corpo">${corpo}</div>`;
   $('.f-chiudi', f).onclick = () => chiudiFoglio();
   f.onclick = null; f.onchange = null; f.onkeydown = null; f.oninput = null;
+  f.onpointerdown = null; f.onpointerup = null; f.onpointercancel = null; f.onlostpointercapture = null;
   f.style.translate = '';
   if (!f.open) f.showModal();
   dopoAperto?.(f);
@@ -72,11 +73,33 @@ export function preparaFoglio() {
   f.addEventListener('click', e => { if (e.target === f) chiudiFoglio(); });
   f.addEventListener('cancel', e => { e.preventDefault(); chiudiFoglio(); });
   f.addEventListener('close', () => { if (f.open) return; cicloF++; f.classList.remove('f-esce'); ripulisciFoglio(); });
-  // tirando giù dalla testa
+  // Tirando dalla testa: un solo puntatore, con annullamento e cattura ripuliti.
   let tiro = null;
-  f.addEventListener('pointerdown', e => { if (!e.target.closest('.f-testa') || e.target.closest('button')) return; tiro = { y: e.clientY }; f.setPointerCapture(e.pointerId); });
-  f.addEventListener('pointermove', e => { if (!tiro) return; f.style.translate = `0 ${Math.max(0, e.clientY - tiro.y)}px`; });
-  f.addEventListener('pointerup', e => { if (!tiro) return; const dy = e.clientY - tiro.y; tiro = null; f.style.translate = ''; if (dy > 90) chiudiFoglio(); });
+  const ferma = () => {
+    const t = tiro; tiro = null;
+    if (!t) return;
+    f.style.translate = '';
+    if (f.hasPointerCapture?.(t.id)) f.releasePointerCapture(t.id);
+  };
+  fermaTiroFoglio = ferma;
+  f.addEventListener('pointerdown', e => {
+    if (tiro || !f.open || (e.pointerType === 'mouse' && e.button !== 0) || !e.target.closest('.f-testa') || e.target.closest('button')) return;
+    const aperto = contestoFoglio(); if (!aperto()) return;
+    tiro = { y: e.clientY, id: e.pointerId, aperto }; f.setPointerCapture(e.pointerId);
+  });
+  f.addEventListener('pointermove', e => {
+    if (!tiro || e.pointerId !== tiro.id) return;
+    if (!tiro.aperto()) { ferma(); return; }
+    f.style.translate = '0 '+Math.max(0, e.clientY - tiro.y)+'px';
+  });
+  f.addEventListener('pointerup', e => {
+    if (!tiro || e.pointerId !== tiro.id) return;
+    const chiudi = tiro.aperto() && e.clientY - tiro.y > 90; ferma();
+    if (chiudi) chiudiFoglio();
+  });
+  const annulla = e => { if (tiro?.id === e.pointerId) ferma(); };
+  f.addEventListener('pointercancel', annulla); f.addEventListener('lostpointercapture', annulla);
+  addEventListener('blur', ferma); addEventListener('resize', ferma);
   tiraPerChiudere(f, { pronto: () => f.open, scorre: () => f, pannello: () => f, chiudi: () => chiudiFoglio() });
 }
 
@@ -311,13 +334,13 @@ export function scivola(lista, prima, salta = null) {
 // Solo se il testo era già in cima quando appoggi il dito, e solo con un gesto deciso (più di 200 px, o più di 110 px veloce).
 export const gestoScheda = { tolto: false };
 export function tiraPerChiudere(el, { pronto, scorre, pannello, chiudi }) {
-  let t = null;
+  let t = null, cicloTocco = 0;
   const annulla = () => {
     if (t?.dir === 'giu') { t.p.style.transition = ''; t.p.style.translate = ''; }
     t = null;
   };
   el.addEventListener('touchstart', e => {
-    annulla();
+    cicloTocco++; annulla();
     if (!pronto() || computer.matches || e.touches.length !== 1 || e.target.closest('a, input, summary, .f-testa, .sch1__testa, .m, .f-chips, .r2-fila')) return;
     const sc = scorre();
     t = { y: e.touches[0].clientY, x: e.touches[0].clientX, t: performance.now(), dir: null, dy: 0, cima: !sc || sc.scrollTop <= 0, p: pannello(), valido: contestoFoglio({ ancheChiuso: true }) };
@@ -340,7 +363,10 @@ export function tiraPerChiudere(el, { pronto, scorre, pannello, chiudi }) {
     const ms = Math.max(1, performance.now() - t.t), p = t.p, v = t.dy / ms;
     gestoScheda.tolto = true; setTimeout(() => { gestoScheda.tolto = false; }, 60);
     p.style.transition = '';
-    if (t.dy > 200 || (t.dy > 110 && v > .9)) { chiudi(); setTimeout(() => { p.style.translate = ''; }, 420); }
+    if (t.dy > 200 || (t.dy > 110 && v > .9)) {
+      const turno = cicloTocco, valido = t.valido;
+      chiudi(); setTimeout(() => { if (turno === cicloTocco && valido() && p === pannello()) p.style.translate = ''; }, 420);
+    }
     else { const da = p.style.translate; p.style.translate = ''; if (piano() && da) p.animate([{ translate: da }, { translate: '0 0' }], { duration: 300, easing: 'cubic-bezier(.16,1,.3,1)' }); }
     t = null;
   };

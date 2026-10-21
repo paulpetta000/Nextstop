@@ -2,7 +2,11 @@
 
 _Aggiornato il 20/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; main remoto ricontrollato a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
-## Continuazione corrente · pasti (20 ottobre)
+## Continuazione corrente · gesti residui (21 ottobre)
+
+**629/629 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Tredici prove nuove su testata, pulizie touch e puntatori dei locali; [revisione 45 e limiti](docs/storico/2026-10-21-revisione-45.md). Ripresa il 21/10 alle 11:09:06 UTC; l’intervallo dal 20/10 non conta come lavoro. Nessun browser/rilascio; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nell’analisi.
+
+## Revisione precedente · pasti (20 ottobre)
 
 **616/616 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Diciassette prove nuove: caricamenti, scelta del locale e ritorni differiti rispettano il viaggio/pannello corrente. [Revisione 44 e anomalia di build](docs/storico/2026-10-20-revisione-44.md). Prosegue la ripresa dalle 15:01:33 UTC sui gesti residui e sul registro delle prove. Nessun browser/rilascio; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nell’analisi.
 
