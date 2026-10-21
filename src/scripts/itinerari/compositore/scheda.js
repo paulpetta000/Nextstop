@@ -234,7 +234,7 @@ async function vai(dir, daX = 0, id = sch && passo(sch.id, dir)) {
   const valido = () => sch === corrente && !corrente.chiude && el.open && X() === itinerario && S.g === g && S.p === vista && itinerario.giorni[g] === giorno && giornoDi(id) === g;
   const fuoco = el.contains(document.activeElement);
   let cambiata = false;
-  await scorri(pag, dir, daX, () => { if (!valido()) return; corrente.id = id; riempi(); $('.sch1__corpo', el).scrollTop = 0; cambiata = true; });
+  await scorri(pag, dir, daX, () => { if (!valido()) return; corrente.id = id; riempi(); $('.sch1__corpo', el).scrollTop = 0; cambiata = true; }, undefined, undefined, valido);
   if (!cambiata || !valido()) return;
   if (fuoco) $('.sch-titolo', el)?.focus({ preventScroll: true });
   S.attiva = id;

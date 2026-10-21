@@ -1,0 +1,45 @@
+{
+  "data": "2026-10-21T11:35:14.458Z",
+  "bundle": {
+    "byte": 9914962,
+    "sha256": "d0fcc76d76f71135aef366b4e8557a0561ca7331f167503e3f2316fe2f014e42"
+  },
+  "sorgenti": {},
+  "validazioneSorgenti": "riuscita",
+  "candidato": {
+    "indice": 7898,
+    "byte": 167,
+    "sha256": "a1accd6427f4466993759eed8e4eb67c93ba767ca5334cfa217c39368bb8251e",
+    "segmenti": [
+      {
+        "modo": "p",
+        "punti": 3
+      },
+      {
+        "modo": "B182",
+        "punti": 6
+      },
+      {
+        "modo": "p",
+        "punti": 4
+      },
+      {
+        "modo": "L2",
+        "punti": 5
+      },
+      {
+        "modo": "p",
+        "punti": 12
+      },
+      {
+        "modo": "B140",
+        "punti": 14
+      },
+      {
+        "modo": "p",
+        "punti": 5
+      }
+    ]
+  },
+  "importBundle": "Dati generati: percorsi-alternativi.json: disegno del candidato 7898 non valido; rifai tutto con node scripts/itinerari/costruisci.mjs <cartella>"
+}

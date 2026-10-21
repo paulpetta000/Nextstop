@@ -1,8 +1,12 @@
 # PROGRESS · stato attuale
 
-_Aggiornato il 20/10/2026 dopo la ripresa della chat interrotta. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; main remoto ricontrollato a b6d2a36. Nessun push, merge o deploy di questa sessione._
+_Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 20/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
-## Continuazione corrente · gesti residui (21 ottobre)
+## Continuazione corrente · sei gruppi completati (21 ottobre)
+
+**646/646 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Sei gruppi e **95 nuove prove** da 551; ultimo gruppo su animazioni condivise e cambi giorno nelle due viste. [Revisione 46, prove e alterazione di un artefatto di build](docs/storico/2026-10-21-revisione-46.md). I controlli ordinari sono riusciti dopo le scadenze del revisore; causa dell’alterazione intermittente ancora aperta. Nessun browser/rilascio; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nell’analisi.
+
+## Revisione precedente · gesti residui (21 ottobre)
 
 **629/629 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Tredici prove nuove su testata, pulizie touch e puntatori dei locali; [revisione 45 e limiti](docs/storico/2026-10-21-revisione-45.md). Ripresa il 21/10 alle 11:09:06 UTC; l’intervallo dal 20/10 non conta come lavoro. Nessun browser/rilascio; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nell’analisi.
 

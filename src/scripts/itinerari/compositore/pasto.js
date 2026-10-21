@@ -215,7 +215,7 @@ async function schedaPasto(id, m, indietro) {
       $('#f-titolo', f).textContent = T(v).nome;
       f.scrollTop = 0;
       annuncia(`${T(v).nome}, ${lista.indexOf(v) + 1} di ${lista.length}`);
-    }, () => visibile() ? $('.pl-pagina', f) : null);
+    }, () => visibile() ? $('.pl-pagina', f) : null, undefined, visibile);
     return true;
   };
   foglio(T(id).nome, `<div class="pl-pagina">${paginaPasto(id, m, indietro, lista)}</div>`, f => {

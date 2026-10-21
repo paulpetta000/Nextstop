@@ -438,8 +438,9 @@ const C1 = {
     const dir = g > S.g ? 1 : -1;
     S.g = g; S.attiva = null;
     segnaSchede(g);
-    const el = $('#c-dentro');
-    scorri(el, dir, daX, () => { el.innerHTML = this.corpo(true); this.allInizio(); contaCifre(); contaFine(); this.osserva(); }, undefined, () => requestAnimationFrame(() => this.disegnaMappa(true)));
+    const el = $('#c-dentro'), x = X(), giorno = x.giorni[g], vista = S.p;
+    const valido = () => !!giorno && X() === x && x.giorni[g] === giorno && S.g === g && S.p === vista && $('#c-dentro') === el;
+    scorri(el, dir, daX, () => { el.innerHTML = this.corpo(true); this.allInizio(); contaCifre(); contaFine(); this.osserva(); }, undefined, () => requestAnimationFrame(() => { if (valido()) this.disegnaMappa(true); }), valido);
   },
   aggiorna(fn, opz = {}) {
     const prima = S.g, segno = segnoOra(), n0 = nG();
@@ -595,6 +596,8 @@ const Dp = {
     const pag = $('#d-pagine');
     if (computer.matches) {
       const dir = g > S.g ? 1 : -1, vecchia = $('.d-pagina.attiva'), g0 = S.g;
+      const x = X(), giorno = x.giorni[g], vista = S.p;
+      const valido = () => !!giorno && X() === x && x.giorni[g] === giorno && S.g === g && S.p === vista && $('#d-pagine') === pag;
       S.g = g; S.attiva = null;
       $$('.d-indice [role="tab"]').forEach(b => { const si = +b.dataset.g === g; b.setAttribute('aria-selected', String(si)); b.tabIndex = si ? 0 : -1; });
       $('#d-segno').style.transform = `translateX(${g * PASSO}px)`;
@@ -603,11 +606,11 @@ const Dp = {
         $$('.d-pagina', pag).forEach(p => { const q = +p.dataset.pagina === g; p.classList.toggle('attiva', q); p.classList.toggle('giorno-attivo', q); p.classList.toggle('giorno-corpo', q); p.toggleAttribute('data-inizio-giorno', q); p.inert = !q; });
         const nuova = $('.d-pagina.attiva');
         $$('.da-vedere', nuova).forEach(x => { if (x.getBoundingClientRect().top < innerHeight) { x.classList.add('vista', 'subito'); this.io?.unobserve(x); } });
-        requestAnimationFrame(() => requestAnimationFrame(() => $$('.subito', nuova).forEach(x => x.classList.remove('subito'))));
+        requestAnimationFrame(() => requestAnimationFrame(() => { if (valido()) $$('.subito', nuova).forEach(x => x.classList.remove('subito')); }));
         allInizio(nuova, $('.d-indice'));
         contaDa(g0, g);
         contaFine();
-      }, () => $('.d-pagina.attiva'), () => mappa?.disegna(G(g), { vola: true, altre: G(g) ? [] : altreLinee(), n: g + 1 }));
+      }, () => $('.d-pagina.attiva'), () => mappa?.disegna(G(g), { vola: true, altre: G(g) ? [] : altreLinee(), n: g + 1 }), valido);
       return;
     }
     pag.scrollTo({ left: g * pag.clientWidth, behavior: piano() ? 'smooth' : 'auto' });

@@ -215,24 +215,29 @@ export function tempo(Gx, cl = '', { suf = '', bottone = true } = {}) {
 
 // ---------- cambiare giorno senza scatti: il giorno che lasci continua il gesto ed esce, il nuovo entra dall'altro lato ----------
 export const occupato = { si: false };
-export async function scorri(el, dir, daX, cambia, nuovo = () => el, poi = () => {}) {
-  if (!el || !piano()) { cambia(); const n = nuovo(); if (n) { n.style.translate = ''; n.style.opacity = ''; } poi(); return; }
-  occupato.si = true;
+let scorrimentiAttivi = 0;
+export async function scorri(el, dir, daX, cambia, nuovo = () => el, poi = () => {}, valido = () => true) {
+  const vivo = n => !!n && n.isConnected !== false && valido();
+  if (!vivo(el)) return false;
+  if (!piano()) { cambia(); const n = nuovo(); if (!vivo(n)) return false; n.style.translate = ''; n.style.opacity = ''; poi(); return true; }
+  scorrimentiAttivi++; occupato.si = true;
+  let fuori, dentro;
   try {
     const W = el.getBoundingClientRect().width || innerWidth;
     const op = parseFloat(el.style.opacity || '1');
     el.style.translate = ''; el.style.opacity = '';
     const restoX = 1 - Math.min(1, Math.abs(daX) / (W * .5));
-    const fuori = el.animate([{ translate: `${daX}px 0`, opacity: op }, { translate: `${-dir * W * .3}px 0`, opacity: 0 }], { duration: 120 + 120 * restoX, easing: 'cubic-bezier(.4, 0, .9, .4)', fill: 'forwards' });
-    try { await fuori.finished; } catch { /* annullata */ }
-    try { cambia(); } finally {
-      const n = nuovo() || el;
-      const dentro = n.animate([{ translate: `${dir * W * .22}px 0`, opacity: 0 }, { translate: '0 0', opacity: 1 }], { duration: 380, easing: 'cubic-bezier(.16, 1, .3, 1)' });
-      fuori.cancel();
-      try { await dentro.finished; } catch { /* annullata */ }
-    }
-  } finally { occupato.si = false; }
-  poi();
+    fuori = el.animate([{ translate: daX+'px 0', opacity: op }, { translate: (-dir * W * .3)+'px 0', opacity: 0 }], { duration: 120 + 120 * restoX, easing: 'cubic-bezier(.4, 0, .9, .4)', fill: 'forwards' });
+    try { await fuori.finished; } catch { return false; }
+    if (!vivo(el)) return false;
+    cambia();
+    const n = nuovo(); if (!vivo(n)) return false;
+    dentro = n.animate([{ translate: (dir * W * .22)+'px 0', opacity: 0 }, { translate: '0 0', opacity: 1 }], { duration: 380, easing: 'cubic-bezier(.16, 1, .3, 1)' });
+    fuori.cancel();
+    try { await dentro.finished; } catch { return false; }
+    if (!vivo(n)) return false;
+    poi(); return true;
+  } finally { fuori?.cancel(); dentro?.cancel(); scorrimentiAttivi--; occupato.si = scorrimentiAttivi > 0; }
 }
 export function allInizio(el, barra = null) {
   if (!el) return;
