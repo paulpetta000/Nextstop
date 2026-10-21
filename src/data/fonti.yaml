@@ -1771,3 +1771,20 @@
   pubblicato: 2025-01-21
   controllato: 2026-10-21
   letta: true
+
+- id: "tp-defelice-donnanna"
+  titolo: "Palazzo Donn’Anna e il Teatro"
+  editore: "Fondazione Ezio De Felice"
+  url: "https://www.fondazionedefelice.it/palazzo-donnanna-2/"
+  tipo: "ufficiale"
+  controllato: 2026-10-21
+  letta: true
+
+- id: "michelin-pizza-2026"
+  titolo: "Tutti pazzi per la pizza: e onestamente… chi può darci torto?"
+  editore: "Guida Michelin"
+  url: "https://guide.michelin.com/ch/it/notizia/features/tutti-pazzi-per-la-pizza-e-onestamente...-chi-puo-darci-torto"
+  tipo: "ufficiale"
+  pubblicato: 2026-03-10
+  controllato: 2026-10-21
+  letta: true

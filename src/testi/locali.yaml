@@ -7,7 +7,7 @@ da-michele:
   usa: [lc-da-michele-perche]
   fonti: [lc-da-michele-menu]
   testo: |
-    Maestri pizzaioli dal 1870. In carta ci sono quattro pizze in tutto: margherita, marinara, cosacca e marita, metà e metà. È nella Guida Michelin 2025, tra le pizzerie di Napoli. Non si prenota.
+    Maestri pizzaioli dal 1870. In carta ci sono quattro pizze in tutto: margherita, marinara, cosacca e marita, metà e metà. Michelin la cita tra le pizzerie napoletane in un articolo del marzo 2026. Non si prenota.
 
 port-alba:
   usa: [lc-port-alba-perche]
@@ -81,7 +81,7 @@ cinquanta-kalo:
   usa: [lc-cinquanta-kalo-perche]
   fonti: [lc-cinquanta-kalo-menu]
   testo: |
-    In piazza Sannazaro, a Mergellina: pizzeria con frittatine e montanare fritte. È quinta nella classifica 50 Top Pizza Italia 2026 e segnalata dalla Guida Michelin 2025. Non si prenota.
+    In piazza Sannazaro, a Mergellina: pizzeria con frittatine e montanare fritte. È quinta nella classifica 50 Top Pizza Italia 2026 e citata da Michelin in un articolo del marzo 2026. Non si prenota.
 
 salvo:
   usa: [lc-salvo-perche]
@@ -167,14 +167,14 @@ poppella:
   usa: [lc-poppella-perche, lc-poppella-rinomato]
   fonti: [lc-poppella]
   testo: |
-    Pasticceria nel Rione Sanità, aperta dalle sei del mattino a mezzanotte, dal 1920. Nel 2022 Gambero Rosso l'ha messa tra le sette pasticcerie di Napoli. Il suo fiocco di neve è conosciuto anche all'estero, e accanto c'è la pastiera.
+    Pasticceria nel Rione Sanità, aperta dalle sei del mattino a mezzanotte, dal 1920. Nel 2022 Gambero Rosso l'ha messa tra le sette pasticcerie di Napoli. Del suo fiocco di neve, Gambero Rosso scriveva nel 2022 che era ormai entrato nel repertorio napoletano, imitato e proposto in gusti diversi. Accanto c’è la pastiera.
 
 # ---------- Posillipo e Fuorigrotta ----------
 petrucci-posillipo:
   usa: [lc-petrucci-posillipo-perche]
   fonti: [lc-petrucci-posillipo]
   testo: |
-    Sul mare di Posillipo, aperta solo la sera: la nuova pizzeria di Palazzo Petrucci, presentata nel settembre 2026. La classifica 50 Top Pizza Italia 2026 mette Palazzo Petrucci al terzo posto, ma riguarda la sede del centro storico.
+    Sul mare di Posillipo, aperta solo la sera: la nuova pizzeria di Palazzo Petrucci, presentata nel settembre 2026. Si trova al piano spiaggia e affianca la sede del centro storico, in piazza San Domenico.
 
 tufo:
   usa: [lc-tufo-perche, lc-tufo-rinomato]

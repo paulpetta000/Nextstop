@@ -308,7 +308,7 @@ via-petrarca:
 palazzo-donn-anna:
   usa: [tp-donnanna-orari]
   testo: |
-    All'inizio di via Posillipo c'è un palazzo barocco, rimasto incompiuto, che sembra nascere dal mare. È un'abitazione privata e non si visita: lo guardi da fuori, passando a piedi o dal mare. Si abbina bene a una passeggiata verso Marechiaro.
+    All'inizio di via Posillipo c'è un palazzo barocco, rimasto incompiuto, che sembra nascere dal mare. Nel percorso lo guardi da fuori, passando a piedi o dal mare. Il teatro ospita la Fondazione Ezio De Felice, che indica apertura su appuntamento dal lunedì al venerdì. Si abbina bene a una passeggiata verso Marechiaro.
 
 mostra-oltremare:
   usa: [tp-oltremare-orari, tp-oltremare-prezzi]

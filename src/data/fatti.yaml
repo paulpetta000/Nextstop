@@ -778,10 +778,10 @@
   ricontrollare: 2027-04-30
 
 - id: tp-donnanna-orari
-  testo: "Palazzo Donn'Anna è un'abitazione privata e non si visita: si guarda da fuori, dalla strada o dal mare."
+  testo: "Nel percorso Palazzo Donn'Anna è una sosta all'esterno, dalla strada o dal mare. Il teatro ospita la Fondazione Ezio De Felice, che indica apertura su appuntamento dal lunedì al venerdì."
   stato: confermato
-  fonti: [tp-fai-donn-anna]
-  controllato: 2026-10-03
+  fonti: [tp-fai-donn-anna, tp-defelice-donnanna]
+  controllato: 2026-10-21
   ricontrollare: 2027-04-30
 
 - id: tp-belvedere-orari
@@ -1237,12 +1237,11 @@
   ricontrollare: 2027-04-30
 
 - id: lc-da-michele-perche
-  testo: "Segnalata dalla Guida Michelin 2025 tra le pizzerie di Napoli, secondo Scatti di Gusto. Il menu del locale scrive «maestri pizzaioli dal 1870»."
-  stato: stampa
+  testo: "Michelin la cita tra gli indirizzi della pizza napoletana in un articolo del 10 marzo 2026. Il menu del locale scrive «maestri pizzaioli dal 1870»."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [sdg-michelin-2025-pizzerie, lc-da-michele-menu]
-  controllato: 2026-10-04
+  fonti: [sdg-michelin-2025-pizzerie, lc-da-michele-menu, michelin-pizza-2026]
+  controllato: 2026-10-21
 
 - id: lc-port-alba-perche
   testo: "Secondo il locale, è nata come pizzeria nel 1738."
@@ -1329,12 +1328,11 @@
   controllato: 2026-10-21
 
 - id: lc-cinquanta-kalo-perche
-  testo: "Quinta nella classifica 50 Top Pizza Italia 2026, secondo Sky TG24, e segnalata dalla Guida Michelin 2025, secondo Scatti di Gusto."
-  stato: stampa
+  testo: "Quinta nella classifica ufficiale 50 Top Pizza Italia 2026. Michelin la cita tra gli indirizzi della pizza napoletana in un articolo del 10 marzo 2026."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [sky-50top-2026, sdg-michelin-2025-pizzerie]
-  controllato: 2026-10-04
+  fonti: [sky-50top-2026, sdg-michelin-2025-pizzerie, top50-italia-2026, michelin-pizza-2026]
+  controllato: 2026-10-21
 
 - id: lc-salvo-perche
   testo: "Ventiquattresima nella classifica 50 Top Pizza Italia 2026: l’elenco ufficiale scrive «Salvo – Napoli», senza indirizzo. L’articolo Michelin del gennaio 2025 presenta la sede sulla Riviera di Chiaia."
@@ -1449,20 +1447,18 @@
   controllato: 2026-10-21
 
 - id: lc-poppella-rinomato
-  testo: "Il suo fiocco di neve, scrive Gambero Rosso secondo Napolitan.it (2022), è ormai un dolce conosciutissimo anche all'estero."
-  stato: stampa
+  testo: "Nel 2022 Gambero Rosso descrive il fiocco di neve di Poppella come un dolce entrato nel repertorio napoletano, imitato e proposto in gusti diversi."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [napolitan-pasticcerie-2022]
-  controllato: 2026-10-04
+  fonti: [napolitan-pasticcerie-2022, gr-pasticcerie-2022]
+  controllato: 2026-10-21
 
 - id: lc-petrucci-posillipo-perche
-  testo: "La pizzeria Palazzo Petrucci è terza nella classifica 50 Top Pizza Italia 2026, secondo Sky TG24: la classifica riguarda la sede di piazza San Domenico Maggiore. Questa sede, a Posillipo, il locale l'ha presentata nel settembre 2026."
-  stato: stampa
+  testo: "Palazzo Petrucci ha presentato la nuova pizzeria a Posillipo in una pagina pubblicata il 9 settembre 2026. Si trova al piano spiaggia, in via Posillipo 16c, e affianca la sede in piazza San Domenico."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [sky-50top-2026, lc-petrucci-posillipo]
-  controllato: 2026-10-04
+  fonti: [lc-petrucci-posillipo]
+  controllato: 2026-10-21
 
 - id: lc-tufo-perche
   testo: "Scelta nostra: una trattoria di cucina napoletana su via Posillipo, aperta tutti i giorni a pranzo e a cena."
