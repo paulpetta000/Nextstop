@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "module": "ESNext",
+    "lib": ["ES2023", "WebWorker"],
+    "types": [],
+    "allowJs": true,
+    "checkJs": true,
+    "strict": true,
+    "noEmit": true
+  },
+  "include": ["integrations/sw-template.js", "integrations/sw-contratto.d.ts"],
+  "typeAcquisition": { "enable": false }
+}

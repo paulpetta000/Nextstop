@@ -5,28 +5,35 @@ import { $, $$, esc, ic, piano, computer, durata, durataLunga, ora, km, range } 
 import { A, G, nG, tappeDi, aPiedi, caricaSchede, schedePronte, erroreSalvataggio, statoSalvataggio, salvataggioInCorso, notaSalvataggio } from './stato.js';
 
 // Lo stato della pagina (non va nella memoria, tranne la vista)
+/** @type {import('./tipi').StatoPagina} */
 export const S = { g: 0, p: 'c', attiva: null, nuova: null, tutte: false, cifre: {}, fini: {}, anima: true };
 const CHIAVE_VISTA = 'compositore-vista';
 export function vistaSalvata() { try { const v = localStorage.getItem(CHIAVE_VISTA); return v === 'c' || v === 'd' ? v : null; } catch { return null; } }
+/** @param {'c'|'d'} v */
 export function ricordaVista(v) { try { localStorage.setItem(CHIAVE_VISTA, v); } catch { /* senza memoria resta per questa visita */ } }
 
 // ---------- il foglio che sale (finestra modale) ----------
-export const foglioEl = () => $('#foglio');
-let spegniF = null, cicloF = 0, chiusuraF = null, fermaTiroFoglio = null;
+export const foglioEl = () => /** @type {HTMLDialogElement} */ ($('#foglio'));
+/** @type {(()=>void)|null} */ let spegniF = null;
+let cicloF = 0;
+/** @type {{ciclo:number;promessa:Promise<boolean>|null}|null} */ let chiusuraF = null;
+/** @type {(()=>void)|null} */ let fermaTiroFoglio = null;
 const ripulisciFoglio = () => { const fn = spegniF; spegniF = null; chiusuraF = null; fermaTiroFoglio?.(); fn?.(); };
 // Ogni apertura ha un contesto proprio, anche se riusa lo stesso elemento dialog.
 export const contestoFoglio = ({ ancheChiuso = false } = {}) => {
   const f = foglioEl(), ciclo = cicloF, aperto = !!f?.open;
   return () => f === foglioEl() && !!f && ciclo === cicloF && !chiusuraF && (ancheChiuso ? f.open === aperto : !!f.open);
 };
+/** @param {(()=>void)|null} fn */
 export const quandoChiudeFoglio = fn => { spegniF = fn; };
+/** @param {string} titolo @param {string} corpo @param {(f:HTMLDialogElement)=>void} [dopoAperto] @param {string} [cl] */
 export function foglio(titolo, corpo, dopoAperto, cl = '') {
   const f = foglioEl();
   cicloF++; ripulisciFoglio();
   f.className = cl;
   f.classList.remove('f-esce');
   f.innerHTML = `<div class="f-testa"><span class="f-maniglia" aria-hidden="true"></span><h2 id="f-titolo">${esc(titolo)}</h2><button type="button" class="f-chiudi" aria-label="Chiudi: ${esc(titolo)}">${ic('x')}</button></div><div class="f-corpo">${corpo}</div>`;
-  $('.f-chiudi', f).onclick = () => chiudiFoglio();
+  /** @type {HTMLButtonElement} */ ($('.f-chiudi', f)).onclick = () => chiudiFoglio();
   f.onclick = null; f.onchange = null; f.onkeydown = null; f.oninput = null;
   f.onpointerdown = null; f.onpointerup = null; f.onpointercancel = null; f.onlostpointercapture = null;
   f.style.translate = '';
@@ -37,6 +44,7 @@ export async function chiudiFoglio() {
   const f = foglioEl();
   if (!f.open) return false;
   if (chiusuraF?.ciclo === cicloF) return chiusuraF.promessa;
+  /** @type {{ciclo:number;promessa:Promise<boolean>|null}} */
   const chiusura = { ciclo: cicloF, promessa: null };
   chiusuraF = chiusura;
   chiusura.promessa = (async () => {
@@ -51,6 +59,7 @@ export async function chiudiFoglio() {
 export function dopoChiusuraFoglio(valido = () => true) {
   const aperto = contestoFoglio();
   let inCorso = false;
+  /** @param {()=>unknown} azione */
   return async azione => {
     if (inCorso || !aperto() || !valido()) return false;
     inCorso = true;
@@ -60,6 +69,7 @@ export function dopoChiusuraFoglio(valido = () => true) {
   };
 }
 // ridisegna il contenuto vivo del foglio e rimette il fuoco sullo stesso comando
+/** @param {HTMLDialogElement} f @param {string} html @param {{dataset:{f?:string;v?:string}}|null} [b] */
 export function rinfresca(f, html, b) {
   const sel = b ? `[data-f="${b.dataset.f}"]${b.dataset.v != null ? `[data-v="${b.dataset.v}"]` : ''}` : null;
   const vivo = $('#f-vivo', f);
@@ -74,6 +84,7 @@ export function preparaFoglio() {
   f.addEventListener('cancel', e => { e.preventDefault(); chiudiFoglio(); });
   f.addEventListener('close', () => { if (f.open) return; cicloF++; f.classList.remove('f-esce'); ripulisciFoglio(); });
   // Tirando dalla testa: un solo puntatore, con annullamento e cattura ripuliti.
+  /** @type {{y:number;id:number;aperto:()=>boolean}|null} */
   let tiro = null;
   const ferma = () => {
     const t = tiro; tiro = null;
@@ -83,7 +94,7 @@ export function preparaFoglio() {
   };
   fermaTiroFoglio = ferma;
   f.addEventListener('pointerdown', e => {
-    if (tiro || !f.open || (e.pointerType === 'mouse' && e.button !== 0) || !e.target.closest('.f-testa') || e.target.closest('button')) return;
+    if (tiro || !f.open || (e.pointerType === 'mouse' && e.button !== 0) || !/** @type {Element} */ (e.target).closest('.f-testa') || /** @type {Element} */ (e.target).closest('button')) return;
     const aperto = contestoFoglio(); if (!aperto()) return;
     tiro = { y: e.clientY, id: e.pointerId, aperto }; f.setPointerCapture(e.pointerId);
   });
@@ -97,6 +108,7 @@ export function preparaFoglio() {
     const chiudi = tiro.aperto() && e.clientY - tiro.y > 90; ferma();
     if (chiudi) chiudiFoglio();
   });
+  /** @param {PointerEvent} e */
   const annulla = e => { if (tiro?.id === e.pointerId) ferma(); };
   f.addEventListener('pointercancel', annulla); f.addEventListener('lostpointercapture', annulla);
   addEventListener('blur', ferma); addEventListener('resize', ferma);
@@ -104,11 +116,12 @@ export function preparaFoglio() {
 }
 
 // ---------- avviso in basso (3,6 secondi con «Annulla», 2,3 senza; resta se ci passi sopra o ci vai con la tastiera) ----------
+/** @type {ReturnType<typeof setTimeout>|undefined} */
 let tempoAvviso;
 export function rinfrescaSalvataggio() {
   const stato = statoSalvataggio(), pendente = salvataggioInCorso();
-  $$('.cmp .salva').forEach(s => { s.classList.toggle('salva--fatto', stato.fatto); s.disabled = pendente; s.setAttribute('aria-label', pendente ? 'Salvataggio in corso' : stato.fatto ? 'Salvato: apri i miei itinerari' : 'Salva itinerario'); });
-  $$('.cmp [data-stato]').forEach(s => { s.dataset.stato = stato.tipo; s.querySelector('.stato__t').textContent = stato.testo; });
+  /** @type {HTMLButtonElement[]} */ ($$('.cmp .salva')).forEach(s => { s.classList.toggle('salva--fatto', stato.fatto); s.disabled = pendente; s.setAttribute('aria-label', pendente ? 'Salvataggio in corso' : stato.fatto ? 'Salvato: apri i miei itinerari' : 'Salva itinerario'); });
+  $$('.cmp [data-stato]').forEach(s => { s.dataset.stato = stato.tipo; /** @type {HTMLElement} */ (s.querySelector('.stato__t')).textContent = stato.testo; });
   $$('#foglio [data-itinerario-stato]').forEach(el => {
     const x = A.elenco.find(i => i.id === el.dataset.itinerarioStato);
     if (!x) return;
@@ -117,13 +130,14 @@ export function rinfrescaSalvataggio() {
   });
   $$('#foglio [data-memoria-itinerari]').forEach(el => { el.textContent = notaSalvataggio(); });
 }
+/** @param {string} testo @param {{testo:string;fai:()=>void}} [azione] */
 export function avvisa(testo, azione) {
   const errore = erroreSalvataggio();
   if (errore && !testo.includes(errore)) testo += ' ' + errore;
   rinfrescaSalvataggio();
-  const t = $('#toast');
+  const t = /** @type {HTMLElement} */ ($('#toast'));
   t.innerHTML = `<span>${esc(testo)}</span>${azione ? `<button type="button">${esc(azione.testo)}</button>` : ''}`;
-  if (azione) $('button', t).onclick = () => { t.classList.remove('su'); azione.fai(); };
+  if (azione) /** @type {HTMLButtonElement} */ ($('button', t)).onclick = () => { t.classList.remove('su'); azione.fai(); };
   t.classList.remove('su');
   void t.offsetWidth;
   t.classList.add('su');
@@ -131,7 +145,8 @@ export function avvisa(testo, azione) {
   tempoAvviso = setTimeout(() => t.classList.remove('su'), azione ? 3600 : 2340);
 }
 export function preparaAvviso() {
-  const t = $('#toast');
+  const t = /** @type {HTMLElement} */ ($('#toast'));
+  /** @param {number} ms */
   const chiudi = ms => { clearTimeout(tempoAvviso); tempoAvviso = setTimeout(() => t.classList.remove('su'), ms); };
   t.addEventListener('pointerenter', () => clearTimeout(tempoAvviso));
   t.addEventListener('focusin', () => clearTimeout(tempoAvviso));
@@ -146,36 +161,45 @@ export async function assicuraSchede() {
     return false;
   }
 }
-export const annuncia = testo => { const a = $('#annuncio'); a.textContent = ''; setTimeout(() => { a.textContent = testo; }, 30); };
+/** @param {string} testo */
+export const annuncia = testo => { const a = /** @type {HTMLElement} */ ($('#annuncio')); a.textContent = ''; setTimeout(() => { a.textContent = testo; }, 30); };
 // dentro un foglio (finestra modale) la voce per i lettori di schermo deve stare nel foglio
+/** @param {string} testo */
 export const annunciaF = testo => { const a = $('#r-voce'); if (!a) { annuncia(testo); return; } a.textContent = ''; setTimeout(() => { a.textContent = testo; }, 30); };
 
 // ---------- i numeri del giorno e il tempo del giorno; quando cambiano scorrono dal valore di prima al nuovo ----------
+/** @param {import("../../../lib/itinerari/pause").Giornata} Gx @param {string} [cl] @param {string} [suf] */
 export const cifre = (Gx, cl = 'cifre', suf = '') => `<dl class="${cl}"><div><dt>tappe</dt><dd class="num" data-cifra="tappe${suf}" data-n="${tappeDi(Gx).length}">${tappeDi(Gx).length}</dd></div><div><dt>minuti ${aPiedi(Gx) ? 'a piedi' : 'di strada'}</dt><dd class="num" data-cifra="piedi${suf}" data-n="${Gx.spostamenti}">${Gx.spostamenti}</dd></div><div><dt>chilometri</dt><dd class="num" data-cifra="km${suf}" data-n="${Gx.metri}">${km(Gx.metri)}</dd></div><div><dt>fine stimata</dt><dd class="num" data-cifra="fine${suf}" data-n="${Gx.fine}">${ora(Gx.fine)}</dd></div></dl>`;
+/** @param {number} m @param {string} [parola] */
 const nessuno = (m, parola = 'nessuno') => (Math.round(m) ? durata(Math.round(m)) : parola);
+/** @type {Record<string,(n:number)=>string>} */
 const FORMA = { tappe: n => String(Math.round(n)), piedi: n => String(Math.round(n)), km: n => km(n), fine: n => ora(Math.round(n)), visite: n => durata(Math.round(n)), cammino: n => durata(Math.round(n)), pause: n => nessuno(n, 'nessuna'), margine: n => nessuno(n), totale: n => durata(Math.round(n)), resta: n => durata(Math.abs(Math.round(n))) };
 export function contaCifre() {
+  /** @type {Record<string,number>} */
   const visti = {};
-  for (const el of $$('.cmp [data-cifra], #foglio [data-cifra]')) {
+  for (const el of /** @type {import('./tipi').ElementoDati<'cifra'|'n'>[]} */ ($$('.cmp [data-cifra], #foglio [data-cifra]'))) {
     const k = el.dataset.cifra, n = +el.dataset.n, da = S.cifre[k];
     visti[k] ??= n;
     if (da == null || da === n || !piano()) continue;
     const forma = FORMA[k.split('@')[0]], t0 = performance.now(), dur = 820;
     if (!forma) continue;
+    /** @param {number} now */
     const passo = now => { const q = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - q, 3); el.textContent = forma(da + (n - da) * e); if (q < 1) requestAnimationFrame(passo); };
     requestAnimationFrame(passo);
   }
   S.cifre = { ...S.cifre, ...visti };
 }
 // D: cambiando giorno i numeri della pagina nuova scorrono da quelli del giorno di prima, come in C
+/** @param {number} g0 @param {number} g1 */
 export function contaDa(g0, g1) {
   if (!piano() || g0 === g1) return;
-  for (const el of $$(`[data-cifra$="@${g1}"]`)) {
-    const base = el.dataset.cifra.split('@')[0], vecchio = $(`[data-cifra="${base}@${g0}"]`), n = +el.dataset.n;
+  for (const el of /** @type {(import('./tipi').ElementoDati<'cifra'|'n'> & {_conta?:number})[]} */ ($$(`[data-cifra$="@${g1}"]`))) {
+    const base = el.dataset.cifra.split('@')[0], vecchio = /** @type {import('./tipi').ElementoDati<'n'> | null} */ ($(`[data-cifra="${base}@${g0}"]`)), n = +el.dataset.n;
     if (!vecchio) continue;
     const da = +vecchio.dataset.n, forma = FORMA[base], t0 = performance.now(), dur = 820;
     if (da === n || !forma) continue;
-    cancelAnimationFrame(el._conta);
+    if (el._conta !== undefined) cancelAnimationFrame(el._conta);
+    /** @param {number} now */
     const passo = now => { const q = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - q, 3); el.textContent = forma(da + (n - da) * e); if (q < 1) el._conta = requestAnimationFrame(passo); };
     el._conta = requestAnimationFrame(passo);
   }
@@ -188,7 +212,8 @@ export function contaFine() {
   if (prima == null || prima === Gx.fine || !piano()) return;
   const els = $$('[data-conta="fine"]');
   const t0 = performance.now(), dur = 1100;
-  const passo = now => {
+  /** @param {number} now */
+    const passo = now => {
     const k = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - k, 3);
     const m = Math.round(prima + (Gx.fine - prima) * e);
     els.forEach(el => { el.textContent = ora(m); });
@@ -197,12 +222,15 @@ export function contaFine() {
   requestAnimationFrame(passo);
 }
 const NOMI_FASE = { visita: 'Visite', cammino: 'A piedi', pausa: 'Pause', margine: 'Margine' };
+/** @param {import('../../../lib/itinerari/pause').Giornata} Gx @param {string} [cl] @param {{suf?:string;bottone?:boolean}} [opzioni] */
 export function tempo(Gx, cl = '', { suf = '', bottone = true } = {}) {
   const fine = Math.max(Gx.fineScelta, Gx.fine), span = Math.max(1, fine - Gx.inizio);
+  /** @param {number} m */
   const pc = m => `${(m / span * 100).toFixed(2)}%`;
   const restaT = Gx.resta >= 0
     ? `<span class="tempo__resta">ti restano <b class="num" data-cifra="resta${suf}" data-n="${Gx.resta}">${durata(Gx.resta)}</b></span>`
     : `<span class="tempo__resta tempo__resta--oltre">sfori di <b class="num" data-cifra="resta${suf}" data-n="${Gx.resta}">${durata(-Gx.resta)}</b></span>`;
+  /** @param {keyof typeof NOMI_FASE} k @param {number} n @param {string} testo */
   const voce = (k, n, testo) => `<div><dt><i class="tempo__p tempo__p--${k}" aria-hidden="true"></i>${NOMI_FASE[k]}</dt><dd class="num" data-cifra="${k === 'visita' ? 'visite' : k === 'pausa' ? 'pause' : k}${suf}" data-n="${n}">${testo}</dd></div>`;
   const descr = `Dalle ${ora(Gx.inizio)} alle ${ora(Gx.fine)}: visite ${durata(Gx.visite)}, a piedi ${durata(Gx.spostamenti)}, pause ${nessuno(Gx.pauseMin, 'nessuna')}, margine ${nessuno(Gx.margineMin)}. ${Gx.resta >= 0 ? `Ti restano ${durataLunga(Gx.resta)} prima delle ${ora(Gx.fineScelta)}.` : `Sfori di ${durataLunga(-Gx.resta)} oltre le ${ora(Gx.fineScelta)}.`}`;
   return `<div class="tempo ${cl}">
@@ -216,12 +244,15 @@ export function tempo(Gx, cl = '', { suf = '', bottone = true } = {}) {
 // ---------- cambiare giorno senza scatti: il giorno che lasci continua il gesto ed esce, il nuovo entra dall'altro lato ----------
 export const occupato = { si: false };
 let scorrimentiAttivi = 0;
+/** @param {HTMLElement|null} el @param {number} dir @param {number} daX @param {()=>void} cambia @param {()=>HTMLElement|null} [nuovo] @param {()=>void} [poi] @param {()=>boolean} [valido] */
 export async function scorri(el, dir, daX, cambia, nuovo = () => el, poi = () => {}, valido = () => true) {
+  /** @param {HTMLElement|null} n @returns {n is HTMLElement} */
   const vivo = n => !!n && n.isConnected !== false && valido();
   if (!vivo(el)) return false;
   if (!piano()) { cambia(); const n = nuovo(); if (!vivo(n)) return false; n.style.translate = ''; n.style.opacity = ''; poi(); return true; }
   scorrimentiAttivi++; occupato.si = true;
-  let fuori, dentro;
+  /** @type {Animation|undefined} */ let fuori;
+  /** @type {Animation|undefined} */ let dentro;
   try {
     const W = el.getBoundingClientRect().width || innerWidth;
     const op = parseFloat(el.style.opacity || '1');
@@ -239,33 +270,39 @@ export async function scorri(el, dir, daX, cambia, nuovo = () => el, poi = () =>
     poi(); return true;
   } finally { fuori?.cancel(); dentro?.cancel(); scorrimentiAttivi--; occupato.si = scorrimentiAttivi > 0; }
 }
+/** @param {HTMLElement|null} el @param {HTMLElement|null} [barra] */
 export function allInizio(el, barra = null) {
   if (!el) return;
   const sopra = barra ? barra.offsetHeight + (parseFloat(getComputedStyle(barra).top) || 0) : parseFloat(getComputedStyle(el).scrollMarginTop) || 0;
   const y = Math.round(el.getBoundingClientRect().top + scrollY - sopra);
   if (scrollY > y + 1) scrollTo({ top: y, behavior: 'instant' });
 }
+/** @param {HTMLElement|null} el @param {number} [dir] */
 export function entra(el, dir = 1) {
   if (!el || !piano()) return;
   const W = el.getBoundingClientRect().width || innerWidth;
   el.animate([{ translate: `${dir * W * .22}px 0`, opacity: 0 }, { translate: '0 0', opacity: 1 }], { duration: 430, easing: 'cubic-bezier(.16, 1, .3, 1)' });
 }
 // le schede dei giorni, con il segno che scorre dall'uno all'altro
+/** @param {string} cl */
 export const schede = cl => `<div class="schede ${cl}-schede-box"><span class="segno-tab" aria-hidden="true"></span><div class="${cl}-schede" role="tablist" aria-label="Giorni dell'itinerario">${range(nG()).map(g => `<button type="button" role="tab" aria-selected="${g === S.g}" tabindex="${g === S.g ? 0 : -1}" data-azione="giorno" data-g="${g}">Giorno ${g + 1}</button>`).join('')}</div></div>`;
-export const segnoOra = () => { const s = $('.cmp .segno-tab'); return s && s.dataset.x ? { x: +s.dataset.x, w: +s.dataset.w } : null; };
+export const segnoOra = () => { const s = $('.cmp .segno-tab'); return s && s.dataset.x ? { x: +s.dataset.x, w: +/** @type {string} */ (s.dataset.w) } : null; };
+/** @param {Element|null} box @param {{da?:{x:number;w:number}|null;anima?:boolean}} [opzioni] */
 export function mettiSegno(box, { da = null, anima = true } = {}) {
   const s = box && $('.segno-tab', box), t = box && $('[aria-selected="true"]', box);
   if (!s || !t) return;
   const x = t.offsetLeft, w = t.offsetWidth;
+  /** @param {number} X1 @param {number} W1 */
   const metti = (X1, W1) => { s.style.transform = `translateX(${X1}px)`; s.style.width = `${W1}px`; };
   if (!anima || !piano() || (!da && !s.dataset.x)) { s.style.transition = 'none'; metti(x, w); void s.offsetWidth; s.style.transition = ''; }
   else { if (da) { s.style.transition = 'none'; metti(da.x, da.w); void s.offsetWidth; s.style.transition = ''; } metti(x, w); }
-  s.dataset.x = x; s.dataset.w = w;
+  s.dataset.x = String(x); s.dataset.w = String(w);
   s.classList.add('su');
 }
+/** @param {number} g */
 export function segnaSchede(g) {
   for (const box of $$('.cmp .schede')) {
-    $$('[role="tab"]', box).forEach(b => { const si = +b.dataset.g === g; b.setAttribute('aria-selected', String(si)); b.tabIndex = si ? 0 : -1; });
+    /** @type {import('./tipi').ElementoDati<'g'>[]} */ ($$('[role="tab"]', box)).forEach(b => { const si = +b.dataset.g === g; b.setAttribute('aria-selected', String(si)); b.tabIndex = si ? 0 : -1; });
     mettiSegno(box);
   }
 }
@@ -275,11 +312,15 @@ export const osservaSchede = () => $$('.cmp .schede').forEach(b => { roSchede.ob
 
 // ---------- sfogliare i giorni: dito, mouse, due dita sul touchpad (non dalle mappe, dalle maniglie, dai campi) ----------
 export const gesto = { trascinando: false };
+/** @param {HTMLElement|null} area @param {()=>HTMLElement|null} mobile @param {(g:number,dx?:number)=>boolean} vai */
 export function sfoglia(area, mobile, vai) {
   if (!area) return;
-  let p0 = null, dir = null, tolto = false, x = 0, el = null;
+  /** @type {{x:number;y:number;t:number;id:number}|null} */ let p0 = null;
+  /** @type {'h'|'v'|null} */ let dir = null;
+  let tolto = false, x = 0;
+  /** @type {HTMLElement|null} */ let el = null;
   area.addEventListener('pointerdown', e => {
-    if ((e.pointerType === 'mouse' && e.button !== 0) || occupato.si || gesto.trascinando || e.target.closest('.m, input, .f-filtri, [role="tablist"], .c-giu, [data-maniglia], .tempo__barra')) return;
+    if ((e.pointerType === 'mouse' && e.button !== 0) || occupato.si || gesto.trascinando || /** @type {Element} */ (e.target).closest('.m, input, .f-filtri, [role="tablist"], .c-giu, [data-maniglia], .tempo__barra')) return;
     p0 = { x: e.clientX, y: e.clientY, t: performance.now(), id: e.pointerId }; dir = null; x = 0; el = null;
   });
   area.addEventListener('pointermove', e => {
@@ -295,6 +336,7 @@ export function sfoglia(area, mobile, vai) {
     x = fermo ? dx * .22 : dx;
     if (piano()) { el.style.translate = `${x.toFixed(1)}px 0`; el.style.opacity = String(Math.max(.4, 1 - Math.abs(x) / 620)); }
   });
+  /** @param {PointerEvent} e */
   const fine = e => {
     if (!p0 || e.pointerId !== p0.id) return;
     const dx = e.clientX - p0.x, v = Math.abs(dx) / Math.max(1, performance.now() - p0.t);
@@ -315,7 +357,7 @@ export function sfoglia(area, mobile, vai) {
   area.addEventListener('click', e => { if (tolto) { e.stopPropagation(); e.preventDefault(); } }, true);
   let somma = 0, pausa = 0;
   area.addEventListener('wheel', e => {
-    if (Math.abs(e.deltaX) <= Math.abs(e.deltaY) || e.target.closest('.m')) return;
+    if (Math.abs(e.deltaX) <= Math.abs(e.deltaY) || /** @type {Element} */ (e.target).closest('.m')) return;
     e.preventDefault();
     if (performance.now() < pausa) return;
     somma += e.deltaX;
@@ -323,12 +365,14 @@ export function sfoglia(area, mobile, vai) {
   }, { passive: false });
 }
 // una lista che cambia (tappa spostata, tolta, aggiunta): ogni pezzo scivola dal posto di prima al nuovo (FLIP)
+/** @param {HTMLElement} lista */
 export function foto(lista) { const m = new Map(); $$(':scope > [data-chiave]', lista).forEach(el => m.set(el.dataset.chiave, el.getBoundingClientRect().top)); return m; }
+/** @param {HTMLElement|null} lista @param {Map<string,number>|null|undefined} prima @param {string|null} [salta] */
 export function scivola(lista, prima, salta = null) {
   if (!piano() || !prima || !lista) return;
   $$(':scope > [data-chiave]', lista).forEach(el => {
     if (el.dataset.chiave === salta) return;
-    const t0 = prima.get(el.dataset.chiave);
+    const t0 = prima.get(/** @type {string} */ (el.dataset.chiave));
     const dy = t0 == null ? null : t0 - el.getBoundingClientRect().top;
     if (dy == null) el.animate([{ opacity: 0, transform: 'translateY(10px)' }, { opacity: 1, transform: 'none' }], { duration: 360, easing: 'cubic-bezier(.16,1,.3,1)', delay: 80 });
     else if (Math.abs(dy) > 1) el.animate([{ transform: `translateY(${dy}px)` }, { transform: 'none' }], { duration: 420, easing: 'cubic-bezier(.16,1,.3,1)' });
@@ -338,15 +382,18 @@ export function scivola(lista, prima, salta = null) {
 // ---------- da telefono, un foglio aperto del tutto si chiude tirando giù da qualsiasi punto (Enrico, 14/10/2026) ----------
 // Solo se il testo era già in cima quando appoggi il dito, e solo con un gesto deciso (più di 200 px, o più di 110 px veloce).
 export const gestoScheda = { tolto: false };
+/** @param {HTMLElement} el @param {{pronto:()=>boolean;scorre:()=>HTMLElement|null;pannello:()=>HTMLElement;chiudi:()=>unknown}} opzioni */
 export function tiraPerChiudere(el, { pronto, scorre, pannello, chiudi }) {
-  let t = null, cicloTocco = 0;
+  /** @type {{y:number;x:number;t:number;dir:'giu'|'no'|null;dy:number;cima:boolean;p:HTMLElement;valido:()=>boolean}|null} */
+  let t = null;
+  let cicloTocco = 0;
   const annulla = () => {
     if (t?.dir === 'giu') { t.p.style.transition = ''; t.p.style.translate = ''; }
     t = null;
   };
   el.addEventListener('touchstart', e => {
     cicloTocco++; annulla();
-    if (!pronto() || computer.matches || e.touches.length !== 1 || e.target.closest('a, input, summary, .f-testa, .sch1__testa, .m, .f-chips, .r2-fila')) return;
+    if (!pronto() || computer.matches || e.touches.length !== 1 || /** @type {Element} */ (e.target).closest('a, input, summary, .f-testa, .sch1__testa, .m, .f-chips, .r2-fila')) return;
     const sc = scorre();
     t = { y: e.touches[0].clientY, x: e.touches[0].clientX, t: performance.now(), dir: null, dy: 0, cima: !sc || sc.scrollTop <= 0, p: pannello(), valido: contestoFoglio({ ancheChiuso: true }) };
   }, { passive: true });

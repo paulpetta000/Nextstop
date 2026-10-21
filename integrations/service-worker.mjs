@@ -23,6 +23,7 @@ const INTERATTIVE = {
   '/napoli/dove-mangiare/': []
 };
 
+/** @returns {import('astro').AstroIntegration} */
 export default function serviceWorker() {
   return {
     name: 'service-worker',
@@ -30,6 +31,7 @@ export default function serviceWorker() {
       'astro:build:done': ({ dir, logger }) => {
         const out = fileURLToPath(dir);
         verificaPercorsiPubblicati(out);
+        /** @type {[string,string][]} */
         const files = [];
         for (const url of CORE) {
           const f = path.join(out, url, 'index.html');
@@ -38,6 +40,7 @@ export default function serviceWorker() {
         }
         // script, dati e immagini piccole delle pagine interattive (anche gli script importati da altri script)
         const visti = new Set();
+        /** @param {string} u */
         const aggiungi = (u) => {
           if (visti.has(u)) return;
           const f = path.join(out, u, u.endsWith('/') ? 'index.html' : '');
@@ -69,6 +72,7 @@ export default function serviceWorker() {
         // rimangono offline anche quando si pubblica una sola rifinitura grafica.
         const datiHash = crypto.createHash('sha256');
         const cartellaDati = path.join(out, 'napoli/itinerari');
+        /** @param {string} cartella */
         const leggiDati = cartella => {
           for (const f of fs.readdirSync(cartella, { withFileTypes: true }).sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0))) {
             const file = path.join(cartella, f.name);

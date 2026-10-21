@@ -1,5 +1,6 @@
 // Decoder condiviso da build e mappa: nessuna dipendenza dal browser o da Node.
 const ALFA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
+/** @param {unknown} s @returns {{modo: string; punti: [number, number][]}[]} */
 export function decodificaPercorso(s) {
   if (typeof s !== 'string') return [];
   const out = [];
@@ -19,6 +20,7 @@ export function decodificaPercorso(s) {
     }
     // Un numero troncato o una coppia incompleta non lascia disegnare metà del percorso.
     if (mul !== 1 || nums.length % 2) return [];
+    /** @type {[number, number][]} */
     const punti = [];
     let x = 0, y = 0;
     for (let j = 0; j < nums.length; j += 2) {

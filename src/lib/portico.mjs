@@ -19,19 +19,24 @@ const N_CONCI = 13;
 // così la pietra copre il bordo e non resta un filo chiaro.
 export const VANO = (() => {
   const x = CX - R - 1, y = YS - R - 1, w = 2 * R + 2, h = SOGLIA - y;
+  /** @param {number} v */
   const p = v => +(v * 100).toFixed(3);
   return { left: p(x / W), top: p(y / H), width: p(w / W), height: p(h / H), raggio: `50% 50% 0 0 / ${p((R + 1) / h)}% ${p((R + 1) / h)}% 0 0` };
 })();
 
+/** @param {number} v */
 const f = v => +v.toFixed(1);
 // numeri «a caso» ma sempre uguali: la stessa arcata si disegna sempre allo stesso modo
+/** @param {number} a @param {number} b */
 const caso = (a, b) => { const x = Math.sin(a * 127.1 + b * 311.7) * 43758.5453; return x - Math.floor(x); };
+/** @param {number} r @param {number} gradi */
 const punto = (r, gradi) => [f(CX + r * Math.cos(gradi * Math.PI / 180)), f(YS - r * Math.sin(gradi * Math.PI / 180))];
 const luce = `M${CX - R} ${SOGLIA}V${YS}A${R} ${R} 0 0 1 ${CX + R} ${YS}V${SOGLIA}Z`;
 // l'arco con la sua cornice, più il vuoto: qui i blocchi del muro non ci vanno
 const arcoPieno = `M${CX - RM - 1} ${YS}A${RM + 1} ${RM + 1} 0 0 1 ${CX + RM + 1} ${YS}Z${luce}`;
 
 // i corsi dei blocchi: [inizio, fine, giunti verticali]. I giunti a 0 e 300 cadono a metà dei pilastri, tra due arcate.
+/** @type {[number,number,number[]][]} */
 const CORSI = [
   [CORNICE, 52, [64, 158, 246]],
   [52, 96, [0, 108, 196, 300]],
@@ -49,13 +54,17 @@ export const MASCHERA = `url("data:image/svg+xml,${encodeURIComponent(`<svg xmln
 
 // L'interno dell'SVG di un'arcata (giunti, conci, ombre: la pietra è sotto). id: unico nella pagina;
 // seme: cambia i toni dei blocchi, perché due arcate non siano uguali
+/** @param {{id:string;seme?:number}} opzioni */
 export function arcata({ id, seme = 1 }) {
   const u = `pc-${id}`;
+  /** @param {number} a @param {number} b */
   const tono = (a, b) => {
     const v = caso(a + seme * 7.3, b + seme * 3.1);
     return v < .5 ? `fill="#000" fill-opacity="${((.5 - v) * .28).toFixed(3)}"` : `fill="#fff" fill-opacity="${((v - .5) * .16).toFixed(3)}"`;
   };
+  /** @param {number} x0 @param {number} x1 @param {number} y */
   const giuntoO = (x0, x1, y) => `<path d="M${f(x0)} ${f(y)}H${f(x1)}" class="pc-g"/><path d="M${f(x0)} ${f(y + 1.3)}H${f(x1)}" class="pc-l"/>`;
+  /** @param {number} x @param {number} y0 @param {number} y1 */
   const giuntoV = (x, y0, y1) => `<path d="M${f(x)} ${f(y0)}V${f(y1)}" class="pc-g"/>${x < W ? `<path d="M${f(x + 1.3)} ${f(y0)}V${f(y1)}" class="pc-l"/>` : ''}`;
 
   // il muro: blocchi con toni un po' diversi e i loro giunti

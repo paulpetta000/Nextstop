@@ -5,26 +5,31 @@ const PAGES = `pagine-${VERSION}`;
 const ASSETS = 'risorse-v1'; // immagini e risorse immutabili già viste: restano fra i rilasci
 const DATA_VERSION = '__DATA_VERSION__';
 const DATA = `dati-${DATA_VERSION}`;
+// Questo file viene registrato soltanto come service worker, non come worker generico.
+const worker = /** @type {ServiceWorkerGlobalScope} */ (/** @type {unknown} */ (self));
 
-self.addEventListener('install', event => {
-  event.waitUntil(caches.open(PAGES).then(c => c.addAll(CORE)).then(() => self.skipWaiting()));
+worker.addEventListener('install', event => {
+  event.waitUntil(caches.open(PAGES).then(c => c.addAll(CORE)).then(() => worker.skipWaiting()));
 });
 
-self.addEventListener('activate', event => {
+worker.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys()
       .then(keys => Promise.all(keys.filter(k => (k.startsWith('pagine-') && k !== PAGES) || (k.startsWith('dati-') && k !== DATA)).map(k => caches.delete(k))))
-      .then(() => self.clients.claim())
+      .then(() => worker.clients.claim())
   );
 });
 
+/** @template T @param {number} ms @param {Promise<T>} p @returns {Promise<T>} */
 const timeout = (ms, p) => new Promise((res, rej) => { const t = setTimeout(() => rej(new Error('timeout')), ms); p.then(v => { clearTimeout(t); res(v); }, e => { clearTimeout(t); rej(e); }); });
 
 // Un problema della memoria locale non deve impedire di usare la rete.
+/** @param {string} nome */
 const apri = async nome => { try { return await caches.open(nome); } catch { return null; } };
+/** @param {Cache|Promise<Cache|null>|null} cache @param {RequestInfo|URL} req @param {CacheQueryOptions} [opzioni] */
 const leggi = async (cache, req, opzioni) => { try { return await (await cache)?.match(req, opzioni); } catch { return undefined; } };
 
-self.addEventListener('fetch', event => {
+worker.addEventListener('fetch', event => {
   const req = event.request;
   if (req.method !== 'GET') return;
   const url = new URL(req.url);

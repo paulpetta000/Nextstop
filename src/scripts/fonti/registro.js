@@ -1,26 +1,34 @@
 // Ricerca locale, cronologia della sola scheda. Nessuna rete o scrittura nello storage.
 import {normalizza,equivalente,luogoCercato} from './ricerca.mjs';
-const input=document.querySelector('#cerca-fonti');
+const input=/** @type {HTMLInputElement|null} */ (document.querySelector('#cerca-fonti'));
 document.documentElement.classList.add('js');
-if(input)initRegistro();
-function initRegistro(){
+if(input)initRegistro(input);
+/** @param {HTMLInputElement} input */
+function initRegistro(input){
   input.disabled=false;
-  const sources=[...document.querySelectorAll('.source')];
-  const panels=[...document.querySelectorAll('.topic')];
-  const status=document.querySelector('[data-status]');
-  const statusText=status.querySelector('span');
-  const reset=document.querySelector('[data-reset]');
-  const empty=document.querySelector('.empty');
-  const rail=document.querySelector('.results-rail');
-  const topics=document.querySelector('.topics');
-  const searchBox=document.querySelector('.search-box');
-  const indexLinks=[...document.querySelectorAll('.topic-index a')];
+  const sources=[.../** @type {NodeListOf<HTMLElement>} */ (document.querySelectorAll('.source'))];
+  const panels=[.../** @type {NodeListOf<HTMLDetailsElement>} */ (document.querySelectorAll('.topic'))];
+  const status=/** @type {HTMLElement} */ (document.querySelector('[data-status]'));
+  const statusText=/** @type {HTMLElement} */ (status.querySelector('span'));
+  const reset=/** @type {HTMLButtonElement} */ (document.querySelector('[data-reset]'));
+  const empty=/** @type {HTMLElement} */ (document.querySelector('.empty'));
+  const rail=/** @type {HTMLElement} */ (document.querySelector('.results-rail'));
+  const topics=/** @type {HTMLElement} */ (document.querySelector('.topics'));
+  const searchBox=/** @type {HTMLElement} */ (document.querySelector('.search-box'));
+  const indexLinks=[.../** @type {NodeListOf<HTMLAnchorElement>} */ (document.querySelectorAll('.topic-index a'))];
   const reduced=matchMedia('(prefers-reduced-motion:reduce)');
   // I token servono al primo gesto, non al disegno iniziale dell'apertura.
+  /** @type {CSSStyleDeclaration | undefined} */
   let tokens;
+  /** @type {Map<Element,Animation>} */
   const animations=new Map();
-  let beforeSearch=null,searchIndex,composing=false;
+  /** @type {Map<string,boolean>|null} */
+  let beforeSearch=null;
+  /** @type {Map<HTMLElement,string>|undefined} */
+  let searchIndex;
+  let composing=false;
   const snapshot=()=>new Map(panels.map(p=>[p.id,p.open]));
+  /** @param {Element} element @param {Keyframe[]} keyframes @param {string} token @param {string} id */
   const animate=(element,keyframes,token,id)=>{
     animations.get(element)?.cancel();animations.delete(element);
     if(reduced.matches||typeof element.animate!=='function')return;
@@ -29,6 +37,7 @@ function initRegistro(){
     animations.set(element,animation);animation.finished.then(()=>{if(animations.get(element)===animation)animations.delete(element);},()=>{});
   };
   reduced.addEventListener('change',()=>{if(reduced.matches){for(const a of animations.values())a.cancel();animations.clear();}});
+  /** @param {string|null|undefined} id */
   const activeTopic=id=>indexLinks.forEach(a=>{if(a.hash==='#'+id)a.setAttribute('aria-current','location');else a.removeAttribute('aria-current');});
   const store=()=>history.replaceState({...history.state,fontiRegistro:{query:input.value,panels:[...snapshot()],beforeSearch:beforeSearch?[...beforeSearch]:null}},'');
   const filter=({motion=true}={})=>{
@@ -36,23 +45,23 @@ function initRegistro(){
     if(query&&!beforeSearch)beforeSearch=snapshot();
     const restoring=!query&&beforeSearch;
     let count=0;
-    searchIndex ||= new Map(sources.map(s=>[s,equivalente(normalizza(s.textContent+' '+(s.dataset.keywords||'')+' '+s.dataset.topic+' '+JSON.parse(s.dataset.places).join(' ')))]));
+    searchIndex ||= new Map(sources.map(s=>[s,equivalente(normalizza(s.textContent+' '+(s.dataset.keywords||'')+' '+s.dataset.topic+' '+/** @type {string[]} */ (JSON.parse(/** @type {string} */ (s.dataset.places))).join(' ')))]));
     for(const source of sources){
-      const match=words.every(w=>searchIndex.get(source).includes(w));source.hidden=!match;if(match)count++;
-      const places=JSON.parse(source.dataset.places);const context=source.querySelector('[data-context]');
+      const match=words.every(w=>/** @type {string} */ (/** @type {Map<HTMLElement,string>} */ (searchIndex).get(source)).includes(w));source.hidden=!match;if(match)count++;
+      const places=/** @type {string[]} */ (JSON.parse(/** @type {string} */ (source.dataset.places)));const context=source.querySelector('[data-context]');
       if(places.length&&context){const found=query?luogoCercato(places,query):null;context.textContent=found?[found,...places.filter(p=>p!==found)].join(' / '):places.join(' / ');}
     }
     for(const panel of panels){
-      const shown=[...panel.querySelectorAll('.source')].filter(s=>!s.hidden).length;
-      panel.hidden=!shown;panel.querySelector('[data-count]').textContent=`${shown} ${shown===1?'documento':'documenti'}`;
-      if(query)panel.open=shown>0;else if(restoring)panel.open=beforeSearch.get(panel.id)??false;
-      panel.querySelectorAll('.place-group').forEach(g=>g.hidden=![...g.querySelectorAll('.source')].some(s=>!s.hidden));
+      const shown=[.../** @type {NodeListOf<HTMLElement>} */ (panel.querySelectorAll('.source'))].filter(s=>!s.hidden).length;
+      panel.hidden=!shown;/** @type {HTMLElement} */ (panel.querySelector('[data-count]')).textContent=`${shown} ${shown===1?'documento':'documenti'}`;
+      if(query)panel.open=shown>0;else if(restoring)panel.open=/** @type {Map<string,boolean>} */ (beforeSearch).get(panel.id)??false;
+      /** @type {NodeListOf<HTMLElement>} */ (panel.querySelectorAll('.place-group')).forEach(g=>g.hidden=![.../** @type {NodeListOf<HTMLElement>} */ (g.querySelectorAll('.source'))].some(s=>!s.hidden));
     }
     if(restoring)beforeSearch=null;
     statusText.textContent=query?`${count} ${count===1?'documento trovato':'documenti trovati'} su ${sources.length}`:`${sources.length} documenti nell’elenco`;
     reset.hidden=!query;empty.hidden=count>0;searchBox.dataset.query=String(!!query);
     if(query)activeTopic(null);
-    document.querySelectorAll('.cross-reference').forEach(p=>p.hidden=!!query);
+    /** @type {NodeListOf<HTMLElement>} */ (document.querySelectorAll('.cross-reference')).forEach(p=>p.hidden=!!query);
     store();
     if(motion){
       animate(statusText,[{transform:'translateY(6px)'},{transform:'translateY(0)'}],'--m150','fonti-conteggio');
@@ -62,7 +71,7 @@ function initRegistro(){
   input.addEventListener('compositionstart',()=>{composing=true;});
   input.addEventListener('compositionend',()=>{composing=false;filter();});
   input.addEventListener('input',()=>{if(!composing)filter();});
-  const measureRail=()=>document.documentElement.style.setProperty('--rail-clearance',`${Math.ceil(rail.getBoundingClientRect().height+document.querySelector(".testata").getBoundingClientRect().height+16)}px`);
+  const measureRail=()=>document.documentElement.style.setProperty('--rail-clearance',`${Math.ceil(rail.getBoundingClientRect().height+/** @type {HTMLElement} */ (document.querySelector(".testata")).getBoundingClientRect().height+16)}px`);
   let measuring=false;
   const startMeasuring=()=>{
     if(measuring)return;measuring=true;measureRail();
@@ -77,10 +86,11 @@ function initRegistro(){
   input.addEventListener('blur',()=>{rail.dataset.editing='false';});
   // Corregge la copertura solo quando cambia il focus, senza intercettare lo scorrimento.
   document.addEventListener('focusin',e=>{
-    if(!topics.contains(e.target))return;
+    const target=/** @type {Element} */ (e.target);
+    if(!topics.contains(target))return;
     startMeasuring();
     requestAnimationFrame(()=>{
-      const r=e.target.getBoundingClientRect(),bar=rail.getBoundingClientRect();
+      const r=target.getBoundingClientRect(),bar=rail.getBoundingClientRect();
       if(getComputedStyle(rail).position==='sticky'&&bar.bottom>0&&r.top<bar.bottom+12)
         scrollBy({top:r.top-bar.bottom-12,behavior:'instant'});
     });
@@ -88,8 +98,8 @@ function initRegistro(){
   const restore=()=>{
     const saved=history.state?.fontiRegistro;if(!saved||typeof saved.query!=='string')return;
     input.value=saved.query;
-    if(Array.isArray(saved.panels))for(const panel of panels)panel.open=new Map(saved.panels).get(panel.id)??panel.open;
-    beforeSearch=Array.isArray(saved.beforeSearch)?new Map(saved.beforeSearch):null;
+    if(Array.isArray(saved.panels))for(const panel of panels)panel.open=new Map(/** @type {[string,boolean][]} */ (saved.panels)).get(panel.id)??panel.open;
+    beforeSearch=Array.isArray(saved.beforeSearch)?new Map(/** @type {[string,boolean][]} */ (saved.beforeSearch)):null;
     filter({motion:false});
   };
   addEventListener('pageshow',restore);restore();
@@ -98,17 +108,19 @@ function initRegistro(){
     store();
   });
   const resetAll=()=>{input.value='';filter();input.focus({preventScroll:true});input.scrollIntoView({block:'center',behavior:'instant'});};
-  reset.addEventListener('click',resetAll);document.querySelector('[data-empty-reset]').addEventListener('click',resetAll);
+  reset.addEventListener('click',resetAll);/** @type {HTMLButtonElement} */ (document.querySelector('[data-empty-reset]')).addEventListener('click',resetAll);
+  /** @param {Element|null} target */
   const reveal=target=>{if(!target)return;for(let p=target.parentElement;p;p=p.parentElement)if(p instanceof HTMLDetailsElement)p.open=true;if(target instanceof HTMLDetailsElement)target.open=true;};
+  /** @param {string} hash */
   const targetFromHash=hash=>{try{return document.getElementById(decodeURIComponent(hash.slice(1)));}catch{return null;}};
   const navigate=()=>{const target=targetFromHash(location.hash);reveal(target);if(target){activeTopic(target.closest('.topic')?.id);target.scrollIntoView({block:'start',behavior:'instant'});}};
-  document.querySelectorAll('[data-jump]').forEach(a=>a.addEventListener('click',()=>{
+  /** @type {NodeListOf<HTMLAnchorElement>} */ (document.querySelectorAll('[data-jump]')).forEach(a=>a.addEventListener('click',()=>{
     startMeasuring();
     if(input.value){input.value='';filter({motion:false});}
     const target=targetFromHash(a.hash);reveal(target);activeTopic(target?.closest('.topic')?.id);store();
   }));
   addEventListener('hashchange',navigate);if(location.hash)navigate();
   const returnToSearch=()=>{input.focus({preventScroll:true});input.scrollIntoView({block:'center',behavior:'instant'});};
-  document.querySelector('[data-return]').addEventListener('click',e=>{e.preventDefault();returnToSearch();});
-  document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(e.target.tagName)&&!e.target.isContentEditable){e.preventDefault();returnToSearch();}});
+  /** @type {HTMLAnchorElement} */ (document.querySelector('[data-return]')).addEventListener('click',e=>{e.preventDefault();returnToSearch();});
+  document.addEventListener('keydown',e=>{if(e.key==='/'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!/INPUT|TEXTAREA|SELECT/.test(/** @type {HTMLElement} */ (e.target).tagName)&&!/** @type {HTMLElement} */ (e.target).isContentEditable){e.preventDefault();returnToSearch();}});
 }

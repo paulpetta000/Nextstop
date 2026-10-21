@@ -1,4 +1,5 @@
 // Non mostrare controlli del compositore finché il loro foglio di stile non è pronto.
+/** @param {HTMLLinkElement | null} link @returns {Promise<void>} */
 export function attendiStile(link) {
   if (!link) return Promise.resolve();
   if (link.sheet) { link.media = 'all'; return Promise.resolve(); }
@@ -14,6 +15,7 @@ export function attendiStile(link) {
 }
 
 // Ritenta lo stesso indirizzo, utilizzabile anche dalla cache offline, senza avvii duplicati.
+/** @param {HTMLLinkElement} link @param {()=>void} avvia @param {(riprova:()=>Promise<void>)=>void} mostraErrore */
 export function avviaConStile(link, avvia, mostraErrore) {
   let inCorso = false, partito = false;
   const prova = async () => {
@@ -26,7 +28,7 @@ export function avviaConStile(link, avvia, mostraErrore) {
   };
   const riprova = () => {
     if (inCorso || partito) return Promise.resolve();
-    const nuovo = link.cloneNode();
+    const nuovo = /** @type {HTMLLinkElement} */ (link.cloneNode());
     delete nuovo.dataset.errore; nuovo.media = 'print';
     link.replaceWith(nuovo); link = nuovo;
     return prova();
@@ -35,15 +37,16 @@ export function avviaConStile(link, avvia, mostraErrore) {
 }
 
 // Usa soltanto lo stile iniziale e il pulsante comune: non dipende dal foglio che manca.
+/** @param {HTMLElement | null} app @param {HTMLElement} radice @param {()=>Promise<void>} riprova */
 export function mostraErroreStile(app, radice, riprova) {
   if (!app) return;
   radice.classList.remove('cmp-ha');
   app.innerHTML = '<div class="cmp-primo" role="status"><p class="cmp-primo__t">Il compositore non si è caricato</p><p class="cmp-primo__p">Riprova: gli itinerari già salvati restano sul telefono.</p><button type="button" class="btn" style="justify-self:start" data-riprova-stile>Riprova</button></div>';
-  const bottone = app.querySelector('[data-riprova-stile]');
+  const bottone = /** @type {HTMLButtonElement} */ (app.querySelector('[data-riprova-stile]'));
   bottone.onclick = async () => {
     const ripristinaFuoco = app.ownerDocument?.activeElement === bottone;
     bottone.disabled = true;
     try { await riprova(); } catch (errore) { console.error(errore); }
-    if (ripristinaFuoco) app.querySelector('[data-riprova-stile]')?.focus({ preventScroll: true });
+    if (ripristinaFuoco) /** @type {HTMLButtonElement | null} */ (app.querySelector('[data-riprova-stile]'))?.focus({ preventScroll: true });
   };
 }

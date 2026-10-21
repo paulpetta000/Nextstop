@@ -1,7 +1,9 @@
 // Solo Node/build. Questi cinque file vengono prodotti dalla stessa esecuzione.
 import { createHash } from 'node:crypto';
 import { verificaStruttura } from './struttura-dati.mjs';
+/** @type {(keyof import('./dati-generati-tipi').DatiGenerati)[]} */
 export const FILE_GENERATI = ['tempi-tappe.json', 'partenze-bus.json', 'linee-bus.json', 'percorsi-tappe.json', 'percorsi-alternativi.json'];
+/** @param {import('./dati-generati-tipi').Proiezione} p */
 export function validaProiezione(p) {
   const b = p?.box;
   if (!Number.isSafeInteger(p?.w) || p.w < 1 || !Number.isSafeInteger(p?.h) || p.h < 1 || !b ||
@@ -9,6 +11,7 @@ export function validaProiezione(p) {
     throw new Error('Proiezione della mappa non valida: ricostruisci src/data/mappa.json');
   }
 }
+/** @param {import('./dati-generati-tipi').DatiGenerati} dati @param {import('./dati-generati-tipi').Proiezione} proiezione */
 function impronta(dati, proiezione) {
   validaProiezione(proiezione);
   const hash = createHash('sha256').update(JSON.stringify(proiezione));
@@ -18,11 +21,13 @@ function impronta(dati, proiezione) {
   }
   return hash.digest('hex');
 }
+/** @param {import('./dati-generati-tipi').DatiGenerati} dati @param {import('./dati-generati-tipi').Proiezione} proiezione */
 export function marcaGenerazione(dati, proiezione) {
   verificaStruttura(dati);
   const generazione = impronta(dati, proiezione);
   return Object.fromEntries(FILE_GENERATI.map(nome => [nome, { ...dati[nome], generazione }]));
 }
+/** @param {import('./dati-generati-tipi').DatiGenerati} dati @param {import('./dati-generati-tipi').Proiezione} proiezione */
 export function verificaGenerazione(dati, proiezione) {
   verificaStruttura(dati);
   const riferimenti = FILE_GENERATI.map(nome => dati[nome]?.generazione);

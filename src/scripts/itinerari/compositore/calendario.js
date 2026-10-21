@@ -12,13 +12,19 @@ import { piuGiorni, giornoSettimana, dataLunga, NOMI_GIORNI } from '../../../lib
 import STILE from '../../../styles/calendario.css?inline';
 
 const MESI = ['gennaio', 'febbraio', 'marzo', 'aprile', 'maggio', 'giugno', 'luglio', 'agosto', 'settembre', 'ottobre', 'novembre', 'dicembre'];
+/** @param {string} m */
 const nomeMese = m => `${MESI[+m.slice(5, 7) - 1]} ${m.slice(0, 4)}`;
+/** @type {import('../../../lib/itinerari/date').GiornoSettimana[]} */
 const SETT = ['lun', 'mar', 'mer', 'gio', 'ven', 'sab', 'dom'];
+/** @param {number} n */
 const giorniDiTanti = n => `${n} ${n === 1 ? 'tappa chiusa' : 'tappe chiuse'}`;
-const el = () => $('#calendario');
+const el = () => /** @type {HTMLDialogElement} */ ($('#calendario'));
 
-let g = 0, dopo = null;
-let ciclo = 0, chiusura = null, contesto = () => false;
+let g = 0;
+/** @type {(()=>void)|undefined|null} */ let dopo = null;
+let ciclo = 0;
+/** @type {number|null} */ let chiusura = null;
+let contesto = () => false;
 const valido = () => !!el()?.open && chiusura === null && contesto();
 function termina() {
   const f = dopo, corrente = contesto(); dopo = null; ciclo++; chiusura = null;
@@ -26,15 +32,19 @@ function termina() {
   if (corrente) f?.();
 }
 // le tappe chiuse se il giorno «g» del viaggio cade in «data»
+/** @param {string} data */
 const chiuse = data => chiuseDa(X().giorni, piuGiorni(data, -g), id => T(id)?.chiuso);
+/** @param {string} data */
 const quante = data => chiuse(data).reduce((n, d) => n + d.chiuse.length, 0);
 const primo = () => X().data;
 
+/** @param {string} m @param {string|null} fuoco */
 function griglia(m, fuoco) {
   const N = nG(), p = primo(), ultimo = p ? piuGiorni(p, N - 1) : null, oggiS = oggi();
+/** @param {(string|null)[]} r */
   const riga = r => `<tr>${r.map(x => {
     if (!x) return '<td></td>';
-    const k = p && x >= p && x <= ultimo ? Math.round((Date.parse(x) - Date.parse(p)) / 864e5) : -1;
+    const k = p && x >= p && x <= /** @type {string} */ (ultimo) ? Math.round((Date.parse(x) - Date.parse(p)) / 864e5) : -1;
     const c = quante(x), ok = x >= DATA_MIN && x <= DATA_MAX;
     const td = k < 0 ? '' : ` class="cal-in${k === 0 ? ' cal-in--primo' : ''}${k === N - 1 ? ' cal-in--ultimo' : ''}"`;
     const cl = `cal-g${x === oggiS ? ' cal-g--oggi' : ''}${x < oggiS ? ' cal-g--prima' : ''}${k >= 0 ? ' cal-g--viaggio' : ''}${k === g ? ' cal-g--scelto' : ''}`;
@@ -65,6 +75,7 @@ function disegna() {
 
 // questo file si scarica al primo tocco sul campo della data (fogli.js): la prima volta prepara anche la finestra
 let pronto = false;
+/** @param {number} giorno @param {()=>void} [fatto] */
 export function apriCalendario(giorno, fatto) {
   if (!pronto) { preparaCalendario(); pronto = true; }
   const x = X(), scelto = x.giorni[giorno];
@@ -77,7 +88,7 @@ export function apriCalendario(giorno, fatto) {
   const d = el();
   disegna();
   if (!d.open) d.showModal();
-  const mia = X().data ? piuGiorni(X().data, g) : oggi(), sc = $('.cal-scorre', d), sez = $(`.cal-mese[data-m="${mia.slice(0, 7)}"]`, d);
+  const mia = X().data ? piuGiorni(/** @type {string} */ (X().data), g) : oggi(), sc = /** @type {HTMLElement} */ ($('.cal-scorre', d)), sez = $(`.cal-mese[data-m="${mia.slice(0, 7)}"]`, d);
   if (sez && sez.previousElementSibling) sc.scrollTop = sez.offsetTop - sc.offsetTop - 4;
   $('.cal-g[tabindex="0"]', d)?.focus({ preventScroll: true });
 }
@@ -100,28 +111,29 @@ function preparaCalendario() {
   d.addEventListener('cancel', e => { e.preventDefault(); chiudi(); });
   d.addEventListener('click', e => {
     if (e.target === d) { chiudi(); return; }
-    const b = e.target.closest('button');
+    const b = /** @type {Element} */ (e.target).closest('button');
     if (!b || b.disabled) return;
     if (b.dataset.cal === 'chiudi') { chiudi(); return; }
     if (!valido()) return;
     const x = b.dataset.d;
     if (!x) return;
     aggiorna(y => { y.data = piuGiorni(x, -g); });
-    const sc = $('.cal-scorre', d), y = sc.scrollTop;
+    const sc = /** @type {HTMLElement} */ ($('.cal-scorre', d)), y = sc.scrollTop;
     disegna();
-    $('.cal-scorre', d).scrollTop = y;
+    /** @type {HTMLElement} */ ($('.cal-scorre', d)).scrollTop = y;
     $(`.cal-g[data-d="${x}"]`, d)?.focus({ preventScroll: true });
   });
   // frecce, pagina su e giù per i mesi, inizio e fine della settimana
   d.addEventListener('keydown', e => {
     if (!valido()) return;
-    const b = e.target.closest?.('.cal-g'); if (!b) return;
+    const b = /** @type {import('./tipi').ElementoDati<'d',HTMLButtonElement>|null} */ (/** @type {Element} */ (e.target).closest?.('.cal-g')); if (!b) return;
     const x = b.dataset.d, s = (SETT.indexOf(giornoSettimana(x)));
+    /** @param {number} n */
     const mese = n => { const m = meseDopo(x.slice(0, 7), n), ultimo = new Date(Date.UTC(+m.slice(0, 4), +m.slice(5, 7), 0)).getUTCDate(); return `${m}-${String(Math.min(+x.slice(8), ultimo)).padStart(2, '0')}`; };
-    const y = { ArrowLeft: piuGiorni(x, -1), ArrowRight: piuGiorni(x, 1), ArrowUp: piuGiorni(x, -7), ArrowDown: piuGiorni(x, 7), Home: piuGiorni(x, -s), End: piuGiorni(x, 6 - s), PageUp: mese(-1), PageDown: mese(1) }[e.key];
+    const y = /** @type {Partial<Record<string,string>>} */ ({ ArrowLeft: piuGiorni(x, -1), ArrowRight: piuGiorni(x, 1), ArrowUp: piuGiorni(x, -7), ArrowDown: piuGiorni(x, 7), Home: piuGiorni(x, -s), End: piuGiorni(x, 6 - s), PageUp: mese(-1), PageDown: mese(1) })[e.key];
     if (!y) return;
     e.preventDefault();
-    const t = $(`.cal-g[data-d="${y}"]`, d);
+    const t = /** @type {HTMLButtonElement|null} */ ($(`.cal-g[data-d="${y}"]`, d));
     if (!t || t.disabled) return;
     b.tabIndex = -1; t.tabIndex = 0; t.focus({ preventScroll: true }); t.scrollIntoView({ block: 'nearest' });
   });

@@ -38,12 +38,12 @@ function avvia() {
   quandoSalva(() => { rinfrescaSalvataggio(); aggiornaUscita(); });
   scriviArchivio(avvisa);
   preparaFoglio(); preparaAvviso(); preparaViste(); preparaMenu(); preparaScheda();
-  ascoltaFirme($('#app'));
+  ascoltaFirme(/** @type {HTMLElement} */ ($('#app')));
   if (chiesto) usaPronto(chiesto); else disegna();
   // La parte bassa resta fuori dal primo ricalcolo del layout del compositore.
   document.documentElement.classList.add('cmp-pronto');
   // scorrendo sotto il compositore (itinerari pronti, gite, fonti) la mappa fissa e le barre si nascondono
-  new IntersectionObserver(([e]) => document.documentElement.classList.toggle('cmp-fuori', !e.isIntersecting && e.boundingClientRect.top < 0)).observe($('#compositore'));
+  new IntersectionObserver(([e]) => document.documentElement.classList.toggle('cmp-fuori', !e.isIntersecting && e.boundingClientRect.top < 0)).observe(/** @type {HTMLElement} */ ($('#compositore')));
   // appena la parte bassa entra nello schermo, le barre fisse del compositore (in basso o di lato) si tolgono: non la coprono
   const sotto = document.querySelector('.it-pagina > :not(.cmp)');
   if (sotto) new IntersectionObserver(([e]) => document.documentElement.classList.toggle('cmp-sotto', e.isIntersecting || e.boundingClientRect.top < 0)).observe(sotto);
@@ -53,14 +53,14 @@ function avvia() {
   const da = richiesta.get('aggiungi');
   if (da && T(da)?.tipo === 'citta') {
     S.g = giornoSicuro(richiesta.get('g'), nG());
-    if (X().giorni[S.g].tappe.includes(da)) avvisaDopo(`${maiuscola(T(da).breve)} è già nel giorno ${S.g + 1}.`);
+    if (X().giorni[S.g].tappe.includes(da)) avvisaDopo(`${maiuscola(/** @type {import('./tipi').TappaPagina} */ (T(da)).breve)} è già nel giorno ${S.g + 1}.`);
     else { disegna(); aggiungi(S.g, da); }
   }
 
   // ---------- un altro tab ha cambiato gli itinerari ----------
   quandoCambia(() => {
     const fonte = leggiConRiferimento(C), n = fonte.archivio;
-    if (n && !schedaAperta() && !$('#foglio').open && !erroreSalvataggio() && !salvataggioInCorso()) {
+    if (n && !schedaAperta() && !/** @type {HTMLDialogElement} */ ($('#foglio')).open && !erroreSalvataggio() && !salvataggioInCorso()) {
       const cambio = allineaArchivio(A, n, S.g);
       sostituisciArchivio(cambio.archivio, fonte); S.g = cambio.giorno; disegna();
     }
@@ -68,7 +68,7 @@ function avvia() {
 
   // ---------- dopo l'apertura: scenari e orari veri dei bus (restano salvati per l'uso senza rete) ----------
   const ridisegna = () => { if (lista()) return; if (occupato()) setTimeout(ridisegna, 5000); else aggiorna(() => {}); };
-  const lista = () => !X().giorni[S.g].tappe.length && !$('#foglio').open;
+  const lista = () => !X().giorni[S.g].tappe.length && !/** @type {HTMLDialogElement} */ ($('#foglio')).open;
   Promise.all([document.fonts?.ready ?? Promise.resolve(), new Promise(r => requestAnimationFrame(() => requestAnimationFrame(r)))]).then(() => caricaDopo(ridisegna));
   // le schede complete e i dati della ricerca, a pagina caricata
   quandoLibero().then(() => caricaSchede()).catch(() => { /* si riprova quando servono */ });
@@ -79,7 +79,9 @@ function avvia() {
     p.onchange = () => { VIVO.permesso = p.state; if (oggiNelGiorno(X(), S.g)) aggiorna(() => {}); };
     if (p.state === 'granted' && X().posizione === 'si' && oggiNelGiorno(X(), S.g)) aggiorna(() => {});
   }).catch(() => { /* il browser non lo dice: si chiede con il pannello */ });
-  let guardia = null, cicloPosizione = 0;
+  /** @type {number|null} */
+  let guardia = null;
+  let cicloPosizione = 0;
   const ferma = () => { cicloPosizione++; if (guardia != null) navigator.geolocation.clearWatch(guardia); guardia = null; VIVO.posizione = null; };
   const cura = () => {
     const x = X();
@@ -93,7 +95,7 @@ function avvia() {
       }, { enableHighAccuracy: true, maximumAge: 60000, timeout: 30000 });
     } else ferma();
   };
-  const occupato = () => !!document.querySelector('.in-trascina') || $('#foglio').open || !!document.activeElement?.closest('.posizione, .avviso-giorno');
+  const occupato = () => !!document.querySelector('.in-trascina') || /** @type {HTMLDialogElement} */ ($('#foglio')).open || !!document.activeElement?.closest('.posizione, .avviso-giorno');
   let firma = '';
   const firmaDi = () => JSON.stringify([adessoPer(X(), S.g), statoPosizione(), X().posizione]);
   function dalVivo() {
@@ -107,12 +109,14 @@ function avvia() {
   firma = firmaDi();
   setInterval(dalVivo, 30000);
   document.addEventListener('visibilitychange', () => { cura(); if (document.visibilityState === 'visible') dalVivo(); });
-  addEventListener('click', e => { if (e.target.closest?.('[data-azione="gps-si"]')) setTimeout(cura, 0); });
+  addEventListener('click', e => { if (/** @type {Element} */ (e.target).closest?.('[data-azione="gps-si"]')) setTimeout(cura, 0); });
   cura();
   annuncia('');
 }
 // un avviso subito dopo il primo disegno
+/** @type {string[]} */
 let primi = [];
+/** @param {string} t */
 function avvisaDopo(t) { primi.push(t); }
 function parti() {
   // i segni di tempo dell'avvio (per misurare il primo disegno, anche da telefono)
@@ -135,4 +139,4 @@ function preparaAvvio() {
     setTimeout(via, 3000);
   }
 }
-avviaConStile(document.getElementById('stile-compositore'), preparaAvvio, riprova => mostraErroreStile(document.getElementById('app'), document.documentElement, riprova)).catch(error => console.error(error));
+avviaConStile(/** @type {HTMLLinkElement} */ (document.getElementById('stile-compositore')), preparaAvvio, riprova => mostraErroreStile(document.getElementById('app'), document.documentElement, riprova)).catch(error => console.error(error));

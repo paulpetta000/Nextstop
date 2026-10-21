@@ -1,12 +1,15 @@
 // Ricerca e comandi locali. Nessuna rete, memoria persistente o statistica.
+/** @param {string} text */
 const normalize = text => text.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, ' ').trim();
 // Equivalenze lessicali su parole già presenti: non sono nuove relazioni con i fatti.
+/** @param {string} text */
 const searchNormalize = text => normalize(text).split(' ').map(word => /^(costo|costi|prezzo|prezzi|tariffa|tariffe)$/.test(word) ? 'costo' : /^bigliett[oi]$/.test(word) ? 'biglietto' : word).join(' ');
-for (const root of document.querySelectorAll('.fonti-pannello')) {
+for (const root of /** @type {NodeListOf<HTMLElement>} */ (document.querySelectorAll('.fonti-pannello'))) {
   // Gli stili sono già nell'HTML offline. Li attiviamo prima che il pannello
   // entri nello schermo, senza caricare il suo carattere durante l'apertura.
-  const style = root.querySelector('[data-fonti-stile]');
+  const style = /** @type {HTMLStyleElement} */ (root.querySelector('[data-fonti-stile]'));
   const activate = () => { if (style.media !== 'all') style.media = 'all'; observer?.disconnect(); };
+  /** @type {IntersectionObserver | undefined} */
   let observer;
   if ('IntersectionObserver' in window) {
     observer = new IntersectionObserver(entries => {
@@ -21,7 +24,7 @@ for (const root of document.querySelectorAll('.fonti-pannello')) {
     if (target && root.contains(target)) activate();
   };
   addEventListener('hashchange', hashTarget); hashTarget();
-  const disclosure=root.querySelector('.disclosure');
+  const disclosure=/** @type {HTMLDetailsElement} */ (root.querySelector('.disclosure'));
   let initialized=false;
   const start=()=>{
     if(initialized||!disclosure.open)return;
@@ -32,18 +35,21 @@ for (const root of document.querySelectorAll('.fonti-pannello')) {
   disclosure.addEventListener('toggle',start);start();
 }
 // L’indice viene preparato al primo uso; HTML e conteggi sono già disponibili.
+/** @param {HTMLElement} root */
 function initPannello(root) {
 root.classList.add('js');
-const tools = root.querySelector('.search-tools');
+const tools = /** @type {HTMLElement | null} */ (root.querySelector('.search-tools'));
 if (tools) {
-  const input = tools.querySelector('input');
-  const disclosure = root.querySelector('.disclosure');
-  const rail = root.querySelector('.access-rail');
-  const action = rail.querySelector('[data-context-action]');
-  const status = rail.querySelector('[role=status]');
-  const sources = [...root.querySelectorAll('.source')].map(el => ({ el, words: searchNormalize(el.querySelector('.source-link').textContent+' '+el.querySelector('.purpose').textContent+' '+el.querySelector('.meta span').textContent+' '+(el.dataset.keywords||'')+' '+JSON.parse(el.dataset.places).join(' ')), places: JSON.parse(el.dataset.places), context: el.querySelector('.source-context') }));
-  const groups = [...root.querySelectorAll('.group')];
-  let outside = false, announce;
+  const input = /** @type {HTMLInputElement} */ (tools.querySelector('input'));
+  const disclosure = /** @type {HTMLDetailsElement} */ (root.querySelector('.disclosure'));
+  const rail = /** @type {HTMLElement} */ (root.querySelector('.access-rail'));
+  const action = /** @type {HTMLButtonElement} */ (rail.querySelector('[data-context-action]'));
+  const status = /** @type {HTMLElement} */ (rail.querySelector('[role=status]'));
+  const sources = [.../** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll('.source'))].map(el => ({ el, words: searchNormalize(/** @type {HTMLAnchorElement} */ (el.querySelector('.source-link')).textContent+' '+/** @type {HTMLElement} */ (el.querySelector('.purpose')).textContent+' '+/** @type {HTMLElement} */ (el.querySelector('.meta span')).textContent+' '+(el.dataset.keywords||'')+' '+/** @type {string[]} */ (JSON.parse(/** @type {string} */ (el.dataset.places))).join(' ')), places: /** @type {string[]} */ (JSON.parse(/** @type {string} */ (el.dataset.places))), context: /** @type {HTMLElement | null} */ (el.querySelector('.source-context')) }));
+  const groups = [.../** @type {NodeListOf<HTMLElement>} */ (root.querySelectorAll('.group'))];
+  let outside = false;
+  /** @type {ReturnType<typeof setTimeout> | undefined} */
+  let announce;
   const syncAction = () => {
     const returning = outside && disclosure.open && rail.hasAttribute('data-long-list') && document.activeElement !== input;
     action.dataset.mode = returning ? 'return' : 'reset';
@@ -60,7 +66,7 @@ if (tools) {
       el.hidden = !found; count += Number(found);
       if (context) {
         const matched = places.filter(place => terms.length && terms.every(term => searchNormalize(place).includes(term)));
-        context.textContent = matched.length ? matched.join(' e ') : context.dataset.context;
+        context.textContent = matched.length ? matched.join(' e ') : /** @type {string} */ (context.dataset.context);
       }
     }
     for (const group of groups) {
@@ -69,7 +75,7 @@ if (tools) {
       const badge = group.querySelector('[data-group-count]');
       if (badge) badge.textContent = `${count} ${count === 1 ? 'fonte' : 'fonti'}`;
     }
-    root.querySelector('.no-results').hidden = count !== 0;
+    /** @type {HTMLElement} */ (root.querySelector('.no-results')).hidden = count !== 0;
     clearTimeout(announce);
     announce = setTimeout(() => { status.textContent = terms.length ? `${count} ${count === 1 ? 'fonte trovata' : 'fonti trovate'} su ${sources.length}` : `${sources.length} fonti`; }, 180);
     syncAction();
@@ -87,7 +93,7 @@ if (tools) {
     rail.dataset.sticky = 'true';
   }
   // Il collegamento in fondo rimane utilizzabile anche senza l'osservatore.
-  const ritorno=root.querySelector('.back-top');
+  const ritorno=/** @type {HTMLAnchorElement} */ (root.querySelector('.back-top'));
   ritorno.href='#'+input.id;ritorno.textContent='Torna alla ricerca';
   ritorno.addEventListener('click', event => { event.preventDefault(); focusSearch(); });
   addEventListener('pageshow', filter);

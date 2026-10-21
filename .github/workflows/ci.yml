@@ -58,6 +58,12 @@ jobs:
       - name: Tipi Astro e TypeScript
         run: npm run check
 
+      - name: JavaScript applicativo rigoroso
+        run: npm run check:js
+
+      - name: JavaScript del service worker
+        run: npm run check:worker
+
       - name: Test
         run: npm test
 

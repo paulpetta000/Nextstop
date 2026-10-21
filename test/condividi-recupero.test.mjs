@@ -8,6 +8,9 @@ const da = source.indexOf('const linkDi = '), a = source.indexOf('// ---------- 
 assert.ok(da >= 0 && a > da);
 const crea = new Function('d', 'const { X, codifica, esc, ic, foglio, avvisa, $, contestoFoglio, chiudiFoglio } = d; ' + source.slice(da,a).replace('export async function', 'async function') + '; return apriCondividi;');
 const CHIAVE = 'itinerari-v1', C = { tappe: [{ id: 'duomo', tipo: 'citta' }] };
+const viste = fs.readFileSync(new URL('../src/scripts/itinerari/compositore/viste.js', import.meta.url), 'utf8');
+const comandoCondividi = /\bcondividi:\s*(.+?), altro:/.exec(viste)?.[1];
+assert.ok(comandoCondividi, 'azione Condividi presente nella delega dei pulsanti');
 function ambiente(t, { share, copiaFallita = false, scriviAppunti } = {}) {
   const x = { id: 'viaggio0', nome: 'Locale', salvato: true, creato: 1, modificato: 1, timbri: { duomo: 1234 }, giorni: [{ tappe: ['duomo'], fatte: ['duomo'], inizio: 570, fine: 1140 }] };
   const A = { attivo: x.id, elenco: [x] }, dati = new Map([[CHIAVE, JSON.stringify({ v: 1, ...A })]]);
@@ -40,6 +43,19 @@ test('recupero con Condividi: usa la copia locale dopo il conflitto e non tocca 
   assert.equal(ricevuto.giorni[0].fatte, undefined); assert.equal(ricevuto.timbri, undefined);
   assert.deepEqual(e.x.giorni[0].fatte, ['duomo']); assert.deepEqual(e.x.timbri, { duomo: 1234 });
   assert.equal(e.dati.get(CHIAVE), raw);
+});
+
+test('Condividi dal pulsante del compositore usa il viaggio aperto', async t => {
+  const e = ambiente(t);
+  const azione = new Function('apriCondividi', 'return (' + comandoCondividi + ');')(e.apri);
+  await azione({ dataset: { azione: 'condividi' } }, { type: 'click' });
+  assert.equal(e.aperture(), 1);
+  await e.copia();
+  const ricevuto = decodifica(C, new URL(e.link()).hash).it;
+  assert.equal(ricevuto.nome, e.x.nome);
+  assert.deepEqual(ricevuto.giorni[0].tappe, ['duomo']);
+  assert.equal(ricevuto.giorni[0].fatte, undefined);
+  assert.equal(ricevuto.timbri, undefined);
 });
 
 test('recupero con Condividi: un errore del servizio nativo apre il link copiabile', async t => {

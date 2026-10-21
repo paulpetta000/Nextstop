@@ -8,12 +8,13 @@ import { riferimentoDati } from '../src/lib/itinerari/riferimento-dati.mjs';
 
 const sorgenti = fileURLToPath(new URL('../src/data/', import.meta.url));
 
+/** @param {string} out */
 export function verificaPercorsiPubblicati(out) {
   let dati, mappa;
   try {
-    dati = Object.fromEntries(FILE_GENERATI.map(nome => [
+    dati = /** @type {import('../src/lib/itinerari/dati-generati-tipi').DatiGenerati} */ (Object.fromEntries(FILE_GENERATI.map(nome => [
       nome, JSON.parse(fs.readFileSync(path.join(sorgenti, nome), 'utf8'))
-    ]));
+    ])));
     mappa = JSON.parse(fs.readFileSync(path.join(sorgenti, 'mappa.json'), 'utf8'));
     verificaGenerazione(dati, { w: mappa.w, h: mappa.h, box: mappa.box });
   } catch (cause) {
@@ -24,6 +25,7 @@ export function verificaPercorsiPubblicati(out) {
   const principali = dati['percorsi-tappe.json'];
   const alternativi = dati['percorsi-alternativi.json'];
   const riferimento = riferimentoDati(tempi, { w: mappa.w, h: mappa.h, box: mappa.box });
+  /** @type {Record<string, Record<string, unknown>>} */
   const attesi = {
     'percorsi.json': { riferimento, punti: principali.punti, scenari: principali.scenari },
     'percorsi-alternativi.json': {

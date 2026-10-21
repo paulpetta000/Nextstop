@@ -1,25 +1,36 @@
 // Il compositore nuovo (specifiche/compositore.md, «Costruzione»): pezzi comuni senza stato. Formati, icone, la soglia del
 // marchio («visitata»), la firma con l'animazione della home. Nato dal prototipo scelto da Enrico (design/compositore/,
 // mangiare-giro-1/app.js): le proposte non scelte non ci sono.
-export const $ = (s, el = document) => el.querySelector(s);
-export const $$ = (s, el = document) => [...el.querySelectorAll(s)];
-export const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+/** @template {Element} [E=HTMLElement] @param {string} s @param {ParentNode} [el] @returns {E | null} */
+export const $ = (s, el = document) => /** @type {E | null} */ (el.querySelector(s));
+/** @template {Element} [E=HTMLElement] @param {string} s @param {ParentNode} [el] @returns {E[]} */
+export const $$ = (s, el = document) => [.../** @type {NodeListOf<E>} */ (el.querySelectorAll(s))];
+/** @param {unknown} s */
+export const esc = s => String(s ?? '').replace(/[&<>"]/g, c => (/** @type {Record<string,string>} */ ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]));
 // «piano»: il movimento è permesso (niente «riduci movimento»)
 export const piano = () => !matchMedia('(prefers-reduced-motion: reduce)').matches;
 export const computer = matchMedia('(min-width: 960px)');
+/** @param {number} n */
 export const range = n => Array.from({ length: n }, (_, i) => i);
+/** @param {number} ms */
 export const dopo = ms => new Promise(r => setTimeout(r, ms));
 
 // ---------- formati ----------
+/** @param {number} m */
 export const ora = m => { const x = Math.round(m); return `${Math.floor(x / 60)}:${String(x % 60).padStart(2, '0')}`; };
+/** @param {number} m */
 export const durata = m => { const x = Math.round(m); return x < 60 ? `${x} min` : `${Math.floor(x / 60)} h${x % 60 ? ' ' + String(x % 60).padStart(2, '0') : ''}`; };
+/** @param {number} m */
 export const durataLunga = m => {
   const x = Math.round(m), h = Math.floor(x / 60), r = x % 60, ore = h === 1 ? "un'ora" : `${h} ore`;
   const min = `${r} ${r === 1 ? 'minuto' : 'minuti'}`;
   return h ? (r ? `${ore} e ${min}` : ore) : min;
 };
+/** @param {number} m */
 export const resta = m => { const h = Math.floor(m / 60); return `Ti ${h >= 2 || (h === 0 && m !== 1) ? 'restano' : 'resta'} ${durataLunga(m)}`; };
+/** @param {number} m */
 export const metri = m => (m < 1000 ? `${Math.round(m / 10) * 10} m` : `${(m / 1000).toFixed(1).replace('.', ',')} km`);
+/** @param {number} m */
 export const km = m => (m / 1000).toFixed(1).replace('.', ',');
 export const GS = { lun: 'lunedì', mar: 'martedì', mer: 'mercoledì', gio: 'giovedì', ven: 'venerdì', sab: 'sabato', dom: 'domenica' };
 export const INGRESSO = { pagamento: 'Ingresso a pagamento', gratis: 'Ingresso gratis', 'in-parte': 'In parte a pagamento' };
@@ -27,7 +38,9 @@ export const DENTRO = { si: 'Al chiuso', no: "All'aperto", 'in-parte': 'In parte
 export const SCALE = { no: 'senza scale', pochi: 'qualche gradino', molti: 'molte scale' };
 export const MOMENTO = { mattina: 'Meglio la mattina', pomeriggio: 'Meglio il pomeriggio', sera: 'Meglio verso sera' };
 export const ORDINALE = ['Primo', 'Secondo', 'Terzo', 'Quarto', 'Quinto', 'Sesto', 'Settimo'];
+/** @param {string} s */
 export const maiuscola = s => s.charAt(0).toUpperCase() + s.slice(1);
+/** @param {string} s */
 export const dataScritta = s => new Date(`${s}T12:00:00`).toLocaleDateString('it-IT', { day: 'numeric', month: 'long', year: 'numeric' });
 // la data e l'ora di adesso a Napoli
 export const oggi = () => new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Rome' }).format(new Date());
@@ -84,7 +97,8 @@ const I = {
   ricomincia: '<path d="M4 12a8 8 0 1 0 2.3-5.7M4 4v4h4"/>',
   posizione: '<circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3"/><circle cx="12" cy="12" r="7"/>'
 };
-export const ic = (n, s = 22) => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${I[n] ?? ''}</svg>`;
+/** @param {keyof typeof I | string} n @param {number} [s] */
+export const ic = (n, s = 22) => `<svg class="ic" width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">${I[/** @type {keyof typeof I} */ (n)] ?? ''}</svg>`;
 
 // ---------- «visitata»: la soglia del marchio che si chiude (specifica §5) ----------
 const STRATI = [
@@ -98,10 +112,12 @@ export const soglia = (cl = '') => `<svg class="soglia ${cl}" viewBox="10 4.5 28
 // ---------- il marchio, con l'animazione della home (DESIGN.md §7) ----------
 // M: { chiaro, scuro, spillo } dalla pagina (src/lib/marchio.mjs): il segno chiaro, quello ambra del tema scuro, il segnaposto
 const LETTERE = [...'nextstop'];
+/** @param {{chiaro:string;scuro:string;spillo:string}} M @param {string} [cl] */
 export const firma = (M, cl = '') => `<a class="firma ${cl}" href="/"><span class="vh">nextstop, la home</span><svg class="firma__segno segno--chiaro" viewBox="0 0 48 48" aria-hidden="true" focusable="false">${M.chiaro}</svg><svg class="firma__segno segno--scuro" viewBox="0 0 48 48" aria-hidden="true" focusable="false">${M.scuro}</svg><span class="firma__parola" aria-hidden="true">${LETTERE.map((c, i) => (i === 6
   ? `<span class="firma__pin" style="--i:${i}"><i class="firma__ombra"></i><svg viewBox="0 0 20 28" focusable="false">${M.spillo}</svg><i class="firma__onda"></i></span>`
   : `<span class="firma__l" style="--i:${i}">${c}</span>`)).join('')}<span class="firma__rotta"></span></span></a>`;
 export const GIRO_FIRMA = 2700;
+/** @param {HTMLElement | null | undefined} el */
 export function animaFirma(el) {
   if (!el || !piano()) return;
   if (el.dataset.gira === '1') { el.dataset.ancora = '1'; return; }
@@ -116,7 +132,8 @@ export function animaFirma(el) {
   }, GIRO_FIRMA);
 }
 // passando sopra il marchio, o con il fuoco, l'animazione riparte (se ci ripassi a metà, finisce e poi riparte)
+/** @param {HTMLElement} radice */
 export function ascoltaFirme(radice) {
-  radice.addEventListener('pointerover', e => { const f = e.target.closest?.('.firma'); if (f && !(e.relatedTarget && f.contains(e.relatedTarget))) animaFirma(f); });
-  radice.addEventListener('focusin', e => { const f = e.target.closest?.('.firma'); if (f) animaFirma(f); });
+  radice.addEventListener('pointerover', e => { const f = /** @type {HTMLElement|null} */ (/** @type {Element} */ (e.target).closest?.('.firma')); if (f && !(e.relatedTarget && f.contains(/** @type {Node} */ (e.relatedTarget)))) animaFirma(f); });
+  radice.addEventListener('focusin', e => { const f = /** @type {HTMLElement|null} */ (/** @type {Element} */ (e.target).closest?.('.firma')); if (f) animaFirma(f); });
 }

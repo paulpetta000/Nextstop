@@ -1,7 +1,10 @@
 // Filtro del documento e orientamento dei luoghi hanno criteri distinti.
+/** @param {string} text */
 export const normalizza=text=>text.normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/['’]/g,'').replace(/[^a-z0-9]+/g,' ').trim();
+/** @param {string} term */
 export const equivalente=term=>term.replace(/\bcosto\b/g,'prezzo').replace(/\bcosti\b/g,'prezzi').replace(/\bbiglietto\b/g,'biglietti');
 const connettivi=new Set(['a','al','alla','alle','con','da','dal','dalla','di','e','il','in','la','le','lo','per','su','un','una']);
+/** @param {string[]} luoghi @param {string} query */
 export function luogoCercato(luoghi,query){
   const normal=normalizza(query);
   const words=normal.split(' ').filter(w=>w.length>1&&!connettivi.has(w));

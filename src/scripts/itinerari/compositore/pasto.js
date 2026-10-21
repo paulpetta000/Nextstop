@@ -19,21 +19,32 @@ export const PASTI = {
   pranzo: { da: 750, a: 870, ora: 780, pasti: ['pranzo', 'spuntino'] },
   cena: { da: 1170, a: 1290, ora: 1200, pasti: ['cena'] }
 };
+/** @type {Record<string,string>} */
 const CUCINA_NOME = { pizza: 'Pizzerie', napoletana: 'Cucina napoletana', pesce: 'Pesce', carne: 'Carne', strada: 'Cibo di strada', pasta: 'Pasta', dolci: 'Dolci e caffè' };
 const GIORNI_ORARI = ['lun', 'mar', 'mer', 'gio', 'ven', 'sab', 'dom'];
-const tipoL = id => CUCINA_NOME[T(id).cucina?.[0]] ?? 'Locali';
-const euro = id => (T(id).fascia ? '€'.repeat(T(id).fascia) : '');
+/** @param {string} id */
+const tipoL = id => CUCINA_NOME[/** @type {import('./tipi').TappaPagina} */ (T(id)).cucina?.[0] ?? ''] ?? 'Locali';
+/** @param {string} id */
+const euro = id => { const fascia = T(id)?.fascia; return fascia ? '€'.repeat(fascia) : ''; };
+/** @param {import('./tipi').MomentoPasto} m */
 const chiaveM = m => `${m.g}-${m.q}`;
+/** @param {number} g @param {'pranzo'|'cena'} q */
 const nascosto = (g, q) => !!X().giorni[g]?.noPasti?.includes(q);
+/** @param {string} id */
 const locale = id => !!tappaDi(C, id)?.categoria;
 
 // i momenti del pasto di un giorno: { g, q, dove (la tappa prima), ora (quando sei lì), min, dopo (la tappa dopo), pausa, piccola, nascosto }
+/** @param {number} g @param {import('../../../lib/itinerari/pause').Giornata|null} [Gx] @returns {import('./tipi').MomentoPasto[]} */
 export function momenti(g, Gx = G(g)) {
   if (!Gx || X().giorni[g]?.gita) return [];
-  const tp = daFare(Gx), out = [];
-  if (!tp.length || (C.evento && tp.some(v => v.id === C.evento.id))) return out;   // il giorno di regata ha già il suo tempo per mangiare
+  const tp = daFare(Gx);
+  /** @type {import('./tipi').MomentoPasto[]} */
+  const out = [];
+  if (!tp.length || (C.evento && tp.some(v => v.id === C.evento?.id))) return out;   // il giorno di regata ha già il suo tempo per mangiare
+/** @param {string} id */
   const dopoDi = id => { const i = tp.findIndex(v => v.id === id); return tp[i + 1]?.id ?? null; };
   // il pranzo c'è se c'è il suo locale, anche spostato dopo le 14:30 (pause.ts); la cena se un locale cade nell'ora di cena
+/** @param {'pranzo'|'cena'} q */
   const conLocale = q => tp.some(v => (q === 'pranzo' ? localeDelPranzo(C, v) : locale(v.id) && v.inizio < PASTI[q].a && v.fine > PASTI[q].da));
   const p = Gx.pause.find(x => x.quale === 'pranzo');
   if (p && !conLocale('pranzo')) out.push({ g, q: 'pranzo', dove: p.dove, ora: p.inizio, min: p.min, pausa: true, dopo: dopoDi(p.dove), nascosto: nascosto(g, 'pranzo') });
@@ -50,29 +61,35 @@ export function momenti(g, Gx = G(g)) {
   }
   return out;
 }
+/** @param {string} k */
 const trovaM = k => { const [g, q] = k.split('-'); return momenti(+g).find(m => m.q === q) ?? null; };
 
 // fino a che ora è aperto (la fascia che contiene t; senza data, la più corta tra i giorni con quella fascia)
+/** @param {import('../../../lib/itinerari/tipi').Tappa} L @param {number} g @param {number} t */
 function finoA(L, g, t) {
-  const giorni = X().data ? [L.orari?.[GIORNI_ORARI.indexOf(giornoSett(g))]] : L.orari ?? [];
+  const giorni = X().data ? [L.orari?.[GIORNI_ORARI.indexOf(/** @type {string} */ (giornoSett(g)))]] : L.orari ?? [];
   const fini = [];
   for (const f of giorni) if (f) for (let k = 0; k < f.length; k += 2) if (t >= f[k] && f[k + 1] !== -1 && t < f[k + 1]) fini.push(f[k + 1]);
   return fini.length ? Math.min(...fini) % 1440 : null;
 }
 // i locali per quel momento: minuti dalla tappa prima, aperto o no all'arrivo
+/** @type {Map<string,import("./tipi").LocaleVicino[]>} */
 const memoV = new Map();
-let tempiMemo = null, vivoMemo = null;
+/** @type {typeof C.tempi|null} */ let tempiMemo = null;
+/** @type {typeof C.vivo|null} */ let vivoMemo = null;
+/** @param {import('./tipi').MomentoPasto} m @returns {import('./tipi').LocaleVicino[]} */
 function vicini(m) {
   if (tempiMemo !== C.tempi || vivoMemo !== C.vivo) { memoV.clear(); tempiMemo = C.tempi; vivoMemo = C.vivo; }
   const x = X(), adesso = adessoPer(x, m.g), chiave = JSON.stringify([x.id, m, x.giorni, x.data, x.piedi, x.margine, adesso]);
-  if (memoV.has(chiave)) return memoV.get(chiave);
+  if (memoV.has(chiave)) return /** @type {import('./tipi').LocaleVicino[]} */ (memoV.get(chiave));
   const data = dataDi(m.g), sett = data ? giornoSett(m.g) : null;
-  const lista = C.tappe.filter(L => L.categoria && !nelViaggio(L.id) && (L.pasto ?? []).some(p => PASTI[m.q].pasti.includes(p)) && !(m.q === 'pranzo' && L.cucina?.includes('dolci') && !L.pasto.includes('pranzo'))).map(L => {
+  const lista = C.tappe.filter(L => L.categoria && !nelViaggio(L.id) && (L.pasto ?? []).some(p => PASTI[m.q].pasti.includes(p)) && !(m.q === 'pranzo' && L.cucina?.includes('dolci') && !L.pasto?.includes('pranzo'))).map(L => {
     const prova = preparaPasto(C, x, m, L.id, adesso);
     if (!prova) return null;
-    const k = prova.calcolo.voci.findIndex(v => v.tipo === 'tappa' && v.id === L.id), voce = prova.calcolo.voci[k];
+    const k = prova.calcolo.voci.findIndex(v => v.tipo === 'tappa' && v.id === L.id), voce = /** @type {Extract<import('../../../lib/itinerari/tipi').Voce,{tipo:'tappa'}>} */ (prova.calcolo.voci[k]);
     const tratto = prova.calcolo.voci[k - 1], min = tratto?.tipo === 'tratto' ? tratto.min : 0, arrivo = voce.inizio;
-    let stato = 'aperto', nota = '';
+    /** @type {import('./tipi').LocaleVicino['stato']} */ let stato = 'aperto';
+    let nota = '';
     if (arrivo >= 1440) { stato = 'ignoto'; nota = 'arrivo dopo mezzanotte: orario non verificato'; }
     else if (sett && L.chiuso.includes(sett)) { stato = 'chiuso'; nota = 'chiuso quel giorno'; }
     else if (!(sett ? Array.isArray(L.orari?.[GIORNI_ORARI.indexOf(sett)]) : L.orari?.some(f => Array.isArray(f)))) {
@@ -87,38 +104,44 @@ function vicini(m) {
     const fino = stato === 'aperto' ? finoA(L, m.g, arrivo) : null;
     if (stato === 'aperto') nota = fino != null ? `aperto fino alle ${ora(fino)}` : 'aperto';
     return { id: L.id, min, arrivo, stato, nota, mezzi: tratto?.tipo === 'tratto' && tratto.mezzi.length > 0 };
-  }).filter(Boolean).sort((a, b) => (a.stato === 'chiuso') - (b.stato === 'chiuso') || a.min - b.min || a.id.localeCompare(b.id));
+  }).filter(x => x !== null).sort((a, b) => Number(a.stato === 'chiuso') - Number(b.stato === 'chiuso') || a.min - b.min || a.id.localeCompare(b.id));
   if (memoV.size > 200) memoV.clear();
   memoV.set(chiave, lista);
   return lista;
 }
+/** @param {import('./tipi').LocaleVicino} x */
 const conOrarioAperto = x => x.stato === 'aperto' || x.stato === 'stretto';
+/** @param {import('./tipi').MomentoPasto} m @param {number} [max] */
 const aperti = (m, max = 10) => vicini(m).filter(x => conOrarioAperto(x) && x.min <= max);
+/** @param {import('./tipi').MomentoPasto} m */
 function riassuntoM(m) {
   const n = aperti(m).length;
-  if (n) return `${n === 1 ? 'un locale aperto' : `${n} locali aperti`} a 10 minuti da ${T(m.dove).breve}`;
+  if (n) return `${n === 1 ? 'un locale aperto' : `${n} locali aperti`} a 10 minuti da ${/** @type {import('./tipi').TappaPagina} */ (T(m.dove)).breve}`;
   if (vicini(m).some(x => x.stato === 'ignoto')) return 'per alcuni locali l’apertura non è verificata: controlla le schede nel menù';
   const p = vicini(m).find(conOrarioAperto);
-  return p ? `qui vicino a quell'ora è tutto chiuso: il più vicino aperto è ${T(p.id).breve}, a ${p.min} minuti` : 'a quell\'ora non c\'è niente di aperto';
+  return p ? `qui vicino a quell'ora è tutto chiuso: il più vicino aperto è ${/** @type {import('./tipi').TappaPagina} */ (T(p.id)).breve}, a ${p.min} minuti` : 'a quell\'ora non c\'è niente di aperto';
 }
 
 // «Mangia qui»: il locale entra nel giorno dopo la tappa prima. La pausa pranzo resta nei dati (torna se togli il locale);
 // per la cena, se arrivi prima delle 19:30, un «Tempo libero» fino alla cena, e il giorno si allunga fino a dopo cena.
+/** @param {import('./tipi').MomentoPasto} m @param {string} id */
 function mangiaQui(m, id) {
   const g = m.g, D = X().giorni[g];
   if (!D) return;
   if (D.tappe.length >= MAX_TAPPE) { avvisa(`Al massimo ${MAX_TAPPE} tappe per giorno.`); return; }
   const proposta = preparaPasto(C, X(), m, id, adessoPer(X(), g));
   if (!proposta) { avvisa('La giornata è cambiata e il locale non è stato aggiunto. Riapri il menù per scegliere dove mangiare.'); return; }
-  conAnnulla(`${T(id).breve}: ${m.q === 'pranzo' ? 'pranzo' : 'cena'} nel giorno ${g + 1}.`, y => {
+  conAnnulla(`${/** @type {import('./tipi').TappaPagina} */ (T(id)).breve}: ${m.q === 'pranzo' ? 'pranzo' : 'cena'} nel giorno ${g + 1}.`, y => {
     y.giorni[g] = proposta.giorno;
     S.nuova = id;
   });
 }
+/** @param {import('./tipi').MomentoPasto} m */
 function noGrazie(m) {
   aggiorna(y => { const D = y.giorni[m.g]; D.noPasti = [...new Set([...(D.noPasti ?? []), m.q])]; });
   annuncia(m.q === 'pranzo' ? `Niente proposte per il pranzo del giorno ${m.g + 1}: resta la pausa` : `Niente proposte per la cena del giorno ${m.g + 1}`);
 }
+/** @param {string} k */
 function rimetti(k) {
   const [g, q] = k.split('-');
   aggiorna(y => { const D = y.giorni[+g]; D.noPasti = (D.noPasti ?? []).filter(x => x !== q); if (!D.noPasti.length) delete D.noPasti; });
@@ -126,7 +149,9 @@ function rimetti(k) {
 }
 
 // la sequenza del giorno con il pasto: la pausa pranzo diventa la riga del menù; la cena va dopo la sua tappa (e le sue pause)
+/** @param {import('../../../lib/itinerari/pause').Giornata} Gx @param {number} g @returns {import('./tipi').VoceMenu[]} */
 export function sequenzaM(Gx, g) {
+  /** @type {import('./tipi').VoceMenu[]} */
   const voci = sequenza(Gx);
   for (const m of momenti(g, Gx)) {
     if (m.pausa) { const i = voci.findIndex(v => v.tipo === 'pausa' && v.quale === 'pranzo'); if (i >= 0) { if (m.nascosto) voci.splice(i + 1, 0, { tipo: 'pasto', m }); else voci[i] = { tipo: 'pasto', m }; } continue; }
@@ -138,27 +163,32 @@ export function sequenzaM(Gx, g) {
 }
 
 // ---------- la riga nella giornata (vista c o d) ----------
+/** @param {import('./tipi').MomentoPasto} m */
 const datiM = m => `data-k="${chiaveM(m)}"`;
+/** @param {import('./tipi').MomentoPasto} m @param {'c'|'d'} vista @param {string} [stile] */
 export function rigaPasto(m, vista, stile = '') {
   const tag = vista === 'c' ? 'li' : 'div', chiave = `data-chiave="pasto-${m.q}"${stile}`;
-  if (m.piccola) return `<${tag} class="${vista}-pasto pasto-piccola" ${chiave}><button type="button" class="pm-cena" data-azione="pasto-apri" ${datiM(m)}><span class="pm-ic" aria-hidden="true">${ic('posate', 16)}</span><span><b>Cena?</b><small>Facoltativa: i locali aperti dalle 19:30 vicino a ${esc(T(m.dove).breve)}</small></span>${ic('piu', 18)}</button></${tag}>`;
+  if (m.piccola) return `<${tag} class="${vista}-pasto pasto-piccola" ${chiave}><button type="button" class="pm-cena" data-azione="pasto-apri" ${datiM(m)}><span class="pm-ic" aria-hidden="true">${ic('posate', 16)}</span><span><b>Cena?</b><small>Facoltativa: i locali aperti dalle 19:30 vicino a ${esc(/** @type {import('./tipi').TappaPagina} */ (T(m.dove)).breve)}</small></span>${ic('piu', 18)}</button></${tag}>`;
   if (m.nascosto) return `<${tag} class="${vista}-pasto pasto-nascosto" ${chiave}><p class="pm-rimetti">${ic('posate', 16)}<span>${m.q === 'pranzo' ? 'Niente proposte per il pranzo' : 'Niente proposte per la cena'}</span><button type="button" class="pm-link" data-azione="pasto-si" ${datiM(m)}>Rimettile</button></p></${tag}>`;
   const ap = aperti(m), tipi = [...new Set(ap.map(x => tipoL(x.id)))];
   const pausa = m.pausa ? `<button type="button" class="pm-link" data-azione="pausa" data-quale="pranzo">Pausa di ${durataLunga(m.min)}: cambia</button>` : '';
   return `<${tag} class="${vista}-pasto pasto-2" ${chiave}><button type="button" class="pm2" data-azione="pasto-apri" ${datiM(m)}>
     <span class="pm2__carta" aria-hidden="true"><i>${m.q === 'pranzo' ? 'Pranzo' : 'Cena'}</i></span>
-    <span class="pm2__t"><span class="pm-ora"><span class="num">${ora(m.ora)}</span>${m.pausa ? ` – <span class="num">${ora(m.ora + m.min)}</span>` : ''}</span><b>Il menù ${m.q === 'pranzo' ? 'del pranzo' : 'della cena'}</b><small>${ap.length ? `${ap.length} aperti intorno a ${esc(T(m.dove).breve)}${tipi.length ? `: ${tipi.slice(0, 3).map(x => x.toLowerCase()).join(', ')}` : ''}` : esc(riassuntoM(m))}. Dentro anche tutti gli altri, con i minuti.</small></span>
+    <span class="pm2__t"><span class="pm-ora"><span class="num">${ora(m.ora)}</span>${m.pausa ? ` – <span class="num">${ora(m.ora + m.min)}</span>` : ''}</span><b>Il menù ${m.q === 'pranzo' ? 'del pranzo' : 'della cena'}</b><small>${ap.length ? `${ap.length} aperti intorno a ${esc(/** @type {import('./tipi').TappaPagina} */ (T(m.dove)).breve)}${tipi.length ? `: ${tipi.slice(0, 3).map(x => x.toLowerCase()).join(', ')}` : ''}` : esc(riassuntoM(m))}. Dentro anche tutti gli altri, con i minuti.</small></span>
     <span class="pm2__apri">Apri${ic('avanti', 16)}</span></button>
     <p class="pm-piede">${pausa}<button type="button" class="pm-link pm-link--no" data-azione="pasto-no" ${datiM(m)}>No, grazie</button></p></${tag}>`;
 }
 
 // ---------- il menù: i locali per tipo, con i puntini fino ai minuti; quanto vuoi camminare in cima ----------
+/** @type {string[]} */
 let ordineLocali = [];
 let richiestaSchedaPasto = 0;
+/** @param {import('./tipi').MomentoPasto} m */
 function contestoPasto(m) {
   const x = X(), giorno = x.giorni[m.g], g = S.g, p = S.p;
   return () => !!giorno && X() === x && x.giorni[m.g] === giorno && S.g === g && S.p === p;
 }
+/** @param {HTMLDialogElement} f @param {import('./tipi').MomentoPasto} m @param {(()=>void)|null|undefined} torna @param {((k:number)=>void)|null|undefined} quanto @param {((dir:number,dx?:number)=>boolean)|undefined} [sfoglia] */
 function collegaPasto(f, m, torna, quanto, sfoglia) {
   const dati = contestoPasto(m), aperto = contestoFoglio(), esegui = dopoChiusuraFoglio(dati);
   const visibile = () => aperto() && dati();
@@ -166,18 +196,22 @@ function collegaPasto(f, m, torna, quanto, sfoglia) {
   return visibile;
 }
 
+/** @param {import('./tipi').MomentoPasto} m @param {number} [max] */
 function apriMenu(m, max = aperti(m).length ? 10 : 0) {
   let mx = max;
   const corpo = () => {
+/** @param {import('./tipi').LocaleVicino} x */
     const entro = x => !mx || x.min <= mx, tutti = vicini(m), si = tutti.filter(x => x.stato !== 'chiuso' && entro(x)), no = tutti.filter(x => x.stato === 'chiuso' && entro(x));
+    /** @type {[string,import('./tipi').LocaleVicino[]][]} */
     const gruppi = [...new Set(si.map(x => tipoL(x.id)))].map(t => [t, si.filter(x => tipoL(x.id) === t)]);
     ordineLocali = [...gruppi.flatMap(([, l]) => l), ...no].map(x => x.id);
-    const voce = x => `<li class="mn-v${x.stato === 'chiuso' ? ' mn-v--chiuso' : ''}"><details><summary><span class="mn-nome">${esc(T(x.id).nome)}</span><span class="mn-punti" aria-hidden="true"></span><span class="mn-min num">${x.min < 2 ? 'accanto' : `${x.min} min`}</span><small class="mn-sotto">${esc(x.nota)}${euro(x.id) ? ` · ${euro(x.id)}` : ''}${x.mezzi ? ' · con i mezzi' : ''}</small></summary>
-      <div class="mn-dentro"><p>${esc(T(x.id).frase || '')}</p><div class="mn-az">${x.stato === 'chiuso' ? '' : `<button type="button" class="f-bottone" data-f="scegli" data-v="${x.id}">${ic('posate', 18)}Mangia qui, dalle ${ora(x.arrivo)}</button>`}<button type="button" class="f-bottone f-bottone--contorno" data-f="scheda" data-v="${x.id}">La scheda</button></div></div></details></li>`;
+/** @param {import('./tipi').LocaleVicino} x */
+    const voce = x => `<li class="mn-v${x.stato === 'chiuso' ? ' mn-v--chiuso' : ''}"><details><summary><span class="mn-nome">${esc(/** @type {import('./tipi').TappaPagina} */ (T(x.id)).nome)}</span><span class="mn-punti" aria-hidden="true"></span><span class="mn-min num">${x.min < 2 ? 'accanto' : `${x.min} min`}</span><small class="mn-sotto">${esc(x.nota)}${euro(x.id) ? ` · ${euro(x.id)}` : ''}${x.mezzi ? ' · con i mezzi' : ''}</small></summary>
+      <div class="mn-dentro"><p>${esc(/** @type {import('./tipi').TappaPagina} */ (T(x.id)).frase || '')}</p><div class="mn-az">${x.stato === 'chiuso' ? '' : `<button type="button" class="f-bottone" data-f="scegli" data-v="${x.id}">${ic('posate', 18)}Mangia qui, dalle ${ora(x.arrivo)}</button>`}<button type="button" class="f-bottone f-bottone--contorno" data-f="scheda" data-v="${x.id}">La scheda</button></div></div></details></li>`;
     const primo = tutti.find(conOrarioAperto);
-    return `<div class="mn"><p class="mn-testa"><i>${m.q === 'pranzo' ? 'Pranzo' : 'Cena'}</i><span>dalle <span class="num">${ora(m.ora)}</span>, intorno a ${esc(T(m.dove).breve)}</span></p>
+    return `<div class="mn"><p class="mn-testa"><i>${m.q === 'pranzo' ? 'Pranzo' : 'Cena'}</i><span>dalle <span class="num">${ora(m.ora)}</span>, intorno a ${esc(/** @type {import('./tipi').TappaPagina} */ (T(m.dove)).breve)}</span></p>
       <div class="mn-quanto" role="group" aria-label="Tempo per arrivare al locale"><span>Entro:</span>${[5, 10, 20, 0].map(k => `<button type="button" data-f="quanto" data-v="${k}" aria-pressed="${k === mx}">${k ? `${k} min` : 'Tutti'}</button>`).join('')}</div>
-      ${gruppi.length ? gruppi.map(([t, l]) => `<section class="mn-gruppo"><h3>${esc(t)}</h3><ul>${l.map(voce).join('')}</ul></section>`).join('') : `<div class="mn-vuoto"><p>A ${mx} minuti, a quell'ora, è tutto chiuso. ${primo ? `Il più vicino aperto è ${esc(T(primo.id).breve)}, a ${primo.min} minuti.` : ''}</p><button type="button" class="f-bottone" data-f="quanto" data-v="0">Vedi tutti i locali, con i minuti</button></div>`}
+      ${gruppi.length ? gruppi.map(([t, l]) => `<section class="mn-gruppo"><h3>${esc(t)}</h3><ul>${l.map(voce).join('')}</ul></section>`).join('') : `<div class="mn-vuoto"><p>A ${mx} minuti, a quell'ora, è tutto chiuso. ${primo ? `Il più vicino aperto è ${esc(/** @type {import('./tipi').TappaPagina} */ (T(primo.id)).breve)}, a ${primo.min} minuti.` : ''}</p><button type="button" class="f-bottone" data-f="quanto" data-v="0">Vedi tutti i locali, con i minuti</button></div>`}
       ${no.length ? `<section class="mn-gruppo mn-gruppo--chiusi"><h3>Chiusi a quell'ora</h3><ul>${no.map(voce).join('')}</ul></section>` : ''}
       <p class="mn-piede">Orari scritti dai locali${X().data ? `, ${dataLungaDi(m.g)}` : '; senza data valgono per i giorni in cui sono aperti'}. Le ore di pranzo (12:30–14:30) e cena (19:30–21:30) sono una regola nostra. Scegli tu: niente si aggiunge da solo.</p></div>`;
   };
@@ -186,17 +220,20 @@ function apriMenu(m, max = aperti(m).length ? 10 : 0) {
   }, 'f--pasto f--menu');
 }
 // la scheda del locale: la scheda vera e «Mangia qui» con l'ora; in fondo «Prima» e «Dopo» (nell'ordine del menù), col dito di lato
+/** @param {string} id @param {import('./tipi').MomentoPasto} m @param {(()=>void)|null|undefined} indietro @param {string[]} lista */
 function paginaPasto(id, m, indietro, lista) {
   const x = vicini(m).find(y => y.id === id), i = lista.indexOf(id), prima = lista[i - 1], dopoId = lista[i + 1];
-  const vai = (v, dir) => (v ? `<button type="button" class="pl-sf pl-sf--${dir < 0 ? 'prima' : 'dopo'}" data-f="sfoglia" data-dir="${dir}">${ic(dir < 0 ? 'indietro' : 'avanti', 20)}<span><small>${dir < 0 ? 'Prima' : 'Dopo'}</small><b>${esc(T(v).breve)}</b></span></button>` : '<span></span>');
+/** @param {string|undefined} v @param {number} dir */
+  const vai = (v, dir) => (v ? `<button type="button" class="pl-sf pl-sf--${dir < 0 ? 'prima' : 'dopo'}" data-f="sfoglia" data-dir="${dir}">${ic(dir < 0 ? 'indietro' : 'avanti', 20)}<span><small>${dir < 0 ? 'Prima' : 'Dopo'}</small><b>${esc(/** @type {import('./tipi').TappaPagina} */ (T(v)).breve)}</b></span></button>` : '<span></span>');
   const minT = x ? (x.min < 2 ? 'accanto' : `${x.min} min${x.mezzi ? '' : ' a piedi'}`) : '';
   return `${indietro ? `<button type="button" class="r-indietro" data-f="indietro">${ic('indietro', 18)}Torna al menù</button>` : ''}
-    <p class="sch-quando">${esc(tipoL(id))}${euro(id) ? ` · ${euro(id)}` : ''}${x ? ` · ${minT} da ${esc(T(m.dove).breve)}` : ''}</p>
+    <p class="sch-quando">${esc(tipoL(id))}${euro(id) ? ` · ${euro(id)}` : ''}${x ? ` · ${minT} da ${esc(/** @type {import('./tipi').TappaPagina} */ (T(m.dove)).breve)}` : ''}</p>
     ${x ? `<p class="pl-stato-grande pl__stato--${x.stato}">${ic(x.stato === 'chiuso' ? 'attenzione' : 'orologio', 18)}<span>Arrivi alle ${ora(x.arrivo)}: ${esc(x.nota)}</span></p>` : ''}
     ${x && x.stato !== 'chiuso' ? `<button type="button" class="f-bottone pl-scegli" data-f="scegli" data-v="${id}">${ic('posate', 20)}Mangia qui, ${m.q === 'pranzo' ? 'a pranzo' : 'a cena'} dalle ${ora(x.arrivo)}</button>` : ''}
     <div class="sch-testo">${testoScheda(id)}</div>${sezioni(id)}${fontiScheda(id)}
     ${lista.length > 1 ? `<nav class="pl-sfoglia" aria-label="Altri locali">${vai(prima, -1)}<span class="pl-sf__n num">${i + 1} di ${lista.length}</span>${vai(dopoId, 1)}</nav>` : ''}`;
 }
+/** @param {string} id @param {import('./tipi').MomentoPasto} m @param {(()=>void)|null|undefined} indietro */
 async function schedaPasto(id, m, indietro) {
   const richiesta = ++richiestaSchedaPasto, dati = contestoPasto(m), aperto = contestoFoglio({ ancheChiuso: true });
   const attuale = () => richiesta === richiestaSchedaPasto && dati() && aperto();
@@ -205,27 +242,30 @@ async function schedaPasto(id, m, indietro) {
   if (!attuale()) return;
   const lista = ordineLocali.includes(id) ? [...ordineLocali] : vicini(m).map(y => y.id);
   let cur = id, visibile = () => false;
+/** @param {number} dir @param {number} [daX] */
   const sfoglia = (dir, daX = 0) => {
-    const v = lista[lista.indexOf(cur) + dir], f = $('#foglio');
+    const v = lista[lista.indexOf(cur) + dir], f = /** @type {HTMLDialogElement} */ ($('#foglio'));
     if (!v || occupato.si || !visibile()) return false;
     cur = v;
-    scorri($('.pl-pagina', f), dir, daX, () => {
+    scorri(/** @type {HTMLElement} */ ($('.pl-pagina', f)), dir, daX, () => {
       if (!visibile()) return;
-      $('.pl-pagina', f).innerHTML = paginaPasto(v, m, indietro, lista);
-      $('#f-titolo', f).textContent = T(v).nome;
+      /** @type {HTMLElement} */ ($('.pl-pagina', f)).innerHTML = paginaPasto(v, m, indietro, lista);
+      /** @type {HTMLElement} */ ($('#f-titolo', f)).textContent = /** @type {import('./tipi').TappaPagina} */ (T(v)).nome;
       f.scrollTop = 0;
-      annuncia(`${T(v).nome}, ${lista.indexOf(v) + 1} di ${lista.length}`);
-    }, () => visibile() ? $('.pl-pagina', f) : null, undefined, visibile);
+      annuncia(`${/** @type {import('./tipi').TappaPagina} */ (T(v)).nome}, ${lista.indexOf(v) + 1} di ${lista.length}`);
+    }, () => visibile() ? /** @type {HTMLElement} */ ($('.pl-pagina', f)) : null, undefined, visibile);
     return true;
   };
-  foglio(T(id).nome, `<div class="pl-pagina">${paginaPasto(id, m, indietro, lista)}</div>`, f => {
+  foglio(/** @type {import('./tipi').TappaPagina} */ (T(id)).nome, `<div class="pl-pagina">${paginaPasto(id, m, indietro, lista)}</div>`, f => {
     visibile = collegaPasto(f, m, indietro, null, sfoglia);
     // col dito di lato si gira pagina (come le schede delle tappe)
+    /** @type {{id:number;x:number;y:number;t:number}|null} */
     let p0 = null;
     f.onpointerdown = e => {
-      if (p0 || !visibile() || computer.matches || e.pointerType === 'mouse' || e.target.closest('a, summary, button, table')) return;
+      if (p0 || !visibile() || computer.matches || e.pointerType === 'mouse' || /** @type {Element} */ (e.target).closest('a, summary, button, table')) return;
       p0 = { id: e.pointerId, x: e.clientX, y: e.clientY, t: performance.now() };
     };
+    /** @param {PointerEvent} e */
     const annullaGesto = e => { if (p0?.id === e.pointerId) p0 = null; };
     f.onpointercancel = annullaGesto; f.onlostpointercapture = annullaGesto;
     f.onpointerup = e => {
@@ -237,9 +277,10 @@ async function schedaPasto(id, m, indietro) {
     };
   }, 'f--scheda f--fuori f--pasto');
 }
+/** @param {MouseEvent} e @param {HTMLDialogElement} f @param {import('./tipi').MomentoPasto} m @param {(()=>void)|null|undefined} torna @param {((k:number)=>void)|null|undefined} quanto @param {((dir:number,dx?:number)=>boolean)|undefined} sfoglia @param {(azione:()=>unknown)=>Promise<boolean>} esegui @param {()=>boolean} dati @param {()=>boolean} visibile */
 async function clic(e, f, m, torna, quanto, sfoglia, esegui, dati, visibile) {
   if (e.target === f) { chiudiFoglio(); return; }
-  const b = e.target.closest('[data-f]');
+  const b = /** @type {import('./tipi').ElementoDati<'f'|'v'|'dir'>|null} */ (/** @type {Element} */ (e.target).closest('[data-f]'));
   if (!b) return;
   const k = b.dataset.f, v = b.dataset.v;
   if (k === 'quanto' && quanto) quanto(+v);
@@ -254,6 +295,7 @@ async function clic(e, f, m, torna, quanto, sfoglia, esegui, dati, visibile) {
 }
 
 // le azioni delle righe del pasto (in viste.js, AZ)
+/** @type {Record<string,(b:import('./tipi').ElementoDati<'k'>)=>unknown>} */
 export const AZ_PASTO = {
   'pasto-apri': b => { const m = trovaM(b.dataset.k); if (m) apriMenu(m); },
   'pasto-no': b => { const m = trovaM(b.dataset.k); if (m) noGrazie(m); },
