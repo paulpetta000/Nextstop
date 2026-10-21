@@ -573,10 +573,10 @@
   ricontrollare: 2027-04-30
 
 - id: tp-pompei-viaggio
-  testo: "Con la Circumvesuviana da Napoli Garibaldi a Pompei Scavi–Villa dei Misteri: almeno 33 minuti, il tempo del treno diretto Campania Express, oggi sospeso; i treni ordinari fanno più fermate."
+  testo: "Nel quadro EAV in vigore dal 17 ottobre 2026, da Napoli Garibaldi a Pompei Scavi–Villa dei Misteri il treno impiega 36 minuti; al ritorno 38 minuti. Sono tempi programmati del solo treno, senza attesa o percorsi a piedi."
   stato: confermato
-  fonti: [tp-eav-campania-express, tp-eav-campania-express-sospeso]
-  controllato: 2026-10-02
+  fonti: [tp-eav-l1-orario-20261017]
+  controllato: 2026-10-21
   ricontrollare: 2027-04-30
 
 - id: tp-ercolano-orari
@@ -594,10 +594,10 @@
   ricontrollare: 2027-04-30
 
 - id: tp-ercolano-viaggio
-  testo: "Con la Circumvesuviana da Napoli Garibaldi a Ercolano Scavi: almeno 13 minuti, il tempo del treno diretto Campania Express, oggi sospeso; i treni ordinari fanno più fermate."
+  testo: "Nel quadro EAV in vigore dal 17 ottobre 2026, da Napoli Garibaldi a Ercolano Scavi il treno impiega 15 minuti; al ritorno 17 minuti. Sono tempi programmati del solo treno, senza attesa o percorsi a piedi."
   stato: confermato
-  fonti: [tp-eav-campania-express, tp-eav-campania-express-sospeso]
-  controllato: 2026-10-02
+  fonti: [tp-eav-l1-orario-20261017]
+  controllato: 2026-10-21
   ricontrollare: 2027-04-30
 
 - id: tp-vesuvio-orari
@@ -870,10 +870,10 @@
   ricontrollare: 2027-04-30
 
 - id: tp-sorrento-viaggio
-  testo: "Con la Circumvesuviana da Napoli Porta Nolana o Garibaldi a Sorrento: circa 72 minuti con il treno diretto, circa 77 con gli altri. Il Campania Express, il treno turistico più veloce, è sospeso dal 1° ottobre 2026."
+  testo: "Nel quadro EAV in vigore dal 17 ottobre 2026, per Sorrento il treno impiega 72 minuti da Napoli Garibaldi e 75 da Porta Nolana; al ritorno sono 73 minuti fino a Garibaldi e 75 fino a Porta Nolana. Attese e percorsi a piedi sono esclusi."
   stato: confermato
-  fonti: [tp-eav-l1-orario, tp-eav-campania-express-sospeso]
-  controllato: 2026-10-03
+  fonti: [tp-eav-l1-orario-20261017]
+  controllato: 2026-10-21
   ricontrollare: 2027-04-30
 
 - id: tp-correale-orari

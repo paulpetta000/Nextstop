@@ -2,7 +2,11 @@
 
 _Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 21/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
-## Stato corrente · chiusura locale del 21 ottobre
+## Stato corrente · ripresa di trenta minuti del 21 ottobre
+
+**756/756 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**, worker **0aa4b9885ecf**. Otto fatti e otto testi corretti, tre fonti nuove, **206 fonti pubbliche**. Quattro avvisi editoriali precedenti chiusi tramite formulazioni supportate, non conferma retroattiva di tutte le vecchie affermazioni. Nuovo orario EAV dal 17 ottobre controllato visivamente; otto firme aggiornate. [Resoconto e limiti correnti](docs/storico/2026-10-21-revisione-58.md). Anomalia di integrità ancora aperta; nessuna modifica grafica o pubblicazione.
+
+## Stato precedente · chiusura locale del 21 ottobre
 
 Codice **e8d10f8**, **756/756 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**, sette casi reali riusciti. 33 prove nuove da 723; undici fatti storici verificati, avvisi **15 → 4**, fonti **203**. [Resoconto degli otto punti e verifiche separate](docs/storico/2026-10-21-chiusura-locale.md). [Perimetro finale](docs/storico/2026-10-21-chiusura-revisione.md). Diagnosi svolta; controllo finale delle prove: 169 impronte concordi su 170, una discrepanza conservata e dichiarata. Causa della anomalia di integrità ancora aperta; integrazione, tipi e prove native non eseguiti. Grafica conservata; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
 

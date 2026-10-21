@@ -1462,7 +1462,7 @@
       "Sorrento"
     ],
     "descrizione": "Sospensione dal 1° ottobre 2026 · riscontro parziale",
-    "avviso": "Pagina non consultata integralmente: il riscontro viene dal solo risultato di ricerca.",
+    "avviso": "Pagina non consultata integralmente: il riscontro viene dal solo risultato di ricerca. Pagina non raggiungibile (404) al controllo del 21 ottobre 2026: il testo indicizzato non è una nuova verifica integrale.",
     "nota": "",
     "formato": "",
     "parole": [
@@ -2307,8 +2307,8 @@
       "Sorrento"
     ],
     "descrizione": "Orari programmati · dal 1° ottobre 2026",
-    "avviso": "PDF letto in forma testuale: la tabella non è stata controllata visivamente.",
-    "nota": "La durata cambia con stazione e corsa; gli orari non sono in tempo reale.",
+    "avviso": "PDF storico letto in forma testuale: la tabella non era stata controllata visivamente. Edizione del 1° ottobre superata dal quadro EAV del 17 ottobre 2026, ora usato per le durate. La vecchia pagina registrata restituisce 404 al controllo del 21 ottobre.",
+    "nota": "La durata cambia con stazione e corsa; gli orari non sono in tempo reale. Riferimento storico conservato; per i tempi correnti consultare il documento del 17 ottobre.",
     "formato": "PDF",
     "parole": [
       "treno",
@@ -4199,8 +4199,8 @@
     "categoria": "cultura",
     "luoghi": [],
     "descrizione": "Baccalà e preparazioni in cucina",
-    "avviso": "",
-    "nota": "",
+    "avviso": "Corretto un refuso nell’indirizzo: il collegamento principale apre la voce Baccalà. La pagina registrata originale restituisce 404.",
+    "nota": "URL e ID originari conservati; raggiungibilità del collegamento corretto verificata il 21 ottobre 2026, senza nuova verifica dei contenuti enciclopedici.",
     "formato": "",
     "parole": [],
     "priorita": 5,
@@ -4211,7 +4211,8 @@
     "durate": [],
     "testi": [
       "dove-mangiare.yaml#piatto-baccala"
-    ]
+    ],
+    "urlDocumento": "https://it.wikipedia.org/wiki/Baccal%C3%A0"
   },
   "wiki-sfogliatella": {
     "categoria": "cultura",
@@ -4517,6 +4518,43 @@
     "testi": [
       "locali.yaml#da-michele",
       "locali.yaml#cinquanta-kalo"
+    ]
+  },
+  "tp-eav-l1-orario-20261017": {
+    "categoria": "trasporti",
+    "luoghi": [
+      "Pompei",
+      "Ercolano",
+      "Sorrento"
+    ],
+    "descrizione": "Tempi programmati Napoli–Ercolano–Pompei–Sorrento · dal 17 ottobre 2026",
+    "avviso": "Tempi del solo treno: attese e cammini esclusi. Quadro programmato, non servizio in tempo reale; verificare gli avvisi EAV prima del viaggio.",
+    "nota": "Una pagina letta in forma testuale e controllata visivamente il 21 ottobre 2026, comprese le due direzioni e la legenda. Distinte Napoli Porta Nolana e Piazza Garibaldi.",
+    "formato": "PDF",
+    "parole": [
+      "treno",
+      "treni",
+      "circumvesuviana",
+      "ferrovia",
+      "2026"
+    ],
+    "priorita": 1,
+    "lingua": "it",
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Tabella controllata"
+    },
+    "prova": "PDF ufficiale 664038 byte, copia e impronta conservate nella cartella nextstop-eav-2026-10-21 della chat; revisione 58.",
+    "schede": [
+      "tp-pompei-viaggio",
+      "tp-ercolano-viaggio",
+      "tp-sorrento-viaggio"
+    ],
+    "durate": [],
+    "testi": [
+      "tappe.yaml#pompei",
+      "tappe.yaml#ercolano",
+      "tappe.yaml#sorrento"
     ]
   }
 }

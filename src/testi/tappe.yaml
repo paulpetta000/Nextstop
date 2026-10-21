@@ -189,12 +189,12 @@ citta-scienza:
 pompei:
   usa: [tp-pompei-biglietti, tp-pompei-viaggio]
   testo: |
-    La città romana sepolta dal Vesuvio. I biglietti hanno nome, giorno e fascia oraria, e non si cambiano. La mattina è la fascia più fresca: ha 15.000 posti su 20.000, quindi comprala per prima. Con la Circumvesuviana da Garibaldi servono almeno 33 minuti. Con il caldo porta acqua e cappello.
+    La città romana sepolta dal Vesuvio. I biglietti hanno nome, giorno e fascia oraria, e non si cambiano. La mattina è la fascia più fresca: ha 15.000 posti su 20.000, quindi comprala per prima. Il quadro EAV del 17 ottobre 2026 indica 36 minuti di treno da Garibaldi, attesa esclusa. Con il caldo porta acqua e cappello.
 
 ercolano:
   usa: [tp-ercolano-viaggio, tp-ercolano-prezzi, tp-campolieto]
   testo: |
-    Più piccola di Pompei e più facile da girare con il caldo. Con la Circumvesuviana da Garibaldi servono almeno 13 minuti. Entri gratis la prima domenica del mese e il 2 giugno.
+    Più piccola di Pompei e più facile da girare con il caldo. Il quadro EAV del 17 ottobre 2026 indica 15 minuti di treno da Garibaldi, attesa esclusa. Entri gratis la prima domenica del mese e il 2 giugno.
 
     A Ercolano, in corso Resina, c'è anche Villa Campolieto, una delle ville vesuviane: aperta dal lunedì al sabato 9:00–19:00 e la domenica fino alle 14:00, 7 €.
 
@@ -331,5 +331,5 @@ sorrento:
   usa: [tp-sorrento-viaggio, tp-correale-orari]
   fonti: [tp-sorrento-centro]
   testo: |
-    La città dall'altra parte del golfo ha un centro antico di stradine, chiese, monasteri e palazzi. Con la Circumvesuviana ci vuole circa un'ora e un quarto. Il Museo Correale è chiuso il lunedì: la sua pagina porta ancora un vecchio avviso di chiusura, quindi prima di andare controlla sul suo sito.
+    La città dall'altra parte del golfo ha un centro antico di stradine, chiese, monasteri e palazzi. Il quadro EAV del 17 ottobre 2026 indica 72 minuti di treno da Garibaldi o 75 da Porta Nolana, attesa esclusa. Il Museo Correale è chiuso il lunedì: la sua pagina porta ancora un vecchio avviso di chiusura, quindi prima di andare controlla sul suo sito.
 

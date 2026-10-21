@@ -1,5 +1,7 @@
 # Nextstop · chiusura della revisione locale del 21 ottobre
 
+Aggiornamento successivo: [ripresa di trenta minuti, revisioni 57–58](2026-10-21-revisione-58.md), otto fatti corretti, 206 fonti pubbliche e quadro EAV dal 17 ottobre verificato. Il resoconto seguente conserva lo stato precedente, compresi i quattro avvisi allora aperti.
+
 Ripresa dalle **12:29:23 UTC**, su richiesta di oltre una ora di lavoro attivo. Codice verificato **e8d10f8**, ramo locale codex/salvataggi-coordinati-2026-10-18. **756/756 test**, nessun fallimento, salto o cancellazione; **33 prove aggiunte da 723**. Build ordinaria **12 pagine**, **13 documenti / 811 link validi**, **82 risorse offline**, worker **301533107c94**. Sette casi sui dati reali riusciti; cinque JSON generati e 18 matrici di sei scenari corrispondono ai sorgenti. Nessun push, merge o deploy.
 
 ## Perimetro finale: esiti

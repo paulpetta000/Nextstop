@@ -1,0 +1,112 @@
+{
+  "data": "2026-10-21T18:29:01.731Z",
+  "base": "138d193",
+  "fontiTotali": 215,
+  "fontiNuove": [
+    {
+      "id": "tp-defelice-donnanna",
+      "url": "https://www.fondazionedefelice.it/palazzo-donnanna-2/"
+    },
+    {
+      "id": "michelin-pizza-2026",
+      "url": "https://guide.michelin.com/ch/it/notizia/features/tutti-pazzi-per-la-pizza-e-onestamente...-chi-puo-darci-torto"
+    },
+    {
+      "id": "tp-eav-l1-orario-20261017",
+      "url": "https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/?wpdmdl=59432"
+    }
+  ],
+  "vecchiIdUrlConservati": true,
+  "avvisiComeFatto": 0,
+  "fattiAggiornati": [
+    {
+      "id": "tp-donnanna-orari",
+      "testo": "Nel percorso Palazzo Donn'Anna è una sosta all'esterno, dalla strada o dal mare. Il teatro ospita la Fondazione Ezio De Felice, che indica apertura su appuntamento dal lunedì al venerdì.",
+      "stato": "confermato",
+      "fonti": [
+        "tp-fai-donn-anna",
+        "tp-defelice-donnanna"
+      ],
+      "controllato": "2026-10-21T00:00:00.000Z",
+      "ricontrollare": "2027-04-30T00:00:00.000Z"
+    },
+    {
+      "id": "lc-da-michele-perche",
+      "testo": "Michelin la cita tra gli indirizzi della pizza napoletana in un articolo del 10 marzo 2026. Il menu del locale scrive «maestri pizzaioli dal 1870».",
+      "stato": "confermato",
+      "storico": true,
+      "fonti": [
+        "sdg-michelin-2025-pizzerie",
+        "lc-da-michele-menu",
+        "michelin-pizza-2026"
+      ],
+      "controllato": "2026-10-21T00:00:00.000Z"
+    },
+    {
+      "id": "lc-cinquanta-kalo-perche",
+      "testo": "Quinta nella classifica ufficiale 50 Top Pizza Italia 2026. Michelin la cita tra gli indirizzi della pizza napoletana in un articolo del 10 marzo 2026.",
+      "stato": "confermato",
+      "storico": true,
+      "fonti": [
+        "sky-50top-2026",
+        "sdg-michelin-2025-pizzerie",
+        "top50-italia-2026",
+        "michelin-pizza-2026"
+      ],
+      "controllato": "2026-10-21T00:00:00.000Z"
+    },
+    {
+      "id": "lc-poppella-rinomato",
+      "testo": "Nel 2022 Gambero Rosso descrive il fiocco di neve di Poppella come un dolce entrato nel repertorio napoletano, imitato e proposto in gusti diversi.",
+      "stato": "confermato",
+      "storico": true,
+      "fonti": [
+        "napolitan-pasticcerie-2022",
+        "gr-pasticcerie-2022"
+      ],
+      "controllato": "2026-10-21T00:00:00.000Z"
+    },
+    {
+      "id": "lc-petrucci-posillipo-perche",
+      "testo": "Palazzo Petrucci ha presentato la nuova pizzeria a Posillipo in una pagina pubblicata il 9 settembre 2026. Si trova al piano spiaggia, in via Posillipo 16c, e affianca la sede in piazza San Domenico.",
+      "stato": "confermato",
+      "storico": true,
+      "fonti": [
+        "lc-petrucci-posillipo"
+      ],
+      "controllato": "2026-10-21T00:00:00.000Z"
+    },
+    {
+      "id": "tp-pompei-viaggio",
+      "testo": "Nel quadro EAV in vigore dal 17 ottobre 2026, da Napoli Garibaldi a Pompei Scavi–Villa dei Misteri il treno impiega 36 minuti; al ritorno 38 minuti. Sono tempi programmati del solo treno, senza attesa o percorsi a piedi.",
+      "stato": "confermato",
+      "fonti": [
+        "tp-eav-l1-orario-20261017"
+      ],
+      "controllato": "2026-10-21T00:00:00.000Z",
+      "ricontrollare": "2027-04-30T00:00:00.000Z"
+    },
+    {
+      "id": "tp-ercolano-viaggio",
+      "testo": "Nel quadro EAV in vigore dal 17 ottobre 2026, da Napoli Garibaldi a Ercolano Scavi il treno impiega 15 minuti; al ritorno 17 minuti. Sono tempi programmati del solo treno, senza attesa o percorsi a piedi.",
+      "stato": "confermato",
+      "fonti": [
+        "tp-eav-l1-orario-20261017"
+      ],
+      "controllato": "2026-10-21T00:00:00.000Z",
+      "ricontrollare": "2027-04-30T00:00:00.000Z"
+    },
+    {
+      "id": "tp-sorrento-viaggio",
+      "testo": "Nel quadro EAV in vigore dal 17 ottobre 2026, per Sorrento il treno impiega 72 minuti da Napoli Garibaldi e 75 da Porta Nolana; al ritorno sono 73 minuti fino a Garibaldi e 75 fino a Porta Nolana. Attese e percorsi a piedi sono esclusi.",
+      "stato": "confermato",
+      "fonti": [
+        "tp-eav-l1-orario-20261017"
+      ],
+      "controllato": "2026-10-21T00:00:00.000Z",
+      "ricontrollare": "2027-04-30T00:00:00.000Z"
+    }
+  ],
+  "errori": [],
+  "fontiPubbliche": 206
+}

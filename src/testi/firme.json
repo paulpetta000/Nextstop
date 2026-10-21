@@ -276,10 +276,10 @@
   },
   "tappe#pompei": {
     "tp-pompei-biglietti": "2b3802c0bd",
-    "tp-pompei-viaggio": "a5d4f8487d"
+    "tp-pompei-viaggio": "a68733e036"
   },
   "tappe#ercolano": {
-    "tp-ercolano-viaggio": "3009b07dc0",
+    "tp-ercolano-viaggio": "ca0cd223dd",
     "tp-ercolano-prezzi": "abb7e10d39",
     "tp-campolieto": "49c180cb3f"
   },
@@ -371,7 +371,7 @@
     "tp-pietrarsa-viaggio": "3b004977d5"
   },
   "tappe#sorrento": {
-    "tp-sorrento-viaggio": "37c5392034",
+    "tp-sorrento-viaggio": "bfd97fd361",
     "tp-correale-orari": "4f3a73eb99"
   }
 }

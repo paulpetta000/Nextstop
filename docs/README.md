@@ -2,7 +2,7 @@
 
 Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [regole comuni](REGOLE.md) e [stato corrente](../PROGRESS.md). Poi scegli solo la riga del compito, senza aprire tutti i rimandi.
 
-Stato corrente: [chiusura della revisione locale del 21 ottobre](storico/2026-10-21-chiusura-locale.md), 756 test, quattro riscontri editoriali aperti e limiti di rilascio distinti. [Ripresa precedente](storico/2026-10-21-riepilogo-aree.md). Istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
+Stato corrente: [ripresa di trenta minuti del 21 ottobre](storico/2026-10-21-revisione-58.md), 756 test e 206 fonti pubbliche; quattro formulazioni editoriali corrette e nuovo orario EAV verificato. [Chiusura precedente e otto aree](storico/2026-10-21-chiusura-locale.md). Istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
 
 ## Fonti per argomento
 
