@@ -79,13 +79,16 @@ function avvia() {
     p.onchange = () => { VIVO.permesso = p.state; if (oggiNelGiorno(X(), S.g)) aggiorna(() => {}); };
     if (p.state === 'granted' && X().posizione === 'si' && oggiNelGiorno(X(), S.g)) aggiorna(() => {});
   }).catch(() => { /* il browser non lo dice: si chiede con il pannello */ });
-  let guardia = null;
-  const ferma = () => { if (guardia != null) navigator.geolocation.clearWatch(guardia); guardia = null; VIVO.posizione = null; };
+  let guardia = null, cicloPosizione = 0;
+  const ferma = () => { cicloPosizione++; if (guardia != null) navigator.geolocation.clearWatch(guardia); guardia = null; VIVO.posizione = null; };
   const cura = () => {
     const x = X();
     if (posizioneAttiva(x) && oggiNelGiorno(x, S.g) && document.visibilityState === 'visible') {
       if (guardia != null || VIVO.negata || !('geolocation' in navigator)) return;
-      guardia = navigator.geolocation.watchPosition(p => { VIVO.posizione = { ll: [p.coords.latitude, p.coords.longitude], precisione: p.coords.accuracy }; dalVivo(); }, e => {
+      const ciclo = ++cicloPosizione;
+      const valido = () => ciclo === cicloPosizione && posizioneAttiva(X()) && oggiNelGiorno(X(), S.g) && document.visibilityState === 'visible';
+      guardia = navigator.geolocation.watchPosition(p => { if (!valido()) return; VIVO.posizione = { ll: [p.coords.latitude, p.coords.longitude], precisione: p.coords.accuracy }; dalVivo(); }, e => {
+        if (!valido()) return;
         if (e.code === e.PERMISSION_DENIED) { VIVO.negata = true; ferma(); avvisa('Il telefono non ha dato la posizione: calcolo dall\'ultima tappa visitata.'); aggiorna(() => {}); }
       }, { enableHighAccuracy: true, maximumAge: 60000, timeout: 30000 });
     } else ferma();

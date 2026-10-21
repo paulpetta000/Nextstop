@@ -2,7 +2,11 @@
 
 _Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 20/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
-## Continuazione corrente · vista a pagine (21 ottobre)
+## Continuazione corrente · risposte GPS (21 ottobre)
+
+**702/702 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Quattordici prove nuove sui ritorni delle osservazioni fermate e sulle preferenze correnti; [revisione 50](docs/storico/2026-10-21-revisione-50.md). Quattro gruppi, 56 prove da 646. Nessuna posizione reale o browser; segue la chiusura degli avvisi. Istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
+
+## Revisione precedente · vista a pagine (21 ottobre)
 
 **688/688 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Tredici prove nuove su timer, eventi e osservatori ritirati; [revisione 49](docs/storico/2026-10-21-revisione-49.md). Tre gruppi nella ripresa, 42 prove da 646. Segue il ciclo della geolocalizzazione con dati fittizi; nessun browser/rilascio. Istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
 
