@@ -26,7 +26,7 @@ locali.sort((a, b) => ordineZone.indexOf(a.data.zona) - ordineZone.indexOf(b.dat
 const FASCIA = ['', '€', '€€', '€€€'];
 const zoneCitta = ordineZone.filter(z => locali.some(l => l.data.zona === z));
 // i piatti del filtro: solo quelli che almeno un locale ha nel menu; le due righe ci sono dove c'è una fonte
-const piatti = Object.keys(PIATTI).filter(p => locali.some(l => l.data.piatti.includes(p)));
+const piatti = Object.keys(PIATTI).filter(p => locali.some(l => l.data.piatti.some(piatto => piatto === p)));
 const conDescrizione = piatti.filter(p => T.blocchi.includes(`piatto-${p}`));
 // Dati per lo script: i locali, i minuti a piedi da ogni tappa in città (per «vicino alle mie tappe») e i nomi brevi
 const citta = C.tappe.filter(t => t.tipo === 'citta');

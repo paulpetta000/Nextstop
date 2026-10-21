@@ -101,7 +101,7 @@ const versioni=[{key:'base',risultato:base},{key:'senza',risultato:senza}];
 <p>Un esempio delle fonti della guida.</p><dl>
 <div><dt>Informazione</dt><dd>Orari della visita</dd></div>
 <div><dt>Fonte</dt><dd>{fonte.data.editore}</dd></div>
-<div><dt>Controllata</dt><dd><time datetime={fonte.data.controllato}>{dataLunga(fonte.data.controllato)}</time></dd></div></dl><a class="text-link" href={fonte.data.url} target="_blank" rel="noopener">Apri la fonte <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+<div><dt>Controllata</dt><dd><time datetime={fonte.data.controllato.toISOString().slice(0, 10)}>{dataLunga(fonte.data.controllato)}</time></dd></div></dl><a class="text-link" href={fonte.data.url} target="_blank" rel="noopener">Apri la fonte <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
 <path d="M4 12h15m-6-6 6 6-6 6"/></svg></a>
 <p class="fineprint">{fonti.length} fonti consultabili nella guida.</p></article></section>
 <section class="practical wrap">

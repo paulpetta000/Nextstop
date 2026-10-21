@@ -55,6 +55,9 @@ jobs:
       - name: Installa solo le dipendenze bloccate, senza script automatici
         run: npm ci --ignore-scripts --no-audit --no-fund
 
+      - name: Tipi Astro e TypeScript
+        run: npm run check
+
       - name: Test
         run: npm test
 

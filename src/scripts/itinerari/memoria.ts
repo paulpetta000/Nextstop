@@ -114,7 +114,7 @@ export function creaSalvataggio(fonte?: { riferimento: string | null | undefined
     const lavoro = coda.then(async () => {
       let risultato: EsitoSalvataggio = 'errore';
       try {
-        if (riferimento !== undefined && serializzato !== undefined && globalThis.navigator?.locks?.request) {
+        if (riferimento !== undefined && serializzato !== undefined && typeof globalThis.navigator?.locks?.request === 'function') {
           const stop = new AbortController(), timer = setTimeout(() => stop.abort(), 3000);
           try {
             risultato = await navigator.locks.request(CHIAVE, { mode: 'exclusive', signal: stop.signal }, () => {

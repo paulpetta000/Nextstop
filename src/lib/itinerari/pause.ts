@@ -142,4 +142,4 @@ export function conPause(C: Citta, G: Giorno, r: Risultato, margine = 0, contest
 }
 // Le voci della giornata con le pause al loro posto (dopo la tappa), per disegnarla
 export type VoceGiornata = Voce | (PausaMessa & { tipo: 'pausa' });
-export const sequenza = (g: Giornata): VoceGiornata[] => g.voci.flatMap(v => (v.tipo === 'tappa' && !v.fatta ? [v, ...g.pause.filter(p => p.dove === v.id).map(p => ({ ...p, tipo: 'pausa' as const }))] : [v]));
+export const sequenza = (g: Giornata): VoceGiornata[] => g.voci.flatMap<VoceGiornata>(v => (v.tipo === 'tappa' && !v.fatta ? [v, ...g.pause.filter(p => p.dove === v.id).map(p => ({ ...p, tipo: 'pausa' as const }))] : [v]));
