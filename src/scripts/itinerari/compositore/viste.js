@@ -336,9 +336,23 @@ const mappe = () => [mappa, mappaD].filter(Boolean);
 // C · MAPPA PRIMA
 // =====================================================================================
 let mappa = null, mappaD = null, rotta = true;
-let ascolti = [];
-function ascolta(tipo, fn) { let raf = 0; const h = () => { cancelAnimationFrame(raf); raf = requestAnimationFrame(fn); }; addEventListener(tipo, h, { passive: true }); ascolti.push([tipo, h]); }
-const smettiAscolti = () => { ascolti.forEach(([t, h]) => removeEventListener(t, h)); ascolti = []; };
+let ascolti = new Set();
+function ascolta(tipo, fn, bersaglio = window) {
+  if (!bersaglio) return () => {};
+  let raf = 0, attivo = true;
+  const h = () => {
+    if (!attivo) return;
+    cancelAnimationFrame(raf);
+    raf = requestAnimationFrame(() => { raf = 0; if (attivo) fn(); });
+  };
+  const ferma = () => {
+    if (!attivo) return;
+    attivo = false; cancelAnimationFrame(raf); bersaglio.removeEventListener(tipo, h); ascolti.delete(ferma);
+  };
+  bersaglio.addEventListener(tipo, h, { passive: true }); ascolti.add(ferma);
+  return ferma;
+}
+const smettiAscolti = () => { [...ascolti].forEach(ferma => ferma()); };
 const opzMappa = extra => ({ punto: id => apriScheda(id), tutte: Gx => S.tutte || !Gx, cambiaTutte: si => { S.tutte = si; }, ...extra });
 
 function rigaC(v, k) {
@@ -408,6 +422,7 @@ const C1 = {
     sfoglia($('#c-foglio'), () => $('#c-dentro'), vaiAlGiorno);
   },
   osserva() {
+    this.fermaGuarda?.();
     const giu = $('#c-giu');
     if (!giu) return;
     const guarda = () => {
@@ -418,16 +433,18 @@ const C1 = {
       if (giu.dataset.nascosto !== String(!via)) giu.dataset.nascosto = String(!via);
       document.documentElement.classList.toggle('c-giu-su', via);
     };
-    if (!this.guarda) { ascolta('scroll', () => this.guarda?.()); }
-    $('#c-foglio')?.addEventListener('scroll', () => requestAnimationFrame(() => this.guarda?.()), { passive: true });
+    const fermaPagina = ascolta('scroll', guarda), fermaFoglio = ascolta('scroll', guarda, $('#c-foglio'));
+    this.fermaGuarda = () => { fermaPagina(); fermaFoglio(); };
     this.guarda = guarda;
     guarda();
   },
   disegnaMappa(vola, da = null) {
-    const Gx = G(S.g);
-    preparaAlternativi(Gx).then(si => { if (si) this.disegnaMappa(false, Infinity); });
-    mappa?.disegna(Gx, { vola, daLinea: da, altre: Gx ? [] : altreLinee(), n: S.g + 1 });
-    if (S.attiva) mappa?.evidenzia(S.attiva);
+    const corrente = mappa; if (!corrente) return;
+    const x = X(), g = S.g, giorno = x.giorni[g], Gx = G(g), turno = this.richiestaMappa = (this.richiestaMappa ?? 0) + 1;
+    const valido = () => this.richiestaMappa === turno && mappa === corrente && !corrente.spenta && S.p === 'c' && X() === x && S.g === g && x.giorni[g] === giorno;
+    preparaAlternativi(Gx).then(si => { if (si && valido()) this.disegnaMappa(false, Infinity); }).catch(() => { /* resta il disegno già disponibile */ });
+    corrente.disegna(Gx, { vola, daLinea: da, altre: Gx ? [] : altreLinee(), n: g + 1 });
+    if (S.attiva) corrente.evidenzia(S.attiva);
   },
   allInizio() {
     const f = $('#c-foglio');

@@ -2,7 +2,11 @@
 
 _Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 20/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
-## Continuazione corrente · cambio vista e menu (21 ottobre)
+## Continuazione corrente · ascoltatori e mappa (21 ottobre)
+
+**675/675 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Sedici prove nuove: ascoltatori/fotogrammi ripuliti e caricamenti alternativi legati alla mappa e al viaggio correnti. [Revisione 48](docs/storico/2026-10-21-revisione-48.md). Due gruppi nella ripresa, 29 prove da 646. Segue il ciclo della vista a pagine; nessun browser/rilascio. Istruzioni/consumo Claude esclusi e nuova idea rinviata anche nell’analisi.
+
+## Revisione precedente · cambio vista e menu (21 ottobre)
 
 **659/659 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Tredici prove nuove su richieste concorrenti, etichetta del menu, preferenza e annunci. [Revisione 47 e seguito della diagnosi della build](docs/storico/2026-10-21-revisione-47.md). Nuovo bundle alterato conservato; sonde ridotte e completa non riproducono l’errore, comando ordinario finale riuscito. Segue il ciclo degli ascoltatori e della mappa. Nessun browser/rilascio; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nell’analisi.
 
