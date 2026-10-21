@@ -872,6 +872,16 @@ export function preparaMenu() {
 // i comandi della pagina: tocchi, tastiera sui giorni e sulle maniglie, trascinare
 export function preparaViste() {
   const app = $('#app');
+  let richiestaFuoco = 0;
+  const dopoComando = selettore => {
+    const turno = ++richiestaFuoco, x = X(), g = S.g, vista = S.p, origine = document.activeElement;
+    requestAnimationFrame(() => {
+      if (turno !== richiestaFuoco || X() !== x || S.g !== g || S.p !== vista || $('#app') !== app || app.isConnected === false) return;
+      if (document.activeElement !== origine && document.activeElement !== document.body) return;
+      const bersaglio = $(selettore, app);
+      if (bersaglio && bersaglio.isConnected !== false) bersaglio.focus();
+    });
+  };
   app.addEventListener('click', e => {
     const b = e.target.closest('[data-azione]');
     if (b && !b.disabled) AZ[b.dataset.azione]?.(b, e);
@@ -882,7 +892,7 @@ export function preparaViste() {
       e.preventDefault();
       const g = e.key === 'Home' ? 0 : e.key === 'End' ? nG() - 1 : Math.max(0, Math.min(nG() - 1, S.g + (e.key === 'ArrowRight' ? 1 : -1)));
       vaiAlGiorno(g);
-      requestAnimationFrame(() => $(`[role="tab"][data-g="${g}"]`)?.focus());
+      if (S.g === g) dopoComando(`[role="tab"][data-g="${g}"]`);
       return;
     }
     const m = e.target.closest('[data-maniglia]');
@@ -890,7 +900,7 @@ export function preparaViste() {
     e.preventDefault();
     const id = m.dataset.maniglia, ordine = tappeDi(G(giornoDi(id))).map(v => v.id), i = ordine.indexOf(id);
     spostaA(id, i + (e.key === 'ArrowUp' ? -1 : 1));
-    requestAnimationFrame(() => $(`[data-maniglia="${id}"]`)?.focus());
+    dopoComando(`[data-maniglia="${id}"]`);
   });
   app.addEventListener('pointerdown', e => {
     const b = e.target.closest('.onda');
