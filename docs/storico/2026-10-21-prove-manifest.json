@@ -1,12 +1,37 @@
 {
-  "data": "2026-10-21T11:40:15.963Z",
-  "codice": "7cf092c",
+  "data": "2026-10-21T12:21:52.040Z",
+  "codice": "851c1da",
   "cartella": "C:/Users/Windows11/Documents/ChatGPT/New project",
   "prove": [
     {
       "file": "nextstop-audit-2026-10-20.json",
       "byte": 387,
       "sha256": "d9bf4646e938e4f2a5015ebfd2079689ce97b34e3eae8e16e2cbc56d28dfbec4"
+    },
+    {
+      "file": "nextstop-avvisi-build-2026-10-21.log",
+      "byte": 60934,
+      "sha256": "7128125b7511374f4f4444d46fc440ee60a29dc5bd483c9741a62d5d8d4d15c6"
+    },
+    {
+      "file": "nextstop-avvisi-links-2026-10-21.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-avvisi-mirato-2026-10-21.log",
+      "byte": 1070,
+      "sha256": "b27538d77d2a811f01f98bab617b915ec2226af3a16bcf4259a35b68762923ae"
+    },
+    {
+      "file": "nextstop-avvisi-prima-2026-10-21.log",
+      "byte": 8339,
+      "sha256": "46cfa944929ae550a6dda1c261e92b0ed1672afea481fc024c089466fd1133e5"
+    },
+    {
+      "file": "nextstop-avvisi-test-2026-10-21.log",
+      "byte": 64428,
+      "sha256": "a32365fa9b522f1fd726c3e716410d57d9d6add9eab617a636ae775d565309f1"
     },
     {
       "file": "nextstop-build-candidato-2026-10-21.json",
@@ -27,6 +52,41 @@
       "file": "nextstop-build-sintassi-2026-10-20.json",
       "byte": 10113,
       "sha256": "ab1ed4133d35318cd4ec5577f8bb3824815e66559fdb304a01130cbe3cf25a3d"
+    },
+    {
+      "file": "nextstop-cambio-vista-build-2026-10-21.log",
+      "byte": 1646,
+      "sha256": "0feb277d53abf50c53117bfc1758b2faf7a7c78900d2bc1fd70e108549477ecd"
+    },
+    {
+      "file": "nextstop-cambio-vista-build-finale-2026-10-21.log",
+      "byte": 61031,
+      "sha256": "7b6a530e7b6c594f594c0ab1c57ed7f217724ad944788668f4e7fd463d833b1b"
+    },
+    {
+      "file": "nextstop-cambio-vista-controllo-ricerca-2026-10-21.log",
+      "byte": 3474,
+      "sha256": "0e82ea6aded41b2de7f30094e62dcdb0d7223dcb5ff9096333917479bdd00cbd"
+    },
+    {
+      "file": "nextstop-cambio-vista-links-2026-10-21.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-cambio-vista-prima-2026-10-21.log",
+      "byte": 7802,
+      "sha256": "adb1f50cdfa5e2640ec0ec595f4dffbf8e4a0f959af577cf877ed8f54f810fe4"
+    },
+    {
+      "file": "nextstop-cambio-vista-test-2026-10-21.log",
+      "byte": 58850,
+      "sha256": "244717c792b6905a15fa6ac69d31a141597e3cb52659f8b761b29ae2331ab424"
+    },
+    {
+      "file": "nextstop-cambio-vista-test-ripetuto-2026-10-21.log",
+      "byte": 59996,
+      "sha256": "4ccf26b63b32fc235091fabb8a6b929dfb3923ca651d73b9987e4a63ee8d2668"
     },
     {
       "file": "nextstop-casi-prodotto-2026-10-20.json",
@@ -62,6 +122,51 @@
       "file": "nextstop-condividi-test-2026-10-20.log",
       "byte": 53320,
       "sha256": "405d78cb88c14b317fa19c40201fb29a3493053f53165782be4ea7aaaab9d2c4"
+    },
+    {
+      "file": "nextstop-disposizione-build-2026-10-21.log",
+      "byte": 61046,
+      "sha256": "1acbb4c6a11e570f0c01582041da8b1b5689e6fff71b48c2a23c96c3f3c04419"
+    },
+    {
+      "file": "nextstop-disposizione-build-finale-2026-10-21.log",
+      "byte": 60917,
+      "sha256": "51d01c294b070894872b8c14fa84f364c025104e25add5ceb6e30b7b50565bc1"
+    },
+    {
+      "file": "nextstop-disposizione-criteri-iniziali-2026-10-21.log",
+      "byte": 5918,
+      "sha256": "1762ab8efbd30eb398873179fb14282fcb8304cfe11d62ad0d20e7d1be327d8e"
+    },
+    {
+      "file": "nextstop-disposizione-links-2026-10-21.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-disposizione-links-finale-2026-10-21.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-disposizione-mirato-2026-10-21.log",
+      "byte": 682,
+      "sha256": "6fe95218eec1561e124ea570255d1c113f36035a6a2a3184421bca61f10ffa99"
+    },
+    {
+      "file": "nextstop-disposizione-prima-2026-10-21.log",
+      "byte": 4172,
+      "sha256": "469ea702daa61de64d939ea64de3eb0f116e5c9a68daf70726cc54906c558082"
+    },
+    {
+      "file": "nextstop-disposizione-test-2026-10-21.log",
+      "byte": 64992,
+      "sha256": "6d0fd21575b5d4411aaf25f2fa42e6257902163a1b1924dbb2c924a1b46ab97f"
+    },
+    {
+      "file": "nextstop-disposizione-test-finale-2026-10-21.log",
+      "byte": 65111,
+      "sha256": "de04296af4c342bd3a0993c7d9e2598ab962afb446e9c9e83d8c3ec34064ab07"
     },
     {
       "file": "nextstop-fogli-azioni-build-2026-10-20.log",
@@ -189,6 +294,26 @@
       "sha256": "765dad84bec04c2299c1f11942ac9ef18f3cdf6c5083eb736f5c41ec92657324"
     },
     {
+      "file": "nextstop-pagine-build-2026-10-21.log",
+      "byte": 61065,
+      "sha256": "9d36cfe1198aa49e54d2ed93ee8a50f3b0413e24e9cfde4348d33715a04dc999"
+    },
+    {
+      "file": "nextstop-pagine-links-2026-10-21.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-pagine-prima-2026-10-21.log",
+      "byte": 12065,
+      "sha256": "4cf222a8da3b5a51fdc8bd837ffc77a0f1f0d68975bbfe3fa392e1d2bc6ecb79"
+    },
+    {
+      "file": "nextstop-pagine-test-2026-10-21.log",
+      "byte": 62586,
+      "sha256": "030f274710bf2694e5faa4fc3eecc5e5f67c564c9061c2bf766a1d54453c1478"
+    },
+    {
       "file": "nextstop-pasti-build-2026-10-20.log",
       "byte": 984,
       "sha256": "5a2e05bd8e36badee3dda3bee5089beb5a14715cf4d5421416a68fbebca0a20c"
@@ -242,6 +367,31 @@
       "file": "nextstop-pasti-test-2026-10-20.log",
       "byte": 56672,
       "sha256": "3ced90133f90a1ade98d6cb79dbddf2c5881dc9dcbea1d191616cd2be7b8fd11"
+    },
+    {
+      "file": "nextstop-posizione-build-2026-10-21.log",
+      "byte": 60922,
+      "sha256": "8bc5347bd30bc93cafc4fef66a7b65aedc671c01378d57004fbaa196850683fc"
+    },
+    {
+      "file": "nextstop-posizione-links-2026-10-21.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-posizione-mirato-2026-10-21.log",
+      "byte": 1100,
+      "sha256": "4c808280548d35286f39d8913949fca6b0713fad4c08cd0dbf866b2863512902"
+    },
+    {
+      "file": "nextstop-posizione-prima-2026-10-21.log",
+      "byte": 11865,
+      "sha256": "40014af740c1b8533f2507c29b870f6b04856e3af266bf5f756a0fc77e2b5c95"
+    },
+    {
+      "file": "nextstop-posizione-test-2026-10-21.log",
+      "byte": 63475,
+      "sha256": "0d91738313efeb34bb83e69b5bd6b91b29c717aa0100e10ca1d3a3d7af9a70dd"
     },
     {
       "file": "nextstop-scheda-animazioni-build-2026-10-20.log",
@@ -389,6 +539,41 @@
       "sha256": "f21a6a1b5637b27e52cbd7e3158dd55f2cf17e61ab65064ae8feb75a74069359"
     },
     {
+      "file": "nextstop-vista-build-diagnosi-2026-10-21.json",
+      "byte": 557,
+      "sha256": "d838a8281b47bd9cf0f2aa2229994d0b4475363194ed2bf7fa6b1fcf9bbd9a17"
+    },
+    {
+      "file": "nextstop-vista-bundle-fallito-2026-10-21.mjs",
+      "byte": 9914962,
+      "sha256": "c313ef281f14c45b2db89b29ac5c76e5aab444f397dab3da52c653b42b0a2805"
+    },
+    {
+      "file": "nextstop-vista-sonda-astro-2026-10-21.log",
+      "byte": 3988,
+      "sha256": "5e2f15406d0f6a3aa873a4a5e4e8b4a99a54d476d158f5f9b3a142bf8fad2417"
+    },
+    {
+      "file": "nextstop-viste-richiami-build-2026-10-21.log",
+      "byte": 60914,
+      "sha256": "7764b05a2491574312a5cddb923ce87e00c85b1de17c6d5ff9a2460ebaf33270"
+    },
+    {
+      "file": "nextstop-viste-richiami-links-2026-10-21.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-viste-richiami-prima-2026-10-21.log",
+      "byte": 10802,
+      "sha256": "3beeb8723090791fcd62a35c4d031edb9f58558322f017e857bb128cc49524ab"
+    },
+    {
+      "file": "nextstop-viste-richiami-test-2026-10-21.log",
+      "byte": 61393,
+      "sha256": "5a3865bc8caa055a7cdb7c5e366695287e98a137cbb192b4022838422646fa85"
+    },
+    {
       "file": "nextstop-worker-ripetizione-2026-10-20.log",
       "byte": 972,
       "sha256": "095f1cf84a361c955bac8e890655ce4b83af15763c0becfc08e4880c68fbbaeb"
@@ -412,6 +597,36 @@
       "file": "nextstop-worker-stabile-parent.mjs",
       "byte": 1698,
       "sha256": "5bd589c15227fc958c079385750e01c55a3c10a27e4791c2aaa5ff5b39fdc8b6"
+    },
+    {
+      "file": "sonda-astro-2026-10-21.mjs",
+      "byte": 2192,
+      "sha256": "b1ba102c58a42d2f897c80afe80a9f95578660717735e2037a65361fcecb4f46"
+    },
+    {
+      "file": "sonda-astro-2026-10-21/disco.mjs",
+      "byte": 9914962,
+      "sha256": "d465a227005325fa47e6f0d5bf9d6d8a80b9b0f11b823ccee8c8018f50de591a"
+    },
+    {
+      "file": "sonda-astro-2026-10-21/memoria.mjs",
+      "byte": 9914962,
+      "sha256": "ae03336e340e9cc7b553bf363370e13e79b81d8aa8e2eefd6c51c3e3dd9cd2cd"
+    },
+    {
+      "file": "sonda-astro-2026-10-21/risultati.json",
+      "byte": 691,
+      "sha256": "99a32d27a1b685c5a7346bac0aa3d30769c92b3a51d9158ca31de2bbdffea5cc"
+    },
+    {
+      "file": "sonda-vite-2026-10-21.mjs",
+      "byte": 1667,
+      "sha256": "bf2ad90a4205bd0e1ff8721957ce893ffc74022644e925c19887d3a5f9c3be56"
+    },
+    {
+      "file": "sonda-vite-2026-10-21/risultati.json",
+      "byte": 1890,
+      "sha256": "c79bb6139d98a310343d912124346ee6440e39157bc814e67f90fb04a4d69209"
     }
   ]
 }

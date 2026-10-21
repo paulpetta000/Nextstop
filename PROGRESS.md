@@ -4,7 +4,7 @@ _Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale cod
 
 ## Continuazione corrente · sei gruppi (21 ottobre)
 
-**723/723 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Sei gruppi e 77 prove nuove da 646: cambio vista/menu, ascoltatori/mappa, pagine, GPS, avvisi e cambio disposizione. [Revisione 52](docs/storico/2026-10-21-revisione-52.md). Nessun browser o rilascio; audit complessivo ancora aperto. Istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
+**723/723 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Sei gruppi e 77 prove nuove da 646: cambio vista/menu, ascoltatori/mappa, pagine, GPS, avvisi e cambio disposizione. [Revisione 52](docs/storico/2026-10-21-revisione-52.md); [resoconto aggiornato delle otto aree](docs/storico/2026-10-21-riepilogo-aree.md), 125 prove conservate e improntate. Nessun browser o rilascio; audit complessivo ancora aperto. Istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
 
 ## Revisione precedente · risposte GPS (21 ottobre)
 
