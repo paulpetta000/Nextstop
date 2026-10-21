@@ -544,10 +544,12 @@ const Dp = {
     return `<section class="d-pagina${qui ? ' attiva giorno-attivo' : ''}${qui && computer.matches ? ' giorno-corpo' : ''}" data-pagina="${g}" aria-label="Giorno ${g + 1}"${qui ? ' data-inizio-giorno' : ' inert'}><h2>${ORDINALE[g]} giorno<small>${D.gita ? `gita: ${esc(T(D.gita).breve)}` : Gx ? esc(titoloGiorno(Gx)) : 'ancora vuoto'}</small></h2>${corpo}<div class="d-dopo"></div></section>`;
   },
   dopo() {
-    const pag = $('#d-pagine');
-    const pc = computer.matches;
+    const pag = $('#d-pagine'); if (!pag) return;
+    const pc = computer.matches, itinerario = X(), ritardi = new Set();
+    let attivo = true;
+    const valido = () => attivo && S.p === 'd' && X() === itinerario && $('#d-pagine') === pag && pag.isConnected !== false && computer.matches === pc;
     let y0 = scrollY;
-    ascolta('scroll', () => { const tab = $('.d-tab'); if (!tab || computer.matches) return; const y = scrollY; if (Math.abs(y - y0) > 8) { tab.classList.toggle('d-tab--via', y > y0 && y > 260); y0 = y; } });
+    ascolta('scroll', () => { if (!valido()) return; const tab = $('.d-tab'); if (!tab || computer.matches) return; const y = scrollY; if (Math.abs(y - y0) > 8) { tab.classList.toggle('d-tab--via', y > y0 && y > 260); y0 = y; } });
     this.osservaCartoline();
     if (pc) {
       mappa = new Mappa($('#mappa'), opzMappa({ tocca: id => Dp.tocca(id), margini: () => ({ t: 60, r: 56, b: 80, l: 56 }) }));
@@ -559,7 +561,8 @@ const Dp = {
     this.misura();
     this.profondita();
     let fermo;
-    pag.addEventListener('scroll', () => {
+    const scorriPagine = () => {
+      if (!valido()) return;
       const x = pag.scrollLeft / pag.clientWidth;
       $('#d-segno').style.transform = `translateX(${(x * PASSO).toFixed(1)}px)`;
       this.profondita();
@@ -575,6 +578,7 @@ const Dp = {
       }
       clearTimeout(fermo);
       fermo = setTimeout(() => {
+        fermo = null; if (!valido()) return;
         this.coppia = null;
         this.misura();
         contaFine();
@@ -582,16 +586,27 @@ const Dp = {
         if (p && top < -innerHeight * .9) {
           $$('.da-vedere:not(.vista)', p).forEach(x1 => { if (x1.getBoundingClientRect().top < innerHeight) { x1.classList.add('vista', 'subito'); this.io?.unobserve(x1); } });
           scrollTo({ top: scrollY + top - 120, behavior: piano() ? 'smooth' : 'auto' });
-          setTimeout(() => $$('.subito', p).forEach(x1 => x1.classList.remove('subito')), 1000);
+          const ritardo = setTimeout(() => { ritardi.delete(ritardo); if (valido()) $$('.subito', p).forEach(x1 => x1.classList.remove('subito')); }, 1000);
+          ritardi.add(ritardo);
         }
       }, 140);
-    }, { passive: true });
+    };
+    pag.addEventListener('scroll', scorriPagine, { passive: true });
+    const ferma = () => {
+      attivo = false; clearTimeout(fermo); ritardi.forEach(id => clearTimeout(id)); ritardi.clear();
+      pag.removeEventListener('scroll', scorriPagine); ascolti.delete(ferma);
+    };
+    ascolti.add(ferma);
   },
   // le cartoline e le orme si appoggiano quando arrivano sullo schermo
   osservaCartoline(dove = $('#d-pagine')) {
+    this.io?.disconnect(); this.io = null;
     if (!dove || !piano() || !('IntersectionObserver' in window)) return;
-    this.io?.disconnect();
-    const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vista'); io.unobserve(e.target); } }), { rootMargin: computer.matches ? '0px 0px -8% 0px' : '0px 200% -8% 200%' });
+    const itinerario = X();
+    const io = new IntersectionObserver(es => {
+      if (this.io !== io || S.p !== 'd' || X() !== itinerario || dove.isConnected === false) return;
+      es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vista'); io.unobserve(e.target); } });
+    }, { rootMargin: computer.matches ? '0px 0px -8% 0px' : '0px 200% -8% 200%' });
     this.io = io;
     $$('.d-voce, .d-tratto, .d-francobolli, .d-pausa', dove).forEach(x => { if (!x.classList.contains('vista')) { x.classList.add('da-vedere'); io.observe(x); } });
   },
@@ -681,7 +696,8 @@ export function disegna() {
   mappa?.spegni(); mappa = null;
   mappaD?.spegni(); mappaD = null;
   smettiAscolti();
-  C1.guarda = null;
+  C1.guarda = null; C1.fermaGuarda = null;
+  Dp.io?.disconnect(); Dp.io = null; Dp.teste?.clear();
   const app = $('#app');
   app.classList.toggle('apre', S.anima);
   app.innerHTML = P[S.p].html();
