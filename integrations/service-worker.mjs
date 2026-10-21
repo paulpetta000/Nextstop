@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { verificaPercorsiPubblicati } from './verifica-percorsi.mjs';
 
 // Pagine salvate subito alla prima visita: le informazioni pratiche
 const CORE = [
@@ -28,6 +29,7 @@ export default function serviceWorker() {
     hooks: {
       'astro:build:done': ({ dir, logger }) => {
         const out = fileURLToPath(dir);
+        verificaPercorsiPubblicati(out);
         const files = [];
         for (const url of CORE) {
           const f = path.join(out, url, 'index.html');

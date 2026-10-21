@@ -6,6 +6,11 @@ import os from 'node:os';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import serviceWorker from '../integrations/service-worker.mjs';
+import { riferimentoDati } from '../src/lib/itinerari/riferimento-dati.mjs';
+const rawOffline=n=>JSON.parse(fs.readFileSync(new URL('../src/data/'+n,import.meta.url),'utf8'));
+const TO=rawOffline('tempi-tappe.json'),MO=rawOffline('mappa.json'),DO=rawOffline('percorsi-tappe.json'),AO=rawOffline('percorsi-alternativi.json');
+const RO=riferimentoDati(TO,{w:MO.w,h:MO.h,box:MO.box});
+const pubblicatiOffline={percorsi:{riferimento:RO,punti:DO.punti,scenari:DO.scenari},alternativi:{riferimento:RO,firma:AO.firma,senza:AO.senza,candidati:AO.candidati}};
 const origin='https://nextstop.test';
 function ambiente(fetcher=async()=>{throw Error('offline');}){
   const stores=new Map(),handlers={};
@@ -62,7 +67,7 @@ test('build offline: da sola home precarica anche script e dipendenze dei filtri
       'napoli/dove-mangiare/index.html':'<script type="module" src="/_astro/dm.js"></script>',
       '_astro/compositore.hash.css':'.cmp{color:navy}', '_astro/it.js':'export const a=1;', '_astro/dm.js':'import "./filtro.js";', '_astro/filtro.js':'export const filtro=1;',
       'fonts/prova.woff2':'font', 'napoli/itinerari/schede/index.html':'schede',
-      'napoli/itinerari/strade/indice.json':'{}', 'napoli/itinerari/mappa.json':'{}', 'napoli/itinerari/scenari.json':'{}', 'napoli/itinerari/percorsi.json':'{}', 'napoli/itinerari/partenze.json':'{}'
+      'napoli/itinerari/strade/indice.json':'{}', 'napoli/itinerari/mappa.json':'{}', 'napoli/itinerari/scenari.json':'{}', 'napoli/itinerari/percorsi.json':JSON.stringify(pubblicatiOffline.percorsi), 'napoli/itinerari/percorsi-alternativi.json':JSON.stringify(pubblicatiOffline.alternativi), 'napoli/itinerari/partenze.json':'{}'
     };
     for(const [file,data] of Object.entries(files)){const f=path.join(root,file);fs.mkdirSync(path.dirname(f),{recursive:true});fs.writeFileSync(f,data);}
     serviceWorker().hooks['astro:build:done']({dir:pathToFileURL(root+path.sep),logger:{warn:()=>{},info:()=>{}}});
