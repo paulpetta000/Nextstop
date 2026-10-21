@@ -2,7 +2,7 @@
 
 Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [regole comuni](REGOLE.md) e [stato corrente](../PROGRESS.md). Poi scegli solo la riga del compito, senza aprire tutti i rimandi.
 
-Stato della revisione del 20 ottobre: [risultati e attività rimaste per area](storico/2026-10-20-riepilogo-aree.md), con indice delle prove. Istruzioni e consumo Claude esclusi fino a nuova richiesta; la nuova idea per altre città resta rinviata anche nell’analisi.
+Stato della revisione del 21 ottobre: [risultati e attività rimaste per area](storico/2026-10-21-riepilogo-aree.md), sei gruppi completati, 646 test e indice delle prove. Istruzioni e consumo Claude esclusi fino a nuova richiesta; la nuova idea per altre città resta rinviata anche nell’analisi.
 
 ## Fonti per argomento
 

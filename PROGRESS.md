@@ -4,7 +4,7 @@ _Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale cod
 
 ## Continuazione corrente · sei gruppi completati (21 ottobre)
 
-**646/646 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Sei gruppi e **95 nuove prove** da 551; ultimo gruppo su animazioni condivise e cambi giorno nelle due viste. [Revisione 46, prove e alterazione di un artefatto di build](docs/storico/2026-10-21-revisione-46.md). I controlli ordinari sono riusciti dopo le scadenze del revisore; causa dell’alterazione intermittente ancora aperta. Nessun browser/rilascio; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nell’analisi.
+**646/646 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Codice **7cf092c**, sei gruppi e **95 nuove prove** da 551; ultimo gruppo su animazioni condivise e cambi giorno nelle due viste. [Revisione 46, prove e alterazione di un artefatto di build](docs/storico/2026-10-21-revisione-46.md). [Stato degli otto punti e prove](docs/storico/2026-10-21-riepilogo-aree.md). I controlli ordinari sono riusciti dopo le scadenze del revisore; causa dell’alterazione intermittente ancora aperta. Nessun browser/rilascio; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nell’analisi.
 
 ## Revisione precedente · gesti residui (21 ottobre)
 
