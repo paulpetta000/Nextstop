@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Stato corrente · arresto per quota del 22 ottobre
+
+Codice 12d7bba, merge locale del main b6d2a36, 771 test, build e 811 link riusciti; Vite 8.3.3, audit senza avvisi e tipi Astro/TS verificati. JavaScript completo, prestazioni e prove native ancora aperti. Quota rilevata al 3%: lavoro fermato. [Resoconto corrente](docs/storico/2026-10-22-revisione-66.md). Nessuna pubblicazione; esclusioni precedenti conservate.
+
 _Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 21/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
 ## Materiali conservati dal main · storico del 19–20 ottobre

@@ -2,7 +2,7 @@
 
 Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [regole comuni](REGOLE.md) e la prima sezione dello [stato corrente](../PROGRESS.md), approfondendo i blocchi precedenti solo se pertinenti. Poi scegli solo la riga del compito, senza aprire tutti i rimandi.
 
-Stato corrente: [revisione 63 e residui concreti](storico/2026-10-21-revisione-63.md), 765 test e 207 fonti pubbliche; controllo dei JSON prima della cache, trasferimento preparato su copia temporanea e tipi proposti. Pack Git originale difettoso; copia indipendente recuperata e verificata, causa delle alterazioni ancora aperta; integrazione/CI, tipi effettivi e prove native da completare. Istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
+Stato corrente: [revisione 66 e punto di ripresa](storico/2026-10-22-revisione-66.md), codice 12d7bba, 771 test, Vite corretto e tipi Astro/TS verificati. Arresto per quota; JavaScript completo, prestazioni e prove native restano aperti.
 
 ## Fonti per argomento
 
