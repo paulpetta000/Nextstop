@@ -14,7 +14,7 @@ function ambiente({ pezzi = false } = {}) {
     let html = '', testo = '';
     return { classList: classi(), style: { setProperty() {} }, isConnected: true, clientWidth: 400, clientHeight: 600, childElementCount: 0, dataset: {}, attributi: {},
       get innerHTML() { return html; }, set innerHTML(v) { html = v; scritture++; }, get textContent() { return testo; }, set textContent(v) { testo = v; scritture++; },
-      addEventListener() {}, setAttribute(k, v) { this.attributi[k] = v; }, insertAdjacentHTML(k, v) { html += v; scritture++; } };
+      addEventListener() {}, removeEventListener() {}, setAttribute(k, v) { this.attributi[k] = v; }, insertAdjacentHTML(k, v) { html += v; scritture++; } };
   };
   const $ = sel => { if (!elementi.has(sel)) elementi.set(sel, nodo()); return elementi.get(sel); };
   const bottoni = sel => [...$(sel).innerHTML.matchAll(/<button[^>]*data-id="([^"]+)"/g)].map(m => ({ ...nodo(), dataset: { id: m[1] } }));

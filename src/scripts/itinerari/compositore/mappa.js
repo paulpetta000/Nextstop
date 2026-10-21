@@ -72,6 +72,12 @@ const tutte = new Set();
 export class Mappa {
   constructor(el, opz = {}) {
     this.attiva = true;
+    this.ascolti = [];
+    const ascolta = (bersaglio, tipo, fn, opzioni) => {
+      const corrente = e => { if (this.attiva && this.el.isConnected !== false) fn(e); };
+      bersaglio.addEventListener(tipo, corrente, opzioni);
+      this.ascolti.push(() => bersaglio.removeEventListener(tipo, corrente));
+    };
     this.el = el; this.opz = opz; this.tappe = []; this.vb = null; this.fuoco = null; this.n = ++nMappe; this.dita = new Map(); this.tutte = false; this.idsPunti = [];
     this.messi = new Set(); this.vie = []; this.inRotta = new Set(); this.nomi = [];
     el.classList.add('m');
@@ -81,21 +87,21 @@ export class Mappa {
       <p class="m-osm">© <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a></p><p class="m-carico" role="status"></p>`;
     this.svg = $('svg', el);
     tutte.add(this);
-    this.ro = new ResizeObserver(() => { if (!this.vb) return; if (this.box && !this.mosso) this.adatta(false); else this.metti(this.limita(this.vb)); });
+    this.ro = new ResizeObserver(() => { if (!this.attiva || this.el.isConnected === false || !this.vb) return; if (this.box && !this.mosso) this.adatta(false); else this.metti(this.limita(this.vb)); });
     this.ro.observe(el);
-    $('.m-ctrl', el).addEventListener('click', e => {
+    ascolta($('.m-ctrl', el), 'click', e => {
       const b = e.target.closest('[data-z]');
       if (!b || !this.vb) return;
       if (b.dataset.z === 'tutte') this.mostraTutte(!this.tutte);
       else if (b.dataset.z === 'tutto') this.tutto();
       else this.zoom(b.dataset.z === 'piu' ? 1.6 : 1 / 1.6);
     });
-    el.addEventListener('pointerdown', e => this.giu(e));
-    el.addEventListener('pointermove', e => this.muovi(e));
-    el.addEventListener('pointerup', e => this.su(e));
-    el.addEventListener('pointercancel', e => this.su(e));
-    el.addEventListener('wheel', e => { if (!this.vb) return; e.preventDefault(); const r = el.getBoundingClientRect(); this.zoom(Math.exp(-e.deltaY * 0.0016), e.clientX - r.left, e.clientY - r.top, false); }, { passive: false });
-    el.addEventListener('dblclick', e => { if (!this.vb || e.target.closest('.m-segno, .m-punto, .m-ctrl')) return; const r = el.getBoundingClientRect(); this.zoom(1.8, e.clientX - r.left, e.clientY - r.top); });
+    ascolta(el, 'pointerdown', e => this.giu(e));
+    ascolta(el, 'pointermove', e => this.muovi(e));
+    ascolta(el, 'pointerup', e => this.su(e));
+    ascolta(el, 'pointercancel', e => this.su(e));
+    ascolta(el, 'wheel', e => { if (!this.vb) return; e.preventDefault(); const r = el.getBoundingClientRect(); this.zoom(Math.exp(-e.deltaY * 0.0016), e.clientX - r.left, e.clientY - r.top, false); }, { passive: false });
+    ascolta(el, 'dblclick', e => { if (!this.vb || e.target.closest('.m-segno, .m-punto, .m-ctrl')) return; const r = el.getBoundingClientRect(); this.zoom(1.8, e.clientX - r.left, e.clientY - r.top); });
     this.base();
   }
   // la mappa di base e i percorsi arrivano dalla rete la prima volta (poi dalla memoria del service worker)
@@ -146,6 +152,7 @@ export class Mappa {
   }
   // i nomi delle vie dove passa il percorso, scritti sul percorso stesso (strade.ts, nomiDelPercorso)
   nomiRotta() {
+    if (!this.attiva || this.el.isConnected === false) return;
     const g = $('.m-nomi-rotta', this.svg);
     if (!g) return;
     const lista = nomiDelPercorso((this.linee || []).map(l => puntiDi(l.d)), this.vie);
@@ -316,7 +323,7 @@ export class Mappa {
     this.s = s;
     this.segni();
     // i pezzi delle strade e i nomi: poco dopo, e i nomi solo a dito fermo
-    clearTimeout(this.tP); this.tP = setTimeout(() => { this.pezzi(); if (!this.dita.size) this.nomiVisibili(); }, 40);
+    clearTimeout(this.tP); this.tP = setTimeout(() => { if (!this.attiva || this.el.isConnected === false) return; this.pezzi(); if (!this.dita.size) this.nomiVisibili(); }, 40);
   }
   traccia(da) {
     const penne = $$('.m-l', this.svg), segni = $$('.m-segno', this.el);
@@ -382,6 +389,7 @@ export class Mappa {
   evidenzia(id) { $$('.m-segno, .m-punto', this.el).forEach(b => b.setAttribute('aria-current', String(b.dataset.id === id))); }
   spegni() {
     this.attiva = false; this.attesa = null; this.quadroInAttesa = null;
+    this.ascolti.forEach(ferma => ferma()); this.ascolti = [];
     clearTimeout(this.tP); clearTimeout(this.tNomi); this.ro.disconnect(); this.fermaVolo?.();
     for (const id of this.dita.keys()) try { if (this.el.hasPointerCapture(id)) this.el.releasePointerCapture(id); } catch { /* già rilasciato */ }
     this.dita.clear(); this.partenza = null; this.preso = false; this.el.classList.remove('m--muovo');

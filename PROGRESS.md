@@ -2,7 +2,11 @@
 
 _Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 20/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
-## Ripresa corrente · undici fatti verificati (21 ottobre)
+## Ripresa corrente · ciclo della mappa (21 ottobre)
+
+**756/756 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Dodici prove nuove e pulizia degli ascoltatori/observer/timer della mappa; [revisione 55](docs/storico/2026-10-21-revisione-55.md). C1 e C2 conclusi localmente; D1 esaminato, avvisi **4** e fonti **203**. Prosegue oltre una ora richiesta dalle **12:29:23 UTC**, su diagnosi della build e chiusura. Grafica conservata; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
+
+## Ripresa precedente · undici fatti verificati (21 ottobre)
 
 **744/744 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Esaminati tutti i 15 riscontri: 11 verificati, avvisi **15 → 4**, fonti **196 → 203**, testi pubblici invariati. [Revisione 54 e quattro casi aperti](docs/storico/2026-10-21-revisione-54.md). Prosegue la richiesta di oltre una ora dalle **12:29:23 UTC**, sui caricamenti/mappa e la diagnosi della build. Grafica conservata; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
 
