@@ -443,11 +443,18 @@
   ricontrollare: 2027-04-30
 
 - id: tp-sanita-orari
-  testo: "Il rione è fatto di strade pubbliche. La Basilica di Santa Maria della Sanità è aperta tutti i giorni 10:00–13:00. L'ascensore gratuito tra il ponte della Sanità e il rione funziona dal lunedì al sabato 7:00–21:30, la domenica e i festivi 7:30–14:00."
+  testo: "Il rione è fatto di strade pubbliche. La Basilica di Santa Maria della Sanità è aperta tutti i giorni 10:00–13:00."
   stato: confermato
-  fonti: [tp-catacombe-basilica, tp-anm-ascensori]
-  controllato: 2026-10-02
+  fonti: [tp-catacombe-basilica]
+  controllato: 2026-10-21
   ricontrollare: 2027-04-30
+
+- id: tp-sanita-ascensore
+  testo: "Servizio e orari dell’ascensore tra il ponte della Sanità e il rione sono ancora da confermare. Controlla gli avvisi ANM prima di contare su questo collegamento."
+  stato: atteso
+  fonti: [tp-anm-ascensori, tp-anm-ascensori-portale]
+  controllato: 2026-10-21
+  ricontrollare: 2026-11-21
 
 - id: tp-fontanelle-orari
   testo: "10:00–18:00, ultimo ingresso alle 17:15: si entra a gruppi ogni 15 minuti e si resta al massimo 40 minuti. Chiuso il mercoledì e il 25 dicembre."

@@ -246,7 +246,8 @@
     "tp-catacombe-note": "fef33ec483"
   },
   "tappe#sanita": {
-    "tp-sanita-orari": "0658ee5892"
+    "tp-sanita-orari": "68dca20a8d",
+    "tp-sanita-ascensore": "99162c23ab"
   },
   "tappe#fontanelle": {
     "tp-fontanelle-orari": "a1055961ee",

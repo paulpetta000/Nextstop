@@ -1796,3 +1796,12 @@
   tipo: ufficiale
   controllato: 2026-10-21
   letta: true
+
+- id: tp-anm-ascensori-portale
+  titolo: Ascensori pubblici · portale ANM
+  editore: ANM, Azienda Napoletana Mobilità
+  url: https://www.anm.it/s/ascensori?language=it
+  tipo: ufficiale
+  controllato: 2026-10-21
+  letta: false
+  nota: Il risultato indicizzato contiene indicazioni diverse dalla vecchia scheda; la pagina aperta restituisce Loading / CSS Error. Non prova dello stato attuale degli impianti.

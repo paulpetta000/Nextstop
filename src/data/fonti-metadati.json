@@ -693,16 +693,19 @@
       "Rione Sanità e Basilica della Sanità"
     ],
     "descrizione": "Orari degli ascensori, compreso quello della Sanità",
-    "avviso": "",
+    "avviso": "Vecchia pagina non consultabile nel tentativo del 21 ottobre 2026. Gli orari e l’operatività dell’ascensore della Sanità restano da confermare.",
     "nota": "",
     "formato": "",
     "parole": [],
     "priorita": 1,
     "lingua": "",
-    "lettura": null,
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Consultazione tentata"
+    },
     "prova": "Relazioni dichiarate in src/data/fatti.yaml, src/data/tappe.yaml e src/testi/; note del registro originale.",
     "schede": [
-      "tp-sanita-orari"
+      "tp-sanita-ascensore"
     ],
     "durate": [],
     "testi": [
@@ -832,7 +835,7 @@
       "Via Toledo, la stazione dell'arte e i Quartieri Spagnoli"
     ],
     "descrizione": "Stazione Toledo e accesso alla metro",
-    "avviso": "",
+    "avviso": "Il tentativo di lettura del 21 ottobre 2026 è terminato per timeout; nessuna nuova conferma delle condizioni di accesso.",
     "nota": "",
     "formato": "",
     "parole": [],
@@ -1739,18 +1742,22 @@
     "luoghi": [],
     "descrizione": "Orari della funicolare di Chiaia per le stime di viaggio",
     "avviso": "",
-    "nota": "",
+    "nota": "Variante ufficiale della pagina letta tramite il servizio web il 21 ottobre 2026; URL originario conservato. Orari ordinari, non stato di esercizio in tempo reale.",
     "formato": "",
     "parole": [],
     "priorita": 1,
     "lingua": "",
-    "lettura": null,
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Testo della pagina consultato"
+    },
     "prova": "Relazioni dichiarate in src/data/fatti.yaml, src/data/tappe.yaml e src/testi/; note del registro originale.",
     "schede": [],
     "durate": [],
     "testi": [
       "itinerari.yaml#tempi"
-    ]
+    ],
+    "urlDocumento": "https://www2.anm.it/index.php?Itemid=385&id=82&option=com_content&task=view"
   },
   "tp-anm-mergellina": {
     "categoria": "visite",
@@ -4555,6 +4562,36 @@
       "tappe.yaml#pompei",
       "tappe.yaml#ercolano",
       "tappe.yaml#sorrento"
+    ]
+  },
+  "tp-anm-ascensori-portale": {
+    "categoria": "visite",
+    "luoghi": [
+      "Rione Sanità e Basilica della Sanità"
+    ],
+    "descrizione": "Servizio e orari degli ascensori ANM · consultazione da completare",
+    "avviso": "Pagina non consultata integralmente: mostra un errore CSS. Le indicazioni del risultato indicizzato non sono una conferma dello stato attuale dell’ascensore della Sanità.",
+    "nota": "Non si dichiara né una chiusura attuale né una riapertura. Controllare gli avvisi del gestore prima di usare il collegamento.",
+    "formato": "",
+    "parole": [
+      "ascensore",
+      "ascensori",
+      "Sanità",
+      "accesso"
+    ],
+    "priorita": 1,
+    "lingua": "it",
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Consultazione tentata"
+    },
+    "prova": "Tentativo di apertura del 21 ottobre 2026 e confronto con la vecchia pagina ANM; revisione 59.",
+    "schede": [
+      "tp-sanita-ascensore"
+    ],
+    "durate": [],
+    "testi": [
+      "tappe.yaml#sanita"
     ]
   }
 }

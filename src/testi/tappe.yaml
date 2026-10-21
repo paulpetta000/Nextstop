@@ -141,10 +141,10 @@ catacombe:
     Entri solo con la guida, ogni ora, e devi prenotare prima. Lo stesso biglietto vale 12 mesi anche per le Catacombe di San Gaudioso, nel Rione Sanità. Sotto terra ci sono 15–22 °C: porta un maglioncino. Per ora l'accesso per le persone con disabilità motoria è sospeso.
 
 sanita:
-  usa: [tp-sanita-orari]
+  usa: [tp-sanita-orari, tp-sanita-ascensore]
   fonti: [tp-catacombe-basilica]
   testo: |
-    Il quartiere sta sotto il ponte della Sanità. C'è la Basilica di Santa Maria della Sanità, aperta solo la mattina (10–13), e sotto la basilica le Catacombe di San Gaudioso. Dal ponte scendi con un ascensore gratuito, che la domenica chiude alle 14.
+    Il quartiere sta sotto il ponte della Sanità. C'è la Basilica di Santa Maria della Sanità, aperta solo la mattina (10–13), e sotto la basilica le Catacombe di San Gaudioso. Per scendere dal ponte con l’ascensore, servizio e orari sono ancora da confermare: controlla gli avvisi ANM prima di contarci{?tp-sanita-ascensore}.
 
 fontanelle:
   usa: [tp-fontanelle-orari, tp-fontanelle-prezzi]
