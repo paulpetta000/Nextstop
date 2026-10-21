@@ -107,7 +107,7 @@ export function preparaFoglio() {
 let tempoAvviso;
 export function rinfrescaSalvataggio() {
   const stato = statoSalvataggio(), pendente = salvataggioInCorso();
-  $$('.cmp .salva').forEach(s => { s.classList.toggle('salva--fatto', stato.fatto); s.disabled = pendente; });
+  $$('.cmp .salva').forEach(s => { s.classList.toggle('salva--fatto', stato.fatto); s.disabled = pendente; s.setAttribute('aria-label', pendente ? 'Salvataggio in corso' : stato.fatto ? 'Salvato: apri i miei itinerari' : 'Salva itinerario'); });
   $$('.cmp [data-stato]').forEach(s => { s.dataset.stato = stato.tipo; s.querySelector('.stato__t').textContent = stato.testo; });
   $$('#foglio [data-itinerario-stato]').forEach(el => {
     const x = A.elenco.find(i => i.id === el.dataset.itinerarioStato);

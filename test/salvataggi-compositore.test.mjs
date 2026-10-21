@@ -29,7 +29,8 @@ function ambiente(t) {
   }
   const g = gestione({creaSalvataggio,presentaSalvataggio,testoErroreSalvataggio,testoNotaMemoria,fonte:{riferimento:raw},archivio});
   const classi = new Set(), testo = {textContent:''}, stato = {dataset:{},querySelector:()=>testo};
-  const bottone = {disabled:false,classList:{toggle:(c,on)=>on?classi.add(c):classi.delete(c),add:c=>classi.add(c)}};
+  const attributi = new Map();
+  const bottone = {setAttribute:(k,v)=>attributi.set(k,v),getAttribute:k=>attributi.get(k)??null,disabled:false,classList:{toggle:(c,on)=>on?classi.add(c):classi.delete(c),add:c=>classi.add(c)}};
   const tutti = s => (s.includes('data-itinerario-stato') || s.includes('data-memoria-itinerari')) ? [] : s.includes('[data-stato]') ? [stato] : [bottone];
   g.quandoSalva(controlli(tutti,g.statoSalvataggio,g.salvataggioInCorso));
   const d = {...g,A:archivio,X:()=>archivio.elenco.find(i=>i.id===archivio.attivo),salvato:i=>i.salvato,
@@ -41,12 +42,14 @@ function ambiente(t) {
 test('salva reale: una seconda modifica in attesa impedisce la spunta prima dell’ultima scrittura', async t => {
   const e=ambiente(t), op=e.salva(); await tick();
   assert.equal(e.bottone.disabled,true); assert.equal(e.testo.textContent,'Salvataggio in corso');
+  assert.equal(e.bottone.getAttribute('aria-label'),'Salvataggio in corso');
   e.x.nome='Seconda modifica'; const p2=e.g.scriviArchivio();
   e.turni.shift()(); await tick();
   const prematuro=e.classi.has('salva--fatto'), timerPrima=e.timer.length;
   e.turni.shift()(); await Promise.all([op,p2]);
   assert.equal(prematuro,false); assert.equal(timerPrima,0);
   assert.equal(e.classi.has('salva--fatto'),true); assert.equal(e.bottone.disabled,false);
+  assert.equal(e.bottone.getAttribute('aria-label'),'Salvato: apri i miei itinerari');
   assert.equal(JSON.parse(e.dati.get('itinerari-v1')).elenco[0].nome,'Seconda modifica');
 });
 

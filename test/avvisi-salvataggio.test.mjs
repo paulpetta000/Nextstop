@@ -10,7 +10,8 @@ assert.ok(start >= 0 && end > start);
 const crea = new Function('$', '$$', 'esc', 'erroreSalvataggio', 'statoSalvataggio', 'salvataggioInCorso', 'setTimeout', 'clearTimeout', 'let tempoAvviso; ' + source.slice(start, end).replaceAll('export ', '') + '; return avvisa;');
 function ambiente(esito) {
   const classi = new Set(['salva--fatto']);
-  const bottone = { classList: { toggle: (c, si) => si ? classi.add(c) : classi.delete(c) } };
+  const attributi = new Map();
+  const bottone = { setAttribute: (k,v) => attributi.set(k,v), getAttribute: k => attributi.get(k), classList: { toggle: (c, si) => si ? classi.add(c) : classi.delete(c) } };
   const etichetta = { textContent: 'Salvato' };
   const stato = { dataset: {}, querySelector: () => etichetta };
   const azione = {};
@@ -18,7 +19,7 @@ function ambiente(esito) {
   const singolo = s => s === '#toast' ? toast : s === 'button' ? azione : s.includes('[data-stato]') ? stato : bottone;
   const tutti = s => (s.includes('data-itinerario-stato') || s.includes('data-memoria-itinerari')) ? [] : s.includes('[data-stato]') ? [stato] : [bottone];
   const avvisa = crea(singolo, tutti, x => x, () => testoErroreSalvataggio(esito), () => presentaSalvataggio(true, esito), () => esito === 'in-corso', () => 0, () => {});
-  return { avvisa, classi, etichetta, stato, toast, azione };
+  return { avvisa, classi, etichetta, stato, toast, azione, bottone };
 }
 
 test('avviso: il messaggio successivo conserva il mancato salvataggio e aggiorna tutti i controlli', () => {
@@ -29,6 +30,7 @@ test('avviso: il messaggio successivo conserva il mancato salvataggio e aggiorna
   assert.match(a.toast.innerHTML, /Annulla/);
   assert.equal(a.etichetta.textContent, 'Modifiche non salvate');
   assert.equal(a.stato.dataset.stato, 'bozza');
+  assert.equal(a.bottone.getAttribute('aria-label'), 'Salva itinerario');
   assert.equal(a.classi.has('salva--fatto'), false);
   a.azione.onclick(); assert.equal(annullato, true);
 });
@@ -37,6 +39,7 @@ test('avviso: un salvataggio riuscito mantiene la conferma e non aggiunge falsi 
   const a = ambiente('salvato'); a.avvisa('Salvato.');
   assert.equal(a.classi.has('salva--fatto'), true);
   assert.equal(a.etichetta.textContent, 'Salvato in «I miei itinerari»');
+  assert.equal(a.bottone.getAttribute('aria-label'), 'Salvato: apri i miei itinerari');
   assert.equal(a.toast.innerHTML, '<span>Salvato.</span>');
 });
 

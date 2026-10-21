@@ -19,7 +19,10 @@ const MAX_SALVATI = 50;
 // ---------- «Salva» ----------
 const spilloSalva = `<svg class="salva__ic salva__ic--spillo" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><clipPath id="spillo-clip"><path d="M12 21s-6.5-6.4-6.5-11a6.5 6.5 0 0 1 13 0C18.5 14.6 12 21 12 21z"/></clipPath></defs><g clip-path="url(#spillo-clip)"><rect class="salva__pieno" x="0" y="0" width="24" height="24" fill="currentColor"/></g><path d="M12 21s-6.5-6.4-6.5-11a6.5 6.5 0 0 1 13 0C18.5 14.6 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle class="salva__buco" cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="2"/></svg>`;
 const segnalibro = `<svg class="salva__ic" width="20" height="20" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><defs><clipPath id="salva-clip"><path d="M6.5 3.5h11v17l-5.5-4-5.5 4z"/></clipPath></defs><g clip-path="url(#salva-clip)"><rect class="salva__pieno" x="0" y="0" width="24" height="24" fill="currentColor"/></g><path d="M6.5 3.5h11v17l-5.5-4-5.5 4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path class="salva__spunta" d="M9 11.2l2.2 2.2 4-4.4" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
-export const bottoneSalva = (cl = '') => `<button type="button" class="salva salva--${S.p} ${cl}${statoSalvataggio().fatto ? ' salva--fatto' : ''}" data-azione="salva"${salvataggioInCorso() ? ' disabled' : ''}>${S.p === 'c' ? spilloSalva : segnalibro}<span class="salva__t"><span class="salva__a">Salva</span><span class="salva__b">Salvato</span></span>${S.p === 'c' ? '<i class="salva__onda" aria-hidden="true"></i>' : '<i class="salva__inchiostro" aria-hidden="true"></i>'}</button>`;
+export const bottoneSalva = (cl = '') => {
+  const fatto = statoSalvataggio().fatto, pendente = salvataggioInCorso();
+  return `<button type="button" class="salva salva--${S.p} ${cl}${fatto ? ' salva--fatto' : ''}" data-azione="salva" aria-label="${pendente ? 'Salvataggio in corso' : fatto ? 'Salvato: apri i miei itinerari' : 'Salva itinerario'}"${pendente ? ' disabled' : ''}>${S.p === 'c' ? spilloSalva : segnalibro}<span class="salva__t" aria-hidden="true"><span class="salva__a">Salva</span><span class="salva__b">Salvato</span></span>${S.p === 'c' ? '<i class="salva__onda" aria-hidden="true"></i>' : '<i class="salva__inchiostro" aria-hidden="true"></i>'}</button>`;
+};
 export const stato = () => { const s = statoSalvataggio(); return `<span class="stato" data-stato="${s.tipo}"><i aria-hidden="true"></i><span class="stato__t">${s.testo}</span></span>`; };
 const GENERICI = /^(Il mio itinerario|Nuovo itinerario|Itinerario ricevuto|Itinerario)( \(\d+\))?$/;
 // il nome proposto: «Napoli, 12–14 ottobre» con la data, altrimenti «Napoli in 2 giorni»
@@ -50,7 +53,7 @@ export async function salva(b) {
   if (X() !== x) return;
   if (fallito) { avvisa(erroreSalvataggio(), { testo: 'Condividi', fai: apriCondividi }); return; }
   mettiNome();
-  $$('.cmp .salva').forEach(s => s.classList.add('salva--fatto'));
+  $$('.cmp .salva').forEach(s => { s.classList.add('salva--fatto'); s.setAttribute('aria-label', 'Salvato: apri i miei itinerari'); });
   if (b?.classList.contains('salva')) { b.classList.remove('salva--ora'); void b.offsetWidth; b.classList.add('salva--ora'); }
   $$('.cmp [data-stato]').forEach(s => { s.dataset.stato = 'salvato'; s.querySelector('.stato__t').textContent = 'Salvato in «I miei itinerari»'; });
   setTimeout(async () => {
