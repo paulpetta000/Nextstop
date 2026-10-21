@@ -1,0 +1,139 @@
+{
+  "tipo": "tappa",
+  "id": "citta-scienza",
+  "nome": "Città della Scienza",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-citta-scienza",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Città della Scienza\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-citta-scienza-98714dc5a7",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Edificio di Corporea a Città della Scienza",
+      "titoloFonte": "Corporea.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Corporea.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Corporea.jpg",
+      "autore": "Vichingpedia",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1050,
+        681
+      ],
+      "dataScattoDichiarata": "2017-04-07 19:28:57",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 868635989,
+      "sha1Originale": "bb4c370ae35ee0b944b0bc8e472959b6790200ed",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Vichingpedia",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-citta-scienza-aa077909f0",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Spazi esterni intorno a Corporea",
+      "titoloFonte": "CORPOREA Città della Scienza, Bagnoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:CORPOREA_Citt%C3%A0_della_Scienza,_Bagnoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/8a/CORPOREA_Citt%C3%A0_della_Scienza%2C_Bagnoli.jpg",
+      "autore": "Photograph: Fabio Donato Prof. Arch. Massimo Pica Ciamarra",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2126,
+        1327
+      ],
+      "dataScattoDichiarata": "2017-03-09 12:42:14",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "creditoRichiesto": "Fabio Donato",
+      "revisioneCommons": 844497672,
+      "sha1Originale": "f96d76d85039df0093d94bf8726c560d6b629cd6",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Esterno poco rappresentativo dell’esperienza del museo; serve un interno di qualità.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Photograph: Fabio Donato Prof. Arch. Massimo Pica Ciamarra",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-citta-scienza",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il cortile di Città della Scienza, a Bagnoli.",
+    "titoloFonte": "Città della Scienza Cortile.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Citt%C3%A0_della_Scienza_Cortile.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Citt%C3%A0_della_Scienza_Cortile.jpg",
+    "autore": "Pinotto992",
+    "licenza": "Pubblico dominio",
+    "licenzaUrl": "https://creativecommons.org/publicdomain/mark/1.0/",
+    "dimensioni": [
+      1600,
+      1200
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Originale sotto 2.000 px sul lato lungo: non proposto per la nuova galleria HD.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": false,
+      "autoreSintetico": "Pinotto992",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 2,
+    "risultatiLetti": 48,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

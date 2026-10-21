@@ -1,0 +1,356 @@
+{
+  "tipo": "tappa",
+  "id": "procida",
+  "nome": "Procida",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-procida",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Procida\" \"Corricella\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-procida-74d841ec3c",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Porto della Corricella a Procida",
+      "titoloFonte": "Corricella 2016, Procida (2).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Corricella_2016,_Procida_(2).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/ad/Corricella_2016%2C_Procida_%282%29.jpg",
+      "autore": "Ekrem Canli",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        13092,
+        5016
+      ],
+      "dataScattoDichiarata": "2016-06-20 14:02:23",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1112770183,
+      "sha1Originale": "92310ce4b1fef162b68a706078646d697cd39f40",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Ekrem Canli",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-procida-74d841ec3c",
+        "esito": "ok",
+        "dimensioni": [
+          13092,
+          5016
+        ],
+        "sha256": "fa260216de64bc1642711e2bd3be4b90c83de4b26d6ca3bb0f632e68eac6c29c"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-procida/foto-procida-74d841ec3c.jpg",
+        "anteprima": "../foto/anteprime/tappa-procida/foto-procida-74d841ec3c.jpg",
+        "sha256": "fa260216de64bc1642711e2bd3be4b90c83de4b26d6ca3bb0f632e68eac6c29c",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-procida-87d95c57e1",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Case colorate e barche della Corricella",
+      "titoloFonte": "Procida Corricella.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Procida_Corricella.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/79/Procida_Corricella.jpg",
+      "autore": "Porfirio",
+      "licenza": "CC BY 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/2.0",
+      "dimensioni": [
+        3072,
+        2303
+      ],
+      "dataScattoDichiarata": "2008-02-18 20:27:36",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1211070798,
+      "sha1Originale": "fc70577c40d819b714583de2d7d8c19b8445dbdf",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Veduta simile a quella già scelta o meno leggibile; evitare ripetizioni.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Porfirio",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-procida-c9480e0f4d",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Terra Murata vista dalla costa",
+      "titoloFonte": "Procida terra murata.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Procida_terra_murata.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/a1/Procida_terra_murata.jpg",
+      "autore": "No machine-readable author provided. Retaggio assumed (based on copyright claims).",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "dimensioni": [
+        1280,
+        960
+      ],
+      "dataScattoDichiarata": "12 April 2004 (according to Exif data)",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "autore-desunto",
+        "contesto-parziale"
+      ],
+      "revisioneCommons": 1163722902,
+      "sha1Originale": "88eebc506e2a68c352a603612898fd56d0fc309d",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [
+          "autore-desunto"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "No machine-readable author provided. Retaggio assumed (based on copyright claims).",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-procida-4b9c7a023c",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Scalette e case colorate di Procida.",
+      "titoloFonte": "Comune di Procida - 2023-09-26 09-37-57 007.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Comune_di_Procida_-_2023-09-26_09-37-57_007.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/2e/Comune_di_Procida_-_2023-09-26_09-37-57_007.jpg",
+      "autore": "Acquario51",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2000,
+        3008
+      ],
+      "dataScattoDichiarata": "2017-02-20",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Acquario51",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-procida-4b9c7a023c",
+        "esito": "ok",
+        "dimensioni": [
+          2000,
+          3008
+        ],
+        "sha256": "95ba50e73d8a4961002154782e1cb97a37a0a1cfc41e3f300f72f36927e331fb"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-procida/foto-procida-4b9c7a023c.jpg",
+        "anteprima": "../foto/anteprime/tappa-procida/foto-procida-4b9c7a023c.jpg",
+        "sha256": "95ba50e73d8a4961002154782e1cb97a37a0a1cfc41e3f300f72f36927e331fb",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-procida-df4919e3e6",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Reti e attività del porto di Corricella, con il borgo alle spalle.",
+      "titoloFonte": "Comune di Procida - 2023-09-26 09-37-57 008.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Comune_di_Procida_-_2023-09-26_09-37-57_008.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/85/Comune_di_Procida_-_2023-09-26_09-37-57_008.jpg",
+      "autore": "Acquario51",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2592,
+        1779
+      ],
+      "dataScattoDichiarata": "2017-02-20",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Acquario51",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-procida-df4919e3e6",
+        "esito": "ok",
+        "dimensioni": [
+          2592,
+          1779
+        ],
+        "sha256": "3fe8f7817fe6466a3c6e380538f8630c2e278e8b690405bf5b6a1792a306bafb"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-procida/foto-procida-df4919e3e6.jpg",
+        "anteprima": "../foto/anteprime/tappa-procida/foto-procida-df4919e3e6.jpg",
+        "sha256": "3fe8f7817fe6466a3c6e380538f8630c2e278e8b690405bf5b6a1792a306bafb",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-procida-fc12a17c39",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Il fronte colorato di Corricella a Procida, visto dal mare.",
+      "titoloFonte": "United colors of Procida",
+      "pagina": "https://www.flickr.com/photos/125601701@N03/15180581833/",
+      "originale": "https://live.staticflickr.com/7539/15180581833_c9a83e3fb0_o.jpg",
+      "autore": "Hervé Simon",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "dimensioni": [
+        5500,
+        2801
+      ],
+      "dataScattoDichiarata": null,
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Hervé Simon",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-procida-fc12a17c39",
+        "esito": "ok",
+        "dimensioni": [
+          5500,
+          2801
+        ],
+        "sha256": "554c70b36fff3193bd7f4c55ee2f8a339473338112da64e536470c47cc5328f9"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-procida/foto-procida-fc12a17c39.jpg",
+        "anteprima": "../foto/anteprime/tappa-procida/foto-procida-fc12a17c39.jpg",
+        "sha256": "554c70b36fff3193bd7f4c55ee2f8a339473338112da64e536470c47cc5328f9",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-procida",
+    "soggetto": "panorama",
+    "didascaliaProposta": "La Marina della Corricella, a Procida.",
+    "titoloFonte": "Procida Marina Corricella.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Procida_Marina_Corricella.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Procida_Marina_Corricella.jpg",
+    "autore": "Velvet",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      5520,
+      2800
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Scatto simile alla nuova proposta: evitare ripetizioni dello stesso punto di vista.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Velvet",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-procida-74d841ec3c",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-procida-4b9c7a023c",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-procida-df4919e3e6",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 4,
+      "foto": "foto-procida-fc12a17c39",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "La sequenza distingue vista dall’alto, architettura, attività del porto e fronte dal mare.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "foto-procida-74d841ec3c",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 4,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 0,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 4,
+    "risultatiLetti": 103,
+    "pagineFotograficheFlickrVerificate": 9,
+    "riscontriFlickr": "../ricerche/2026-10-20-flickr.json",
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

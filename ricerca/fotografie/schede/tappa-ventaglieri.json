@@ -1,0 +1,111 @@
+{
+  "tipo": "tappa",
+  "id": "ventaglieri",
+  "nome": "Parco dei Ventaglieri",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-ventaglieri",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Ventaglieri\" filetype:bitmap",
+      "risultatiEsaminati": 4
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-ventaglieri-20ec24d720",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Decorazione sul suolo nella parte bassa dei Ventaglieri",
+      "titoloFonte": "Parco dei Ventaglieri, lower side, Napoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_dei_Ventaglieri,_lower_side,_Napoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Parco_dei_Ventaglieri%2C_lower_side%2C_Napoli.jpg",
+      "autore": "Mattia Luigi Nappi",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3840,
+        2880
+      ],
+      "dataScattoDichiarata": "2022-12-06",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee"
+      ],
+      "revisioneCommons": 1131326476,
+      "sha1Originale": "08d49f58a1ed175b776fa993d0058f16be3856c0",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Il pavimento con graffiti non presenta adeguatamente il parco.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mattia Luigi Nappi",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-ventaglieri",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il Parco dei Ventaglieri, a Montesanto.",
+    "titoloFonte": "Parco dei Ventaglieri, upper side, Napoli 01.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Parco_dei_Ventaglieri,_upper_side,_Napoli_01.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/1/11/Parco_dei_Ventaglieri%2C_upper_side%2C_Napoli_01.jpg",
+    "autore": "Mattia Luigi Nappi",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      4608,
+      3456
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Inquadratura poco valorizzante del parco; non raggiunge il livello richiesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Mattia Luigi Nappi",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Cercare una veduta d’insieme nitida, luminosa e riferita al punto esatto."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 4,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

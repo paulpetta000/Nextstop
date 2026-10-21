@@ -1,0 +1,298 @@
+{
+  "tipo": "tappa",
+  "id": "lungomare",
+  "nome": "Il lungomare: via Partenope, via Caracciolo e Villa Comunale",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "via-partenope",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Villa Comunale\" \"Naples\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-lungomare-53c18cca69",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Viale della Villa Comunale",
+      "titoloFonte": "Villa Comunale - panoramio (3).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Villa_Comunale_-_panoramio_(3).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/11/Villa_Comunale_-_panoramio_%283%29.jpg",
+      "autore": "Mister No",
+      "licenza": "CC BY 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/3.0",
+      "dimensioni": [
+        1656,
+        1080
+      ],
+      "dataScattoDichiarata": "Taken on 13 September 2015",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "creditoRichiesto": "Mister No",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mister No",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-lungomare-83b56e1d1a",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Tempietto nella Villa Comunale",
+      "titoloFonte": "Villa Comunale di Napoli100 3011.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Villa_Comunale_di_Napoli100_3011.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/4e/Villa_Comunale_di_Napoli100_3011.JPG",
+      "autore": "Johnnyrotten",
+      "licenza": "Public domain",
+      "licenzaUrl": "https://commons.wikimedia.org/wiki/File:Villa_Comunale_di_Napoli100_3011.JPG#Licensing",
+      "dimensioni": [
+        2304,
+        1728
+      ],
+      "dataScattoDichiarata": null,
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce o stato dei luoghi poco invitanti; preferita una passeggiata luminosa.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "Johnnyrotten",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-lungomare-478388ac17",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Passeggiata alberata nella Villa Comunale",
+      "titoloFonte": "Naples, Italy 20230626 127.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Naples,_Italy_20230626_127.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/00/Naples%2C_Italy_20230626_127.jpg",
+      "autore": "Argo Navis",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4000,
+        2250
+      ],
+      "dataScattoDichiarata": "2023-06-26 18:18:29",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "contesto-parziale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Viale molto in ombra, meno invitante della vista sul lungomare.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Argo Navis",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-lungomare-cdd0a39019",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Vesuvio e piccole barche visti dal lungomare di Napoli.",
+      "titoloFonte": "Mount Vesuvius.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Mount_Vesuvius.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/bd/Mount_Vesuvius.jpg",
+      "autore": "Purnawibawa",
+      "licenza": "CC BY 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dimensioni": [
+        5163,
+        2905
+      ],
+      "dataScattoDichiarata": "2023-09-01 01:44:43",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Purnawibawa",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-lungomare-cdd0a39019",
+        "esito": "ok",
+        "dimensioni": [
+          5163,
+          2905
+        ],
+        "sha256": "3bcc19e71079beb0c69fbf386a482fd6b3e5cd018e830ed83978a0937687096b"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-lungomare/foto-lungomare-cdd0a39019.jpg",
+        "anteprima": "../foto/anteprime/tappa-lungomare/foto-lungomare-cdd0a39019.jpg",
+        "sha256": "3bcc19e71079beb0c69fbf386a482fd6b3e5cd018e830ed83978a0937687096b",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-lungomare-b59c0a0fbc",
+      "soggetto": "panorama",
+      "didascaliaProposta": "Lungomare e Castel dell’Ovo dall’alto, da via Ortensio.",
+      "titoloFonte": "Le Strade di Napoli. Via Ortensio. (6221).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Le_Strade_di_Napoli._Via_Ortensio._(6221).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Le_Strade_di_Napoli._Via_Ortensio._%286221%29.jpg",
+      "autore": "Giuseppe Guida",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        6000,
+        4000
+      ],
+      "dataScattoDichiarata": "2022-01-08 14:24:26",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Giuseppe Guida",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-lungomare-b59c0a0fbc",
+        "esito": "ok",
+        "dimensioni": [
+          6000,
+          4000
+        ],
+        "sha256": "762e24dc016f6730dfc0db69f2aa947349313e52c681bac9f32120205ed33c18"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-lungomare/foto-lungomare-b59c0a0fbc.jpg",
+        "anteprima": "../foto/anteprime/tappa-lungomare/foto-lungomare-b59c0a0fbc.jpg",
+        "sha256": "762e24dc016f6730dfc0db69f2aa947349313e52c681bac9f32120205ed33c18",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:via-partenope",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Via Partenope e la scogliera verso Castel dell'Ovo.",
+    "titoloFonte": "Via Parthenope.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Via_Parthenope.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/5/5f/Via_Parthenope.jpg",
+    "autore": "Baku",
+    "licenza": "CC BY-SA 4.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "dimensioni": [
+      4032,
+      1908
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Baku",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:via-partenope",
+      "esito": "ok",
+      "dimensioni": [
+        4032,
+        1908
+      ],
+      "sha256": "e01486af78df5e9af894b4d5929e40aac1cd7d54f280b0f5b4998f0367394677"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-lungomare/esistente-via-partenope.jpg",
+      "anteprima": "../foto/anteprime/tappa-lungomare/esistente-via-partenope.jpg",
+      "sha256": "e01486af78df5e9af894b4d5929e40aac1cd7d54f280b0f5b4998f0367394677",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "esistente:via-partenope",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-lungomare-b59c0a0fbc",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-lungomare-cdd0a39019",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Una quarta scena può mostrare un altro tratto della passeggiata; la panoramica da via Ortensio va sempre indicata come vista dall’alto.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "esistente:via-partenope",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

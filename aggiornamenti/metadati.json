@@ -1,0 +1,57 @@
+{
+  "versione": 1,
+  "creato": "2026-10-19",
+  "base_commit": "96e480dd95e45f4133fa513ad66ab30597c0a2cb",
+  "ambito": "Le 60 tappe/gite e i 32 locali selezionati, più 14 gruppi di trasporto realmente usati. Regate e nuovi luoghi esclusi.",
+  "procedura": "aggiornamenti/PROCEDURA.md",
+  "significato_date": "creato e verifica_accesso non certificano gli orari. ultimo_controllo_completo resta null finché non sono confrontati dati, nuove pubblicazioni ed eccezioni.",
+  "risoluzione_fonti": "fonti_esistenti contiene ID di src/data/fonti.yaml, unica fonte degli URL già presenti. catalogo_dati rimanda a fonti-dati.yaml. I canali aggiunti non cambiano le fonti pubbliche del sito.",
+  "frequenze": {
+    "trasporti_giorni": 7,
+    "luoghi_locali_giorni": 14,
+    "anticipo_scadenza_giorni": 3,
+    "fallimenti_ritentare_entro_giorni": 3
+  },
+  "candidati_esclusi": [
+    {
+      "url": "https://www.50kalo.it/info_repubblica.php",
+      "motivo": "Sede Piazza della Repubblica 2: diversa da quella selezionata, Piazza Sannazaro 201b."
+    },
+    {
+      "url": "https://sangregorioarmeno.napoli.it/",
+      "motivo": "Guida indipendente, non il gestore del monastero: non promossa a fonte ufficiale degli orari."
+    }
+  ],
+  "limiti": [
+    "Nessun aggiornamento degli orari applicativi, nessun processo pianificato e nessun rilascio.",
+    "Apertura riuscita non equivale a fonte letta integralmente né a controllo concluso. Il rapporto iniziale riporta i limiti dello strumento.",
+    "Le ricerche non dimostrano assenza assoluta di nuove pagine; conservare query, copertura degli indici e ogni lacuna."
+  ],
+  "ritentativo_fonti": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "verifiche_personali": "da-verificare/fonti-orari.md",
+    "url_ritentati": 50,
+    "esiti": {
+      "alternativa_ufficiale": 10,
+      "recuperata": 9,
+      "non_verificabile": 24,
+      "parziale": 7
+    },
+    "nota": "Non cambia ultimo_controllo_completo né rinvia le scadenze; usare il rapporto corrente per gli esiti accesso, lasciando immutato il rapporto iniziale.",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  },
+  "riesame_accessi_esteso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml",
+    "elenco_personale": "da-verificare/fonti-orari.md",
+    "indirizzi_originari": 54,
+    "esiti_accesso": {
+      "alternativa_ufficiale_leggibile": 31,
+      "originale_leggibile": 13,
+      "nessuna_alternativa_utile_leggibile": 10
+    },
+    "locali_senza_fonte_ufficiale_verificabile": 2,
+    "nota": "54 URL = 50 precedenti + 4 siti della vecchia lista; gli altri due locali non hanno fonte ufficiale verificabile. Le alternative possono essere parziali o storiche. Conteggio di URL di partenza, non di domini distinti."
+  }
+}

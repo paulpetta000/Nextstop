@@ -1,0 +1,1905 @@
+[
+  {
+    "id": "anm-portale",
+    "nome": "ANM: portale corrente e notizie",
+    "ruolo": "avvisi_e_scoperta",
+    "url": "https://www.anm.it/s/?language=it",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "non_verificabile",
+      "url_finale": "https://www.anm.it/s/?language=it",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento."
+    }
+  },
+  {
+    "id": "anm-funicolari",
+    "nome": "ANM: funicolari nel portale corrente",
+    "ruolo": "indice_orari",
+    "url": "https://www.anm.it/s/funicolari?language=it",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "non_verificabile",
+      "url_finale": "https://www.anm.it/s/funicolari?language=it",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento."
+    }
+  },
+  {
+    "id": "eav-ferrovie",
+    "nome": "EAV: indice aggiornabile degli orari ferroviari",
+    "ruolo": "indice_documenti",
+    "url": "https://www.eavsrl.it/orari-linee-ferroviarie/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.eavsrl.it/orari-linee-ferroviarie/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "eav-bus",
+    "nome": "EAV: indice aggiornabile degli orari autobus",
+    "ruolo": "indice_documenti",
+    "url": "https://www.eavsrl.it/orari-autobus/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.eavsrl.it/orari-autobus/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "eav-avvisi",
+    "nome": "EAV: infomobilità ferroviaria",
+    "ruolo": "avvisi",
+    "url": "https://www.eavsrl.it/infomobilita-ferrovia/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.eavsrl.it/infomobilita-ferrovia/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "eav-news",
+    "nome": "EAV: nuove pubblicazioni e comunicati",
+    "ruolo": "notizie",
+    "url": "https://www.eavsrl.it/category/news-home-page/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.eavsrl.it/category/news-home-page/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "rfi-quadri",
+    "nome": "RFI: ricerca dei quadri orario",
+    "ruolo": "indice_documenti",
+    "url": "https://www.rfi.it/it/stazioni/pagine-stazioni/servizi-di-qualita/informazioni-al-pubblico/quadri-orario-on-line.html",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.rfi.it/it/stazioni/pagine-stazioni/servizi-di-qualita/informazioni-al-pubblico/quadri-orario-on-line.html",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "trenitalia-lavori",
+    "nome": "Trenitalia: lavori programmati, filtro Campania",
+    "ruolo": "avvisi",
+    "url": "https://www.trenitalia.com/it/informazioni/lavori-programmati.html",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.trenitalia.com/it/informazioni/lavori-programmati.html",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "trenitalia-info",
+    "nome": "Trenitalia: notizie infomobilità",
+    "ruolo": "avvisi",
+    "url": "https://www.trenitalia.com/it/informazioni/Infomobilita/notizie-infomobilita.html",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.trenitalia.com/it/informazioni/Infomobilita/notizie-infomobilita.html",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "trenitalia-orari",
+    "nome": "Trenitalia: ricerca treni per data e tratta",
+    "ruolo": "ricerca_per_data",
+    "url": "https://www.trenitalia.com/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": null,
+      "esito": "da_aprire",
+      "url_finale": null,
+      "nota": "Collegamento da aprire; non attestato da questo inventario."
+    }
+  },
+  {
+    "id": "caremar-orari",
+    "nome": "Caremar: orari e relative validità",
+    "ruolo": "indice_documenti",
+    "url": "https://shop.caremar.it/it/orari/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://shop.caremar.it/it/orari/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "caremar-avvisi",
+    "nome": "Caremar: avvisi sul servizio",
+    "ruolo": "avvisi",
+    "url": "https://shop.caremar.it/it/avvisi/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://shop.caremar.it/it/avvisi/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "comune-notizie",
+    "nome": "Comune di Napoli: ingresso per notizie e ordinanze",
+    "ruolo": "avvisi_e_scoperta",
+    "url": "https://www.comune.napoli.it/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "non_verificabile",
+      "url_finale": "https://www.comune.napoli.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento."
+    }
+  },
+  {
+    "id": "sansevero-news",
+    "nome": "Sansevero: nuove notizie",
+    "ruolo": "notizie",
+    "url": "https://www.museosansevero.it/news-ed-eventi/news",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.museosansevero.it/news-ed-eventi/news",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "sansevero-orari",
+    "nome": "Sansevero: altro percorso ufficiale agli orari e calendario",
+    "ruolo": "orari_e_calendario",
+    "url": "https://www.museosansevero.it/pianifica-la-visita/orari-e-tariffe",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.museosansevero.it/pianifica-la-visita/orari-e-tariffe",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "santachiara-news",
+    "nome": "Santa Chiara: avvisi nel blog ufficiale",
+    "ruolo": "avvisi",
+    "url": "https://www.monasterodisantachiara.it/blog/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.monasterodisantachiara.it/blog/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "palazzoreale-avvisi",
+    "nome": "Palazzo Reale e Pignatelli: avvisi del gestore",
+    "ruolo": "avvisi",
+    "url": "https://palazzorealedinapoli.org/category/avvisi/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://palazzorealedinapoli.org/category/avvisi/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "girolamini-avvisi",
+    "nome": "Girolamini: archivio degli avvisi",
+    "ruolo": "avvisi",
+    "url": "https://girolamini.cultura.gov.it/category/avvisi-e-news/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://girolamini.cultura.gov.it/category/avvisi-e-news/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "mudd-news",
+    "nome": "MUDD: news del gestore",
+    "ruolo": "notizie",
+    "url": "https://muddnapoli.it/news/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://muddnapoli.it/news/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "mudd-carbonara",
+    "nome": "MUDD: pagina italiana di San Giovanni a Carbonara",
+    "ruolo": "orari_e_accesso",
+    "url": "https://muddnapoli.it/luoghi/san-giovanni-a-carbonara/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://muddnapoli.it/luoghi/san-giovanni-a-carbonara/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "mudd-tetti",
+    "nome": "MUDD: pagina italiana dei Tetti del Duomo",
+    "ruolo": "orari_e_accesso",
+    "url": "https://muddnapoli.it/luoghi/visita-tetti-duomo/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://muddnapoli.it/luoghi/visita-tetti-duomo/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "duomo-liturgia",
+    "nome": "Duomo: orari della Cattedrale e celebrazioni",
+    "ruolo": "orari_e_accesso",
+    "url": "https://duomonapoli.it/vita-liturgica/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://duomonapoli.it/vita-liturgica/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "duomo-visita",
+    "nome": "Duomo: visita culturale, distinta dagli orari liturgici",
+    "ruolo": "orari_e_accesso",
+    "url": "https://duomonapoli.it/pianifica-la-visita/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://duomonapoli.it/pianifica-la-visita/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "caserta-avvisi",
+    "nome": "Reggia di Caserta: visita sicura e avvisi",
+    "ruolo": "avvisi",
+    "url": "https://reggiadicaserta.cultura.gov.it/visita-sicura-e-avvisi/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://reggiadicaserta.cultura.gov.it/visita-sicura-e-avvisi/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "pietrarsa-visita",
+    "nome": "Fondazione FS: visita del Museo di Pietrarsa",
+    "ruolo": "orari_e_accesso",
+    "url": "https://www.fondazionefs.it/it/esplora-il-museo/visita-pietrarsa.html",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.fondazionefs.it/it/esplora-il-museo/visita-pietrarsa.html",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "pietrarsa-news",
+    "nome": "Fondazione FS: notizie del museo",
+    "ruolo": "notizie",
+    "url": "https://www.fondazionefs.it/it/esplora-il-museo/news-eventi.html",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.fondazionefs.it/it/esplora-il-museo/news-eventi.html",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "museicampania-avvisi",
+    "nome": "Musei nazionali Campania: archivio avvisi",
+    "ruolo": "avvisi",
+    "url": "https://museicampania.cultura.gov.it/category/avvisi/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "non_verificabile",
+      "url_finale": "https://museicampania.cultura.gov.it/category/avvisi/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento."
+    }
+  },
+  {
+    "id": "filangieri-attuale",
+    "nome": "Filangieri: destinazione del rinvio del dominio precedente",
+    "ruolo": "ingresso_gestore",
+    "url": "https://filangierimuseo.it/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://filangierimuseo.it/en/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "chitarra-news",
+    "nome": "La Chitarra: notizie del locale",
+    "ruolo": "notizie",
+    "url": "https://www.osterialachitarra.it/news/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.osterialachitarra.it/news/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "pintauro-news",
+    "nome": "Pintauro: blog e notizie",
+    "ruolo": "notizie",
+    "url": "https://www.pasticceriapintauro1785.it/blog/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.pasticceriapintauro1785.it/blog/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "petrucci-news",
+    "nome": "Palazzo Petrucci: notizie delle diverse sedi",
+    "ruolo": "notizie",
+    "url": "https://palazzopetrucci.it/news/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://palazzopetrucci.it/news/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "kalo-sannazzaro",
+    "nome": "50 Kalò: contatti della sede Sannazzaro sul dominio con www",
+    "ruolo": "orari_e_accesso",
+    "url": "https://www.50kalo.it/info.php",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.50kalo.it/info.php",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "gesu-nuovo-diocesi",
+    "nome": "Diocesi: scheda della parrocchia al Gesù Nuovo",
+    "ruolo": "identita_e_contatti",
+    "url": "https://www.chiesadinapoli.it/wd-annuario-enti/1-decanato-30-parrocchie-centro-storico-forcella-mercato-procida-1301/parrocchia-immacolata-al-gesu-nuovo-napoli-241/",
+    "autorita": "ente_competente",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.chiesadinapoli.it/wd-annuario-enti/1-decanato-30-parrocchie-centro-storico-forcella-mercato-procida-1301/parrocchia-immacolata-al-gesu-nuovo-napoli-241/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "gesuiti-chiese",
+    "nome": "Gesuiti: elenco delle chiese e relativi gestori",
+    "ruolo": "identita_e_scoperta",
+    "url": "https://gesuiti.it/cosa-facciamo/chiese/",
+    "autorita": "gestore",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://gesuiti.it/cosa-facciamo/chiese/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    }
+  },
+  {
+    "id": "sangregorio-italia",
+    "nome": "Italia.it: scheda istituzionale di San Gregorio Armeno",
+    "ruolo": "identita_e_contatti",
+    "url": "https://www.italia.it/it/campania/napoli/chiesa-di-san-gregorio-armeno",
+    "autorita": "ente_turistico_nazionale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.italia.it/it/campania/napoli/chiesa-di-san-gregorio-armeno",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Fonte istituzionale di contesto; non risolve da sola gli orari del gestore."
+  },
+  {
+    "id": "gestore-www-italia-it",
+    "nome": "Ingresso del sito: Ministero del Turismo (italia.it)",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.italia.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.italia.it/de",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-tesorosangennaro-it",
+    "nome": "Ingresso del sito: Museo del Tesoro di San Gennaro",
+    "ruolo": "ingresso_gestore",
+    "url": "https://tesorosangennaro.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "non_verificabile",
+      "url_finale": "https://tesorosangennaro.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-museosansevero-it",
+    "nome": "Ingresso del sito: Museo Cappella Sansevero",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.museosansevero.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.museosansevero.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-monasterodisantachiara-it",
+    "nome": "Ingresso del sito: Monastero di Santa Chiara",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.monasterodisantachiara.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.monasterodisantachiara.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-piomontedellamisericordia-it",
+    "nome": "Ingresso del sito: Pio Monte della Misericordia",
+    "ruolo": "ingresso_gestore",
+    "url": "https://piomontedellamisericordia.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://piomontedellamisericordia.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-museoarcheologiconapoli-it",
+    "nome": "Ingresso del sito: Museo Archeologico Nazionale di Napoli",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.museoarcheologiconapoli.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.museoarcheologiconapoli.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-cultura-gov-it",
+    "nome": "Ingresso del sito: Ministero della Cultura",
+    "ruolo": "ingresso_gestore",
+    "url": "https://cultura.gov.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://cultura.gov.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-laneapolissotterrata-it",
+    "nome": "Ingresso del sito: La Neapolis Sotterrata (San Lorenzo Maggiore)",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.laneapolissotterrata.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "non_verificabile",
+      "url_finale": "https://www.laneapolissotterrata.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-napolisotterranea-org",
+    "nome": "Ingresso del sito: Napoli Sotterranea",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.napolisotterranea.org/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.napolisotterranea.org/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-madrenapoli-it",
+    "nome": "Ingresso del sito: Museo Madre",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.madrenapoli.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.madrenapoli.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-napoliforme-comune-napoli-it",
+    "nome": "Ingresso del sito: NapoliForMe, Comune di Napoli",
+    "ruolo": "ingresso_gestore",
+    "url": "https://napoliforme.comune.napoli.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://napoliforme.comune.napoli.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-palazzorealedinapoli-org",
+    "nome": "Ingresso del sito: Palazzo Reale di Napoli",
+    "ruolo": "ingresso_gestore",
+    "url": "https://palazzorealedinapoli.org/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://palazzorealedinapoli.org/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-teatrosancarlo-it",
+    "nome": "Ingresso del sito: Teatro di San Carlo",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.teatrosancarlo.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "non_verificabile",
+      "url_finale": "https://www.teatrosancarlo.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-comune-napoli-it",
+    "nome": "Ingresso del sito: Comune di Napoli",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.comune.napoli.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "non_verificabile",
+      "url_finale": "https://www.comune.napoli.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-metroart-anm-it",
+    "nome": "Ingresso del sito: ANM, Metroart",
+    "ruolo": "ingresso_gestore",
+    "url": "https://metroart.anm.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://metroart.anm.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-galleriaborbonica-com",
+    "nome": "Ingresso del sito: Galleria Borbonica",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.galleriaborbonica.com/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.galleriaborbonica.com/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www2-anm-it",
+    "nome": "Ingresso del sito: ANM, Azienda Napoletana Mobilità",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www2.anm.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www2.anm.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-dadom-okticket-it",
+    "nome": "Ingresso del sito: DaDoM, Stazione Zoologica Anton Dohrn",
+    "ruolo": "ingresso_gestore",
+    "url": "https://dadom.okticket.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://dadom.okticket.it/en/biglietti/detail/247/ticket-aquarium-dadom",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-catacombedinapoli-it",
+    "nome": "Ingresso del sito: Catacombe di Napoli",
+    "ruolo": "ingresso_gestore",
+    "url": "https://catacombedinapoli.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://catacombedinapoli.it/it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-cimiterodellefontanelle-it",
+    "nome": "Ingresso del sito: Cimitero delle Fontanelle",
+    "ruolo": "ingresso_gestore",
+    "url": "https://cimiterodellefontanelle.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://cimiterodellefontanelle.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-capodimonte-cultura-gov-it",
+    "nome": "Ingresso del sito: Museo e Real Bosco di Capodimonte",
+    "ruolo": "ingresso_gestore",
+    "url": "https://capodimonte.cultura.gov.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://capodimonte.cultura.gov.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-museicampania-cultura-gov-it",
+    "nome": "Ingresso del sito: Direzione regionale Musei nazionali Campania",
+    "ruolo": "ingresso_gestore",
+    "url": "https://museicampania.cultura.gov.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://museicampania.cultura.gov.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-areamarinaprotettagaiola-it",
+    "nome": "Ingresso del sito: Area Marina Protetta Parco Sommerso di Gaiola",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.areamarinaprotettagaiola.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.areamarinaprotettagaiola.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-cittadellascienza-it",
+    "nome": "Ingresso del sito: Città della Scienza",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.cittadellascienza.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "non_verificabile",
+      "url_finale": "https://www.cittadellascienza.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-domasandomenicomaggiore-it",
+    "nome": "Ingresso del sito: DOMA · San Domenico Maggiore (Opera San Domenico Maggiore Onlus)",
+    "ruolo": "ingresso_gestore",
+    "url": "https://domasandomenicomaggiore.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://domasandomenicomaggiore.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-purgatorioadarco-it",
+    "nome": "Ingresso del sito: Santa Maria delle Anime del Purgatorio ad Arco",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.purgatorioadarco.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.purgatorioadarco.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-girolamini-cultura-gov-it",
+    "nome": "Ingresso del sito: Complesso monumentale dei Girolamini (Ministero della Cultura)",
+    "ruolo": "ingresso_gestore",
+    "url": "https://girolamini.cultura.gov.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://girolamini.cultura.gov.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-muddnapoli-it",
+    "nome": "Ingresso del sito: MUDD · Museo Diocesano Diffuso di Napoli",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.muddnapoli.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://muddnapoli.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-museofilangieri-it",
+    "nome": "Ingresso del sito: Museo Civico Gaetano Filangieri",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.museofilangieri.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://filangierimuseo.it/en/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-ortobotaniconapoli-it",
+    "nome": "Ingresso del sito: Orto Botanico di Napoli (Università Federico II)",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.ortobotaniconapoli.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.ortobotaniconapoli.it/it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-mostradoltremare-it",
+    "nome": "Ingresso del sito: Mostra d'Oltremare",
+    "ruolo": "ingresso_gestore",
+    "url": "https://mostradoltremare.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://mostradoltremare.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-pompeiisites-org",
+    "nome": "Ingresso del sito: Parco Archeologico di Pompei",
+    "ruolo": "ingresso_gestore",
+    "url": "https://pompeiisites.org/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://pompeiisites.org/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-eavsrl-it",
+    "nome": "Ingresso del sito: EAV",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.eavsrl.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": null,
+      "esito": "da_aprire",
+      "url_finale": null,
+      "nota": "Collegamento da aprire; non attestato da questo inventario."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-ercolano-cultura-gov-it",
+    "nome": "Ingresso del sito: Parco Archeologico di Ercolano",
+    "ruolo": "ingresso_gestore",
+    "url": "https://ercolano.cultura.gov.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://ercolano.cultura.gov.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-parconazionaledelvesuvio-it",
+    "nome": "Ingresso del sito: Parco Nazionale del Vesuvio",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.parconazionaledelvesuvio.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.parconazionaledelvesuvio.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-museicapri-cultura-gov-it",
+    "nome": "Ingresso del sito: Musei e Parchi archeologici di Capri",
+    "ruolo": "ingresso_gestore",
+    "url": "https://museicapri.cultura.gov.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "non_verificabile",
+      "url_finale": "https://museicapri.cultura.gov.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Non attribuire il problema al sito senza distinguere JavaScript, timeout, blocco HTTP o limite dello strumento."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-shop-caremar-it",
+    "nome": "Ingresso del sito: Caremar",
+    "ruolo": "ingresso_gestore",
+    "url": "https://shop.caremar.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": null,
+      "esito": "da_aprire",
+      "url_finale": null,
+      "nota": "Collegamento da aprire; non attestato da questo inventario."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-castelloaragoneseischia-com",
+    "nome": "Ingresso del sito: Castello Aragonese d'Ischia",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.castelloaragoneseischia.com/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.castelloaragoneseischia.com/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-reggiadicaserta-cultura-gov-it",
+    "nome": "Ingresso del sito: Reggia di Caserta (Ministero della Cultura)",
+    "ruolo": "ingresso_gestore",
+    "url": "https://reggiadicaserta.cultura.gov.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://reggiadicaserta.cultura.gov.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-fondazionefs-it",
+    "nome": "Ingresso del sito: Fondazione FS Italiane · Museo Nazionale Ferroviario di Pietrarsa",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.fondazionefs.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.fondazionefs.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-museocorreale-it",
+    "nome": "Ingresso del sito: Museo Correale di Terranova",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.museocorreale.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.museocorreale.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-damichele-net",
+    "nome": "Ingresso del sito: L'Antica Pizzeria da Michele",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.damichele.net/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.damichele.net/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-anticapizzeriaportalba-com",
+    "nome": "Ingresso del sito: Antica Pizzeria Port'Alba",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.anticapizzeriaportalba.com/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.anticapizzeriaportalba.com/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-anticapizzeriadimatteo-it",
+    "nome": "Ingresso del sito: Antica Pizzeria Di Matteo",
+    "ruolo": "ingresso_gestore",
+    "url": "https://anticapizzeriadimatteo.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://anticapizzeriadimatteo.it/en/home-english/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-osterialachitarra-it",
+    "nome": "Ingresso del sito: Osteria La Chitarra",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.osterialachitarra.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.osterialachitarra.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-lalocandagesuvecchionapoli-it",
+    "nome": "Ingresso del sito: La Locanda Gesù Vecchio",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.lalocandagesuvecchionapoli.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.lalocandagesuvecchionapoli.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-dicostanzopasticceria-it",
+    "nome": "Ingresso del sito: Pasticceria Di Costanzo",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.dicostanzopasticceria.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.dicostanzopasticceria.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-pizzeriabrandi-com",
+    "nome": "Ingresso del sito: Pizzeria Brandi",
+    "ruolo": "ingresso_gestore",
+    "url": "https://pizzeriabrandi.com/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://pizzeriabrandi.com/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-sorbillo-it",
+    "nome": "Ingresso del sito: Gino Sorbillo",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.sorbillo.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.sorbillo.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-hosteriatoledo-it",
+    "nome": "Ingresso del sito: Hosteria Toledo",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.hosteriatoledo.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.hosteriatoledo.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-osteria-il-gobbetto3-webnode-it",
+    "nome": "Ingresso del sito: Osteria Il Gobbetto",
+    "ruolo": "ingresso_gestore",
+    "url": "https://osteria-il-gobbetto3.webnode.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://osteria-il-gobbetto3.webnode.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-trattorianennella-it",
+    "nome": "Ingresso del sito: Trattoria da Nennella",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.trattorianennella.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.trattorianennella.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-pasticceriapintauro1785-it",
+    "nome": "Ingresso del sito: Pasticceria Pintauro",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.pasticceriapintauro1785.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.pasticceriapintauro1785.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-50kalo-it",
+    "nome": "Ingresso del sito: 50 Kalò",
+    "ruolo": "ingresso_gestore",
+    "url": "https://50kalo.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://50kalo.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-pizzeriasalvo-it",
+    "nome": "Ingresso del sito: Pizzeria Salvo",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.pizzeriasalvo.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.pizzeriasalvo.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-ostariapignatelli-com",
+    "nome": "Ingresso del sito: Ostaria Pignatelli",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.ostariapignatelli.com/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.ostariapignatelli.com/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-lacantinella-it",
+    "nome": "Ingresso del sito: La Cantinella",
+    "ruolo": "ingresso_gestore",
+    "url": "https://lacantinella.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://lacantinella.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-labersagliera-it",
+    "nome": "Ingresso del sito: La Bersagliera",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.labersagliera.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.labersagliera.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-lascialuppa-net",
+    "nome": "Ingresso del sito: La Scialuppa",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.lascialuppa.net/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.lascialuppa.net/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-napoli-terrazzacalabritto-it",
+    "nome": "Ingresso del sito: Terrazza Calabritto",
+    "ruolo": "ingresso_gestore",
+    "url": "https://napoli.terrazzacalabritto.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://napoli.terrazzacalabritto.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-chaletciro1952-com",
+    "nome": "Ingresso del sito: Chalet Ciro 1952",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.chaletciro1952.com/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.chaletciro1952.com/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-grancaffelacaffettiera-com",
+    "nome": "Ingresso del sito: Gran Caffè La Caffettiera",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.grancaffelacaffettiera.com/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.grancaffelacaffettiera.com/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-gorizia1916-com",
+    "nome": "Ingresso del sito: Pizzeria Gorizia 1916",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.gorizia1916.com/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.gorizia1916.com/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-bellaviavomero-it",
+    "nome": "Ingresso del sito: Pasticceria Bellavia",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.bellaviavomero.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.bellaviavomero.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-meatin-it",
+    "nome": "Ingresso del sito: Meatin",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.meatin.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.meatin.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-pizzeriestarita-it",
+    "nome": "Ingresso del sito: Pizzerie Starita",
+    "ruolo": "ingresso_gestore",
+    "url": "https://pizzeriestarita.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://pizzeriestarita.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-concettinaaitresanti-com",
+    "nome": "Ingresso del sito: Concettina ai Tre Santi",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.concettinaaitresanti.com/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.concettinaaitresanti.com/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-pasticceriapoppella-com",
+    "nome": "Ingresso del sito: Pasticceria Poppella",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.pasticceriapoppella.com/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.pasticceriapoppella.com/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-palazzopetrucci-it",
+    "nome": "Ingresso del sito: Palazzo Petrucci",
+    "ruolo": "ingresso_gestore",
+    "url": "https://palazzopetrucci.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://palazzopetrucci.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-tufotrattoria-it",
+    "nome": "Ingresso del sito: Tufò",
+    "ruolo": "ingresso_gestore",
+    "url": "https://tufotrattoria.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://tufotrattoria.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-ristoranteafenestella-it",
+    "nome": "Ingresso del sito: Ristorante 'A Fenestella",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.ristoranteafenestella.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.ristoranteafenestella.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-trattoriadacicciotto-it",
+    "nome": "Ingresso del sito: Cicciotto a Marechiaro",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.trattoriadacicciotto.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.trattoriadacicciotto.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "gestore-www-macellegria-it",
+    "nome": "Ingresso del sito: Macellegria",
+    "ruolo": "ingresso_gestore",
+    "url": "https://www.macellegria.it/",
+    "autorita": "ereditata_da_fonti_yaml",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.macellegria.it/",
+      "nota": "Apertura riuscita; non equivale alla lettura integrale né al confronto completo degli orari."
+    },
+    "nota": "Seguire i collegamenti attuali a orari, avvisi, news e documenti. La homepage non sostituisce la lettura di quelle sezioni; controllare anche altre pagine con ricerca sul dominio."
+  },
+  {
+    "id": "ritentativo-01",
+    "nome": "Alternativa ufficiale: tp-anm-centrale",
+    "ruolo": "confronto_da_completare",
+    "url": "https://www2.anm.it/index.php?Itemid=383&id=81&option=com_content&task=view",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www2.anm.it/index.php?Itemid=383&id=81&option=com_content&task=view",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "ritentativo-02",
+    "nome": "Alternativa ufficiale: tp-anm-chiaia",
+    "ruolo": "confronto_da_completare",
+    "url": "https://www2.anm.it/index.php?Itemid=385&id=82&option=com_content&task=view",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www2.anm.it/index.php?Itemid=385&id=82&option=com_content&task=view",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "ritentativo-03",
+    "nome": "Alternativa ufficiale: tp-anm-mergellina",
+    "ruolo": "confronto_da_completare",
+    "url": "https://www2.anm.it/index.php?Itemid=384&id=84&option=com_content&task=view",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www2.anm.it/index.php?Itemid=384&id=84&option=com_content&task=view",
+      "nota": "Contenuto letto nel ritentativo; apertura distinta da conferma della validità attuale. Dettaglio: aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml"
+    }
+  },
+  {
+    "id": "ritentativo-04",
+    "nome": "Alternativa ufficiale: tp-comune-casteldellovo",
+    "ruolo": "candidato_validita_da_confermare",
+    "url": "https://cultura.gov.it/luogo/castel-dell-ovo",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://cultura.gov.it/luogo/castel-dell-ovo",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "ritentativo-05",
+    "nome": "Alternativa ufficiale: tp-comune-villacomunale",
+    "ruolo": "candidato_validita_da_confermare",
+    "url": "https://napoliforme.comune.napoli.it/en/pois/-/poi/Villa-Comunale",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://napoliforme.comune.napoli.it/en/pois/-/poi/Villa-Comunale",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "ritentativo-06",
+    "nome": "Alternativa ufficiale: tp-comune-virgiliano",
+    "ruolo": "candidato_validita_da_confermare",
+    "url": "https://napoliforme.comune.napoli.it/pois/-/poi/Virgiliano-Park",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://napoliforme.comune.napoli.it/pois/-/poi/Virgiliano-Park",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "ritentativo-07",
+    "nome": "Alternativa ufficiale: tp-eav-l1-orario",
+    "ruolo": "confronto_da_completare",
+    "url": "https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "ritentativo-08",
+    "nome": "Alternativa ufficiale: tp-ercolano-biglietti",
+    "ruolo": "confronto_da_completare",
+    "url": "https://ercolano.cultura.gov.it/biglietti/",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://ercolano.cultura.gov.it/biglietti/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "ritentativo-09",
+    "nome": "Alternativa ufficiale: tp-parco-camaldoli",
+    "ruolo": "candidato_validita_da_confermare",
+    "url": "https://static-www.comune.napoli.it/wp-content/uploads/2025/05/orari_dei_parchi.pdf",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://static-www.comune.napoli.it/wp-content/uploads/2025/05/orari_dei_parchi.pdf",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "ritentativo-10",
+    "nome": "Alternativa ufficiale: tp-parco-ventaglieri",
+    "ruolo": "candidato_validita_da_confermare",
+    "url": "https://napoliforme.comune.napoli.it/pois/-/poi/Parco-Ventaglieri",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://napoliforme.comune.napoli.it/pois/-/poi/Parco-Ventaglieri",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "ritentativo-11",
+    "nome": "Alternativa ufficiale: gestore-tesorosangennaro-it",
+    "ruolo": "confronto_da_completare",
+    "url": "https://tesorosangennaro.it/faq/",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://tesorosangennaro.it/faq/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "ritentativo-12",
+    "nome": "Musei nazionali del Vomero",
+    "ruolo": "gestore_contatti_e_ricerca_nuove_pagine",
+    "url": "https://museinazionalivomero.cultura.gov.it/",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://museinazionalivomero.cultura.gov.it/",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "ritentativo-13",
+    "nome": "Scheda comunale Parco del Poggio",
+    "ruolo": "documento_storico_validita_da_confermare",
+    "url": "https://static-www.comune.napoli.it/wp-content/uploads/2025/06/14_parco_del_poggio.pdf",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://static-www.comune.napoli.it/wp-content/uploads/2025/06/14_parco_del_poggio.pdf",
+      "nota": "Ritentativo documentato in aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml. Contenuto leggibile; validità da valutare nel controllo completo."
+    }
+  },
+  {
+    "id": "ritentativo-14",
+    "nome": "Carta della mobilità ANM 2025",
+    "ruolo": "documento_storico_non_conferma_servizio_attuale",
+    "url": "https://www.anm.it/resource/1768990802000/cartadellamobilita25",
+    "autorita": "ufficiale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.anm.it/resource/1768990802000/cartadellamobilita25",
+      "nota": "Carta della mobilità 2025: la sezione a pagina PDF 30 dichiara esplicitamente orari in vigore per il 2024. Contiene ascensori e Monte Echia, ma NON certifica il servizio 2026.",
+      "intermittente": false,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-sanlorenzo",
+    "nome": "sanlorenzo",
+    "url": "https://cultura.gov.it/luogo/complesso-monumentale-di-s-lorenzo-maggiore",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://cultura.gov.it/luogo/complesso-monumentale-di-s-lorenzo-maggiore",
+      "nota": "Scheda MiC con orari ordinari; Artecard concorda e indica l’ultimo ingresso. Non recuperati tutti i turni guidati del gestore.",
+      "intermittente": false,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-sanlorenzo-artecard",
+    "nome": "sanlorenzo-artecard",
+    "url": "https://www.campaniartecard.it/tour-item/complesso-monumentale-san-lorenzo-maggiore-la-neapolis-sotterrata/",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.campaniartecard.it/tour-item/complesso-monumentale-san-lorenzo-maggiore-la-neapolis-sotterrata/",
+      "nota": "Scheda del circuito regionale gestito da Scabec: orari ordinari e ultimo ingresso; non sostituisce eventuali variazioni del giorno.",
+      "intermittente": false,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-sancarlo",
+    "nome": "sancarlo",
+    "url": "https://www.teatrosancarlo.it/wp-content/uploads/2025/06/Calendario-generale-25_26-27-Luglio-_WEB.pdf",
+    "autorita": "ufficiale",
+    "ruolo": "documento_storico_non_conferma_servizio_attuale",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.teatrosancarlo.it/wp-content/uploads/2025/06/Calendario-generale-25_26-27-Luglio-_WEB.pdf",
+      "nota": "PDF ufficiale della stagione 2025/26, sezione visite a pagina PDF 245: turni presenti, subordinati alle attività di palcoscenico. Documento storico, non conferma dicembre 2026.",
+      "intermittente": false,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-castelnuovo",
+    "nome": "castelnuovo",
+    "url": "https://www.campaniartecard.it/tour-item/museo-civico-di-castelnuovo/?lang=en",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.campaniartecard.it/tour-item/museo-civico-di-castelnuovo/?lang=en",
+      "nota": "Scheda inglese Artecard leggibile, con orari e chiusura domenicale. Nessuna data esplicita di efficacia: verificare avvisi recenti del Comune.",
+      "intermittente": false,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-floridiana",
+    "nome": "floridiana",
+    "url": "https://cultura.gov.it/index.php/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://cultura.gov.it/index.php/luogo/museo-della-ceramica-duca-di-martina-in-villa-floridiana",
+      "nota": "Scheda MiC aperta una volta con contenuto completo utile, poi in timeout: accesso intermittente. Aggiornata il 06/08/2026; distingue museo, parco stagionale e ultimo ingresso.",
+      "intermittente": true,
+      "ultimo_tentativo_esito": "non_verificabile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-marechiaro",
+    "nome": "marechiaro",
+    "url": "https://static-www.comune.napoli.it/wp-content/uploads/2025/05/allegato1777550695.pdf",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://static-www.comune.napoli.it/wp-content/uploads/2025/05/allegato1777550695.pdf",
+      "nota": "Ordinanza dirigenziale n.21 del 30/04/2026 (OD/2026/0000725), letta nelle parti operative. Periodi fino al 27/09/2026; clausola di possibile attivazione in ottobre e un riferimento discordante al 2025: non dedurre automaticamente ZTL inattiva oggi.",
+      "intermittente": false,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-parchi",
+    "nome": "parchi",
+    "url": "https://static-www.comune.napoli.it/wp-content/uploads/2025/09/allegato1753165813.pdf",
+    "autorita": "ufficiale",
+    "ruolo": "atto_orari_ordinari_da_incrociare_con_avvisi_successivi",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://static-www.comune.napoli.it/wp-content/uploads/2025/09/allegato1753165813.pdf",
+      "nota": "Ordinanza sindacale del 22/07/2025, ORDSI/2025/0000840, immediatamente esecutiva, sostituisce i provvedimenti in contrasto. Calendari distinti per parchi centrali e Villa Comunale/Virgiliano; regole di chiusura per allerta. Da incrociare con avvisi successivi, non col vecchio prospetto preso da solo.",
+      "intermittente": false,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-cittascienza",
+    "nome": "cittascienza",
+    "url": "https://www.campaniartecard.it/tour-item/citta-della-scienza/",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.campaniartecard.it/tour-item/citta-della-scienza/",
+      "nota": "Scheda Artecard con orario generale; resta da verificare calendario del Planetario, singole componenti e variazioni del gestore.",
+      "intermittente": false,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-montesanto",
+    "nome": "montesanto",
+    "url": "https://www2.anm.it/index.php?Itemid=100&id=83&option=com_content&task=view",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www2.anm.it/index.php?Itemid=100&id=83&option=com_content&task=view",
+      "nota": "Scheda ANM leggibile con orari ordinari storici. Non prova la riapertura dopo la manutenzione del maggio 2026.",
+      "intermittente": false,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-virgilio",
+    "nome": "virgilio",
+    "url": "https://cultura.gov.it/luogo/Parco%20e%20Tomba%20di%20Virgilio",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://cultura.gov.it/luogo/Parco%20e%20Tomba%20di%20Virgilio",
+      "nota": "Scheda MiC leggibile una volta, aggiornata il 16/10/2026, con settimana ordinaria. Avviso sulle aree interdette ancora non leggibile: non certificata riapertura completa.",
+      "intermittente": true,
+      "ultimo_tentativo_esito": "non_verificabile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-capri",
+    "nome": "capri",
+    "url": "https://museicapri.cultura.gov.it/it/villa-jovis/",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://museicapri.cultura.gov.it/it/villa-jovis/",
+      "nota": "Pagina italiana di Villa Jovis letta una volta, poi in timeout. Per gli orari rinvia a Musei Italiani, che restituisce contenitore JavaScript non leggibile. Non verificati tutti i siti della gita.",
+      "intermittente": true,
+      "ultimo_tentativo_esito": "non_verificabile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-barbeqool",
+    "nome": "barbeqool",
+    "url": "https://www.barbeqool.it/",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.barbeqool.it/",
+      "nota": "Sito ufficiale letto: identità, sede e contatti presenti, orari non pubblicati nel contenuto consultabile. Prenotazioni ufficialmente collegate ma solo JavaScript.",
+      "intermittente": false,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-colantuono",
+    "nome": "colantuono",
+    "url": "https://steakhousenapoli.it/",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://steakhousenapoli.it/",
+      "nota": "Sito e pagina Contatti leggibili dopo errore iniziale 403. Indirizzo e telefono coincidono con la vecchia lista; nessuna settimana di orari trovata.",
+      "intermittente": true,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-granfuoco",
+    "nome": "granfuoco",
+    "url": "https://www.granfuocobraceria.it/",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://www.granfuocobraceria.it/",
+      "nota": "Homepage con www recuperata dopo timeout. Contatti e collegamenti ufficiali presenti; orari assenti. Profilo Instagram segnalato dal sito limitato dallo strumento; prenotazioni 403. Collegamento estraneo al ristorante nella pagina non seguito né usato come fonte.",
+      "intermittente": true,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  },
+  {
+    "id": "accessi-estesi-rosetta",
+    "nome": "rosetta",
+    "url": "https://darosetta.it/",
+    "autorita": "ufficiale",
+    "ruolo": "pagina_del_gestore_o_ente_da_confrontare",
+    "verifica_accesso": {
+      "data": "2026-10-19",
+      "esito": "aperta",
+      "url_finale": "https://darosetta.it/",
+      "nota": "Sito ufficiale leggibile, sede via San Biagio dei Librai 80: domenica e lunedì 10:00–15:30; martedì–sabato 10:00–15:00 e 18:00–22:00. Questo risolve il dubbio della vecchia lista sulla dichiarazione del gestore per la domenica.",
+      "intermittente": false,
+      "ultimo_tentativo_esito": "contenuto_leggibile",
+      "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+    }
+  }
+]

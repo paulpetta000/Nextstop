@@ -1,0 +1,244 @@
+{
+  "tipo": "tappa",
+  "id": "tribunali",
+  "nome": "Via dei Tribunali: pizza e cibo di strada",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-tribunali",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Via dei Tribunali\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-tribunali-9bc42e936f",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Via dei Tribunali e campanile di San Pietro a Majella",
+      "titoloFonte": "Napoli - Via dei Tribunali e campanile S. Pietro a Majella.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Via_dei_Tribunali_e_campanile_S._Pietro_a_Majella.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/9b/Napoli_-_Via_dei_Tribunali_e_campanile_S._Pietro_a_Majella.JPG",
+      "autore": "Luca Aless",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1985,
+        2634
+      ],
+      "dataScattoDichiarata": "2014-07-24 10:36:24",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Luca Aless",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-tribunali-9bc42e936f",
+        "esito": "ok",
+        "dimensioni": [
+          1985,
+          2634
+        ],
+        "sha256": "790ab1fb67ed2c99924f386a088a848d0886cbd76eb8ac7031e3359445c30846"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-tribunali/foto-tribunali-9bc42e936f.jpg",
+        "anteprima": "../foto/anteprime/tappa-tribunali/foto-tribunali-9bc42e936f.jpg",
+        "sha256": "790ab1fb67ed2c99924f386a088a848d0886cbd76eb8ac7031e3359445c30846",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-tribunali-b4a7a639d2",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Via dei Tribunali all'incrocio con via delle Zite",
+      "titoloFonte": "Via dei tribunali przy via delle zite.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Via_dei_tribunali_przy_via_delle_zite.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/81/Via_dei_tribunali_przy_via_delle_zite.jpg",
+      "autore": "Panek",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4564,
+        3364
+      ],
+      "dataScattoDichiarata": "2023-10-04 14:27:06",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Panek",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-tribunali-e59359b9f7",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Via dei Tribunali con decorazioni sospese, nel 2023",
+      "titoloFonte": "Via dei Tribunali, Nápoles, Italia, 2023-03-25, DD 103.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Via_dei_Tribunali,_N%C3%A1poles,_Italia,_2023-03-25,_DD_103.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/86/Via_dei_Tribunali%2C_N%C3%A1poles%2C_Italia%2C_2023-03-25%2C_DD_103.jpg",
+      "autore": "Diego Delso",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        7744,
+        5768
+      ],
+      "dataScattoDichiarata": "2023-03-25 13:59:09",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "creditoRichiesto": "Diego Delso",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Nastri e cavi dominano l’inquadratura; non descrive bene la passeggiata.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Diego Delso",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-tribunali-39217e52c0",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Un tratto di via dei Tribunali fra palazzi, botteghe e passanti.",
+      "titoloFonte": "Via Tribunali - Naples - Italy 2015.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Via_Tribunali_-_Naples_-_Italy_2015.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Via_Tribunali_-_Naples_-_Italy_2015.JPG",
+      "autore": "José Luiz",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3292,
+        5176
+      ],
+      "dataScattoDichiarata": "2015-02-05 14:38:51",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "José Luiz",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-tribunali-39217e52c0",
+        "esito": "ok",
+        "dimensioni": [
+          3292,
+          5176
+        ],
+        "sha256": "6fc42128c72437c2f5c6185718ce713cf287ef2f6aed1832eaedfc3e5911d644"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "attribuzioneDichiarata": "© José Luiz Bernardes Ribeiro",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-tribunali/foto-tribunali-39217e52c0.jpg",
+        "anteprima": "../foto/anteprime/tappa-tribunali/foto-tribunali-39217e52c0.jpg",
+        "sha256": "6fc42128c72437c2f5c6185718ce713cf287ef2f6aed1832eaedfc3e5911d644",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-tribunali",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il portico di Palazzo d'Avalos, in via dei Tribunali.",
+    "titoloFonte": "Palazzo d'Avalos o della Guardia. Napoli - Via dei Tribunali.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Palazzo_d%27Avalos_o_della_Guardia._Napoli_-_Via_dei_Tribunali.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/6/66/Palazzo_d%27Avalos_o_della_Guardia._Napoli_-_Via_dei_Tribunali.jpg",
+    "autore": "Armando Mancini",
+    "licenza": "CC BY-SA 2.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "dimensioni": [
+      3534,
+      2651
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Armando Mancini",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-tribunali-9bc42e936f",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-tribunali-39217e52c0",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Mancano 1 fotografie per il minimo di tre; 2 per arrivare a quattro.",
+    "Cercare una scena complementare del luogo esatto, evitando duplicati e fotografie sotto il livello richiesto."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "foto-tribunali-9bc42e936f",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 2,
+    "mancantiPerTre": 1,
+    "mancantiPerQuattro": 2,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

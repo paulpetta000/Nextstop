@@ -1,0 +1,50 @@
+{
+  "tipo": "tappa",
+  "id": "tetti-duomo",
+  "nome": "I tetti del Duomo",
+  "controllato": "2026-10-20",
+  "fotoEsistente": null,
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Duomo\" \"Napoli\" roof filetype:bitmap",
+      "risultatiEsaminati": 4
+    }
+  ],
+  "fotoCandidate": [],
+  "stato": "da-completare",
+  "fontePerRichiesta": "https://muddnapoli.it/luoghi/visita-tetti-duomo/",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 2,
+    "risultatiLetti": 4,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

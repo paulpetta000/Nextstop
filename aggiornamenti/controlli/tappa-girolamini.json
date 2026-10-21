@@ -1,0 +1,61 @@
+{
+  "id": "tappa-girolamini",
+  "nome": "Girolamini, chiesa, museo e biblioteca",
+  "categoria": "citta",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "girolamini"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni",
+    "prezzi_gia_pubblicati"
+  ],
+  "schede": {
+    "orari": "tp-girolamini-orari",
+    "prezzi": "tp-girolamini-prezzi"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-girolamini"
+  ],
+  "canali_scoperta": [
+    "gestore-girolamini-cultura-gov-it",
+    "girolamini-avvisi"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "girolamini.cultura.gov.it"
+    ],
+    "soggetto": "Girolamini, chiesa, museo e biblioteca",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "La stessa pagina distingue periodo fino al 24/10/2026 e periodo dal 25/10/2026. Biblioteca e Chiesa-Museo hanno orari e limiti diversi; il testo applicativo cita già il cambio del 25 ottobre."
+  ],
+  "parti_da_distinguere": [
+    "Chiesa-Museo",
+    "Biblioteca: visite",
+    "Servizi bibliotecari, non orari turistici"
+  ],
+  "pubblicazioni_rilevate": [
+    "girolamini-fino-2026-10-24",
+    "girolamini-inverno-2026"
+  ]
+}

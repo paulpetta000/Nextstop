@@ -1,0 +1,101 @@
+{
+  "tipo": "locale",
+  "id": "fenestella",
+  "nome": "'A Fenestella",
+  "controllato": "2026-10-20",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Fenestella\" restaurant filetype:bitmap",
+      "risultatiEsaminati": 1
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via Marechiaro 23",
+  "stato": "da-completare",
+  "fonteGestore": {
+    "url": "https://www.ristoranteafenestella.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "archivio-escluso-dalla-proposta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.ristoranteafenestella.it/",
+        "immagine": "https://www.ristoranteafenestella.it/wp-content/uploads/2018/12/Paccheri-al-coccio-2-770x550.jpg",
+        "soggettoOsservato": "Paccheri al coccio presentati sul sito",
+        "stato": "esclusa-licenza-non-accertata",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
+      },
+      {
+        "pagina": "https://www.ristoranteafenestella.it/",
+        "immagine": "https://www.ristoranteafenestella.it/wp-content/uploads/2018/12/Risotto-alla-Pescatora-770x550.jpeg",
+        "soggettoOsservato": "Risotto alla pescatora presentato sul sito",
+        "stato": "esclusa-licenza-non-accertata",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
+      }
+    ],
+    "galleria": "https://www.ristoranteafenestella.it/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
+  },
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale.",
+    "Vista realmente godibile dal locale, con punto di ripresa documentato."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": [
+    {
+      "entita": "fenestella",
+      "pagina": "https://www.flickr.com/photos/bludevil/5770481669/",
+      "titolo": "'a fenestella a Marechiaro",
+      "descrizione": "",
+      "autore": "Cristina La Carrubba",
+      "licenza": "tutti-i-diritti-riservati",
+      "licenzaUrl": null,
+      "codiceLicenzaFlickr": 0,
+      "originale": null,
+      "larghezza": 2262,
+      "altezza": 3379,
+      "originaleDisponibile": false,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 4,
+    "risultatiLetti": 29,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "locale-zia-esterina",
+  "nome": "Antica Pizza Fritta da Zia Esterina Sorbillo",
+  "categoria": "locale",
+  "entita": {
+    "file": "src/data/locali.yaml",
+    "id": "zia-esterina"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "servizio_pranzo_cena",
+    "sede_esatta",
+    "prenotazione"
+  ],
+  "schede": {
+    "orari": "lc-zia-esterina-orari"
+  },
+  "file_interessati": [
+    "src/data/locali.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/locali.yaml"
+  ],
+  "fonti_esistenti": [
+    "lc-zia-esterina"
+  ],
+  "canali_scoperta": [
+    "gestore-www-sorbillo-it"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "sorbillo.it"
+    ],
+    "soggetto": "Antica Pizza Fritta da Zia Esterina Sorbillo",
+    "aggiungere": "Piazza Trieste e Trento 53",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "sede": "Piazza Trieste e Trento 53",
+  "pubblicazioni_rilevate": []
+}

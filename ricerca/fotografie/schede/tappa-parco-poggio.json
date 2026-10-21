@@ -1,0 +1,138 @@
+{
+  "tipo": "tappa",
+  "id": "parco-poggio",
+  "nome": "Parco del Poggio",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-poggio",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Parco del Poggio\" filetype:bitmap",
+      "risultatiEsaminati": 5
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-parco-poggio-1faaf7f70b",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Passerelle e verde del Parco del Poggio",
+      "titoloFonte": "ParcoPoggioNaples5.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:ParcoPoggioNaples5.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d9/ParcoPoggioNaples5.jpg",
+      "autore": "IlSistemone",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        1600,
+        1200
+      ],
+      "dataScattoDichiarata": "2012-09-15 12:10:04",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1212014937,
+      "sha1Originale": "f86cc8182449d2224499538bfa7fa04aeb7ffd31",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "IlSistemone",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-parco-poggio-72751db0f2",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Specchio d'acqua del parco",
+      "titoloFonte": "ParcoPoggioNaples4.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:ParcoPoggioNaples4.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/51/ParcoPoggioNaples4.jpg",
+      "autore": "IlSistemone",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        1600,
+        1200
+      ],
+      "dataScattoDichiarata": "2012-09-15 12:09:00",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1082781527,
+      "sha1Originale": "d514d22d7bb435aa0ff09a4eba6894de1800defb",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "IlSistemone",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-poggio",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il laghetto del Parco del Poggio, con il Vesuvio sullo sfondo.",
+    "titoloFonte": "ParcoPoggioNaples2.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:ParcoPoggioNaples2.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/3/38/ParcoPoggioNaples2.jpg",
+    "autore": "IlSistemone",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      1600,
+      1200
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Originale sotto 2.000 px sul lato lungo: non proposto per la nuova galleria HD.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "IlSistemone",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Cercare una veduta d’insieme nitida, luminosa e riferita al punto esatto."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 2,
+    "risultatiLetti": 10,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

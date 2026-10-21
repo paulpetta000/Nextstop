@@ -1,5 +1,15 @@
 # Orari dei locali nuovi, da verificare (Enrico)
 
+## Riesame del 19/10/2026 · tutti i sei locali inclusi
+
+Il vecchio elenco è stato ricontrollato, compreso De Luca. Siti leggibili per **Barbeqool, Colantuono’s, Granfuoco e Da Rosetta**; i primi tre non pubblicano una settimana di orari nel contenuto consultabile. Per **Friggitoria Vomero e De Luca** non è stata verificata una fonte ufficiale leggibile.
+
+**Da Rosetta: dubbio sulla domenica risolto dalla dichiarazione sul sito ufficiale**, che indica domenica e lunedì 10:00–15:30. Non serve richiedere di nuovo questa lettura a Enrico; eventuali future variazioni seguono il normale controllo.
+
+Fonti, tentativi e cinque verifiche ancora necessarie per questi locali sono nell’[elenco corrente](fonti-orari.md) (L01–L06) e nel [rapporto](../aggiornamenti/rapporti/2026-10-19-accessi-estesi.md). Il testo dell’08/10 qui sotto è conservato come storico e va letto alla luce di questo aggiornamento.
+
+---
+
 _Scritto l'08/10/2026. Ricerche: `ricerca/2026-10-08-locali-bracerie.md`, `ricerca/2026-10-08-locali-friggitorie.md`._
 
 Questi locali entrano in «Dove mangiare» (OK di Enrico, 08/10/2026), ma i loro siti **non scrivono gli orari**.

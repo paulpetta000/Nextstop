@@ -1,0 +1,116 @@
+{
+  "tipo": "locale",
+  "id": "poppella",
+  "nome": "Pasticceria Poppella",
+  "controllato": "2026-10-20",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Poppella\" filetype:bitmap",
+      "risultatiEsaminati": 4
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-poppella-5e202f031f",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Pasticceria Poppella, sede del Rione Sanità",
+      "titoloFonte": "Poppella Esterno negozio.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Poppella_Esterno_negozio.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/4c/Poppella_Esterno_negozio.jpg",
+      "autore": "Bloomediait",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3456,
+        4608
+      ],
+      "dataScattoDichiarata": "2022-11-17",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1174125750,
+      "sha1Originale": "1b588901eaf56c7aa75fa9ce6677975acb8fe597",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scatto descrittivo dell’ingresso, con parte dell’edificio tagliata; qualità insufficiente per la galleria richiesta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Bloomediait",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "sede": "Via Arena della Sanità 28",
+  "stato": "da-completare",
+  "fonteGestore": {
+    "url": "https://www.pasticceriapoppella.com/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "archivio-escluso-dalla-proposta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.pasticceriapoppella.com/",
+        "immagine": "https://www.pasticceriapoppella.com/wp-content/uploads/2017/04/MG_7616.jpg",
+        "soggettoOsservato": "Fiocchi di neve",
+        "stato": "esclusa-licenza-non-accertata",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
+      },
+      {
+        "pagina": "https://www.pasticceriapoppella.com/",
+        "immagine": "https://www.pasticceriapoppella.com/wp-content/uploads/2017/04/MG_7534-1024x683.jpg",
+        "soggettoOsservato": "Lavorazione dell’impasto",
+        "stato": "esclusa-licenza-non-accertata",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
+      }
+    ],
+    "galleria": "https://www.pasticceriapoppella.com/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
+  },
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "notaSede": "Conservare la sede esatta dei dati applicativi; foto del marchio o di altre filiali non provano piatti e ambienti di questa sede.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 4,
+    "risultatiLetti": 5,
+    "pagineFotograficheFlickrVerificate": 1,
+    "riscontriFlickr": "../ricerche/2026-10-20-flickr.json",
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

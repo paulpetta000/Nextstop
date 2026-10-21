@@ -1,0 +1,179 @@
+{
+  "tipo": "tappa",
+  "id": "virgilio",
+  "nome": "Parco delle Tombe di Virgilio e Leopardi",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-virgilio",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Parco Vergiliano\"",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-virgilio-d0404d05a0",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Scalinate del Parco Vergiliano a Piedigrotta",
+      "titoloFonte": "Parco Vergiliano a Piedigrotta 4.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_Vergiliano_a_Piedigrotta_4.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/4b/Parco_Vergiliano_a_Piedigrotta_4.JPG",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2048,
+        1536
+      ],
+      "dataScattoDichiarata": "2014-05-12 12:57:36",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mentnafunangann",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-virgilio-562a46ac4e",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Viale del parco delle tombe di Virgilio e Leopardi",
+      "titoloFonte": "Parco Vergiliano a Piedigrotta 2.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Parco_Vergiliano_a_Piedigrotta_2.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/57/Parco_Vergiliano_a_Piedigrotta_2.JPG",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2048,
+        1536
+      ],
+      "dataScattoDichiarata": "2014-05-12 12:21:46",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mentnafunangann",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-virgilio-ec61bde790",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Tomba di Giacomo Leopardi",
+      "titoloFonte": "Tomba leopardi napoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Tomba_leopardi_napoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/96/Tomba_leopardi_napoli.jpg",
+      "autore": "No machine-readable author provided. LuckyLisp~commonswiki assumed (based on copyright claims).",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "http://creativecommons.org/licenses/by-sa/3.0/",
+      "dimensioni": [
+        937,
+        1250
+      ],
+      "dataScattoDichiarata": "6 January 2006 (according to Exif data)",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale",
+        "autore-desunto"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [
+          "autore-desunto",
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "No machine-readable author provided. LuckyLisp~commonswiki assumed (based on copyright claims).",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-virgilio",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il sepolcro romano detto Tomba di Virgilio, nel parco di Piedigrotta.",
+    "titoloFonte": "Tomba di Virgilio (Vergiliano) 1.JPG",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Tomba_di_Virgilio_(Vergiliano)_1.JPG",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/5/50/Tomba_di_Virgilio_%28Vergiliano%29_1.JPG",
+    "autore": "Mentnafunangann",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      2048,
+      1536
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Mentnafunangann",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 22,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

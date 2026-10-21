@@ -1,0 +1,85 @@
+{
+  "id": "tappa-pompei",
+  "nome": "Pompei",
+  "categoria": "gita",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "pompei"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni",
+    "prezzi_gia_pubblicati",
+    "collegamento_della_gita"
+  ],
+  "schede": {
+    "orari": "tp-pompei-orari",
+    "prezzi": "tp-pompei-prezzi",
+    "viaggio": "tp-pompei-viaggio"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-pompei-orari",
+    "tp-pompei-tariffe",
+    "tp-eav-campania-express",
+    "tp-eav-campania-express-sospeso"
+  ],
+  "canali_scoperta": [
+    "gestore-pompeiisites-org",
+    "gestore-www-eavsrl-it",
+    "eav-ferrovie",
+    "eav-news",
+    "eav-avvisi"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "eavsrl.it",
+      "pompeiisites.org"
+    ],
+    "soggetto": "Pompei",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "pubblicazioni_rilevate": [
+    "eav-sorrento-2026-10-17"
+  ],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://www.eavsrl.it/campania-express/"
+    ],
+    "verifiche_personali": [
+      "V17"
+    ],
+    "esito": "rimangono_verifiche_personali",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  },
+  "ultimo_riesame_accessi": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml",
+    "gruppi": [
+      "V17"
+    ],
+    "verifiche_personali_residue": [
+      "V17"
+    ],
+    "controllo_completo": false
+  }
+}

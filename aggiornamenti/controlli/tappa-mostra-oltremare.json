@@ -1,0 +1,56 @@
+{
+  "id": "tappa-mostra-oltremare",
+  "nome": "Il parco della Mostra d'Oltremare",
+  "categoria": "citta",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "mostra-oltremare"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni",
+    "prezzi_gia_pubblicati"
+  ],
+  "schede": {
+    "orari": "tp-oltremare-orari",
+    "prezzi": "tp-oltremare-prezzi"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-mostra-oltremare"
+  ],
+  "canali_scoperta": [
+    "gestore-mostradoltremare-it"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "mostradoltremare.it"
+    ],
+    "soggetto": "Il parco della Mostra d'Oltremare",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Conservare il dubbio sugli orari già documentato: distinguere ingressi, pagina mobile e desktop e giorni di eventi, senza scegliere un numero arbitrariamente."
+  ],
+  "parti_da_distinguere": [
+    "Ingressi e cancelli con orari diversi",
+    "Parco, distinto dai singoli eventi"
+  ],
+  "pubblicazioni_rilevate": []
+}

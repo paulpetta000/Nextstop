@@ -1,0 +1,82 @@
+{
+  "tipo": "locale",
+  "id": "hosteria-toledo",
+  "nome": "Hosteria Toledo",
+  "controllato": "2026-10-20",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Hosteria Toledo\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Vico Giardinetto 78",
+  "stato": "da-completare",
+  "fonteGestore": {
+    "url": "https://www.hosteriatoledo.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "archivio-escluso-dalla-proposta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://www.hosteriatoledo.it/",
+        "immagine": "https://www.hosteriatoledo.it/wp-content/uploads/2023/05/T2A9495-200x300.jpg",
+        "soggettoOsservato": "Sala con tavoli apparecchiati",
+        "stato": "esclusa-licenza-non-accertata",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
+      },
+      {
+        "pagina": "https://www.hosteriatoledo.it/",
+        "immagine": "https://www.hosteriatoledo.it/wp-content/uploads/2023/05/T2A9511-300x200.jpg",
+        "soggettoOsservato": "Bancone e sala",
+        "stato": "esclusa-licenza-non-accertata",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
+      }
+    ],
+    "galleria": "https://www.hosteriatoledo.it/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
+  },
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 3,
+    "risultatiLetti": 0,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

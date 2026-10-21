@@ -1,0 +1,177 @@
+{
+  "tipo": "tappa",
+  "id": "mann",
+  "nome": "Museo Archeologico Nazionale",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-mann",
+  "richiesta": [
+    "esterno",
+    "interno_o_collezione"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "incategory:\"Museo Archeologico (Naples) - Interior\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-mann-2c03450f34",
+      "soggetto": "interno",
+      "didascaliaProposta": "Atrio e scalone del Museo Archeologico Nazionale",
+      "titoloFonte": "Museo Archeologico (Naples) - Interior.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_Archeologico_(Naples)_-_Interior.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/61/Museo_Archeologico_%28Naples%29_-_Interior.jpg",
+      "autore": "Yair Haklai",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2184,
+        3062
+      ],
+      "dataScattoDichiarata": "2023-09-28 11:05:43",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Yair Haklai",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-mann-1e692408d7",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Porticato del cortile occidentale del museo",
+      "titoloFonte": "Museo archeologico napoli cortile occidentale.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_archeologico_napoli_cortile_occidentale.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/87/Museo_archeologico_napoli_cortile_occidentale.jpg",
+      "autore": "ho visto nina volare",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        2736,
+        3648
+      ],
+      "dataScattoDichiarata": "2012-09-10 12:35:57",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "ho visto nina volare",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-mann-08d88ea1fc",
+      "soggetto": "interno",
+      "didascaliaProposta": "Passaggio fra le sale e lo scalone",
+      "titoloFonte": "Museo Archeologico (Naples) - Interior-2.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Museo_Archeologico_(Naples)_-_Interior-2.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Museo_Archeologico_%28Naples%29_-_Interior-2.jpg",
+      "autore": "Yair-haklai",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1908,
+        4032
+      ],
+      "dataScattoDichiarata": "2023-09-28 15:33:49",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "bene-culturale"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "bene-culturale"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Yair-haklai",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-mann",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Il Museo Archeologico Nazionale, in piazza Museo.",
+    "titoloFonte": "Museo Archeologico Nazionale di Napoli - panoramio (1).jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Museo_Archeologico_Nazionale_di_Napoli_-_panoramio_(1).jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/0/01/Museo_Archeologico_Nazionale_di_Napoli_-_panoramio_%281%29.jpg",
+    "autore": "Mister No",
+    "licenza": "CC BY 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by/3.0/",
+    "dimensioni": [
+      1258,
+      1126
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Originale sotto 2.000 px sul lato lungo: non proposto per la nuova galleria HD.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Mister No",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Altri ambienti o collezioni diversi dalle viste già proposte; diritti del singolo bene risolti senza contatti."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

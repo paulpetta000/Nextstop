@@ -1,0 +1,58 @@
+{
+  "id": "trasporto-metro-l2",
+  "nome": "Trenitalia Linea 2",
+  "categoria": "trasporto",
+  "linee_o_tratte": [
+    "L2"
+  ],
+  "frequenza_giorni": 7,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "prima_ultima_corsa",
+    "feriale_sabato_festivo",
+    "andata_ritorno",
+    "validita_documento",
+    "rettifiche_e_sospensioni",
+    "durate_e_frequenze_usate"
+  ],
+  "schede": [],
+  "fonti_esistenti": [
+    "tp-rfi-linea2",
+    "tp-trenitalia-linea2"
+  ],
+  "canali_scoperta": [
+    "rfi-quadri",
+    "trenitalia-lavori",
+    "trenitalia-info"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "prm.rfi.it",
+      "rfi.it",
+      "trenitalia.com"
+    ],
+    "soggetto": "Trenitalia Linea 2",
+    "aggiungere": "L2",
+    "modello": "site:{dominio} {linea_o_tratta} (orario OR nuovo orario OR avviso OR rettifica OR sospensione)",
+    "regola": "Cercare anche senza anno e verificare tutti i documenti nuovi nell’indice del gestore, non soltanto il vecchio PDF."
+  },
+  "file_interessati": [
+    "src/data/fonti.yaml",
+    "src/data/fatti.yaml",
+    "src/testi/itinerari.yaml",
+    "scripts/itinerari/costruisci.mjs",
+    "src/data/tempi-tappe.json",
+    "src/data/percorsi-tappe.json",
+    "src/data/percorsi-alternativi.json",
+    "src/data/partenze-bus.json",
+    "src/data/linee-bus.json"
+  ],
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo inventario.",
+    "Il titolo della fonte esistente dichiara validità 14/06–12/12/2026. Verificare l’interno del PDF, che può essere sostituito allo stesso URL, e le stazioni effettivamente servite."
+  ],
+  "pubblicazioni_rilevate": []
+}

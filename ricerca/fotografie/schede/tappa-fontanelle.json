@@ -1,0 +1,291 @@
+{
+  "tipo": "tappa",
+  "id": "fontanelle",
+  "nome": "Cimitero delle Fontanelle",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-fontanelle",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Fontanelle cemetery\"",
+      "risultatiEsaminati": 10
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-fontanelle-5ae49bb0bd",
+      "soggetto": "interno",
+      "didascaliaProposta": "Edicola all'interno del Cimitero delle Fontanelle",
+      "titoloFonte": "Cimitero delle Fontanelle 004.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cimitero_delle_Fontanelle_004.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/a/a7/Cimitero_delle_Fontanelle_004.JPG",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2992,
+        2000
+      ],
+      "dataScattoDichiarata": "2015-03-08 13:57:00",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Primo piano poco rappresentativo o presenza di visitatori; preferita una vista leggibile del percorso.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mentnafunangann",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-fontanelle-52a3263a1b",
+      "soggetto": "interno",
+      "didascaliaProposta": "Grande cavità del Cimitero delle Fontanelle",
+      "titoloFonte": "Cimitero delle Fontanelle - DM - 001.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cimitero_delle_Fontanelle_-_DM_-_001.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/3c/Cimitero_delle_Fontanelle_-_DM_-_001.jpg",
+      "autore": "Dominik Matus",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        6016,
+        4000
+      ],
+      "dataScattoDichiarata": "2017-02-26 10:24:36",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Primo piano poco rappresentativo o presenza di visitatori; preferita una vista leggibile del percorso.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Dominik Matus",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-fontanelle-a79f681da6",
+      "soggetto": "interno",
+      "didascaliaProposta": "Percorso fra le cavità del cimitero",
+      "titoloFonte": "Cimitero delle Fontanelle 002.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Cimitero_delle_Fontanelle_002.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/8a/Cimitero_delle_Fontanelle_002.JPG",
+      "autore": "Mentnafunangann",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        2992,
+        2000
+      ],
+      "dataScattoDichiarata": "2015-03-08 13:56:17",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Mentnafunangann",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-fontanelle-a79f681da6",
+        "esito": "ok",
+        "dimensioni": [
+          2992,
+          2000
+        ],
+        "sha256": "7bb16221846b19634cdde1e0f6d03b6580c74f4c6650f2f62fdbf02718ab84a6"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-fontanelle/foto-fontanelle-a79f681da6.jpg",
+        "anteprima": "../foto/anteprime/tappa-fontanelle/foto-fontanelle-a79f681da6.jpg",
+        "sha256": "7bb16221846b19634cdde1e0f6d03b6580c74f4c6650f2f62fdbf02718ab84a6",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-fontanelle-7bdf65c463",
+      "soggetto": "interno",
+      "didascaliaProposta": "La vegetazione esterna incorniciata dalla cavità delle Fontanelle.",
+      "titoloFonte": "Vista Verso L Esterno Dal Cimitero Delle Fontanelle Di Napoli (60817088).jpeg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Vista_Verso_L_Esterno_Dal_Cimitero_Delle_Fontanelle_Di_Napoli_(60817088).jpeg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/1d/Vista_Verso_L_Esterno_Dal_Cimitero_Delle_Fontanelle_Di_Napoli_%2860817088%29.jpeg",
+      "autore": "Antonio Manfredonio",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2048,
+        1371
+      ],
+      "dataScattoDichiarata": "12 February 2014, 17:08:58 (UTC)",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Antonio Manfredonio",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-fontanelle-7bdf65c463",
+        "esito": "ok",
+        "dimensioni": [
+          2048,
+          1371
+        ],
+        "sha256": "0c3d94089c5c1eb759426b75274fe93a4bf120cf0e9163d075757cec5546408b"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-fontanelle/foto-fontanelle-7bdf65c463.jpg",
+        "anteprima": "../foto/anteprime/tappa-fontanelle/foto-fontanelle-7bdf65c463.jpg",
+        "sha256": "0c3d94089c5c1eb759426b75274fe93a4bf120cf0e9163d075757cec5546408b",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-fontanelle-6dbaefcfb2",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Una fila di teschi nel Cimitero delle Fontanelle.",
+      "titoloFonte": "Schiera Di Teschi (60817070).jpeg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Schiera_Di_Teschi_(60817070).jpeg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/2/22/Schiera_Di_Teschi_%2860817070%29.jpeg",
+      "autore": "Antonio Manfredonio",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2048,
+        1152
+      ],
+      "dataScattoDichiarata": "12 February 2014, 16:47:50 (UTC)",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Antonio Manfredonio",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-fontanelle-6dbaefcfb2",
+        "esito": "ok",
+        "dimensioni": [
+          2048,
+          1152
+        ],
+        "sha256": "7eaddf9f384065c66706cee172311b56b9e7deb6eaa8ba7072f216a29b1d9099"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-fontanelle/foto-fontanelle-6dbaefcfb2.jpg",
+        "anteprima": "../foto/anteprime/tappa-fontanelle/foto-fontanelle-6dbaefcfb2.jpg",
+        "sha256": "7eaddf9f384065c66706cee172311b56b9e7deb6eaa8ba7072f216a29b1d9099",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-fontanelle",
+    "soggetto": "esterno",
+    "didascaliaProposta": "L'interno del Cimitero delle Fontanelle.",
+    "titoloFonte": "Napoli - Fontanelle crocevia 1030852.JPG",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Fontanelle_crocevia_1030852.JPG",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/7/72/Napoli_-_Fontanelle_crocevia_1030852.JPG",
+    "autore": "Lalupa",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      2816,
+      2112
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Lalupa",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-fontanelle-a79f681da6",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-fontanelle-7bdf65c463",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-fontanelle-6dbaefcfb2",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Eventuale quarta scena deve aggiungere un altro ambiente, senza ripetere file di teschi.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "foto-fontanelle-a79f681da6",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

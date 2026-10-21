@@ -1,0 +1,297 @@
+{
+  "tipo": "tappa",
+  "id": "napoli-sotterranea",
+  "nome": "Napoli Sotterranea",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-napoli-sotterranea",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Napoli sotterranea\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-napoli-sotterranea-23051f4337",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Ingresso di Napoli Sotterranea in piazza San Gaetano",
+      "titoloFonte": "Napoli sotterranea (1).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_sotterranea_(1).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/7/74/Napoli_sotterranea_%281%29.jpg",
+      "autore": "Sordelli",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        2667,
+        4000
+      ],
+      "dataScattoDichiarata": null,
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Ingresso affollato o corridoio poco rappresentativo; preferito il percorso sotterraneo.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Sordelli",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-napoli-sotterranea-57a800dcf9",
+      "soggetto": "interno",
+      "didascaliaProposta": "Cavità e passerella del percorso sotterraneo",
+      "titoloFonte": "Napoli Sotterranea 1.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_Sotterranea_1.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Napoli_Sotterranea_1.jpg",
+      "autore": "Photo2023",
+      "licenza": "CC BY 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/4.0",
+      "dimensioni": [
+        4032,
+        3024
+      ],
+      "dataScattoDichiarata": "2022-09-18 10:53:43",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Lampada abbagliante e ringhiere in primo piano: non raggiunge la qualità richiesta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Photo2023",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-napoli-sotterranea-b583c81346",
+      "soggetto": "interno",
+      "didascaliaProposta": "Ambiente scavato nel tufo, fotografato nel 2016",
+      "titoloFonte": "2016 Napoli sotterranea 07.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:2016_Napoli_sotterranea_07.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/5/58/2016_Napoli_sotterranea_07.jpg",
+      "autore": "Nemo bis",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        4608,
+        3456
+      ],
+      "dataScattoDichiarata": "2016-07-02 10:36:04",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Ingresso affollato o corridoio poco rappresentativo; preferito il percorso sotterraneo.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Nemo bis",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-napoli-sotterranea-454c96f953",
+      "soggetto": "interno",
+      "didascaliaProposta": "La ricostruzione della cava di tufo con gli attrezzi del percorso di Napoli Sotterranea.",
+      "titoloFonte": "Napoli sotterranea (cava).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_sotterranea_(cava).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/82/Napoli_sotterranea_%28cava%29.jpg",
+      "autore": "Armando Mancini from Napoli, Italia",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        4200,
+        2789
+      ],
+      "dataScattoDichiarata": "2010-05-02 12:52",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini from Napoli, Italia",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-napoli-sotterranea-454c96f953",
+        "esito": "ok",
+        "dimensioni": [
+          4200,
+          2789
+        ],
+        "sha256": "393766b92542e3e21d914703e4895e00c3b890959b2d6345457f70b166eb491a"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-napoli-sotterranea/foto-napoli-sotterranea-454c96f953.jpg",
+        "anteprima": "../foto/anteprime/tappa-napoli-sotterranea/foto-napoli-sotterranea-454c96f953.jpg",
+        "sha256": "393766b92542e3e21d914703e4895e00c3b890959b2d6345457f70b166eb491a",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-napoli-sotterranea-290e1f90c9",
+      "soggetto": "percorso",
+      "didascaliaProposta": "La scala scavata nel tufo di Napoli Sotterranea, vista dall’alto.",
+      "titoloFonte": "Napoli sotterranea (scala scavata).jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_sotterranea_(scala_scavata).jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/4/4a/Napoli_sotterranea_%28scala_scavata%29.jpg",
+      "autore": "Armando Mancini from Napoli, Italia",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3648,
+        2736
+      ],
+      "dataScattoDichiarata": "2009-12-26 11:17",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Armando Mancini from Napoli, Italia",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-napoli-sotterranea-290e1f90c9",
+        "esito": "ok",
+        "dimensioni": [
+          3648,
+          2736
+        ],
+        "sha256": "19ccaf21abd5e0b11a3007df5afd5a02b0ab7497442483420068fdf12e21a896"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-napoli-sotterranea/foto-napoli-sotterranea-290e1f90c9.jpg",
+        "anteprima": "../foto/anteprime/tappa-napoli-sotterranea/foto-napoli-sotterranea-290e1f90c9.jpg",
+        "sha256": "19ccaf21abd5e0b11a3007df5afd5a02b0ab7497442483420068fdf12e21a896",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    }
+  ],
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-napoli-sotterranea",
+    "soggetto": "interno",
+    "didascaliaProposta": "Una delle scale scavate nel tufo di Napoli Sotterranea.",
+    "titoloFonte": "Napoli sotterranea (cunicolo).jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_sotterranea_(cunicolo).jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d8/Napoli_sotterranea_%28cunicolo%29.jpg",
+    "autore": "Armando Mancini",
+    "licenza": "CC BY-SA 2.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "dimensioni": [
+      2714,
+      4086
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "proposta",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Armando Mancini",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-napoli-sotterranea",
+      "esito": "ok",
+      "dimensioni": [
+        2714,
+        4086
+      ],
+      "sha256": "26c90ef14066ea3d158c0ba6df923fefc892981a73db1f74456bbdddb7f22d0f"
+    },
+    "archivioLocale": {
+      "originale": "../foto/originali/tappa-napoli-sotterranea/esistente-tp-napoli-sotterranea.jpg",
+      "anteprima": "../foto/anteprime/tappa-napoli-sotterranea/esistente-tp-napoli-sotterranea.jpg",
+      "sha256": "26c90ef14066ea3d158c0ba6df923fefc892981a73db1f74456bbdddb7f22d0f",
+      "modificheOriginale": "nessuna",
+      "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-napoli-sotterranea",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-napoli-sotterranea-454c96f953",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-napoli-sotterranea-290e1f90c9",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Una quarta scena deve mostrare un ambiente diverso, non un’altra scala. Verificare che rappresenti il percorso di piazza San Gaetano.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "esistente:tp-napoli-sotterranea",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 2,
+    "risultatiLetti": 78,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

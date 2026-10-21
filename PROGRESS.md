@@ -2,6 +2,55 @@
 
 _Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 21/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
+## Materiali conservati dal main · storico del 19–20 ottobre
+
+## Archivio portabile delle foto · 20/10/2026
+
+Su richiesta di Enrico, preparato il salvataggio delle 76 foto proposte: originali integri in [foto/originali](ricerca/fotografie/foto/originali), 76 anteprime, [indice con licenze e impronte](ricerca/fotografie/foto/indice.json), [crediti](ricerca/fotografie/foto/CREDITI.md) e [catalogo locale](ricerca/fotografie/catalogo.html). Circa 416 MiB di originali; le singole schede risolvono i file tramite `archivioLocale`. Conservati anche documento pubblico del Castello Aragonese, suo credito e prove estese compresse. [Istruzioni per riprendere da computer con Claude Code o Codex](ricerca/fotografie/foto/README.md): aggiornare il checkout conservando prima le modifiche locali, poi leggere indice e una sola scheda. Il sito e i suoi input sono invariati; salvare l’archivio non approva l’inserimento delle foto nelle pagine. Enrico ha confermato la destinazione **main di GitHub**; questa integrazione riguarda ricerca e archivio e non attiva le gallerie o le API. Controlli automatici e risultato del merge vanno riscontrati sul commit remoto.
+
+## Fotografie · obiettivo tre/quattro per scheda · 20/10/2026
+
+Su richiesta di Enrico, ricerca approfondita sulle 92 entità: 230 interrogazioni, 658 provini osservati anche con scarti/omonimi, 88 nuove pagine fotografiche Flickr verificate e 52 nuovi originali esaminati. **76 proposte per 26 tappe/gite**, da 31 precedenti: 48 aggiunte alla selezione e tre sostituite. **19 schede con almeno tre foto, 7 di queste con quattro; 73 ancora sotto il minimo**, inclusi tutti i 32 locali. Nessun nuovo piatto conforme: ristoranti ancora scoperti per qualità, sede o riuso. Non presentare la ricerca come completata per tutti i luoghi.
+
+[Entrata breve](ricerca/fotografie/README.md), [indice con mancanti](ricerca/fotografie/indice.md), [rapporto](ricerca/fotografie/RAPPORTO.md). Le schede distinguono soglia numerica e lacune della visita; conservate candidate, fonti, 49 risorse dei gestori escluse e rapporti precedenti. Originali delle proposte scaricati, dimensioni native e impronte registrate; resta l’esame completo al 100%. Catalogo offline separato dal sito, con sequenze, crediti dovuti e filtri tre/quattro. Esiti dei controlli documentali e browser nel [registro](ricerca/fotografie/VERIFICHE.md).
+
+Codice, dati e foto applicativi invariati; nessun acquisto, contatto, richiesta, account API, push, merge o deploy. Ramo locale `codex/ricerca-fotografie`. Il seguito resta la ricerca di alternative con concessione già pubblica, soprattutto locali e schede sotto minimo; il catalogo rende verificabili le scelte già fatte. Browser e strumenti presenti bastano per la ricerca in cloud; gallerie nel sito e pubblicazione sono un blocco successivo.
+
+## Ricerca fotografie · revisione qualitativa · 19/10/2026
+
+Ultima richiesta di Enrico: foto belle, reali, a colori, HD e della sede esatta; crediti soltanto quando dovuti, niente richieste di permesso. [Entrata breve](ricerca/fotografie/README.md), [indice](ricerca/fotografie/indice.md), [rapporto](ricerca/fotografie/RAPPORTO.md). Rilette tutte le 92 schede e 225 immagini (154 candidate iniziali, 54 esistenti e 17 aggiunte): **31 proposte per 24 tappe/gite**, di cui 19 candidate aggiuntive e 12 foto già nel sito. 194 escluse; nessuna galleria completa e nessun piatto proposto. Le 49 risorse dei gestori restano archiviate e fuori proposta. Verificate altre 12 pagine fotografiche Flickr, nessuna selezionata. Nuove fonti FEC e autorizzazione pubblica del Castello Aragonese documentate; vecchia coda di richieste sospesa.
+
+Ogni scheda conserva scarti, motivi, ordine e lacune; leggere `galleriaProposta`, non tutte le candidate. Originali delle 31 proposte scaricati e dimensioni verificate, provini osservati; controllo completo al 100% ancora da fare. Verifiche concluse il 20/10 UTC: conservazione, riferimenti e catalogo in browser a 320/390/1280 px, immagini e crediti, filtri e scorrimento, zero richieste esterne automatiche/errori JS. [Verifiche e limiti](ricerca/fotografie/VERIFICHE.md). Codice, dati e foto applicativi invariati; nessuna dipendenza, richiesta di permesso, API attivata, push o deploy. Ramo locale `codex/ricerca-fotografie`; valutazioni/API rinviate e pilota conservato nella [PR #7](https://github.com/paulpetta000/Nextstop/pull/7).
+
+**Seguito:** ricerca di alternative di pari qualità, soprattutto piatti e ambienti dei locali, con riuso già documentato senza contatti; niente stock generico o immagini generate per riempire. Galleria nel sito e pubblicazione del ramo in un blocco successivo. Per la ricerca bastano browser e strumenti del repository; il cloud resta adatto, senza account API delle recensioni.
+
+## Consegna su main e revisione del piano · 19/10/2026
+
+Enrico ha autorizzato l’integrazione su main dell’intero blocco fonti, coda personale e riordino, previa revisione critica del [piano delle valutazioni](specifiche/valutazioni-esterne.md). Proposta ristrutturata: fattibilità documentata distinta dalle prove ancora necessarie; schema Terra recuperato dal testo ufficiale indicizzato, condizioni di branding/link ancora da verificare; identità e cambi di sede, errori, privacy, limiti di spesa, criteri di accettazione e manutenzione esplicitati. **L’OK alla pubblicazione dei documenti non approva l’implementazione delle valutazioni.** Nessun componente del sito, voto, account o servizio a pagamento aggiunto. Verifiche di conservazione del registro e delle 26 voci, selettore e riferimenti documentali; build applicativa non ripetuta perché gli input del sito sono invariati. PR e risultato dell’integrazione vanno riscontrati su GitHub prima di dichiarare la consegna conclusa.
+
+Le voci seguenti conservano la cronologia: i riferimenti a main invariato descrivono i rispettivi passaggi precedenti.
+
+## Riordino fonti e proposta valutazioni · 19/10/2026
+
+Registro diviso senza perdita in 106 schede e cataloghi selezionabili; 26 verifiche personali in file singoli. [Procedura breve](aggiornamenti/PROCEDURA.md), selettore Node locale senza dipendenze e [misure del riordino](aggiornamenti/riordino-2026-10-19.md). Conservati ID, stati, scadenze, canali, pubblicazioni e rapporti storici; nessun nuovo controllo degli orari o modifica ai dati applicativi. Preparati [piano delle valutazioni esterne](specifiche/valutazioni-esterne.md) e [ricerca ufficiale](ricerca/2026-10-19-valutazioni-esterne.md): Google UI Kit da valutare per SEE/mappa, Tripadvisor Terra, TheFork subordinato ad accesso. **Solo idea: nessuna implementazione, voto, API a pagamento o logo aggiunto.** Verifiche documentali e comandi locali del selettore; nessuna build applicativa. Branch del lavoro, main invariato.
+
+## Accessi estesi e vecchia lista · 19/10/2026
+
+Su richiesta di Enrico ricontrollati tutti i 31 URL residui e tutti i sei locali della vecchia lista (quattro siti, due senza fonte del gestore verificabile). Bilancio cumulativo su 54 indirizzi: 13 originali leggibili, 31 con alternativa ufficiale leggibile anche parziale/storica, 10 senza alternativa utile; non sono conteggi di siti distinti. Recuperati MiC Floridiana, atto parchi del 22/07/2025, ordinanza Marechiaro 2026, Artecard, PDF San Carlo e schede ulteriori. Segnalati accessi intermittenti e documenti storici. [Rapporto attuale](aggiornamenti/rapporti/2026-10-19-accessi-estesi.md), [21 verifiche personali residue su 26 gruppi](da-verificare/fonti-orari.md). Cinque gruppi con fonte e orario ordinario recuperati; tutti i sei locali della vecchia lista inclusi, Da Rosetta risolta per la domenica. Registro e lista aggiornati, rapporti precedenti conservati, dati applicativi invariati e controlli completi ancora zero. Verificati YAML, copertura, conteggi, riferimenti e conservazione; nessuna build applicativa eseguita. Branch `codex/controlli-periodici-fonti`, main invariato.
+
+## Ritentativo fonti e verifiche personali · 19/10/2026
+
+Ritentati 50 URL precedentemente non leggibili: 9 recuperati allo stesso indirizzo, 10 con alternativa ufficiale, 7 parziali e 24 ancora non verificabili. [Rapporto](aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.md) e [20 verifiche personali per Enrico](da-verificare/fonti-orari.md), con collegamenti e richieste precise. Aggiunti canali alternativi e riscontri di accesso al registro; rapporto iniziale e vecchia lista locali conservati. Nessun dato applicativo aggiornato, nessun controllo completo concluso o scadenza rinviata. Verificati YAML, riferimenti, copertura e conservazione dei file. Lavoro sul branch `codex/controlli-periodici-fonti`; main non modificato.
+
+## Registro dei controlli periodici · 19/10/2026
+
+Su richiesta di Enrico, preparati [registro](aggiornamenti/controlli-periodici.yaml), [procedura condivisa Codex/Claude](aggiornamenti/PROCEDURA.md) e [rapporto iniziale](aggiornamenti/rapporti/2026-10-19-impostazione.md), secondo il piano approvato in questa chat. Copertura: 60 tappe/gite, 32 locali e 14 gruppi di trasporto, con ricerca obbligatoria di nuove pagine/PDF oltre ai vecchi URL, distinzione fra date di pubblicazione e validità, eccezioni e sedi. Prove iniziali: nuovo documento EAV dal 17 ottobre, cambio Girolamini dal 25, calendario futuro Sansevero e distinzione delle sedi Gesù Vecchio/50 Kalò. Alcuni siti non leggibili dal cloud; nessuna conferma degli orari basata sui soli risultati di ricerca. Dati applicativi e date precedenti conservati; nessuna pianificazione automatica né pubblicazione su main.
+
+**Seguito di questo blocco:** primo controllo completo su richiesta, prioritari EAV e fonti non leggibili, seguendo la procedura. Le frequenze 7/14 giorni decorrono da controlli completati; la preparazione non rinvia le scadenze. La revisione Web Locks sospesa sul computer rimane un lavoro distinto. Dettagli e verifiche nel rapporto; gli appunti seguenti descrivono il lavoro precedente del 17 ottobre.
+
+_Aggiornato il 17/10/2026. Enrico ha autorizzato push e integrazione in main di tutti i blocchi completati della PR #5, inclusi i sei commit locali successivi. La nuova revisione dei salvataggi è sospesa e conservata separatamente; non fa parte di questo rilascio._
+
+
 ## Stato corrente · percorsi pubblicati e preparazione finale
 
 **Blocco integrità Git:** due oggetti illeggibili nel pack originale. Copia indipendente recuperata, 45 riferimenti e stash conservati, git fsck riuscito sulla copia; originale intatto. Integrazione non pronta, causa aperta.

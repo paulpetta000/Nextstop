@@ -1,0 +1,125 @@
+{
+  "tipo": "locale",
+  "id": "di-matteo",
+  "nome": "Antica Pizzeria Di Matteo",
+  "controllato": "2026-10-20",
+  "fotoEsistente": null,
+  "richiesta": [
+    "piatto",
+    "interno",
+    "esterno"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pizzeria Di Matteo\" filetype:bitmap",
+      "risultatiEsaminati": 0
+    }
+  ],
+  "fotoCandidate": [],
+  "sede": "Via dei Tribunali 94",
+  "stato": "da-completare",
+  "fonteGestore": {
+    "url": "https://anticapizzeriadimatteo.it/",
+    "stato": "letta",
+    "licenzaFoto": "non-accertata",
+    "uso": "archivio-escluso-dalla-proposta",
+    "risorseDaAutorizzare": [
+      {
+        "pagina": "https://anticapizzeriadimatteo.it/",
+        "immagine": "https://anticapizzeriadimatteo.it/wp-content/uploads/2022/07/margherita.png",
+        "soggettoOsservato": "Pizza margherita scontornata",
+        "stato": "esclusa-licenza-non-accertata",
+        "autore": "da-confermare",
+        "licenza": null,
+        "anteprimaOsservata": true,
+        "statoPrecedente": "da-autorizzare"
+      }
+    ],
+    "galleria": "https://anticapizzeriadimatteo.it/",
+    "usoPrecedente": "fonte-per-richiesta",
+    "decisioneAttuale": "Foto prive di licenza libera accertata: escluse. Non richiedere permessi né contattare il gestore."
+  },
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "nessuna-candidata-libera",
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Piatto o dolce caratteristico di questa sede, fotografia naturale e ben illuminata.",
+    "Sala o terrazza della sede indicata nei dati.",
+    "Ingresso e contesto del locale."
+  ],
+  "daCompletare": [
+    "Foto di piatti e ambienti della sede con qualità professionale, originali HD e riuso documentato senza ulteriori richieste."
+  ],
+  "ricercheEsterneVerificate": [
+    {
+      "entita": "di-matteo",
+      "pagina": "https://www.flickr.com/photos/prof_richard/8475539151/",
+      "titolo": "Pizzeria Di Matteo, Naples",
+      "descrizione": "",
+      "autore": "Richard Mortel",
+      "licenza": "CC BY-NC-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-nc-sa/2.0/",
+      "codiceLicenzaFlickr": 1,
+      "originale": "https://live.staticflickr.com/8391/8475539151_c9654c572d_o.jpg",
+      "larghezza": 3709,
+      "altezza": 3150,
+      "originaleDisponibile": true,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    },
+    {
+      "entita": "di-matteo",
+      "pagina": "https://www.flickr.com/photos/houstonfoodie/5295665214/",
+      "titolo": "Di Matteo Pizzeria - Margherita pizza",
+      "descrizione": "",
+      "autore": "Houston Foodie",
+      "licenza": "tutti-i-diritti-riservati",
+      "licenzaUrl": null,
+      "codiceLicenzaFlickr": 0,
+      "originale": "https://live.staticflickr.com/5004/5295665214_7434b7ce7b_o.jpg",
+      "larghezza": 2848,
+      "altezza": 2136,
+      "originaleDisponibile": true,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    },
+    {
+      "entita": "di-matteo",
+      "pagina": "https://www.flickr.com/photos/houstonfoodie/5295659096/",
+      "titolo": "Di Matteo Pizzeria",
+      "descrizione": "",
+      "autore": "Houston Foodie",
+      "licenza": "tutti-i-diritti-riservati",
+      "licenzaUrl": null,
+      "codiceLicenzaFlickr": 0,
+      "originale": "https://live.staticflickr.com/5209/5295659096_c524dd8418_o.jpg",
+      "larghezza": 2848,
+      "altezza": 2136,
+      "originaleDisponibile": true,
+      "controllato": "2026-10-19",
+      "esito": "esclusa-licenza",
+      "motivo": "Nessun riuso libero compatibile accertato: tutti i diritti riservati oppure clausola non commerciale."
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 4,
+    "risultatiLetti": 7,
+    "pagineFotograficheFlickrVerificate": 1,
+    "riscontriFlickr": "../ricerche/2026-10-20-flickr.json",
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

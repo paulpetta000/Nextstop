@@ -1,0 +1,49 @@
+{
+  "id": "trasporto-bus-vesuvio",
+  "nome": "Bus EAV 808 Pompei–Vesuvio",
+  "categoria": "trasporto",
+  "linee_o_tratte": [
+    "808"
+  ],
+  "frequenza_giorni": 7,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "prima_ultima_corsa",
+    "feriale_sabato_festivo",
+    "andata_ritorno",
+    "validita_documento",
+    "rettifiche_e_sospensioni",
+    "durate_e_frequenze_usate"
+  ],
+  "schede": [
+    "tp-vesuvio-viaggio"
+  ],
+  "fonti_esistenti": [
+    "tp-eav-808"
+  ],
+  "canali_scoperta": [
+    "eav-bus",
+    "eav-news"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "eavsrl.it"
+    ],
+    "soggetto": "Bus EAV 808 Pompei–Vesuvio",
+    "aggiungere": "808",
+    "modello": "site:{dominio} {linea_o_tratta} (orario OR nuovo orario OR avviso OR rettifica OR sospensione)",
+    "regola": "Cercare anche senza anno e verificare tutti i documenti nuovi nell’indice del gestore, non soltanto il vecchio PDF."
+  },
+  "file_interessati": [
+    "src/data/fonti.yaml",
+    "src/data/fatti.yaml",
+    "src/testi/itinerari.yaml"
+  ],
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo inventario."
+  ],
+  "pubblicazioni_rilevate": []
+}

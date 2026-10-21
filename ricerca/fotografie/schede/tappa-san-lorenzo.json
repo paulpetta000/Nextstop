@@ -1,0 +1,187 @@
+{
+  "tipo": "tappa",
+  "id": "san-lorenzo",
+  "nome": "San Lorenzo Maggiore e gli scavi",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-san-lorenzo",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"San Lorenzo Maggiore\" \"Naples\" interior",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-san-lorenzo-19f1920f68",
+      "soggetto": "interno",
+      "didascaliaProposta": "Navata di San Lorenzo Maggiore",
+      "titoloFonte": "Interior San Lorenzo Maggiore 02.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_San_Lorenzo_Maggiore_02.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Interior_San_Lorenzo_Maggiore_02.JPG",
+      "autore": "Miguel Hermoso Cuesta",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3456,
+        5184
+      ],
+      "dataScattoDichiarata": "2013-06-17 15:25:56",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce e inquadratura non raggiungono il livello richiesto; non scelta per la nuova galleria.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Miguel Hermoso Cuesta",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-san-lorenzo-80221fe6ef",
+      "soggetto": "interno",
+      "didascaliaProposta": "Veduta della chiesa verso l'altare",
+      "titoloFonte": "Interior San Lorenzo Maggiore 01.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_San_Lorenzo_Maggiore_01.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/66/Interior_San_Lorenzo_Maggiore_01.JPG",
+      "autore": "Miguel Hermoso Cuesta",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3456,
+        5184
+      ],
+      "dataScattoDichiarata": "2013-06-17 15:24:07",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce e inquadratura non raggiungono il livello richiesto; non scelta per la nuova galleria.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Miguel Hermoso Cuesta",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-san-lorenzo-2a1cef6676",
+      "soggetto": "collezione",
+      "didascaliaProposta": "Particolare di un arredo decorato nel museo di San Lorenzo",
+      "titoloFonte": "Interior - San Lorenzo Maggiore Museum - Naples - Italy 2015.JPG",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Interior_-_San_Lorenzo_Maggiore_Museum_-_Naples_-_Italy_2015.JPG",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/11/Interior_-_San_Lorenzo_Maggiore_Museum_-_Naples_-_Italy_2015.JPG",
+      "autore": "José Luiz",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5144,
+        3396
+      ],
+      "dataScattoDichiarata": "2015-02-05 15:39:51",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "percorso-specifico"
+      ],
+      "creditoRichiesto": "© José Luiz Bernardes Ribeiro",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Luce e inquadratura non raggiungono il livello richiesto; non scelta per la nuova galleria.",
+        "dirittiDaChiarire": [
+          "bene-fec"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "José Luiz",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-san-lorenzo",
+    "soggetto": "interno",
+    "didascaliaProposta": "Due cappelle della chiesa di San Lorenzo Maggiore.",
+    "titoloFonte": "Church San Lorenzo Maggiore Cacace and Saint Roch chapels Niccolò De Simone.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Church_San_Lorenzo_Maggiore_Cacace_and_Saint_Roch_chapels_Niccol%C3%B2_De_Simone.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/9/99/Church_San_Lorenzo_Maggiore_Cacace_and_Saint_Roch_chapels_Niccol%C3%B2_De_Simone.jpg",
+    "autore": "Wolfgang Moroder",
+    "licenza": "CC BY-SA 3.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "dimensioni": [
+      7011,
+      4997
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "Vista esistente scelta per composizione, luce e contesto.",
+      "dirittiDaChiarire": [
+        "bene-fec"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "Wolfgang Moroder",
+      "originaleScaricato": true,
+      "controlloVisivo": "provino-da-originale-osservato",
+      "controlloAl100Percento": "non-completato"
+    },
+    "controlloOriginale": {
+      "riferimento": "esistente:tp-san-lorenzo",
+      "esito": "ok",
+      "dimensioni": [
+        7011,
+        4997
+      ],
+      "sha256": "c12cdd3804aff9cd0dceddb059950cd622c4e239b6971c54c4eb0471cb3f8572"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Vista generale e scavi: la foto esistente mostra due cappelle, non il percorso archeologico."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

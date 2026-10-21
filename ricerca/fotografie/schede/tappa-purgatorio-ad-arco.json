@@ -1,0 +1,349 @@
+{
+  "tipo": "tappa",
+  "id": "purgatorio-ad-arco",
+  "nome": "Purgatorio ad Arco, chiesa e ipogeo",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-purgatorio",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Purgatorio ad Arco\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Purgatorio ad Arco\" Napoli filetype:bitmap",
+      "risultatiEsaminati": 8
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "Titoli esatti trovati nelle pagine Commons e nella galleria Napoli",
+      "risultatiEsaminati": 4
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-purgatorio-ad-arco-c0b513f664",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Teschio in bronzo all'ingresso del Purgatorio ad Arco",
+      "titoloFonte": "Bronze skull at the entrance of the Santa Maria delle Anime del Purgatorio ad Arco Church, Naples, Italy (PPL1-Corrected) julesvernex2.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Bronze_skull_at_the_entrance_of_the_Santa_Maria_delle_Anime_del_Purgatorio_ad_Arco_Church,_Naples,_Italy_(PPL1-Corrected)_julesvernex2.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/9/94/Bronze_skull_at_the_entrance_of_the_Santa_Maria_delle_Anime_del_Purgatorio_ad_Arco_Church%2C_Naples%2C_Italy_%28PPL1-Corrected%29_julesvernex2.jpg",
+      "autore": "Jules Verne Times Two",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        5252,
+        3840
+      ],
+      "dataScattoDichiarata": "2019-09-18 11:19:44",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "creditoRichiesto": "Jules Verne Times Two / www.julesvernex2.com",
+      "revisioneCommons": 1141826876,
+      "sha1Originale": "5461506bd8d0b8a72f15e09922f8dd1b33663cf7",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Jules Verne Times Two",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-purgatorio-ad-arco-a53b1789bb",
+      "soggetto": "interno",
+      "didascaliaProposta": "Abside della chiesa del Purgatorio ad Arco",
+      "titoloFonte": "PurgatorioArcoNapoli.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:PurgatorioArcoNapoli.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d7/PurgatorioArcoNapoli.jpg",
+      "autore": "IlSistemone",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        4320,
+        3240
+      ],
+      "dataScattoDichiarata": "2013-09-21 13:43:03",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneCommons": 1286922794,
+      "sha1Originale": "12767ea30e98b6615023da9f98ba6623dac2eb81",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "IlSistemone",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-purgatorio-ad-arco-a53b1789bb",
+        "esito": "ok",
+        "dimensioni": [
+          4320,
+          3240
+        ],
+        "sha256": "684400e0097f6ef9bc51fc0821da7aab0e43794660bfb88c79085b9fdd111514"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-purgatorio-ad-arco/foto-purgatorio-ad-arco-a53b1789bb.jpg",
+        "anteprima": "../foto/anteprime/tappa-purgatorio-ad-arco/foto-purgatorio-ad-arco-a53b1789bb.jpg",
+        "sha256": "684400e0097f6ef9bc51fc0821da7aab0e43794660bfb88c79085b9fdd111514",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-purgatorio-ad-arco-8383e086f3",
+      "soggetto": "interno",
+      "didascaliaProposta": "Ambiente dell'ipogeo del Purgatorio ad Arco",
+      "titoloFonte": "Ipogeo Purgatorio ad Arco.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Ipogeo_Purgatorio_ad_Arco.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/63/Ipogeo_Purgatorio_ad_Arco.jpg",
+      "autore": "No machine-readable author provided. Inviaggiocommons assumed (based on copyright claims).",
+      "licenza": "Public domain",
+      "licenzaUrl": "https://commons.wikimedia.org/wiki/File:Ipogeo_Purgatorio_ad_Arco.jpg#Licensing",
+      "dimensioni": [
+        768,
+        1024
+      ],
+      "dataScattoDichiarata": "3 December 2006 (according to Exif data)",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "autore-desunto"
+      ],
+      "revisioneCommons": 1056455876,
+      "sha1Originale": "2b863ba1492b19b53d6e3243470c65a3dbcf7d65",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [
+          "autore-desunto"
+        ],
+        "creditoVisibileRichiesto": false,
+        "autoreSintetico": "No machine-readable author provided. Inviaggiocommons assumed (based on copyright claims).",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-purgatorio-ad-arco-8d056dbef3",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Il rilievo del sepolcro di Pietro Antonio Mastrilli, nella chiesa del Purgatorio ad Arco.",
+      "titoloFonte": "Napoli, chiesa del purgatorio ad arco, interno, sepolcro di pietro antonio mastrilli, 1607, 02.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli,_chiesa_del_purgatorio_ad_arco,_interno,_sepolcro_di_pietro_antonio_mastrilli,_1607,_02.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/8/84/Napoli%2C_chiesa_del_purgatorio_ad_arco%2C_interno%2C_sepolcro_di_pietro_antonio_mastrilli%2C_1607%2C_02.jpg",
+      "autore": "Sailko",
+      "licenza": "CC BY 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/3.0",
+      "dimensioni": [
+        2648,
+        4944
+      ],
+      "dataScattoDichiarata": "2019-04-10 14:22:37",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Sailko",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-purgatorio-ad-arco-8d056dbef3",
+        "esito": "ok",
+        "dimensioni": [
+          2648,
+          4944
+        ],
+        "sha256": "1f30ea514d059a1a683212f7994cc85bbd3b170378d4f42d432c09a2d34ee07c"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-purgatorio-ad-arco/foto-purgatorio-ad-arco-8d056dbef3.jpg",
+        "anteprima": "../foto/anteprime/tappa-purgatorio-ad-arco/foto-purgatorio-ad-arco-8d056dbef3.jpg",
+        "sha256": "1f30ea514d059a1a683212f7994cc85bbd3b170378d4f42d432c09a2d34ee07c",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-purgatorio-ad-arco-7313cd3955",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Gli intarsi marmorei della balaustra del Purgatorio ad Arco.",
+      "titoloFonte": "Napoli, chiesa del purgatorio ad arco, interno, balaustra del presbiterio con intarsi lapidei di dionisio lazzari, 1651-69, 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Napoli,_chiesa_del_purgatorio_ad_arco,_interno,_balaustra_del_presbiterio_con_intarsi_lapidei_di_dionisio_lazzari,_1651-69,_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/10/Napoli%2C_chiesa_del_purgatorio_ad_arco%2C_interno%2C_balaustra_del_presbiterio_con_intarsi_lapidei_di_dionisio_lazzari%2C_1651-69%2C_01.jpg",
+      "autore": "Sailko",
+      "licenza": "CC BY 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by/3.0",
+      "dimensioni": [
+        4968,
+        3336
+      ],
+      "dataScattoDichiarata": "2019-04-10 14:23:24",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Sailko",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-purgatorio-ad-arco-7313cd3955",
+        "esito": "ok",
+        "dimensioni": [
+          4968,
+          3336
+        ],
+        "sha256": "1c79747fcd0d9a15abdfc3cf109d9adade24337c3d8c2110220a74dce49fd544"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-purgatorio-ad-arco/foto-purgatorio-ad-arco-7313cd3955.jpg",
+        "anteprima": "../foto/anteprime/tappa-purgatorio-ad-arco/foto-purgatorio-ad-arco-7313cd3955.jpg",
+        "sha256": "1c79747fcd0d9a15abdfc3cf109d9adade24337c3d8c2110220a74dce49fd544",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-purgatorio-ad-arco-7f2b52bf99",
+      "soggetto": "interno",
+      "didascaliaProposta": "Una veduta del presbiterio del Purgatorio ad Arco.",
+      "titoloFonte": "AbsidePurgatorio.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:AbsidePurgatorio.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/65/AbsidePurgatorio.jpg",
+      "autore": "Baku",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4160,
+        3120
+      ],
+      "dataScattoDichiarata": "2017-09-28 13:07:39",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Inquadratura simile all’abside già selezionata, con ostacoli e visitatore in primo piano; non aggiunge una scena necessaria.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Baku",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-purgatorio-ad-arco-7f2b52bf99",
+        "esito": "ok",
+        "dimensioni": [
+          4160,
+          3120
+        ],
+        "sha256": "1fdb47cea0c5ead7ea086c152f0acd277c86e445a132054b1b1dfb2a5107e199"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    }
+  ],
+  "stato": "soglia-minima-raggiunta",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-purgatorio",
+    "soggetto": "esterno",
+    "didascaliaProposta": "Santa Maria delle Anime del Purgatorio ad Arco, in via dei Tribunali.",
+    "titoloFonte": "Napoli - Purgatorio ad Arco2012.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Napoli_-_Purgatorio_ad_Arco2012.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/4/40/Napoli_-_Purgatorio_ad_Arco2012.jpg",
+    "autore": "ho visto nina volare",
+    "licenza": "CC BY-SA 2.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "dimensioni": [
+      3648,
+      2736
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "ho visto nina volare",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-purgatorio-ad-arco-a53b1789bb",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-purgatorio-ad-arco-8d056dbef3",
+      "ruolo": "approfondimento"
+    },
+    {
+      "ordine": 3,
+      "foto": "foto-purgatorio-ad-arco-7313cd3955",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Ambiente principale, per capire la visita.",
+    "Altro ambiente o percorso effettivamente appartenente al luogo.",
+    "Collezione o dettaglio rappresentativo, quando riutilizzabile."
+  ],
+  "daCompletare": [
+    "Manca ancora l’ipogeo, elemento essenziale della tappa: tre foto della chiesa non completano l’esperienza.",
+    "Soglia numerica raggiunta; controllo integrale al 100% e conferma editoriale prima dell’uso nel sito."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "foto-purgatorio-ad-arco-a53b1789bb",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 3,
+    "mancantiPerTre": 0,
+    "mancantiPerQuattro": 1,
+    "sogliaNumericaRaggiunta": true,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 28,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

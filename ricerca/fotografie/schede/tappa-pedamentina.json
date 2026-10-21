@@ -1,0 +1,254 @@
+{
+  "tipo": "tappa",
+  "id": "pedamentina",
+  "nome": "La Pedamentina, da San Martino in discesa",
+  "controllato": "2026-10-20",
+  "fotoEsistente": null,
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Pedamentina\"",
+      "risultatiEsaminati": 16
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-pedamentina-7a23f72953",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Gradini della Pedamentina",
+      "titoloFonte": "RampePed.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:RampePed.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/6/66/RampePed.jpg",
+      "autore": "Silvana Berardelli",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        1955,
+        1368
+      ],
+      "dataScattoDichiarata": "2010-01-16 13:13:28",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Silvana Berardelli",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-pedamentina-56e91b3431",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Tratto delle scale con case e vegetazione",
+      "titoloFonte": "Pedamentina a San Martino, Naples 20230622 02.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Pedamentina_a_San_Martino,_Naples_20230622_02.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/0e/Pedamentina_a_San_Martino%2C_Naples_20230622_02.jpg",
+      "autore": "Argo Navis",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        3000,
+        4000
+      ],
+      "dataScattoDichiarata": "2023-06-22 16:06:05",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scelta per luce, composizione, soggetto reale e utilità nella sequenza.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Argo Navis",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-pedamentina-56e91b3431",
+        "esito": "ok",
+        "dimensioni": [
+          3000,
+          4000
+        ],
+        "sha256": "4cbc21af573b6ed186aa36cbab19392aa2280ff7f72cdcfe0ae687c351a9b2c9"
+      },
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-pedamentina/foto-pedamentina-56e91b3431.jpg",
+        "anteprima": "../foto/anteprime/tappa-pedamentina/foto-pedamentina-56e91b3431.jpg",
+        "sha256": "4cbc21af573b6ed186aa36cbab19392aa2280ff7f72cdcfe0ae687c351a9b2c9",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-pedamentina-879366a3ee",
+      "soggetto": "panorama",
+      "didascaliaProposta": "La città vista dalle rampe della Pedamentina",
+      "titoloFonte": "Pedamentina a San Martino, Naples 20230622 01.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Pedamentina_a_San_Martino,_Naples_20230622_01.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/b/b3/Pedamentina_a_San_Martino%2C_Naples_20230622_01.jpg",
+      "autore": "Argo Navis",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4000,
+        3000
+      ],
+      "dataScattoDichiarata": "2023-06-22 16:05:23",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera",
+      "segnalazioni": [],
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Scorcio meno pulito e poco diverso dalla vista già proposta.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Argo Navis",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-pedamentina-a3db10d0e6",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Scalinata e panorama all’inizio della Pedamentina.",
+      "titoloFonte": "Pedamentina.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Pedamentina.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/0/08/Pedamentina.jpg",
+      "autore": "Baku",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        4160,
+        3120
+      ],
+      "dataScattoDichiarata": "2018-04-18 15:18:41",
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "proposta",
+        "motivazione": "Scena reale a colori e complementare alle altre immagini della scheda; originale HD verificato e licenza già pubblica. Valutazione editoriale preliminare, non garanzia di perfezione né di autore professionista.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Baku",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-pedamentina-a3db10d0e6",
+        "esito": "ok",
+        "dimensioni": [
+          4160,
+          3120
+        ],
+        "sha256": "f739dd3e995a5836c8f196e136daa6d83cb8f77cab0971ad9cd1c32b66a2f565"
+      },
+      "ricercaAggiunta": "2026-10-20",
+      "archivioLocale": {
+        "originale": "../foto/originali/tappa-pedamentina/foto-pedamentina-a3db10d0e6.jpg",
+        "anteprima": "../foto/anteprime/tappa-pedamentina/foto-pedamentina-a3db10d0e6.jpg",
+        "sha256": "f739dd3e995a5836c8f196e136daa6d83cb8f77cab0971ad9cd1c32b66a2f565",
+        "modificheOriginale": "nessuna",
+        "modificheAnteprima": "orientamento EXIF, ridimensionamento e ricompressione JPEG; nessun ritaglio"
+      }
+    },
+    {
+      "id": "foto-pedamentina-6b6ac9fd02",
+      "soggetto": "percorso",
+      "didascaliaProposta": "Una fotografia intitolata 1000 Stufen hinab.",
+      "titoloFonte": "1000 Stufen hinab",
+      "pagina": "https://www.flickr.com/photos/caseyhugelfink/36399267881/",
+      "originale": "https://live.staticflickr.com/4369/36399267881_b272a3c7cc_o.jpg",
+      "autore": "Casey Hugelfink",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+      "dimensioni": [
+        3024,
+        4032
+      ],
+      "dataScattoDichiarata": null,
+      "stato": "licenza-fotografica-verificata",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Cornice e supporto visibili intorno alla scena: sembra una ripresa di una fotografia esposta, non un originale adatto della passeggiata.",
+        "dirittiDaChiarire": [],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Casey Hugelfink",
+        "originaleScaricato": true,
+        "controlloVisivo": "provino-da-originale-osservato",
+        "controlloAl100Percento": "non-completato"
+      },
+      "controlloOriginale": {
+        "riferimento": "foto-pedamentina-6b6ac9fd02",
+        "esito": "ok",
+        "dimensioni": [
+          3024,
+          4032
+        ],
+        "sha256": "21ecd50f751eb077a620a218a8253ed38571a1357aadcbdd3076b6f790db301c"
+      },
+      "ricercaAggiunta": "2026-10-20"
+    }
+  ],
+  "stato": "selezione-parziale",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera",
+  "galleriaProposta": [
+    {
+      "ordine": 1,
+      "foto": "foto-pedamentina-56e91b3431",
+      "ruolo": "apertura"
+    },
+    {
+      "ordine": 2,
+      "foto": "foto-pedamentina-a3db10d0e6",
+      "ruolo": "approfondimento"
+    }
+  ],
+  "sequenzaObiettivo": [
+    "Vista d’insieme del paesaggio o del luogo.",
+    "Seconda veduta complementare o percorso reale per raggiungerlo.",
+    "Dettaglio significativo solo se aggiunge informazioni."
+  ],
+  "daCompletare": [
+    "Mancano 1 fotografie per il minimo di tre; 2 per arrivare a quattro.",
+    "Cercare una scena complementare del luogo esatto, evitando duplicati e fotografie sotto il livello richiesto."
+  ],
+  "ricercheEsterneVerificate": [],
+  "galleriaPropostaPrecedente": [
+    {
+      "ordine": 1,
+      "foto": "foto-pedamentina-56e91b3431",
+      "ruolo": "apertura"
+    }
+  ],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 2,
+    "mancantiPerTre": 1,
+    "mancantiPerQuattro": 2,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 4,
+    "risultatiLetti": 56,
+    "pagineFotograficheFlickrVerificate": 2,
+    "riscontriFlickr": "../ricerche/2026-10-20-flickr.json",
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

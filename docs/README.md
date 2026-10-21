@@ -1,6 +1,6 @@
 # Documentazione · scegliere cosa leggere
 
-Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [regole comuni](REGOLE.md) e [stato corrente](../PROGRESS.md). Poi scegli solo la riga del compito, senza aprire tutti i rimandi.
+Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [regole comuni](REGOLE.md) e la prima sezione dello [stato corrente](../PROGRESS.md), approfondendo i blocchi precedenti solo se pertinenti. Poi scegli solo la riga del compito, senza aprire tutti i rimandi.
 
 Stato corrente: [revisione 63 e residui concreti](storico/2026-10-21-revisione-63.md), 765 test e 207 fonti pubbliche; controllo dei JSON prima della cache, trasferimento preparato su copia temporanea e tipi proposti. Pack Git originale difettoso; copia indipendente recuperata e verificata, causa delle alterazioni ancora aperta; integrazione/CI, tipi effettivi e prove native da completare. Istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
 
@@ -14,10 +14,13 @@ Stato corrente: [revisione 63 e residui concreti](storico/2026-10-21-revisione-6
 | Calcoli, spostamenti e link | `src/lib/itinerari/calcolo.ts`, `spostamenti.ts`, `link.ts`, `date.ts`, `tipi.ts` | Test corrispondenti in `test/`; `napoli.ts` fornisce i dati della città |
 | Mappa e percorsi | `src/scripts/itinerari/compositore/mappa.js`, `src/lib/itinerari/strade.ts`, `scripts/mappa/` | [README · Itinerari](../README.md#itinerari); JSON solo per il caso riprodotto |
 | Bus e rinnovo dati | [Aggiornamenti](../aggiornamenti/README.md), `scripts/itinerari/` | [Specifica bus](../specifiche/bus-orari-veri.md); `src/lib/itinerari/firma-posizioni.mjs` condivisa con la build; dati/fonti del caso |
+| Controllo periodico di orari, accessi e nuove pubblicazioni | [Procedura breve](../aggiornamenti/PROCEDURA.md), `node aggiornamenti/leggi.mjs cerca "nome"` | Singola scheda e soli canali/casi pertinenti; [rapporti](../aggiornamenti/rapporti/README.md) solo per evidenze storiche. Cercare nuove pagine oltre ai vecchi URL |
 | Dati, fonti, testi e firme | [README · Informazioni](../README.md#dove-sono-le-informazioni), `src/lib/regole.mjs`, `test/dati.test.mjs`, `test/testi.test.mjs` | [Guida dei testi](../specifiche/stile-testi.md), solo schede e YAML coinvolti |
+| Ricerca fotografie e condizioni di riuso | [Entrata breve](../ricerca/fotografie/README.md), [indice per luogo/locale](../ricerca/fotografie/indice.md) | Solo la scheda pertinente e la [cartella delle foto](../ricerca/fotografie/foto/README.md); [diritti](../ricerca/fotografie/LICENZE.md). La vecchia coda di richieste è sospesa: nessun contatto. Non leggere tutto il catalogo né caricare tutte le immagini nella conversazione |
 | Build e uso offline | `astro.config.mjs`, `integrations/`, `scripts/check-links.mjs` | `src/scripts/sito.ts`, `public/manifest.webmanifest`; preservare il service worker |
 | Interfaccia e bozzetti, come attività approvata | [DESIGN](../DESIGN.md), [indice specifiche](../specifiche/README.md) | Solo il README del pezzo di `design/` e la skill pertinente |
 | Dipendenze, tipi e regole GitHub | [Manutenzione](MANUTENZIONE.md) | Piano di aggiornamento; nessuna installazione implicita |
+| Valutazioni Google/Tripadvisor/TheFork · solo proposta | [Piano di fattibilità](../specifiche/valutazioni-esterne.md) | [Ricerca ufficiale](../ricerca/2026-10-19-valutazioni-esterne.md); nessuna implementazione autorizzata |
 | Lavori futuri | [ROADMAP](../ROADMAP.md) | Non è una lista di attività autorizzate per la sessione |
 | Decisioni precedenti | [Istruzioni precedenti](storico/2026-10-09-CLAUDE.md), [stato precedente](storico/2026-10-09-PROGRESS.md) | Snapshot integrali prima del Blocco 2, non istruzioni correnti |
 

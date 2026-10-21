@@ -1,0 +1,77 @@
+{
+  "id": "tappa-citta-scienza",
+  "nome": "Città della Scienza",
+  "categoria": "citta",
+  "entita": {
+    "file": "src/data/tappe.yaml",
+    "id": "citta-scienza"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "ultimo_ingresso",
+    "stagionalita",
+    "prenotazione_e_limitazioni",
+    "prezzi_gia_pubblicati"
+  ],
+  "schede": {
+    "orari": "tp-cittascienza-orari",
+    "prezzi": "tp-cittascienza-prezzi"
+  },
+  "file_interessati": [
+    "src/data/tappe.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/tappe.yaml"
+  ],
+  "fonti_esistenti": [
+    "tp-cittascienza-visita",
+    "tp-cittascienza-biglietteria"
+  ],
+  "canali_scoperta": [
+    "gestore-www-cittadellascienza-it",
+    "accessi-estesi-cittascienza"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "cittadellascienza.it",
+      "www.campaniartecard.it"
+    ],
+    "soggetto": "Città della Scienza",
+    "aggiungere": "",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_non_verificabili",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "pubblicazioni_rilevate": [],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://www.cittadellascienza.it/organizza-una-visita/",
+      "https://www.cittadellascienza.it/"
+    ],
+    "verifiche_personali": [
+      "V11"
+    ],
+    "esito": "rimangono_verifiche_personali",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  },
+  "ultimo_riesame_accessi": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml",
+    "gruppi": [
+      "V11"
+    ],
+    "verifiche_personali_residue": [
+      "V11"
+    ],
+    "controllo_completo": false
+  }
+}

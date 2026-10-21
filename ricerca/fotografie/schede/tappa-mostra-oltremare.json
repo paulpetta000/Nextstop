@@ -1,0 +1,188 @@
+{
+  "tipo": "tappa",
+  "id": "mostra-oltremare",
+  "nome": "Il parco della Mostra d'Oltremare",
+  "controllato": "2026-10-20",
+  "fotoEsistente": "tp-mostra-oltremare",
+  "richiesta": [
+    "vista_generale",
+    "dettaglio_o_percorso"
+  ],
+  "ricerche": [
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "\"Mostra d'Oltremare\" filetype:bitmap",
+      "risultatiEsaminati": 10
+    },
+    {
+      "archivio": "Wikimedia Commons",
+      "query": "incategory:\"Fontana dell'Esedra (Naples)\" filetype:bitmap",
+      "risultatiEsaminati": 5
+    }
+  ],
+  "fotoCandidate": [
+    {
+      "id": "foto-mostra-oltremare-4600d7fb14",
+      "soggetto": "dettaglio",
+      "didascaliaProposta": "Maioliche della Fontana dell'Esedra",
+      "titoloFonte": "MaiolicheEsedra.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:MaiolicheEsedra.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/3/36/MaiolicheEsedra.jpg",
+      "autore": "Spalluzza",
+      "licenza": "CC BY-SA 2.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0",
+      "dimensioni": [
+        3872,
+        2592
+      ],
+      "dataScattoDichiarata": "2012-06-03 10:56:09",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee"
+      ],
+      "revisioneCommons": 1193763967,
+      "sha1Originale": "e7e081f900742fcf67fd104af125b98f4d9a44cb",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Non scelta: preferite immagini più chiare, pertinenti e diverse fra loro.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Spalluzza",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-mostra-oltremare-43b8d6efcb",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Vasche e verde attorno alla Fontana dell'Esedra",
+      "titoloFonte": "FontEs.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:FontEs.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/1/18/FontEs.jpg",
+      "autore": "Baku",
+      "licenza": "CC BY-SA 4.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "dimensioni": [
+        1440,
+        810
+      ],
+      "dataScattoDichiarata": "2020-03-04",
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee"
+      ],
+      "revisioneCommons": 1256031432,
+      "sha1Originale": "c204dba84862d1169572992cdd2dc9666ab1236d",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Baku",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    },
+    {
+      "id": "foto-mostra-oltremare-1644b2b444",
+      "soggetto": "esterno",
+      "didascaliaProposta": "Fontana dell'Esedra senza getti d'acqua",
+      "titoloFonte": "Font esedra 7.jpg",
+      "pagina": "https://commons.wikimedia.org/wiki/File:Font_esedra_7.jpg",
+      "originale": "https://upload.wikimedia.org/wikipedia/commons/d/d1/Font_esedra_7.jpg",
+      "autore": "Baku",
+      "licenza": "CC BY-SA 3.0",
+      "licenzaUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "dimensioni": [
+        1440,
+        1080
+      ],
+      "dataScattoDichiarata": null,
+      "controlloVisivo": "anteprima-osservata",
+      "stato": "licenza-libera-con-chiarimenti",
+      "segnalazioni": [
+        "opere-contemporanee"
+      ],
+      "revisioneCommons": 1256058510,
+      "sha1Originale": "538ad8b9235e1e32af01369e27e00748bf6df155",
+      "revisioneEditoriale": {
+        "esito": "esclusa",
+        "motivazione": "Originale sotto 2.000 px sul lato lungo: escluso dalla proposta HD.",
+        "dirittiDaChiarire": [
+          "opere-contemporanee"
+        ],
+        "creditoVisibileRichiesto": true,
+        "autoreSintetico": "Baku",
+        "originaleScaricato": false,
+        "controlloVisivo": "anteprima-osservata",
+        "controlloAl100Percento": "non-completato"
+      }
+    }
+  ],
+  "stato": "da-completare",
+  "azioneSuccessiva": "Continuare la ricerca di foto reali, a colori e HD con riuso già concesso, senza contatti, richieste, acquisti o inserimento nel sito. Leggere le lacune: tre immagini non significano automaticamente esperienza coperta.",
+  "revisione": "obiettivo-3-4-v3",
+  "statoRicercaPrecedente": "licenza-libera-con-chiarimenti",
+  "fotoEsistenteRevisionata": {
+    "id": "esistente:tp-mostra-oltremare",
+    "soggetto": "esterno",
+    "didascaliaProposta": "La Fontana dell'Esedra, alla Mostra d'Oltremare.",
+    "titoloFonte": "Font EsedraNa.jpg",
+    "pagina": "https://commons.wikimedia.org/wiki/File:Font_EsedraNa.jpg",
+    "originale": "https://upload.wikimedia.org/wikipedia/commons/8/88/Font_EsedraNa.jpg",
+    "autore": "aquila 460 (Gennaro Fusco)",
+    "licenza": "CC BY-SA 2.0",
+    "licenzaUrl": "https://creativecommons.org/licenses/by-sa/2.0/",
+    "dimensioni": [
+      2272,
+      1704
+    ],
+    "stato": "licenza-fotografica-verificata",
+    "revisioneEditoriale": {
+      "esito": "esclusa",
+      "motivazione": "La vista esistente non migliora la nuova selezione: qualità o inquadratura da sostituire.",
+      "dirittiDaChiarire": [
+        "diritti-bene-da-chiarire"
+      ],
+      "creditoVisibileRichiesto": true,
+      "autoreSintetico": "aquila 460 (Gennaro Fusco)",
+      "originaleScaricato": false,
+      "controlloVisivo": "anteprima-osservata",
+      "controlloAl100Percento": "non-completato"
+    }
+  },
+  "galleriaProposta": [],
+  "sequenzaObiettivo": [
+    "Vista riconoscibile del luogo o della passeggiata.",
+    "Interno o secondo punto di interesse della tappa.",
+    "Dettaglio utile, senza ripetizioni."
+  ],
+  "daCompletare": [
+    "Completare i componenti della tappa non raffigurati, conservando didascalie precise."
+  ],
+  "ricercheEsterneVerificate": [],
+  "copertura": {
+    "minimoRichiesto": 3,
+    "preferite": 4,
+    "proposte": 0,
+    "mancantiPerTre": 3,
+    "mancantiPerQuattro": 4,
+    "sogliaNumericaRaggiunta": false,
+    "pubblicazioneApprovata": false
+  },
+  "approfondimento20261020": {
+    "registro": "../ricerche/2026-10-20.json",
+    "ricerche": 1,
+    "risultatiLetti": 8,
+    "pagineFotograficheFlickrVerificate": 0,
+    "nota": "Conteggi di ricerca, non immagini distinte del luogo o approvate. Omonimi e duplicati scartati; proposta soltanto in galleriaProposta."
+  }
+}

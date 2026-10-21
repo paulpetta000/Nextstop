@@ -1,0 +1,49 @@
+{
+  "id": "locale-brandi",
+  "nome": "Pizzeria Brandi",
+  "categoria": "locale",
+  "entita": {
+    "file": "src/data/locali.yaml",
+    "id": "brandi"
+  },
+  "frequenza_giorni": 14,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "apertura_settimanale",
+    "chiusure_e_ferie",
+    "eccezioni_e_validita",
+    "servizio_pranzo_cena",
+    "sede_esatta",
+    "prenotazione"
+  ],
+  "schede": {
+    "orari": "lc-brandi-orari"
+  },
+  "file_interessati": [
+    "src/data/locali.yaml",
+    "src/data/fatti.yaml",
+    "src/data/fonti.yaml",
+    "src/testi/locali.yaml"
+  ],
+  "fonti_esistenti": [
+    "lc-brandi"
+  ],
+  "canali_scoperta": [
+    "gestore-pizzeriabrandi-com"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "pizzeriabrandi.com"
+    ],
+    "soggetto": "Pizzeria Brandi",
+    "aggiungere": "Salita Sant'Anna di Palazzo 1",
+    "modello": "site:{dominio} {soggetto} {sede} (orari OR chiusura OR riapertura OR avviso OR nuovo orario)",
+    "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
+  },
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [],
+  "sede": "Salita Sant'Anna di Palazzo 1",
+  "pubblicazioni_rilevate": []
+}

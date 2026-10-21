@@ -1,0 +1,91 @@
+{
+  "id": "trasporto-ascensori",
+  "nome": "Ascensori pubblici ANM e Monte Echia",
+  "categoria": "trasporto",
+  "linee_o_tratte": [
+    "ascensori"
+  ],
+  "frequenza_giorni": 7,
+  "anticipo_scadenza_giorni": 3,
+  "campi": [
+    "prima_ultima_corsa",
+    "feriale_sabato_festivo",
+    "andata_ritorno",
+    "validita_documento",
+    "rettifiche_e_sospensioni",
+    "durate_e_frequenze_usate"
+  ],
+  "schede": [
+    "tp-echia-orari",
+    "tp-echia-prezzi",
+    "tp-sanita-orari"
+  ],
+  "fonti_esistenti": [
+    "tp-anm-ascensori",
+    "tp-anm-echia"
+  ],
+  "canali_scoperta": [
+    "anm-portale",
+    "comune-notizie",
+    "ritentativo-14",
+    "accessi-estesi-castelnuovo"
+  ],
+  "ricerca_novita": {
+    "domini": [
+      "anm.it",
+      "comune.napoli.it",
+      "www2.anm.it",
+      "www.anm.it",
+      "www.campaniartecard.it"
+    ],
+    "soggetto": "Ascensori pubblici ANM e Monte Echia",
+    "aggiungere": "ascensori",
+    "modello": "site:{dominio} {linea_o_tratta} (orario OR nuovo orario OR avviso OR rettifica OR sospensione)",
+    "regola": "Cercare anche senza anno e verificare tutti i documenti nuovi nell’indice del gestore, non soltanto il vecchio PDF."
+  },
+  "file_interessati": [
+    "src/data/fonti.yaml",
+    "src/data/fatti.yaml",
+    "src/testi/itinerari.yaml",
+    "scripts/itinerari/costruisci.mjs",
+    "src/data/tempi-tappe.json",
+    "src/data/percorsi-tappe.json",
+    "src/data/percorsi-alternativi.json",
+    "src/data/partenze-bus.json",
+    "src/data/linee-bus.json"
+  ],
+  "stato_preparazione": "fonti_organizzate_confronto_da_completare",
+  "ultimo_controllo_completo": null,
+  "prossimo_controllo": "2026-10-19",
+  "note": [
+    "Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo inventario."
+  ],
+  "pubblicazioni_rilevate": [],
+  "ritentativo_accesso": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
+    "url_ritentati": [
+      "https://www2.anm.it/index.php?option=com_content&task=view&id=1339&Itemid=320",
+      "https://www2.anm.it/index.php?option=com_content&task=view&id=4286&Itemid=314",
+      "https://www.anm.it/s/?language=it",
+      "https://www.comune.napoli.it/"
+    ],
+    "verifiche_personali": [
+      "V03",
+      "V04"
+    ],
+    "esito": "rimangono_verifiche_personali",
+    "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  },
+  "ultimo_riesame_accessi": {
+    "data": "2026-10-19",
+    "rapporto": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml",
+    "gruppi": [
+      "V04"
+    ],
+    "verifiche_personali_residue": [
+      "V04"
+    ],
+    "controllo_completo": false
+  }
+}
