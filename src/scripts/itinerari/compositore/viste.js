@@ -761,16 +761,38 @@ export const AZ = {
   },
   'chiudi-mappa': () => { const s = $('#d-strato'); if (s) s.hidden = true; mappaD?.spegni(); mappaD = null; $('.d-tab__mappa')?.setAttribute('aria-pressed', 'false'); $('.d-tab__mappa')?.focus(); }
 };
+// ---------- cambio di vista coordinato ----------
+let richiestaVista = 0, vistaRichiesta = null;
+function aggiornaMenuVista() {
+  const b = document.getElementById('vista-btn'); if (!b) return;
+  $('.vista-ico', b).innerHTML = ic(S.p === 'c' ? 'mappa' : 'elenco', 20);
+  $('#vista-nome', b).textContent = 'Vista: ' + NOMI_VISTA[S.p];
+  b.setAttribute('aria-label', 'Vista: ' + NOMI_VISTA[S.p] + '. Cambia vista');
+}
 export function cambiaVista(v) {
-  if (v !== 'c' && v !== 'd' || v === S.p) return;
-  ricordaVista(v);
+  if (v !== 'c' && v !== 'd') return;
+  if (v === S.p) {
+    if (vistaRichiesta !== null) { richiestaVista++; vistaRichiesta = null; aggiornaMenuVista(); }
+    return;
+  }
+  if (v === vistaRichiesta) return;
+  const turno = ++richiestaVista, x = X(), app = $('#app');
+  vistaRichiesta = v;
+  const valido = () => turno === richiestaVista && X() === x && $('#app') === app && !!app && app.isConnected !== false;
+  const annulla = () => { if (turno === richiestaVista) vistaRichiesta = null; };
   const fai = async () => {
-    await chiudiSchede(); S.p = v; S.anima = true; rotta = true; disegna(); scrollTo(0, 0);
-    // dal menu: il pulsante che lo aveva aperto è stato ridisegnato, il fuoco va sul tondo nuovo
+    if (!valido()) { annulla(); return false; }
+    try { await chiudiSchede(); }
+    catch { if (valido()) avvisa('La vista non si è aggiornata. Riprova dal menu.'); annulla(); return false; }
+    if (!valido()) { annulla(); return false; }
+    vistaRichiesta = null; S.p = v; ricordaVista(v); S.anima = true; rotta = true; disegna(); scrollTo(0, 0);
+    aggiornaMenuVista();
+    // Il pulsante che aveva aperto il menu è stato ridisegnato.
     if (!document.activeElement || document.activeElement === document.body) $('.cmp [popovertarget="menu"]')?.focus({ preventScroll: true });
+    annuncia(v === 'c' ? 'Vista Mappa prima' : 'Vista Le pagine');
+    return true;
   };
-  if (document.startViewTransition && piano()) document.startViewTransition(fai).ready.catch(() => {}); else fai();
-  annuncia(v === 'c' ? 'Vista Mappa prima' : 'Vista Le pagine');
+  if (document.startViewTransition && piano()) document.startViewTransition(fai).ready.catch(() => {}); else return fai();
 }
 // Il logo del menu (quello ambra della pagina) si anima a ogni apertura e passandoci sopra; con «riduci movimento» resta
 // fermo (Marchio.astro). Dura quanto quello della pagina.
@@ -794,19 +816,13 @@ export function preparaMenu() {
   if (m) animaLogoMenu(m);
   const b = document.getElementById('vista-btn');
   if (!b) return;
-  const metti = () => {
-    $('.vista-ico', b).innerHTML = ic(S.p === 'c' ? 'mappa' : 'elenco', 20);
-    $('#vista-nome', b).textContent = `Vista: ${NOMI_VISTA[S.p]}`;
-    b.setAttribute('aria-label', `Vista: ${NOMI_VISTA[S.p]}. Cambia vista`);
-  };
-  metti();
+  aggiornaMenuVista();
   b.hidden = false;
   b.addEventListener('click', () => {
     const m = document.getElementById('menu');
     try { m?.hidePopover?.(); } catch { /* già chiuso */ }
     m?.classList.remove('aperto');
-    cambiaVista(S.p === 'c' ? 'd' : 'c');
-    metti();
+    cambiaVista((vistaRichiesta ?? S.p) === 'c' ? 'd' : 'c');
   });
 }
 

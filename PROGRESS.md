@@ -2,7 +2,11 @@
 
 _Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 20/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
-## Continuazione corrente · sei gruppi completati (21 ottobre)
+## Continuazione corrente · cambio vista e menu (21 ottobre)
+
+**659/659 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Tredici prove nuove su richieste concorrenti, etichetta del menu, preferenza e annunci. [Revisione 47 e seguito della diagnosi della build](docs/storico/2026-10-21-revisione-47.md). Nuovo bundle alterato conservato; sonde ridotte e completa non riproducono l’errore, comando ordinario finale riuscito. Segue il ciclo degli ascoltatori e della mappa. Nessun browser/rilascio; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nell’analisi.
+
+## Continuazione precedente · sei gruppi completati (21 ottobre)
 
 **646/646 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**. Codice **7cf092c**, sei gruppi e **95 nuove prove** da 551; ultimo gruppo su animazioni condivise e cambi giorno nelle due viste. [Revisione 46, prove e alterazione di un artefatto di build](docs/storico/2026-10-21-revisione-46.md). [Stato degli otto punti e prove](docs/storico/2026-10-21-riepilogo-aree.md). I controlli ordinari sono riusciti dopo le scadenze del revisore; causa dell’alterazione intermittente ancora aperta. Nessun browser/rilascio; istruzioni/consumo Claude esclusi e nuova idea rinviata anche nell’analisi.
 

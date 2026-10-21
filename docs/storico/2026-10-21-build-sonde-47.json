@@ -1,0 +1,124 @@
+{
+  "alterazione": {
+    "data": "2026-10-21T11:51:37.608Z",
+    "bundle": {
+      "file": "dist/.prerender/chunks/riferimento-napoli_CW_kUgjJ.mjs",
+      "byte": 9914962,
+      "sha256": "1902d14fcfed22f18b611a80b1fde1834a05a1accd8755d1ce5c9d0a059675fc"
+    },
+    "differenze": [
+      {
+        "percorso": "percorsi-alternativi.json.candidati.6898",
+        "lunghezze": [
+          266,
+          266
+        ],
+        "chars": [
+          {
+            "i": 172,
+            "sorgente": "~",
+            "bundle": "n",
+            "xor": 16
+          }
+        ]
+      }
+    ],
+    "validazioneSorgenti": "riuscita"
+  },
+  "viteRidotto": {
+    "data": "2026-10-21T11:52:54.032Z",
+    "node": "v24.21.0",
+    "sorgente": {
+      "file": "C:\\Users\\Windows11\\.codex\\worktrees\\analisi-nextstop-ottobre\\nextstop\\src\\data\\percorsi-alternativi.json",
+      "sha256": "3294f4eab4f38da9fcb0f84e88180bf44ef31a8eb3163cef32dd5a50523feb5e"
+    },
+    "esiti": [
+      {
+        "giro": 0,
+        "sha256": "49f3bcb41ec06720d6cc71216bf568c217c739eb8698a6c4d28733592c49da7c",
+        "byte": 3742008,
+        "uguale": true
+      },
+      {
+        "giro": 1,
+        "sha256": "49f3bcb41ec06720d6cc71216bf568c217c739eb8698a6c4d28733592c49da7c",
+        "byte": 3742008,
+        "uguale": true
+      },
+      {
+        "giro": 2,
+        "sha256": "49f3bcb41ec06720d6cc71216bf568c217c739eb8698a6c4d28733592c49da7c",
+        "byte": 3742008,
+        "uguale": true
+      },
+      {
+        "giro": 3,
+        "sha256": "49f3bcb41ec06720d6cc71216bf568c217c739eb8698a6c4d28733592c49da7c",
+        "byte": 3742008,
+        "uguale": true
+      },
+      {
+        "giro": 4,
+        "sha256": "49f3bcb41ec06720d6cc71216bf568c217c739eb8698a6c4d28733592c49da7c",
+        "byte": 3742008,
+        "uguale": true
+      },
+      {
+        "giro": 5,
+        "sha256": "49f3bcb41ec06720d6cc71216bf568c217c739eb8698a6c4d28733592c49da7c",
+        "byte": 3742008,
+        "uguale": true
+      },
+      {
+        "giro": 6,
+        "sha256": "49f3bcb41ec06720d6cc71216bf568c217c739eb8698a6c4d28733592c49da7c",
+        "byte": 3742008,
+        "uguale": true
+      },
+      {
+        "giro": 7,
+        "sha256": "49f3bcb41ec06720d6cc71216bf568c217c739eb8698a6c4d28733592c49da7c",
+        "byte": 3742008,
+        "uguale": true
+      },
+      {
+        "giro": 8,
+        "sha256": "49f3bcb41ec06720d6cc71216bf568c217c739eb8698a6c4d28733592c49da7c",
+        "byte": 3742008,
+        "uguale": true
+      },
+      {
+        "giro": 9,
+        "sha256": "49f3bcb41ec06720d6cc71216bf568c217c739eb8698a6c4d28733592c49da7c",
+        "byte": 3742008,
+        "uguale": true
+      }
+    ]
+  },
+  "astroCompleto": {
+    "data": "2026-10-21T11:55:11.721Z",
+    "generazione": [
+      {
+        "file": "chunks/riferimento-napoli_Urf-zWcb.mjs",
+        "sha256": "d465a227005325fa47e6f0d5bf9d6d8a80b9b0f11b823ccee8c8018f50de591a",
+        "byte": 9914962
+      }
+    ],
+    "scrittura": [
+      {
+        "file": "C:\\Users\\Windows11\\.codex\\worktrees\\analisi-nextstop-ottobre\\nextstop\\dist\\.prerender\\chunks\\riferimento-napoli_Urf-zWcb.mjs",
+        "sha256": "d465a227005325fa47e6f0d5bf9d6d8a80b9b0f11b823ccee8c8018f50de591a",
+        "ugualeMemoria": true
+      }
+    ],
+    "build": "riuscita",
+    "memoria": {
+      "uguale": true,
+      "candidatiDiversi": []
+    },
+    "disco": {
+      "uguale": true,
+      "candidatiDiversi": []
+    }
+  }
+}
