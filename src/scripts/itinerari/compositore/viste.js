@@ -734,6 +734,7 @@ const nomeBottone = () => `<h2 class="nome-it"><button type="button" class="nome
 export const mettiNome = () => $$('.nome-it__t').forEach(x => { x.textContent = X().nome; });
 
 // ---------- le azioni dei pulsanti (delega) ----------
+const avvisiInChiusura = new WeakSet();
 export const AZ = {
   ...AZ_PASTO,
   giorno: b => vaiAlGiorno(+b.dataset.g),
@@ -767,18 +768,27 @@ export const AZ = {
   // la X dell'avviso: il triangolo si richiude, il riquadro scivola via a destra, poi lo spazio si chiude
   'via-avviso': async b => {
     const el = b.closest('.avviso-giorno');
-    for (const k of b.dataset.chiave.split('|').slice(1)) viaAvvisi.add(`${b.dataset.chiave.split('|')[0]}|${k}`);
-    if (piano()) {
-      el.classList.add('avviso-giorno--via');
-      await el.animate([{ transform: 'translateX(0)', opacity: 1 }, { transform: 'translateX(40px)', opacity: 0 }], { duration: 260, delay: 140, easing: 'cubic-bezier(.7,0,.84,0)', fill: 'forwards' }).finished.catch(() => {});
-      const h = el.offsetHeight, cs = getComputedStyle(el);
-      await el.animate([{ height: h + 'px', marginTop: cs.marginTop, marginBottom: cs.marginBottom, paddingTop: cs.paddingTop, paddingBottom: cs.paddingBottom }, { height: '0px', marginTop: '0px', marginBottom: '0px', paddingTop: '0px', paddingBottom: '0px' }], { duration: 240, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'forwards' }).finished.catch(() => {});
-    }
-    const dopoEl = el.closest('#app')?.querySelector('[data-azione="aggiungi"]');
-    el.remove();
-    annuncia('Avviso chiuso');
-    dopoEl?.focus({ preventScroll: true });
-    if (S.p === 'd') Dp.misura();
+    if (!el || avvisiInChiusura.has(el)) return;
+    const x = X(), g = S.g, giorno = x.giorni[g], vista = S.p, app = $('#app');
+    const valido = () => X() === x && S.g === g && x.giorni[g] === giorno && S.p === vista && $('#app') === app && el.closest('#app') === app && el.isConnected !== false;
+    if (!valido()) return;
+    avvisiInChiusura.add(el);
+    try {
+      for (const k of b.dataset.chiave.split('|').slice(1)) viaAvvisi.add(`${b.dataset.chiave.split('|')[0]}|${k}`);
+      if (piano()) {
+        el.classList.add('avviso-giorno--via');
+        await el.animate([{ transform: 'translateX(0)', opacity: 1 }, { transform: 'translateX(40px)', opacity: 0 }], { duration: 260, delay: 140, easing: 'cubic-bezier(.7,0,.84,0)', fill: 'forwards' }).finished.catch(() => {});
+        if (!valido()) return;
+        const h = el.offsetHeight, cs = getComputedStyle(el);
+        await el.animate([{ height: h + 'px', marginTop: cs.marginTop, marginBottom: cs.marginBottom, paddingTop: cs.paddingTop, paddingBottom: cs.paddingBottom }, { height: '0px', marginTop: '0px', marginBottom: '0px', paddingTop: '0px', paddingBottom: '0px' }], { duration: 240, easing: 'cubic-bezier(.16,1,.3,1)', fill: 'forwards' }).finished.catch(() => {});
+      }
+      if (!valido()) return;
+      const dopoEl = app?.querySelector('[data-azione="aggiungi"]');
+      el.remove();
+      annuncia('Avviso chiuso');
+      dopoEl?.focus({ preventScroll: true });
+      if (S.p === 'd') Dp.misura();
+    } finally { avvisiInChiusura.delete(el); }
   },
   'mappa-d': () => {
     const s = $('#d-strato');
