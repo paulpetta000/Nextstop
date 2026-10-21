@@ -1,0 +1,155 @@
+{
+  "data": "2026-10-21T12:55:38.471Z",
+  "main": "b6d2a36ec6260b4bed7f8dbf7dc6089c57c17991",
+  "protetto": false,
+  "base": "96e480dd95e45f4133fa513ad66ab30597c0a2cb",
+  "status": "ahead",
+  "avanti": 11,
+  "indietro": 0,
+  "commits": 11,
+  "limiteConfronto": {
+    "fileRestituiti": 300,
+    "elencoCompletoNonDimostrato": true
+  },
+  "albero": [
+    {
+      "path": ".github",
+      "sha": "c6af2790351f5d716c812b7d015e2c74fffd93e7",
+      "type": "tree"
+    },
+    {
+      "path": "astro.config.mjs",
+      "sha": "def9c943272bd483439b05bb24d68aa03f194b2d",
+      "type": "blob"
+    },
+    {
+      "path": "integrations",
+      "sha": "c50b5fd67cac33ddd0b8cc270870150200a0e59b",
+      "type": "tree"
+    },
+    {
+      "path": "package-lock.json",
+      "sha": "e3fb66b942dcc7cdcdbbe01e362e8fe6c8c638a3",
+      "type": "blob"
+    },
+    {
+      "path": "package.json",
+      "sha": "035167c46f508c158c727ec28bc3f567688ea1e5",
+      "type": "blob"
+    },
+    {
+      "path": "public",
+      "sha": "d9211750bc01bd956ec3841c7ba62a9b9d301cf6",
+      "type": "tree"
+    },
+    {
+      "path": "scripts",
+      "sha": "1d3422dfcb47d1186ad86f0405d86cdb3464911e",
+      "type": "tree"
+    },
+    {
+      "path": "src",
+      "sha": "6bfa42ce054fd9021e546a864ba66554256634f8",
+      "type": "tree"
+    },
+    {
+      "path": "test",
+      "sha": "78c93607b19b20f1e71801963940deaf7736c59e",
+      "type": "tree"
+    },
+    {
+      "path": "tsconfig.json",
+      "sha": "adbbd073ae8420ac00aa4e26739046c199fa54d6",
+      "type": "blob"
+    },
+    {
+      "path": "vercel.json",
+      "sha": "613fe137f26e381445d4ca261276b1f91f507f4b",
+      "type": "blob"
+    }
+  ],
+  "ci": [
+    {
+      "id": 39420459957,
+      "status": "completed",
+      "conclusion": "success",
+      "sha": "b6d2a36ec6260b4bed7f8dbf7dc6089c57c17991",
+      "url": "https://github.com/paulpetta000/Nextstop/actions/runs/39420459957",
+      "event": "push"
+    }
+  ],
+  "confrontoInput": [
+    {
+      "path": ".github",
+      "base": "c6af2790351f5d716c812b7d015e2c74fffd93e7",
+      "remoto": "c6af2790351f5d716c812b7d015e2c74fffd93e7",
+      "identico": true
+    },
+    {
+      "path": "astro.config.mjs",
+      "base": "def9c943272bd483439b05bb24d68aa03f194b2d",
+      "remoto": "def9c943272bd483439b05bb24d68aa03f194b2d",
+      "identico": true
+    },
+    {
+      "path": "integrations",
+      "base": "c50b5fd67cac33ddd0b8cc270870150200a0e59b",
+      "remoto": "c50b5fd67cac33ddd0b8cc270870150200a0e59b",
+      "identico": true
+    },
+    {
+      "path": "package-lock.json",
+      "base": "e3fb66b942dcc7cdcdbbe01e362e8fe6c8c638a3",
+      "remoto": "e3fb66b942dcc7cdcdbbe01e362e8fe6c8c638a3",
+      "identico": true
+    },
+    {
+      "path": "package.json",
+      "base": "035167c46f508c158c727ec28bc3f567688ea1e5",
+      "remoto": "035167c46f508c158c727ec28bc3f567688ea1e5",
+      "identico": true
+    },
+    {
+      "path": "public",
+      "base": "d9211750bc01bd956ec3841c7ba62a9b9d301cf6",
+      "remoto": "d9211750bc01bd956ec3841c7ba62a9b9d301cf6",
+      "identico": true
+    },
+    {
+      "path": "scripts",
+      "base": "1d3422dfcb47d1186ad86f0405d86cdb3464911e",
+      "remoto": "1d3422dfcb47d1186ad86f0405d86cdb3464911e",
+      "identico": true
+    },
+    {
+      "path": "src",
+      "base": "6bfa42ce054fd9021e546a864ba66554256634f8",
+      "remoto": "6bfa42ce054fd9021e546a864ba66554256634f8",
+      "identico": true
+    },
+    {
+      "path": "test",
+      "base": "78c93607b19b20f1e71801963940deaf7736c59e",
+      "remoto": "78c93607b19b20f1e71801963940deaf7736c59e",
+      "identico": true
+    },
+    {
+      "path": "tsconfig.json",
+      "base": "adbbd073ae8420ac00aa4e26739046c199fa54d6",
+      "remoto": "adbbd073ae8420ac00aa4e26739046c199fa54d6",
+      "identico": true
+    },
+    {
+      "path": "vercel.json",
+      "base": "613fe137f26e381445d4ca261276b1f91f507f4b",
+      "remoto": "613fe137f26e381445d4ca261276b1f91f507f4b",
+      "identico": true
+    }
+  ],
+  "tipoControllo": {
+    "typescriptLocale": false,
+    "astroCheckLocale": false,
+    "comandoInPackage": null,
+    "installazioni": 0
+  }
+}
