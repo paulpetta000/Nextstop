@@ -1,0 +1,186 @@
+{
+  "data": "2026-10-21T18:34:33.805Z",
+  "inizio": "2026-10-21T18:03:22Z",
+  "secondi": 1871,
+  "codice": "c1ed4168acb62e9fd0bc78b4ff761e7f61a39508",
+  "cartella": "C:/Users/Windows11/Documents/ChatGPT/New project",
+  "manifestoPrecedente": "2026-10-21-prove-chiusura-manifest.json",
+  "discrepanzaPrecedente": "Una differenza già dichiarata, non risolta o riscritta da questo nuovo inventario.",
+  "prove": [
+    {
+      "file": "aggiornamento-fonti-57-2026-10-21.mjs",
+      "byte": 7232,
+      "sha256": "1702adbf29cecb06f89adf86cddcf920332e6ff227c72bbb50543cf9c4e268c1"
+    },
+    {
+      "file": "aggiornamento-fonti-57-fatti-2026-10-21.mjs",
+      "byte": 2865,
+      "sha256": "2f346a4c588296bcc1a2ee1648046192d80ea892294957c64bbb85df5f6696c2"
+    },
+    {
+      "file": "aggiornamento-fonti-58-2026-10-21.mjs",
+      "byte": 5530,
+      "sha256": "53f067d3d54e7254e7acf89500dfe60ae05a75810e1cd2c495d97e6305d7ed9d"
+    },
+    {
+      "file": "casi-prodotto-ripresa30-2026-10-21.mjs",
+      "byte": 5617,
+      "sha256": "c08e9b8b6ddf17065cef772cbe2a91114ac2fd6c4fb630b8b76ad38113befa18"
+    },
+    {
+      "file": "nextstop-casi-ripresa30-2026-10-21.json",
+      "byte": 7202,
+      "sha256": "d7d2318f6def1baaabbb92ccf895ec372311b84e133cc65fe8cd57756c3a8678"
+    },
+    {
+      "file": "nextstop-casi-ripresa30-2026-10-21.log",
+      "byte": 883,
+      "sha256": "24750906cc4cf442ecef6d09cae18e43ce3c91a16ef1c60cf745607baecf8ee5"
+    },
+    {
+      "file": "nextstop-dati-ripresa30-2026-10-21.json",
+      "byte": 1273,
+      "sha256": "30b324b82f1c0a88e48073cb13f31e65a466be53b89d0cb13b0abadf7dcd3a99"
+    },
+    {
+      "file": "nextstop-dati-ripresa30-2026-10-21.log",
+      "byte": 1212,
+      "sha256": "ba0d8b7eff566d021a59ba62153673546b1d4f11de2b2168203df9ecaabc3601"
+    },
+    {
+      "file": "nextstop-donnanna-prima-2026-10-21.log",
+      "byte": 1281,
+      "sha256": "fd3a5bb37683c2f44cf6f5f0ad55e0ca41d303b87d26e4939955d87601120eab"
+    },
+    {
+      "file": "nextstop-eav-2026-10-21/leggi-orario.py",
+      "byte": 782,
+      "sha256": "33cdd65d566764eaacf398da26d0bb2d3841390af2254dc28219760ec3859928"
+    },
+    {
+      "file": "nextstop-eav-2026-10-21/napoli-sorrento-17-ottobre-2026.pdf",
+      "byte": 664038,
+      "sha256": "595ab75108957d6b667ec729bb203dcd42418f574ef7e6e7cbbe7e97417601e3"
+    },
+    {
+      "file": "nextstop-eav-2026-10-21/orario-intero.png",
+      "byte": 357553,
+      "sha256": "a6e5df419058dc71cd6739bf9b90acf118d7629f315a01ccdb1caa979655bf82"
+    },
+    {
+      "file": "nextstop-eav-2026-10-21/orario-legenda.png",
+      "byte": 185363,
+      "sha256": "f873132b6d99ecae3f90f11eed50b227a90e40fa87c8d00894ba84d6240c7cf3"
+    },
+    {
+      "file": "nextstop-eav-2026-10-21/orario-sinistra.png",
+      "byte": 357553,
+      "sha256": "a6e5df419058dc71cd6739bf9b90acf118d7629f315a01ccdb1caa979655bf82"
+    },
+    {
+      "file": "nextstop-eav-2026-10-21/orario-testo.txt",
+      "byte": 19963,
+      "sha256": "3c2059045d15c12d7a0c138c5a60ca75500302dab828b5d83289987c36422653"
+    },
+    {
+      "file": "nextstop-eav-2026-10-21/provenienza.json",
+      "byte": 386,
+      "sha256": "c52e3258abf92f081ca232cb49010a4d48b240fe686530ce0b0270fcbd8d111e"
+    },
+    {
+      "file": "nextstop-eav58-prima-2026-10-21.json",
+      "byte": 1547,
+      "sha256": "48ac4faeaadf01c5655a0e458a2ffb64ad0fb70a3479177ebfbf3291485fa827"
+    },
+    {
+      "file": "nextstop-fonti-http58-2026-10-21.json",
+      "byte": 92460,
+      "sha256": "0044f109a1b371540ee10a50e976921805e713c8ed7a9f2e38a783a7bed69fbd"
+    },
+    {
+      "file": "nextstop-fonti-http58-2026-10-21.log",
+      "byte": 5083,
+      "sha256": "eaa7e42f2438ecee93b375d511fe05885b1bc3ca0b09f8e755309cff450d5ea6"
+    },
+    {
+      "file": "nextstop-fonti-ripresa30-http-2026-10-21.json",
+      "byte": 2942,
+      "sha256": "3b60719d03e15ea02a8874976260d308d1a931c3cb88380eff27f5168a80d4a1"
+    },
+    {
+      "file": "nextstop-fonti-ripresa30-prima-2026-10-21.json",
+      "byte": 4087,
+      "sha256": "ed0efe109372fb5c17bb2a12a4754156a9b7fcdaff67768dcfdafc56a6505e68"
+    },
+    {
+      "file": "nextstop-fonti57-build-2026-10-21.log",
+      "byte": 57674,
+      "sha256": "924851940a619287831031a44c4b6cbfa50224e747763c44f61197f2ab4ff98f"
+    },
+    {
+      "file": "nextstop-fonti57-links-2026-10-21.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-fonti57-mirato-2026-10-21.log",
+      "byte": 1280,
+      "sha256": "f296ed29d0710243a5dd23d830b62fa8bf558bee759e522c6baf2683e6578be9"
+    },
+    {
+      "file": "nextstop-fonti57-test-2026-10-21.log",
+      "byte": 68423,
+      "sha256": "c142dae636b11da59ae63f7ad167ccd302c18493743038fa0bcf76839b58712d"
+    },
+    {
+      "file": "nextstop-fonti57-test-finale-2026-10-21.log",
+      "byte": 67609,
+      "sha256": "4bb698d830e91465340f2be7597906c988d75fb4bed9d11b88027a2639858e89"
+    },
+    {
+      "file": "nextstop-fonti58-build-2026-10-21.log",
+      "byte": 57843,
+      "sha256": "2c196bf3cfc3c18fee7749d406c37ae486f5d61dd74d2e811df8d58aea816320"
+    },
+    {
+      "file": "nextstop-fonti58-esiti-2026-10-21.json",
+      "byte": 4321,
+      "sha256": "efe8e5c7434c7ec43a49ee2354d4cc89cca3393c60558e8f7c5834518eb9970c"
+    },
+    {
+      "file": "nextstop-fonti58-links-2026-10-21.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-fonti58-test-2026-10-21.log",
+      "byte": 70005,
+      "sha256": "53c99066fa64bf6758b87c2203a258d5b58c66ba7135d1c99f04cb4a97a99180"
+    },
+    {
+      "file": "nextstop-fonti58-test-finale-2026-10-21.log",
+      "byte": 67631,
+      "sha256": "88720635f76f0289bdb527e3094af9c9785bab0b4019df7f72884c6c02ed67b6"
+    },
+    {
+      "file": "nextstop-ripresa30-verifica-finale-2026-10-21.json",
+      "byte": 444,
+      "sha256": "7e09f7775715cc0a01b2947b786d3261ab47be2cad71442c643b06614568cf44"
+    },
+    {
+      "file": "verifica-dati-ripresa30-2026-10-21.mjs",
+      "byte": 3463,
+      "sha256": "bb09c1be59f0d07821d01512e2af28950fdf0d8f2869a99f477a6fd4b318eb8f"
+    },
+    {
+      "file": "verifica-fonti-http58-2026-10-21.mjs",
+      "byte": 2190,
+      "sha256": "a995733be843f14fb77ad5f30bec361f3b70a61f9c6ff583befb23b1f9be5afb"
+    },
+    {
+      "file": "verifica-ripresa30-finale-2026-10-21.mjs",
+      "byte": 3308,
+      "sha256": "8e96f28b40b5652d9e4232c2972aa5ab01dd4f088f840492fcc9b3d5c96d1a90"
+    }
+  ]
+}
