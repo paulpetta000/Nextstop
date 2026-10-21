@@ -1,5 +1,7 @@
 # Nextstop · risultati della continuazione del 20–21 ottobre
 
+Aggiornamento successivo: [chiusura locale della ripresa dalle 12:29:23 UTC](2026-10-21-chiusura-locale.md), 756 test e undici fatti verificati. Il seguito conserva i risultati della ripresa precedente.
+
 Ultima ripresa iniziata il **21/10 alle 11:42:53 UTC**, sei gruppi completati e salvati sul ramo locale codex/salvataggi-coordinati-2026-10-18. Codice **851c1da**, **723/723 test**, nessun fallimento, salto o cancellazione; **77 nuove prove da 646**. Build **12 pagine**, **13 documenti / 811 link validi**, **82 risorse offline**, worker **b18e37e2e402**. Nessun push, merge o deploy. Le pause fra turni e giornate non contano come lavoro.
 
 ## Sei gruppi della ripresa attuale

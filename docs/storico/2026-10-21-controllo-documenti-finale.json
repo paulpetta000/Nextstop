@@ -1,0 +1,18 @@
+{
+  "data": "2026-10-21T18:01:51.999Z",
+  "codice": "e8d10f8",
+  "prove": 170,
+  "byte": 73148642,
+  "impronteConcordi": 169,
+  "discrepanzeDichiarate": [
+    {
+      "file": "sonda-astro-2026-10-21/memoria.mjs",
+      "byte": 9914962,
+      "sha256": "d465a227005325fa47e6f0d5bf9d6d8a80b9b0f11b823ccee8c8018f50de591a"
+    }
+  ],
+  "documenti": 12,
+  "linkLocali": 170,
+  "inputTestuali": 257,
+  "errori": []
+}

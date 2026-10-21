@@ -1,0 +1,258 @@
+{
+  "data": "2026-10-21T13:13:50.870Z",
+  "origine": "https://nextstop-alpha.vercel.app",
+  "autenticazione": false,
+  "browser": false,
+  "pagine": [
+    {
+      "path": "/",
+      "status": 200,
+      "url": "https://nextstop-alpha.vercel.app/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/",
+      "robots": [],
+      "h1": 1,
+      "title": "Nextstop · Itinerari in città"
+    },
+    {
+      "path": "/accessibilita/",
+      "status": 200,
+      "url": "https://nextstop-alpha.vercel.app/accessibilita/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/accessibilita/",
+      "robots": [],
+      "h1": 1,
+      "title": "Accessibilità del sito · Nextstop"
+    },
+    {
+      "path": "/fonti/",
+      "status": 200,
+      "url": "https://nextstop-alpha.vercel.app/fonti/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/fonti/",
+      "robots": [],
+      "h1": 1,
+      "title": "Fonti e controlli · Nextstop"
+    },
+    {
+      "path": "/googlee54aa324270bde6d.html",
+      "status": 200,
+      "url": "https://nextstop-alpha.vercel.app/googlee54aa324270bde6d.html",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": null,
+      "robots": [],
+      "h1": 0,
+      "title": null
+    },
+    {
+      "path": "/napoli/",
+      "status": 200,
+      "url": "https://nextstop-alpha.vercel.app/napoli/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/napoli/",
+      "robots": [],
+      "h1": 1,
+      "title": "Napoli: itinerari e dove mangiare · Nextstop"
+    },
+    {
+      "path": "/napoli/dove-mangiare/",
+      "status": 200,
+      "url": "https://nextstop-alpha.vercel.app/napoli/dove-mangiare/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/napoli/dove-mangiare/",
+      "robots": [],
+      "h1": 1,
+      "title": "Dove mangiare a Napoli: pizzerie, trattorie, pesce, friggitorie e dolci · Nextstop"
+    },
+    {
+      "path": "/napoli/itinerari/",
+      "status": 200,
+      "url": "https://nextstop-alpha.vercel.app/napoli/itinerari/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(self), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/napoli/itinerari/",
+      "robots": [],
+      "h1": 1,
+      "title": "Itinerari a Napoli: mezza giornata, 1, 2 e 3 giorni · Nextstop"
+    },
+    {
+      "path": "/non-esiste-verifica-20261020/",
+      "status": 404,
+      "url": "https://nextstop-alpha.vercel.app/non-esiste-verifica-20261020/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/404/",
+      "robots": [
+        "noindex"
+      ],
+      "h1": 1,
+      "title": "Pagina non trovata · Nextstop"
+    },
+    {
+      "path": "/note-legali/",
+      "status": 200,
+      "url": "https://nextstop-alpha.vercel.app/note-legali/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/note-legali/",
+      "robots": [],
+      "h1": 1,
+      "title": "Note legali · Nextstop"
+    },
+    {
+      "path": "/privacy/",
+      "status": 200,
+      "url": "https://nextstop-alpha.vercel.app/privacy/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/privacy/",
+      "robots": [],
+      "h1": 1,
+      "title": "Privacy · Nextstop"
+    },
+    {
+      "path": "/robots.txt",
+      "status": 200,
+      "url": "https://nextstop-alpha.vercel.app/robots.txt",
+      "headers": {
+        "content-type": "text/plain; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": null,
+      "robots": [],
+      "h1": 0,
+      "title": null,
+      "testo": "User-agent: *\nAllow: /\n\nSitemap: https://nextstop-alpha.vercel.app/sitemap.xml\n"
+    },
+    {
+      "path": "/sitemap.xml",
+      "status": 200,
+      "url": "https://nextstop-alpha.vercel.app/sitemap.xml",
+      "headers": {
+        "content-type": "application/xml",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": null,
+      "robots": [],
+      "h1": 0,
+      "title": null,
+      "loc": [
+        "https://nextstop-alpha.vercel.app/",
+        "https://nextstop-alpha.vercel.app/napoli/",
+        "https://nextstop-alpha.vercel.app/napoli/itinerari/",
+        "https://nextstop-alpha.vercel.app/napoli/dove-mangiare/",
+        "https://nextstop-alpha.vercel.app/fonti/",
+        "https://nextstop-alpha.vercel.app/privacy/",
+        "https://nextstop-alpha.vercel.app/termini/",
+        "https://nextstop-alpha.vercel.app/note-legali/",
+        "https://nextstop-alpha.vercel.app/accessibilita/"
+      ],
+      "lastmod": 9
+    },
+    {
+      "path": "/termini/",
+      "status": 200,
+      "url": "https://nextstop-alpha.vercel.app/termini/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/termini/",
+      "robots": [],
+      "h1": 1,
+      "title": "Termini d&#39;uso · Nextstop"
+    },
+    {
+      "path": "/sitemap-index.xml",
+      "status": 404,
+      "url": "https://nextstop-alpha.vercel.app/sitemap-index.xml",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/404/",
+      "robots": [
+        "noindex"
+      ],
+      "h1": 1,
+      "title": "Pagina non trovata · Nextstop",
+      "loc": [],
+      "lastmod": 0
+    },
+    {
+      "path": "/sitemap-0.xml",
+      "status": 404,
+      "url": "https://nextstop-alpha.vercel.app/sitemap-0.xml",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/404/",
+      "robots": [
+        "noindex"
+      ],
+      "h1": 1,
+      "title": "Pagina non trovata · Nextstop",
+      "loc": [],
+      "lastmod": 0
+    },
+    {
+      "path": "/percorso-che-non-esiste-verifica-nextstop/",
+      "status": 404,
+      "url": "https://nextstop-alpha.vercel.app/percorso-che-non-esiste-verifica-nextstop/",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "x-robots-tag": null,
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+      },
+      "canonical": "https://nextstop-alpha.vercel.app/404/",
+      "robots": [
+        "noindex"
+      ],
+      "h1": 1,
+      "title": "Pagina non trovata · Nextstop"
+    }
+  ],
+  "limite": "Verifica pubblica HTTP; non dimostra indicizzazione, traffico, ranking o applicazione delle correzioni locali."
+}
