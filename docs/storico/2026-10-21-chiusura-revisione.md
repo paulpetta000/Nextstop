@@ -6,7 +6,7 @@ Ripresa del 21 ottobre 2026 dalle 12:29:23 UTC, su richiesta di oltre una ora di
 |---|---|---|
 | C1 · Tastiera differita | Riprodurre e correggere ritorni che spostano il fuoco dopo cambi di contesto; preservare tasti e grafica approvati | Concluso localmente: [revisione 53](2026-10-21-revisione-53.md), 744 test |
 | C2 · Caricamenti e mappa | Rilettura mirata dei ritorni in stato/avvio/mappa, con prove dei soli difetti dimostrati; annotare i percorsi già protetti | Da eseguire |
-| D1 · Quindici riscontri editoriali | Esaminare tutti i quindici fatti segnalati, consultare originali disponibili; confermare solo quanto provato e registrare gli irrisolti senza nasconderli | Da eseguire |
+| D1 · Quindici riscontri editoriali | Esaminare tutti i quindici fatti segnalati, consultare originali disponibili; confermare solo quanto provato e registrare gli irrisolti senza nasconderli | Esaminati 15/15: undici verificati, quattro aperti; [revisione 54](2026-10-21-revisione-54.md) |
 | M1 · Alterazione della build | Confrontare prove conservate e catena di trasformazione con una sonda mirata; risolvere solo con causa riprodotta, altrimenti dichiarare il limite | Da eseguire |
 | M2 · Integrazione e tipi | Misurare differenze con il riferimento remoto già acquisito e verificare strumenti disponibili senza installazioni o cambi di ramo; separare integrazione e controllo tipi non eseguibili | Da eseguire |
 | F1 · Chiusura comune | Test/build/link dopo ogni gruppo eseguibile; casi del prodotto, integrità dei dati, indice/prove/piano e lista finale degli impedimenti coerenti | Da eseguire |

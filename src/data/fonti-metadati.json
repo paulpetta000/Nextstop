@@ -2602,7 +2602,10 @@
     "parole": [],
     "priorita": 5,
     "lingua": "",
-    "lettura": null,
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Passaggio letto"
+    },
     "prova": "Relazioni dichiarate in src/data/fatti.yaml, src/data/tappe.yaml e src/testi/; note del registro originale.",
     "schede": [
       "lc-chitarra-perche"
@@ -3276,7 +3279,10 @@
     "parole": [],
     "priorita": 1,
     "lingua": "",
-    "lettura": null,
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Passaggio letto"
+    },
     "prova": "Relazioni dichiarate in src/data/fatti.yaml, src/data/tappe.yaml e src/testi/; note del registro originale.",
     "schede": [
       "lc-gorizia-orari",
@@ -3497,7 +3503,10 @@
     "parole": [],
     "priorita": 5,
     "lingua": "",
-    "lettura": null,
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Passaggio letto"
+    },
     "prova": "Relazioni dichiarate in src/data/fatti.yaml, src/data/tappe.yaml e src/testi/; note del registro originale.",
     "schede": [
       "lc-poppella-perche"
@@ -3775,7 +3784,7 @@
     "priorita": 3,
     "lingua": "",
     "lettura": {
-      "data": "2026-10-12",
+      "data": "2026-10-21",
       "label": "Passaggio letto"
     },
     "prova": "Prove del Blocco 2 e descrizioni approvate nei giri Fonti.",
@@ -3949,7 +3958,7 @@
     "priorita": 3,
     "lingua": "",
     "lettura": {
-      "data": "2026-10-12",
+      "data": "2026-10-21",
       "label": "Passaggio letto"
     },
     "prova": "Prove del Blocco 2 e descrizioni approvate nei giri Fonti.",
@@ -3976,7 +3985,7 @@
     "priorita": 3,
     "lingua": "In inglese",
     "lettura": {
-      "data": "2026-10-12",
+      "data": "2026-10-21",
       "label": "Passaggio letto"
     },
     "prova": "Prove del Blocco 2 e descrizioni approvate nei giri Fonti.",
@@ -4280,6 +4289,177 @@
     "prova": "La homepage del locale riporta dal 1949; controllo del 20 ottobre 2026.",
     "schede": [
       "lc-nennella-perche"
+    ],
+    "durate": [],
+    "testi": []
+  },
+  "sf-chiocciole-2025": {
+    "categoria": "cucina",
+    "luoghi": [
+      "Osteria La Chitarra"
+    ],
+    "descrizione": "Elenco originale delle Chiocciole della edizione 2025",
+    "avviso": "Passaggi pertinenti verificati; lettura integrale non dichiarata. Riconoscimento storico, non orari o prezzi attuali.",
+    "nota": "",
+    "formato": "",
+    "parole": [],
+    "priorita": 3,
+    "lingua": "",
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Lettura parziale"
+    },
+    "prova": "Verifica del 21 ottobre 2026; esiti e limiti nella revisione 54.",
+    "schede": [
+      "lc-chitarra-perche"
+    ],
+    "durate": [],
+    "testi": []
+  },
+  "michelin-bib-2025": {
+    "categoria": "cucina",
+    "luoghi": [
+      "Ostaria Pignatelli"
+    ],
+    "descrizione": "Annuncio originale dei nuovi Bib Gourmand 2025",
+    "avviso": "Riferimento storico; non conferma orari, prezzi o validità per il 2027.",
+    "nota": "",
+    "formato": "",
+    "parole": [],
+    "priorita": 3,
+    "lingua": "",
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Passaggio letto"
+    },
+    "prova": "Verifica del 21 ottobre 2026; esiti e limiti nella revisione 54.",
+    "schede": [
+      "lc-pignatelli-perche"
+    ],
+    "durate": [],
+    "testi": []
+  },
+  "gr-pasticcerie-2022": {
+    "categoria": "cucina",
+    "luoghi": [
+      "Di Costanzo",
+      "Pasticceria Poppella"
+    ],
+    "descrizione": "Selezione originale di sette pasticcerie e relativi giudizi del 2022",
+    "avviso": "Passaggi pertinenti verificati; lettura integrale non dichiarata. Riconoscimento storico, non orari o prezzi attuali.",
+    "nota": "",
+    "formato": "",
+    "parole": [],
+    "priorita": 3,
+    "lingua": "",
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Lettura parziale"
+    },
+    "prova": "Verifica del 21 ottobre 2026; esiti e limiti nella revisione 54.",
+    "schede": [
+      "lc-di-costanzo-perche",
+      "lc-poppella-perche"
+    ],
+    "durate": [],
+    "testi": []
+  },
+  "top50-italia-2026": {
+    "categoria": "cucina",
+    "luoghi": [
+      "50 Kalò",
+      "Pizzeria Salvo",
+      "Pizzeria Gorizia 1916",
+      "Palazzo Petrucci Pizzeria"
+    ],
+    "descrizione": "Classifica originale Italia 2026, posizioni verificate 3, 5, 24 e 68",
+    "avviso": "Lettura parziale nel testo indicizzato ufficiale; Salvo senza indirizzo. Distinguere le sedi di Palazzo Petrucci.",
+    "nota": "",
+    "formato": "",
+    "parole": [],
+    "priorita": 3,
+    "lingua": "",
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Lettura parziale"
+    },
+    "prova": "Verifica del 21 ottobre 2026; esiti e limiti nella revisione 54.",
+    "schede": [
+      "lc-cinquanta-kalo-perche",
+      "lc-salvo-perche",
+      "lc-gorizia-perche",
+      "lc-petrucci-posillipo-perche"
+    ],
+    "durate": [],
+    "testi": []
+  },
+  "lc-pintauro-storia": {
+    "categoria": "cucina",
+    "luoghi": [
+      "Pasticceria Pintauro"
+    ],
+    "descrizione": "Il locale presenta la propria storia in via Toledo dal 1785",
+    "avviso": "Riferimento storico; non conferma orari, prezzi o validità per il 2027.",
+    "nota": "",
+    "formato": "",
+    "parole": [],
+    "priorita": 3,
+    "lingua": "",
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Passaggio letto"
+    },
+    "prova": "Verifica del 21 ottobre 2026; esiti e limiti nella revisione 54.",
+    "schede": [
+      "lc-pintauro-perche"
+    ],
+    "durate": [],
+    "testi": []
+  },
+  "lc-pintauro-riapertura-2026": {
+    "categoria": "cucina",
+    "luoghi": [
+      "Pasticceria Pintauro"
+    ],
+    "descrizione": "Notizia ripubblicata dal locale sulla riapertura del marzo 2026",
+    "avviso": "Riferimento storico; non conferma orari, prezzi o validità per il 2027.",
+    "nota": "",
+    "formato": "",
+    "parole": [],
+    "priorita": 3,
+    "lingua": "",
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Passaggio letto"
+    },
+    "prova": "Verifica del 21 ottobre 2026; esiti e limiti nella revisione 54.",
+    "schede": [
+      "lc-pintauro-perche"
+    ],
+    "durate": [],
+    "testi": []
+  },
+  "michelin-pizzerie-2025": {
+    "categoria": "cucina",
+    "luoghi": [
+      "Concettina ai Tre Santi",
+      "Pizzeria Salvo"
+    ],
+    "descrizione": "Articolo originale sulla selezione 2025, con Concettina e Salvo alla Riviera di Chiaia",
+    "avviso": "Riferimento storico; non conferma orari, prezzi o validità per il 2027.",
+    "nota": "",
+    "formato": "",
+    "parole": [],
+    "priorita": 3,
+    "lingua": "",
+    "lettura": {
+      "data": "2026-10-21",
+      "label": "Passaggio letto"
+    },
+    "prova": "Verifica del 21 ottobre 2026; esiti e limiti nella revisione 54.",
+    "schede": [
+      "lc-concettina-perche",
+      "lc-salvo-perche"
     ],
     "durate": [],
     "testi": []

@@ -1077,7 +1077,7 @@
   editore: "Osteria La Chitarra"
   url: https://www.osterialachitarra.it/osteria/
   tipo: ufficiale
-  controllato: 2026-10-04
+  controllato: 2026-10-21
   letta: true
 
 - id: lc-gesu-vecchio
@@ -1333,7 +1333,7 @@
   editore: "Pizzeria Gorizia 1916"
   url: https://www.gorizia1916.com/
   tipo: ufficiale
-  controllato: 2026-10-04
+  controllato: 2026-10-21
   letta: true
 
 - id: lc-bellavia
@@ -1413,7 +1413,7 @@
   editore: "Pasticceria Poppella"
   url: https://www.pasticceriapoppella.com/storia/
   tipo: ufficiale
-  controllato: 2026-10-04
+  controllato: 2026-10-21
   letta: true
 
 - id: lc-petrucci-posillipo
@@ -1514,7 +1514,7 @@
   url: https://www.scattidigusto.it/ostaria-pignatelli-a-napoli-menu-prezzi-recensione
   tipo: stampa
   pubblicato: 2026-01-01
-  controllato: 2026-10-04
+  controllato: 2026-10-21
   letta: true
 
 - id: sdg-slowfood-2025
@@ -1577,7 +1577,7 @@
   url: https://www.scattidigusto.it/napoli-gelato-cono-graffa-chalet-ciro-mergellina
   tipo: stampa
   pubblicato: 2016-05-16
-  controllato: 2026-10-04
+  controllato: 2026-10-21
   letta: true
 
 - id: stripes-tufo-2022
@@ -1586,7 +1586,7 @@
   url: https://www.stripes.com/living/europe_travel/after_hours/2022-12-29/naples-ragu-genovese-8416535.html
   tipo: stampa
   pubblicato: 2022-12-29
-  controllato: 2026-10-04
+  controllato: 2026-10-21
   letta: true
 
 - id: lc-starita-home
@@ -1708,4 +1708,66 @@
   url: https://it.wikipedia.org/wiki/Pastiera
   tipo: enciclopedia
   controllato: 2026-10-04
+  letta: true
+
+- id: sf-chiocciole-2025
+  titolo: "Tutte le Chiocciole di Osterie d’Italia 2025, regione per regione"
+  editore: "Slow Food"
+  url: https://www.slowfood.it/tutte-le-chiocciole-di-osterie-ditalia-2025-regione-per-regione/
+  tipo: ufficiale
+  pubblicato: 2024-10-14
+  controllato: 2026-10-21
+  letta: false
+
+- id: michelin-bib-2025
+  titolo: "I nuovi Bib Gourmand della Guida MICHELIN Italia 2025"
+  editore: "Guida Michelin"
+  url: https://guide.michelin.com/it/it/notizia/michelin-guide-ceremony/i-nuovi-bib-gourmand-della-guida-michelin-italia-2025
+  tipo: ufficiale
+  pubblicato: 2024-10-29
+  controllato: 2026-10-21
+  letta: true
+
+- id: gr-pasticcerie-2022
+  titolo: "Le migliori pasticcerie di Napoli 2022: gli indirizzi da non perdere"
+  editore: "Gambero Rosso"
+  url: https://www.gamberorosso.it/notizie/rubriche/classifiche/le-migliori-pasticcerie-di-napoli-2022-gli-indirizzi-da-non-perdere
+  tipo: stampa
+  pubblicato: 2022-05-09
+  controllato: 2026-10-21
+  letta: false
+
+- id: top50-italia-2026
+  titolo: "50 Top Pizza Italia 2026: Confine, a Milano, è la Migliore Pizzeria in Italia per il 2026"
+  editore: "50 Top Pizza"
+  url: https://www.50toppizza.it/50-top-pizza-italia-2026-confine-a-milano-e-la-migliore-pizzeria-in-italia-per-il-2026/
+  tipo: ufficiale
+  controllato: 2026-10-21
+  letta: false
+  nota: "Accesso diretto HTTP 403; passaggi della classifica verificati nel testo indicizzato del dominio ufficiale. Lettura integrale non dichiarata."
+
+- id: lc-pintauro-storia
+  titolo: "Pasticceria Pintauro a Napoli dal 1785"
+  editore: "Pasticceria Pintauro"
+  url: https://www.pasticceriapintauro1785.it/
+  tipo: ufficiale
+  controllato: 2026-10-21
+  letta: true
+
+- id: lc-pintauro-riapertura-2026
+  titolo: "A Napoli ha riaperto la pasticceria Pintauro 1785"
+  editore: "Pasticceria Pintauro"
+  url: https://www.pasticceriapintauro1785.it/a-napoli-ha-riaperto-la-pasticceria-pintauro-1785/
+  tipo: ufficiale
+  pubblicato: 2026-03-27
+  controllato: 2026-10-21
+  letta: true
+
+- id: michelin-pizzerie-2025
+  titolo: "Pizza napoletana: 5 indirizzi da non perdere nella città partenopea"
+  editore: "Guida Michelin"
+  url: https://guide.michelin.com/it/it/notizia/dining-out/pizza-napoletana-5-indirizzi-da-non-perdere-nella-citta-partenopea
+  tipo: ufficiale
+  pubblicato: 2025-01-21
+  controllato: 2026-10-21
   letta: true
