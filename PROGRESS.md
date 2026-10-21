@@ -2,7 +2,13 @@
 
 _Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 21/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
-## Stato corrente · ripresa di trenta minuti del 21 ottobre
+## Stato corrente · percorsi pubblicati e preparazione finale
+
+**Blocco integrità Git:** due oggetti illeggibili nel pack originale. Copia indipendente recuperata, 45 riferimenti e stash conservati, git fsck riuscito sulla copia; originale intatto. Integrazione non pronta, causa aperta.
+
+**765/765 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**, worker **6a9f3e46c511**. **207 fonti pubbliche**; Sanità con cautela sull’ascensore. Controllo dei due JSON prima della cache, provato sulle copie realmente alterate. Codice **8b5b716**; trasferimento in copia temporanea **119/119 file identici**, tipi proposti senza installazione. [Resoconto corrente, otto aree e limiti](docs/storico/2026-10-21-revisione-63.md). Causa delle alterazioni, integrazione/CI, tipi effettivi e prove native restano aperti. Grafica conservata, nessuna pubblicazione. Istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
+
+## Stato precedente · ripresa di trenta minuti del 21 ottobre
 
 **756/756 test**, build **12 pagine**, **811 link validi**, **82 risorse offline**, worker **0aa4b9885ecf**. Otto fatti e otto testi corretti, tre fonti nuove, **206 fonti pubbliche**. Quattro avvisi editoriali precedenti chiusi tramite formulazioni supportate, non conferma retroattiva di tutte le vecchie affermazioni. Nuovo orario EAV dal 17 ottobre controllato visivamente; otto firme aggiornate. [Resoconto e limiti correnti](docs/storico/2026-10-21-revisione-58.md). Anomalia di integrità ancora aperta; nessuna modifica grafica o pubblicazione.
 

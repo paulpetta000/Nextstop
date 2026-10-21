@@ -2,7 +2,7 @@
 
 Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [regole comuni](REGOLE.md) e [stato corrente](../PROGRESS.md). Poi scegli solo la riga del compito, senza aprire tutti i rimandi.
 
-Stato corrente: [ripresa di trenta minuti del 21 ottobre](storico/2026-10-21-revisione-58.md), 756 test e 206 fonti pubbliche; quattro formulazioni editoriali corrette e nuovo orario EAV verificato. [Chiusura precedente e otto aree](storico/2026-10-21-chiusura-locale.md). Istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
+Stato corrente: [revisione 63 e residui concreti](storico/2026-10-21-revisione-63.md), 765 test e 207 fonti pubbliche; controllo dei JSON prima della cache, trasferimento preparato su copia temporanea e tipi proposti. Pack Git originale difettoso; copia indipendente recuperata e verificata, causa delle alterazioni ancora aperta; integrazione/CI, tipi effettivi e prove native da completare. Istruzioni/consumo Claude esclusi e nuova idea rinviata anche nella analisi.
 
 ## Fonti per argomento
 

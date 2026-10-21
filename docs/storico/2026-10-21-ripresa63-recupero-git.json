@@ -1,0 +1,74 @@
+{
+  "data": "2026-10-21T21:41:54.144Z",
+  "recupero": {
+    "data": "2026-10-21T21:40:51.489Z",
+    "copiaIndipendente": "C:\\Users\\Windows11\\Documents\\ChatGPT\\New project\\nextstop-recupero63-verificato.git",
+    "repositoryOriginaleModificato": false,
+    "oggettiRecuperati": [
+      {
+        "file": "design/fonti/giro-1/verifiche/b-375-dark-aperto.png",
+        "atteso": "b962169966070a7e24f7f847c13ad8338a2a10b3",
+        "sha1Git": "b962169966070a7e24f7f847c13ad8338a2a10b3",
+        "recuperabile": true
+      },
+      {
+        "file": "docs/storico/fonti-blocco-6-verifiche/lh-integrato-napoli-itinerari-light-1.json",
+        "atteso": "2a7c1147491f932616ec6d9faae3cfe5875eaa42",
+        "sha1Git": "2a7c1147491f932616ec6d9faae3cfe5875eaa42",
+        "recuperabile": true
+      }
+    ],
+    "riferimenti": 45,
+    "stash": {
+      "sha": "b0a35c1123918d9a1867c104a0ff793e5822dc80",
+      "name": "refs/stash"
+    },
+    "ramo": "refs/heads/codex/salvataggi-coordinati-2026-10-18",
+    "commit": "8b5b7167f4bbfba056e7a9d64c35f0cd942399aa",
+    "gitFsck": 0,
+    "pack": {
+      "file": "pack-cbcbd2f7cc180d0d54f4c40a9ae2792b39c977ea.pack",
+      "byte": 241857890,
+      "sha256": "a4ee30954f64c63edd229672cfa49c460cdc0ca3ae160e1eccc92ccf8d0d1f88"
+    },
+    "limite": "Copia bare indipendente dei riferimenti attuali e dei loro oggetti raggiungibili; non include reflog o oggetti irraggiungibili, conservati soltanto negli originali. Sorgente tramite alternates solo nella cartella di appoggio; la copia verificata non ne usa. Il pack originale resta difettoso e la causa resta aperta."
+  },
+  "prove": [
+    {
+      "file": "nextstop-ripresa63-git-fsck-2026-10-21.log",
+      "byte": 1238,
+      "sha256": "cd578aab1d753293d78c94147c8dd62aa6fb809e02ef694428ce5cfbc714b298"
+    },
+    {
+      "file": "nextstop-ripresa63-oggetti-git-2026-10-21.log",
+      "byte": 418971,
+      "sha256": "f5a5a95a19d858ebda561371e1788c4785e61ce29163f0738cd580739695ec52"
+    },
+    {
+      "file": "nextstop-recupero63-pack-2026-10-21.log",
+      "byte": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "nextstop-recupero63-fsck-2026-10-21.log",
+      "byte": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "file": "nextstop-recupero63-risultati-2026-10-21.json",
+      "byte": 1490,
+      "sha256": "3f0008e20e1b6358d3d8c5011c99dc1d0686535451d9d34705da6c589d216690"
+    },
+    {
+      "file": "recupero-git63-copia-2026-10-21.mjs",
+      "byte": 4121,
+      "sha256": "a8ad5b26a9b076bf942002b1f5410fb7fe42751d6f62db9f459d311300799159"
+    },
+    {
+      "file": "nextstop-salvataggio63-2026-10-21/SALVATAGGIO.json",
+      "byte": 440505,
+      "sha256": "5a3c861e9eb0da8e3993bba5f711a8769ab9622bcb2393af37294a0f81cb26a2"
+    }
+  ],
+  "limite": "L’archivio ZIP nextstop-codice-8b5b716-2026-10-21.zip è incompleto: git archive è fallito sullo stesso PNG e non è un salvataggio utilizzabile. Usare la copia bare verificata e il salvataggio dei file. Nessuna riparazione del pack originale."
+}
