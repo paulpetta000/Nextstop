@@ -2,7 +2,7 @@
 
 Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [regole comuni](REGOLE.md) e la prima sezione dello [stato corrente](../PROGRESS.md), approfondendo i blocchi precedenti solo se pertinenti. Poi scegli solo la riga del compito, senza aprire tutti i rimandi.
 
-Stato corrente: [revisione 66 e punto di ripresa](storico/2026-10-22-revisione-66.md), codice 12d7bba, 771 test, Vite corretto e tipi Astro/TS verificati. Arresto per quota; JavaScript completo, prestazioni e prove native restano aperti.
+Stato corrente: [revisione 67 e residui](storico/2026-10-22-revisione-67.md), codice 16ec682, 772 test, JavaScript/Astro e worker rigorosi verificati; Lighthouse compositore 96/100. Prove native estese; HTTPS/offline, audit accessibilità completo e CI remota ancora aperti.
 
 ## Fonti per argomento
 
@@ -42,3 +42,4 @@ Il README contiene già la mappa del codice e dei dati: non duplicarla in una nu
 | claude-seo | Da valutare solo quando serve, previa revisione e OK per installare | SEO, fuori dalla manutenzione corrente |
 
 L'inventario non impone di caricare queste risorse. Per documentazione e test esistenti non serve installare skill/plugin. Gli agenti Claude restano in `.claude/agents/`.
+

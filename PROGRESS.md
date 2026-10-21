@@ -1,8 +1,8 @@
 # PROGRESS · stato attuale
 
-## Stato corrente · arresto per quota del 22 ottobre
+## Stato corrente · revisione 67 del 22 ottobre
 
-Codice 12d7bba, merge locale del main b6d2a36, 771 test, build e 811 link riusciti; Vite 8.3.3, audit senza avvisi e tipi Astro/TS verificati. JavaScript completo, prestazioni e prove native ancora aperti. Quota rilevata al 3%: lavoro fermato. [Resoconto corrente](docs/storico/2026-10-22-revisione-66.md). Nessuna pubblicazione; esclusioni precedenti conservate.
+Codice **16ec682**, **772/772 test**, build 12 pagine, 811 link, 82 risorse offline. JavaScript/Astro rigoroso: 110 file, zero errori con variante Node senza liftoff; worker rigoroso verificato. Lighthouse compositore 96/100, altre categorie 100. Prove native estese riuscite; restano HTTPS/offline, accessibilità completa e alcuni flussi, CI remota e causa delle anomalie. [Resoconto corrente e limiti](docs/storico/2026-10-22-revisione-67.md). Grafica conservata; nessuna pubblicazione. Esclusioni precedenti confermate.
 
 _Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 21/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
@@ -412,3 +412,4 @@ Resta pendente il pezzo 3 delle rifiniture grafiche (barra «Salvato» e menu); 
 I blocchi precedenti sono stati pubblicati nella PR con autorizzazione. Il nuovo allineamento del blu resta locale; questo blocco non comprende un nuovo push o deploy. Main e produzione non sono stati modificati; nessuna modifica alle protezioni GitHub/Vercel. Main risultava senza protezione nel controllo precedente. L'override fflate va riesaminato al prossimo aggiornamento dei consumatori; il caso generico cache max-stale/cookie resta aperto, senza esposizione individuata nel percorso statico di Nextstop. Controllo completo dei tipi e organizzazione mirata degli archivi restano lavori separati.
 
 **Cosa fare dopo il rilascio richiesto:** 1. Riprendere la revisione locale sospesa e completare la protezione tra sessioni: lettura/scrittura coerenti, simultaneità e recupero delle due copie. La mitigazione del gruppo 4 non rende atomico localStorage. 2. Continuare il piano unico da computer, raggruppando più parti; minimo quindici minuti per queste sessioni di revisione salvo stop. 3. Completare i controlli UI prima di proporre il rilascio, rispettando il browser escluso. Prova reale Claude soltanto dopo il rilascio e con mandato separato. Strumenti locali presenti; GitHub/Vercel per un rilascio autorizzato. Nessuna nuova installazione.
+
