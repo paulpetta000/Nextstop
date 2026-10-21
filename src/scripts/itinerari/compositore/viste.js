@@ -912,6 +912,14 @@ export function preparaViste() {
   app.addEventListener('click', e => { if (gesto.trascinando && e.target.closest('[data-azione="tappa"]')) { e.stopPropagation(); e.preventDefault(); } }, true);
   document.addEventListener('dragstart', e => { if (e.target.closest?.('#app, #scheda, #foglio')) e.preventDefault(); });
   addEventListener('keydown', e => { if (e.key === 'Escape' && $('#d-strato') && !$('#d-strato').hidden) AZ['chiudi-mappa'](); });
-  computer.addEventListener('change', async () => { await chiudiSchede(); rotta = true; disegna(); });
+  let richiestaDisposizione = 0;
+  computer.addEventListener('change', async () => {
+    const turno = ++richiestaDisposizione, pc = computer.matches;
+    const valido = () => turno === richiestaDisposizione && computer.matches === pc && $('#app') === app && app.isConnected !== false;
+    try { await chiudiSchede(); }
+    catch { if (valido()) avvisa('La vista non si è aggiornata. Riprova dal menu.'); return; }
+    if (!valido()) return;
+    rotta = true; disegna();
+  });
   addEventListener('resize', () => { if (S.p === 'd') Dp.misura(); });
 }
