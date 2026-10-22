@@ -1,8 +1,8 @@
 # PROGRESS · stato attuale
 
-## Stato corrente · revisione 67 del 22 ottobre
+## Stato corrente · revisione 68 del 22 ottobre
 
-Codice **16ec682**, **772/772 test**, build 12 pagine, 811 link, 82 risorse offline. JavaScript/Astro rigoroso: 110 file, zero errori con variante Node senza liftoff; worker rigoroso verificato. Lighthouse compositore 96/100, altre categorie 100. Prove native estese riuscite; restano HTTPS/offline, accessibilità completa e alcuni flussi, CI remota e causa delle anomalie. [Resoconto corrente e limiti](docs/storico/2026-10-22-revisione-67.md). Grafica conservata; nessuna pubblicazione. Esclusioni precedenti confermate.
+Codice **51c5dfb**, **777/777 test**, build 12 pagine, 811 link, tipi rigorosi e **CI Ubuntu riuscita**. Corretto il doppio conteggio della chiusura nativa che impediva «Mangia qui». Anteprima HTTPS pubblicata con consenso sul solo ramo; main b6d2a36 invariato. Worker offline e aggiornamento provati nel browser su origine locale isolata; Lighthouse **97 home e compositore**, axe esteso nei due temi. [Resoconto corrente, otto aree e limiti](docs/storico/2026-10-22-revisione-68.md). Grafica conservata; nessuna PR o pubblicazione in produzione. Istruzioni/consumo Claude esclusi, nuova idea rinviata.
 
 _Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 21/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
