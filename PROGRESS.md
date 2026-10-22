@@ -4,7 +4,7 @@
 
 Codice **51c5dfb**, **777/777 test**, build 12 pagine, 811 link, tipi rigorosi e **CI Ubuntu riuscita**. Corretto il doppio conteggio della chiusura nativa che impediva «Mangia qui». Anteprima HTTPS pubblicata con consenso sul solo ramo; main b6d2a36 invariato. Worker offline e aggiornamento provati nel browser su origine locale isolata; Lighthouse **97 home e compositore**, axe esteso nei due temi. [Resoconto corrente, otto aree e limiti](docs/storico/2026-10-22-revisione-68.md). Grafica conservata; nessuna PR o pubblicazione in produzione. Istruzioni/consumo Claude esclusi, nuova idea rinviata.
 
-_Aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 21/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
+_Annotazione storica precedente alla ripresa del 22/10/2026: aggiornato il 21/10/2026 dopo la continuazione della revisione. Ramo locale codex/salvataggi-coordinati-2026-10-18 derivato da 96e480d; ultimo riscontro del main remoto il 21/10 a b6d2a36. Nessun push, merge o deploy di questa sessione._
 
 ## Materiali conservati dal main · storico del 19–20 ottobre
 
