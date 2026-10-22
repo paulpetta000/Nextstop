@@ -41,7 +41,7 @@ test('selettori: due tocchi rapidi sullo stesso campo non aprono due finestre',a
  const e=ambiente();e.apri();const a=e.clic('calendario'),b=e.clic('calendario');e.risolvi('calendario',0);e.risolvi('calendario',1);await Promise.all([a,b]);assert.equal(e.aperture.length,1);
 });
 test('selettori: il ritorno di una vecchia finestra non ridisegna o focalizza il nuovo foglio',async()=>{
- const e=ambiente();e.apri();const p=e.clic('ore','fine');e.risolvi('ore');await p;e.foglio('Altro','');e.aperture[0].fatto('fine');assert.equal(e.rifatti,0);assert.equal(e.fuochi,0);
+ const e=ambiente();e.apri();const p=e.clic('ore','fine');e.risolvi('ore');await p;e.foglio('Altro','');const fuochiPrima=e.fuochi;e.aperture[0].fatto('fine');assert.equal(e.rifatti,0);assert.equal(e.fuochi,fuochiPrima);
 });
 for(const tipo of ['calendario','ore'])test('selettori: errore '+tipo+' gestito e nuovo tentativo possibile senza cambiare i dati',async()=>{
  const e=ambiente();e.apri();const prima=structuredClone(e.x),p=e.clic(tipo,'inizio');e.attese[tipo][0].no(Error('Rete fittizia'));await assert.doesNotReject(p);assert.deepEqual(e.x,prima);assert.equal(e.avvisi.length,1);assert.match(e.avvisi[0],/Riprova/);

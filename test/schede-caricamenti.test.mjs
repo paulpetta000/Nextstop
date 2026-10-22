@@ -8,7 +8,7 @@ const codice=file.slice(file.indexOf('// ---------- aprire ----------'),file.ind
 function ambiente(){
  let x={id:'primo',giorni:[{tappe:['a','b']},{tappe:[]}]};const S={g:0,p:'c'},attese=[],aperture=[],azioni=[],timer=[],focus={isConnected:true};
  const f={open:false,style:{},classList:{add(){},remove(){}},showModal(){this.open=true;},close(){this.open=false;}};
- const base={$:sel=>sel==='#foglio'?f:{},esc:String,ic:()=>'',piano:()=>true,setTimeout:fn=>timer.push(fn)};
+ const base={$:sel=>sel==='#foglio'?f:{focus(){}},esc:String,ic:()=>'',piano:()=>true,setTimeout:fn=>timer.push(fn)};
  const api=new Function(...Object.keys(base),ciclo+';return {foglio,chiudiFoglio,contestoFoglio};')(...Object.values(base));
  const d={...base,...api,S,X:()=>x,document:{activeElement:focus},conSchede:()=>new Promise(ok=>attese.push(ok)),giornoDi:id=>x.giorni.findIndex(g=>g.tappe.includes(id)),
   apri:id=>aperture.push(id),schedaAperta:()=>null,chiudi:async()=>{},fotoGrande:()=>'',credito:()=>'',quandoTesto:()=>'',chips:()=>'',testoScheda:()=>'',sezioni:()=>'',fontiScheda:()=>'',azioniScheda:()=>'',T:id=>({nome:id}),

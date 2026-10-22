@@ -41,6 +41,8 @@ export function foglio(titolo, corpo, dopoAperto, cl = '') {
   f.onpointerdown = null; f.onpointerup = null; f.onpointercancel = null; f.onlostpointercapture = null;
   f.style.translate = '';
   if (!f.open) f.showModal();
+  // Sostituire il contenuto elimina il comando attivo: rientra nel foglio.
+  else $('.f-chiudi', f)?.focus({ preventScroll: true });
   dopoAperto?.(f);
 }
 export async function chiudiFoglio() {

@@ -16,7 +16,7 @@ function ambiente(movimento) {
     showModal() { this.open = true; },
     close() { this.open = false; nativi.push(() => eventi.get('close')?.({})); },
     addEventListener: (k, fn) => eventi.set(k, fn) };
-  const d = { $: sel => sel === '#foglio' ? f : {}, esc: String, ic: () => '', piano: () => movimento,
+  const d = { $: sel => sel === '#foglio' ? f : { focus() {} }, esc: String, ic: () => '', piano: () => movimento,
     setTimeout: fn => timer.push(fn), tiraPerChiudere() {}, addEventListener() {} };
   const api = new Function(...Object.keys(d), ciclo + prepara + ';return {foglio,preparaFoglio,contestoFoglio,dopoChiusuraFoglio,chiudiFoglio};')(...Object.values(d));
   const dip = { ...api, S, X: () => x,

@@ -8,7 +8,7 @@ function ambiente(movimento=true){
  const classi=new Set(),eventi=new Map(),timer=[],chiudiEventi=[];let chiusure=0;
  const f={open:false,style:{},className:'',innerHTML:'',classList:{add:k=>classi.add(k),remove:k=>classi.delete(k),contains:k=>classi.has(k)},
   showModal(){this.open=true;},close(){this.open=false;chiusure++;chiudiEventi.push(()=>eventi.get('close')?.({}));},addEventListener:(k,fn)=>eventi.set(k,fn)};
- const d={$:sel=>sel==='#foglio'?f:{},esc:String,ic:()=>'',piano:()=>movimento,setTimeout:fn=>{timer.push(fn);},tiraPerChiudere(){},addEventListener(){}};
+ const d={$:sel=>sel==='#foglio'?f:{focus(){}},esc:String,ic:()=>'',piano:()=>movimento,setTimeout:fn=>{timer.push(fn);},tiraPerChiudere(){},addEventListener(){}};
  const api=new Function(...Object.keys(d),codice+prepara+';return {foglio,chiudiFoglio,quandoChiudeFoglio,preparaFoglio,contesto:typeof contestoFoglio===\'function\'?contestoFoglio:null};')(...Object.values(d));
  return {...api,f,timer,chiudiEventi,get chiusure(){return chiusure;},fotogramma:()=>timer.splice(0).forEach(fn=>fn()),eventi:()=>chiudiEventi.splice(0).forEach(fn=>fn())};
 }
