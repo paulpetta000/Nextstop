@@ -42,4 +42,3 @@ Il README contiene già la mappa del codice e dei dati: non duplicarla in una nu
 | claude-seo | Da valutare solo quando serve, previa revisione e OK per installare | SEO, fuori dalla manutenzione corrente |
 
 L'inventario non impone di caricare queste risorse. Per documentazione e test esistenti non serve installare skill/plugin. Gli agenti Claude restano in `.claude/agents/`.
-
