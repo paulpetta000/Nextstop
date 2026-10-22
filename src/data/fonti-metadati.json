@@ -1683,6 +1683,22 @@
       "itinerari.yaml#tempi"
     ]
   },
+  "tp-anm-linea6-portale": {
+    "categoria": "trasporti",
+    "luoghi": [],
+    "descrizione": "Orario ordinario e frequenza della Linea 6, nelle due direzioni",
+    "avviso": "Avvisi temporanei e festività da verificare separatamente.",
+    "nota": "Frequenza di 20 minuti usata per stimare 10 minuti di attesa media nei calcoli.",
+    "formato": "",
+    "parole": ["metropolitana", "attesa", "frequenza"],
+    "priorita": 1,
+    "lingua": "",
+    "lettura": null,
+    "prova": "Pagina ANM letta nel browser il 22 ottobre 2026; confronto isolato e rigenerazione nella revisione 70.",
+    "schede": [],
+    "durate": [],
+    "testi": ["itinerari.yaml#tempi"]
+  },
   "tp-rfi-linea2": {
     "categoria": "trasporti",
     "luoghi": [],

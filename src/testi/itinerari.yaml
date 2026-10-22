@@ -38,7 +38,7 @@ gite:
 
 tempi:
   usa: [trasporti-2027-atteso]
-  fonti: [osm, tp-copernicus-dem, tp-anm-gtfs, tp-anm-linea1, tp-comune-linea6, tp-rfi-linea2, tp-trenitalia-linea2, tp-anm-centrale, tp-anm-chiaia, tp-anm-mergellina, tp-comune-montesanto, tp-eav-teleindicatori, tp-anm-ascensori]
+  fonti: [osm, tp-copernicus-dem, tp-anm-gtfs, tp-anm-linea1, tp-comune-linea6, tp-anm-linea6-portale, tp-rfi-linea2, tp-trenitalia-linea2, tp-anm-centrale, tp-anm-chiaia, tp-anm-mergellina, tp-comune-montesanto, tp-eav-teleindicatori, tp-anm-ascensori]
   testo: |
     I tempi di spostamento sono stime nostre. Le facciamo sulle strade, le scale e gli ascensori di OpenStreetMap, con le salite prese dal modello del terreno Copernicus: in piano si va a 4,5 km all'ora e ogni 10 metri di salita aggiungono un minuto. Con la metro, le funicolari, la Cumana e gli autobus contiamo anche l'attesa, cioè metà del tempo tra due corse, e il tempo per scendere ai binari o salire sul bus.
 

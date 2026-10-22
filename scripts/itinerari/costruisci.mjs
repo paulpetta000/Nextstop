@@ -53,7 +53,9 @@ const ogni = (feriale, sabato, domenica, { l6 = false } = {}) => ({
 });
 const LINEE = [
   { id: 'L1', nome: 'Linea 1', rel: 2168102, ritorno: 386098, attesa: ogni(5, 5, 5), accesso: 3, uscita: 2, velocita: 533 /* 32 km/h */, raggio: 320 },
-  { id: 'L6', nome: 'Linea 6', rel: 2168104, ritorno: 446007, attesa: ogni(7, 7, 7, { l6: true }), accesso: 2.5, uscita: 2, totale: 15, raggio: 260 },
+  // ANM L6, letta 22/10/2026: corse ogni 20 minuti; attesa media = metà frequenza.
+  // https://www.anm.it/s/linea-anm/a0YR200000FxeqbMAB/l6?language=it
+  { id: 'L6', nome: 'Linea 6', rel: 2168104, ritorno: 446007, attesa: ogni(10, 10, 10, { l6: true }), accesso: 2.5, uscita: 2, totale: 15, raggio: 260 },
   { id: 'L2', nome: 'Linea 2', rel: 2168103, ritorno: 445980, attesa: ogni(4, 8, 10), accesso: 1.5, uscita: 1.5, raggio: 200,
     // interrotta tra Campi Flegrei e Pozzuoli; Piazza Leopardi non è ancora una fermata confermata
     salta: ['Napoli Piazza Leopardi', 'Cavalleggeri Aosta', 'Napoli Cavalleggeri Aosta', 'Bagnoli-Agnano Terme', 'Pozzuoli'],

@@ -689,9 +689,9 @@
   editore: ANM, Azienda Napoletana Mobilità (dati aperti, licenza IODL 2.0)
   url: https://www.anm.it/google/google-transit.zip
   tipo: dati
-  controllato: 2026-10-03
+  controllato: 2026-10-22
   letta: true
-  nota: "Linee, fermate, percorsi e orari dal 22 settembre al 31 dicembre 2026. Usato per 13 linee nei tempi tra le tappe (ricerca/2026-10-03-autobus-note/)."
+  nota: "Feed scaricato e analizzato il 22 ottobre: validità dal 19 ottobre al 31 dicembre 2026. Usato per 13 linee nei tempi tra le tappe; sono orari programmati, senza conferma degli avvisi temporanei. Ricerca iniziale: ricerca/2026-10-03-autobus-note/."
 
 - id: tp-anm-linea1
   titolo: "Linea 1"
@@ -709,6 +709,15 @@
   pubblicato: 2026-03-20
   controllato: 2026-10-02
   letta: true
+
+- id: tp-anm-linea6-portale
+  titolo: Linea 6 · orario e frequenza correnti
+  editore: ANM, Azienda Napoletana Mobilità
+  url: https://www.anm.it/s/linea-anm/a0YR200000FxeqbMAB/l6?language=it
+  tipo: ufficiale
+  controllato: 2026-10-22
+  letta: true
+  nota: Letta nel browser nel riscontro 69. Frequenza 20 minuti; prime partenze 7:10, ultime 21:10 lunedì-venerdì e 14:50 sabato-domenica, in entrambe le direzioni. Data di revisione non indicata; avvisi ed eccezioni da verificare separatamente.
 
 - id: tp-rfi-linea2
   titolo: "Quadro orario Linea 2 (14 giugno–12 dicembre 2026)"
