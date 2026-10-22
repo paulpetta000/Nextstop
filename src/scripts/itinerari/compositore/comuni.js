@@ -16,6 +16,8 @@ export function ricordaVista(v) { try { localStorage.setItem(CHIAVE_VISTA, v); }
 export const foglioEl = () => /** @type {HTMLDialogElement} */ ($('#foglio'));
 /** @type {(()=>void)|null} */ let spegniF = null;
 let cicloF = 0;
+// close() genera anche un evento nativo accodato: una stessa chiusura conta una volta.
+let chiusoF = true;
 /** @type {{ciclo:number;promessa:Promise<boolean>|null}|null} */ let chiusuraF = null;
 /** @type {(()=>void)|null} */ let fermaTiroFoglio = null;
 const ripulisciFoglio = () => { const fn = spegniF; spegniF = null; chiusuraF = null; fermaTiroFoglio?.(); fn?.(); };
@@ -30,6 +32,7 @@ export const quandoChiudeFoglio = fn => { spegniF = fn; };
 export function foglio(titolo, corpo, dopoAperto, cl = '') {
   const f = foglioEl();
   cicloF++; ripulisciFoglio();
+  chiusoF = false;
   f.className = cl;
   f.classList.remove('f-esce');
   f.innerHTML = `<div class="f-testa"><span class="f-maniglia" aria-hidden="true"></span><h2 id="f-titolo">${esc(titolo)}</h2><button type="button" class="f-chiudi" aria-label="Chiudi: ${esc(titolo)}">${ic('x')}</button></div><div class="f-corpo">${corpo}</div>`;
@@ -50,7 +53,7 @@ export async function chiudiFoglio() {
   chiusura.promessa = (async () => {
     if (piano()) { f.classList.add('f-esce'); await new Promise(r => setTimeout(r, 240)); }
     if (chiusura.ciclo !== cicloF || !f.open) return false;
-    f.classList.remove('f-esce'); f.close(); cicloF++; ripulisciFoglio();
+    f.classList.remove('f-esce'); f.close(); chiusoF = true; cicloF++; ripulisciFoglio();
     return true;
   })();
   return chiusura.promessa;
@@ -82,7 +85,7 @@ export function preparaFoglio() {
   const f = foglioEl();
   f.addEventListener('click', e => { if (e.target === f) chiudiFoglio(); });
   f.addEventListener('cancel', e => { e.preventDefault(); chiudiFoglio(); });
-  f.addEventListener('close', () => { if (f.open) return; cicloF++; f.classList.remove('f-esce'); ripulisciFoglio(); });
+  f.addEventListener('close', () => { if (f.open || chiusoF) return; chiusoF = true; cicloF++; f.classList.remove('f-esce'); ripulisciFoglio(); });
   // Tirando dalla testa: un solo puntatore, con annullamento e cattura ripuliti.
   /** @type {{y:number;id:number;aperto:()=>boolean}|null} */
   let tiro = null;
