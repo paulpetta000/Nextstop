@@ -61,7 +61,8 @@
   "prossimo_controllo": "2026-10-19",
   "note": [
     "Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo inventario.",
-    "Leggere calendar.txt, calendar_dates.txt, feed_info.txt se presente e le 13 linee del feed. L’URL ZIP può restare identico mentre cambiano le date e i contenuti. Hash o Last-Modified da soli non confermano gli orari."
+    "Leggere calendar.txt, calendar_dates.txt, feed_info.txt se presente e le 13 linee del feed. L’URL ZIP può restare identico mentre cambiano le date e i contenuti. Hash o Last-Modified da soli non confermano gli orari.",
+    "22/10/2026, revisione 70: feed scaricato e analizzato, validità 19/10–31/12/2026; cinque file rigenerati insieme. Gli avvisi temporanei e il controllo completo restano aperti, senza rinviare la scadenza."
   ],
   "catalogo_dati": "anm-gtfs",
   "pubblicazioni_rilevate": [],

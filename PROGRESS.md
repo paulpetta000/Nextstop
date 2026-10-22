@@ -1,6 +1,10 @@
 # PROGRESS · stato attuale
 
-## Stato corrente · revisione 69 del 22 ottobre
+## Stato corrente · revisione 70 del 22 ottobre
+
+Codice **a9c4403**, **784/784 test**, build 12 pagine, 811 collegamenti, nuova **CI Ubuntu riuscita** e anteprima READY sul solo ramo autorizzato. Attesa L6 corretta 7 → 10 minuti; cinque file rigenerati insieme, ingressi e confronto separato conservati, 208 fonti. Prova nativa locale Santa Chiara–Villa Pignatelli, axe nei due temi e responsive 320/390. Lighthouse home 99, compositore 95 a 390 px; due misure a 412 px restano a 94. Nuova copia Git ricompressa verificata, causa delle anomalie precedenti ancora ignota. [Resoconto, limiti e seguito con Sol medio](docs/storico/2026-10-22-revisione-70.md), [integrità](docs/storico/2026-10-22-integrita-70.md). Restano 20 gruppi di fonti aperti su 26 e verifiche manuali. Grafica conservata; nessun merge o produzione. Istruzioni Claude escluse e idea rinviata.
+
+## Stato precedente · revisione 69 del 22 ottobre
 
 Codice **fe45e9d**, **780/780 test**, build 12 pagine, 811 link, tipi rigorosi e **nuova CI Ubuntu riuscita**. Corretto il fuoco perso passando da Altro a Data e orari; prova nel browser locale. Nuova preview READY sul solo ramo autorizzato. Recuperate fonti ANM e gestori: 20 gruppi aperti su 26; attesa L6 7 minuti rispetto a frequenza ufficiale 20 da confrontare e rigenerare, navetta Montesanto con orari discordanti. [Resoconto e stime residue](docs/storico/2026-10-22-revisione-69.md). Grafica e dati applicativi conservati; nessun merge o produzione. Istruzioni Claude escluse, idea rinviata.
 ## Riscontro precedente · revisione 68 del 22 ottobre

@@ -17,7 +17,8 @@
   ],
   "schede": [],
   "fonti_esistenti": [
-    "tp-comune-linea6"
+    "tp-comune-linea6",
+    "tp-anm-linea6-portale"
   ],
   "canali_scoperta": [
     "anm-portale",
@@ -87,7 +88,8 @@
     "rapporto": "aggiornamenti/rapporti/2026-10-22-anm-browser.md",
     "modalita": "rapporto",
     "controllo_completo": false,
-    "dati_applicativi_aggiornati": false,
+    "dati_applicativi_aggiornati": true,
+    "seguito": "Revisione 70: attesa media 7 -> 10 minuti, cinque file rigenerati; durata totale, festività e avvisi ancora da completare.",
     "ritentare_entro": "2026-10-25"
   }
 }
