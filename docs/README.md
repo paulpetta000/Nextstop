@@ -2,6 +2,8 @@
 
 Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [regole comuni](REGOLE.md) e la prima sezione dello [stato corrente](../PROGRESS.md), approfondendo i blocchi precedenti solo se pertinenti. Poi scegli solo la riga del compito, senza aprire tutti i rimandi.
 
+Seguito corrente: [fonti, revisione 71](../aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md), 17 gruppi aperti e nove con fonte/orario ordinario recuperati. Solo rapporto e registro; codice e limiti tecnici restano quelli sotto.
+
 Stato corrente: [revisione 70, L6 e dati coordinati](storico/2026-10-22-revisione-70.md), codice a9c4403, 784 test, CI Ubuntu e preview riuscite. **La copia Git indipendente fallisce il controllo finale**, dopo un primo successo: leggere il [rapporto integrità](storico/2026-10-22-integrita-70.md) e usare anche gli archivi separati. Seguito ordinario con Sol medio, limiti e stime nel rapporto.
 
 Stato precedente: [revisione 69, fuoco e nuove fonti](storico/2026-10-22-revisione-69.md), codice fe45e9d, 780 test e CI Ubuntu riuscita; dati/fonti ancora parziali e stime nel rapporto.

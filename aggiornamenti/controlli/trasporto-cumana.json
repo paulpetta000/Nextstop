@@ -75,5 +75,19 @@
       "V18"
     ],
     "controllo_completo": false
+  },
+  "ultimo_riscontro_parziale": {
+    "data": "2026-10-22",
+    "rapporto": "aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md",
+    "modalita": "rapporto",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "casi": [
+      "V18"
+    ],
+    "nota": "Teleindicatori recuperati tramite selezione Cumana/Montesanto/Partenze; tabella di stazione con piu linee, campione puntuale, data corse non esplicita. Nuovo avviso carburante 20 ottobre da confrontare con i servizi sostitutivi.",
+    "priorita": "avvisi_temporanei_da_ricontrollare",
+    "url_avviso": "https://www.eavsrl.it/comunicato-stampa-eav-difficolta-di-rifornimento-carburante-aggiornamento-servizi-eav-2/",
+    "ritentare_entro": "2026-10-23"
   }
 }

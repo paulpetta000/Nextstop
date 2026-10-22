@@ -1,14 +1,14 @@
 # Verifiche personali · indice corrente
 
-Stato del 22/10/2026: **26 gruppi, 20 aperti e sei con fonte/orario ordinario recuperati**. San Lorenzo (V01) recuperato nel browser; nuovi riscontri parziali ANM e Città della Scienza nelle rispettive schede. Sono gruppi di domande, non siti distinti. Per un riscontro aprire solo il caso interessato; i collegamenti e la domanda precisa sono nella sua scheda.
+Stato del 22/10/2026, revisione 71: **26 gruppi, 17 aperti e nove con fonte/orario ordinario recuperati**. San Carlo (V02), Castel Nuovo (V03) e Città della Scienza (V11) recuperati dal gestore nel browser; nuovi riscontri parziali ANM, EAV e Parco Virgilio nelle schede. Sono gruppi di domande, non siti distinti. Per un riscontro aprire solo il caso interessato; i collegamenti e la domanda precisa sono nella sua scheda.
 
-Per Codex/Claude: `node aggiornamenti/leggi.mjs aperte` elenca solo i casi aperti; `node aggiornamenti/leggi.mjs caso V01` legge una scheda. I dati applicativi non sono stati aggiornati. Una spunta non significa che tutte le eccezioni siano state confrontate.
+Per Codex/Claude: `node aggiornamenti/leggi.mjs aperte` elenca solo i casi aperti; `node aggiornamenti/leggi.mjs caso V01` legge una scheda. Questo riscontro aggiorna rapporto e registro, non i dati applicativi; la precedente revisione 70 ha aggiornato separatamente i percorsi L6. Una spunta non significa che tutte le eccezioni siano state confrontate.
 
 | Caso | Argomento | Stato |
 |---|---|---|
 | [V01](casi/V01.md) | San Lorenzo Maggiore / Neapolis Sotterrata | Fonte/orario recuperati |
-| [V02](casi/V02.md) | Teatro San Carlo | Aperto |
-| [V03](casi/V03.md) | Castel Nuovo e notizie del Comune | Aperto |
+| [V02](casi/V02.md) | Teatro San Carlo | Fonte/orario recuperati |
+| [V03](casi/V03.md) | Castel Nuovo e notizie del Comune | Fonte/orario recuperati |
 | [V04](casi/V04.md) | ANM: ascensori, Monte Echia e avvisi | Aperto |
 | [V05](casi/V05.md) | Borgo Marinari e Castel dell’Ovo | Aperto |
 | [V06](casi/V06.md) | Villa Comunale | Fonte/orario recuperati |
@@ -16,7 +16,7 @@ Per Codex/Claude: `node aggiornamenti/leggi.mjs aperte` elenca solo i casi apert
 | [V08](casi/V08.md) | Pedamentina | Aperto |
 | [V09](casi/V09.md) | Marechiaro: ZTL e accesso | Aperto |
 | [V10](casi/V10.md) | Parco Virgiliano | Aperto |
-| [V11](casi/V11.md) | Città della Scienza | Aperto |
+| [V11](casi/V11.md) | Città della Scienza | Fonte/orario recuperati |
 | [V12](casi/V12.md) | Mercati Porta Nolana e Pignasecca | Aperto |
 | [V13](casi/V13.md) | Parco Ventaglieri | Fonte/orario recuperati |
 | [V14](casi/V14.md) | Parchi Mascagna, Camaldoli e del Poggio | Fonte/orario recuperati |

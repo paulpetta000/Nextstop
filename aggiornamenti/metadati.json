@@ -53,5 +53,15 @@
     },
     "locali_senza_fonte_ufficiale_verificabile": 2,
     "nota": "54 URL = 50 precedenti + 4 siti della vecchia lista; gli altri due locali non hanno fonte ufficiale verificabile. Le alternative possono essere parziali o storiche. Conteggio di URL di partenza, non di domini distinti."
+  },
+  "riscontro_71": {
+    "data": "2026-10-22",
+    "rapporto": "aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md",
+    "gruppi": 26,
+    "aperti": 17,
+    "fonte_orario_recuperati": 9,
+    "controlli_completi": 0,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Segue i rapporti 69/70 senza sostituire lo storico completo. Nuovi avvisi carburante EAV da ricontrollare."
   }
 }

@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Stato corrente · fonti, revisione 71 del 22 ottobre
+
+Ripresa ordinaria dopo il passaggio concordato a Sol medio. Fonti/orari ordinari recuperati per San Carlo, Castel Nuovo e Città della Scienza: **17 gruppi aperti e nove recuperati su 26**, nessun controllo completo concluso o scadenza rinviata. Nuovo avviso carburante EAV del 20 ottobre registrato, accesso ai teleindicatori e ai portali dei gestori recuperato; calendari, eccezioni e limitazioni restano distinti. [Rapporto e copertura](aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md). Solo documenti/registro: codice applicativo a9c4403 e verifiche della revisione 70 conservati, non ripetuti come nuovi risultati. Backup Git ancora non affidabile, archivi 70 conservati; nessun main/produzione, grafica, istruzione Claude o nuova idea.
+
 ## Stato corrente · revisione 70 del 22 ottobre
 
 Codice **a9c4403**, **784/784 test**, build 12 pagine, 811 collegamenti, nuova **CI Ubuntu riuscita** e anteprima READY sul solo ramo autorizzato. Attesa L6 corretta 7 → 10 minuti; cinque file rigenerati insieme, ingressi e confronto separato conservati, 208 fonti. Prova nativa locale Santa Chiara–Villa Pignatelli, axe nei due temi e responsive 320/390. Lighthouse home 99, compositore 95 a 390 px; due misure a 412 px restano a 94. Nuova copia Git ricompressa verificata, causa delle anomalie precedenti ancora ignota. [Resoconto, limiti e seguito con Sol medio](docs/storico/2026-10-22-revisione-70.md), [integrità](docs/storico/2026-10-22-integrita-70.md). Restano 20 gruppi di fonti aperti su 26 e verifiche manuali. Grafica conservata; nessun merge o produzione. Istruzioni Claude escluse e idea rinviata.

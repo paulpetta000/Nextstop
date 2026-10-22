@@ -73,5 +73,17 @@
       "V11"
     ],
     "controllo_completo": false
+  },
+  "ultimo_riscontro_parziale": {
+    "data": "2026-10-22",
+    "rapporto": "aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md",
+    "modalita": "rapporto",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "casi": [
+      "V11"
+    ],
+    "nota": "Visita, biglietteria e prima pagina calendario recuperate; integrati 2D/live distinti, eventi 23–25 ottobre. Non controllate tutte le date future.",
+    "ritentare_entro": "2026-10-25"
   }
 }

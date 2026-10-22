@@ -88,10 +88,14 @@
   },
   "ultimo_riscontro_parziale": {
     "data": "2026-10-22",
-    "rapporto": "aggiornamenti/rapporti/2026-10-22-anm-browser.md",
+    "rapporto": "aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md",
     "modalita": "rapporto",
     "controllo_completo": false,
     "dati_applicativi_aggiornati": false,
+    "casi": [
+      "V16"
+    ],
+    "nota": "Quadro navetta dal 21 settembre: Vanvitelli 6:30–21:40; giorni e partenze ritorno non esplicitati. Non usare il vecchio 21:32 come sostituto della tabella piu recente.",
     "ritentare_entro": "2026-10-25"
   }
 }
