@@ -1,6 +1,9 @@
 # PROGRESS · stato attuale
 
-## Stato corrente · revisione 68 del 22 ottobre
+## Stato corrente · revisione 69 del 22 ottobre
+
+Codice **fe45e9d**, **780/780 test**, build 12 pagine, 811 link, tipi rigorosi e **nuova CI Ubuntu riuscita**. Corretto il fuoco perso passando da Altro a Data e orari; prova nel browser locale. Nuova preview READY sul solo ramo autorizzato. Recuperate fonti ANM e gestori: 20 gruppi aperti su 26; attesa L6 7 minuti rispetto a frequenza ufficiale 20 da confrontare e rigenerare, navetta Montesanto con orari discordanti. [Resoconto e stime residue](docs/storico/2026-10-22-revisione-69.md). Grafica e dati applicativi conservati; nessun merge o produzione. Istruzioni Claude escluse, idea rinviata.
+## Riscontro precedente · revisione 68 del 22 ottobre
 
 Codice **51c5dfb**, **777/777 test**, build 12 pagine, 811 link, tipi rigorosi e **CI Ubuntu riuscita**. Corretto il doppio conteggio della chiusura nativa che impediva «Mangia qui». Anteprima HTTPS pubblicata con consenso sul solo ramo; main b6d2a36 invariato. Worker offline e aggiornamento provati nel browser su origine locale isolata; Lighthouse **97 home e compositore**, axe esteso nei due temi. [Resoconto corrente, otto aree e limiti](docs/storico/2026-10-22-revisione-68.md). Grafica conservata; nessuna PR o pubblicazione in produzione. Istruzioni/consumo Claude esclusi, nuova idea rinviata.
 

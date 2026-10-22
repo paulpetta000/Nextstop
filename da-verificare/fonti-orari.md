@@ -1,12 +1,12 @@
 # Verifiche personali · indice corrente
 
-Stato del 19/10/2026: **26 gruppi, 21 aperti e cinque con fonte/orario ordinario recuperati**. Sono gruppi di domande, non siti distinti. Per un riscontro aprire solo il caso interessato; i collegamenti e la domanda precisa sono nella sua scheda.
+Stato del 22/10/2026: **26 gruppi, 20 aperti e sei con fonte/orario ordinario recuperati**. San Lorenzo (V01) recuperato nel browser; nuovi riscontri parziali ANM e Città della Scienza nelle rispettive schede. Sono gruppi di domande, non siti distinti. Per un riscontro aprire solo il caso interessato; i collegamenti e la domanda precisa sono nella sua scheda.
 
 Per Codex/Claude: `node aggiornamenti/leggi.mjs aperte` elenca solo i casi aperti; `node aggiornamenti/leggi.mjs caso V01` legge una scheda. I dati applicativi non sono stati aggiornati. Una spunta non significa che tutte le eccezioni siano state confrontate.
 
 | Caso | Argomento | Stato |
 |---|---|---|
-| [V01](casi/V01.md) | San Lorenzo Maggiore / Neapolis Sotterrata | Aperto |
+| [V01](casi/V01.md) | San Lorenzo Maggiore / Neapolis Sotterrata | Fonte/orario recuperati |
 | [V02](casi/V02.md) | Teatro San Carlo | Aperto |
 | [V03](casi/V03.md) | Castel Nuovo e notizie del Comune | Aperto |
 | [V04](casi/V04.md) | ANM: ascensori, Monte Echia e avvisi | Aperto |
