@@ -18,7 +18,7 @@ Letta la [scheda nazionale Villa Jovis](https://cultura.gov.it/luogo/palazzo-di-
 
 Letta la [scheda nazionale Grotta Azzurra](https://cultura.gov.it/luogo/grotta-azzurra): nessuna chiusura settimanale, accesso subordinato al mare; descrive aprile–ottobre 9–18 e novembre–marzo 9–14. **Discorda con il regolamento del gestore sui passaggi di ottobre e sull'apertura estiva**. Non scegliere automaticamente il valore più favorevole. Serve riscontro attuale del gestore/portale prima di chiudere V20.
 
-La [scheda nazionale Certosa](https://cultura.gov.it/luogo/certosa-di-san-giacomo) compare nella ricerca con lunedì chiuso e fasce stagionali, ma due aperture dirette sono andate in timeout: **testo indicizzato, non nuova pagina letta**. FAQ e area stampa del gestore hanno dato timeout in due tentativi; pagina Damecuta e radice italiana in errore. Damecuta non è tra le tre sedi citate nel fatto e non serve a certificare le altre. Ricerca mirata agli avvisi 2026: non dimostra assenza di chiusure.
+La [scheda nazionale Certosa](https://cultura.gov.it/luogo/certosa-di-san-giacomo) compare nella ricerca con lunedì chiuso e fasce stagionali, ma ripetute aperture dirette sono andate in timeout: **testo indicizzato, non nuova pagina letta**. FAQ e area stampa del gestore hanno dato timeout in due tentativi; pagina Damecuta e radice italiana in errore. Damecuta non è tra le tre sedi citate nel fatto e non serve a certificare le altre. Ricerca mirata agli avvisi 2026: non dimostra assenza di chiusure.
 
 **V20 resta aperto**, con lacuna ora circoscritta a calendario/avvisi, contrasto Grotta Azzurra e collegamento marittimo non riesaminato. Nessuna prenotazione, accesso ad account o acquisto.
 
