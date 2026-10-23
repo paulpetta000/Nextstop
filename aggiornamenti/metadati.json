@@ -85,6 +85,16 @@
     "controlli_completi": 0,
     "nota": "Seguito ordinario dopo consegna tecnica73; nessun controllo completo rinnovato."
   },
+  "riscontro_76": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-san-lorenzo-76.md",
+    "gruppi": 26,
+    "aperti": 16,
+    "fonte_orario_recuperati": 10,
+    "controlli_completi": 0,
+    "dati_applicativi_aggiornati": true,
+    "nota": "Guida obbligatoria San Lorenzo confermata da gestore e biglietteria; correzione mirata, nessun controllo completo o scadenza generale rinnovati."
+  },
   "riscontro_75": {
     "data": "2026-10-23",
     "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md",
