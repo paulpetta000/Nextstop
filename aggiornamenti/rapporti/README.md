@@ -4,6 +4,7 @@ Non leggere questa cartella per iniziare un controllo ordinario. Usare [procedur
 
 | Rapporto | Uso |
 |---|---|
+| [Anteprima80, 24 ottobre](2026-10-24-anteprima-80.md) | Correzione79 letta su telefono in chiaro/scuro e320px; fallback controllato nell'HTML, nessun nuovo dato applicativo |
 | [Sansevero 79, 23 ottobre](2026-10-23-sansevero-79.md) | Eccezione alla vendita solo online e due testi corretti; controllo della scheda concluso, build locale Vite bloccata e verifica remota richiesta |
 | [Capri e L6 78, 23 ottobre](2026-10-23-collegamenti-capri-78.md) | Quadri Caremar/SNAV e nuovo avviso carburanti distinti; durata/festività L6 ancora aperte, applicazione invariata |
 | [Mercati 77, 23 ottobre](2026-10-23-mercati-77.md) | PDF nel percorso 2026 contiene proposta 2012, nessun nuovo orario dedotto; V12 ancora aperto |

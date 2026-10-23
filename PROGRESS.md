@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Anteprima · revisione 80 del 24 ottobre
+
+Completata la lettura nativa della correzione79: scheda Sansevero in chiaro/scuro a390px e a320px, nessuna eccedenza orizzontale, console senza avvisi/errori. Aperto il pronto di mezza giornata; relativo paragrafo senza JavaScript verificato separatamente nell'HTML del server. [Riscontri e limiti](aggiornamenti/rapporti/2026-10-24-anteprima-80.md). Codice44cbdbb e CI792/build12/810link conservati, non ripetuti per sole note. Accesso temporaneo già autorizzato, nessun token conservato nei riscontri; dati fittizi isolati, tema/dimensioni ripristinati. Limite Vite locale e16 domande aperte invariati; nessun main/produzione o tentativo sul vecchio backup Git.
+
 ## Sansevero · revisione 79 del 23 ottobre
 
 Corretta l'esclusività dell'acquisto online in un fatto e due testi: il museo ammette anche piccoli gruppi in biglietteria, con disponibilità condivisa. Aggiunta FAQ, 210 fonti, 792 prove riuscite. Confronto periodico Sansevero concluso, riesame 28 ottobre prima del calendario straordinario. **CI Ubuntu 39979162265 riuscita**, build12pagine/810link e anteprima READY sul commit applicativo44cbdbb. **Build locale bloccata:** file Vite contiene `retern`, causa ignota, non riparato/reinstallato; preview nel browser richiede login, controllo visivo79 ancora aperto. [Rapporto e limiti](aggiornamenti/rapporti/2026-10-23-sansevero-79.md). Percorsi, algoritmi e grafica invariati. Restano 16 gruppi aperti/10 recuperati, nessun main/produzione o tentativo sul vecchio backup Git.
