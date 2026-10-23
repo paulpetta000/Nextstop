@@ -53,7 +53,7 @@ tempi:
 orari:
   senzaFonte: "Spiega come lavoriamo: orari, prezzi e prenotazioni delle tappe hanno ciascuno la sua scheda con la fonte"
   testo: |
-    Orari, prezzi e prenotazioni delle tappe li abbiamo letti sui siti dei gestori il 2 ottobre 2026: valgono oggi, e li ricontrolliamo entro aprile 2027. Le durate delle visite sono stime nostre, tranne dove il gestore dice quanto dura la visita.
+    Orari, prezzi e prenotazioni delle tappe vengono dai siti dei gestori. In ogni scheda trovi le fonti e la data del controllo: prima di partire, controlla sul sito del gestore eventuali variazioni e la disponibilità dei biglietti. Le durate delle visite sono stime nostre, tranne dove il gestore dice quanto dura la visita.
 
 salvare:
   senzaFonte: "Spiega come funziona la pagina: niente account, niente server"
