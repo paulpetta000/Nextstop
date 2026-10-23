@@ -94,5 +94,13 @@
     "priorita": "avvisi_temporanei_da_ricontrollare",
     "url_avviso": "https://www.eavsrl.it/comunicato-stampa-eav-difficolta-di-rifornimento-carburante-aggiornamento-servizi-eav-2/",
     "ritentare_entro": "2026-10-23"
+  },
+  "riscontro_72": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V17",
+    "nota": "Ricerca interna EAV carburante e indice ferroviario prime due pagine ricontrollati: nessun ripristino rilevato nel campione. Letto avviso 13 settembre che indirizza al portale Orario Treni. Nessuna conferma di ripresa Campania Express."
   }
 }

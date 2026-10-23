@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Stato corrente · revisione 72 del 23 ottobre
+
+Recuperate pagine comunali e nuovi avvisi su cantieri; stati **17 gruppi aperti e nove recuperati su 26** conservati. **Nuovo problema riprodotto:** Acton è indicato in manutenzione da ANM ma usato da 31 collegamenti delle matrici principali. Correzione del generatore e rigenerazione da fare con **Sol alto**, prima di procedere alle verifiche finali. [Riscontri e limiti](aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md). Solo documenti/registro, codice ancora a9c4403; prova mirata fallita come atteso, suite/build precedenti non ripetute. Backup Git ancora non affidabile, nessuna riparazione; originali e archivi conservati. Nessun main/produzione o cambio grafico.
+
 ## Stato corrente · fonti, revisione 71 del 22 ottobre
 
 Ripresa ordinaria dopo il passaggio concordato a Sol medio. Fonti/orari ordinari recuperati per San Carlo, Castel Nuovo e Città della Scienza: **17 gruppi aperti e nove recuperati su 26**, nessun controllo completo concluso o scadenza rinviata. Nuovo avviso carburante EAV del 20 ottobre registrato, accesso ai teleindicatori e ai portali dei gestori recuperato; calendari, eccezioni e limitazioni restano distinti. [Rapporto e copertura](aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md). Solo documenti/registro: codice applicativo a9c4403 e verifiche della revisione 70 conservati, non ripetuti come nuovi risultati. Backup Git ancora non affidabile, archivi 70 conservati; nessun main/produzione, grafica, istruzione Claude o nuova idea.

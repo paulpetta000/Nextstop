@@ -63,5 +63,15 @@
     "controlli_completi": 0,
     "dati_applicativi_aggiornati": false,
     "nota": "Segue i rapporti 69/70 senza sostituire lo storico completo. Nuovi avvisi carburante EAV da ricontrollare."
+  },
+  "riscontro_72": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md",
+    "gruppi": 26,
+    "aperti": 17,
+    "fonte_orario_recuperati": 9,
+    "controlli_completi": 0,
+    "dati_applicativi_aggiornati": false,
+    "problema_riprodotto": "Acton in manutenzione usato da 31 collegamenti delle matrici principali; da correggere con Sol alto"
   }
 }

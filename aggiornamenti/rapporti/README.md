@@ -4,6 +4,7 @@ Non leggere questa cartella per iniziare un controllo ordinario. Usare [procedur
 
 | Rapporto | Uso |
 |---|---|
+| [Fonti e Acton 72, 23 ottobre](2026-10-23-fonti-ripresa-72.md) | Pagine comunali recuperate, cantieri e canale operativo EAV; 31 collegamenti via Acton in manutenzione riprodotti, correzione da fare |
 | [Ripresa fonti 71, 22 ottobre](2026-10-22-fonti-ripresa-71.md) | V02/V03/V11 ordinari recuperati, nuovi avvisi EAV e confronti parziali; nessun controllo completo o dato applicativo aggiornato |
 | [ANM nel browser, 22 ottobre](2026-10-22-anm-browser.md) | Recuperi parziali V04/V15/V16, discordanza navetta e attesa L6 da confrontare; nessun dato applicativo aggiornato |
 | [Gestori nel browser, 22 ottobre](2026-10-22-gestori-browser.md) | Turni V01 recuperati, calendario V11 parziale; V02/V19 non risolti |

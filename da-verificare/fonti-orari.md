@@ -1,6 +1,6 @@
 # Verifiche personali · indice corrente
 
-Stato del 22/10/2026, revisione 71: **26 gruppi, 17 aperti e nove con fonte/orario ordinario recuperati**. San Carlo (V02), Castel Nuovo (V03) e Città della Scienza (V11) recuperati dal gestore nel browser; nuovi riscontri parziali ANM, EAV e Parco Virgilio nelle schede. Sono gruppi di domande, non siti distinti. Per un riscontro aprire solo il caso interessato; i collegamenti e la domanda precisa sono nella sua scheda.
+Stato del 23/10/2026, revisione 72: **26 gruppi, 17 aperti e nove con fonte/orario ordinario recuperati**. San Carlo (V02), Castel Nuovo (V03) e Città della Scienza (V11) recuperati dal gestore nel browser; nuovi riscontri parziali ANM, EAV e Parco Virgilio nelle schede. [Seguito 72](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md): nuovi riscontri comunali ed EAV; Acton in manutenzione ancora presente nei percorsi, correzione da fare. Gli stati restano invariati perché i nuovi accessi non completano le verifiche residue. Sono gruppi di domande, non siti distinti. Per un riscontro aprire solo il caso interessato; i collegamenti e la domanda precisa sono nella sua scheda.
 
 Per Codex/Claude: `node aggiornamenti/leggi.mjs aperte` elenca solo i casi aperti; `node aggiornamenti/leggi.mjs caso V01` legge una scheda. Questo riscontro aggiorna rapporto e registro, non i dati applicativi; la precedente revisione 70 ha aggiornato separatamente i percorsi L6. Una spunta non significa che tutte le eccezioni siano state confrontate.
 

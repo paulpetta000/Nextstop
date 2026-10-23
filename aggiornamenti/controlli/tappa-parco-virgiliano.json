@@ -80,5 +80,13 @@
       "V10"
     ],
     "controllo_completo": false
+  },
+  "riscontro_72": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V10",
+    "nota": "Letto il comunicato del 25 giugno 2026: aperti dal 27 giugno piazzale d’ingresso, viale nord, belvedere e piazza presso via Tito Lucrezio Caro; altri lavori previsti fino al 2027. Da accertare modifiche successive, senza presumere riapertura integrale."
   }
 }

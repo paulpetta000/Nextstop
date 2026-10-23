@@ -75,5 +75,13 @@
       "V08"
     ],
     "controllo_completo": false
+  },
+  "riscontro_72": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V08",
+    "nota": "Recuperati percorso descrittivo e nuovo avviso comunale del 30 settembre: dal 19 ottobre al 6 novembre scavi su corso Vittorio Emanuele e marciapiede fino all’inizio della Pedamentina. Non è una dichiarazione di chiusura dell’intera scalinata; percorribilità integrale ancora da verificare."
   }
 }

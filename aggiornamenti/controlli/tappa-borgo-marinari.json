@@ -80,5 +80,13 @@
       "V05"
     ],
     "controllo_completo": false
+  },
+  "riscontro_72": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V05",
+    "nota": "Castello e area pedonale ora leggibili nel browser: chiusura del castello dichiarata su pagina aggiornata nel 2025; area pedonale h24, aggiornata agosto 2026. Avviso cantieri lungomare del 30 settembre letto; nessuna riapertura effettiva del castello confermata."
   }
 }
