@@ -214,7 +214,15 @@
   editore: La Neapolis Sotterrata (San Lorenzo Maggiore)
   url: https://www.laneapolissotterrata.it/Home/InfoVisite
   tipo: ufficiale
-  controllato: 2026-10-02
+  controllato: 2026-10-23
+  letta: true
+
+- id: tp-sanlorenzo-biglietteria
+  titolo: "Biglietteria e avviso sulle visite guidate"
+  editore: La Neapolis Sotterrata (San Lorenzo Maggiore), su Metooo
+  url: https://la-neapolis-sotterrata.metooo.com/e/la-neapolis-sotterrata
+  tipo: ufficiale
+  controllato: 2026-10-23
   letta: true
 
 - id: tp-sotterranea-orari

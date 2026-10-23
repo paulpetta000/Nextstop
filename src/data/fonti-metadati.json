@@ -1690,14 +1690,20 @@
     "avviso": "Avvisi temporanei e festività da verificare separatamente.",
     "nota": "Frequenza di 20 minuti usata per stimare 10 minuti di attesa media nei calcoli.",
     "formato": "",
-    "parole": ["metropolitana", "attesa", "frequenza"],
+    "parole": [
+      "metropolitana",
+      "attesa",
+      "frequenza"
+    ],
     "priorita": 1,
     "lingua": "",
     "lettura": null,
     "prova": "Pagina ANM letta nel browser il 22 ottobre 2026; confronto isolato e rigenerazione nella revisione 70.",
     "schede": [],
     "durate": [],
-    "testi": ["itinerari.yaml#tempi"]
+    "testi": [
+      "itinerari.yaml#tempi"
+    ]
   },
   "tp-rfi-linea2": {
     "categoria": "trasporti",
@@ -4608,6 +4614,34 @@
     "durate": [],
     "testi": [
       "tappe.yaml#sanita"
+    ]
+  },
+  "tp-sanlorenzo-biglietteria": {
+    "categoria": "visite",
+    "luoghi": [
+      "San Lorenzo Maggiore e gli scavi"
+    ],
+    "descrizione": "Guida obbligatoria, prenotazione online e pagamento del supplemento",
+    "avviso": "",
+    "nota": "",
+    "formato": "",
+    "parole": [
+      "guida",
+      "prenotazione",
+      "supplemento",
+      "prezzo"
+    ],
+    "priorita": 1,
+    "lingua": "",
+    "lettura": null,
+    "prova": "Letti avviso generale e tariffario del 24 ottobre nel browser il 23/10/2026; nessun acquisto o prenotazione.",
+    "schede": [
+      "tp-sanlorenzo-orari",
+      "tp-sanlorenzo-prezzi"
+    ],
+    "durate": [],
+    "testi": [
+      "tappe.yaml#san-lorenzo"
     ]
   }
 }

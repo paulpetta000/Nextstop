@@ -28,7 +28,8 @@
     "src/testi/tappe.yaml"
   ],
   "fonti_esistenti": [
-    "tp-sanlorenzo"
+    "tp-sanlorenzo",
+    "tp-sanlorenzo-biglietteria"
   ],
   "canali_scoperta": [
     "gestore-www-laneapolissotterrata-it",
@@ -50,7 +51,9 @@
   "ultimo_controllo_completo": null,
   "prossimo_controllo": "2026-10-19",
   "note": [],
-  "pubblicazioni_rilevate": [],
+  "pubblicazioni_rilevate": [
+    "sanlorenzo-guida-obbligatoria-riscontro-2026-10-23"
+  ],
   "ritentativo_accesso": {
     "data": "2026-10-19",
     "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
@@ -74,5 +77,12 @@
       "V01"
     ],
     "controllo_completo": false
+  },
+  "riscontro_76": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-san-lorenzo-76.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": true,
+    "nota": "Guida obbligatoria confermata nel browser dal gestore e dalla biglietteria collegata; corrette due schede e testo dipendente. Prezzi base, durate e percorsi invariati. Data di modifica della fonte ignota; ultimo ingresso, eccezioni e ricerca completa delle novità ancora da concludere."
   }
 }

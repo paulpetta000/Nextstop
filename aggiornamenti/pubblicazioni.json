@@ -307,5 +307,22 @@
     "tipo": "avviso_temporaneo",
     "stato": "letto_confronto_applicativo_parziale",
     "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md"
+  },
+  {
+    "id": "sanlorenzo-guida-obbligatoria-riscontro-2026-10-23",
+    "controlli": [
+      "tappa-san-lorenzo"
+    ],
+    "url": "https://www.laneapolissotterrata.it/Home/InfoVisite",
+    "pubblicato": null,
+    "valido_dal": null,
+    "valido_fino": null,
+    "tipo": "condizioni_visita_attuali",
+    "stato": "guida_obbligatoria_confermata_e_testi_aggiornati",
+    "ricontrollare": "2026-11-06",
+    "nota": "Rilevata il 23 ottobre nel browser e confermata dalla biglietteria collegata. Data di pubblicazione/decorrenza non dichiarata: non assumere che la regola inizi oggi. Nessun controllo periodico completo concluso.",
+    "fonti_integrative": [
+      "https://la-neapolis-sotterrata.metooo.com/e/la-neapolis-sotterrata"
+    ]
   }
 ]

@@ -198,18 +198,18 @@
   ricontrollare: 2027-04-30
 
 - id: tp-sanlorenzo-orari
-  testo: "Tutti i giorni 9:30–17:30. Quando c'è molta gente si entra solo con la guida, a orari fissi."
+  testo: "Tutti i giorni 9:30–17:30. Il gestore indica visite con guida obbligatoria, a turni fissi. Se compri online, prenota anche il turno della guida; il supplemento si paga in biglietteria."
   stato: confermato
-  fonti: [tp-sanlorenzo]
-  controllato: 2026-10-02
-  ricontrollare: 2027-04-30
+  fonti: [tp-sanlorenzo, tp-sanlorenzo-biglietteria]
+  controllato: 2026-10-23
+  ricontrollare: 2026-11-06
 
 - id: tp-sanlorenzo-prezzi
-  testo: "9 €; 7 € sopra i 65 anni, per insegnanti e universitari; 6 € sotto i 18 anni; gratis sotto i 6 anni. Con la guida 2 € in più (1 € dai 6 ai 14 anni)."
+  testo: "9 €; 7 € sopra i 65 anni, per insegnanti e universitari; 6 € sotto i 18 anni; gratis sotto i 6 anni. La guida obbligatoria costa 2 € in più (1 € dai 6 ai 14 anni), da pagare in loco."
   stato: confermato
-  fonti: [tp-sanlorenzo]
-  controllato: 2026-10-02
-  ricontrollare: 2027-04-30
+  fonti: [tp-sanlorenzo, tp-sanlorenzo-biglietteria]
+  controllato: 2026-10-23
+  ricontrollare: 2026-11-06
 
 - id: tp-sotterranea-orari
   testo: "Visite guidate ogni ora dalle 10:00 alle 18:00, in italiano; il giovedì anche alle 21:00, su prenotazione e con almeno 10 persone. Per chi è da solo o in un piccolo gruppo non serve prenotare."

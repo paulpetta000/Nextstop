@@ -19,7 +19,17 @@
   "dove-mangiare#piatto-sfogliatella": {},
   "dove-mangiare#piatto-baba": {},
   "dove-mangiare#piatto-pastiera": {},
-  "home#intro": {},
+  "home#apertura": {},
+  "home#come": {},
+  "home#passo-tappe": {},
+  "home#passo-tempi": {},
+  "home#passo-avvisi": {},
+  "home#mangiare": {},
+  "home#fidarti-fonti": {},
+  "home#fidarti-data": {},
+  "home#fidarti-link": {},
+  "home#fidarti-rete": {},
+  "home#prossime": {},
   "itinerari#regate": {
     "cal-orari": "f52b029084",
     "cal-orari-2026": "84169bb83f"
@@ -182,7 +192,7 @@
     "tp-mann-prezzi": "69fd701eb9"
   },
   "tappe#san-lorenzo": {
-    "tp-sanlorenzo-orari": "b2cee3a7df"
+    "tp-sanlorenzo-orari": "5300c277e9"
   },
   "tappe#napoli-sotterranea": {
     "tp-sotterranea-visita": "1a91f2044b",

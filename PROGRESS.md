@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## San Lorenzo · revisione 76 del 23 ottobre
+
+Gestore e biglietteria ora indicano guida obbligatoria: corrette due schede e il testo dipendente, aggiunta la fonte collegata (209 fonti pubbliche). Prezzi base, durate, calcoli, cinque JSON generati e grafica invariati. 792/792 prove, build 12 pagine e 810 link riusciti; primo tentativo fallito per metadati/conteggi della nuova fonte, poi completati. Verifica mobile locale svolta; CI e anteprima del nuovo commit da riscontrare. **16 gruppi aperti e dieci recuperati su 26**, nessun controllo completo/scadenza rinnovati. [Riscontri, conservazione e limiti](aggiornamenti/rapporti/2026-10-23-san-lorenzo-76.md). Nessun main/produzione, nuovo backup Git o istruzione Claude.
+
 ## Ripresa ordinaria · revisione 75 del 23 ottobre
 
 Recuperata settimana Granfuoco dalla scheda Google già ammessa nella lista: **16 gruppi aperti e dieci con fonte/orario ordinario recuperati su 26**, nessun controllo completo rinnovato. Letti social e schede Google degli altri locali: contrasti conservati, De Luca indicato temporaneamente chiuso. Certosa MiC ora leggibile. Registrati avvisi ANM su deviazione 151/R7, L1 e sciopero 30 ottobre, con periodi distinti; i dati applicativi non includono queste eccezioni. [Rapporto e limiti](aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md). Codice 5fce2d7 invariato, nessun main/produzione o nuovo tentativo sul backup Git.

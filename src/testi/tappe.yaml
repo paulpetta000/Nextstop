@@ -42,9 +42,9 @@ mann:
 
 san-lorenzo:
   usa: [tp-sanlorenzo-orari]
-  fonti: [tp-sanlorenzo]
+  fonti: [tp-sanlorenzo, tp-sanlorenzo-biglietteria]
   testo: |
-    Una grande chiesa e, sotto, gli scavi della città greca e romana. Apre tutti i giorni, dalle 9:30 alle 17:30. Quando c'è molta gente si entra solo con la guida, a orari fissi. Con la carrozzina o il passeggino visiti tutto tranne l'area archeologica.
+    Una grande chiesa e, sotto, gli scavi della città greca e romana. Apre tutti i giorni, dalle 9:30 alle 17:30. Le visite sono con guida obbligatoria, a turni fissi. Se compri il biglietto online, prenota anche il turno della guida; il supplemento si paga in biglietteria. Con la carrozzina o il passeggino visiti tutto tranne l'area archeologica.
 
 napoli-sotterranea:
   usa: [tp-sotterranea-visita, tp-sotterranea-prezzi]

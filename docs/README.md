@@ -1,5 +1,7 @@
 # Documentazione · scegliere cosa leggere
 
+Seguito corrente: [San Lorenzo 76](../aggiornamenti/rapporti/2026-10-23-san-lorenzo-76.md), correzione mirata della guida obbligatoria; 209 fonti, 792 prove. Controllo completo ancora aperto; avvisi e locali nel rapporto 75.
+
 Seguito corrente: [fonti, locali e avvisi 75](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md), 16 gruppi aperti e dieci con fonte/orario ordinario recuperati. Dati applicativi invariati; avvisi temporanei registrati con i loro limiti.
 
 Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [regole comuni](REGOLE.md) e la prima sezione dello [stato corrente](../PROGRESS.md), approfondendo i blocchi precedenti solo se pertinenti. Poi scegli solo la riga del compito, senza aprire tutti i rimandi.
