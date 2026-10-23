@@ -4,6 +4,7 @@
 import fs from 'node:fs';
 import { loadTiles } from './osm.mjs';
 import { BOX } from './riquadro.mjs';
+import { scriviFile } from '../scrivi-file.mjs';
 
 const dir = process.argv[2];
 if (!dir) throw new Error('Indica la cartella con i riquadri XML');
@@ -246,6 +247,6 @@ const out = {
   piers: { lines: piers.filter(p => !p.a).map(p => p.d).join(''), areas: piers.filter(p => p.a).map(p => p.d).join('') },
   places
 };
-fs.writeFileSync(new URL('../../src/data/mappa.json', import.meta.url), JSON.stringify(out));
+scriviFile(new URL('../../src/data/mappa.json', import.meta.url), JSON.stringify(out));
 console.log('mappa', W, 'x', H, 'mare', seaPolys.length, 'isole', islands.length, 'strade', roads.length, 'parchi', parks.length, 'luoghi', places.map(p => p.name).join(', '));
 console.log('peso', (JSON.stringify(out).length / 1024).toFixed(1), 'KB');

@@ -72,5 +72,21 @@
       "V12"
     ],
     "controllo_completo": false
+  },
+  "riscontro_72": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V12",
+    "nota": "Tabella comunale ora leggibile: Pignasecca e Porta Nolana classificati giornalieri 7–15; pagina aggiornata 3 giugno 2025. Distinguere posteggi, banchi e negozi; festivi e novità successive non certificati. Superata soltanto la precedente impossibilità di leggere la fonte."
+  },
+  "riscontro_77": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-mercati-77.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V12",
+    "nota": "PDF nel percorso gennaio2026 contiene allegato2012 sui Borghi mercatali e orari prolungati: non nuovo calendario delle due sedi. Festivi non confermati, nessuna modifica applicativa."
   }
 }

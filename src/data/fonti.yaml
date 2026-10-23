@@ -141,6 +141,14 @@
   controllato: 2026-10-02
   letta: true
 
+- id: tp-sansevero-faq
+  titolo: "FAQ e prenotazioni"
+  editore: Museo Cappella Sansevero
+  url: https://www.museosansevero.it/organizza-la-tua-visita/faq
+  tipo: ufficiale
+  controllato: 2026-10-23
+  letta: true
+
 - id: tp-santachiara-orari
   titolo: "Orari"
   editore: Monastero di Santa Chiara
@@ -214,7 +222,15 @@
   editore: La Neapolis Sotterrata (San Lorenzo Maggiore)
   url: https://www.laneapolissotterrata.it/Home/InfoVisite
   tipo: ufficiale
-  controllato: 2026-10-02
+  controllato: 2026-10-23
+  letta: true
+
+- id: tp-sanlorenzo-biglietteria
+  titolo: "Biglietteria e avviso sulle visite guidate"
+  editore: La Neapolis Sotterrata (San Lorenzo Maggiore), su Metooo
+  url: https://la-neapolis-sotterrata.metooo.com/e/la-neapolis-sotterrata
+  tipo: ufficiale
+  controllato: 2026-10-23
   letta: true
 
 - id: tp-sotterranea-orari
@@ -331,6 +347,15 @@
   url: https://www.comune.napoli.it/articolo_tematico/vivere-la-citta/turismo/turismo-sostenibile/percorsi-a-piedi/dalla-pedamentina-a-spaccanapoli/
   tipo: ufficiale
   controllato: 2026-10-02
+  letta: true
+
+- id: tp-comune-cantieri-settembre-2026
+  titolo: "Dispositivi di viabilità per cantieri e manifestazioni · 30 settembre 2026"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/novita/dispositivi-di-viabilita-per-cantieri-e-manifestazioni-2/
+  tipo: ufficiale
+  pubblicato: 2026-09-30
+  controllato: 2026-10-24
   letta: true
 
 - id: tp-anm-ascensori
@@ -689,9 +714,9 @@
   editore: ANM, Azienda Napoletana Mobilità (dati aperti, licenza IODL 2.0)
   url: https://www.anm.it/google/google-transit.zip
   tipo: dati
-  controllato: 2026-10-03
+  controllato: 2026-10-22
   letta: true
-  nota: "Linee, fermate, percorsi e orari dal 22 settembre al 31 dicembre 2026. Usato per 13 linee nei tempi tra le tappe (ricerca/2026-10-03-autobus-note/)."
+  nota: "Feed scaricato e analizzato il 22 ottobre: validità dal 19 ottobre al 31 dicembre 2026. Usato per 13 linee nei tempi tra le tappe; sono orari programmati, senza conferma degli avvisi temporanei. Ricerca iniziale: ricerca/2026-10-03-autobus-note/."
 
 - id: tp-anm-linea1
   titolo: "Linea 1"
@@ -709,6 +734,15 @@
   pubblicato: 2026-03-20
   controllato: 2026-10-02
   letta: true
+
+- id: tp-anm-linea6-portale
+  titolo: Linea 6 · orario e frequenza correnti
+  editore: ANM, Azienda Napoletana Mobilità
+  url: https://www.anm.it/s/linea-anm/a0YR200000FxeqbMAB/l6?language=it
+  tipo: ufficiale
+  controllato: 2026-10-22
+  letta: true
+  nota: Letta nel browser nel riscontro 69. Frequenza 20 minuti; prime partenze 7:10, ultime 21:10 lunedì-venerdì e 14:50 sabato-domenica, in entrambe le direzioni. Data di revisione non indicata; avvisi ed eccezioni da verificare separatamente.
 
 - id: tp-rfi-linea2
   titolo: "Quadro orario Linea 2 (14 giugno–12 dicembre 2026)"
@@ -800,6 +834,15 @@
   url: https://girolamini.cultura.gov.it/apertura-e-orari-dei-servizi/
   tipo: ufficiale
   controllato: 2026-10-03
+  letta: true
+
+- id: tp-girolamini-sospensione-ottobre-2026
+  titolo: "Sospensione temporanea delle visite alle sale storiche · 19–25 ottobre 2026"
+  editore: Complesso monumentale e Biblioteca dei Girolamini (Ministero della Cultura)
+  url: https://girolamini.cultura.gov.it/eventi-e-news/%e2%9a%a0%ef%b8%8f-avviso-%e2%9a%a0%ef%b8%8f/
+  tipo: ufficiale
+  pubblicato: 2026-10-15
+  controllato: 2026-10-24
   letta: true
 
 - id: tp-filangieri
@@ -1077,7 +1120,7 @@
   editore: "Osteria La Chitarra"
   url: https://www.osterialachitarra.it/osteria/
   tipo: ufficiale
-  controllato: 2026-10-04
+  controllato: 2026-10-21
   letta: true
 
 - id: lc-gesu-vecchio
@@ -1166,6 +1209,14 @@
   url: https://www.trattorianennella.it/sedi/
   tipo: ufficiale
   controllato: 2026-10-04
+  letta: true
+
+- id: lc-nennella-storia
+  titolo: "La trattoria: dal 1949"
+  editore: Trattoria da Nennella
+  url: https://www.trattorianennella.it/
+  tipo: ufficiale
+  controllato: 2026-10-20
   letta: true
 
 - id: lc-nennella-domande
@@ -1325,7 +1376,7 @@
   editore: "Pizzeria Gorizia 1916"
   url: https://www.gorizia1916.com/
   tipo: ufficiale
-  controllato: 2026-10-04
+  controllato: 2026-10-21
   letta: true
 
 - id: lc-bellavia
@@ -1405,7 +1456,7 @@
   editore: "Pasticceria Poppella"
   url: https://www.pasticceriapoppella.com/storia/
   tipo: ufficiale
-  controllato: 2026-10-04
+  controllato: 2026-10-21
   letta: true
 
 - id: lc-petrucci-posillipo
@@ -1506,7 +1557,7 @@
   url: https://www.scattidigusto.it/ostaria-pignatelli-a-napoli-menu-prezzi-recensione
   tipo: stampa
   pubblicato: 2026-01-01
-  controllato: 2026-10-04
+  controllato: 2026-10-21
   letta: true
 
 - id: sdg-slowfood-2025
@@ -1524,7 +1575,7 @@
   url: https://www.gamberorossointernational.com/?p=513457
   tipo: stampa
   pubblicato: 2024-01-23
-  controllato: 2026-10-04
+  controllato: 2026-10-20
   letta: true
 
 - id: gri-cuoppo-2024
@@ -1533,7 +1584,7 @@
   url: https://www.gamberorossointernational.com/news/the-best-cuoppo-in-naples-must-visit-spots/
   tipo: stampa
   pubblicato: 2024-07-01
-  controllato: 2026-10-04
+  controllato: 2026-10-20
   letta: true
 
 - id: gri-pizza-fritta-2023
@@ -1542,7 +1593,7 @@
   url: https://gamberorossointernational.com/?p=481956
   tipo: stampa
   pubblicato: 2023-10-13
-  controllato: 2026-10-04
+  controllato: 2026-10-20
   letta: true
 
 - id: napolitan-pasticcerie-2022
@@ -1569,7 +1620,7 @@
   url: https://www.scattidigusto.it/napoli-gelato-cono-graffa-chalet-ciro-mergellina
   tipo: stampa
   pubblicato: 2016-05-16
-  controllato: 2026-10-04
+  controllato: 2026-10-21
   letta: true
 
 - id: stripes-tufo-2022
@@ -1578,7 +1629,7 @@
   url: https://www.stripes.com/living/europe_travel/after_hours/2022-12-29/naples-ragu-genovese-8416535.html
   tipo: stampa
   pubblicato: 2022-12-29
-  controllato: 2026-10-04
+  controllato: 2026-10-21
   letta: true
 
 - id: lc-starita-home
@@ -1701,3 +1752,99 @@
   tipo: enciclopedia
   controllato: 2026-10-04
   letta: true
+
+- id: sf-chiocciole-2025
+  titolo: "Tutte le Chiocciole di Osterie d’Italia 2025, regione per regione"
+  editore: "Slow Food"
+  url: https://www.slowfood.it/tutte-le-chiocciole-di-osterie-ditalia-2025-regione-per-regione/
+  tipo: ufficiale
+  pubblicato: 2024-10-14
+  controllato: 2026-10-21
+  letta: false
+
+- id: michelin-bib-2025
+  titolo: "I nuovi Bib Gourmand della Guida MICHELIN Italia 2025"
+  editore: "Guida Michelin"
+  url: https://guide.michelin.com/it/it/notizia/michelin-guide-ceremony/i-nuovi-bib-gourmand-della-guida-michelin-italia-2025
+  tipo: ufficiale
+  pubblicato: 2024-10-29
+  controllato: 2026-10-21
+  letta: true
+
+- id: gr-pasticcerie-2022
+  titolo: "Le migliori pasticcerie di Napoli 2022: gli indirizzi da non perdere"
+  editore: "Gambero Rosso"
+  url: https://www.gamberorosso.it/notizie/rubriche/classifiche/le-migliori-pasticcerie-di-napoli-2022-gli-indirizzi-da-non-perdere
+  tipo: stampa
+  pubblicato: 2022-05-09
+  controllato: 2026-10-21
+  letta: false
+
+- id: top50-italia-2026
+  titolo: "50 Top Pizza Italia 2026: Confine, a Milano, è la Migliore Pizzeria in Italia per il 2026"
+  editore: "50 Top Pizza"
+  url: https://www.50toppizza.it/50-top-pizza-italia-2026-confine-a-milano-e-la-migliore-pizzeria-in-italia-per-il-2026/
+  tipo: ufficiale
+  controllato: 2026-10-21
+  letta: false
+  nota: "Accesso diretto HTTP 403; passaggi della classifica verificati nel testo indicizzato del dominio ufficiale. Lettura integrale non dichiarata."
+
+- id: lc-pintauro-storia
+  titolo: "Pasticceria Pintauro a Napoli dal 1785"
+  editore: "Pasticceria Pintauro"
+  url: https://www.pasticceriapintauro1785.it/
+  tipo: ufficiale
+  controllato: 2026-10-21
+  letta: true
+
+- id: lc-pintauro-riapertura-2026
+  titolo: "A Napoli ha riaperto la pasticceria Pintauro 1785"
+  editore: "Pasticceria Pintauro"
+  url: https://www.pasticceriapintauro1785.it/a-napoli-ha-riaperto-la-pasticceria-pintauro-1785/
+  tipo: ufficiale
+  pubblicato: 2026-03-27
+  controllato: 2026-10-21
+  letta: true
+
+- id: michelin-pizzerie-2025
+  titolo: "Pizza napoletana: 5 indirizzi da non perdere nella città partenopea"
+  editore: "Guida Michelin"
+  url: https://guide.michelin.com/it/it/notizia/dining-out/pizza-napoletana-5-indirizzi-da-non-perdere-nella-citta-partenopea
+  tipo: ufficiale
+  pubblicato: 2025-01-21
+  controllato: 2026-10-21
+  letta: true
+
+- id: "tp-defelice-donnanna"
+  titolo: "Palazzo Donn’Anna e il Teatro"
+  editore: "Fondazione Ezio De Felice"
+  url: "https://www.fondazionedefelice.it/palazzo-donnanna-2/"
+  tipo: "ufficiale"
+  controllato: 2026-10-21
+  letta: true
+
+- id: "michelin-pizza-2026"
+  titolo: "Tutti pazzi per la pizza: e onestamente… chi può darci torto?"
+  editore: "Guida Michelin"
+  url: "https://guide.michelin.com/ch/it/notizia/features/tutti-pazzi-per-la-pizza-e-onestamente...-chi-puo-darci-torto"
+  tipo: "ufficiale"
+  pubblicato: 2026-03-10
+  controllato: 2026-10-21
+  letta: true
+
+- id: tp-eav-l1-orario-20261017
+  titolo: Orario ferrovia L1 Napoli–Pompei–Sorrento, dal 17 ottobre 2026
+  editore: EAV
+  url: https://www.eavsrl.it/download/orario-ferrovia-l1-napoli-sorrento-dal-17-ottobre-2026/?wpdmdl=59432
+  tipo: ufficiale
+  controllato: 2026-10-21
+  letta: true
+
+- id: tp-anm-ascensori-portale
+  titolo: Ascensori pubblici · portale ANM
+  editore: ANM, Azienda Napoletana Mobilità
+  url: https://www.anm.it/s/ascensori?language=it
+  tipo: ufficiale
+  controllato: 2026-10-21
+  letta: false
+  nota: Il risultato indicizzato contiene indicazioni diverse dalla vecchia scheda; la pagina aperta restituisce Loading / CSS Error. Non prova dello stato attuale degli impianti.

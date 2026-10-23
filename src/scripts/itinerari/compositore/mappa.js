@@ -4,48 +4,55 @@
 // e i nomi delle vie sono in pezzi da 1,28 km (specifica §6, src/lib/itinerari/strade.ts): si scaricano solo dove guardi, da vicino;
 // sempre i nomi delle vie principali e, nel colore del percorso, quelli delle vie dove passa il giorno.
 import { $, $$, esc, ic, piano, ora } from './base.js';
+import { verificaRiferimento } from '../../../lib/itinerari/pacco';
 import { rileggi, pezziDi, nomiDelPercorso } from '../../../lib/itinerari/strade';
 import { C, T, A, salvato, visitata, nelViaggio, caricaMappa, caricaAlternativi, tappeDi, daFare } from './stato.js';
 
-const ALFA = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-_';
-function decodifica(s) {
-  return s.split('~').filter(Boolean).map(pezzo => {
-    const k = pezzo.indexOf('.');
-    const nums = [];
-    let z = 0, mul = 1;
-    for (const c of pezzo.slice(k + 1)) {
-      const v = ALFA.indexOf(c);
-      z += (v & 31) * mul;
-      if (v & 32) { mul *= 32; continue; }
-      nums.push(z % 2 ? -(z + 1) / 2 : z / 2);
-      z = 0; mul = 1;
-    }
-    const punti = [];
-    let x = 0, y = 0;
-    for (let j = 0; j + 1 < nums.length; j += 2) { x += nums[j]; y += nums[j + 1]; punti.push([x, y]); }
-    return { modo: pezzo.slice(0, k), punti };
-  });
-}
+import { decodificaPercorso as decodifica } from '../../../lib/itinerari/percorsi-compressi.mjs';
+/** @param {import('../../../lib/itinerari/strade').Punto[]} punti */
 const traccia = punti => 'M' + punti.map(p => p.join(' ')).join('L');
 const VELOCITA = 0.327;
+/** @param {string} d */
 const numeri = d => (d.match(/-?\d+(?:\.\d+)?/g) || []).map(Number);
-const puntiDi = d => { const n = numeri(d), p = []; for (let i = 0; i + 1 < n.length; i += 2) p.push([n[i], n[i + 1]]); return p; };
+/** @param {string} d @returns {import('../../../lib/itinerari/strade').Punto[]} */
+const puntiDi = d => {
+  const n = numeri(d);
+  /** @type {import('../../../lib/itinerari/strade').Punto[]} */
+  const p = [];
+  for (let i = 0; i + 1 < n.length; i += 2) p.push([n[i], n[i + 1]]);
+  return p;
+};
+/** @param {import('../../../lib/itinerari/strade').Punto} a @param {import('../../../lib/itinerari/strade').Punto} b */
 const dist = (a, b) => Math.hypot(a[0] - b[0], a[1] - b[1]);
+/** @param {{id:string;indietro?:boolean}} v @returns {import('../../../lib/itinerari/strade').Punto} */
 export const xyDi = v => { const t = T(v.id); return v.indietro && t?.xyFine ? t.xyFine : t?.xy ?? [0, 0]; };
+/** @param {string} m */
 const modoDi = m => (m === 'p' ? 'piedi' : m.startsWith('F') ? 'funi' : m.startsWith('B') ? 'bus' : 'metro');
 
-let P = null, ALT = null, BASE = null, STRADE = null, ESISTE = new Set();
+/** @type {import('./mappa-tipi').PercorsiMappa|null} */ let P = null;
+/** @type {import('./mappa-tipi').AlternativiMappa|null} */ let ALT = null;
+/** @type {import('./mappa-tipi').BaseMappa|null} */ let BASE = null;
+/** @type {import('./mappa-tipi').IndiceStrade|null} */ let STRADE = null;
+let ESISTE = new Set();
 // i pezzi delle strade: scaricati una volta per tutta la pagina (e salvati dal service worker per l'uso senza rete)
 const SOGLIA_PEZZI = 0.45; // px per unità (1 unità = 5 m): da qui in su si caricano i pezzi
+/** @type {[keyof Omit<import('../../../lib/itinerari/strade').Pezzo,'n'>,string][]} */
 const STRATI_P = [['v', 'm-vicoli'], ['p', 'm-pedonali'], ['m', 'm-medie-c'], ['g', 'm-grandi-c'], ['m', 'm-medie'], ['g', 'm-grandi'], ['s', 'm-scale']];
+/** @type {Map<string,Promise<import("../../../lib/itinerari/strade").Pezzo|null>>} */
 const CARICATI = new Map();
-export const prendiPezzo = k => { if (!CARICATI.has(k)) CARICATI.set(k, fetch(`/napoli/itinerari/strade/${k}.json`).then(r => (r.ok ? r.json() : null)).catch(() => null).then(d => { if (!d) CARICATI.delete(k); return d; })); return CARICATI.get(k); };
+/** @param {string} k */
+export const prendiPezzo = k => { if (!CARICATI.has(k)) CARICATI.set(k, fetch(`/napoli/itinerari/strade/${k}.json`).then(r => (r.ok ? r.json() : null)).then(d => { verificaRiferimento(C.riferimento, d); return d; }).catch(() => null).then(d => { if (!d) CARICATI.delete(k); return d; })); return CARICATI.get(k); };
 // senza rete restano anche i pezzi delle tappe degli itinerari salvati: si scaricano in anticipo (li salva il service worker)
+/** @param {import('../../../lib/itinerari/strade').Punto[]} punti */
 export function pezziDelleTappe(punti) { if (!STRADE) return; const L = STRADE.lato; for (const k of new Set(punti.map(([x, y]) => `${Math.floor(x / L)}_${Math.floor(y / L)}`))) if (ESISTE.has(k)) prendiPezzo(k); }
 // i percorsi del giorno, una linea per tratto (e quelle dentro le tappe lunghe: Spaccanapoli, Toledo…), in fila
+/** @param {import('../../../lib/itinerari/pause').Giornata|null} Gx @returns {import('./mappa-tipi').LineaMappa[]} */
 export function lineeDi(Gx) {
   if (!Gx || !P) return [];
-  const percorso = (s, a, b) => { const x = P.scenari[s]?.[a]?.[b]; return typeof x === 'string' ? x : (P.scenari.feriale[a]?.[b] || ''); };
+  const percorsi = P;
+  /** @param {import('../../../lib/itinerari/tipi').Scenario} s @param {number} a @param {number} b */
+  const percorso = (s, a, b) => { const x = percorsi.scenari[s]?.[a]?.[b]; return typeof x === 'string' ? x : (percorsi.scenari.feriale[a]?.[b] || ''); };
+  /** @type {import('./mappa-tipi').LineaMappa[]} */
   const linee = [];
   Gx.voci.forEach((v, iv) => {
     if (v.tipo === 'tratto') {
@@ -62,6 +69,7 @@ export function lineeDi(Gx) {
   });
   return linee;
 }
+/** @param {import('../../../lib/itinerari/strade').Punto[]} pts */
 function riquadroXY(pts) {
   if (!pts.length) return { x1: 1850, x2: 2050, y1: 500, y2: 900 };
   let x1 = Math.min(...pts.map(p => p[0])), x2 = Math.max(...pts.map(p => p[0])), y1 = Math.min(...pts.map(p => p[1])), y2 = Math.max(...pts.map(p => p[1]));
@@ -70,8 +78,10 @@ function riquadroXY(pts) {
   if (y2 - y1 < minimo) { const c = (y1 + y2) / 2; y1 = c - minimo / 2; y2 = c + minimo / 2; }
   return { x1, x2, y1, y2 };
 }
+/** @param {import('../../../lib/itinerari/pause').Giornata} Gx @param {import('./mappa-tipi').LineaMappa[]} linee @returns {import('./mappa-tipi').LineaInFila[]} */
 function inFila(Gx, linee) {
   const voci = Gx.voci;
+  /** @type {import('../../../lib/itinerari/strade').Punto} */
   let qui = daFare(Gx)[0] ? xyDi(daFare(Gx)[0]) : tappeDi(Gx)[0] ? xyDi(tappeDi(Gx)[0]) : [0, 0];
   return linee.map(l => {
     let p = puntiDi(l.d);
@@ -81,13 +91,46 @@ function inFila(Gx, linee) {
   });
 }
 // le tappe in città da vedere che non sono nel giorno (per «Tutte le tappe»)
+/** @param {string} id */
 export const daVedere = id => { const t = T(id); return !!t && t.tipo === 'citta' && !t.categoria && !t.evento; };
+/** @param {import('../../../lib/itinerari/pause').Giornata|null} Gx */
 export const puntiPer = Gx => C.tappe.map(t => t.id).filter(id => daVedere(id) && !(Gx && tappeDi(Gx).some(v => v.id === id)));
 
 let nMappe = 0;
+/** @type {Set<Mappa>} */
 const tutte = new Set();
 export class Mappa {
+  /** @type {string[]} */ idsPunti;
+  /** @type {Extract<import('../../../lib/itinerari/tipi').Voce,{tipo:'tappa'}>[]} */ tappe;
+  /** @type {import('../../../lib/itinerari/strade').Riquadro|null} */ vb;
+  /** @type {import('./mappa-tipi').LimitiMappa|null} */ fuoco;
+  /** @type {import('./mappa-tipi').LimitiMappa|undefined} */ box;
+  /** @type {Map<number,import('../../../lib/itinerari/strade').Punto>} */ dita;
+  /** @type {import('../../../lib/itinerari/strade').Via[]} */ vie;
+  /** @type {import('./tipi').ElementoDati<'l'|'c'|'nome',SVGTextElement>[]} */ nomi;
+  /** @type {import('./mappa-tipi').PartenzaMappa|null|undefined} */ partenza;
+  /** @type {import('./mappa-tipi').LineaInFila[]} */ linee = [];
+  /** @type {import('../../../lib/itinerari/tipi').Voce[]} */ voci = [];
+  /** @type {[import('../../../lib/itinerari/pause').Giornata|null,import('./mappa-tipi').DisegnoMappa]|null|undefined} */ attesa;
+  /** @type {{dur:number;ids:string[]|null}|null|undefined} */ quadroInAttesa;
+  /** @type {(()=>void)|null|undefined} */ fermaVolo;
+  /** @type {ReturnType<typeof setTimeout>|undefined} */ tP;
+  /** @type {ReturnType<typeof setTimeout>|undefined} */ tNomi;
+  /** @type {number} */ s = 0;
+  /** @type {number} */ daLinea = Infinity;
+  /** @type {import('../../../lib/itinerari/pause').Giornata|null|undefined} */ gx;
+
+/** @param {HTMLElement} el @param {import("./mappa-tipi").OpzioniMappa} [opz] */
   constructor(el, opz = {}) {
+    this.attiva = true;
+    /** @type {(()=>void)[]} */
+    this.ascolti = [];
+    /** @template {keyof HTMLElementEventMap} K @param {HTMLElement} bersaglio @param {K} tipo @param {(e:HTMLElementEventMap[K])=>void} fn @param {AddEventListenerOptions|boolean} [opzioni] */
+    const ascolta = (bersaglio, tipo, fn, opzioni) => {
+      const corrente = /** @param {HTMLElementEventMap[K]} e */ e => { if (this.attiva && this.el.isConnected !== false) fn(e); };
+      bersaglio.addEventListener(tipo, corrente, opzioni);
+      this.ascolti.push(() => bersaglio.removeEventListener(tipo, corrente));
+    };
     this.el = el; this.opz = opz; this.tappe = []; this.vb = null; this.fuoco = null; this.n = ++nMappe; this.dita = new Map(); this.tutte = false; this.idsPunti = [];
     this.messi = new Set(); this.vie = []; this.inRotta = new Set(); this.nomi = [];
     el.classList.add('m');
@@ -95,61 +138,67 @@ export class Mappa {
     el.innerHTML = `<svg class="m-svg" preserveAspectRatio="none" aria-hidden="true" focusable="false"><g class="m-base"></g><g class="m-fine">${STRATI_P.map(([, c]) => `<g class="${c}"></g>`).join('')}</g><g class="m-nomi"></g><g class="m-altre"></g><g class="m-rotta"></g><g class="m-nomi-rotta"></g><g class="m-fili"></g></svg><div class="m-punti"></div><div class="m-segni"></div>
       <div class="m-ctrl">${tasto}<button type="button" data-z="piu" aria-label="Ingrandisci la mappa">${ic('piu', 20)}</button><button type="button" data-z="meno" aria-label="Rimpicciolisci la mappa">${ic('meno', 20)}</button><button type="button" data-z="tutto" aria-label="Mostra tutto il giorno">${ic('centra', 20)}</button></div>
       <p class="m-osm">© <a href="https://www.openstreetmap.org/copyright" rel="noopener">OpenStreetMap</a></p><p class="m-carico" role="status"></p>`;
-    this.svg = $('svg', el);
+    this.svg = /** @type {SVGSVGElement} */ ($('svg', el));
     tutte.add(this);
-    this.ro = new ResizeObserver(() => { if (!this.vb) return; if (this.box && !this.mosso) this.adatta(false); else this.metti(this.limita(this.vb)); });
+    this.ro = new ResizeObserver(() => { if (!this.attiva || this.el.isConnected === false || !this.vb) return; if (this.box && !this.mosso) this.adatta(false); else this.metti(this.limita(this.vb)); });
     this.ro.observe(el);
-    $('.m-ctrl', el).addEventListener('click', e => {
-      const b = e.target.closest('[data-z]');
+    ascolta(/** @type {HTMLElement} */ ($('.m-ctrl', el)), 'click', e => {
+      const b = /** @type {import('./tipi').ElementoDati<'z'>|null} */ (/** @type {Element} */ (e.target).closest('[data-z]'));
       if (!b || !this.vb) return;
       if (b.dataset.z === 'tutte') this.mostraTutte(!this.tutte);
       else if (b.dataset.z === 'tutto') this.tutto();
       else this.zoom(b.dataset.z === 'piu' ? 1.6 : 1 / 1.6);
     });
-    el.addEventListener('pointerdown', e => this.giu(e));
-    el.addEventListener('pointermove', e => this.muovi(e));
-    el.addEventListener('pointerup', e => this.su(e));
-    el.addEventListener('pointercancel', e => this.su(e));
-    el.addEventListener('wheel', e => { if (!this.vb) return; e.preventDefault(); const r = el.getBoundingClientRect(); this.zoom(Math.exp(-e.deltaY * 0.0016), e.clientX - r.left, e.clientY - r.top, false); }, { passive: false });
-    el.addEventListener('dblclick', e => { if (!this.vb || e.target.closest('.m-segno, .m-punto, .m-ctrl')) return; const r = el.getBoundingClientRect(); this.zoom(1.8, e.clientX - r.left, e.clientY - r.top); });
+    ascolta(el, 'pointerdown', e => this.giu(e));
+    ascolta(el, 'pointermove', e => this.muovi(e));
+    ascolta(el, 'pointerup', e => this.su(e));
+    ascolta(el, 'pointercancel', e => this.su(e));
+    ascolta(el, 'wheel', e => { if (!this.vb) return; e.preventDefault(); const r = el.getBoundingClientRect(); this.zoom(Math.exp(-e.deltaY * 0.0016), e.clientX - r.left, e.clientY - r.top, false); }, { passive: false });
+    ascolta(el, 'dblclick', e => { if (!this.vb || /** @type {Element} */ (e.target).closest('.m-segno, .m-punto, .m-ctrl')) return; const r = el.getBoundingClientRect(); this.zoom(1.8, e.clientX - r.left, e.clientY - r.top); });
     this.base();
   }
   // la mappa di base e i percorsi arrivano dalla rete la prima volta (poi dalla memoria del service worker)
   async base() {
-    if (!BASE) $('.m-carico', this.el).textContent = 'Carico la mappa…';
+    if (!this.attiva) return;
+    if (!BASE) /** @type {HTMLElement} */ ($('.m-carico', this.el)).textContent = 'Carico la mappa…';
     try {
       const [M, Pp, I] = await caricaMappa();
       BASE = M; P = Pp;
       if (I && !STRADE) {
         STRADE = I; ESISTE = new Set(I.pezzi);
-        pezziDelleTappe(A.elenco.filter(x => salvato(x)).flatMap(x => x.giorni.flatMap(g => g.tappe)).map(id => T(id)?.xy).filter(Boolean));
       }
     } catch {
-      const c = $('.m-carico', this.el);
+      if (!this.attiva) return;
+      const c = /** @type {HTMLElement} */ ($('.m-carico', this.el));
       c.innerHTML = 'La mappa non si è caricata: la prima volta serve la rete. <button type="button" class="m-riprova">Riprova</button>';
       c.style.pointerEvents = 'auto';
-      $('.m-riprova', c).onclick = () => { c.style.pointerEvents = ''; this.base(); };
+      /** @type {HTMLButtonElement} */ ($('.m-riprova', c)).onclick = () => { c.style.pointerEvents = ''; this.base(); };
       return;
     }
-    $('.m-carico', this.el).textContent = '';
+    if (!this.attiva) return;
+    pezziDelleTappe(A.elenco.filter(x => salvato(x)).flatMap(x => x.giorni.flatMap(g => g.tappe)).map(id => T(id)?.xy).filter(x => x !== undefined));
+    /** @type {HTMLElement} */ ($('.m-carico', this.el)).textContent = '';
     const M = BASE;
-    $('.m-base', this.svg).innerHTML = `<rect class="m-terra" x="-6000" y="-6000" width="16000" height="16000"/><path class="m-mare" d="${M.mare}"/><path class="m-isole" d="${M.isole}"/><path class="m-parco" d="${M.parchi}"/>
+    /** @type {SVGGElement} */ ($('.m-base', this.svg)).innerHTML = `<rect class="m-terra" x="-6000" y="-6000" width="16000" height="16000"/><path class="m-mare" d="${M.mare}"/><path class="m-isole" d="${M.isole}"/><path class="m-parco" d="${M.parchi}"/>
       <path class="m-s0" d="${M.strade[0]}"/><path class="m-s1c" d="${M.strade[1]}"/><path class="m-s2c" d="${M.strade[2]}"/><path class="m-s1" d="${M.strade[1]}"/><path class="m-s2" d="${M.strade[2]}"/><path class="m-moli" d="${M.moli}"/>`;
-    if (STRADE && !$('.m-nomi', this.svg).childElementCount) $('.m-nomi', this.svg).innerHTML = STRADE.principali.map(([nome, L, d], i) => `<path id="m${this.n}n${i}" d="${d}"/><text class="m-nome" data-l="${L}" data-c="${nome.length}" data-nome="${esc(nome)}"><textPath href="#m${this.n}n${i}" startOffset="50%" text-anchor="middle">${esc(nome)}</textPath></text>`).join('');
+    if (STRADE && !/** @type {SVGGElement} */ ($('.m-nomi', this.svg)).childElementCount) /** @type {SVGGElement} */ ($('.m-nomi', this.svg)).innerHTML = STRADE.principali.map(([nome, L, d], i) => `<path id="m${this.n}n${i}" d="${d}"/><text class="m-nome" data-l="${L}" data-c="${nome.length}" data-nome="${esc(nome)}"><textPath href="#m${this.n}n${i}" startOffset="50%" text-anchor="middle">${esc(nome)}</textPath></text>`).join('');
     this.nomi = $$('.m-nome', this.el);
     this.pezzi();
     if (this.attesa) { const a = this.attesa; this.attesa = null; this.disegna(...a); }
+    if (this.quadroInAttesa) { const q = this.quadroInAttesa; this.quadroInAttesa = null; this.inquadra(q.dur, q.ids ?? this.idsPunti); }
   }
   // i pezzi nella vista (più un quarto di pezzo intorno), solo da vicino
   pezzi() {
-    if (!STRADE || !this.vb || this.s < SOGLIA_PEZZI) return;
+    if (!this.attiva || !STRADE || !this.vb || this.s < SOGLIA_PEZZI) return;
     for (const k of pezziDi(this.vb, STRADE.lato, ESISTE, STRADE.lato / 4)) {
       if (this.messi.has(k)) continue;
       this.messi.add(k);
-      prendiPezzo(k).then(d => { if (d && this.el.isConnected) this.aggiungi(d); else this.messi.delete(k); });
+      /** @type {Promise<import('../../../lib/itinerari/strade').Pezzo|null>} */ (prendiPezzo(k)).then(d => { if (d && this.attiva && this.el.isConnected) this.aggiungi(d); else this.messi.delete(k); });
     }
   }
+/** @param {import('../../../lib/itinerari/strade').Pezzo} d */
   aggiungi(d) {
+    if (!this.attiva) return;
     const strati = $$('.m-fine > g', this.svg);
     STRATI_P.forEach(([c], i) => { if (d[c]) strati[i].insertAdjacentHTML('beforeend', `<path d="${d[c]}"/>`); });
     this.vie.push(...d.n.map(([nome, , , dd]) => ({ nome, punti: rileggi(dd) })));
@@ -157,6 +206,7 @@ export class Mappa {
   }
   // i nomi delle vie dove passa il percorso, scritti sul percorso stesso (strade.ts, nomiDelPercorso)
   nomiRotta() {
+    if (!this.attiva || this.el.isConnected === false) return;
     const g = $('.m-nomi-rotta', this.svg);
     if (!g) return;
     const lista = nomiDelPercorso((this.linee || []).map(l => puntiDi(l.d)), this.vie);
@@ -173,31 +223,34 @@ export class Mappa {
       if (rotta) t.setAttribute('dy', (-7.5 / this.s).toFixed(2));
     }
   }
+/** @param {PointerEvent} e */
   giu(e) {
-    if (!this.vb || e.target.closest('.m-ctrl, .m-osm') || (e.pointerType === 'mouse' && e.button !== 0)) return;
+    if (!this.vb || /** @type {Element} */ (e.target).closest('.m-ctrl, .m-osm') || (e.pointerType === 'mouse' && e.button !== 0)) return;
     this.dita.set(e.pointerId, [e.clientX, e.clientY]);
     this.preso = false;
     this.partenza = { vb: { ...this.vb }, dita: new Map(this.dita) };
     this.fermaVolo?.();
     this.el.classList.add('m--muovo');
   }
+/** @param {PointerEvent} e */
   muovi(e) {
     if (!this.dita.has(e.pointerId) || !this.partenza) return;
     this.dita.set(e.pointerId, [e.clientX, e.clientY]);
     if (!this.preso) {
-      const [x0, y0] = this.partenza.dita.get(e.pointerId) || [e.clientX, e.clientY];
+      const [x0, y0] = /** @type {import('../../../lib/itinerari/strade').Punto} */ (this.partenza.dita.get(e.pointerId)) || [e.clientX, e.clientY];
       if (this.dita.size < 2 && Math.hypot(e.clientX - x0, e.clientY - y0) < 6) return;
       this.preso = true;
       for (const id of this.dita.keys()) try { this.el.setPointerCapture(id); } catch { /* il dito è già uscito */ }
     }
     const r = this.el.getBoundingClientRect(), W = r.width, H = r.height, v0 = this.partenza.vb, s0 = W / v0.w;
-    const ids = [...this.dita.keys()].filter(id => this.partenza.dita.has(id));
+    const partenza = this.partenza;
+    const ids = [...this.dita.keys()].filter(id => partenza.dita.has(id));
     if (ids.length === 1) {
-      const [x, y] = this.dita.get(ids[0]), [x0, y0] = this.partenza.dita.get(ids[0]);
+      const [x, y] = /** @type {import('../../../lib/itinerari/strade').Punto} */ (this.dita.get(ids[0])), [x0, y0] = /** @type {import('../../../lib/itinerari/strade').Punto} */ (this.partenza.dita.get(ids[0]));
       this.mosso = true;
       this.metti(this.limita({ ...v0, x: v0.x - (x - x0) / s0, y: v0.y - (y - y0) / s0 }));
     } else if (ids.length >= 2) {
-      const [a, b] = ids, A1 = this.dita.get(a), B1 = this.dita.get(b), A0 = this.partenza.dita.get(a), B0 = this.partenza.dita.get(b);
+      const [a, b] = ids, A1 = /** @type {import('../../../lib/itinerari/strade').Punto} */ (this.dita.get(a)), B1 = /** @type {import('../../../lib/itinerari/strade').Punto} */ (this.dita.get(b)), A0 = /** @type {import('../../../lib/itinerari/strade').Punto} */ (this.partenza.dita.get(a)), B0 = /** @type {import('../../../lib/itinerari/strade').Punto} */ (this.partenza.dita.get(b));
       const k = Math.max(.2, Math.min(5, dist(A1, B1) / Math.max(1, dist(A0, B0))));
       const c0 = [(A0[0] + B0[0]) / 2 - r.left, (A0[1] + B0[1]) / 2 - r.top], c1 = [(A1[0] + B1[0]) / 2 - r.left, (A1[1] + B1[1]) / 2 - r.top];
       const ux = v0.x + c0[0] / s0, uy = v0.y + c0[1] / s0, w = v0.w / k, h = w * H / W, s1 = W / w;
@@ -205,12 +258,14 @@ export class Mappa {
       this.metti(this.limita({ x: ux - c1[0] / s1, y: uy - c1[1] / s1, w, h }));
     }
   }
+/** @param {PointerEvent} e */
   su(e) {
     if (!this.dita.has(e.pointerId)) return;
     this.dita.delete(e.pointerId);
-    this.partenza = this.dita.size ? { vb: { ...this.vb }, dita: new Map(this.dita) } : null;
+    this.partenza = this.dita.size ? { vb: { .../** @type {import('../../../lib/itinerari/strade').Riquadro} */ (this.vb) }, dita: new Map(this.dita) } : null;
     if (!this.dita.size) { this.el.classList.remove('m--muovo'); this.nomiVisibili(); }
   }
+/** @param {import('../../../lib/itinerari/strade').Riquadro} vb */
   limita(vb) {
     const W = this.el.clientWidth || 1, H = this.el.clientHeight || 1, Mw = BASE?.w ?? 2611, Mh = BASE?.h ?? 1953;
     const w = Math.max(W / 9, Math.min(W / 0.25, vb.w)), h = w * H / W;
@@ -220,7 +275,9 @@ export class Mappa {
     y = Math.max(-200, Math.min(Mh + 200 - h, y));
     return { x, y, w, h };
   }
+/** @param {number} k @param {number} [px] @param {number} [py] @param {boolean} [anima] */
   zoom(k, px, py, anima = true) {
+    if (!this.vb) return;
     const W = this.el.clientWidth || 1, H = this.el.clientHeight || 1, v = this.vb;
     px ??= W / 2; py ??= H / 2;
     const s = W / v.w, ux = v.x + px / s, uy = v.y + py / s, w = v.w / k, h = w * H / W, s1 = W / w;
@@ -229,22 +286,24 @@ export class Mappa {
     if (anima && piano()) this.vola(fine, 320); else this.metti(fine);
   }
   // Gx: la giornata (o null); altre: le linee degli altri giorni (giorno vuoto); n: il numero del giorno
+/** @param {import('../../../lib/itinerari/pause').Giornata|null} Gx @param {import('./mappa-tipi').DisegnoMappa} [opzioni] */
   disegna(Gx, { altre = [], vola = false, n = 1, disegna = true, daLinea = null, punti = null } = {}) {
+    if (!this.attiva) return;
     if (!BASE) { this.attesa = [Gx, { altre, vola, n, disegna, daLinea, punti }]; this.gx = Gx; return; }
     this.mosso = false;
-    $('.m-altre', this.svg).innerHTML = altre.map(a => lineeDi(a).map(l => `<path class="m-altra" d="${l.d}"/>`).join('')).join('');
+    /** @type {SVGGElement} */ ($('.m-altre', this.svg)).innerHTML = altre.map(a => lineeDi(a).map(l => `<path class="m-altra" d="${l.d}"/>`).join('')).join('');
     this.linee = Gx ? inFila(Gx, lineeDi(Gx)) : [];
     this.daLinea = disegna && piano() ? (daLinea ?? 0) : Infinity;
     this.voci = Gx ? Gx.voci : [];
-    $('.m-rotta', this.svg).innerHTML = this.linee.map((l, i) => { const nu = i >= this.daLinea ? ' m-nuova' : ''; return `<path class="m-c${nu}" d="${l.d}"/><path class="m-l m-l--${l.modo}${nu}" d="${l.d}"/>`; }).join('');
+    /** @type {SVGGElement} */ ($('.m-rotta', this.svg)).innerHTML = this.linee.map((l, i) => { const nu = i >= this.daLinea ? ' m-nuova' : ''; return `<path class="m-c${nu}" d="${l.d}"/><path class="m-l m-l--${l.modo}${nu}" d="${l.d}"/>`; }).join('');
     this.tappe = Gx ? tappeDi(Gx) : [];
     this.box = riquadroXY(Gx ? [...this.tappe.map(xyDi), ...this.linee.flatMap(l => puntiDi(l.d))] : altre.flatMap(a => tappeDi(a).map(xyDi)));
     this.fuoco = null;
     this.el.setAttribute('role', 'group');
     this.el.setAttribute('aria-label', Gx ? `Mappa del giorno ${n}: ${this.tappe.length} tappe collegate nell'ordine. Si sposta con il dito e si ingrandisce con due dita.` : 'Mappa: il giorno è vuoto');
     const primaNascosta = this.daLinea === Infinity ? Infinity : this.daLinea === 0 ? 1 : this.tappe.length - 1;
-    $('.m-segni', this.el).innerHTML = this.tappe.map((v, i) => `<button type="button" class="m-segno${i >= primaNascosta ? ' m-attesa' : ''}${visitata(v.id) ? ' m-segno--v' : ''}" data-id="${v.id}" aria-label="${v.n}. ${esc(T(v.id).nome)}${visitata(v.id) ? ', visitata' : v.fatta ? '' : `, alle ${ora(v.inizio)}`}"><span>${v.n}</span><i class="m-segno__v" aria-hidden="true">${ic('spunta', 14)}</i></button>`).join('');
-    $$('.m-segno', this.el).forEach(b => { b.onclick = () => this.opz.tocca?.(b.dataset.id); });
+    /** @type {HTMLElement} */ ($('.m-segni', this.el)).innerHTML = this.tappe.map((v, i) => `<button type="button" class="m-segno${i >= primaNascosta ? ' m-attesa' : ''}${visitata(v.id) ? ' m-segno--v' : ''}" data-id="${v.id}" aria-label="${v.n}. ${esc(/** @type {import('./tipi').TappaPagina} */ (T(v.id)).nome)}${visitata(v.id) ? ', visitata' : v.fatta ? '' : `, alle ${ora(v.inizio)}`}"><span>${v.n}</span><i class="m-segno__v" aria-hidden="true">${ic('spunta', 14)}</i></button>`).join('');
+    /** @type {import('./tipi').ElementoDati<'id',HTMLButtonElement>[]} */ ($$('.m-segno', this.el)).forEach(b => { b.onclick = () => this.opz.tocca?.(b.dataset.id); });
     this.fatte();
     this.nomiRotta();
     this.punti(punti ?? (this.opz.tutte ? puntiPer(Gx) : []));
@@ -252,17 +311,23 @@ export class Mappa {
     this.adatta(vola);
   }
   fatte() {
-    $$('.m-segno', this.el).forEach(b => b.classList.toggle('m-segno--v', visitata(b.dataset.id)));
+    /** @type {import('./tipi').ElementoDati<'id',HTMLButtonElement>[]} */ ($$('.m-segno', this.el)).forEach(b => b.classList.toggle('m-segno--v', visitata(b.dataset.id)));
     const fatto = $$('.m-rotta path', this.svg);
-    (this.linee || []).forEach((l, i) => { const v = this.voci[l.tappaDopo]; const si = !!v && visitata(v.id); fatto[2 * i]?.classList.toggle('m-fatta', si); fatto[2 * i + 1]?.classList.toggle('m-fatta', si); });
+    (this.linee || []).forEach((l, i) => { const v = this.voci[l.tappaDopo]; const si = v?.tipo === 'tappa' && visitata(v.id); fatto[2 * i]?.classList.toggle('m-fatta', si); fatto[2 * i + 1]?.classList.toggle('m-fatta', si); });
   }
+/** @param {string[]} ids */
   punti(ids) {
+    if (!this.attiva) return;
     this.idsPunti = ids;
+    if (this.attesa) this.attesa[1].punti = [...ids];
+    if (!BASE && this.quadroInAttesa?.ids) this.quadroInAttesa.ids = [...ids];
+/** @param {string} id */
     const f = id => T(id)?.foto?.m;
-    $('.m-punti', this.el).innerHTML = ids.map(id => `<button type="button" class="m-punto${nelViaggio(id) ? ' m-punto--viaggio' : ''}" data-id="${id}" aria-label="${esc(T(id).nome)}: apri la scheda"><span class="m-punto__f" aria-hidden="true">${f(id) ? `<img src="${f(id)}" alt="" decoding="async" loading="lazy">` : `<i>${esc(T(id).breve.slice(0, 1))}</i>`}</span><span class="m-punto__n" aria-hidden="true">${f(id) ? `<img src="${f(id)}" alt="" decoding="async" loading="lazy">` : ''}<b>${esc(T(id).breve)}</b></span></button>`).join('');
-    $$('.m-punto', this.el).forEach(b => { b.onclick = () => this.opz.punto?.(b.dataset.id, b); });
+    /** @type {HTMLElement} */ ($('.m-punti', this.el)).innerHTML = ids.map(id => `<button type="button" class="m-punto${nelViaggio(id) ? ' m-punto--viaggio' : ''}" data-id="${id}" aria-label="${esc(/** @type {import('./tipi').TappaPagina} */ (T(id)).nome)}: apri la scheda"><span class="m-punto__f" aria-hidden="true">${f(id) ? `<img src="${f(id)}" alt="" decoding="async" loading="lazy">` : `<i>${esc(/** @type {import('./tipi').TappaPagina} */ (T(id)).breve.slice(0, 1))}</i>`}</span><span class="m-punto__n" aria-hidden="true">${f(id) ? `<img src="${f(id)}" alt="" decoding="async" loading="lazy">` : ''}<b>${esc(/** @type {import('./tipi').TappaPagina} */ (T(id)).breve)}</b></span></button>`).join('');
+    /** @type {import('./tipi').ElementoDati<'id',HTMLButtonElement>[]} */ ($$('.m-punto', this.el)).forEach(b => { b.onclick = () => this.opz.punto?.(b.dataset.id, b); });
     if (this.vb) this.segni();
   }
+/** @param {boolean} si @param {boolean} [vola] */
   mostraTutte(si, vola = true) {
     this.tutte = !!si;
     this.el.classList.toggle('m--tutte', this.tutte);
@@ -272,11 +337,13 @@ export class Mappa {
     if (this.tutte) this.inquadra(); else this.tutto();
   }
   inquadra(dur = 700, ids = this.idsPunti) {
-    if (!BASE) return;
+    if (!this.attiva) return;
+    if (!BASE) { this.quadroInAttesa = { dur, ids: arguments.length < 2 ? null : [...ids] }; return; }
     this.fuoco = null; this.mosso = true;
-    const fine = this.vbPer(riquadroXY([...ids.map(id => T(id).xy), ...this.tappe.map(xyDi)]));
+    const fine = this.vbPer(riquadroXY([...ids.map(id => /** @type {import('./tipi').TappaPagina} */ (T(id)).xy), ...this.tappe.map(xyDi)]));
     if (piano() && this.vb && dur > 0) this.vola(fine, dur); else { this.fermaVolo?.(); this.metti(fine); }
   }
+/** @param {import('./mappa-tipi').LimitiMappa} box */
   vbPer(box) {
     const W = this.el.clientWidth || 1, H = this.el.clientHeight || 1;
     const p = this.opz.margini ? this.opz.margini() : { t: 44, r: 36, b: 44, l: 36 };
@@ -286,6 +353,7 @@ export class Mappa {
     const px = p.l + (W - p.l - p.r) / 2, py = p.t + (H - p.t - p.b) / 2;
     return { x: cx - px / s, y: cy - py / s, w: W / s, h: H / s };
   }
+/** @param {boolean} vola */
   adatta(vola) {
     if (!BASE || !this.box) return;
     const fine = this.vbPer(this.fuoco || this.box);
@@ -293,6 +361,7 @@ export class Mappa {
     this.vola(fine, 780, () => this.finito());
   }
   // il volo: la mappa si sposta come un'immagine sola (insieme ai segni), all'arrivo si ridisegna nitida
+/** @param {import('../../../lib/itinerari/strade').Riquadro} fine @param {number} dur @param {()=>void} [poi] */
   vola(fine, dur, poi) {
     this.fermaVolo?.();
     const da = this.vb;
@@ -312,6 +381,7 @@ export class Mappa {
     anims[0].finished.then(() => { if (fatto) return; fatto = true; this.fermaVolo = null; this.metti(fine); anims.forEach(x => x.cancel()); poi?.(); }, () => {});
   }
   finito() { if (this.daLinea !== Infinity) { const da = this.daLinea; this.daLinea = Infinity; this.traccia(da); } }
+/** @param {import('../../../lib/itinerari/strade').Riquadro} vb */
   metti(vb) {
     this.vb = vb;
     const W = this.el.clientWidth || 1, s = W / vb.w;
@@ -322,13 +392,15 @@ export class Mappa {
     this.s = s;
     this.segni();
     // i pezzi delle strade e i nomi: poco dopo, e i nomi solo a dito fermo
-    clearTimeout(this.tP); this.tP = setTimeout(() => { this.pezzi(); if (!this.dita.size) this.nomiVisibili(); }, 40);
+    clearTimeout(this.tP); this.tP = setTimeout(() => { if (!this.attiva || this.el.isConnected === false) return; this.pezzi(); if (!this.dita.size) this.nomiVisibili(); }, 40);
   }
+/** @param {number} da */
   traccia(da) {
-    const penne = $$('.m-l', this.svg), segni = $$('.m-segno', this.el);
+    const penne = /** @type {SVGPathElement[]} */ ($$('.m-l', this.svg)), segni = /** @type {import('./tipi').ElementoDati<'id',HTMLButtonElement>[]} */ ($$('.m-segno', this.el));
     $$('.m-nuova', this.svg).forEach(p => p.classList.remove('m-nuova'));
     const indice = new Map();
     this.voci.forEach((x, iv) => { if (x.tipo === 'tappa') indice.set(iv, this.tappe.findIndex(v => v.id === x.id)); });
+/** @param {number} i @param {number} t */
     const mostra = (i, t) => { const s = segni[i]; if (!s || !s.classList.contains('m-attesa')) return; s.classList.remove('m-attesa'); s.animate?.([{ opacity: 0, transform: `${s.style.transform} translateY(-12px) scale(.6)` }, { opacity: 1, transform: s.style.transform }], { duration: 480, delay: t, easing: 'cubic-bezier(.34,1.4,.64,1)', fill: 'backwards' }); };
     let t = 0;
     if (da === 0) { mostra(0, 0); t = 260; }
@@ -344,13 +416,16 @@ export class Mappa {
   }
   // i segni delle tappe (e le foto di «Tutte le tappe») restano della stessa misura e non si coprono
   segni() {
-    if (!this.vb) return;
+    const vb = this.vb;
+    if (!vb) return;
     const s = this.s;
-    const pos = this.tappe.map(v => { const xy = xyDi(v), x = (xy[0] - this.vb.x) * s, y = (xy[1] - this.vb.y) * s; return { x, y, x0: x, y0: y }; });
-    const punti = this.tutte ? $$('.m-punto', this.el) : [];
-    for (const b of punti) { const xy = T(b.dataset.id).xy, x = (xy[0] - this.vb.x) * s, y = (xy[1] - this.vb.y) * s; pos.push({ x, y, x0: x, y0: y, r: 18 }); }   // r 18: i pulsanti sono di 36 px, così non si sovrappongono (WCAG 2.5.8)
+    /** @type {import('./mappa-tipi').PuntoSegno[]} */
+    const pos = this.tappe.map(v => { const xy = xyDi(v), x = (xy[0] - vb.x) * s, y = (xy[1] - vb.y) * s; return { x, y, x0: x, y0: y }; });
+    const punti = this.tutte ? /** @type {import('./tipi').ElementoDati<'id',HTMLButtonElement>[]} */ ($$('.m-punto', this.el)) : [];
+    for (const b of punti) { const xy = /** @type {import('./tipi').TappaPagina} */ (T(b.dataset.id)).xy, x = (xy[0] - vb.x) * s, y = (xy[1] - vb.y) * s; pos.push({ x, y, x0: x, y0: y, r: 18 }); }   // r 18: i pulsanti sono di 36 px, così non si sovrappongono (WCAG 2.5.8)
     const MIN = this.opz.distanza ?? 32;
-    const minimo = (a, b) => (a.r && b.r ? a.r + b.r + 2 : a.r || b.r ? MIN / 2 + (a.r || b.r) + 2 : MIN);
+/** @param {import('./mappa-tipi').PuntoSegno} a @param {import('./mappa-tipi').PuntoSegno} b */
+    const minimo = (a, b) => (a.r && b.r ? a.r + b.r + 2 : a.r || b.r ? MIN / 2 + /** @type {number} */ (a.r || b.r) + 2 : MIN);
     for (let giro = 0; giro < (punti.length ? 60 : 80); giro++) {
       let mosso = false;
       for (let i = 0; i < pos.length; i++) for (let j = i + 1; j < pos.length; j++) {
@@ -364,16 +439,18 @@ export class Mappa {
       }
       if (!mosso) break;
     }
-    const bottoni = $$('.m-segno', this.el);
+    const bottoni = /** @type {import('./tipi').ElementoDati<'id',HTMLButtonElement>[]} */ ($$('.m-segno', this.el));
     pos.forEach((p, i) => { if (bottoni[i]) bottoni[i].style.transform = `translate(${p.x.toFixed(1)}px, ${p.y.toFixed(1)}px)`; });
-    $('.m-fili', this.svg).innerHTML = pos.map(p => (Math.hypot(p.x - p.x0, p.y - p.y0) > 6
-      ? `<line class="m-filo" x1="${(this.vb.x + p.x0 / s).toFixed(2)}" y1="${(this.vb.y + p.y0 / s).toFixed(2)}" x2="${(this.vb.x + p.x / s).toFixed(2)}" y2="${(this.vb.y + p.y / s).toFixed(2)}"/>` : '')).join('');
+    /** @type {SVGGElement} */ ($('.m-fili', this.svg)).innerHTML = pos.map(p => (Math.hypot(p.x - p.x0, p.y - p.y0) > 6
+      ? `<line class="m-filo" x1="${(vb.x + p.x0 / s).toFixed(2)}" y1="${(vb.y + p.y0 / s).toFixed(2)}" x2="${(vb.x + p.x / s).toFixed(2)}" y2="${(vb.y + p.y / s).toFixed(2)}"/>` : '')).join('');
     const nT = this.tappe.length;
     // le foto che cadono sotto la testata, i pulsanti della mappa o il foglio si nascondono: coperte a metà non si toccano bene
     const W = this.el.clientWidth, H = this.el.clientHeight, m = this.opz.margini ? this.opz.margini() : { t: 0, r: 0, b: 0, l: 0 };
+/** @param {import('./mappa-tipi').PuntoSegno} p */
     const coperto = p => p.y < Math.max(20, m.t) || p.y > H - Math.max(20, m.b - 30) || p.x < Math.max(20, m.l - 40) || p.x > W - Math.max(20, m.r + 10);
     punti.forEach((b, i) => { const p = pos[nT + i]; b.style.transform = `translate(${p.x.toFixed(1)}px, ${p.y.toFixed(1)}px)`; b.classList.toggle('m-punto--sotto', p.y < 150); b.classList.toggle('m-punto--coperto', coperto(p)); });
   }
+/** @param {string} id */
   centra(id) {
     if (!BASE) return;
     const v = this.tappe.find(t => t.id === id);
@@ -385,10 +462,19 @@ export class Mappa {
     this.evidenzia(id);
   }
   tutto() { if (!BASE || !this.box) return; this.fuoco = null; this.mosso = false; this.vola(this.vbPer(this.box), 700); this.evidenzia(null); }
+/** @param {string|null} id */
   evidenzia(id) { $$('.m-segno, .m-punto', this.el).forEach(b => b.setAttribute('aria-current', String(b.dataset.id === id))); }
-  spegni() { this.ro.disconnect(); this.fermaVolo?.(); tutte.delete(this); }
+  spegni() {
+    this.attiva = false; this.attesa = null; this.quadroInAttesa = null;
+    this.ascolti.forEach(ferma => ferma()); this.ascolti = [];
+    clearTimeout(this.tP); clearTimeout(this.tNomi); this.ro.disconnect(); this.fermaVolo?.();
+    for (const id of this.dita.keys()) try { if (this.el.hasPointerCapture(id)) this.el.releasePointerCapture(id); } catch { /* già rilasciato */ }
+    this.dita.clear(); this.partenza = null; this.preso = false; this.el.classList.remove('m--muovo');
+    tutte.delete(this);
+  }
 }
 // le strade alternative degli orari veri (senza bus o con un altro bus): solo se un tratto le usa
+/** @param {import('../../../lib/itinerari/pause').Giornata|null} Gx */
 export async function preparaAlternativi(Gx) {
   if (ALT || !Gx?.voci.some(v => v.tipo === 'tratto' && v.variante != null)) return false;
   ALT = await caricaAlternativi();

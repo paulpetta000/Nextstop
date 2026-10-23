@@ -1,0 +1,318 @@
+{
+  "data": "2026-10-20T14:50:30.637Z",
+  "base": "7011ac0dee36925e13f4b66c9138f258c4141bda",
+  "worker": "bd6edd46e12e",
+  "itinerario": "due-giorni",
+  "tappePubbliche": 92,
+  "rete": false,
+  "datiPersonali": false,
+  "casi": [
+    {
+      "caso": "Pause e margini cambiano la fine senza alterare i minuti a piedi",
+      "senza": {
+        "fine": 1087,
+        "visite": 445,
+        "strada": 27,
+        "pause": 45,
+        "margini": 0,
+        "resta": 53,
+        "avvisi": [
+          {
+            "tipo": "chiusa",
+            "id": "mann",
+            "giorno": "mar"
+          },
+          {
+            "tipo": "chiusa",
+            "id": "sansevero",
+            "giorno": "mar"
+          }
+        ],
+        "tappe": [
+          {
+            "id": "mann",
+            "inizio": 570,
+            "fine": 690,
+            "fatta": false
+          },
+          {
+            "id": "tribunali",
+            "inizio": 700,
+            "fine": 745,
+            "fatta": false
+          },
+          {
+            "id": "sansevero",
+            "inizio": 793,
+            "fine": 838,
+            "fatta": false
+          },
+          {
+            "id": "santa-chiara",
+            "inizio": 844,
+            "fine": 884,
+            "fatta": false
+          },
+          {
+            "id": "spaccanapoli",
+            "inizio": 887,
+            "fine": 947,
+            "fatta": false
+          },
+          {
+            "id": "san-lorenzo",
+            "inizio": 948,
+            "fine": 1008,
+            "fatta": false
+          },
+          {
+            "id": "duomo",
+            "inizio": 1012,
+            "fine": 1087,
+            "fatta": false
+          }
+        ]
+      },
+      "conMargine": {
+        "fine": 1177,
+        "visite": 445,
+        "strada": 27,
+        "pause": 45,
+        "margini": 90,
+        "resta": -37,
+        "avvisi": [
+          {
+            "tipo": "piena",
+            "fine": 1177,
+            "limite": 1140,
+            "daSpostare": [
+              "duomo"
+            ]
+          },
+          {
+            "tipo": "chiusa",
+            "id": "mann",
+            "giorno": "mar"
+          },
+          {
+            "tipo": "chiusa",
+            "id": "sansevero",
+            "giorno": "mar"
+          }
+        ],
+        "tappe": [
+          {
+            "id": "mann",
+            "inizio": 570,
+            "fine": 690,
+            "fatta": false
+          },
+          {
+            "id": "tribunali",
+            "inizio": 715,
+            "fine": 760,
+            "fatta": false
+          },
+          {
+            "id": "sansevero",
+            "inizio": 823,
+            "fine": 868,
+            "fatta": false
+          },
+          {
+            "id": "santa-chiara",
+            "inizio": 889,
+            "fine": 929,
+            "fatta": false
+          },
+          {
+            "id": "spaccanapoli",
+            "inizio": 947,
+            "fine": 1007,
+            "fatta": false
+          },
+          {
+            "id": "san-lorenzo",
+            "inizio": 1023,
+            "fine": 1083,
+            "fatta": false
+          },
+          {
+            "id": "duomo",
+            "inizio": 1102,
+            "fine": 1177,
+            "fatta": false
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Il martedì del primo giorno segnala il MANN chiuso",
+      "data": "2026-10-20",
+      "risultato": {
+        "fine": 1102,
+        "visite": 445,
+        "strada": 27,
+        "pause": 60,
+        "margini": 0,
+        "resta": 38,
+        "avvisi": [
+          {
+            "tipo": "chiusa",
+            "id": "mann",
+            "giorno": "mar"
+          },
+          {
+            "tipo": "chiusa",
+            "id": "sansevero",
+            "giorno": "mar"
+          }
+        ],
+        "tappe": [
+          {
+            "id": "mann",
+            "inizio": 570,
+            "fine": 690,
+            "fatta": false
+          },
+          {
+            "id": "tribunali",
+            "inizio": 700,
+            "fine": 745,
+            "fatta": false
+          },
+          {
+            "id": "sansevero",
+            "inizio": 808,
+            "fine": 853,
+            "fatta": false
+          },
+          {
+            "id": "santa-chiara",
+            "inizio": 859,
+            "fine": 899,
+            "fatta": false
+          },
+          {
+            "id": "spaccanapoli",
+            "inizio": 902,
+            "fine": 962,
+            "fatta": false
+          },
+          {
+            "id": "san-lorenzo",
+            "inizio": 963,
+            "fine": 1023,
+            "fatta": false
+          },
+          {
+            "id": "duomo",
+            "inizio": 1027,
+            "fine": 1102,
+            "fatta": false
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Alle 15 si riparte preservando la tappa già segnata",
+      "ora": 900,
+      "risultato": {
+        "fine": 1252,
+        "visite": 325,
+        "strada": 27,
+        "pause": 0,
+        "margini": 0,
+        "resta": -112,
+        "avvisi": [
+          {
+            "tipo": "piena",
+            "fine": 1252,
+            "limite": 1140,
+            "daSpostare": [
+              "san-lorenzo",
+              "duomo"
+            ]
+          },
+          {
+            "tipo": "chiusa",
+            "id": "sansevero",
+            "giorno": "mar"
+          }
+        ],
+        "tappe": [
+          {
+            "id": "mann",
+            "inizio": -1,
+            "fine": -1,
+            "fatta": true
+          },
+          {
+            "id": "tribunali",
+            "inizio": 910,
+            "fine": 955,
+            "fatta": false
+          },
+          {
+            "id": "sansevero",
+            "inizio": 958,
+            "fine": 1003,
+            "fatta": false
+          },
+          {
+            "id": "santa-chiara",
+            "inizio": 1009,
+            "fine": 1049,
+            "fatta": false
+          },
+          {
+            "id": "spaccanapoli",
+            "inizio": 1052,
+            "fine": 1112,
+            "fatta": false
+          },
+          {
+            "id": "san-lorenzo",
+            "inizio": 1113,
+            "fine": 1173,
+            "fatta": false
+          },
+          {
+            "id": "duomo",
+            "inizio": 1177,
+            "fine": 1252,
+            "fatta": false
+          }
+        ]
+      }
+    },
+    {
+      "caso": "Fuori dal feed ANM non dichiara partenze programmate verificate",
+      "dentro": "2026-10-20",
+      "fuori": "2027-05-22",
+      "orariVeriDentro": true,
+      "orariVeriFuori": false,
+      "limite": "20261231"
+    },
+    {
+      "caso": "Il link conserva il piano e non trasferisce timbri e visite personali",
+      "giorni": 2,
+      "tappeConservate": 15,
+      "timbri": false,
+      "visitate": false
+    },
+    {
+      "caso": "Un ID sconosciuto viene segnalato senza perdere le altre tappe",
+      "scartate": [
+        "id-inesistente-di-prova"
+      ],
+      "giorniConservati": 2
+    },
+    {
+      "caso": "Tutte le risorse del precache esistono nella build",
+      "risorse": 82,
+      "mancanti": [],
+      "limite": "Presenza dei file; installazione e uso senza rete nel browser non provati."
+    }
+  ]
+}

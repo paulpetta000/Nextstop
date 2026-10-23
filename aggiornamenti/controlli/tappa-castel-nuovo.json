@@ -73,5 +73,17 @@
       "V03"
     ],
     "controllo_completo": false
+  },
+  "ultimo_riscontro_parziale": {
+    "data": "2026-10-22",
+    "rapporto": "aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md",
+    "modalita": "rapporto",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "casi": [
+      "V03"
+    ],
+    "nota": "Portale biglietti comunale letto: orario ordinario, tariffe e aree non accessibili; avvisi complessivi non verificati. Nessun acquisto.",
+    "ritentare_entro": "2026-10-25"
   }
 }

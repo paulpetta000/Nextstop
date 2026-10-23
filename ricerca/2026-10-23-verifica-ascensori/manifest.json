@@ -1,0 +1,23 @@
+{
+  "verified": "2026-10-23",
+  "origin": "Ingressi esatti della generazione 70, licenze nel README incluso",
+  "files": [
+    {
+      "name": "osm.json",
+      "bytes": 17822681,
+      "sha256": "38cd23f23683ed9f183fff08750739cd942a9178526b744f4bc400b83727977c"
+    },
+    {
+      "name": "quote.json",
+      "bytes": 796725,
+      "sha256": "50047a3adca18524b957a68a2f956b55b5f04b31c2a00ae9fd6e85558ae3f83a"
+    },
+    {
+      "name": "anm-gtfs.zip",
+      "bytes": 6009897,
+      "sha256": "068951913e4d8b3538ccfe07e707ae5137303de73f8bffc728cd77371409de7e"
+    }
+  ],
+  "zipTentativoNonValidoSHA256": "454765944dfbfb72ba04532263bcf4baac5d08c1b3a71c71f10becb88e7e09ba",
+  "note": "File originali verificati direttamente; precedente ZIP rifiutato dal controllo CRC su Ubuntu, conservato come tentativo non valido."
+}

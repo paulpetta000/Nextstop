@@ -4,6 +4,21 @@ Non leggere questa cartella per iniziare un controllo ordinario. Usare [procedur
 
 | Rapporto | Uso |
 |---|---|
+| [Chiusura84, 24 ottobre](2026-10-24-chiusura-84.md) | Risultati finali, build locale ripresa senza riparazione, offline nativo e limiti; verifiche successive raggruppate |
+| [Girolamini83, 24 ottobre](2026-10-24-girolamini-83.md) | Sale storiche/servizi Biblioteca sospesi19–25ottobre, Chiesa-Museo aperta; orario ordinario distinto dall'eccezione |
+| [Pedamentina82, 24 ottobre](2026-10-24-pedamentina-82.md) | Tolta garanzia di percorribilità permanente, aggiunto cantiere datato presso l'accesso senza dichiarare chiusa tutta la scala |
+| [Date delle fonti81, 24 ottobre](2026-10-24-date-fonti-81.md) | Rimosso controllo generale/promessa di validità fino ad aprile, date e fonti delle singole schede; CI e anteprima riuscite |
+| [Anteprima80, 24 ottobre](2026-10-24-anteprima-80.md) | Correzione79 letta su telefono in chiaro/scuro e320px; fallback controllato nell'HTML, nessun nuovo dato applicativo |
+| [Sansevero 79, 23 ottobre](2026-10-23-sansevero-79.md) | Eccezione alla vendita solo online e due testi corretti; controllo della scheda concluso, build locale Vite bloccata e verifica remota richiesta |
+| [Capri e L6 78, 23 ottobre](2026-10-23-collegamenti-capri-78.md) | Quadri Caremar/SNAV e nuovo avviso carburanti distinti; durata/festività L6 ancora aperte, applicazione invariata |
+| [Mercati 77, 23 ottobre](2026-10-23-mercati-77.md) | PDF nel percorso 2026 contiene proposta 2012, nessun nuovo orario dedotto; V12 ancora aperto |
+| [San Lorenzo 76, 23 ottobre](2026-10-23-san-lorenzo-76.md) | Guida obbligatoria confermata da due canali del gestore; testi corretti, controllo completo ancora aperto |
+| [Fonti e avvisi 75, 23 ottobre](2026-10-23-fonti-ripresa-75.md) | Granfuoco ordinario recuperato; contrasti dei locali, Certosa MiC e nuovi avvisi temporanei ANM/EAV; dati applicativi invariati |
+| [Fonti 74, 23 ottobre](2026-10-23-fonti-ripresa-74.md) | Confronto stagionale Capri e limiti Virgilio, prima del nuovo recupero Certosa |
+| [Fonti e Acton 72, 23 ottobre](2026-10-23-fonti-ripresa-72.md) | Pagine comunali recuperate, cantieri e canale operativo EAV; 31 collegamenti via Acton in manutenzione riprodotti, correzione da fare |
+| [Ripresa fonti 71, 22 ottobre](2026-10-22-fonti-ripresa-71.md) | V02/V03/V11 ordinari recuperati, nuovi avvisi EAV e confronti parziali; nessun controllo completo o dato applicativo aggiornato |
+| [ANM nel browser, 22 ottobre](2026-10-22-anm-browser.md) | Recuperi parziali V04/V15/V16, discordanza navetta e attesa L6 da confrontare; nessun dato applicativo aggiornato |
+| [Gestori nel browser, 22 ottobre](2026-10-22-gestori-browser.md) | Turni V01 recuperati, calendario V11 parziale; V02/V19 non risolti |
 | [Riesame esteso](2026-10-19-accessi-estesi.md) / [YAML](2026-10-19-accessi-estesi.yaml) | Prove più recenti di accesso, vecchia lista compresa |
 | [Ritentativo](2026-10-19-ritentativo-fonti.md) / [YAML](2026-10-19-ritentativo-fonti.yaml) | Storico precedente, non sostituisce il riesame esteso |
 | [Impostazione](2026-10-19-impostazione.md) / [YAML](2026-10-19-impostazione.yaml) | Inventario iniziale e criteri; conteggi originari conservati |

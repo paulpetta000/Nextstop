@@ -70,7 +70,7 @@ const { nome, size = 150, class: cls } = Astro.props;
   )}
   {nome === 'squadre' && (
     <g>
-      {[['var(--accent)', 44], ['var(--sea)', 72], ['var(--blu)', 100]].map(([c, x]) => (
+      {([['var(--accent)', 44], ['var(--sea)', 72], ['var(--blu)', 100]] satisfies [string, number][]).map(([c, x]) => (
         <g><path d={`M${x} 26 V100`} stroke="var(--ink)" stroke-width="3" stroke-linecap="round" /><path d={`M${x + 2} 28 h26 l-6 10 l6 10 h-26 Z`} fill={c as string} /></g>
       ))}
     </g>

@@ -11,7 +11,7 @@ test('le fonti pubbliche di Nextstop escludono i documenti della Coppa, anche qu
   const regate = fonti.filter(f => /america.?s.?cup/i.test(`${f.titolo} ${f.url}`));
   assert.equal(regate.length, 9, 'Il caso reale comprende nove documenti delle regate');
   const pubbliche = fontiDiNextstop(fonti);
-  assert.equal(pubbliche.length, 195);
+  assert.equal(pubbliche.length, 212);
   assert.deepEqual(pubbliche.filter(f => regate.some(r => r.id === f.id)), []);
 });
 
@@ -25,6 +25,6 @@ test('fonti di viaggio e dati aperti restano disponibili senza alterare ordine o
 
 test('i conteggi pubblici non includono le schede sostenute solo dalle fonti delle regate', () => {
   const pubbliche = fatti.filter(f => f.fonti.some(fonteDiNextstop));
-  assert.equal(pubbliche.length, 199);
+  assert.equal(pubbliche.length, 200);
   assert.deepEqual(pubbliche.filter(f => /^(cal-|vil-caracciolo$|trasporti-2027-atteso$)/.test(f.id)), []);
 });

@@ -11,7 +11,7 @@ duomo:
 sansevero:
   usa: [tp-sansevero-prenota, tp-sansevero-regole]
   testo: |
-    Nella cappella Sansevero c'è il Cristo velato. Si entra solo con il biglietto comprato online sul sito del museo, fino a 60 giorni prima: a luglio, compralo appena esce. Se è tutto esaurito, altri posti si liberano due giorni prima della visita. Dentro non puoi fare foto né usare il telefono. La Cavea, con le «macchine anatomiche», si raggiunge solo da una stretta scala a chiocciola.
+    Nella cappella Sansevero c'è il Cristo velato. La prenotazione è obbligatoria: compra il biglietto online fino a 60 giorni prima; a luglio, appena esce. Altri posti si liberano due giorni prima della visita. Fino a 9 persone si può prenotare anche in biglietteria per i 7 giorni successivi, se restano posti: sono gli stessi disponibili online. Dentro non puoi fare foto né usare il telefono. La Cavea, con le «macchine anatomiche», si raggiunge solo da una stretta scala a chiocciola.
 
 santa-chiara:
   usa: [tp-santachiara-prezzi]
@@ -42,9 +42,9 @@ mann:
 
 san-lorenzo:
   usa: [tp-sanlorenzo-orari]
-  fonti: [tp-sanlorenzo]
+  fonti: [tp-sanlorenzo, tp-sanlorenzo-biglietteria]
   testo: |
-    Una grande chiesa e, sotto, gli scavi della città greca e romana. Apre tutti i giorni, dalle 9:30 alle 17:30. Quando c'è molta gente si entra solo con la guida, a orari fissi. Con la carrozzina o il passeggino visiti tutto tranne l'area archeologica.
+    Una grande chiesa e, sotto, gli scavi della città greca e romana. Apre tutti i giorni, dalle 9:30 alle 17:30. Le visite sono con guida obbligatoria, a turni fissi. Se compri il biglietto online, prenota anche il turno della guida; il supplemento si paga in biglietteria. Con la carrozzina o il passeggino visiti tutto tranne l'area archeologica.
 
 napoli-sotterranea:
   usa: [tp-sotterranea-visita, tp-sotterranea-prezzi]
@@ -132,7 +132,7 @@ pedamentina:
   usa: [tp-pedamentina-orari]
   fonti: [osm]
   testo: |
-    Da Largo San Martino a Corso Vittorio Emanuele scendi per una scala pubblica, tra rampe e tornanti, con la città davanti. Falla in discesa, dopo San Martino o Sant'Elmo: servono circa 15 minuti, mentre in salita è faticosa. Da Corso Vittorio Emanuele arrivi a Montesanto e al centro storico.
+    Da Largo San Martino a Corso Vittorio Emanuele scendi per una scala pubblica, tra rampe e tornanti, con la città davanti. Falla in discesa, dopo San Martino o Sant'Elmo: servono circa 15 minuti, mentre in salita è faticosa. Da Corso Vittorio Emanuele arrivi a Montesanto e al centro storico. Il Comune ha programmato scavi sul marciapiede fino all'accesso alla Pedamentina dal 19 ottobre al 6 novembre 2026: prima di partire controlla gli avvisi, perché il comunicato non conferma la percorribilità pedonale integrale durante i lavori.
 
 # ---------- Sanità e Capodimonte ----------
 catacombe:
@@ -141,10 +141,10 @@ catacombe:
     Entri solo con la guida, ogni ora, e devi prenotare prima. Lo stesso biglietto vale 12 mesi anche per le Catacombe di San Gaudioso, nel Rione Sanità. Sotto terra ci sono 15–22 °C: porta un maglioncino. Per ora l'accesso per le persone con disabilità motoria è sospeso.
 
 sanita:
-  usa: [tp-sanita-orari]
+  usa: [tp-sanita-orari, tp-sanita-ascensore]
   fonti: [tp-catacombe-basilica]
   testo: |
-    Il quartiere sta sotto il ponte della Sanità. C'è la Basilica di Santa Maria della Sanità, aperta solo la mattina (10–13), e sotto la basilica le Catacombe di San Gaudioso. Dal ponte scendi con un ascensore gratuito, che la domenica chiude alle 14.
+    Il quartiere sta sotto il ponte della Sanità. C'è la Basilica di Santa Maria della Sanità, aperta solo la mattina (10–13), e sotto la basilica le Catacombe di San Gaudioso. Per scendere dal ponte con l’ascensore, servizio e orari sono ancora da confermare: controlla gli avvisi ANM prima di contarci{?tp-sanita-ascensore}.
 
 fontanelle:
   usa: [tp-fontanelle-orari, tp-fontanelle-prezzi]
@@ -189,12 +189,12 @@ citta-scienza:
 pompei:
   usa: [tp-pompei-biglietti, tp-pompei-viaggio]
   testo: |
-    La città romana sepolta dal Vesuvio. I biglietti hanno nome, giorno e fascia oraria, e non si cambiano. La mattina è la fascia più fresca: ha 15.000 posti su 20.000, quindi comprala per prima. Con la Circumvesuviana da Garibaldi servono almeno 33 minuti. Con il caldo porta acqua e cappello.
+    La città romana sepolta dal Vesuvio. I biglietti hanno nome, giorno e fascia oraria, e non si cambiano. La mattina è la fascia più fresca: ha 15.000 posti su 20.000, quindi comprala per prima. Il quadro EAV del 17 ottobre 2026 indica 36 minuti di treno da Garibaldi, attesa esclusa. Con il caldo porta acqua e cappello.
 
 ercolano:
   usa: [tp-ercolano-viaggio, tp-ercolano-prezzi, tp-campolieto]
   testo: |
-    Più piccola di Pompei e più facile da girare con il caldo. Con la Circumvesuviana da Garibaldi servono almeno 13 minuti. Entri gratis la prima domenica del mese e il 2 giugno.
+    Più piccola di Pompei e più facile da girare con il caldo. Il quadro EAV del 17 ottobre 2026 indica 15 minuti di treno da Garibaldi, attesa esclusa. Entri gratis la prima domenica del mese e il 2 giugno.
 
     A Ercolano, in corso Resina, c'è anche Villa Campolieto, una delle ville vesuviane: aperta dal lunedì al sabato 9:00–19:00 e la domenica fino alle 14:00, 7 €.
 
@@ -232,7 +232,7 @@ purgatorio-ad-arco:
 girolamini:
   usa: [tp-girolamini-orari, tp-girolamini-prezzi]
   testo: |
-    Su via Duomo c'è una chiesa barocca, con un museo e una biblioteca storica che ha riaperto a settembre 2026. È chiusa il lunedì, e nel fine settimana apre solo la mattina, fino alle 13:30. La biblioteca ha un biglietto suo e si entra a turni.
+    Su via Duomo c'è una chiesa barocca, con un museo e una biblioteca storica. La Chiesa-Museo è chiusa il lunedì, e nel fine settimana apre solo la mattina, fino alle 13:30. La biblioteca ha un biglietto suo e si entra a turni, ma dal 19 al 25 ottobre 2026 le sale storiche non sono visitabili e i servizi bibliotecari sono sospesi. La Chiesa-Museo resta aperta secondo i suoi orari.
 
 tetti-duomo:
   usa: [tp-tetti-orari, tp-tetti-prezzi]
@@ -308,7 +308,7 @@ via-petrarca:
 palazzo-donn-anna:
   usa: [tp-donnanna-orari]
   testo: |
-    All'inizio di via Posillipo c'è un palazzo barocco, rimasto incompiuto, che sembra nascere dal mare. È un'abitazione privata e non si visita: lo guardi da fuori, passando a piedi o dal mare. Si abbina bene a una passeggiata verso Marechiaro.
+    All'inizio di via Posillipo c'è un palazzo barocco, rimasto incompiuto, che sembra nascere dal mare. Nel percorso lo guardi da fuori, passando a piedi o dal mare. Il teatro ospita la Fondazione Ezio De Felice, che indica apertura su appuntamento dal lunedì al venerdì. Si abbina bene a una passeggiata verso Marechiaro.
 
 mostra-oltremare:
   usa: [tp-oltremare-orari, tp-oltremare-prezzi]
@@ -331,5 +331,5 @@ sorrento:
   usa: [tp-sorrento-viaggio, tp-correale-orari]
   fonti: [tp-sorrento-centro]
   testo: |
-    La città dall'altra parte del golfo ha un centro antico di stradine, chiese, monasteri e palazzi. Con la Circumvesuviana ci vuole circa un'ora e un quarto. Il Museo Correale è chiuso il lunedì: la sua pagina porta ancora un vecchio avviso di chiusura, quindi prima di andare controlla sul suo sito.
+    La città dall'altra parte del golfo ha un centro antico di stradine, chiese, monasteri e palazzi. Il quadro EAV del 17 ottobre 2026 indica 72 minuti di treno da Garibaldi o 75 da Porta Nolana, attesa esclusa. Il Museo Correale è chiuso il lunedì: la sua pagina porta ancora un vecchio avviso di chiusura, quindi prima di andare controlla sul suo sito.
 

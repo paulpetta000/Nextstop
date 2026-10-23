@@ -1,0 +1,20 @@
+{
+  "data": "2026-10-21T18:00:08.070Z",
+  "file": "sonda-astro-2026-10-21/memoria.mjs",
+  "byte": 9914962,
+  "attesoPrecedente": {
+    "file": "sonda-astro-2026-10-21/memoria.mjs",
+    "byte": 9914962,
+    "sha256": "ae03336e340e9cc7b553bf363370e13e79b81d8aa8e2eefd6c51c3e3dd9cd2cd"
+  },
+  "attesoChiusura": {
+    "file": "sonda-astro-2026-10-21/memoria.mjs",
+    "byte": 9914962,
+    "sha256": "ae03336e340e9cc7b553bf363370e13e79b81d8aa8e2eefd6c51c3e3dd9cd2cd"
+  },
+  "sha256Attuale": "d465a227005325fa47e6f0d5bf9d6d8a80b9b0f11b823ccee8c8018f50de591a",
+  "copia": "nextstop-sonda-astro-memoria-riscontro-1759-2026-10-21.mjs",
+  "sha256Copia": "d465a227005325fa47e6f0d5bf9d6d8a80b9b0f11b823ccee8c8018f50de591a",
+  "mtime": "2026-10-21T11:55:21.286Z",
+  "riscontro": "Tre letture Node concordi; copia conservata separatamente. Il valore attuale coincide con il bundle riuscito della sonda degli stadi Astro, ma il manifesto precedente e quello di chiusura registrano un altro hash. Nessuna attribuzione della causa o della data di variazione; file originario e manifesti non sostituiti."
+}

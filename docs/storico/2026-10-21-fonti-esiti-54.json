@@ -1,0 +1,229 @@
+{
+  "data": "2026-10-21T12:46:19.225Z",
+  "base": "bdca60a",
+  "prima": 15,
+  "dopo": 4,
+  "confermati": 11,
+  "fontiNuove": [
+    {
+      "id": "sf-chiocciole-2025",
+      "url": "https://www.slowfood.it/tutte-le-chiocciole-di-osterie-ditalia-2025-regione-per-regione/",
+      "letta": false
+    },
+    {
+      "id": "michelin-bib-2025",
+      "url": "https://guide.michelin.com/it/it/notizia/michelin-guide-ceremony/i-nuovi-bib-gourmand-della-guida-michelin-italia-2025",
+      "letta": true
+    },
+    {
+      "id": "gr-pasticcerie-2022",
+      "url": "https://www.gamberorosso.it/notizie/rubriche/classifiche/le-migliori-pasticcerie-di-napoli-2022-gli-indirizzi-da-non-perdere",
+      "letta": false
+    },
+    {
+      "id": "top50-italia-2026",
+      "url": "https://www.50toppizza.it/50-top-pizza-italia-2026-confine-a-milano-e-la-migliore-pizzeria-in-italia-per-il-2026/",
+      "letta": false
+    },
+    {
+      "id": "lc-pintauro-storia",
+      "url": "https://www.pasticceriapintauro1785.it/",
+      "letta": true
+    },
+    {
+      "id": "lc-pintauro-riapertura-2026",
+      "url": "https://www.pasticceriapintauro1785.it/a-napoli-ha-riaperto-la-pasticceria-pintauro-1785/",
+      "letta": true
+    },
+    {
+      "id": "michelin-pizzerie-2025",
+      "url": "https://guide.michelin.com/it/it/notizia/dining-out/pizza-napoletana-5-indirizzi-da-non-perdere-nella-citta-partenopea",
+      "letta": true
+    }
+  ],
+  "esiti": [
+    {
+      "id": "lc-da-michele-perche",
+      "esito": "parziale, avviso conservato",
+      "nota": "Articolo Michelin del 2026 disponibile, ma non prova della edizione 2025 dichiarata; storia 1870 già documentata separatamente.",
+      "fonti": []
+    },
+    {
+      "id": "lc-chitarra-perche",
+      "esito": "verificato per il fatto storico",
+      "nota": "Passaggio pertinente verificato sulla pubblicazione originale; non conferma condizioni attuali.",
+      "fonti": [
+        {
+          "id": "sf-chiocciole-2025",
+          "url": "https://www.slowfood.it/tutte-le-chiocciole-di-osterie-ditalia-2025-regione-per-regione/"
+        },
+        {
+          "id": "lc-chitarra-storia",
+          "url": "https://www.osterialachitarra.it/osteria/"
+        }
+      ]
+    },
+    {
+      "id": "lc-di-costanzo-perche",
+      "esito": "verificato per il fatto storico",
+      "nota": "Passaggio pertinente verificato sulla pubblicazione originale; non conferma condizioni attuali.",
+      "fonti": [
+        {
+          "id": "gr-pasticcerie-2022",
+          "url": "https://www.gamberorosso.it/notizie/rubriche/classifiche/le-migliori-pasticcerie-di-napoli-2022-gli-indirizzi-da-non-perdere"
+        }
+      ]
+    },
+    {
+      "id": "lc-pintauro-perche",
+      "esito": "verificato per il fatto storico",
+      "nota": "Passaggio pertinente verificato sulla pubblicazione originale; non conferma condizioni attuali.",
+      "fonti": [
+        {
+          "id": "lc-pintauro-storia",
+          "url": "https://www.pasticceriapintauro1785.it/"
+        },
+        {
+          "id": "lc-pintauro-riapertura-2026",
+          "url": "https://www.pasticceriapintauro1785.it/a-napoli-ha-riaperto-la-pasticceria-pintauro-1785/"
+        }
+      ]
+    },
+    {
+      "id": "lc-cinquanta-kalo-perche",
+      "esito": "parziale, avviso conservato",
+      "nota": "Quinto posto Italia 2026 verificato nel testo ufficiale indicizzato; citazione Michelin 2025 non risolta da una pagina del 2026.",
+      "fonti": []
+    },
+    {
+      "id": "lc-salvo-perche",
+      "esito": "verificato per il fatto storico",
+      "nota": "Passaggio pertinente verificato sulla pubblicazione originale; non conferma condizioni attuali.",
+      "fonti": [
+        {
+          "id": "top50-italia-2026",
+          "url": "https://www.50toppizza.it/50-top-pizza-italia-2026-confine-a-milano-e-la-migliore-pizzeria-in-italia-per-il-2026/"
+        },
+        {
+          "id": "michelin-pizzerie-2025",
+          "url": "https://guide.michelin.com/it/it/notizia/dining-out/pizza-napoletana-5-indirizzi-da-non-perdere-nella-citta-partenopea"
+        }
+      ]
+    },
+    {
+      "id": "lc-pignatelli-perche",
+      "esito": "verificato per il fatto storico",
+      "nota": "Passaggio pertinente verificato sulla pubblicazione originale; non conferma condizioni attuali.",
+      "fonti": [
+        {
+          "id": "michelin-bib-2025",
+          "url": "https://guide.michelin.com/it/it/notizia/michelin-guide-ceremony/i-nuovi-bib-gourmand-della-guida-michelin-italia-2025"
+        }
+      ]
+    },
+    {
+      "id": "lc-pignatelli-rinomato",
+      "esito": "verificato per il fatto storico",
+      "nota": "Passaggio pertinente verificato sulla pubblicazione originale; non conferma condizioni attuali.",
+      "fonti": [
+        {
+          "id": "sdg-pignatelli-2026",
+          "url": "https://www.scattidigusto.it/ostaria-pignatelli-a-napoli-menu-prezzi-recensione"
+        }
+      ]
+    },
+    {
+      "id": "lc-chalet-ciro-rinomato",
+      "esito": "verificato per il fatto storico",
+      "nota": "Passaggio pertinente verificato sulla pubblicazione originale; non conferma condizioni attuali.",
+      "fonti": [
+        {
+          "id": "sdg-cono-graffa",
+          "url": "https://www.scattidigusto.it/napoli-gelato-cono-graffa-chalet-ciro-mergellina"
+        }
+      ]
+    },
+    {
+      "id": "lc-gorizia-perche",
+      "esito": "verificato per il fatto storico",
+      "nota": "Passaggio pertinente verificato sulla pubblicazione originale; non conferma condizioni attuali.",
+      "fonti": [
+        {
+          "id": "top50-italia-2026",
+          "url": "https://www.50toppizza.it/50-top-pizza-italia-2026-confine-a-milano-e-la-migliore-pizzeria-in-italia-per-il-2026/"
+        },
+        {
+          "id": "lc-gorizia",
+          "url": "https://www.gorizia1916.com/"
+        }
+      ]
+    },
+    {
+      "id": "lc-concettina-perche",
+      "esito": "verificato per il fatto storico",
+      "nota": "Passaggio pertinente verificato sulla pubblicazione originale; non conferma condizioni attuali.",
+      "fonti": [
+        {
+          "id": "michelin-pizzerie-2025",
+          "url": "https://guide.michelin.com/it/it/notizia/dining-out/pizza-napoletana-5-indirizzi-da-non-perdere-nella-citta-partenopea"
+        }
+      ]
+    },
+    {
+      "id": "lc-poppella-perche",
+      "esito": "verificato per il fatto storico",
+      "nota": "Passaggio pertinente verificato sulla pubblicazione originale; non conferma condizioni attuali.",
+      "fonti": [
+        {
+          "id": "gr-pasticcerie-2022",
+          "url": "https://www.gamberorosso.it/notizie/rubriche/classifiche/le-migliori-pasticcerie-di-napoli-2022-gli-indirizzi-da-non-perdere"
+        },
+        {
+          "id": "lc-poppella-storia",
+          "url": "https://www.pasticceriapoppella.com/storia/"
+        }
+      ]
+    },
+    {
+      "id": "lc-poppella-rinomato",
+      "esito": "parziale, avviso conservato",
+      "nota": "Originale Gambero Rosso del 2022 trovato: sostiene diffusione e imitazione del fiocco, ma non il passaggio sulla notorietà estera.",
+      "fonti": []
+    },
+    {
+      "id": "lc-petrucci-posillipo-perche",
+      "esito": "parziale, avviso conservato",
+      "nota": "Terzo posto Italia 2026 verificato; la pagina ufficiale di Posillipo è presente ma non mostra nel testo la data settembre 2026, né risolve da sola la sede del premio.",
+      "fonti": []
+    },
+    {
+      "id": "lc-tufo-rinomato",
+      "esito": "verificato per il fatto storico",
+      "nota": "Passaggio pertinente verificato sulla pubblicazione originale; non conferma condizioni attuali.",
+      "fonti": [
+        {
+          "id": "stripes-tufo-2022",
+          "url": "https://www.stripes.com/living/europe_travel/after_hours/2022-12-29/naples-ragu-genovese-8416535.html"
+        }
+      ]
+    }
+  ],
+  "integrita": {
+    "idsPreesistenti": true,
+    "urlPreesistenti": true,
+    "testiPubbliciInvariati": true,
+    "fattiCambiati": [
+      "lc-chitarra-perche",
+      "lc-di-costanzo-perche",
+      "lc-pintauro-perche",
+      "lc-salvo-perche",
+      "lc-pignatelli-perche",
+      "lc-pignatelli-rinomato",
+      "lc-chalet-ciro-rinomato",
+      "lc-gorizia-perche",
+      "lc-concettina-perche",
+      "lc-poppella-perche",
+      "lc-tufo-rinomato"
+    ]
+  }
+}

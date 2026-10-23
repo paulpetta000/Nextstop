@@ -158,7 +158,12 @@
         "apertura": "09:00-19:00"
       }
     ],
-    "nota": "Intervallo della tabella, non apertura continuativa. Ogni riga vale solo nella data indicata; rileggere per rettifiche prima di aggiornare il sito. Nessuna estensione dell’orario ordinario ai giorni non elencati."
+    "nota": "Intervallo della tabella, non apertura continuativa. Ogni riga vale solo nella data indicata; rileggere per rettifiche prima di aggiornare il sito. Nessuna estensione dell’orario ordinario ai giorni non elencati.",
+    "riscontro_79": {
+      "data": "2026-10-23",
+      "rapporto": "aggiornamenti/rapporti/2026-10-23-sansevero-79.md",
+      "esito": "18_date_confrontate_coincidenti_non_applicate_al_compositore"
+    }
   },
   {
     "id": "parchi-ordinanza-2025-07-22",
@@ -191,5 +196,198 @@
     "stato": "testo_letto_clausola_ottobre_da_chiarire",
     "ricontrollare": "2026-10-19",
     "nota": "Ordinanza dirigenziale n.21 del 30/04/2026 (OD/2026/0000725), letta nelle parti operative. Periodi fino al 27/09/2026; clausola di possibile attivazione in ottobre e un riferimento discordante al 2025: non dedurre automaticamente ZTL inattiva oggi."
+  },
+  {
+    "id": "anm-deviazione-151-r7-n1-2026-10-19",
+    "controlli": [
+      "trasporto-bus-anm"
+    ],
+    "url": "https://www.anm.it/s/notizia-home/a0gR200000RUY80IAH/deviazione-linee-151-r7-n1?language=it",
+    "pubblicato": "2026-10-16",
+    "valido_dal": "2026-10-19",
+    "valido_fino": "2026-11-06",
+    "ricontrollare": "2026-10-24",
+    "dettagli": {
+      "direzione": "verso Fuorigrotta",
+      "fascia": "intera giornata",
+      "fermata_sospesa": "2174 Legioni"
+    },
+    "nota": "Prima fase. Confronto del quadro ordinario parziale; dati applicativi non aggiornati, nessun candidato sale/scende a2174. Non ricostruisce la deviazione.",
+    "tipo": "avviso_temporaneo",
+    "stato": "letto_confronto_applicativo_parziale",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md"
+  },
+  {
+    "id": "anm-deviazione-151-r7-n1-2026-11-09",
+    "controlli": [
+      "trasporto-bus-anm"
+    ],
+    "url": "https://www.anm.it/s/notizia-home/a0gR200000RUY80IAH/deviazione-linee-151-r7-n1?language=it",
+    "pubblicato": "2026-10-16",
+    "valido_dal": "2026-11-09",
+    "valido_fino": "2026-11-13",
+    "ricontrollare": "2026-11-06",
+    "dettagli": {
+      "fascia": "22:00-05:00 del giorno successivo",
+      "direzione": "verso Fuorigrotta"
+    },
+    "nota": "Seconda fase, non estendere a tutte le ore né ai giorni7-8novembre. Limite finale riferito alle date del dispositivo, comprese le notti descritte dalla fonte.",
+    "tipo": "avviso_temporaneo",
+    "stato": "letto_confronto_applicativo_parziale",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md"
+  },
+  {
+    "id": "anm-l1-chiusura-2026-10-26",
+    "controlli": [
+      "trasporto-metro-l1"
+    ],
+    "url": "https://www.anm.it/s/notizia-home/a0gR200000SxtOXIAZ/metro-l1-dal-26-al-29-ottobre-anticipa-la-chiusura?language=it",
+    "pubblicato": "2026-10-22",
+    "valido_dal": "2026-10-26",
+    "valido_fino": "2026-10-29",
+    "ricontrollare": "2026-10-24",
+    "dettagli": {
+      "ultime_partenze": {
+        "Piscinola": "20:55",
+        "Centro Direzionale": "21:30"
+      }
+    },
+    "nota": "Eccezione futura, non orario ordinario; nessuna applicazione automatica al2027.",
+    "tipo": "avviso_temporaneo",
+    "stato": "letto_confronto_applicativo_parziale",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md"
+  },
+  {
+    "id": "anm-sciopero-usb-2026-10-30",
+    "controlli": [
+      "trasporto-bus-anm",
+      "trasporto-metro-l1",
+      "trasporto-metro-l6",
+      "trasporto-funicolare-centrale",
+      "trasporto-funicolare-chiaia",
+      "trasporto-funicolare-mergellina"
+    ],
+    "url": "https://www.anm.it/s/notizia-home/a0gR200000HQcXhIAL/sciopero-24h-usb-30-ottobre-2026?language=it",
+    "pubblicato": "2026-10-21",
+    "valido_dal": "2026-10-30",
+    "valido_fino": "2026-10-31",
+    "ricontrollare": "2026-10-27",
+    "dettagli": {
+      "sciopero": "03:01 del30ottobre-03:00 del31ottobre",
+      "l6": {
+        "ultima_mattina": "09:10",
+        "ripresa_Mostra": "17:10",
+        "ripresa_Municipio": "17:30",
+        "ultima_sera": "19:50"
+      },
+      "funicolari": {
+        "ultima_mattina": "09:20",
+        "ripresa": "17:00",
+        "ultima_sera": "19:50"
+      },
+      "superficie": {
+        "garanzie": [
+          "05:30-08:30",
+          "17:00-20:00"
+        ],
+        "nota": "Ultime partenze30minuti prima e ripresa circa30minuti dopo, come da avviso; non confondere con orario di apertura."
+      }
+    },
+    "nota": "Eventuale interruzione secondo adesione, non cancellazione certa. Fasce L1 complete nella fonte e prova nativa; ascensori non aggiunti perché non esplicitati. Dati applicativi non aggiornati.",
+    "tipo": "avviso_temporaneo",
+    "stato": "letto_confronto_applicativo_parziale",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md"
+  },
+  {
+    "id": "eav-corso-meridionale-2026-10-26",
+    "controlli": [
+      "trasporto-vesuviane"
+    ],
+    "url": "https://www.eavsrl.it/deviazione-temporanea-in-napoli-c-so-meridionale-dal-26-10-al-9-11-2026/",
+    "pubblicato": "2026-10-23",
+    "valido_dal": "2026-10-26",
+    "valido_fino": "2026-11-09",
+    "ricontrollare": "2026-10-24",
+    "nota": "Tratte automobilistiche e sostitutive specificate nella fonte, in partenza da Napoli. Non prova ripristino dopo crisi carburante o variazione dei treni Cumana. Collegamento al gruppo per confronto, non applicazione a tutte le sue corse.",
+    "tipo": "avviso_temporaneo",
+    "stato": "letto_confronto_applicativo_parziale",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md"
+  },
+  {
+    "id": "sanlorenzo-guida-obbligatoria-riscontro-2026-10-23",
+    "controlli": [
+      "tappa-san-lorenzo"
+    ],
+    "url": "https://www.laneapolissotterrata.it/Home/InfoVisite",
+    "pubblicato": null,
+    "valido_dal": null,
+    "valido_fino": null,
+    "tipo": "condizioni_visita_attuali",
+    "stato": "guida_obbligatoria_confermata_e_testi_aggiornati",
+    "ricontrollare": "2026-11-06",
+    "nota": "Rilevata il 23 ottobre nel browser e confermata dalla biglietteria collegata. Data di pubblicazione/decorrenza non dichiarata: non assumere che la regola inizi oggi. Nessun controllo periodico completo concluso.",
+    "fonti_integrative": [
+      "https://la-neapolis-sotterrata.metooo.com/e/la-neapolis-sotterrata"
+    ]
+  },
+  {
+    "id": "caremar-avviso-carburanti-2026-10-20",
+    "controlli": [
+      "tappa-capri",
+      "tappa-ischia",
+      "tappa-procida"
+    ],
+    "url": "https://shop.caremar.it/it/avvisi/",
+    "pubblicato": "2026-10-20",
+    "valido_dal": null,
+    "valido_fino": null,
+    "tipo": "avviso_temporaneo",
+    "stato": "letto_cancellazioni_possibili_non_certe",
+    "ricontrollare": "2026-10-24",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md",
+    "nota": "Possibili cancellazioni nei prossimi giorni per difficoltà di approvvigionamento carburante. Non sospensione certa di tutte le corse; fine e decorrenza esatta ignote. Programmi e disponibilità/servizio effettivo distinti, nessun blocco applicativo."
+  },
+  {
+    "id": "sansevero-biglietteria-2026-02-04",
+    "controlli": [
+      "tappa-sansevero"
+    ],
+    "url": "https://www.museosansevero.it/news-ed-eventi/news/trasferimento-temporaneo-della-biglietteria-4-gennaio-2026",
+    "pubblicato": "2026-02-02",
+    "valido_dal": "2026-02-04",
+    "valido_fino": null,
+    "tipo": "avviso_accesso",
+    "stato": "letto_e_confrontato_con_faq",
+    "ricontrollare": "2026-10-28",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-sansevero-79.md",
+    "nota": "Biglietteria trasferita temporaneamente in viaRaimondoDiSangro12; piccoli gruppi fino9 anche in sede secondo disponibilità, stessa degli acquisti online. Fine del trasferimento non pubblicata; ingresso del museo e sue coordinate invariati. Titolo/testo febbraio, slug gennaio."
+  },
+  {
+    "id": "pedamentina-cantiere-2026-10-19",
+    "controlli": [
+      "tappa-pedamentina"
+    ],
+    "url": "https://www.comune.napoli.it/novita/dispositivi-di-viabilita-per-cantieri-e-manifestazioni-2/",
+    "pubblicato": "2026-09-30",
+    "valido_dal": "2026-10-19",
+    "valido_fino": "2026-11-06",
+    "tipo": "cantiere_accesso",
+    "stato": "avviso_letto_percorribilita_pedonale_integrale_non_confermata",
+    "ricontrollare": "2026-10-27",
+    "nota": "Scavi in attraversamento su corso Vittorio Emanuele e poi sul marciapiede fino alla cabina all’inizio della Pedamentina. Traffico veicolare non interrotto non equivale a garanzia pedonale. Nessuna chiusura totale o riapertura automatica dal 7 novembre dedotta."
+  },
+  {
+    "id": "girolamini-biblioteca-chiusa-2026-10-19",
+    "controlli": [
+      "tappa-girolamini"
+    ],
+    "url": "https://girolamini.cultura.gov.it/eventi-e-news/%e2%9a%a0%ef%b8%8f-avviso-%e2%9a%a0%ef%b8%8f/",
+    "pubblicato": "2026-10-15",
+    "valido_dal": "2026-10-19",
+    "valido_fino": "2026-10-25",
+    "tipo": "sospensione_temporanea_parziale",
+    "stato": "avviso_letto_sale_storiche_e_servizi_sospesi_chiesa_museo_aperta",
+    "ricontrollare": "2026-10-24",
+    "nota": "Biblioteca distinta dalla Chiesa-Museo. Il 26 ottobre è lunedì, giorno di chiusura ordinaria; dal 27 il comunicato annuncia i nuovi orari. Nessuna riapertura effettiva verificata."
   }
 ]

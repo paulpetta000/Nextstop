@@ -1,0 +1,233 @@
+{
+  "data": "2026-10-21T21:35:19.547Z",
+  "codice": "8b5b716",
+  "cartella": "C:/Users/Windows11/Documents/ChatGPT/New project",
+  "prove": [
+    {
+      "file": "aggiornamento-sanita59-2026-10-21.mjs",
+      "byte": 5513,
+      "sha256": "e784c7155ca370292db02e81b9610d1a36feb0862f52df9646fc98e2c1f6b6d6"
+    },
+    {
+      "file": "nextstop-integrita59-offset-noti-2026-10-21.json",
+      "byte": 981,
+      "sha256": "871fc0ee420651ca3de2f438eb00f771eac754112bbc8ad61b6b02e102e3dee8"
+    },
+    {
+      "file": "nextstop-pubblicazione63-build-2026-10-21.log",
+      "byte": 57620,
+      "sha256": "8df5c31163851399b1b9219eac5fd9715cbbd550139ef1fb32669b00886ebbea"
+    },
+    {
+      "file": "nextstop-pubblicazione63-hook-reale-2026-10-21.json",
+      "byte": 360,
+      "sha256": "dbda1487db929036c20a4c76a3a772fe03147f994c8059d076f9ca642088cb3b"
+    },
+    {
+      "file": "nextstop-pubblicazione63-links-2026-10-21.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-pubblicazione63-mirato-2026-10-21.log",
+      "byte": 3241,
+      "sha256": "0d4f47de6230655ef20de200e870738c76fc63f25397d7bc29c1fc5d3191d146"
+    },
+    {
+      "file": "nextstop-pubblicazione63-mirato-diagnostica-2026-10-21.log",
+      "byte": 1999,
+      "sha256": "7046435d11ee14b069ae23b63d739451ccc2bccb381539c71afd1432f86f7c4a"
+    },
+    {
+      "file": "nextstop-pubblicazione63-mirato-ripresa-2026-10-21.log",
+      "byte": 2001,
+      "sha256": "93c0d186314273ff74fea802efbcdf27bfa2ccff7fc38520d64b7351c0c97a44"
+    },
+    {
+      "file": "nextstop-pubblicazione63-output-2026-10-21.json",
+      "byte": 203,
+      "sha256": "4a831ac2929d550cbe309336fc34b1cd29518c5b16b962b390c5e55219d535e6"
+    },
+    {
+      "file": "nextstop-pubblicazione63-prima-2026-10-21.log",
+      "byte": 7359,
+      "sha256": "03161f4ac4bd30fdd8b1193f3ab60d7a2bf93eed92bdcc799966912754eafc21"
+    },
+    {
+      "file": "nextstop-pubblicazione63-riscontro-2026-10-21.json",
+      "byte": 777,
+      "sha256": "1ea955b2f1efafb86542bd97ebf87b3352b4843b8b431897c39b3b361f55d589"
+    },
+    {
+      "file": "nextstop-pubblicazione63-test-2026-10-21.log",
+      "byte": 68329,
+      "sha256": "77e4f8fd4ebcc84b54272a137a5478ced095e2974282c29d8614e3f9f0647120"
+    },
+    {
+      "file": "nextstop-runtime62-2026-10-21/confronto-byte.json",
+      "byte": 1425,
+      "sha256": "49815246e4b6a10e216d176d4c64b72b2689e11da060b8b389e418715806a312"
+    },
+    {
+      "file": "nextstop-runtime62-2026-10-21/copie-node2419/napoli/itinerari/percorsi-alternativi.json",
+      "byte": 3708824,
+      "sha256": "a673f295748ce706b2a09eada16ab8735e60b68d438ba3dda07ada666f87231b"
+    },
+    {
+      "file": "nextstop-runtime62-2026-10-21/copie-node2419/napoli/itinerari/percorsi.json",
+      "byte": 2741362,
+      "sha256": "7e63da6d4c63713a1ca40663feb2de751526ad3749baa3dfed8b402c41e2a841"
+    },
+    {
+      "file": "nextstop-runtime62-2026-10-21/copie-node2419/sw.js",
+      "byte": 6915,
+      "sha256": "52be1ae074215ea09c6fb3b5dc00c1ff21cbb02453bd9ec5a42764b48c24d3f2"
+    },
+    {
+      "file": "nextstop-runtime62-2026-10-21/finale.json",
+      "byte": 122395,
+      "sha256": "b0f8778ebe65204dc375846e619b44babdba414bc8b72431c7c74f4d2b0add48"
+    },
+    {
+      "file": "nextstop-runtime62-2026-10-21/node2419.json",
+      "byte": 123061,
+      "sha256": "35101c73588d2ecb0a0d923bd0801ed58b74c526cb5f10e606933373c55839c7"
+    },
+    {
+      "file": "nextstop-runtime62-2026-10-21/prima.json",
+      "byte": 122356,
+      "sha256": "ca2ab492bea94cc151626e22e7655f146f4139dddad70530ad7c1926233a0483"
+    },
+    {
+      "file": "nextstop-runtime62-node2419-build-2026-10-21.log",
+      "byte": 830,
+      "sha256": "481c78e69d69fcd8cff6a98a9696f3d568315e57798c12d07b93588c71c5d106"
+    },
+    {
+      "file": "nextstop-runtime62-node2419-finale-build-2026-10-21.log",
+      "byte": 57595,
+      "sha256": "a444c1fb533f15ebf9913eb77f89aca3316fe8fe0be75ffc9394faa968ebd391"
+    },
+    {
+      "file": "nextstop-runtime62-ordinario-build-2026-10-21.log",
+      "byte": 57625,
+      "sha256": "e191cfd3b5d2b4a6fee7104744335e1afd4be019ab50128efb0e286c266f1477"
+    },
+    {
+      "file": "nextstop-runtime62-ordinario-links-2026-10-21.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-sanita59-build-2026-10-21.log",
+      "byte": 57614,
+      "sha256": "e1ee5b070f37183ac9e6b7106834a45147ec817eb98e0c4b6de2eb4db622bc63"
+    },
+    {
+      "file": "nextstop-sanita59-links-2026-10-21.log",
+      "byte": 111,
+      "sha256": "af32b80dc65671d5712abbfb31ac59b6410209773bbdebaaa210430184979309"
+    },
+    {
+      "file": "nextstop-sanita59-mirato-2026-10-21.log",
+      "byte": 1588,
+      "sha256": "6b8c98057f66d4e9b36461a8a0e8dad9054ddac6bb9f36bb29c07cdc5eb28730"
+    },
+    {
+      "file": "nextstop-sanita59-prima-2026-10-21.json",
+      "byte": 1533,
+      "sha256": "89cba1bdba75b030dad445a331be0529205e96bb359253a302cfc5c544ed1195"
+    },
+    {
+      "file": "nextstop-sanita59-prima-2026-10-21.log",
+      "byte": 1590,
+      "sha256": "e08255164cbb109bfaa977bbb3d1c1545b8a6b1f4f4d01f799d8b603f9384875"
+    },
+    {
+      "file": "nextstop-sanita59-test-2026-10-21.log",
+      "byte": 67622,
+      "sha256": "2d0c2842f713f24d0fd5479ddd678cf9e1b513c449668e59db9f5714c90b42ab"
+    },
+    {
+      "file": "nextstop-tipi61-2026-10-21/inventario-finale.json",
+      "byte": 4327,
+      "sha256": "a8ea54ee504c925f99c61725dc10f7d743756cc99c32e3a09942faad3af81c32"
+    },
+    {
+      "file": "nextstop-tipi61-2026-10-21/inventario.json",
+      "byte": 4285,
+      "sha256": "360221b06a726025753267101dc571cc04c093ad421dded6cacedf04234daf9d"
+    },
+    {
+      "file": "nextstop-tipi61-2026-10-21/package.proposta.json",
+      "byte": 224,
+      "sha256": "3beb539b78e3d83aa10b30b8283a0f659d1e0f8e27132164dc08b0d066c87f28"
+    },
+    {
+      "file": "nextstop-tipi61-2026-10-21/tsconfig.app.proposta.json",
+      "byte": 308,
+      "sha256": "5f8e21746a2cd2611164627d8302d96ce954cde631433d1b35915bf95568aa63"
+    },
+    {
+      "file": "nextstop-tipi61-2026-10-21/tsconfig.js.proposta.json",
+      "byte": 87,
+      "sha256": "354193195f0243401e5ef070de0d08fcdf899964211185897e9f1f8d5dd7fd66"
+    },
+    {
+      "file": "nextstop-tipi61-compatibilita-2026-10-21.json",
+      "byte": 1603,
+      "sha256": "1687f13d0d85f0010ebed64b30a8695dfcb7d07dcb45c5b4c4a7778a0a502bdf"
+    },
+    {
+      "file": "nextstop-tipi61-metadati-2026-10-21.json",
+      "byte": 2388,
+      "sha256": "0d6e0c3412d8e6ce3affea18fb975589f6b380f8b65c8699bf26674485cf2edb"
+    },
+    {
+      "file": "nextstop-trasferimento60-2026-10-21.log",
+      "byte": 324,
+      "sha256": "15041149fe3d340c7f7b3783eeefcc52c2011d3cc5f6d9b3a0e55077cc1a21ce"
+    },
+    {
+      "file": "nextstop-trasferimento60-2026-10-21/applicazione-215619d.patch",
+      "byte": 627141,
+      "sha256": "deb323cdc505235e1b924103008f666ffac873f9f5b5260e5751c57dc032eb55"
+    },
+    {
+      "file": "nextstop-trasferimento60-2026-10-21/risultati.json",
+      "byte": 27342,
+      "sha256": "5f678d59a74baf86efbd91ebd92999de1625624b07983943484f066e3e486cb8"
+    },
+    {
+      "file": "nextstop-trasferimento60-finale-2026-10-21/applicazione-8b5b716.patch",
+      "byte": 637689,
+      "sha256": "5d09e5a3f7071a8ba9042bbb3ebacdf15ec71709125243f9cae1332949b27137"
+    },
+    {
+      "file": "nextstop-trasferimento60-finale-2026-10-21/risultati.json",
+      "byte": 28180,
+      "sha256": "4000b5d6c575a826058d3cc14407f33cd60c48764af49cc095afc1d52d24a3fb"
+    },
+    {
+      "file": "nextstop-trasferimento63-finale-2026-10-21.log",
+      "byte": 324,
+      "sha256": "2cbd068e3f883ab13dfb9dbea930eab48cb8f0dc717b51f6c83ab0bd3b81d650"
+    },
+    {
+      "file": "verifica-runtime62-2026-10-21.mjs",
+      "byte": 1814,
+      "sha256": "35a7fb21a4f94ad6d98e184c8dacf486da3f46f9e7cc9c0f957c13b9d8c911b1"
+    },
+    {
+      "file": "verifica-trasferimento60-2026-10-21.mjs",
+      "byte": 5347,
+      "sha256": "3a9f3ca56c75e754313ce4d22ed4495fc86f2e76dd3cd6bc7f1c42df10b76921"
+    },
+    {
+      "file": "verifica-trasferimento63-finale-2026-10-21.mjs",
+      "byte": 5354,
+      "sha256": "7dd9e7a6dfdf211a4bb45cd960c0078a6e831fde601a470a0ecfd39a06062444"
+    }
+  ],
+  "limite": "Copie temporanee Git escluse, patch e risultati inclusi. Include log falliti/interrotti come prove negative. Non sostituisce i manifesti precedenti."
+}

@@ -16,7 +16,9 @@ Per orari/accessi partire dalla [procedura breve](PROCEDURA.md). Non leggere tut
 
 Ogni comando è preceduto da `node aggiornamenti/leggi.mjs`. `aiuto` elenca le opzioni. Lo strumento è locale, senza dipendenze, rete o scritture. I contenuti operativi sono in JSON per poterli selezionare senza caricare l’intero registro nel contesto dell’AI; i documenti applicativi originali restano YAML.
 
-La versione 2 mantiene 106 schede, 137 canali, sei pubblicazioni e tutti i riscontri. Una pagina aperta, una fonte con orari ordinari e un controllo completo sono stati diversi. Il riesame ha 54 URL di partenza (13 originali leggibili, 31 con alternative anche parziali/storiche, 10 senza alternativa utile), più due locali senza fonte ufficiale verificabile. **Nessun orario applicativo aggiornato e nessun controllo completo concluso.**
+Al riordino iniziale del19ottobre, la versione2 manteneva106 schede,137 canali, sei pubblicazioni e tutti i riscontri. Una pagina aperta, una fonte con orari ordinari e un controllo completo sono stati diversi. Il riesame aveva54 URL di partenza (13 originali leggibili,31 con alternative anche parziali/storiche,10 senza alternativa utile), più due locali senza fonte ufficiale verificabile; in quel passaggio non erano stati aggiornati orari applicativi o conclusi controlli completi.
+
+**Stato del24ottobre:** correzioni mirate applicate,16 gruppi aperti/10 recuperati e un controllo periodico completo su106; nuove pubblicazioni conservate separatamente. [Chiusura84 e limiti](rapporti/2026-10-24-chiusura-84.md). Per riprendere usare la singola scheda e i metadati attuali, senza rileggere o ricontrollare tutto il registro.
 
 ## Cosa c'è qui
 - `fonti-dati.yaml`: l'elenco dei **dati che arrivano da un file o da un servizio** (bus ANM, strade OpenStreetMap, quote del terreno, risultati). Per ognuno: da dove viene, che licenza ha, come si riscarica (il comando), quali file del sito cambiano, fino a quando vale, quando va ricontrollato.

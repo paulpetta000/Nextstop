@@ -4,6 +4,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
 import { fileURLToPath } from 'node:url';
+import { verificaPercorsiPubblicati } from './verifica-percorsi.mjs';
 
 // Pagine salvate subito alla prima visita: le informazioni pratiche
 const CORE = [
@@ -22,12 +23,15 @@ const INTERATTIVE = {
   '/napoli/dove-mangiare/': []
 };
 
+/** @returns {import('astro').AstroIntegration} */
 export default function serviceWorker() {
   return {
     name: 'service-worker',
     hooks: {
       'astro:build:done': ({ dir, logger }) => {
         const out = fileURLToPath(dir);
+        verificaPercorsiPubblicati(out);
+        /** @type {[string,string][]} */
         const files = [];
         for (const url of CORE) {
           const f = path.join(out, url, 'index.html');
@@ -36,6 +40,7 @@ export default function serviceWorker() {
         }
         // script, dati e immagini piccole delle pagine interattive (anche gli script importati da altri script)
         const visti = new Set();
+        /** @param {string} u */
         const aggiungi = (u) => {
           if (visti.has(u)) return;
           const f = path.join(out, u, u.endsWith('/') ? 'index.html' : '');
@@ -67,6 +72,7 @@ export default function serviceWorker() {
         // rimangono offline anche quando si pubblica una sola rifinitura grafica.
         const datiHash = crypto.createHash('sha256');
         const cartellaDati = path.join(out, 'napoli/itinerari');
+        /** @param {string} cartella */
         const leggiDati = cartella => {
           for (const f of fs.readdirSync(cartella, { withFileTypes: true }).sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0))) {
             const file = path.join(cartella, f.name);

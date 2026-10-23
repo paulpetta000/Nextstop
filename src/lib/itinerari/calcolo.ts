@@ -280,7 +280,8 @@ export function lontane(C: Citta, it: Itinerario, g: number, fatte: Set<string> 
       if (k === g || A.gita) return;
       const altre = A.tappe.filter(x => tappaDi(C, x)?.tipo === 'citta');
       if (!altre.length) return;
-      const e = inserimento(C, s, altre, id);
+      const destinazione = scenarioDi(dataDelGiorno(it, k), A.inizio, it.piedi);
+      const e = inserimento(C, destinazione, altre, id);
       if (e < meglio) { meglio = e; giorno = k; }
     });
     if (giorno === it.giorni.length) {
@@ -356,7 +357,7 @@ function scambi(C: Citta, s: Scenario, primo: string | null, liberi: string[], u
   return o;
 }
 
-export function ordinePiuCorto(C: Citta, it: Itinerario, g: number): { ordine: string[]; risparmio: number } | null {
+export function ordinePiuCorto(C: Citta, it: Itinerario, g: number, valuta?: (ordine: string[]) => number): { ordine: string[]; risparmio: number } | null {
   const G = it.giorni[g];
   const ev = C.evento?.id;
   const T = G.tappe.filter(id => tappaDi(C, id)?.tipo === 'citta' || id === ev);
@@ -373,10 +374,11 @@ export function ordinePiuCorto(C: Citta, it: Itinerario, g: number): { ordine: s
   }
   ordine.push(...migliorTratto(C, s, prima, tratto, null));
   if (ordine.join() === T.join()) return null;
-  // controllo con gli orari veri (i mezzi cambiano con l'ora)
-  const ora = calcolaGiorno(C, it, g).spostamenti;
+  // La pagina valuta il giorno completo, con pause, margini e contesto dal vivo.
+  // La build conserva il controllo di base con gli orari veri.
+  const ora = valuta ? valuta(T) : calcolaGiorno(C, it, g).spostamenti;
   const prova = { ...it, giorni: it.giorni.map((x, i) => (i === g ? { ...x, tappe: ordine } : x)) };
-  const dopo = calcolaGiorno(C, prova, g).spostamenti;
+  const dopo = valuta ? valuta(ordine) : calcolaGiorno(C, prova, g).spostamenti;
   const risparmio = ora - dopo;
   return risparmio >= RISPARMIO_MINIMO ? { ordine, risparmio } : null;
 }

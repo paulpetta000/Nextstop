@@ -1,6 +1,8 @@
 ---
 import { slugFonte, argomenti } from '../../lib/fonti-registro.mjs';
 import { dataLunga } from '../../lib/formato';
+import type { FonteRegistro } from '../../lib/fonti-registro-tipi';
+interface Props { fonte: FonteRegistro; prefisso?: string; contesto?: boolean }
 const { fonte:s, prefisso='', contesto=true } = Astro.props;
 const id = prefisso + 'fonte-' + slugFonte(s.id);
 const full=s.titoloOriginale;

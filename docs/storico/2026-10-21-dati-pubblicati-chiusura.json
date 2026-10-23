@@ -1,0 +1,41 @@
+{
+  "data": "2026-10-21T13:09:51.869Z",
+  "codice": "e8d10f867808d9b357732b651ea730c0773fa0c2",
+  "riferimento": "40286825b9d07c9cece8",
+  "confronti": [
+    {
+      "file": "mappa.json",
+      "uguale": true,
+      "sha256Pubblicato": "3c813d8d1c1ecba9de70bb8e08d72bf9327d93f9326ee9947647bb65a8dc7db3",
+      "riferimento": "40286825b9d07c9cece8"
+    },
+    {
+      "file": "percorsi.json",
+      "uguale": true,
+      "sha256Pubblicato": "a9062550a142c314d13f4fec3adcce24c5458cedc1fa5b6cd1f22ac4aaf494a6",
+      "riferimento": "40286825b9d07c9cece8"
+    },
+    {
+      "file": "percorsi-alternativi.json",
+      "uguale": true,
+      "sha256Pubblicato": "d02e240e970a9f3ce6313921c79ae03f9bf21c7168bb945664e8dcd95bbc56cc",
+      "riferimento": "40286825b9d07c9cece8"
+    },
+    {
+      "file": "partenze.json",
+      "uguale": true,
+      "sha256Pubblicato": "51f43ade1b9cfd50560474ec66125f432a47decb023df30fca8e58a4f622d170",
+      "riferimento": "40286825b9d07c9cece8"
+    },
+    {
+      "file": "scenari.json",
+      "uguale": true,
+      "sha256Pubblicato": "4864cd57c7c39ccd3c7ab740fe115b95472020e71b3bda6fdf851fdc31075744",
+      "riferimento": "40286825b9d07c9cece8"
+    }
+  ],
+  "scenariRicostruiti": 6,
+  "matriciConfrontate": 18,
+  "punti": 87,
+  "errori": []
+}

@@ -87,5 +87,29 @@
       "V04"
     ],
     "controllo_completo": false
+  },
+  "ultimo_riscontro_parziale": {
+    "data": "2026-10-22",
+    "rapporto": "aggiornamenti/rapporti/2026-10-22-anm-browser.md",
+    "modalita": "rapporto",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "ritentare_entro": "2026-10-25"
+  },
+  "riscontro_73": {
+    "data": "2026-10-23",
+    "rapporto": "docs/storico/2026-10-23-revisione-73.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": true,
+    "caso": "V04",
+    "nota": "Corretti generatore e cinque JSON: Acton 31 collegamenti principali prima, zero dopo; escluso ascensore Chiaia, funicolare conservata. Riapertura da verificare prima di nuova generazione. Restano avvisi, scale mobili e durate; controllo completo e scadenza invariati."
+  },
+  "riscontro_72": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V04",
+    "nota": "Recuperata anche la pagina distinta delle scale mobili. Acton risulta in manutenzione ma 31 collegamenti delle matrici principali lo usano: riproduzione fallita come atteso, correzione e rigenerazione da fare con Sol alto. Non confondere ascensori, scale mobili e orari del parco."
   }
 }

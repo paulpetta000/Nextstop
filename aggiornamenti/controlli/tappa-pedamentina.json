@@ -27,7 +27,8 @@
   ],
   "fonti_esistenti": [
     "tp-comune-pedamentina",
-    "osm"
+    "osm",
+    "tp-comune-cantieri-settembre-2026"
   ],
   "canali_scoperta": [
     "gestore-www-comune-napoli-it",
@@ -50,7 +51,9 @@
   "note": [
     "Non attribuire un orario di apertura alla strada o al punto visto dall’esterno; cercare invece limitazioni, cantieri, ordinanze e accessi effettivi."
   ],
-  "pubblicazioni_rilevate": [],
+  "pubblicazioni_rilevate": [
+    "pedamentina-cantiere-2026-10-19"
+  ],
   "ritentativo_accesso": {
     "data": "2026-10-19",
     "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
@@ -75,5 +78,21 @@
       "V08"
     ],
     "controllo_completo": false
+  },
+  "riscontro_72": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V08",
+    "nota": "Recuperati percorso descrittivo e nuovo avviso comunale del 30 settembre: dal 19 ottobre al 6 novembre scavi su corso Vittorio Emanuele e marciapiede fino all’inizio della Pedamentina. Non è una dichiarazione di chiusura dell’intera scalinata; percorribilità integrale ancora da verificare."
+  },
+  "riscontro_82": {
+    "data": "2026-10-24",
+    "rapporto": "aggiornamenti/rapporti/2026-10-24-pedamentina-82.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": true,
+    "caso": "V08",
+    "nota": "Rimossa garanzia sempre percorribile; registrata fase lavori 19 ottobre–6 novembre presso accesso, senza chiusura totale o riapertura dedotta. Percorsi generati invariati; ricontrollare il fatto il 27 ottobre."
   }
 }

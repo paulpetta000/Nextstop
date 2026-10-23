@@ -14,8 +14,8 @@
     - "node scripts/itinerari/costruisci.mjs <cartella>   (le linee usate sono nella tabella BUS in testa allo script)"
     - "rileggere il testo «tempi» in src/testi/itinerari.yaml (date di validità) e la fonte tp-anm-gtfs in src/data/fonti.yaml"
   cambia: [src/data/tempi-tappe.json, src/data/percorsi-tappe.json, src/data/percorsi-alternativi.json, src/data/partenze-bus.json, src/data/linee-bus.json]
-  valido-fino: 2026-12-31   # il file dice: dal 22/09/2026 al 31/12/2026 (orario d'autunno)
-  controllato: 2026-10-03
+  valido-fino: 2026-12-31   # feed scaricato il 22/10: dal 19/10/2026 al 31/12/2026
+  controllato: 2026-10-22
   ricontrollare: 2026-12-31 # poi: quando ANM pubblica l'orario 2027 e prima del 22/05/2027
   nota: "Orari programmati, non tempi reali. Non ci sono deviazioni né lavori. Le «linee» ACTON, CHIAIA, ECHIA, SANITA, VENTA sono ascensori, non bus. Ricerca: ricerca/2026-10-03-autobus-note/."
 
@@ -27,8 +27,8 @@
   aggiorna:
     - "node scripts/itinerari/scarica.mjs <cartella>"
     - "node scripts/itinerari/costruisci.mjs <cartella>"
-  cambia: [src/data/tempi-tappe.json, src/data/percorsi-tappe.json]
-  controllato: 2026-10-03
+  cambia: [src/data/tempi-tappe.json, src/data/percorsi-tappe.json, src/data/percorsi-alternativi.json, src/data/partenze-bus.json, src/data/linee-bus.json]
+  controllato: 2026-10-22
   ricontrollare: 2027-04-30
   nota: "Il server principale può non rispondere dal cloud: lo script prova gli altri due. Se si aggiungono tappe, rifare sempre costruisci.mjs (la build si ferma finché non è rifatto)."
 
@@ -39,7 +39,7 @@
   licenza: "Copernicus, uso libero con citazione"
   aggiorna: ["node scripts/itinerari/scarica.mjs <cartella>   (le scarica insieme a OpenStreetMap)"]
   cambia: [src/data/tempi-tappe.json]
-  controllato: 2026-10-03
+  controllato: 2026-10-22
   ricontrollare: null       # il terreno non cambia; rifare solo se cambia il riquadro
   nota: "Misura anche i tetti: lo script lo corregge (vedi commenti in costruisci.mjs)."
 

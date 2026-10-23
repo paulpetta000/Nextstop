@@ -1,0 +1,96 @@
+{
+  "differenze": [
+    {
+      "file": "tempi-tappe.json",
+      "uguale": true
+    },
+    {
+      "file": "partenze-bus.json",
+      "uguale": true
+    },
+    {
+      "file": "linee-bus.json",
+      "uguale": true
+    },
+    {
+      "file": "percorsi-tappe.json",
+      "uguale": true
+    },
+    {
+      "file": "percorsi-alternativi.json",
+      "uguale": false
+    }
+  ],
+  "candidato7898": {
+    "sorgente": "p.unEqSGFCC~B182.2nEmSBC_G8GDCDB5BgB~p.y-DkaCBADDB~L2.w-D8ZTIlLwKrL2MjPyJ~p.m4C86BNGBADkBkBLCEGACCCoBICCEML~B140.45Ci9BACPOBEB6EIGSwBAMDIPULMhBKTI7CgC~p.s0CsoCACJICCDC",
+    "bundle": "p.unEqSGFCC~B182.2nEmSBC_G8GDCDB5BgB~p.y-DkaCBADDB~L2.w-D8ZTIlLwKrL2MjPyJ~p.m4C86BNGBADkBkBLCEGACCCoBICCEML~B140.45Ci9BACPOBEB6EIGSwBAMDI@ULMhBKTI7CgC~p.s0CsoCACJICCDC"
+  },
+  "controlli": {
+    "source_su_source": "riuscito",
+    "source_su_bundle": "Dati generati: percorsi-alternativi.json: disegno del candidato 7898 non valido; rifai tutto con node scripts/itinerari/costruisci.mjs <cartella>",
+    "bundle_su_source": "riuscito",
+    "bundle_su_bundle": "Dati generati: percorsi-alternativi.json: disegno del candidato 7898 non valido; rifai tutto con node scripts/itinerari/costruisci.mjs <cartella>"
+  },
+  "decoder": {
+    "source": [
+      {
+        "modo": "p",
+        "punti": 3
+      },
+      {
+        "modo": "B182",
+        "punti": 6
+      },
+      {
+        "modo": "p",
+        "punti": 4
+      },
+      {
+        "modo": "L2",
+        "punti": 5
+      },
+      {
+        "modo": "p",
+        "punti": 12
+      },
+      {
+        "modo": "B140",
+        "punti": 14
+      },
+      {
+        "modo": "p",
+        "punti": 5
+      }
+    ],
+    "bundle": [
+      {
+        "modo": "p",
+        "punti": 3
+      },
+      {
+        "modo": "B182",
+        "punti": 6
+      },
+      {
+        "modo": "p",
+        "punti": 4
+      },
+      {
+        "modo": "L2",
+        "punti": 5
+      },
+      {
+        "modo": "p",
+        "punti": 12
+      },
+      {
+        "modo": "B140",
+        "punti": 14
+      },
+      {
+        "modo": "p",
+        "punti": 5
+      }
+    ]
+  }
+}

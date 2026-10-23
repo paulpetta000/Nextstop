@@ -21,6 +21,9 @@ import { fileURLToPath } from 'node:url';
 import yaml from 'js-yaml';
 import { firmaPosizioni } from '../../src/lib/itinerari/firma-posizioni.mjs';
 import { lineeBus } from './gtfs.mjs';
+import { validaOsm, validaQuote } from './ingressi.mjs';
+import { scriviFilePreparati } from '../scrivi-file.mjs';
+import { marcaGenerazione, validaProiezione } from '../../src/lib/itinerari/generazione-dati.mjs';
 
 const RADICE = fileURLToPath(new URL('../../', import.meta.url));
 const dir = process.argv[2];
@@ -50,7 +53,9 @@ const ogni = (feriale, sabato, domenica, { l6 = false } = {}) => ({
 });
 const LINEE = [
   { id: 'L1', nome: 'Linea 1', rel: 2168102, ritorno: 386098, attesa: ogni(5, 5, 5), accesso: 3, uscita: 2, velocita: 533 /* 32 km/h */, raggio: 320 },
-  { id: 'L6', nome: 'Linea 6', rel: 2168104, ritorno: 446007, attesa: ogni(7, 7, 7, { l6: true }), accesso: 2.5, uscita: 2, totale: 15, raggio: 260 },
+  // ANM L6, letta 22/10/2026: corse ogni 20 minuti; attesa media = metà frequenza.
+  // https://www.anm.it/s/linea-anm/a0YR200000FxeqbMAB/l6?language=it
+  { id: 'L6', nome: 'Linea 6', rel: 2168104, ritorno: 446007, attesa: ogni(10, 10, 10, { l6: true }), accesso: 2.5, uscita: 2, totale: 15, raggio: 260 },
   { id: 'L2', nome: 'Linea 2', rel: 2168103, ritorno: 445980, attesa: ogni(4, 8, 10), accesso: 1.5, uscita: 1.5, raggio: 200,
     // interrotta tra Campi Flegrei e Pozzuoli; Piazza Leopardi non è ancora una fermata confermata
     salta: ['Napoli Piazza Leopardi', 'Cavalleggeri Aosta', 'Napoli Cavalleggeri Aosta', 'Bagnoli-Agnano Terme', 'Pozzuoli'],
@@ -81,10 +86,16 @@ const BUS = {
 };
 // Ascensori pubblici gratuiti dell'ANM: la domenica e nei festivi chiudono alle 14:00
 const ASCENSORI_FERIALI = /Su[^;]*?0?7:30-14:00|PH,Su 0?7:30-14:00/;
+// ANM, stato letto il 23/10/2026: Acton e Chiaia in manutenzione.
+// https://www.anm.it/s/ascensori?language=it · nodi OSM, non la funicolare di Chiaia.
+// Non presumiamo una data di ripristino: riabilitare dopo nuova conferma ANM e rigenerare.
+// È un vincolo prudenziale dei dati attuali, non una previsione di chiusura per le date future.
+const ASCENSORI_IN_MANUTENZIONE = new Set([2217391295, 3803566239]);
 
 // ---------- Dati ----------
 const osm = JSON.parse(fs.readFileSync(path.join(dir, 'osm.json'), 'utf8'));
 const dem = JSON.parse(fs.readFileSync(path.join(dir, 'quote.json'), 'utf8'));
+validaOsm(osm);
 // i punti: le tappe in città e i locali di «Dove mangiare» (src/data/locali.yaml), che nel compositore sono tappe
 const tappe = [
   ...yaml.load(fs.readFileSync(path.join(RADICE, 'src/data/tappe.yaml'), 'utf8')).filter(t => t.tipo === 'citta'),
@@ -102,9 +113,10 @@ for (const e of osm.elements) {
 }
 
 // ---------- Quote ----------
-const Q = dem.quote, W = dem.w, H = dem.h;
 // filtro delle quote: raggio in punti della griglia, percentile e media mobile lungo la strada (metri)
 const RAGGIO = +(process.env.QUOTE_RAGGIO ?? 2), PERCENTILE = +(process.env.QUOTE_PERCENTILE ?? 0.25), MEDIA = +(process.env.QUOTE_MEDIA ?? 50);
+validaQuote(dem, { raggio: RAGGIO, percentile: PERCENTILE, media: MEDIA });
+const Q = dem.quote, W = dem.w, H = dem.h;
 const grezza = (i, j) => Q[Math.min(H - 1, Math.max(0, j)) * W + Math.min(W - 1, Math.max(0, i))];
 // valore basso dei 25 punti vicini (25° percentile, circa 150 m per lato): toglie buona parte dei tetti
 const filtrata = new Float32Array(W * H);
@@ -321,14 +333,15 @@ const BUSLINEE = GTFS.linee.map(B => {
   for (const ds of serve) {
     const [dir, sid] = ds.split('|');
     const s = B.fermate.get(sid);
-    const attesa = {};
+    const attesa = {}, discese = {};
     for (const sc of Object.keys(BUS.finestre)) {
       const n = B.passaggi[sc][ds] || 0, f = BUS.finestre[sc];
       attesa[sc] = n ? (f.a - f.da) / n / 2 : null;
+      discese[sc] = (B.discese[sc][ds] || 0) > 0;
     }
     const v = vicino(s, BUS.raggio, principale);
     if (!v) { senza++; fuori.set(`${B.id}:${dir}:${sid}`, { lat: s.lat, lon: s.lon }); continue; }
-    fermate.push({ id: `${B.id}:${dir}:${sid}`, linea: B.id, nome: s.nome, lat: s.lat, lon: s.lon, accessi: [v], attesa });
+    fermate.push({ id: `${B.id}:${dir}:${sid}`, linea: B.id, nome: s.nome, lat: s.lat, lon: s.lon, accessi: [v], attesa, discese });
     L.fermate.push(s.nome);
   }
   for (const a of B.archi) corse.push({ da: `${B.id}:${a.dir}:${a.da}`, a: `${B.id}:${a.dir}:${a.a}`, t: a.tempi, linea: B.id, unVerso: true, punti: a.punti });
@@ -364,12 +377,13 @@ function rete(scenario, modo = 'media') {
       const L = MEZZI.get(f.linea);
       if (L.bus && modo === 'senza') continue;
       let attesa = (f.attesa || L.attesa)[scenario.nome];
-      if (attesa == null) continue;    // linea ferma in questo scenario
-      if (L.bus && modo === 'subito') attesa = 0;
+      const sale = attesa != null, scende = L.bus ? !!f.discese[scenario.nome] : sale;
+      if (!sale && !scende) continue;    // nessun accesso in questo scenario
+      if (L.bus && modo === 'subito' && sale) attesa = 0;
       const pen = L.bus && modo === 'media' ? BUS.preferenza : 0;
       for (const ac of f.accessi) {
-        add(ac.nodo.id, { a: f.id, t: ac.m / PIEDI.metriAlMinuto + L.accesso + attesa + pen, m: ac.m, su: 0, tipo: 'sale', linea: L.id, ...(pen ? { pen } : {}) });
-        add(f.id, { a: ac.nodo.id, t: ac.m / PIEDI.metriAlMinuto + L.uscita, m: ac.m, su: 0, tipo: 'scende', linea: L.id });
+        if (sale) add(ac.nodo.id, { a: f.id, t: ac.m / PIEDI.metriAlMinuto + L.accesso + attesa + pen, m: ac.m, su: 0, tipo: 'sale', linea: L.id, ...(pen ? { pen } : {}) });
+        if (scende) add(f.id, { a: ac.nodo.id, t: ac.m / PIEDI.metriAlMinuto + L.uscita, m: ac.m, su: 0, tipo: 'scende', linea: L.id });
       }
     }
     for (const c of corse) {
@@ -381,7 +395,9 @@ function rete(scenario, modo = 'media') {
       if (!c.unVerso) add(c.a, { a: c.da, t, m: 0, su: 0, tipo: 'corsa', linea: c.linea });
     }
   }
-  const chiusi = new Set([...ascensori].filter(([, x]) => scenario.nome === 'festivo' && x.chiudeDomenica).map(([id]) => id));
+  const chiusi = new Set([...ascensori].filter(([id, x]) =>
+    ASCENSORI_IN_MANUTENZIONE.has(id) || (scenario.nome === 'festivo' && x.chiudeDomenica)
+  ).map(([id]) => id));
   const accantoChiusi = new Set();
   for (const id of chiusi) for (const e of adj.get(id) || []) accantoChiusi.add(e.a);
   const VUOTO = [];
@@ -588,10 +604,12 @@ const PARTENZE = GTFS.partenze(chiaviBus);
 }
 uscita.candidati = candidati.map(({ seg, m, mezzi }) => ({ seg, m, mezzi }));
 console.log(`Strade con il bus da valutare con le partenze vere: ${candidati.length}`);
-fs.writeFileSync(path.join(RADICE, 'src/data/tempi-tappe.json'), JSON.stringify(uscita) + '\n');
-console.log(`Scritto src/data/tempi-tappe.json (${punti.length} punti)`);
-fs.writeFileSync(path.join(RADICE, 'src/data/partenze-bus.json'), JSON.stringify({ generato: uscita.generato, firma, fonte: 'ANM, feed GTFS (IODL 2.0)', ...PARTENZE }) + '\n');
-console.log(`Scritto src/data/partenze-bus.json: ${chiaviBus.size} corse, ${PARTENZE.tipi.length} tipi di giorno, ${Math.round(JSON.stringify(PARTENZE).length / 1024)} kB`);
+const fileGenerati = {
+  'tempi-tappe.json': uscita,
+  'partenze-bus.json': { generato: uscita.generato, firma, fonte: 'ANM, feed GTFS (IODL 2.0)', ...PARTENZE }
+};
+let proiezione;
+console.log(`Preparati tempi e partenze (${punti.length} punti, ${chiaviBus.size} corse, ${PARTENZE.tipi.length} tipi di giorno)`);
 
 // Tutte le fermate delle linee bus (anche quelle lontane dalle tappe di oggi), con la frequenza di ogni scenario
 // al capolinea di partenza: servono per le tappe e i locali che verranno (la fermata più vicina). La pagina non le usa.
@@ -606,8 +624,8 @@ console.log(`Scritto src/data/partenze-bus.json: ${chiaviBus.size} corse, ${PART
     nota: 'ogni: minuti tra due corse in partenza dal primo capolinea della direzione, nella fascia dello scenario (orario programmato)',
     linee: GTFS.linee.map(B => ({ id: B.id, nome: B.nome, tipo: B.tipo, direzioni: B.direzioni.map(d => ({ ...d, ogni: ogni(B, d) })) }))
   };
-  fs.writeFileSync(path.join(RADICE, 'src/data/linee-bus.json'), JSON.stringify(file, null, 1) + '\n');
-  console.log(`Scritto src/data/linee-bus.json (${GTFS.linee.length} linee)`);
+  fileGenerati['linee-bus.json'] = file;
+  console.log(`Preparato src/data/linee-bus.json (${GTFS.linee.length} linee)`);
 }
 
 // ---------- Disegno dei percorsi per la mappa degli itinerari ----------
@@ -617,6 +635,8 @@ console.log(`Scritto src/data/partenze-bus.json: ${chiaviBus.size} corse, ${PART
 // solo quando apri la mappa. Per gli scenari diversi dal giorno feriale si salva solo ciò che cambia.
 {
   const M = JSON.parse(fs.readFileSync(path.join(RADICE, 'src/data/mappa.json'), 'utf8'));
+  proiezione = { w: M.w, h: M.h, box: M.box };
+  validaProiezione(proiezione);
   const KX = M.w / (M.box.e - M.box.w), KY = M.h / (M.box.n - M.box.s);
   const SCARTO = 0.8;
   const xy = ([lat, lon]) => [(lon - M.box.w) * KX, (M.box.n - lat) * KY];
@@ -672,12 +692,12 @@ console.log(`Scritto src/data/partenze-bus.json: ${chiaviBus.size} corse, ${PART
   }
   const conBus = candidati.map(c => codifica(c.pezzi));
   const file = { generato: uscita.generato, firma, punti: uscita.punti, unita: 'src/data/mappa.json', scenari };
-  fs.writeFileSync(path.join(RADICE, 'src/data/percorsi-tappe.json'), JSON.stringify(file) + '\n');
-  console.log(`Scritto src/data/percorsi-tappe.json (${Math.round(JSON.stringify(file).length / 1024)} kB)`);
+  fileGenerati['percorsi-tappe.json'] = file;
+  console.log(`Preparato src/data/percorsi-tappe.json (${Math.round(JSON.stringify(file).length / 1024)} kB)`);
   // le strade alternative (orari veri): file a parte, la pagina lo carica solo se la mappa le deve disegnare
   const alt = { generato: uscita.generato, firma, senza, candidati: conBus };
-  fs.writeFileSync(path.join(RADICE, 'src/data/percorsi-alternativi.json'), JSON.stringify(alt) + '\n');
-  console.log(`Scritto src/data/percorsi-alternativi.json (${Math.round(JSON.stringify(alt).length / 1024)} kB)`);
+  fileGenerati['percorsi-alternativi.json'] = alt;
+  console.log(`Preparato src/data/percorsi-alternativi.json (${Math.round(JSON.stringify(alt).length / 1024)} kB)`);
 }
 
 // ---------- Rapporto delle coppie richieste ----------
@@ -695,9 +715,16 @@ for (const x of rapporto) {
   for (const r of righe) console.log(`   ${r.k.padEnd(28)} ${r.t.toFixed(1).padStart(5)} min ${r.m ? Math.round(r.m) + ' m' : ''} ${r.su > 0.5 ? '+' + Math.round(r.su) + ' m' : ''} ${[...r.nomi].slice(0, 6).join(', ')}`);
 }
 
+// Serializziamo e prepariamo ogni uscita prima di sostituire i file precedenti.
+const marcati = marcaGenerazione(fileGenerati, proiezione);
+const uscite = Object.entries(marcati).map(([nome, dati]) => ({
+  file: path.join(RADICE, 'src/data', nome),
+  contenuto: JSON.stringify(dati, null, nome === 'linee-bus.json' ? 1 : undefined) + '\n'
+}));
 // Con PERCORSI=<file> salva il disegno dei percorsi delle coppie richieste (giorno feriale): serve alle mappe
 if (process.env.PERCORSI) {
   const disegni = Object.fromEntries(rapporto.filter(x => x.scenario === 'feriale').map(x => [`${x.da}|${x.a}`, { min: Math.round(x.min), pezzi: x.pezzi }]));
-  fs.writeFileSync(process.env.PERCORSI, JSON.stringify(disegni));
-  console.log(`\nPercorsi disegnati: ${Object.keys(disegni).length} in ${process.env.PERCORSI}`);
+  uscite.push({ file: process.env.PERCORSI, contenuto: JSON.stringify(disegni) });
 }
+scriviFilePreparati(uscite);
+console.log('Scritti tutti i file generati' + (process.env.PERCORSI ? ` e ${process.env.PERCORSI}` : ''));

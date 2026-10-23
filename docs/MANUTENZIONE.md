@@ -2,6 +2,14 @@
 
 Guida operativa del 16/10/2026, dopo l'audit di main `75d25e6` e le correzioni locali dei primi due blocchi. Stato corrente in [PROGRESS](../PROGRESS.md), struttura e comandi nel [README](../README.md). Non sostituisce l'autorizzazione a installare, pubblicare o cambiare le impostazioni remote.
 
+## Stato ricontrollato il 20 ottobre 2026
+
+La [CI main](https://github.com/paulpetta000/Nextstop/actions/runs/39420459957) è riuscita su **b6d2a36ec6260b4bed7f8dbf7dc6089c57c17991**: passaggi di checkout del commit, installazione senza script, test, build e link tutti completati. Main risulta ancora non protetto e i ruleset sono vuoti; nessuna impostazione cambiata. Il ramo locale deriva da 96e480d e contiene correzioni ulteriori: quel verde remoto non le verifica. Confronto compatto remoto: 11 commit avanti, elenco di 300 file da considerare parziale; integrazione e verifica del risultato complessivo restano pendenti.
+
+Audit del solo lockfile ripetuto senza installazioni o modifiche: **zero segnalazioni note**, [risultato](storico/2026-10-20-audit-dipendenze.json). Il limite funzionale della cache descritto sotto resta distinto dall’audit. Non sono stati installati compilatore TypeScript o controllo Astro; configurazione strict, rimozione dei tipi nei test e build non equivalgono a un controllo completo dei tipi.
+
+Le sezioni del 16 ottobre sotto conservano motivazioni e cronologia. Le loro date e indicazioni di CI ancora da eseguire sono storiche; per prove e lavoro residuo corrente usare [il riepilogo delle aree](storico/2026-10-20-riepilogo-aree.md).
+
 ## GitHub e commit verificati
 
 Ricontrollato via API il 16/10/2026: [main](https://api.github.com/repos/paulpetta000/Nextstop/branches/main) è ancora `75d25e67bd413b724a5cfc4afb05612d1cfac165`, `protected:false`; [ruleset](https://api.github.com/repos/paulpetta000/Nextstop/rulesets) vuoti. Nessuna impostazione remota modificata. Un controllo riuscito non è oggi un requisito imposto al merge.

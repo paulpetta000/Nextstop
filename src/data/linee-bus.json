@@ -1,14 +1,14 @@
 {
- "generato": "2026-10-04",
+ "generato": "2026-10-23",
  "fonte": "ANM, feed GTFS https://www.anm.it/google/google-transit.zip (licenza IODL 2.0)",
- "dal": "20260922",
+ "dal": "20261019",
  "al": "20261231",
  "giorni": {
-  "feriale": "20260922",
-  "sabato": "20261003",
-  "sabato-pomeriggio": "20261003",
-  "domenica": "20261004",
-  "festivo": "20261004"
+  "feriale": "20261020",
+  "sabato": "20261024",
+  "sabato-pomeriggio": "20261024",
+  "domenica": "20261025",
+  "festivo": "20261025"
  },
  "fasce": {
   "feriale": {
@@ -4155,6 +4155,18 @@
        "lon": 14.1951581046068
       },
       {
+       "id": "2101",
+       "nome": "GIULIO CESARE",
+       "lat": 40.8244342417355,
+       "lon": 14.1984600356173
+      },
+      {
+       "id": "2026",
+       "nome": "AUGUSTO - VENIERO",
+       "lat": 40.8263071035887,
+       "lon": 14.1996322861313
+      },
+      {
        "id": "2027",
        "nome": "AUGUSTO - POLITECNICO",
        "lat": 40.8258106490677,
@@ -4955,5 +4967,6 @@
     }
    ]
   }
- ]
+ ],
+ "generazione": "871e208a110c9d3830c2728af51e1dcce83c7fdd1a361fbbe4e11b2554ed7f88"
 }

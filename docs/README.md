@@ -1,6 +1,30 @@
 # Documentazione · scegliere cosa leggere
 
+Stato corrente: [Sansevero 79](../aggiornamenti/rapporti/2026-10-23-sansevero-79.md), correzione prenotazione e confronto periodico concluso; CI Ubuntu riuscita e anteprima READY sul commit44cbdbb. Build locale bloccata dal file Vite installato, senza diagnosi della causa o riparazione; controllo visivo79 ancora aperto perché il browser richiede accesso Vercel.
+
+Seguito documentale corrente: [Capri, Caremar e L6 78](../aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md), programmi distinti dal servizio effettivo, applicazione invariata.
+
+Seguito documentale: [mercati 77](../aggiornamenti/rapporti/2026-10-23-mercati-77.md), proposta storica distinta dal nuovo calendario; nessuna modifica applicativa.
+
+Seguito corrente: [San Lorenzo 76](../aggiornamenti/rapporti/2026-10-23-san-lorenzo-76.md), correzione mirata della guida obbligatoria; 209 fonti, 792 prove. Controllo completo ancora aperto; avvisi e locali nel rapporto 75.
+
+Seguito corrente: [fonti, locali e avvisi 75](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md), 16 gruppi aperti e dieci con fonte/orario ordinario recuperati. Dati applicativi invariati; avvisi temporanei registrati con i loro limiti.
+
 Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [regole comuni](REGOLE.md) e la prima sezione dello [stato corrente](../PROGRESS.md), approfondendo i blocchi precedenti solo se pertinenti. Poi scegli solo la riga del compito, senza aprire tutti i rimandi.
+
+Stato corrente: [revisione 73, correzione Acton e verifiche](storico/2026-10-23-revisione-73.md), codice 5fce2d7, 792 test e dati rigenerati su Ubuntu: collegamenti con Acton 31 → 0. Seguito ordinario con Sol medio dopo la consegna tecnica; restano 17 gruppi aperti e nove recuperati, backup Git non affidabile lasciato da parte.
+
+Riscontro precedente: [fonti e riproduzione Acton, revisione 72](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md); descrive il problema prima della correzione.
+
+Seguito corrente: [fonti, revisione 74](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-74.md), confronto Capri e limiti ufficiali; 17 gruppi ancora aperti, nessun controllo completo rinnovato. Sol medio per proseguire.
+
+Seguito precedente: [fonti, revisione 71](../aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md), 17 gruppi aperti e nove con fonte/orario ordinario recuperati. Solo rapporto e registro; codice e limiti tecnici restano quelli sotto.
+
+Stato corrente: [revisione 70, L6 e dati coordinati](storico/2026-10-22-revisione-70.md), codice a9c4403, 784 test, CI Ubuntu e preview riuscite. **La copia Git indipendente fallisce il controllo finale**, dopo un primo successo: leggere il [rapporto integrità](storico/2026-10-22-integrita-70.md) e usare anche gli archivi separati. Seguito ordinario con Sol medio, limiti e stime nel rapporto.
+
+Stato precedente: [revisione 69, fuoco e nuove fonti](storico/2026-10-22-revisione-69.md), codice fe45e9d, 780 test e CI Ubuntu riuscita; dati/fonti ancora parziali e stime nel rapporto.
+
+Stato precedente: [revisione 68, verifiche e limiti](storico/2026-10-22-revisione-68.md), codice 51c5dfb, 777 test, tipi rigorosi e CI Ubuntu riusciti; ramo e anteprima pubblicati con consenso, main invariato. Worker provato offline e in aggiornamento su origine isolata; Lighthouse 97 home/compositore e axe esteso.
 
 ## Fonti per argomento
 

@@ -1,5 +1,9 @@
 # Orari dei locali nuovi, da verificare (Enrico)
 
+## Seguito del 23/10/2026 · revisione 75
+
+Granfuoco: settimana ordinaria recuperata dalla scheda Google già prevista sotto, inclusi pranzo sabato/domenica. Per i sei locali restano **quattro domande**: contrasti Google/Facebook di Barbeqool, Colantuono e Friggitoria Vomero, più riapertura di De Luca indicato temporaneamente chiuso. I social dei primi due indicano aggiornamento di circa quattro anni fa. [Confronto, orari e limiti](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md). Nessun locale aggiunto al sito; ferie/eccezioni e controlli completi restano distinti dal recupero della fonte.
+
 ## Riesame del 19/10/2026 · tutti i sei locali inclusi
 
 Il vecchio elenco è stato ricontrollato, compreso De Luca. Siti leggibili per **Barbeqool, Colantuono’s, Granfuoco e Da Rosetta**; i primi tre non pubblicano una settimana di orari nel contenuto consultabile. Per **Friggitoria Vomero e De Luca** non è stata verificata una fonte ufficiale leggibile.

@@ -1,0 +1,19 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+const file=fs.readFileSync(new URL('../src/scripts/itinerari/compositore/scheda.js',import.meta.url),'utf8');
+const codice=file.slice(file.indexOf("  el.addEventListener('pointerdown'"),file.indexOf("  el.addEventListener('click', e => { if (gestoScheda.tolto)"));
+function ambiente(){const eventi=new Map(),finestra=new Map(),catture=new Set(),azioni=[];const sch={id:'a',detent:'meta'},p={style:{}},corpo={scrollTop:0},pag={style:{}};let tempo=0;
+ const aggiungi=(m,k,fn)=>{if(!m.has(k))m.set(k,new Set());m.get(k).add(fn);},togli=(m,k,fn)=>m.get(k)?.delete(fn);
+ const el={open:true,addEventListener:(k,fn)=>aggiungi(eventi,k,fn),removeEventListener:(k,fn)=>togli(eventi,k,fn),setPointerCapture:id=>catture.add(id),hasPointerCapture:id=>catture.has(id),releasePointerCapture:id=>catture.delete(id)};
+ const d={el,sch,$:sel=>sel.includes('pannello')?p:sel.includes('corpo')?corpo:pag,computer:{matches:false},performance:{now:()=>tempo},piano:()=>false,H:()=>500,meta:()=>300,passo:(_id,dir)=>dir===1?'b':null,vai:dir=>azioni.push(['vai',dir]),chiudi:()=>azioni.push(['chiudi']),metti:(detent)=>{sch.detent=detent;azioni.push(['metti',detent]);},gestoScheda:{tolto:false},setTimeout:()=>{},occupato:{si:false},addEventListener:(k,fn)=>aggiungi(finestra,k,fn),removeEventListener:(k,fn)=>togli(finestra,k,fn)};
+ new Function(...Object.keys(d),'let Y=200;'+codice)(...Object.values(d));
+ const invia=(m,k,e)=>[...(m.get(k)||[])].forEach(fn=>fn(e));
+ const ev=(x,y,id=1)=>({pointerId:id,pointerType:'touch',button:0,clientX:x,clientY:y,target:{closest:()=>null}});
+ return {el,sch,p,pag,catture,azioni,eventi,finestra,giu:(id=1)=>invia(eventi,'pointerdown',ev(0,0,id)),muovi:(x,y,id=1)=>{tempo=200;invia(eventi,'pointermove',ev(x,y,id));},su:(x,y,id=1)=>{tempo=400;invia(eventi,'pointerup',ev(x,y,id));},annulla:(x,y,id=1)=>invia(eventi,'pointercancel',ev(x,y,id)),persa:()=>{catture.clear();invia(eventi,'lostpointercapture',ev(100,0));},interrompi:k=>invia(finestra,k,{}),ascoltatori:()=>['pointermove','pointerup','pointercancel','lostpointercapture'].reduce((n,k)=>n+(eventi.get(k)?.size||0),0)};
+}
+test('gesto scheda: pointercancel orizzontale non cambia tappa',()=>{const e=ambiente();e.giu();e.muovi(-120,0);e.annulla(-120,0);assert.equal(e.azioni.some(a=>a[0]==='vai'),false);assert.equal(e.ascoltatori(),0);assert.equal(e.catture.size,0);assert.equal(e.pag.style.translate,'');});
+test('gesto scheda: pointercancel verticale ripristina la posizione senza chiudere',()=>{const e=ambiente();e.giu();e.muovi(0,160);e.annulla(0,160);assert.deepEqual(e.azioni,[['metti','meta']]);assert.equal(e.catture.size,0);});
+test('gesto scheda: perdita della cattura annulla e ripulisce',()=>{const e=ambiente();e.giu();e.muovi(-120,0);e.persa();assert.equal(e.ascoltatori(),0);assert.deepEqual(e.azioni,[]);});
+test('gesto scheda: secondo puntatore non crea un altro gesto',()=>{const e=ambiente();e.giu();e.giu(2);assert.equal(e.eventi.get('pointermove').size,1);});
+test('gesto scheda: il rilascio ordinario conferma una volta e libera la cattura',()=>{const e=ambiente();e.giu();e.muovi(-120,0);e.su(-120,0);e.su(-120,0);assert.deepEqual(e.azioni,[['vai',1]]);assert.equal(e.ascoltatori(),0);assert.equal(e.catture.size,0);});
+test('gesto scheda: chiudere il dialog durante il gesto non conferma azioni tardive',()=>{const e=ambiente();e.giu();e.muovi(-120,0);e.el.open=false;e.su(-120,0);assert.deepEqual(e.azioni,[]);assert.equal(e.ascoltatori(),0);});
+for(const k of ['blur','resize'])test('gesto scheda: '+k+' annulla senza cambiare la tappa',()=>{const e=ambiente();e.giu();e.muovi(-120,0);e.interrompi(k);assert.deepEqual(e.azioni,[]);assert.equal(e.ascoltatori(),0);assert.equal(e.catture.size,0);});

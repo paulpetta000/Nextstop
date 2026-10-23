@@ -53,5 +53,96 @@
     },
     "locali_senza_fonte_ufficiale_verificabile": 2,
     "nota": "54 URL = 50 precedenti + 4 siti della vecchia lista; gli altri due locali non hanno fonte ufficiale verificabile. Le alternative possono essere parziali o storiche. Conteggio di URL di partenza, non di domini distinti."
+  },
+  "riscontro_71": {
+    "data": "2026-10-22",
+    "rapporto": "aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md",
+    "gruppi": 26,
+    "aperti": 17,
+    "fonte_orario_recuperati": 9,
+    "controlli_completi": 0,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Segue i rapporti 69/70 senza sostituire lo storico completo. Nuovi avvisi carburante EAV da ricontrollare."
+  },
+  "riscontro_72": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md",
+    "gruppi": 26,
+    "aperti": 17,
+    "fonte_orario_recuperati": 9,
+    "controlli_completi": 0,
+    "dati_applicativi_aggiornati": false,
+    "problema_riprodotto": "Acton in manutenzione usato da 31 collegamenti delle matrici principali; da correggere con Sol alto"
+  },
+  "riscontro_74": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-74.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "gruppi": 26,
+    "aperti": 17,
+    "fonte_orario_recuperati": 9,
+    "controlli_completi": 0,
+    "nota": "Seguito ordinario dopo consegna tecnica73; nessun controllo completo rinnovato."
+  },
+  "riscontro_76": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-san-lorenzo-76.md",
+    "gruppi": 26,
+    "aperti": 16,
+    "fonte_orario_recuperati": 10,
+    "controlli_completi": 0,
+    "dati_applicativi_aggiornati": true,
+    "nota": "Guida obbligatoria San Lorenzo confermata da gestore e biglietteria; correzione mirata, nessun controllo completo o scadenza generale rinnovati."
+  },
+  "riscontro_75": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md",
+    "gruppi": 26,
+    "aperti": 16,
+    "fonte_orario_recuperati": 10,
+    "controlli_completi": 0,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Granfuoco ordinario recuperato su scheda Google già ammessa; altri locali con contrasti; avvisi temporanei ANM/EAV conservati senza integrazione applicativa."
+  },
+  "riscontro_77": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-mercati-77.md",
+    "gruppi": 26,
+    "aperti": 16,
+    "fonte_orario_recuperati": 10,
+    "controlli_completi": 0,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Confronto di allegato storico dei mercati; dati applicativi e conteggi della revisione76 conservati."
+  },
+  "riscontro_78": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md",
+    "gruppi": 26,
+    "aperti": 16,
+    "fonte_orario_recuperati": 10,
+    "controlli_completi": 0,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Confronto marittimo Capri e fonte ANM attuale; avviso Caremar registrato separatamente dal programma."
+  },
+  "riscontro_79": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-sansevero-79.md",
+    "gruppi": 26,
+    "aperti": 16,
+    "fonte_orario_recuperati": 10,
+    "controlli_completi": 1,
+    "dati_applicativi_aggiornati": true,
+    "nota": "Concluso il confronto documentale Sansevero; prossima scadenza28ottobre. La correzione non integra il calendario straordinario nei calcoli. Build locale Vite bloccata, riscontro applicativo remoto ancora necessario."
+  },
+  "riscontro_84": {
+    "data": "2026-10-24",
+    "rapporto": "aggiornamenti/rapporti/2026-10-24-chiusura-84.md",
+    "gruppi": 26,
+    "aperti": 16,
+    "fonte_orario_recuperati": 10,
+    "controlli_completi": 1,
+    "dati_applicativi_aggiornati": true,
+    "nota": "Sansevero79 letto sulla preview; nuove cautele Pedamentina e sospensione sola Biblioteca Girolamini. CI e build locale correnti riuscite; Vite conforme all'archivio originale senza riparazione. Verifiche raggruppate su richiesta di Enrico, nessun nuovo controllo completo rinnovato."
   }
 }

@@ -1,14 +1,14 @@
 # Verifiche personali · indice corrente
 
-Stato del 19/10/2026: **26 gruppi, 21 aperti e cinque con fonte/orario ordinario recuperati**. Sono gruppi di domande, non siti distinti. Per un riscontro aprire solo il caso interessato; i collegamenti e la domanda precisa sono nella sua scheda.
+Stato del 23/10/2026, revisione 75: **26 gruppi, 16 aperti e dieci con fonte/orario ordinario recuperati**. Recuperata settimana Granfuoco dalla scheda Google prevista nella vecchia lista; altri locali con contrasti ora circoscritti. [Rapporto corrente](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md), [riscontro precedente 72](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md). Acton è stato corretto nella [revisione tecnica 73](../docs/storico/2026-10-23-revisione-73.md); restano controlli completi ed eccezioni temporanee. “Fonte/orario recuperati” non garantisce il servizio effettivo o tutte le ferie. Sono gruppi di domande, non siti distinti: aprire solo il caso pertinente.
 
-Per Codex/Claude: `node aggiornamenti/leggi.mjs aperte` elenca solo i casi aperti; `node aggiornamenti/leggi.mjs caso V01` legge una scheda. I dati applicativi non sono stati aggiornati. Una spunta non significa che tutte le eccezioni siano state confrontate.
+Per Codex/Claude: `node aggiornamenti/leggi.mjs aperte` elenca solo i casi aperti; `node aggiornamenti/leggi.mjs caso V01` legge una scheda. Il riscontro 75 ha aggiornato rapporto e registro; il seguito [San Lorenzo 76](../aggiornamenti/rapporti/2026-10-23-san-lorenzo-76.md) corregge due schede e il testo applicativo della guida obbligatoria. Conteggi e controlli completi invariati. Una spunta non significa che tutte le eccezioni siano state confrontate.
 
 | Caso | Argomento | Stato |
 |---|---|---|
-| [V01](casi/V01.md) | San Lorenzo Maggiore / Neapolis Sotterrata | Aperto |
-| [V02](casi/V02.md) | Teatro San Carlo | Aperto |
-| [V03](casi/V03.md) | Castel Nuovo e notizie del Comune | Aperto |
+| [V01](casi/V01.md) | San Lorenzo Maggiore / Neapolis Sotterrata | Fonte/orario recuperati |
+| [V02](casi/V02.md) | Teatro San Carlo | Fonte/orario recuperati |
+| [V03](casi/V03.md) | Castel Nuovo e notizie del Comune | Fonte/orario recuperati |
 | [V04](casi/V04.md) | ANM: ascensori, Monte Echia e avvisi | Aperto |
 | [V05](casi/V05.md) | Borgo Marinari e Castel dell’Ovo | Aperto |
 | [V06](casi/V06.md) | Villa Comunale | Fonte/orario recuperati |
@@ -16,7 +16,7 @@ Per Codex/Claude: `node aggiornamenti/leggi.mjs aperte` elenca solo i casi apert
 | [V08](casi/V08.md) | Pedamentina | Aperto |
 | [V09](casi/V09.md) | Marechiaro: ZTL e accesso | Aperto |
 | [V10](casi/V10.md) | Parco Virgiliano | Aperto |
-| [V11](casi/V11.md) | Città della Scienza | Aperto |
+| [V11](casi/V11.md) | Città della Scienza | Fonte/orario recuperati |
 | [V12](casi/V12.md) | Mercati Porta Nolana e Pignasecca | Aperto |
 | [V13](casi/V13.md) | Parco Ventaglieri | Fonte/orario recuperati |
 | [V14](casi/V14.md) | Parchi Mascagna, Camaldoli e del Poggio | Fonte/orario recuperati |
@@ -28,7 +28,7 @@ Per Codex/Claude: `node aggiornamenti/leggi.mjs aperte` elenca solo i casi apert
 | [V20](casi/V20.md) | Musei e Parchi archeologici di Capri | Aperto |
 | [L01](casi/L01.md) | Barbeqool | Aperto |
 | [L02](casi/L02.md) | Colantuono’s Steak and Grill | Aperto |
-| [L03](casi/L03.md) | Granfuoco Braceria | Aperto |
+| [L03](casi/L03.md) | Granfuoco Braceria | Fonte/orario recuperati |
 | [L04](casi/L04.md) | Friggitoria Vomero | Aperto |
 | [L05](casi/L05.md) | Da Rosetta | Fonte/orario recuperati |
 | [L06](casi/L06.md) | De Luca Braceria Macelleria 1920 | Aperto |

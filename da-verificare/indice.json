@@ -2,19 +2,19 @@
   {
     "id": "V01",
     "nome": "San Lorenzo Maggiore / Neapolis Sotterrata",
-    "stato": "da_verificare",
+    "stato": "fonte_orario_recuperati",
     "file": "da-verificare/casi/V01.md"
   },
   {
     "id": "V02",
     "nome": "Teatro San Carlo",
-    "stato": "da_verificare",
+    "stato": "fonte_orario_recuperati",
     "file": "da-verificare/casi/V02.md"
   },
   {
     "id": "V03",
     "nome": "Castel Nuovo e notizie del Comune",
-    "stato": "da_verificare",
+    "stato": "fonte_orario_recuperati",
     "file": "da-verificare/casi/V03.md"
   },
   {
@@ -62,7 +62,7 @@
   {
     "id": "V11",
     "nome": "Città della Scienza",
-    "stato": "da_verificare",
+    "stato": "fonte_orario_recuperati",
     "file": "da-verificare/casi/V11.md"
   },
   {
@@ -134,7 +134,7 @@
   {
     "id": "L03",
     "nome": "Granfuoco Braceria",
-    "stato": "da_verificare",
+    "stato": "fonte_orario_recuperati",
     "file": "da-verificare/casi/L03.md"
   },
   {

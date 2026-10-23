@@ -1,0 +1,86 @@
+{
+  "data": "2026-10-21T21:36:49.460Z",
+  "esito": "Due discrepanze storiche dichiarate; nessuna risoluzione della causa",
+  "riscontro": {
+    "data": "2026-10-21T21:35:55.097Z",
+    "codice": "8b5b7167f4bbfba056e7a9d64c35f0cd942399aa",
+    "manifesti": [
+      {
+        "manifesto": "2026-10-21-prove-chiusura-manifest.json",
+        "prove": 170,
+        "concordi": 168,
+        "differenze": [
+          {
+            "file": "nextstop-vista-bundle-fallito-2026-10-21.mjs",
+            "sha256": "1902d14fcfed22f18b611a80b1fde1834a05a1accd8755d1ce5c9d0a059675fc",
+            "byte": 9914962
+          },
+          {
+            "file": "sonda-astro-2026-10-21/memoria.mjs",
+            "sha256": "d465a227005325fa47e6f0d5bf9d6d8a80b9b0f11b823ccee8c8018f50de591a",
+            "byte": 9914962
+          }
+        ]
+      },
+      {
+        "manifesto": "2026-10-21-ripresa30-manifest.json",
+        "prove": 35,
+        "concordi": 35,
+        "differenze": []
+      },
+      {
+        "manifesto": "2026-10-21-ripresa63-manifest.json",
+        "prove": 45,
+        "concordi": 45,
+        "differenze": []
+      }
+    ],
+    "documenti": 8,
+    "linkLocali": 140,
+    "inputTestuali": 259,
+    "errori": [
+      "Discrepanza storica differente"
+    ]
+  },
+  "nuovaDiscrepanza": {
+    "data": "2026-10-21T21:36:14.806Z",
+    "file": "nextstop-vista-bundle-fallito-2026-10-21.mjs",
+    "sha256Manifesto": "c313ef281f14c45b2db89b29ac5c76e5aab444f397dab3da52c653b42b0a2805",
+    "letture": [
+      {
+        "byte": 9914962,
+        "sha256": "1902d14fcfed22f18b611a80b1fde1834a05a1accd8755d1ce5c9d0a059675fc"
+      },
+      {
+        "byte": 9914962,
+        "sha256": "1902d14fcfed22f18b611a80b1fde1834a05a1accd8755d1ce5c9d0a059675fc"
+      },
+      {
+        "byte": 9914962,
+        "sha256": "1902d14fcfed22f18b611a80b1fde1834a05a1accd8755d1ce5c9d0a059675fc"
+      }
+    ],
+    "copia": "nextstop-vista-bundle-riscontro63-2026-10-21.mjs",
+    "sha256Copia": "1902d14fcfed22f18b611a80b1fde1834a05a1accd8755d1ce5c9d0a059675fc",
+    "mtime": "2026-10-21T11:51:37.378Z",
+    "limite": "Nuovo riscontro di una prova storica; valore già osservato in precedenza. Origine e manifesto non sovrascritti. Causa e momento della differenza non determinati."
+  },
+  "proveSupplementari": [
+    {
+      "file": "nextstop-ripresa63-discrepanza-storica-2026-10-21.json",
+      "byte": 929,
+      "sha256": "7ea467130fc8321b4463f99ec48ed8b157cb600690e14a8debbd26cdda20145b"
+    },
+    {
+      "file": "nextstop-vista-bundle-riscontro63-2026-10-21.mjs",
+      "byte": 9914962,
+      "sha256": "1902d14fcfed22f18b611a80b1fde1834a05a1accd8755d1ce5c9d0a059675fc"
+    },
+    {
+      "file": "nextstop-ripresa63-verifica-finale-2026-10-21.json",
+      "byte": 1044,
+      "sha256": "6e6d31a12555338cef0aa87318914dbf6471f1db9d3776169dcb0ebecc37415f"
+    }
+  ],
+  "limite": "Il manifesto storico non viene riscritto: restano 168/170 impronte concordi al riscontro corrente. I manifesti successivi restano 35/35 e 45/45. I riscontri storici 169/170 descrivono la lettura precedente, non quella attuale."
+}

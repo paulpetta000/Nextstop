@@ -28,7 +28,8 @@
     "src/testi/tappe.yaml"
   ],
   "fonti_esistenti": [
-    "tp-sansevero-orari"
+    "tp-sansevero-orari",
+    "tp-sansevero-faq"
   ],
   "canali_scoperta": [
     "gestore-www-museosansevero-it",
@@ -45,12 +46,38 @@
     "regola": "Eseguire anche senza anno; poi anno della data del controllo e anno successivo. Non richiedere tutte le parole e non limitare ai risultati recenti."
   },
   "stato_preparazione": "fonti_organizzate_confronto_da_completare",
-  "ultimo_controllo_completo": null,
-  "prossimo_controllo": "2026-10-19",
+  "ultimo_controllo_completo": "2026-10-23",
+  "prossimo_controllo": "2026-10-28",
   "note": [
     "Orario ordinario confermato nella prova limitata; calendario di eccezioni già pubblicato per fine 2026 e inizio 2027. Non cancellare la chiusura settimanale ordinaria per effetto di un singolo martedì straordinario."
   ],
   "pubblicazioni_rilevate": [
-    "sansevero-calendario-2026-2027"
-  ]
+    "sansevero-calendario-2026-2027",
+    "sansevero-biglietteria-2026-02-04"
+  ],
+  "riscontro_79": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-sansevero-79.md",
+    "controllo_completo": true,
+    "dati_applicativi_aggiornati": true,
+    "campi_confrontati": [
+      "apertura_settimanale",
+      "chiusure_e_ferie",
+      "eccezioni_e_validita",
+      "ultimo_ingresso",
+      "stagionalita",
+      "prenotazione_e_limitazioni",
+      "prezzi_gia_pubblicati"
+    ],
+    "ricerca_novita": {
+      "query": [
+        "site:museosansevero.it Cappella Sansevero orari chiusura aperture straordinarie",
+        "site:museosansevero.it 2026 orari chiusura aperture straordinarie",
+        "site:museosansevero.it 2027 orari chiusura aperture straordinarie"
+      ],
+      "indice": "https://www.museosansevero.it/news-ed-eventi/news",
+      "copertura": "Pagina corrente 1 con 16 notizie, news più recenti e risultati pertinenti del dominio; calendario attuale letto integralmente. Non certifica assenza assoluta di altre pagine."
+    },
+    "nota": "Sette campi confrontati; 18 eccezioni nel registro coincidono con la tabella. Correzione prenotazione applicata, calendario straordinario non integrato automaticamente nel compositore. Riesame28ottobre prima della prima eccezione31ottobre."
+  }
 }

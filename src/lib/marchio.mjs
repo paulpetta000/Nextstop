@@ -4,8 +4,10 @@
 // le immagini di anteprima (src/pages/og/) e i bozzetti (design/logo/marchio.mjs rimanda qui).
 
 // Un arco a curvatura continua: la curva nasce dolcemente dai piedritti (non è un mezzo cerchio)
+/** @param {number} cx @param {number} top @param {number} bottom @param {number} hw */
 export function arco(cx, top, bottom, hw) {
   const spring = Math.min(bottom, top + 1.55 * hw), x0 = cx - hw, x1 = cx + hw, c1 = top + 0.447 * (spring - top);
+  /** @param {number} v */
   const f = v => +v.toFixed(2);
   return `M${f(x0)} ${f(bottom)}V${f(spring)}C${f(x0)} ${f(c1)} ${f(cx - 0.418 * hw)} ${f(top)} ${f(cx)} ${f(top)}S${f(x1)} ${f(c1)} ${f(x1)} ${f(spring)}V${f(bottom)}Z`;
 }
@@ -14,6 +16,7 @@ export function arco(cx, top, bottom, hw) {
 export const STRATI = Array.from({ length: 6 }, (_, i) => { const s = 0.8 ** i; return [24, 31 - 25 * s, 31 + 10 * s, 12 * s]; });
 
 // Colori per ogni posto (dalla soglia esterna a quella in fondo)
+/** @type {Record<'icona'|'chiaro'|'scuro'|'foto', {fondo?:string;strati:string[];spillo:string;buco:string}>} */
 export const COLORI = {
   // icona del telefono, dei risultati di ricerca e della scheda del browser (con il fondo)
   icona: { fondo: '#0A0F27', strati: ['#10173A', '#1E2766', '#2F3D93', '#4B5DBE', '#7D8DDC', '#FFF4E0'], spillo: '#10173A', buco: '#FFF4E0' },
@@ -29,11 +32,14 @@ export const SPILLO_NOME = { chiaro: '#3F51B5', scuro: '#8C9BEA', foto: '#F2B56B
 
 const SPILLO = 'M0 0C0 0-3.2-3.4-3.2-5.6A3.2 3.2 0 0 1 3.2-5.6C3.2-3.4 0 0 0 0Z';
 // Il segnaposto in fondo alla soglia più piccola (punta in basso)
+/** @param {number} x @param {number} y @param {number} s @param {string} colore @param {string} buco */
 function spillo(x, y, s, colore, buco) {
+  /** @param {number} v */
   const f = v => +v.toFixed(2);
   return `<g class="meta"><path transform="translate(${f(x)} ${f(y)}) scale(${s})" d="${SPILLO}" ${colore}/><circle cx="${f(x)}" cy="${f(y - 5.6 * s)}" r="${f(1.15 * s)}" ${buco}/></g>`;
 }
 // Gli strati e il segnaposto. colore(i) dà l'attributo di riempimento dello strato i (i = 'spillo' o 'buco' per il segnaposto)
+/** @param {(i:number|'spillo'|'buco')=>string} colore */
 function interno(colore) {
   const [cx, , bottom] = STRATI[5];
   // un solo attributo style per arco: se ce ne sono due, il browser tiene il primo e il colore si perde (il segno diventa nero)
@@ -46,8 +52,10 @@ function interno(colore) {
 
 // SVG del marchio con i colori scritti dentro (file, icone, immagini). dove: icona | chiaro | scuro | foto.
 // tondo: raggio degli angoli del fondo (solo per l'icona; 0 = quadrato)
+/** @param {keyof typeof COLORI} [dove] @param {{tondo?:number;attributi?:string}} [opzioni] */
 export function marchio(dove = 'chiaro', { tondo = 12, attributi = '' } = {}) {
   const c = COLORI[dove];
+  /** @param {number|'spillo'|'buco'} i */
   const colore = i => `fill="${i === 'spillo' ? c.spillo : i === 'buco' ? c.buco : c.strati[i]}"`;
   return `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" ${attributi}>`
     + (c.fondo ? `<rect width="48" height="48" rx="${tondo}" fill="${c.fondo}"/>` : '')
@@ -60,6 +68,7 @@ export function marchio(dove = 'chiaro', { tondo = 12, attributi = '' } = {}) {
 export const segnoVivo = () => interno(i => `style="fill:var(--${typeof i === 'number' ? `s${i}` : i})"`);
 
 // Le variabili CSS di un posto (per Marchio.astro)
+/** @param {keyof typeof SPILLO_NOME} dove */
 export const variabili = dove => {
   const c = COLORI[dove];
   return [...c.strati.map((x, i) => `--s${i}:${x}`), `--spillo:${c.spillo}`, `--buco:${c.buco}`, `--pin:${SPILLO_NOME[dove]}`].join(';');
@@ -72,7 +81,7 @@ export const SPILLO_O = '<path d="M10 27.5C10 27.5 1.5 18.2 1.5 10.6A8.5 8.5 0 0
 // In tema scuro l'intestazione «chiara» prende i colori della versione scura. Va nel <head> (src/layouts/Base.astro).
 export function cssFirma() {
   const scuroSuChiaro = `.firma--chiaro{${variabili('scuro')}}`;
-  return ['chiaro', 'scuro', 'foto'].map(d => `.firma--${d}{${variabili(d)}}`).join('')
+  return /** @type {const} */ (['chiaro', 'scuro', 'foto']).map(d => `.firma--${d}{${variabili(d)}}`).join('')
     + `@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) ${scuroSuChiaro}}`
     + `:root[data-theme="dark"] ${scuroSuChiaro}`;
 }

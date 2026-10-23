@@ -10,6 +10,7 @@ import { getTappe, ZONE } from '../tappe';
 import { getLocali } from '../locali';
 import { EVENTI } from '../../data/eventi';
 import tempiJson from '../../data/tempi-tappe.json';
+import { RIFERIMENTO } from './riferimento-napoli';
 import percorsiJson from '../../data/percorsi-tappe.json';
 import M from '../../data/mappa.json';
 import { SCENARI, PRIMA, type Citta, type Evento, type Giorno, type Itinerario, type Scenario, type Tappa, type Tempi } from './tipi';
@@ -104,7 +105,7 @@ async function carica(): Promise<Citta> {
   const giorni = giorniRegate();
   const date = Object.keys(giorni).sort();
   return {
-    tappe, tempi, linee: LINEE, zone: ZONE,
+    riferimento: RIFERIMENTO, tappe, tempi, linee: LINEE, zone: ZONE,
     evento: { id: REGATE.id, nome: REGATE.nome, p: lungomare.p, xy: lungomare.xy, durata: REGATE.durata, inizio: REGATE.inizio, giorni, primo: date[0], ultimo: date[date.length - 1] }
   };
 }
@@ -135,7 +136,7 @@ export function scenariPacco(C: Citta) {
     }
     diff[s] = out;
   }
-  return { dizionario, diff };
+  return { riferimento: C.riferimento, dizionario, diff };
 }
 
 // ---------- Itinerari pronti ----------

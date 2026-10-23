@@ -37,7 +37,7 @@ export interface VoceRicerca {
   frasi?: { t: string; da: string | null }[];
 }
 export type Pezzi = { s: string; seg: { i: number; n: number; w: string }[] };
-export type Motivo = { tipo: 'nome' } | { tipo: 'zona' } | { tipo: 'frase'; k: number } | { tipo: 'genere' | 'cucina' | 'piatto' | 'gruppo'; nome: string };
+export type Motivo = { tipo: 'nome'; campo?: 'breve' } | { tipo: 'zona' } | { tipo: 'frase'; k: number } | { tipo: 'genere' | 'cucina' | 'piatto' | 'gruppo'; nome: string };
 export type Risultato = Motivo & { id: string; gruppo: Gruppo; s: number; dove: number[]; min?: number | null };
 type Etichetta = { tipo: 'genere' | 'cucina' | 'piatto' | 'gruppo'; nome: string; p: Pezzi[] };
 type Indicizzata = { id: string; gruppo: Gruppo; nome: Pezzi; breve: Pezzi; zona: Pezzi; frasi: (Pezzi & { da: string | null })[]; etichette: Etichetta[] };
@@ -119,7 +119,7 @@ export function cerca(I: Indice, testo: string, { ok = () => true, minuti = () =
     let migliore: (Motivo & { s: number; dove: number[] }) | null = null;
     const prova = (m: { s: number; dove: number[] } | null, peso: number, perche: Motivo) => { if (m && (!migliore || m.s + peso > migliore.s)) migliore = { ...perche, s: m.s + peso, dove: m.dove }; };
     prova(confronta(qs, x.nome, esatte), 3, { tipo: 'nome' });
-    if (x.breve.s !== x.nome.s) prova(confronta(qs, x.breve, esatte), 3, { tipo: 'nome' });
+    if (x.breve.s !== x.nome.s) prova(confronta(qs, x.breve, esatte), 3, { tipo: 'nome', campo: 'breve' });
     if (qa.length) {
       for (const e of x.etichette) for (const p of e.p) { const m = confronta(qa, p, esatte); if (m && m.dove.length >= Math.min(qa.length, p.seg.length)) prova(m, 1.2, { tipo: e.tipo, nome: e.nome }); }
       x.frasi.forEach((f, k) => prova(confronta(qa, f, esatte), 1.5, { tipo: 'frase', k }));

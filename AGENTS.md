@@ -11,5 +11,6 @@ Sito statico Astro 7, Node >=22.12, in italiano. Enrico lavora anche con Claude 
 - Skill in `.agents/skills/`, sorgenti in `.claude/skills/`: conserva la copia identica e le licenze; consulta solo le skill utili secondo le regole di revisione comuni.
 - Leggi l'[ambiente locale](docs/AMBIENTE-LOCALE.md) solo quando serve usare gli strumenti su questo computer; non assumere Node nel PATH o la disponibilità degli strumenti cloud.
 - Bug: test che riproduce il problema prima della correzione, modifica minima e verifiche proporzionate. A fine blocco riassumi file, risultati, rischi e prossimo passo, poi fermati per l'OK.
+- Preferenza di Enrico del 24/10/2026: raggruppa le correzioni dello stesso blocco e fai un solo giro completo di verifiche alla fine. Controlli intermedi soltanto per riprodurre un bug, capire un errore o sciogliere un dubbio concreto; non ripetere suite/build per sole note o riscontri documentali.
 
 Le regole per entrambi gli assistenti si aggiornano in `docs/REGOLE.md`; qui solo le particolarità di Codex.

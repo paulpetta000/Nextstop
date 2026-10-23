@@ -80,5 +80,13 @@
       "V09"
     ],
     "controllo_completo": false
+  },
+  "riscontro_72": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V09",
+    "nota": "Pagina attuale ZTL letta: ripete termine 27 settembre e possibilità di attivazione in ottobre; taxi collettivo descritto fino al 27 settembre. Nessuna conferma di stato effettivo dei varchi per ottobre recuperata."
   }
 }

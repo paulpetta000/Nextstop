@@ -59,7 +59,9 @@
     "Siti archeologici effettivamente citati nella scheda",
     "Collegamento marittimo"
   ],
-  "pubblicazioni_rilevate": [],
+  "pubblicazioni_rilevate": [
+    "caremar-avviso-carburanti-2026-10-20"
+  ],
   "ritentativo_accesso": {
     "data": "2026-10-19",
     "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
@@ -82,5 +84,27 @@
       "V20"
     ],
     "controllo_completo": false
+  },
+  "riscontro_74": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-74.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V20",
+    "nota": "Letti regolamento e schede nazionali; contrasto stagionalità Grotta Azzurra, calendario e avvisi ancora da completare."
+  },
+  "riscontro_75": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Certosa MiC recuperata direttamente; calendario Villa Jovis non disponibile nel portale, contrasto Grotta Azzurra e collegamento marittimo ancora aperti."
+  },
+  "riscontro_78": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Confrontati quadri Caremar andata/ritorno e tariffe, avviso carburante; SNAV fino a marzo2027 distinto. Contrasto musei e controllo complessivo ancora aperti."
   }
 }

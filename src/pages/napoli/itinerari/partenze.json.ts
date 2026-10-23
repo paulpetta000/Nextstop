@@ -3,6 +3,7 @@
 // da valutare con le partenze (src/data/tempi-tappe.json, fatti da scripts/itinerari/costruisci.mjs).
 // La pagina lo carica dopo essersi aperta; il service worker lo salva per l'uso senza rete.
 import type { APIRoute } from 'astro';
+import { RIFERIMENTO } from '../../../lib/itinerari/riferimento-napoli';
 import T from '../../../data/tempi-tappe.json';
 import P from '../../../data/partenze-bus.json';
 
@@ -28,7 +29,7 @@ export function partenze() {
     senza[nome] = s; bus[nome] = b;
   }
   const candidati = (T.candidati as { seg: (number | string)[]; m: number; mezzi: string }[]).map(c => [c.seg, Math.round(c.m / 10), voce(c.mezzi)]);
-  return { firma: T.firma, preferenza: (T.dati.bus as unknown as { preferenza: number }).preferenza, dal: P.dal, al: P.al, giorni: P.giorni, tipi: P.tipi, fermate: P.fermate, dizionario, candidati, senza, bus };
+  return { riferimento: RIFERIMENTO, firma: T.firma, preferenza: (T.dati.bus as unknown as { preferenza: number }).preferenza, dal: P.dal, al: P.al, giorni: P.giorni, tipi: P.tipi, fermate: P.fermate, dizionario, candidati, senza, bus };
 }
 
 export const GET: APIRoute = () => new Response(JSON.stringify(partenze()), { headers: { 'Content-Type': 'application/json; charset=utf-8' } });

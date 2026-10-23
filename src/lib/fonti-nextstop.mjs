@@ -14,6 +14,13 @@ export const fonteDiNextstop = id => !FONTI_REGATE.has(id);
 export const fontiDiNextstop = fonti => [...fonti].filter(f => fonteDiNextstop(f.id));
 
 // Selezione comune per testi, schede e documenti aggiuntivi della pagina.
+/**
+ * @template {{id:string}} F
+ * @param {Iterable<{fontiRisolte:F[]}>} fatti
+ * @param {F[]} [extra]
+ * @param {{data:{durataFonte?:{id:string}}}[]} [tappe]
+ * @param {Map<string,F>} [registro]
+ */
 export function fontiPerPagina(fatti, extra = [], tappe = [], registro = new Map()) {
   const uniche = new Map();
   for (const fatto of fatti) for (const fonte of fatto.fontiRisolte) uniche.set(fonte.id, fonte);

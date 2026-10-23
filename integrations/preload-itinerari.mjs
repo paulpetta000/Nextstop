@@ -4,9 +4,11 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
+/** @param {string} html @param {(url:string) => string} leggiModulo */
 export function precaricaDipendenze(html, leggiModulo) {
   const iniziali=new Set([...html.matchAll(/<script\b[^>]*\bsrc="(\/_astro\/[\w.-]+\.js)"/g)].map(m=>m[1]));
   const visitati=new Set(),dipendenze=new Set();
+  /** @param {string} url */
   const visita=url=>{
     if(visitati.has(url))return;
     visitati.add(url);
@@ -22,6 +24,7 @@ export function precaricaDipendenze(html, leggiModulo) {
   return links?html.replace('</head>',links+'</head>'):html;
 }
 
+/** @returns {import('astro').AstroIntegration} */
 export default function preloadItinerari(){
   return {name:'preload-itinerari',hooks:{'astro:build:done':({dir,logger})=>{
     const root=fileURLToPath(dir),file=path.join(root,'napoli/itinerari/index.html');

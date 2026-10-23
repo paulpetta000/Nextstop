@@ -9,7 +9,7 @@ node aggiornamenti/leggi.mjs canale accessi-estesi-floridiana
 node aggiornamenti/leggi.mjs fonte tp-mic-floridiana
 ```
 
-1. **Scegliere.** “Controlla” produce un rapporto; applicare dati solo se richiesto “aggiorna”. Ramo autorizzato, niente main/produzione impliciti. `scadenze 2026-10-19 trasporto` seleziona gli ID dovuti; la prima verifica è ancora completa da fare per tutte le 106 voci.
+1. **Scegliere.** “Controlla” produce un rapporto; applicare dati solo se richiesto “aggiorna”. Ramo autorizzato, niente main/produzione impliciti. `scadenze 2026-10-19 trasporto` seleziona gli ID dovuti; le 106 schede conservano singolarmente data del controllo completo e prossima scadenza. Leggere lo stato corrente, senza dedurre completamento dalla sola preparazione iniziale.
 2. **Leggere.** `voce <id>` restituisce la scheda; `canale <id…>` e `pubblicazione <id…>` risolvono i rimandi. `fonte <id…>` e `fatto <id…>` leggono i blocchi correnti in `src/data`, senza duplicarli. `aperte`/`caso <id>` servono per le domande a Enrico. [Manifesto](controlli-periodici.yaml).
 3. **Cercare novità.** Aprire fonte e indici del gestore; cercare anche nuove pagine, PDF, rettifiche, revoche e ripristini. Query prima senza anno, poi anno corrente/successivo e sede/linea corretta. Vecchio URL invariato e risultati di ricerca non bastano. Un'apertura non conferma validità o orari.
 4. **Confrontare.** Distinguere pubblicazione/revisione, decorrenza/fine, sedi, componenti, feriali/festivi e attraversamento di mezzanotte (Europe/Rome). Conservare ordinario, futuro ed eccezioni separati; non anticipare un cambio o presumere una riapertura. Contrasti e date ignote restano espliciti.

@@ -130,11 +130,11 @@
   ricontrollare: 2027-04-30
 
 - id: tp-sansevero-prenota
-  testo: "Si entra solo con il biglietto elettronico comprato online sul sito ufficiale, fino a 60 giorni prima; altri posti si liberano due giorni prima della visita."
+  testo: "Prenotazione obbligatoria: online fino a 60 giorni prima, con altri posti disponibili due giorni prima della visita. Fino a 9 persone si può prenotare anche in biglietteria per i 7 giorni successivi, se restano posti: sono gli stessi disponibili online."
   stato: confermato
-  fonti: [tp-sansevero-orari, tp-sansevero-accesso]
-  controllato: 2026-10-02
-  ricontrollare: 2027-04-30
+  fonti: [tp-sansevero-orari, tp-sansevero-accesso, tp-sansevero-faq]
+  controllato: 2026-10-23
+  ricontrollare: 2026-11-06
 
 - id: tp-sansevero-regole
   testo: "Dentro non si possono fare foto e video né usare il telefono. La Cavea, con le «macchine anatomiche», si raggiunge solo da una stretta scala a chiocciola: in sedia a rotelle si visitano la navata e la sacrestia."
@@ -198,18 +198,18 @@
   ricontrollare: 2027-04-30
 
 - id: tp-sanlorenzo-orari
-  testo: "Tutti i giorni 9:30–17:30. Quando c'è molta gente si entra solo con la guida, a orari fissi."
+  testo: "Tutti i giorni 9:30–17:30. Il gestore indica visite con guida obbligatoria, a turni fissi. Se compri online, prenota anche il turno della guida; il supplemento si paga in biglietteria."
   stato: confermato
-  fonti: [tp-sanlorenzo]
-  controllato: 2026-10-02
-  ricontrollare: 2027-04-30
+  fonti: [tp-sanlorenzo, tp-sanlorenzo-biglietteria]
+  controllato: 2026-10-23
+  ricontrollare: 2026-11-06
 
 - id: tp-sanlorenzo-prezzi
-  testo: "9 €; 7 € sopra i 65 anni, per insegnanti e universitari; 6 € sotto i 18 anni; gratis sotto i 6 anni. Con la guida 2 € in più (1 € dai 6 ai 14 anni)."
+  testo: "9 €; 7 € sopra i 65 anni, per insegnanti e universitari; 6 € sotto i 18 anni; gratis sotto i 6 anni. La guida obbligatoria costa 2 € in più (1 € dai 6 ai 14 anni), da pagare in loco."
   stato: confermato
-  fonti: [tp-sanlorenzo]
-  controllato: 2026-10-02
-  ricontrollare: 2027-04-30
+  fonti: [tp-sanlorenzo, tp-sanlorenzo-biglietteria]
+  controllato: 2026-10-23
+  ricontrollare: 2026-11-06
 
 - id: tp-sotterranea-orari
   testo: "Visite guidate ogni ora dalle 10:00 alle 18:00, in italiano; il giovedì anche alle 21:00, su prenotazione e con almeno 10 persone. Per chi è da solo o in un piccolo gruppo non serve prenotare."
@@ -415,10 +415,11 @@
   ricontrollare: 2027-04-30
 
 - id: tp-pedamentina-orari
-  testo: "Scala pubblica, sempre percorribile: da Largo San Martino scende con rampe e tornanti fino a Corso Vittorio Emanuele."
+  testo: "Scala pubblica da Largo San Martino a Corso Vittorio Emanuele. Il Comune ha programmato scavi sul marciapiede fino all'accesso alla Pedamentina dal 19 ottobre al 6 novembre 2026: il comunicato non conferma la percorribilità pedonale integrale durante i lavori. Controlla gli avvisi del Comune prima di partire."
   stato: confermato
-  fonti: [tp-comune-pedamentina, osm]
-  controllato: 2026-10-02
+  fonti: [tp-comune-pedamentina, osm, tp-comune-cantieri-settembre-2026]
+  controllato: 2026-10-24
+  ricontrollare: 2026-10-27
 
 # ---------- Sanità e Capodimonte ----------
 - id: tp-catacombe-orari
@@ -443,11 +444,18 @@
   ricontrollare: 2027-04-30
 
 - id: tp-sanita-orari
-  testo: "Il rione è fatto di strade pubbliche. La Basilica di Santa Maria della Sanità è aperta tutti i giorni 10:00–13:00. L'ascensore gratuito tra il ponte della Sanità e il rione funziona dal lunedì al sabato 7:00–21:30, la domenica e i festivi 7:30–14:00."
+  testo: "Il rione è fatto di strade pubbliche. La Basilica di Santa Maria della Sanità è aperta tutti i giorni 10:00–13:00."
   stato: confermato
-  fonti: [tp-catacombe-basilica, tp-anm-ascensori]
-  controllato: 2026-10-02
+  fonti: [tp-catacombe-basilica]
+  controllato: 2026-10-21
   ricontrollare: 2027-04-30
+
+- id: tp-sanita-ascensore
+  testo: "Servizio e orari dell’ascensore tra il ponte della Sanità e il rione sono ancora da confermare. Controlla gli avvisi ANM prima di contare su questo collegamento."
+  stato: atteso
+  fonti: [tp-anm-ascensori, tp-anm-ascensori-portale]
+  controllato: 2026-10-21
+  ricontrollare: 2026-11-21
 
 - id: tp-fontanelle-orari
   testo: "10:00–18:00, ultimo ingresso alle 17:15: si entra a gruppi ogni 15 minuti e si resta al massimo 40 minuti. Chiuso il mercoledì e il 25 dicembre."
@@ -573,10 +581,10 @@
   ricontrollare: 2027-04-30
 
 - id: tp-pompei-viaggio
-  testo: "Con la Circumvesuviana da Napoli Garibaldi a Pompei Scavi–Villa dei Misteri: almeno 33 minuti, il tempo del treno diretto Campania Express, oggi sospeso; i treni ordinari fanno più fermate."
+  testo: "Nel quadro EAV in vigore dal 17 ottobre 2026, da Napoli Garibaldi a Pompei Scavi–Villa dei Misteri il treno impiega 36 minuti; al ritorno 38 minuti. Sono tempi programmati del solo treno, senza attesa o percorsi a piedi."
   stato: confermato
-  fonti: [tp-eav-campania-express, tp-eav-campania-express-sospeso]
-  controllato: 2026-10-02
+  fonti: [tp-eav-l1-orario-20261017]
+  controllato: 2026-10-21
   ricontrollare: 2027-04-30
 
 - id: tp-ercolano-orari
@@ -594,10 +602,10 @@
   ricontrollare: 2027-04-30
 
 - id: tp-ercolano-viaggio
-  testo: "Con la Circumvesuviana da Napoli Garibaldi a Ercolano Scavi: almeno 13 minuti, il tempo del treno diretto Campania Express, oggi sospeso; i treni ordinari fanno più fermate."
+  testo: "Nel quadro EAV in vigore dal 17 ottobre 2026, da Napoli Garibaldi a Ercolano Scavi il treno impiega 15 minuti; al ritorno 17 minuti. Sono tempi programmati del solo treno, senza attesa o percorsi a piedi."
   stato: confermato
-  fonti: [tp-eav-campania-express, tp-eav-campania-express-sospeso]
-  controllato: 2026-10-02
+  fonti: [tp-eav-l1-orario-20261017]
+  controllato: 2026-10-21
   ricontrollare: 2027-04-30
 
 - id: tp-vesuvio-orari
@@ -693,11 +701,11 @@
   ricontrollare: 2027-04-30
 
 - id: tp-girolamini-orari
-  testo: "Chiesa-Museo: dal martedì al venerdì 10:00–18:30 (dal 25 ottobre 2026 9:00–17:30); sabato, domenica e festivi 8:30–13:30. Chiuso il lunedì. La Biblioteca ha orari suoi, più corti, ed è chiusa anche nei giorni a ingresso gratuito."
+  testo: "Chiesa-Museo: dal martedì al venerdì 10:00–18:30 (dal 25 ottobre 2026 9:00–17:30); sabato, domenica e festivi 8:30–13:30. Chiuso il lunedì. Dal 19 al 25 ottobre 2026 le sale storiche della Biblioteca sono interdette alle visite e i servizi bibliotecari sospesi; la Chiesa-Museo resta aperta secondo i suoi orari. La Biblioteca ha orari suoi, più corti, ed è chiusa anche nei giorni a ingresso gratuito."
   stato: confermato
-  fonti: [tp-girolamini]
-  controllato: 2026-10-03
-  ricontrollare: 2027-04-30
+  fonti: [tp-girolamini, tp-girolamini-sospensione-ottobre-2026]
+  controllato: 2026-10-24
+  ricontrollare: 2026-10-24
 
 - id: tp-girolamini-prezzi
   testo: "Chiesa-Museo 5 €, ridotto 2 €; Biblioteca e sale storiche 10 €, ridotto 2 €, con ingressi a turni (40 persone ogni 40 minuti). Biglietti sull'app o sul sito Musei Italiani, o al totem in sede (solo carta). La prima domenica del mese la Chiesa-Museo è gratuita."
@@ -778,10 +786,10 @@
   ricontrollare: 2027-04-30
 
 - id: tp-donnanna-orari
-  testo: "Palazzo Donn'Anna è un'abitazione privata e non si visita: si guarda da fuori, dalla strada o dal mare."
+  testo: "Nel percorso Palazzo Donn'Anna è una sosta all'esterno, dalla strada o dal mare. Il teatro ospita la Fondazione Ezio De Felice, che indica apertura su appuntamento dal lunedì al venerdì."
   stato: confermato
-  fonti: [tp-fai-donn-anna]
-  controllato: 2026-10-03
+  fonti: [tp-fai-donn-anna, tp-defelice-donnanna]
+  controllato: 2026-10-21
   ricontrollare: 2027-04-30
 
 - id: tp-belvedere-orari
@@ -870,10 +878,10 @@
   ricontrollare: 2027-04-30
 
 - id: tp-sorrento-viaggio
-  testo: "Con la Circumvesuviana da Napoli Porta Nolana o Garibaldi a Sorrento: circa 72 minuti con il treno diretto, circa 77 con gli altri. Il Campania Express, il treno turistico più veloce, è sospeso dal 1° ottobre 2026."
+  testo: "Nel quadro EAV in vigore dal 17 ottobre 2026, per Sorrento il treno impiega 72 minuti da Napoli Garibaldi e 75 da Porta Nolana; al ritorno sono 73 minuti fino a Garibaldi e 75 fino a Porta Nolana. Attese e percorsi a piedi sono esclusi."
   stato: confermato
-  fonti: [tp-eav-l1-orario, tp-eav-campania-express-sospeso]
-  controllato: 2026-10-03
+  fonti: [tp-eav-l1-orario-20261017]
+  controllato: 2026-10-21
   ricontrollare: 2027-04-30
 
 - id: tp-correale-orari
@@ -1237,12 +1245,11 @@
   ricontrollare: 2027-04-30
 
 - id: lc-da-michele-perche
-  testo: "Segnalata dalla Guida Michelin 2025 tra le pizzerie di Napoli, secondo Scatti di Gusto. Il menu del locale scrive «maestri pizzaioli dal 1870»."
-  stato: stampa
+  testo: "Michelin la cita tra gli indirizzi della pizza napoletana in un articolo del 10 marzo 2026. Il menu del locale scrive «maestri pizzaioli dal 1870»."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [sdg-michelin-2025-pizzerie, lc-da-michele-menu]
-  controllato: 2026-10-04
+  fonti: [sdg-michelin-2025-pizzerie, lc-da-michele-menu, michelin-pizza-2026]
+  controllato: 2026-10-21
 
 - id: lc-port-alba-perche
   testo: "Secondo il locale, è nata come pizzeria nel 1738."
@@ -1260,35 +1267,31 @@
 
 - id: lc-di-matteo-rinomato
   testo: "Gambero Rosso International, nel luglio 2024, scrive che è una tappa obbligata per il cibo di strada fritto napoletano."
-  stato: stampa
+  stato: confermato
   storico: true
-  comeFatto: true
   fonti: [gri-cuoppo-2024]
-  controllato: 2026-10-04
+  controllato: 2026-10-20
 
 - id: lc-chitarra-perche
-  testo: "Ha la Chiocciola di Slow Food nella guida Osterie d'Italia 2025, secondo Scatti di Gusto. Secondo il locale, l'osteria è aperta dal 1991."
-  stato: stampa
+  testo: "Ha la Chiocciola di Slow Food nella guida Osterie d'Italia 2025. Secondo il locale, l'osteria è aperta dal 1991."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [sdg-slowfood-2025, lc-chitarra-storia]
-  controllato: 2026-10-04
+  fonti: [sdg-slowfood-2025, lc-chitarra-storia, sf-chiocciole-2025]
+  controllato: 2026-10-21
 
 - id: lc-gesu-vecchio-perche
   testo: "Gambero Rosso la mette tra gli otto posti di Napoli per la pasta e patate con la provola, scrive Gambero Rosso International nel gennaio 2024."
-  stato: stampa
+  stato: confermato
   storico: true
-  comeFatto: true
   fonti: [gri-pasta-patate-2024]
-  controllato: 2026-10-04
+  controllato: 2026-10-20
 
 - id: lc-di-costanzo-perche
-  testo: "Gambero Rosso la mette tra le sette pasticcerie di Napoli nel 2022, secondo Napolitan.it, che la descrive come una pasticceria tradizionale solida."
-  stato: stampa
+  testo: "Nel maggio 2022 Gambero Rosso la include fra sette pasticcerie di Napoli e ne descrive la proposta tradizionale e le creazioni di Mario Di Costanzo."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [napolitan-pasticcerie-2022]
-  controllato: 2026-10-04
+  fonti: [napolitan-pasticcerie-2022, gr-pasticcerie-2022]
+  controllato: 2026-10-21
 
 - id: lc-brandi-perche
   testo: "Secondo il locale, qui nel 1889 è nata la pizza Margherita. L'abbiamo scelta anche per la posizione, tra via Toledo e piazza del Plebiscito."
@@ -1299,11 +1302,10 @@
 
 - id: lc-zia-esterina-perche
   testo: "Gambero Rosso International, nell'ottobre 2023, scrive che il suo nome a Napoli è sinonimo di pizza fritta."
-  stato: stampa
+  stato: confermato
   storico: true
-  comeFatto: true
   fonti: [gri-pizza-fritta-2023]
-  controllato: 2026-10-04
+  controllato: 2026-10-20
 
 - id: lc-hosteria-toledo-perche
   testo: "Secondo il locale, fa cucina napoletana dal 1951. Nessuna guida verificata: l'abbiamo scelta noi, per la cucina di casa a due passi da via Toledo."
@@ -1321,51 +1323,45 @@
 
 - id: lc-nennella-perche
   testo: "Aperta nel 1949, scrive Gambero Rosso International, che nel gennaio 2024 la mette tra gli otto posti di Napoli per la pasta e patate con la provola."
-  stato: stampa
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [gri-pasta-patate-2024]
-  controllato: 2026-10-04
+  fonti: [gri-pasta-patate-2024, lc-nennella-storia]
+  controllato: 2026-10-20
 
 - id: lc-pintauro-perche
-  testo: "Secondo il locale, fa sfogliatelle in via Toledo dal 1785. Ha riaperto con una nuova gestione alla fine di marzo 2026, scrive Scatti di Gusto."
-  stato: stampa
+  testo: "Secondo il locale, fa sfogliatelle in via Toledo dal 1785. Il locale documenta la riapertura con nuova gestione nel marzo 2026."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [lc-pintauro, sdg-pintauro-2026]
-  controllato: 2026-10-04
+  fonti: [lc-pintauro, sdg-pintauro-2026, lc-pintauro-storia, lc-pintauro-riapertura-2026]
+  controllato: 2026-10-21
 
 - id: lc-cinquanta-kalo-perche
-  testo: "Quinta nella classifica 50 Top Pizza Italia 2026, secondo Sky TG24, e segnalata dalla Guida Michelin 2025, secondo Scatti di Gusto."
-  stato: stampa
+  testo: "Quinta nella classifica ufficiale 50 Top Pizza Italia 2026. Michelin la cita tra gli indirizzi della pizza napoletana in un articolo del 10 marzo 2026."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [sky-50top-2026, sdg-michelin-2025-pizzerie]
-  controllato: 2026-10-04
+  fonti: [sky-50top-2026, sdg-michelin-2025-pizzerie, top50-italia-2026, michelin-pizza-2026]
+  controllato: 2026-10-21
 
 - id: lc-salvo-perche
-  testo: "Ventiquattresima nella classifica 50 Top Pizza Italia 2026, secondo Sky TG24 (la classifica scrive solo «Salvo», senza dire quale sede); segnalata dalla Guida Michelin 2025 come «Salvo alla Riviera», secondo Scatti di Gusto."
-  stato: stampa
+  testo: "Ventiquattresima nella classifica 50 Top Pizza Italia 2026: l’elenco ufficiale scrive «Salvo – Napoli», senza indirizzo. L’articolo Michelin del gennaio 2025 presenta la sede sulla Riviera di Chiaia."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [sky-50top-2026, sdg-michelin-2025-pizzerie]
-  controllato: 2026-10-04
+  fonti: [sky-50top-2026, sdg-michelin-2025-pizzerie, top50-italia-2026, michelin-pizzerie-2025]
+  controllato: 2026-10-21
 
 - id: lc-pignatelli-perche
-  testo: "Tra i nuovi Bib Gourmand della Guida Michelin 2025, cioè buona cucina a prezzi contenuti, secondo Scatti di Gusto."
-  stato: stampa
+  testo: "Tra i nuovi Bib Gourmand della Guida Michelin 2025, riconoscimento per il rapporto fra qualità e prezzo."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [sdg-bib-2025]
-  controllato: 2026-10-04
+  fonti: [sdg-bib-2025, michelin-bib-2025]
+  controllato: 2026-10-21
 
 - id: lc-pignatelli-rinomato
   testo: "Nella recensione del gennaio 2026, Scatti di Gusto scrive che le candele alla genovese sono molto buone."
-  stato: stampa
+  stato: confermato
   storico: true
-  comeFatto: true
   fonti: [sdg-pignatelli-2026]
-  controllato: 2026-10-04
+  controllato: 2026-10-21
 
 - id: lc-cantinella-perche
   testo: "Secondo il locale, l'ha fondata Angelo Rosolino negli anni Sessanta e oggi la porta avanti la stessa famiglia. Scelta nostra anche per la posizione, a Santa Lucia, a due passi dal lungomare."
@@ -1404,11 +1400,10 @@
 
 - id: lc-chalet-ciro-rinomato
   testo: "Scatti di Gusto, nel 2016, scrive del suo cono graffa: il gelato servito dentro una graffa fritta e zuccherata."
-  stato: stampa
+  stato: confermato
   storico: true
-  comeFatto: true
   fonti: [sdg-cono-graffa]
-  controllato: 2026-10-04
+  controllato: 2026-10-21
 
 - id: lc-caffettiera-perche
   testo: "Scelta nostra: caffè e dolci in piazza dei Martiri, a Chiaia, aperto tutto il giorno. Secondo il locale, è attivo da oltre 40 anni."
@@ -1418,12 +1413,11 @@
   controllato: 2026-10-04
 
 - id: lc-gorizia-perche
-  testo: "Sessantottesima nella classifica 50 Top Pizza Italia 2026, secondo Sky TG24. Secondo il locale, è aperta dal 1916."
-  stato: stampa
+  testo: "Sessantottesima nella classifica 50 Top Pizza Italia 2026. Secondo il locale, è aperta dal 1916."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [sky-50top-2026, lc-gorizia]
-  controllato: 2026-10-04
+  fonti: [sky-50top-2026, lc-gorizia, top50-italia-2026]
+  controllato: 2026-10-21
 
 - id: lc-bellavia-perche
   testo: "Secondo il locale, la famiglia fa dolci dal 1925 ed è al Vomero dagli anni Sessanta. Nessuna guida verificata: scelta nostra, per il Vomero."
@@ -1447,36 +1441,32 @@
   controllato: 2026-10-04
 
 - id: lc-concettina-perche
-  testo: "Segnalata dalla Guida Michelin 2025 tra le pizzerie di Napoli, secondo Scatti di Gusto. Secondo il locale, è nata nel 1951."
-  stato: stampa
+  testo: "L’articolo Michelin del gennaio 2025 la presenta fra le pizzerie della Guida Italia 2025 e ne ricorda la apertura nel 1951."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [sdg-michelin-2025-pizzerie, lc-concettina-storia]
-  controllato: 2026-10-04
+  fonti: [sdg-michelin-2025-pizzerie, lc-concettina-storia, michelin-pizzerie-2025]
+  controllato: 2026-10-21
 
 - id: lc-poppella-perche
-  testo: "Gambero Rosso la mette tra le sette pasticcerie di Napoli nel 2022, riporta Napolitan.it, che cita la sua pastiera tra le migliori in città. Secondo il locale, è aperta dal 1920."
-  stato: stampa
+  testo: "Nel maggio 2022 Gambero Rosso la include fra sette pasticcerie di Napoli e apprezza la sua pastiera. Secondo il locale, è aperta dal 1920."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [napolitan-pasticcerie-2022, lc-poppella-storia]
-  controllato: 2026-10-04
+  fonti: [napolitan-pasticcerie-2022, lc-poppella-storia, gr-pasticcerie-2022]
+  controllato: 2026-10-21
 
 - id: lc-poppella-rinomato
-  testo: "Il suo fiocco di neve, scrive Gambero Rosso secondo Napolitan.it (2022), è ormai un dolce conosciutissimo anche all'estero."
-  stato: stampa
+  testo: "Nel 2022 Gambero Rosso descrive il fiocco di neve di Poppella come un dolce entrato nel repertorio napoletano, imitato e proposto in gusti diversi."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [napolitan-pasticcerie-2022]
-  controllato: 2026-10-04
+  fonti: [napolitan-pasticcerie-2022, gr-pasticcerie-2022]
+  controllato: 2026-10-21
 
 - id: lc-petrucci-posillipo-perche
-  testo: "La pizzeria Palazzo Petrucci è terza nella classifica 50 Top Pizza Italia 2026, secondo Sky TG24: la classifica riguarda la sede di piazza San Domenico Maggiore. Questa sede, a Posillipo, il locale l'ha presentata nel settembre 2026."
-  stato: stampa
+  testo: "Palazzo Petrucci ha presentato la nuova pizzeria a Posillipo in una pagina pubblicata il 9 settembre 2026. Si trova al piano spiaggia, in via Posillipo 16c, e affianca la sede in piazza San Domenico."
+  stato: confermato
   storico: true
-  comeFatto: true
-  fonti: [sky-50top-2026, lc-petrucci-posillipo]
-  controllato: 2026-10-04
+  fonti: [lc-petrucci-posillipo]
+  controllato: 2026-10-21
 
 - id: lc-tufo-perche
   testo: "Scelta nostra: una trattoria di cucina napoletana su via Posillipo, aperta tutti i giorni a pranzo e a cena."
@@ -1487,11 +1477,10 @@
 
 - id: lc-tufo-rinomato
   testo: "Stars and Stripes, nel dicembre 2022, scrive che la pasta e patate, finita al tavolo, è il primo simbolo del locale, e loda la genovese."
-  stato: stampa
+  stato: confermato
   storico: true
-  comeFatto: true
   fonti: [stripes-tufo-2022]
-  controllato: 2026-10-04
+  controllato: 2026-10-21
 
 - id: lc-fenestella-perche
   testo: "Secondo il locale, una delle sue finestre è quella resa celebre dalla canzone di Salvatore Di Giacomo su Marechiaro."

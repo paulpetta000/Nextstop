@@ -55,7 +55,8 @@
     "Nuova pubblicazione EAV dal 17/10/2026: aprire PDF e rettifiche prima di modificare durate o ultime corse. Non confondere la L1 EAV con la Linea 1 ANM."
   ],
   "pubblicazioni_rilevate": [
-    "eav-sorrento-2026-10-17"
+    "eav-sorrento-2026-10-17",
+    "eav-corso-meridionale-2026-10-26"
   ],
   "ritentativo_accesso": {
     "data": "2026-10-19",
@@ -80,5 +81,34 @@
       "V17"
     ],
     "controllo_completo": false
+  },
+  "ultimo_riscontro_parziale": {
+    "data": "2026-10-22",
+    "rapporto": "aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md",
+    "modalita": "rapporto",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "casi": [
+      "V17"
+    ],
+    "nota": "Campania Express vecchia pagina 404 anche nel browser, testo indicizzato distinto. Avviso carburante del 20 ottobre: sospensioni di supporti/sostitutivi e fasi future condizionate da confrontare, senza estenderle al 2027.",
+    "priorita": "avvisi_temporanei_da_ricontrollare",
+    "url_avviso": "https://www.eavsrl.it/comunicato-stampa-eav-difficolta-di-rifornimento-carburante-aggiornamento-servizi-eav-2/",
+    "ritentare_entro": "2026-10-23"
+  },
+  "riscontro_72": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V17",
+    "nota": "Ricerca interna EAV carburante e indice ferroviario prime due pagine ricontrollati: nessun ripristino rilevato nel campione. Letto avviso 13 settembre che indirizza al portale Orario Treni. Nessuna conferma di ripresa Campania Express."
+  },
+  "riscontro_75": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Nuovi avvisi temporanei letti, validità e confronti parziali nel rapporto; date complete e scadenza precedenti conservate."
   }
 }

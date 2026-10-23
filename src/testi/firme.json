@@ -19,14 +19,24 @@
   "dove-mangiare#piatto-sfogliatella": {},
   "dove-mangiare#piatto-baba": {},
   "dove-mangiare#piatto-pastiera": {},
-  "home#intro": {},
+  "home#apertura": {},
+  "home#come": {},
+  "home#passo-tappe": {},
+  "home#passo-tempi": {},
+  "home#passo-avvisi": {},
+  "home#mangiare": {},
+  "home#fidarti-fonti": {},
+  "home#fidarti-data": {},
+  "home#fidarti-link": {},
+  "home#fidarti-rete": {},
+  "home#prossime": {},
   "itinerari#regate": {
     "cal-orari": "f52b029084",
     "cal-orari-2026": "84169bb83f"
   },
   "itinerari#pronto-mezza-giornata": {
     "tp-sansevero-orari": "d805258c2e",
-    "tp-sansevero-prenota": "34ece27e45"
+    "tp-sansevero-prenota": "d67160e64f"
   },
   "itinerari#pronto-un-giorno": {
     "tp-sanmartino-orari": "dad9948f0a",
@@ -56,29 +66,29 @@
   "itinerari#orari": {},
   "itinerari#salvare": {},
   "locali#da-michele": {
-    "lc-da-michele-perche": "126821a827"
+    "lc-da-michele-perche": "4d040b83c6"
   },
   "locali#port-alba": {
     "lc-port-alba-perche": "5d6de800c6"
   },
   "locali#di-matteo": {
     "lc-di-matteo-perche": "2f4b76b7a8",
-    "lc-di-matteo-rinomato": "e982787222"
+    "lc-di-matteo-rinomato": "0537e8caa3"
   },
   "locali#chitarra": {
-    "lc-chitarra-perche": "626b58f61e"
+    "lc-chitarra-perche": "76cb5dd319"
   },
   "locali#gesu-vecchio": {
-    "lc-gesu-vecchio-perche": "45c4ad7fe1"
+    "lc-gesu-vecchio-perche": "15157b58d4"
   },
   "locali#di-costanzo": {
-    "lc-di-costanzo-perche": "1aa87ac632"
+    "lc-di-costanzo-perche": "fc68036a49"
   },
   "locali#brandi": {
     "lc-brandi-perche": "c32ea082cd"
   },
   "locali#zia-esterina": {
-    "lc-zia-esterina-perche": "3ec6281a50"
+    "lc-zia-esterina-perche": "b207f4da0b"
   },
   "locali#hosteria-toledo": {
     "lc-hosteria-toledo-perche": "9fb5b532bb"
@@ -87,20 +97,20 @@
     "lc-gobbetto-perche": "953512b6f6"
   },
   "locali#nennella": {
-    "lc-nennella-perche": "58013e0651"
+    "lc-nennella-perche": "86e199d496"
   },
   "locali#pintauro": {
-    "lc-pintauro-perche": "e256576e38"
+    "lc-pintauro-perche": "4a04d90cfd"
   },
   "locali#cinquanta-kalo": {
-    "lc-cinquanta-kalo-perche": "8cb4048327"
+    "lc-cinquanta-kalo-perche": "07640bf5e2"
   },
   "locali#salvo": {
-    "lc-salvo-perche": "1c7f0476ee"
+    "lc-salvo-perche": "0238eb049d"
   },
   "locali#pignatelli": {
-    "lc-pignatelli-perche": "3ffde1a375",
-    "lc-pignatelli-rinomato": "f4b4e0ecb2"
+    "lc-pignatelli-perche": "4c78657d3c",
+    "lc-pignatelli-rinomato": "d9bbb44529"
   },
   "locali#cantinella": {
     "lc-cantinella-perche": "402f22c210"
@@ -116,13 +126,13 @@
   },
   "locali#chalet-ciro": {
     "lc-chalet-ciro-perche": "c68be86c2a",
-    "lc-chalet-ciro-rinomato": "c47a463218"
+    "lc-chalet-ciro-rinomato": "820d0139bc"
   },
   "locali#caffettiera": {
     "lc-caffettiera-perche": "3e73356abd"
   },
   "locali#gorizia": {
-    "lc-gorizia-perche": "7e00487e3f"
+    "lc-gorizia-perche": "528784cdea"
   },
   "locali#bellavia": {
     "lc-bellavia-perche": "4c99969230"
@@ -134,18 +144,18 @@
     "lc-starita-perche": "a3a1fe73df"
   },
   "locali#concettina": {
-    "lc-concettina-perche": "9bc372401e"
+    "lc-concettina-perche": "f1387b478c"
   },
   "locali#poppella": {
-    "lc-poppella-perche": "f6a75d2adb",
-    "lc-poppella-rinomato": "2515b480ce"
+    "lc-poppella-perche": "563c563ba4",
+    "lc-poppella-rinomato": "6e8c09f681"
   },
   "locali#petrucci-posillipo": {
-    "lc-petrucci-posillipo-perche": "8337d331e1"
+    "lc-petrucci-posillipo-perche": "f6c0f99017"
   },
   "locali#tufo": {
     "lc-tufo-perche": "38a57f5833",
-    "lc-tufo-rinomato": "9242b06bae"
+    "lc-tufo-rinomato": "00840b06fe"
   },
   "locali#fenestella": {
     "lc-fenestella-perche": "3b4afd1c64"
@@ -162,7 +172,7 @@
     "tp-tesoro-durata": "e1d702b5a2"
   },
   "tappe#sansevero": {
-    "tp-sansevero-prenota": "34ece27e45",
+    "tp-sansevero-prenota": "d67160e64f",
     "tp-sansevero-regole": "8341c87042"
   },
   "tappe#santa-chiara": {
@@ -182,7 +192,7 @@
     "tp-mann-prezzi": "69fd701eb9"
   },
   "tappe#san-lorenzo": {
-    "tp-sanlorenzo-orari": "b2cee3a7df"
+    "tp-sanlorenzo-orari": "5300c277e9"
   },
   "tappe#napoli-sotterranea": {
     "tp-sotterranea-visita": "1a91f2044b",
@@ -238,7 +248,7 @@
     "tp-floridiana-prezzi": "bd609975ec"
   },
   "tappe#pedamentina": {
-    "tp-pedamentina-orari": "b882cfba48"
+    "tp-pedamentina-orari": "21ace7d13d"
   },
   "tappe#catacombe": {
     "tp-catacombe-orari": "a56fac6625",
@@ -246,7 +256,8 @@
     "tp-catacombe-note": "fef33ec483"
   },
   "tappe#sanita": {
-    "tp-sanita-orari": "0658ee5892"
+    "tp-sanita-orari": "68dca20a8d",
+    "tp-sanita-ascensore": "99162c23ab"
   },
   "tappe#fontanelle": {
     "tp-fontanelle-orari": "a1055961ee",
@@ -276,10 +287,10 @@
   },
   "tappe#pompei": {
     "tp-pompei-biglietti": "2b3802c0bd",
-    "tp-pompei-viaggio": "a5d4f8487d"
+    "tp-pompei-viaggio": "a68733e036"
   },
   "tappe#ercolano": {
-    "tp-ercolano-viaggio": "3009b07dc0",
+    "tp-ercolano-viaggio": "ca0cd223dd",
     "tp-ercolano-prezzi": "abb7e10d39",
     "tp-campolieto": "49c180cb3f"
   },
@@ -311,7 +322,7 @@
     "tp-purgatorio-prezzi": "8ba613e5d7"
   },
   "tappe#girolamini": {
-    "tp-girolamini-orari": "f3f283ac3a",
+    "tp-girolamini-orari": "c5e99eff64",
     "tp-girolamini-prezzi": "34215f9bf2"
   },
   "tappe#tetti-duomo": {
@@ -356,7 +367,7 @@
     "tp-belvedere-orari": "94bba85a3a"
   },
   "tappe#palazzo-donn-anna": {
-    "tp-donnanna-orari": "a6c2b6c6db"
+    "tp-donnanna-orari": "687372490b"
   },
   "tappe#mostra-oltremare": {
     "tp-oltremare-orari": "ebb8c1ff7d",
@@ -371,7 +382,7 @@
     "tp-pietrarsa-viaggio": "3b004977d5"
   },
   "tappe#sorrento": {
-    "tp-sorrento-viaggio": "37c5392034",
+    "tp-sorrento-viaggio": "bfd97fd361",
     "tp-correale-orari": "4f3a73eb99"
   }
 }

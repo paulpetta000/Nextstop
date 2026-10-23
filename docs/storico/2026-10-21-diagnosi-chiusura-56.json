@@ -1,0 +1,626 @@
+{
+  "data": "2026-10-21T13:15:28.271Z",
+  "base": "e8d10f8",
+  "pacchettoCompleto": {
+    "data": "2026-10-21T12:57:28.595Z",
+    "node": "v24.21.0",
+    "sorgenti": [
+      {
+        "file": "tempi-tappe.json",
+        "sha256": "a4a753d2d5c41dceff299ceab4ae3fa61b5460606faf19214f27e2a936021465"
+      },
+      {
+        "file": "partenze-bus.json",
+        "sha256": "280cc8f96bff3c41c58c0ebf287312698a57b49a57541ac79c1300ae02266fea"
+      },
+      {
+        "file": "linee-bus.json",
+        "sha256": "cce843161f71b81c28c1ee2d220fe03d16a5e177e49675e366830b742469271e"
+      },
+      {
+        "file": "percorsi-tappe.json",
+        "sha256": "714ad5e3a6091887eee26894a03ed89094727790d9b31ea4d6be6bc05c771739"
+      },
+      {
+        "file": "percorsi-alternativi.json",
+        "sha256": "3294f4eab4f38da9fcb0f84e88180bf44ef31a8eb3163cef32dd5a50523feb5e"
+      }
+    ],
+    "risultati": [
+      {
+        "minify": false,
+        "giro": 0,
+        "bundle": {
+          "byte": 9934742,
+          "sha256": "c0db4a757ef4ee24b51d23bb4483fb1dbbd763e241ce181adda8062882f24e98"
+        },
+        "confronti": [
+          {
+            "file": "tempi-tappe.json",
+            "uguale": true,
+            "sha256Semantico": "12634d9f28cc520ab2f4f43255120ab9f14ff0d22c0e4f272cdf3bcc3963f53f"
+          },
+          {
+            "file": "partenze-bus.json",
+            "uguale": true,
+            "sha256Semantico": "750d75957d320613a8a662c21a3e5daf24e0305393ce6b3814f9442f3dd2371a"
+          },
+          {
+            "file": "linee-bus.json",
+            "uguale": true,
+            "sha256Semantico": "a3c87c84eae3193cf129a260b11dd3e7a89e1fdcf2f7c2ca4a82f719467031da"
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "uguale": true,
+            "sha256Semantico": "c14ee13b0e24e6baf886e661611a054f37528ad85d6c93acea22717339b286cc"
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "uguale": true,
+            "sha256Semantico": "6f51801be50602259775a87fedcf778aebc9fa849c05351a0a0bf93c03dc4b77"
+          }
+        ],
+        "riuscita": true,
+        "trasformazioni": [
+          {
+            "file": "linee-bus.json",
+            "byte": 71270,
+            "sha256": "6ebb3f578b035218f85aaed8f12719707f18bf2829e132b94a8853c51111a83e"
+          },
+          {
+            "file": "partenze-bus.json",
+            "byte": 223642,
+            "sha256": "b0b7ac71c268327abe6d2f8e49955641817f1ad278da156570cccde53eb16fe2"
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "byte": 2778491,
+            "sha256": "799b7a9ada6192e42b458184b38eecc2f2f10c42511cec00a81658343221b461"
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "byte": 3724235,
+            "sha256": "46aea8947d913fe4dc11107a7f333d7531702b712ac9e60372a75ba049c10eb8"
+          },
+          {
+            "file": "tempi-tappe.json",
+            "byte": 2207393,
+            "sha256": "cd011af4f3e23b42b2dd7fa8dc580622013e9351b72ff8ea2e75b84915958087"
+          }
+        ]
+      },
+      {
+        "minify": false,
+        "giro": 1,
+        "bundle": {
+          "byte": 9934742,
+          "sha256": "c0db4a757ef4ee24b51d23bb4483fb1dbbd763e241ce181adda8062882f24e98"
+        },
+        "confronti": [
+          {
+            "file": "tempi-tappe.json",
+            "uguale": true,
+            "sha256Semantico": "12634d9f28cc520ab2f4f43255120ab9f14ff0d22c0e4f272cdf3bcc3963f53f"
+          },
+          {
+            "file": "partenze-bus.json",
+            "uguale": true,
+            "sha256Semantico": "750d75957d320613a8a662c21a3e5daf24e0305393ce6b3814f9442f3dd2371a"
+          },
+          {
+            "file": "linee-bus.json",
+            "uguale": true,
+            "sha256Semantico": "a3c87c84eae3193cf129a260b11dd3e7a89e1fdcf2f7c2ca4a82f719467031da"
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "uguale": true,
+            "sha256Semantico": "c14ee13b0e24e6baf886e661611a054f37528ad85d6c93acea22717339b286cc"
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "uguale": true,
+            "sha256Semantico": "6f51801be50602259775a87fedcf778aebc9fa849c05351a0a0bf93c03dc4b77"
+          }
+        ],
+        "riuscita": true,
+        "trasformazioni": [
+          {
+            "file": "linee-bus.json",
+            "byte": 71270,
+            "sha256": "6ebb3f578b035218f85aaed8f12719707f18bf2829e132b94a8853c51111a83e"
+          },
+          {
+            "file": "partenze-bus.json",
+            "byte": 223642,
+            "sha256": "b0b7ac71c268327abe6d2f8e49955641817f1ad278da156570cccde53eb16fe2"
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "byte": 2778491,
+            "sha256": "799b7a9ada6192e42b458184b38eecc2f2f10c42511cec00a81658343221b461"
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "byte": 3724235,
+            "sha256": "46aea8947d913fe4dc11107a7f333d7531702b712ac9e60372a75ba049c10eb8"
+          },
+          {
+            "file": "tempi-tappe.json",
+            "byte": 2207393,
+            "sha256": "cd011af4f3e23b42b2dd7fa8dc580622013e9351b72ff8ea2e75b84915958087"
+          }
+        ]
+      },
+      {
+        "minify": false,
+        "giro": 2,
+        "bundle": {
+          "byte": 9934742,
+          "sha256": "c0db4a757ef4ee24b51d23bb4483fb1dbbd763e241ce181adda8062882f24e98"
+        },
+        "confronti": [
+          {
+            "file": "tempi-tappe.json",
+            "uguale": true,
+            "sha256Semantico": "12634d9f28cc520ab2f4f43255120ab9f14ff0d22c0e4f272cdf3bcc3963f53f"
+          },
+          {
+            "file": "partenze-bus.json",
+            "uguale": true,
+            "sha256Semantico": "750d75957d320613a8a662c21a3e5daf24e0305393ce6b3814f9442f3dd2371a"
+          },
+          {
+            "file": "linee-bus.json",
+            "uguale": true,
+            "sha256Semantico": "a3c87c84eae3193cf129a260b11dd3e7a89e1fdcf2f7c2ca4a82f719467031da"
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "uguale": true,
+            "sha256Semantico": "c14ee13b0e24e6baf886e661611a054f37528ad85d6c93acea22717339b286cc"
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "uguale": true,
+            "sha256Semantico": "6f51801be50602259775a87fedcf778aebc9fa849c05351a0a0bf93c03dc4b77"
+          }
+        ],
+        "riuscita": true,
+        "trasformazioni": [
+          {
+            "file": "linee-bus.json",
+            "byte": 71270,
+            "sha256": "6ebb3f578b035218f85aaed8f12719707f18bf2829e132b94a8853c51111a83e"
+          },
+          {
+            "file": "partenze-bus.json",
+            "byte": 223642,
+            "sha256": "b0b7ac71c268327abe6d2f8e49955641817f1ad278da156570cccde53eb16fe2"
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "byte": 2778491,
+            "sha256": "799b7a9ada6192e42b458184b38eecc2f2f10c42511cec00a81658343221b461"
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "byte": 3724235,
+            "sha256": "46aea8947d913fe4dc11107a7f333d7531702b712ac9e60372a75ba049c10eb8"
+          },
+          {
+            "file": "tempi-tappe.json",
+            "byte": 2207393,
+            "sha256": "cd011af4f3e23b42b2dd7fa8dc580622013e9351b72ff8ea2e75b84915958087"
+          }
+        ]
+      },
+      {
+        "minify": true,
+        "giro": 0,
+        "bundle": {
+          "byte": 9815796,
+          "sha256": "22fd7e3c5767ab4b7179feffbec6ebf3c54618cff90f2b35c2e75f9395b07645"
+        },
+        "confronti": [
+          {
+            "file": "tempi-tappe.json",
+            "uguale": true,
+            "sha256Semantico": "12634d9f28cc520ab2f4f43255120ab9f14ff0d22c0e4f272cdf3bcc3963f53f"
+          },
+          {
+            "file": "partenze-bus.json",
+            "uguale": true,
+            "sha256Semantico": "750d75957d320613a8a662c21a3e5daf24e0305393ce6b3814f9442f3dd2371a"
+          },
+          {
+            "file": "linee-bus.json",
+            "uguale": true,
+            "sha256Semantico": "a3c87c84eae3193cf129a260b11dd3e7a89e1fdcf2f7c2ca4a82f719467031da"
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "uguale": true,
+            "sha256Semantico": "c14ee13b0e24e6baf886e661611a054f37528ad85d6c93acea22717339b286cc"
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "uguale": true,
+            "sha256Semantico": "6f51801be50602259775a87fedcf778aebc9fa849c05351a0a0bf93c03dc4b77"
+          }
+        ],
+        "riuscita": true,
+        "trasformazioni": [
+          {
+            "file": "linee-bus.json",
+            "byte": 71270,
+            "sha256": "6ebb3f578b035218f85aaed8f12719707f18bf2829e132b94a8853c51111a83e"
+          },
+          {
+            "file": "partenze-bus.json",
+            "byte": 223642,
+            "sha256": "b0b7ac71c268327abe6d2f8e49955641817f1ad278da156570cccde53eb16fe2"
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "byte": 2778491,
+            "sha256": "799b7a9ada6192e42b458184b38eecc2f2f10c42511cec00a81658343221b461"
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "byte": 3724235,
+            "sha256": "46aea8947d913fe4dc11107a7f333d7531702b712ac9e60372a75ba049c10eb8"
+          },
+          {
+            "file": "tempi-tappe.json",
+            "byte": 2207393,
+            "sha256": "cd011af4f3e23b42b2dd7fa8dc580622013e9351b72ff8ea2e75b84915958087"
+          }
+        ]
+      },
+      {
+        "minify": true,
+        "giro": 1,
+        "bundle": {
+          "byte": 9815796,
+          "sha256": "22fd7e3c5767ab4b7179feffbec6ebf3c54618cff90f2b35c2e75f9395b07645"
+        },
+        "confronti": [
+          {
+            "file": "tempi-tappe.json",
+            "uguale": true,
+            "sha256Semantico": "12634d9f28cc520ab2f4f43255120ab9f14ff0d22c0e4f272cdf3bcc3963f53f"
+          },
+          {
+            "file": "partenze-bus.json",
+            "uguale": true,
+            "sha256Semantico": "750d75957d320613a8a662c21a3e5daf24e0305393ce6b3814f9442f3dd2371a"
+          },
+          {
+            "file": "linee-bus.json",
+            "uguale": true,
+            "sha256Semantico": "a3c87c84eae3193cf129a260b11dd3e7a89e1fdcf2f7c2ca4a82f719467031da"
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "uguale": true,
+            "sha256Semantico": "c14ee13b0e24e6baf886e661611a054f37528ad85d6c93acea22717339b286cc"
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "uguale": true,
+            "sha256Semantico": "6f51801be50602259775a87fedcf778aebc9fa849c05351a0a0bf93c03dc4b77"
+          }
+        ],
+        "riuscita": true,
+        "trasformazioni": [
+          {
+            "file": "linee-bus.json",
+            "byte": 71270,
+            "sha256": "6ebb3f578b035218f85aaed8f12719707f18bf2829e132b94a8853c51111a83e"
+          },
+          {
+            "file": "partenze-bus.json",
+            "byte": 223642,
+            "sha256": "b0b7ac71c268327abe6d2f8e49955641817f1ad278da156570cccde53eb16fe2"
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "byte": 2778491,
+            "sha256": "799b7a9ada6192e42b458184b38eecc2f2f10c42511cec00a81658343221b461"
+          },
+          {
+            "file": "tempi-tappe.json",
+            "byte": 2207393,
+            "sha256": "cd011af4f3e23b42b2dd7fa8dc580622013e9351b72ff8ea2e75b84915958087"
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "byte": 3724235,
+            "sha256": "46aea8947d913fe4dc11107a7f333d7531702b712ac9e60372a75ba049c10eb8"
+          }
+        ]
+      },
+      {
+        "minify": true,
+        "giro": 2,
+        "bundle": {
+          "byte": 9815796,
+          "sha256": "22fd7e3c5767ab4b7179feffbec6ebf3c54618cff90f2b35c2e75f9395b07645"
+        },
+        "confronti": [
+          {
+            "file": "tempi-tappe.json",
+            "uguale": true,
+            "sha256Semantico": "12634d9f28cc520ab2f4f43255120ab9f14ff0d22c0e4f272cdf3bcc3963f53f"
+          },
+          {
+            "file": "partenze-bus.json",
+            "uguale": true,
+            "sha256Semantico": "750d75957d320613a8a662c21a3e5daf24e0305393ce6b3814f9442f3dd2371a"
+          },
+          {
+            "file": "linee-bus.json",
+            "uguale": true,
+            "sha256Semantico": "a3c87c84eae3193cf129a260b11dd3e7a89e1fdcf2f7c2ca4a82f719467031da"
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "uguale": true,
+            "sha256Semantico": "c14ee13b0e24e6baf886e661611a054f37528ad85d6c93acea22717339b286cc"
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "uguale": true,
+            "sha256Semantico": "6f51801be50602259775a87fedcf778aebc9fa849c05351a0a0bf93c03dc4b77"
+          }
+        ],
+        "riuscita": true,
+        "trasformazioni": [
+          {
+            "file": "linee-bus.json",
+            "byte": 71270,
+            "sha256": "6ebb3f578b035218f85aaed8f12719707f18bf2829e132b94a8853c51111a83e"
+          },
+          {
+            "file": "partenze-bus.json",
+            "byte": 223642,
+            "sha256": "b0b7ac71c268327abe6d2f8e49955641817f1ad278da156570cccde53eb16fe2"
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "byte": 2778491,
+            "sha256": "799b7a9ada6192e42b458184b38eecc2f2f10c42511cec00a81658343221b461"
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "byte": 3724235,
+            "sha256": "46aea8947d913fe4dc11107a7f333d7531702b712ac9e60372a75ba049c10eb8"
+          },
+          {
+            "file": "tempi-tappe.json",
+            "byte": 2207393,
+            "sha256": "cd011af4f3e23b42b2dd7fa8dc580622013e9351b72ff8ea2e75b84915958087"
+          }
+        ]
+      }
+    ]
+  },
+  "stadiAstro": {
+    "inizio": "2026-10-21T13:06:41.624Z",
+    "sorgenti": [
+      {
+        "file": "tempi-tappe.json",
+        "byte": 2055642,
+        "sha256": "a4a753d2d5c41dceff299ceab4ae3fa61b5460606faf19214f27e2a936021465",
+        "semantico": "12634d9f28cc520ab2f4f43255120ab9f14ff0d22c0e4f272cdf3bcc3963f53f"
+      },
+      {
+        "file": "partenze-bus.json",
+        "byte": 223443,
+        "sha256": "280cc8f96bff3c41c58c0ebf287312698a57b49a57541ac79c1300ae02266fea",
+        "semantico": "750d75957d320613a8a662c21a3e5daf24e0305393ce6b3814f9442f3dd2371a"
+      },
+      {
+        "file": "linee-bus.json",
+        "byte": 116276,
+        "sha256": "cce843161f71b81c28c1ee2d220fe03d16a5e177e49675e366830b742469271e",
+        "semantico": "a3c87c84eae3193cf129a260b11dd3e7a89e1fdcf2f7c2ca4a82f719467031da"
+      },
+      {
+        "file": "percorsi-tappe.json",
+        "byte": 2741404,
+        "sha256": "714ad5e3a6091887eee26894a03ed89094727790d9b31ea4d6be6bc05c771739",
+        "semantico": "c14ee13b0e24e6baf886e661611a054f37528ad85d6c93acea22717339b286cc"
+      },
+      {
+        "file": "percorsi-alternativi.json",
+        "byte": 3708813,
+        "sha256": "3294f4eab4f38da9fcb0f84e88180bf44ef31a8eb3163cef32dd5a50523feb5e",
+        "semantico": "6f51801be50602259775a87fedcf778aebc9fa849c05351a0a0bf93c03dc4b77"
+      }
+    ],
+    "prima": [
+      {
+        "file": "partenze-bus.json",
+        "uguale": true,
+        "sha256": "280cc8f96bff3c41c58c0ebf287312698a57b49a57541ac79c1300ae02266fea"
+      },
+      {
+        "file": "tempi-tappe.json",
+        "uguale": true,
+        "sha256": "a4a753d2d5c41dceff299ceab4ae3fa61b5460606faf19214f27e2a936021465"
+      },
+      {
+        "file": "percorsi-tappe.json",
+        "uguale": true,
+        "sha256": "714ad5e3a6091887eee26894a03ed89094727790d9b31ea4d6be6bc05c771739"
+      },
+      {
+        "file": "percorsi-alternativi.json",
+        "uguale": true,
+        "sha256": "3294f4eab4f38da9fcb0f84e88180bf44ef31a8eb3163cef32dd5a50523feb5e"
+      },
+      {
+        "file": "linee-bus.json",
+        "uguale": true,
+        "sha256": "cce843161f71b81c28c1ee2d220fe03d16a5e177e49675e366830b742469271e"
+      }
+    ],
+    "dopo": [
+      {
+        "file": "partenze-bus.json",
+        "uguale": true,
+        "sha256": "b0b7ac71c268327abe6d2f8e49955641817f1ad278da156570cccde53eb16fe2",
+        "byte": 223642
+      },
+      {
+        "file": "percorsi-tappe.json",
+        "uguale": true,
+        "sha256": "799b7a9ada6192e42b458184b38eecc2f2f10c42511cec00a81658343221b461",
+        "byte": 2778491
+      },
+      {
+        "file": "tempi-tappe.json",
+        "uguale": true,
+        "sha256": "cd011af4f3e23b42b2dd7fa8dc580622013e9351b72ff8ea2e75b84915958087",
+        "byte": 2207393
+      },
+      {
+        "file": "percorsi-alternativi.json",
+        "uguale": true,
+        "sha256": "46aea8947d913fe4dc11107a7f333d7531702b712ac9e60372a75ba049c10eb8",
+        "byte": 3724235
+      },
+      {
+        "file": "linee-bus.json",
+        "uguale": true,
+        "sha256": "6ebb3f578b035218f85aaed8f12719707f18bf2829e132b94a8853c51111a83e",
+        "byte": 71270
+      }
+    ],
+    "bundle": [
+      {
+        "file": "chunks/riferimento-napoli_Urf-zWcb.mjs",
+        "sha256": "d465a227005325fa47e6f0d5bf9d6d8a80b9b0f11b823ccee8c8018f50de591a",
+        "byte": 9914962,
+        "confronti": [
+          {
+            "file": "tempi-tappe.json",
+            "uguale": true
+          },
+          {
+            "file": "partenze-bus.json",
+            "uguale": true
+          },
+          {
+            "file": "linee-bus.json",
+            "uguale": true
+          },
+          {
+            "file": "percorsi-tappe.json",
+            "uguale": true
+          },
+          {
+            "file": "percorsi-alternativi.json",
+            "uguale": true
+          }
+        ]
+      }
+    ],
+    "disco": [
+      {
+        "file": "chunks/riferimento-napoli_Urf-zWcb.mjs",
+        "sha256": "d465a227005325fa47e6f0d5bf9d6d8a80b9b0f11b823ccee8c8018f50de591a",
+        "ugualeMemoria": true
+      }
+    ],
+    "build": "riuscita",
+    "fine": "2026-10-21T13:06:50.403Z"
+  },
+  "byte": {
+    "data": "2026-10-21T13:00:32.993Z",
+    "riferimentoBuono": {
+      "file": "sonda-astro-2026-10-21/disco.mjs",
+      "byte": 9914962,
+      "sha256": "d465a227005325fa47e6f0d5bf9d6d8a80b9b0f11b823ccee8c8018f50de591a"
+    },
+    "risultati": [
+      {
+        "file": "nextstop-build-fallita-riferimento-2026-10-21.mjs",
+        "byte": 9914962,
+        "sha256": "d0fcc76d76f71135aef366b4e8557a0561ca7331f167503e3f2316fe2f014e42",
+        "differenze": [
+          {
+            "offset": 9665395,
+            "atteso": 80,
+            "trovato": 64,
+            "xor": 16,
+            "mod64": 51,
+            "mod4096": 2931
+          }
+        ]
+      },
+      {
+        "file": "nextstop-vista-bundle-fallito-2026-10-21.mjs",
+        "byte": 9914962,
+        "sha256": "c313ef281f14c45b2db89b29ac5c76e5aab444f397dab3da52c653b42b0a2805",
+        "differenze": [
+          {
+            "offset": 3816123,
+            "atteso": 112,
+            "trovato": 96,
+            "xor": 16,
+            "mod64": 59,
+            "mod4096": 2747
+          },
+          {
+            "offset": 9403981,
+            "atteso": 126,
+            "trovato": 110,
+            "xor": 16,
+            "mod64": 13,
+            "mod4096": 3661
+          }
+        ]
+      }
+    ],
+    "limite": "Due differenze nello stesso bit non dimostrano una causa hardware o software."
+  },
+  "discrepanza": {
+    "data": "2026-10-21T13:02:59.252Z",
+    "primoRiscontro": {
+      "file": "nextstop-vista-build-diagnosi-2026-10-21.json",
+      "data": "2026-10-21T11:51:37.608Z",
+      "sha256": "1902d14fcfed22f18b611a80b1fde1834a05a1accd8755d1ce5c9d0a059675fc"
+    },
+    "riscontroAttuale": {
+      "file": "nextstop-vista-bundle-fallito-2026-10-21.mjs",
+      "sha256": "c313ef281f14c45b2db89b29ac5c76e5aab444f397dab3da52c653b42b0a2805"
+    },
+    "manifestoAttuale": {
+      "prove": 125,
+      "discordanti": 0
+    },
+    "differenzaUlteriore": {
+      "offset": 3816123,
+      "primo": 112,
+      "attuale": 96,
+      "xor": 16,
+      "contestoPrimo": "EA8DdCA3BBDFAAE\\\",\\\"p.y2DomBTNcbALoBDOEGZ",
+      "contestoAttuale": "EA8DdCA3BBDFAAE\\\",\\\"`.y2DomBTNcbALoBDOEGZ"
+    },
+    "ricostruzione": {
+      "file": "nextstop-vista-bundle-ricostruzione-primo-riscontro-2026-10-21.mjs",
+      "sha256": "1902d14fcfed22f18b611a80b1fde1834a05a1accd8755d1ce5c9d0a059675fc",
+      "metodo": "Copia del riscontro attuale; soltanto il byte aggiuntivo riportato al valore del bundle corretto. Hash identico al primo riscontro registrato, non presentata come file originale intatto."
+    },
+    "limite": "Nessuna attribuzione a compilatore, filesystem, disco o RAM. Le letture attuali Node e PowerShell sono stabili e coerenti con il manifesto già commesso; la discrepanza è rispetto al primo rilievo diagnostico."
+  },
+  "gitIntegrita": {
+    "esito": 0,
+    "log": "nextstop-git-integrita-2026-10-21.log",
+    "limite": "Oggetti non raggiungibili conservati; non sono errori di integrità."
+  }
+}

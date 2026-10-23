@@ -58,5 +58,14 @@
     "Castello Aragonese",
     "Collegamento marittimo"
   ],
-  "pubblicazioni_rilevate": []
+  "pubblicazioni_rilevate": [
+    "caremar-avviso-carburanti-2026-10-20"
+  ],
+  "riscontro_78": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Avviso generale Caremar carburante collegato, non confronto completo dei programmi Ischia o del servizio effettivo."
+  }
 }
