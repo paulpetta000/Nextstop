@@ -114,5 +114,15 @@
     "controlli_completi": 0,
     "dati_applicativi_aggiornati": false,
     "nota": "Confronto di allegato storico dei mercati; dati applicativi e conteggi della revisione76 conservati."
+  },
+  "riscontro_78": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md",
+    "gruppi": 26,
+    "aperti": 16,
+    "fonte_orario_recuperati": 10,
+    "controlli_completi": 0,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Confronto marittimo Capri e fonte ANM attuale; avviso Caremar registrato separatamente dal programma."
   }
 }

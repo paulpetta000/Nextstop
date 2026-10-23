@@ -100,5 +100,12 @@
     "controllo_completo": false,
     "dati_applicativi_aggiornati": false,
     "nota": "Nuovi avvisi temporanei letti, validità e confronti parziali nel rapporto; date complete e scadenza precedenti conservate."
+  },
+  "riscontro_78": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Scheda ANM attuale conferma 20minuti e fasce settimanali; durata/festività non specificate. Documento grafico richiede accesso, non effettuato."
   }
 }

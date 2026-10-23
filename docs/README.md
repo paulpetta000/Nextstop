@@ -1,5 +1,7 @@
 # Documentazione · scegliere cosa leggere
 
+Seguito documentale corrente: [Capri, Caremar e L6 78](../aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md), programmi distinti dal servizio effettivo, applicazione invariata.
+
 Seguito documentale: [mercati 77](../aggiornamenti/rapporti/2026-10-23-mercati-77.md), proposta storica distinta dal nuovo calendario; nessuna modifica applicativa.
 
 Seguito corrente: [San Lorenzo 76](../aggiornamenti/rapporti/2026-10-23-san-lorenzo-76.md), correzione mirata della guida obbligatoria; 209 fonti, 792 prove. Controllo completo ancora aperto; avvisi e locali nel rapporto 75.

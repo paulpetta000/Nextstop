@@ -324,5 +324,22 @@
     "fonti_integrative": [
       "https://la-neapolis-sotterrata.metooo.com/e/la-neapolis-sotterrata"
     ]
+  },
+  {
+    "id": "caremar-avviso-carburanti-2026-10-20",
+    "controlli": [
+      "tappa-capri",
+      "tappa-ischia",
+      "tappa-procida"
+    ],
+    "url": "https://shop.caremar.it/it/avvisi/",
+    "pubblicato": "2026-10-20",
+    "valido_dal": null,
+    "valido_fino": null,
+    "tipo": "avviso_temporaneo",
+    "stato": "letto_cancellazioni_possibili_non_certe",
+    "ricontrollare": "2026-10-24",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md",
+    "nota": "Possibili cancellazioni nei prossimi giorni per difficoltà di approvvigionamento carburante. Non sospensione certa di tutte le corse; fine e decorrenza esatta ignote. Programmi e disponibilità/servizio effettivo distinti, nessun blocco applicativo."
   }
 ]

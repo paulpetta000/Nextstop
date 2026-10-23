@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Collegamenti · revisione 78 del 23 ottobre
+
+Confrontati Caremar Napoli–Capri/ritorno e tariffe; registrato avviso 20 ottobre di possibili cancellazioni per carburante, senza blocchi automatici. SNAV fino a marzo 2027 distinto da estate e Caremar; riletta L6, confermata frequenza 20 minuti, durata/festivi ancora aperti. [Rapporto](aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md). **16 aperti/10 recuperati**, controlli completi/scadenze invariati. Solo documenti/registro: codice applicativo fae435e, CI e anteprima riuscite conservati. Nessun main/produzione, installazione o nuovo tentativo sul backup Git.
+
 ## Mercati · revisione 77 del 23 ottobre
 
 Confrontato PDF comunale nel percorso gennaio 2026: proposta di orario prolungato appartiene all'allegato 2012, non prova un nuovo calendario Pignasecca/Porta Nolana. [Rapporto e pagine](aggiornamenti/rapporti/2026-10-23-mercati-77.md). V12 e conteggi **16 aperti/10 recuperati** invariati, nessun controllo completo rinnovato. Solo documenti/registro; codice e verifiche riuscite del commit applicativo fae435e sotto. Vecchio backup Git non ritentato, nessun main/produzione.

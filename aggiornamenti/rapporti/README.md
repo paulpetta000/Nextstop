@@ -4,6 +4,7 @@ Non leggere questa cartella per iniziare un controllo ordinario. Usare [procedur
 
 | Rapporto | Uso |
 |---|---|
+| [Capri e L6 78, 23 ottobre](2026-10-23-collegamenti-capri-78.md) | Quadri Caremar/SNAV e nuovo avviso carburanti distinti; durata/festività L6 ancora aperte, applicazione invariata |
 | [Mercati 77, 23 ottobre](2026-10-23-mercati-77.md) | PDF nel percorso 2026 contiene proposta 2012, nessun nuovo orario dedotto; V12 ancora aperto |
 | [San Lorenzo 76, 23 ottobre](2026-10-23-san-lorenzo-76.md) | Guida obbligatoria confermata da due canali del gestore; testi corretti, controllo completo ancora aperto |
 | [Fonti e avvisi 75, 23 ottobre](2026-10-23-fonti-ripresa-75.md) | Granfuoco ordinario recuperato; contrasti dei locali, Certosa MiC e nuovi avvisi temporanei ANM/EAV; dati applicativi invariati |
