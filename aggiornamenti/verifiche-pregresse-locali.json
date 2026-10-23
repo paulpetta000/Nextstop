@@ -8,13 +8,38 @@
       "https://www.barbeqool.it/"
     ],
     "nuovo_esito": "resta_da_verificare",
-    "riscontro_nuovo": "Settimana completa, fasce pranzo/cena e giorni chiusi: il sito si apre ma non le pubblica.",
+    "riscontro_nuovo": "Settimana Google recuperata; contrasta con Facebook collegato dal gestore, aggiornato circa quattro anni fa, su martedì e domenica. Confermare il calendario attuale.",
     "fonti_nuove": [
       {
         "url": "https://www.barbeqool.it/",
         "nota": "Sito ufficiale letto: identità, sede e contatti presenti, orari non pubblicati nel contenuto consultabile. Prenotazioni ufficialmente collegate ma solo JavaScript."
       }
-    ]
+    ],
+    "storico_ante_75": {
+      "id": "L01",
+      "titolo": "Barbeqool",
+      "sede": "Via Giovanni Merliani 110",
+      "provenienza": "da-verificare/orari-locali.md",
+      "url_originari": [
+        "https://www.barbeqool.it/"
+      ],
+      "nuovo_esito": "resta_da_verificare",
+      "riscontro_nuovo": "Settimana completa, fasce pranzo/cena e giorni chiusi: il sito si apre ma non le pubblica.",
+      "fonti_nuove": [
+        {
+          "url": "https://www.barbeqool.it/",
+          "nota": "Sito ufficiale letto: identità, sede e contatti presenti, orari non pubblicati nel contenuto consultabile. Prenotazioni ufficialmente collegate ma solo JavaScript."
+        }
+      ]
+    },
+    "riscontro_75": {
+      "data": "2026-10-23",
+      "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md",
+      "url": "https://www.google.com/maps/search/?api=1&query=Barbeqool+Via+Giovanni+Merliani+110+Napoli",
+      "controllo_completo": false,
+      "dati_applicativi_aggiornati": false,
+      "nota": "Settimana Google recuperata; contrasta con Facebook collegato dal gestore, aggiornato circa quattro anni fa, su martedì e domenica. Confermare il calendario attuale."
+    }
   },
   {
     "id": "L02",
@@ -25,13 +50,38 @@
       "https://steakhousenapoli.it/"
     ],
     "nuovo_esito": "resta_da_verificare",
-    "riscontro_nuovo": "Settimana completa e differenze della domenica: sito e contatti aperti, orari non trovati.",
+    "riscontro_nuovo": "Settimana Google recuperata; Facebook collegato dal sito è aggiornato circa quattro anni fa e diverge su pranzo feriale, lunedì e domenica sera. Confermare le fasce attuali.",
     "fonti_nuove": [
       {
         "url": "https://steakhousenapoli.it/",
         "nota": "Sito e pagina Contatti leggibili dopo errore iniziale 403. Indirizzo e telefono coincidono con la vecchia lista; nessuna settimana di orari trovata."
       }
-    ]
+    ],
+    "storico_ante_75": {
+      "id": "L02",
+      "titolo": "Colantuono’s Steak and Grill",
+      "sede": "Via Belvedere 1/A",
+      "provenienza": "da-verificare/orari-locali.md",
+      "url_originari": [
+        "https://steakhousenapoli.it/"
+      ],
+      "nuovo_esito": "resta_da_verificare",
+      "riscontro_nuovo": "Settimana completa e differenze della domenica: sito e contatti aperti, orari non trovati.",
+      "fonti_nuove": [
+        {
+          "url": "https://steakhousenapoli.it/",
+          "nota": "Sito e pagina Contatti leggibili dopo errore iniziale 403. Indirizzo e telefono coincidono con la vecchia lista; nessuna settimana di orari trovata."
+        }
+      ]
+    },
+    "riscontro_75": {
+      "data": "2026-10-23",
+      "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md",
+      "url": "https://www.google.com/maps/search/?api=1&query=Colantuono%27s+Steak+and+Grill+Via+Belvedere+1+Napoli",
+      "controllo_completo": false,
+      "dati_applicativi_aggiornati": false,
+      "nota": "Settimana Google recuperata; Facebook collegato dal sito è aggiornato circa quattro anni fa e diverge su pranzo feriale, lunedì e domenica sera. Confermare le fasce attuali."
+    }
   },
   {
     "id": "L03",
@@ -41,14 +91,39 @@
     "url_originari": [
       "https://www.granfuocobraceria.it/"
     ],
-    "nuovo_esito": "resta_da_verificare",
-    "riscontro_nuovo": "Orari attuali e chiusure: sito recuperato ma senza orari; prenotazioni e social non leggibili.",
+    "nuovo_esito": "fonte_e_orario_ordinario_recuperati",
+    "riscontro_nuovo": "Scheda Google identificata da sede/telefono/sito, settimana ordinaria recuperata: lun-ven19:30-00:30; sab-dom12:30-15:30 e19:30-00:30. Fonte ammessa dalla lista precedente; non conferma ferie/eccezioni. Sito in errore certificato nel browser, non superato.",
     "fonti_nuove": [
       {
         "url": "https://www.granfuocobraceria.it/",
         "nota": "Homepage con www recuperata dopo timeout. Contatti e collegamenti ufficiali presenti; orari assenti. Profilo Instagram segnalato dal sito limitato dallo strumento; prenotazioni 403. Collegamento estraneo al ristorante nella pagina non seguito né usato come fonte."
       }
-    ]
+    ],
+    "storico_ante_75": {
+      "id": "L03",
+      "titolo": "Granfuoco Braceria",
+      "sede": "Viale Virgilio 1",
+      "provenienza": "da-verificare/orari-locali.md",
+      "url_originari": [
+        "https://www.granfuocobraceria.it/"
+      ],
+      "nuovo_esito": "resta_da_verificare",
+      "riscontro_nuovo": "Orari attuali e chiusure: sito recuperato ma senza orari; prenotazioni e social non leggibili.",
+      "fonti_nuove": [
+        {
+          "url": "https://www.granfuocobraceria.it/",
+          "nota": "Homepage con www recuperata dopo timeout. Contatti e collegamenti ufficiali presenti; orari assenti. Profilo Instagram segnalato dal sito limitato dallo strumento; prenotazioni 403. Collegamento estraneo al ristorante nella pagina non seguito né usato come fonte."
+        }
+      ]
+    },
+    "riscontro_75": {
+      "data": "2026-10-23",
+      "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md",
+      "url": "https://g.page/Granfuoco?share",
+      "controllo_completo": false,
+      "dati_applicativi_aggiornati": false,
+      "nota": "Scheda Google identificata da sede/telefono/sito, settimana ordinaria recuperata: lun-ven19:30-00:30; sab-dom12:30-15:30 e19:30-00:30. Fonte ammessa dalla lista precedente; non conferma ferie/eccezioni. Sito in errore certificato nel browser, non superato."
+    }
   },
   {
     "id": "L04",
@@ -57,8 +132,26 @@
     "provenienza": "da-verificare/orari-locali.md",
     "url_originari": [],
     "nuovo_esito": "resta_da_verificare",
-    "riscontro_nuovo": "Trovare un canale attribuibile al gestore e la settimana di orari. Candidato Facebook bloccato; attribuzione non verificata.",
-    "fonti_nuove": []
+    "riscontro_nuovo": "Profilo Facebook ora letto e attribuito attraverso contatti, riferimento Gambero Rosso e rinvio della scheda Google. Fonte recuperata, ma fasce Facebook e Google divergono; caso ancora aperto.",
+    "fonti_nuove": [],
+    "storico_ante_75": {
+      "id": "L04",
+      "titolo": "Friggitoria Vomero",
+      "sede": "Via Domenico Cimarosa 44",
+      "provenienza": "da-verificare/orari-locali.md",
+      "url_originari": [],
+      "nuovo_esito": "resta_da_verificare",
+      "riscontro_nuovo": "Trovare un canale attribuibile al gestore e la settimana di orari. Candidato Facebook bloccato; attribuzione non verificata.",
+      "fonti_nuove": []
+    },
+    "riscontro_75": {
+      "data": "2026-10-23",
+      "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md",
+      "url": "https://www.google.com/maps/search/?api=1&query=Friggitoria+Vomero+Via+Domenico+Cimarosa+44+Napoli",
+      "controllo_completo": false,
+      "dati_applicativi_aggiornati": false,
+      "nota": "Profilo Facebook ora letto e attribuito attraverso contatti, riferimento Gambero Rosso e rinvio della scheda Google. Fonte recuperata, ma fasce Facebook e Google divergono; caso ancora aperto."
+    }
   },
   {
     "id": "L05",
@@ -84,7 +177,25 @@
     "provenienza": "da-verificare/orari-locali.md",
     "url_originari": [],
     "nuovo_esito": "resta_da_verificare",
-    "riscontro_nuovo": "Trovare una fonte del gestore e verificare apertura effettiva, giovedì e orari: aggregatori indicano situazioni differenti, senza conferma ufficiale.",
-    "fonti_nuove": []
+    "riscontro_nuovo": "Scheda Google della sede esatta letta: chiuso temporaneamente, senza data o riapertura. Serve conferma del gestore prima di usare gli orari degli aggregatori.",
+    "fonti_nuove": [],
+    "storico_ante_75": {
+      "id": "L06",
+      "titolo": "De Luca Braceria Macelleria 1920",
+      "sede": "Via Santa Teresa a Chiaia 46",
+      "provenienza": "da-verificare/orari-locali.md",
+      "url_originari": [],
+      "nuovo_esito": "resta_da_verificare",
+      "riscontro_nuovo": "Trovare una fonte del gestore e verificare apertura effettiva, giovedì e orari: aggregatori indicano situazioni differenti, senza conferma ufficiale.",
+      "fonti_nuove": []
+    },
+    "riscontro_75": {
+      "data": "2026-10-23",
+      "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md",
+      "url": "https://www.google.com/maps/search/?api=1&query=De+Luca+Braceria+Via+Santa+Teresa+a+Chiaia+46+Napoli",
+      "controllo_completo": false,
+      "dati_applicativi_aggiornati": false,
+      "nota": "Scheda Google della sede esatta letta: chiuso temporaneamente, senza data o riapertura. Serve conferma del gestore prima di usare gli orari degli aggregatori."
+    }
   }
 ]

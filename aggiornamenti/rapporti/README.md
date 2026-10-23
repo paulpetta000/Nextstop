@@ -4,6 +4,8 @@ Non leggere questa cartella per iniziare un controllo ordinario. Usare [procedur
 
 | Rapporto | Uso |
 |---|---|
+| [Fonti e avvisi 75, 23 ottobre](2026-10-23-fonti-ripresa-75.md) | Granfuoco ordinario recuperato; contrasti dei locali, Certosa MiC e nuovi avvisi temporanei ANM/EAV; dati applicativi invariati |
+| [Fonti 74, 23 ottobre](2026-10-23-fonti-ripresa-74.md) | Confronto stagionale Capri e limiti Virgilio, prima del nuovo recupero Certosa |
 | [Fonti e Acton 72, 23 ottobre](2026-10-23-fonti-ripresa-72.md) | Pagine comunali recuperate, cantieri e canale operativo EAV; 31 collegamenti via Acton in manutenzione riprodotti, correzione da fare |
 | [Ripresa fonti 71, 22 ottobre](2026-10-22-fonti-ripresa-71.md) | V02/V03/V11 ordinari recuperati, nuovi avvisi EAV e confronti parziali; nessun controllo completo o dato applicativo aggiornato |
 | [ANM nel browser, 22 ottobre](2026-10-22-anm-browser.md) | Recuperi parziali V04/V15/V16, discordanza navetta e attesa L6 da confrontare; nessun dato applicativo aggiornato |

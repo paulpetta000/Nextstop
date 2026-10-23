@@ -1,6 +1,6 @@
 # Verifiche personali · indice corrente
 
-Stato del 23/10/2026, revisione 72: **26 gruppi, 17 aperti e nove con fonte/orario ordinario recuperati**. San Carlo (V02), Castel Nuovo (V03) e Città della Scienza (V11) recuperati dal gestore nel browser; nuovi riscontri parziali ANM, EAV e Parco Virgilio nelle schede. [Seguito 72](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md): nuovi riscontri comunali ed EAV; Acton in manutenzione ancora presente nei percorsi, correzione da fare. Gli stati restano invariati perché i nuovi accessi non completano le verifiche residue. Sono gruppi di domande, non siti distinti. Per un riscontro aprire solo il caso interessato; i collegamenti e la domanda precisa sono nella sua scheda.
+Stato del 23/10/2026, revisione 75: **26 gruppi, 16 aperti e dieci con fonte/orario ordinario recuperati**. Recuperata settimana Granfuoco dalla scheda Google prevista nella vecchia lista; altri locali con contrasti ora circoscritti. [Rapporto corrente](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md), [riscontro precedente 72](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md). Acton è stato corretto nella [revisione tecnica 73](../docs/storico/2026-10-23-revisione-73.md); restano controlli completi ed eccezioni temporanee. “Fonte/orario recuperati” non garantisce il servizio effettivo o tutte le ferie. Sono gruppi di domande, non siti distinti: aprire solo il caso pertinente.
 
 Per Codex/Claude: `node aggiornamenti/leggi.mjs aperte` elenca solo i casi aperti; `node aggiornamenti/leggi.mjs caso V01` legge una scheda. Questo riscontro aggiorna rapporto e registro, non i dati applicativi; la precedente revisione 70 ha aggiornato separatamente i percorsi L6. Una spunta non significa che tutte le eccezioni siano state confrontate.
 
@@ -28,7 +28,7 @@ Per Codex/Claude: `node aggiornamenti/leggi.mjs aperte` elenca solo i casi apert
 | [V20](casi/V20.md) | Musei e Parchi archeologici di Capri | Aperto |
 | [L01](casi/L01.md) | Barbeqool | Aperto |
 | [L02](casi/L02.md) | Colantuono’s Steak and Grill | Aperto |
-| [L03](casi/L03.md) | Granfuoco Braceria | Aperto |
+| [L03](casi/L03.md) | Granfuoco Braceria | Fonte/orario recuperati |
 | [L04](casi/L04.md) | Friggitoria Vomero | Aperto |
 | [L05](casi/L05.md) | Da Rosetta | Fonte/orario recuperati |
 | [L06](casi/L06.md) | De Luca Braceria Macelleria 1920 | Aperto |

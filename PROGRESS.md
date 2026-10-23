@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Ripresa ordinaria · revisione 75 del 23 ottobre
+
+Recuperata settimana Granfuoco dalla scheda Google già ammessa nella lista: **16 gruppi aperti e dieci con fonte/orario ordinario recuperati su 26**, nessun controllo completo rinnovato. Letti social e schede Google degli altri locali: contrasti conservati, De Luca indicato temporaneamente chiuso. Certosa MiC ora leggibile. Registrati avvisi ANM su deviazione 151/R7, L1 e sciopero 30 ottobre, con periodi distinti; i dati applicativi non includono queste eccezioni. [Rapporto e limiti](aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md). Codice 5fce2d7 invariato, nessun main/produzione o nuovo tentativo sul backup Git.
+
 ## Ripresa ordinaria · revisione 74 del 23 ottobre
 
 Dopo il passaggio concordato a Sol medio: recuperato confronto Capri sulle tre sedi citate, con discordanza ufficiale sulla stagionalità della Grotta Azzurra; riletta scheda MiC Virgilio distinguendo allerta datata e chiusura settimanale. **17 gruppi aperti e nove recuperati su 26**, controlli completi/scadenze invariati. [Rapporto e limiti](aggiornamenti/rapporti/2026-10-23-fonti-ripresa-74.md). Solo documenti e registro; codice 5fce2d7 e verifiche73 conservati, nessun backup Git ritentato.

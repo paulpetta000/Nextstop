@@ -51,7 +51,10 @@
   "note": [
     "Distinguere orari programmati, dati in tempo reale e avvisi temporanei. Nessun orario viene aggiornato da questo inventario."
   ],
-  "pubblicazioni_rilevate": [],
+  "pubblicazioni_rilevate": [
+    "anm-l1-chiusura-2026-10-26",
+    "anm-sciopero-usb-2026-10-30"
+  ],
   "ritentativo_accesso": {
     "data": "2026-10-19",
     "rapporto": "aggiornamenti/rapporti/2026-10-19-ritentativo-fonti.yaml",
@@ -63,5 +66,12 @@
     ],
     "esito": "rimangono_verifiche_personali",
     "superato_da": "aggiornamenti/rapporti/2026-10-19-accessi-estesi.yaml"
+  },
+  "riscontro_75": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Nuovi avvisi temporanei letti, validità e confronti parziali nel rapporto; date complete e scadenza precedenti conservate."
   }
 }

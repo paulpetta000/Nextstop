@@ -191,5 +191,121 @@
     "stato": "testo_letto_clausola_ottobre_da_chiarire",
     "ricontrollare": "2026-10-19",
     "nota": "Ordinanza dirigenziale n.21 del 30/04/2026 (OD/2026/0000725), letta nelle parti operative. Periodi fino al 27/09/2026; clausola di possibile attivazione in ottobre e un riferimento discordante al 2025: non dedurre automaticamente ZTL inattiva oggi."
+  },
+  {
+    "id": "anm-deviazione-151-r7-n1-2026-10-19",
+    "controlli": [
+      "trasporto-bus-anm"
+    ],
+    "url": "https://www.anm.it/s/notizia-home/a0gR200000RUY80IAH/deviazione-linee-151-r7-n1?language=it",
+    "pubblicato": "2026-10-16",
+    "valido_dal": "2026-10-19",
+    "valido_fino": "2026-11-06",
+    "ricontrollare": "2026-10-24",
+    "dettagli": {
+      "direzione": "verso Fuorigrotta",
+      "fascia": "intera giornata",
+      "fermata_sospesa": "2174 Legioni"
+    },
+    "nota": "Prima fase. Confronto del quadro ordinario parziale; dati applicativi non aggiornati, nessun candidato sale/scende a2174. Non ricostruisce la deviazione.",
+    "tipo": "avviso_temporaneo",
+    "stato": "letto_confronto_applicativo_parziale",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md"
+  },
+  {
+    "id": "anm-deviazione-151-r7-n1-2026-11-09",
+    "controlli": [
+      "trasporto-bus-anm"
+    ],
+    "url": "https://www.anm.it/s/notizia-home/a0gR200000RUY80IAH/deviazione-linee-151-r7-n1?language=it",
+    "pubblicato": "2026-10-16",
+    "valido_dal": "2026-11-09",
+    "valido_fino": "2026-11-13",
+    "ricontrollare": "2026-11-06",
+    "dettagli": {
+      "fascia": "22:00-05:00 del giorno successivo",
+      "direzione": "verso Fuorigrotta"
+    },
+    "nota": "Seconda fase, non estendere a tutte le ore né ai giorni7-8novembre. Limite finale riferito alle date del dispositivo, comprese le notti descritte dalla fonte.",
+    "tipo": "avviso_temporaneo",
+    "stato": "letto_confronto_applicativo_parziale",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md"
+  },
+  {
+    "id": "anm-l1-chiusura-2026-10-26",
+    "controlli": [
+      "trasporto-metro-l1"
+    ],
+    "url": "https://www.anm.it/s/notizia-home/a0gR200000SxtOXIAZ/metro-l1-dal-26-al-29-ottobre-anticipa-la-chiusura?language=it",
+    "pubblicato": "2026-10-22",
+    "valido_dal": "2026-10-26",
+    "valido_fino": "2026-10-29",
+    "ricontrollare": "2026-10-24",
+    "dettagli": {
+      "ultime_partenze": {
+        "Piscinola": "20:55",
+        "Centro Direzionale": "21:30"
+      }
+    },
+    "nota": "Eccezione futura, non orario ordinario; nessuna applicazione automatica al2027.",
+    "tipo": "avviso_temporaneo",
+    "stato": "letto_confronto_applicativo_parziale",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md"
+  },
+  {
+    "id": "anm-sciopero-usb-2026-10-30",
+    "controlli": [
+      "trasporto-bus-anm",
+      "trasporto-metro-l1",
+      "trasporto-metro-l6",
+      "trasporto-funicolare-centrale",
+      "trasporto-funicolare-chiaia",
+      "trasporto-funicolare-mergellina"
+    ],
+    "url": "https://www.anm.it/s/notizia-home/a0gR200000HQcXhIAL/sciopero-24h-usb-30-ottobre-2026?language=it",
+    "pubblicato": "2026-10-21",
+    "valido_dal": "2026-10-30",
+    "valido_fino": "2026-10-31",
+    "ricontrollare": "2026-10-27",
+    "dettagli": {
+      "sciopero": "03:01 del30ottobre-03:00 del31ottobre",
+      "l6": {
+        "ultima_mattina": "09:10",
+        "ripresa_Mostra": "17:10",
+        "ripresa_Municipio": "17:30",
+        "ultima_sera": "19:50"
+      },
+      "funicolari": {
+        "ultima_mattina": "09:20",
+        "ripresa": "17:00",
+        "ultima_sera": "19:50"
+      },
+      "superficie": {
+        "garanzie": [
+          "05:30-08:30",
+          "17:00-20:00"
+        ],
+        "nota": "Ultime partenze30minuti prima e ripresa circa30minuti dopo, come da avviso; non confondere con orario di apertura."
+      }
+    },
+    "nota": "Eventuale interruzione secondo adesione, non cancellazione certa. Fasce L1 complete nella fonte e prova nativa; ascensori non aggiunti perché non esplicitati. Dati applicativi non aggiornati.",
+    "tipo": "avviso_temporaneo",
+    "stato": "letto_confronto_applicativo_parziale",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md"
+  },
+  {
+    "id": "eav-corso-meridionale-2026-10-26",
+    "controlli": [
+      "trasporto-vesuviane"
+    ],
+    "url": "https://www.eavsrl.it/deviazione-temporanea-in-napoli-c-so-meridionale-dal-26-10-al-9-11-2026/",
+    "pubblicato": "2026-10-23",
+    "valido_dal": "2026-10-26",
+    "valido_fino": "2026-11-09",
+    "ricontrollare": "2026-10-24",
+    "nota": "Tratte automobilistiche e sostitutive specificate nella fonte, in partenza da Napoli. Non prova ripristino dopo crisi carburante o variazione dei treni Cumana. Collegamento al gruppo per confronto, non applicazione a tutte le sue corse.",
+    "tipo": "avviso_temporaneo",
+    "stato": "letto_confronto_applicativo_parziale",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md"
   }
 ]

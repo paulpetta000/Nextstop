@@ -90,5 +90,12 @@
     "dati_applicativi_aggiornati": false,
     "caso": "V20",
     "nota": "Letti regolamento e schede nazionali; contrasto stagionalità Grotta Azzurra, calendario e avvisi ancora da completare."
+  },
+  "riscontro_75": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Certosa MiC recuperata direttamente; calendario Villa Jovis non disponibile nel portale, contrasto Grotta Azzurra e collegamento marittimo ancora aperti."
   }
 }

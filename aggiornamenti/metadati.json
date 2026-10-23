@@ -84,5 +84,15 @@
     "fonte_orario_recuperati": 9,
     "controlli_completi": 0,
     "nota": "Seguito ordinario dopo consegna tecnica73; nessun controllo completo rinnovato."
+  },
+  "riscontro_75": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md",
+    "gruppi": 26,
+    "aperti": 16,
+    "fonte_orario_recuperati": 10,
+    "controlli_completi": 0,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Granfuoco ordinario recuperato su scheda Google già ammessa; altri locali con contrasti; avvisi temporanei ANM/EAV conservati senza integrazione applicativa."
   }
 }
