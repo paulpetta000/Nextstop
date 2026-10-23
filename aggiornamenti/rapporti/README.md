@@ -4,6 +4,8 @@ Non leggere questa cartella per iniziare un controllo ordinario. Usare [procedur
 
 | Rapporto | Uso |
 |---|---|
+| [Pedamentina82, 24 ottobre](2026-10-24-pedamentina-82.md) | Tolta garanzia di percorribilità permanente, aggiunto cantiere datato presso l'accesso senza dichiarare chiusa tutta la scala |
+| [Date delle fonti81, 24 ottobre](2026-10-24-date-fonti-81.md) | Rimosso controllo generale/promessa di validità fino ad aprile, date e fonti delle singole schede; CI e anteprima riuscite |
 | [Anteprima80, 24 ottobre](2026-10-24-anteprima-80.md) | Correzione79 letta su telefono in chiaro/scuro e320px; fallback controllato nell'HTML, nessun nuovo dato applicativo |
 | [Sansevero 79, 23 ottobre](2026-10-23-sansevero-79.md) | Eccezione alla vendita solo online e due testi corretti; controllo della scheda concluso, build locale Vite bloccata e verifica remota richiesta |
 | [Capri e L6 78, 23 ottobre](2026-10-23-collegamenti-capri-78.md) | Quadri Caremar/SNAV e nuovo avviso carburanti distinti; durata/festività L6 ancora aperte, applicazione invariata |

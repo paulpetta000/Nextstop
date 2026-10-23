@@ -361,5 +361,19 @@
     "ricontrollare": "2026-10-28",
     "rapporto": "aggiornamenti/rapporti/2026-10-23-sansevero-79.md",
     "nota": "Biglietteria trasferita temporaneamente in viaRaimondoDiSangro12; piccoli gruppi fino9 anche in sede secondo disponibilità, stessa degli acquisti online. Fine del trasferimento non pubblicata; ingresso del museo e sue coordinate invariati. Titolo/testo febbraio, slug gennaio."
+  },
+  {
+    "id": "pedamentina-cantiere-2026-10-19",
+    "controlli": [
+      "tappa-pedamentina"
+    ],
+    "url": "https://www.comune.napoli.it/novita/dispositivi-di-viabilita-per-cantieri-e-manifestazioni-2/",
+    "pubblicato": "2026-09-30",
+    "valido_dal": "2026-10-19",
+    "valido_fino": "2026-11-06",
+    "tipo": "cantiere_accesso",
+    "stato": "avviso_letto_percorribilita_pedonale_integrale_non_confermata",
+    "ricontrollare": "2026-10-27",
+    "nota": "Scavi in attraversamento su corso Vittorio Emanuele e poi sul marciapiede fino alla cabina all’inizio della Pedamentina. Traffico veicolare non interrotto non equivale a garanzia pedonale. Nessuna chiusura totale o riapertura automatica dal 7 novembre dedotta."
   }
 ]

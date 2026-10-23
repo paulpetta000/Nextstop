@@ -415,10 +415,11 @@
   ricontrollare: 2027-04-30
 
 - id: tp-pedamentina-orari
-  testo: "Scala pubblica, sempre percorribile: da Largo San Martino scende con rampe e tornanti fino a Corso Vittorio Emanuele."
+  testo: "Scala pubblica da Largo San Martino a Corso Vittorio Emanuele. Il Comune ha programmato scavi sul marciapiede fino all'accesso alla Pedamentina dal 19 ottobre al 6 novembre 2026: il comunicato non conferma la percorribilità pedonale integrale durante i lavori. Controlla gli avvisi del Comune prima di partire."
   stato: confermato
-  fonti: [tp-comune-pedamentina, osm]
-  controllato: 2026-10-02
+  fonti: [tp-comune-pedamentina, osm, tp-comune-cantieri-settembre-2026]
+  controllato: 2026-10-24
+  ricontrollare: 2026-10-27
 
 # ---------- Sanità e Capodimonte ----------
 - id: tp-catacombe-orari

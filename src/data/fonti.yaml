@@ -349,6 +349,15 @@
   controllato: 2026-10-02
   letta: true
 
+- id: tp-comune-cantieri-settembre-2026
+  titolo: "Dispositivi di viabilità per cantieri e manifestazioni · 30 settembre 2026"
+  editore: Comune di Napoli
+  url: https://www.comune.napoli.it/novita/dispositivi-di-viabilita-per-cantieri-e-manifestazioni-2/
+  tipo: ufficiale
+  pubblicato: 2026-09-30
+  controllato: 2026-10-24
+  letta: true
+
 - id: tp-anm-ascensori
   titolo: "Ascensori"
   editore: ANM, Azienda Napoletana Mobilità

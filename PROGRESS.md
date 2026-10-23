@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Accessi e date · revisione82 del 24 ottobre
+
+Sansevero79 verificato nel browser (rapporto80). Corretta frase generale «valgono oggi» nel compositore: CI81 riuscita,792prove/build12/810link e anteprima letta nei due temi. Riletti avviso e percorso comunali Pedamentina: tolto «sempre percorribile», aggiunta nota sui lavori19ottobre–6novembre presso l'accesso;211fonti,200fatti, un testo dipendente firmato. [Rapporto82](aggiornamenti/rapporti/2026-10-24-pedamentina-82.md). V08 resta aperto, nessuna chiusura totale o riapertura dedotta, percorsi e grafica invariati. Verifica definitiva82 in corso. Nessun main/produzione, installazione, riparazione Vite o nuovo tentativo sul vecchio backup Git.
+
 ## Anteprima · revisione 80 del 24 ottobre
 
 Completata la lettura nativa della correzione79: scheda Sansevero in chiaro/scuro a390px e a320px, nessuna eccedenza orizzontale, console senza avvisi/errori. Aperto il pronto di mezza giornata; relativo paragrafo senza JavaScript verificato separatamente nell'HTML del server. [Riscontri e limiti](aggiornamenti/rapporti/2026-10-24-anteprima-80.md). Codice44cbdbb e CI792/build12/810link conservati, non ripetuti per sole note. Accesso temporaneo già autorizzato, nessun token conservato nei riscontri; dati fittizi isolati, tema/dimensioni ripristinati. Limite Vite locale e16 domande aperte invariati; nessun main/produzione o tentativo sul vecchio backup Git.

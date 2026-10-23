@@ -4670,5 +4670,32 @@
     "testi": [
       "tappe.yaml#sansevero"
     ]
+  },
+  "tp-comune-cantieri-settembre-2026": {
+    "categoria": "visite",
+    "luoghi": [
+      "La Pedamentina, da San Martino in discesa"
+    ],
+    "descrizione": "Lavori sul marciapiede di corso Vittorio Emanuele fino all’accesso alla Pedamentina, 19 ottobre–6 novembre 2026",
+    "avviso": "Il comunicato non conferma la percorribilità pedonale integrale e non dichiara chiusa tutta la scalinata.",
+    "nota": "Comunicato del 30 settembre 2026; distinguere i periodi dei diversi cantieri.",
+    "formato": "",
+    "parole": [
+      "Pedamentina",
+      "cantieri",
+      "accesso",
+      "Corso Vittorio Emanuele"
+    ],
+    "priorita": 1,
+    "lingua": "",
+    "lettura": null,
+    "prova": "Letto nel browser il 24 ottobre 2026; paragrafo sulla fase 19 ottobre–6 novembre, nessuna conferma in presenza.",
+    "schede": [
+      "tp-pedamentina-orari"
+    ],
+    "durate": [],
+    "testi": [
+      "tappe.yaml#pedamentina"
+    ]
   }
 }
