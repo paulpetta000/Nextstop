@@ -36,7 +36,7 @@
   },
   "itinerari#pronto-mezza-giornata": {
     "tp-sansevero-orari": "d805258c2e",
-    "tp-sansevero-prenota": "34ece27e45"
+    "tp-sansevero-prenota": "d67160e64f"
   },
   "itinerari#pronto-un-giorno": {
     "tp-sanmartino-orari": "dad9948f0a",
@@ -172,7 +172,7 @@
     "tp-tesoro-durata": "e1d702b5a2"
   },
   "tappe#sansevero": {
-    "tp-sansevero-prenota": "34ece27e45",
+    "tp-sansevero-prenota": "d67160e64f",
     "tp-sansevero-regole": "8341c87042"
   },
   "tappe#santa-chiara": {

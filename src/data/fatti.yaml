@@ -130,11 +130,11 @@
   ricontrollare: 2027-04-30
 
 - id: tp-sansevero-prenota
-  testo: "Si entra solo con il biglietto elettronico comprato online sul sito ufficiale, fino a 60 giorni prima; altri posti si liberano due giorni prima della visita."
+  testo: "Prenotazione obbligatoria: online fino a 60 giorni prima, con altri posti disponibili due giorni prima della visita. Fino a 9 persone si può prenotare anche in biglietteria per i 7 giorni successivi, se restano posti: sono gli stessi disponibili online."
   stato: confermato
-  fonti: [tp-sansevero-orari, tp-sansevero-accesso]
-  controllato: 2026-10-02
-  ricontrollare: 2027-04-30
+  fonti: [tp-sansevero-orari, tp-sansevero-accesso, tp-sansevero-faq]
+  controllato: 2026-10-23
+  ricontrollare: 2026-11-06
 
 - id: tp-sansevero-regole
   testo: "Dentro non si possono fare foto e video né usare il telefono. La Cavea, con le «macchine anatomiche», si raggiunge solo da una stretta scala a chiocciola: in sedia a rotelle si visitano la navata e la sacrestia."

@@ -4643,5 +4643,32 @@
     "testi": [
       "tappe.yaml#san-lorenzo"
     ]
+  },
+  "tp-sansevero-faq": {
+    "categoria": "visite",
+    "luoghi": [
+      "Cappella Sansevero"
+    ],
+    "descrizione": "Prenotazione obbligatoria e acquisto in biglietteria per piccoli gruppi",
+    "avviso": "",
+    "nota": "",
+    "formato": "",
+    "parole": [
+      "prenotazione",
+      "biglietteria",
+      "piccoli gruppi",
+      "disponibilità"
+    ],
+    "priorita": 1,
+    "lingua": "",
+    "lettura": null,
+    "prova": "Letta nel browser il 23 ottobre 2026, sezione Prenotazioni; nessun acquisto o modulo inviato.",
+    "schede": [
+      "tp-sansevero-prenota"
+    ],
+    "durate": [],
+    "testi": [
+      "tappe.yaml#sansevero"
+    ]
   }
 }

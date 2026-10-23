@@ -1,5 +1,7 @@
 # Documentazione · scegliere cosa leggere
 
+Stato corrente: [Sansevero 79](../aggiornamenti/rapporti/2026-10-23-sansevero-79.md), correzione prenotazione e confronto periodico concluso; build locale bloccata da errore sintattico del file Vite installato, senza diagnosi della causa o riparazione. Riscontro remoto da completare.
+
 Seguito documentale corrente: [Capri, Caremar e L6 78](../aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md), programmi distinti dal servizio effettivo, applicazione invariata.
 
 Seguito documentale: [mercati 77](../aggiornamenti/rapporti/2026-10-23-mercati-77.md), proposta storica distinta dal nuovo calendario; nessuna modifica applicativa.

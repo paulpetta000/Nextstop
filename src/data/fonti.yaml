@@ -141,6 +141,14 @@
   controllato: 2026-10-02
   letta: true
 
+- id: tp-sansevero-faq
+  titolo: "FAQ e prenotazioni"
+  editore: Museo Cappella Sansevero
+  url: https://www.museosansevero.it/organizza-la-tua-visita/faq
+  tipo: ufficiale
+  controllato: 2026-10-23
+  letta: true
+
 - id: tp-santachiara-orari
   titolo: "Orari"
   editore: Monastero di Santa Chiara

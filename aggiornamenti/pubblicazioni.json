@@ -158,7 +158,12 @@
         "apertura": "09:00-19:00"
       }
     ],
-    "nota": "Intervallo della tabella, non apertura continuativa. Ogni riga vale solo nella data indicata; rileggere per rettifiche prima di aggiornare il sito. Nessuna estensione dell’orario ordinario ai giorni non elencati."
+    "nota": "Intervallo della tabella, non apertura continuativa. Ogni riga vale solo nella data indicata; rileggere per rettifiche prima di aggiornare il sito. Nessuna estensione dell’orario ordinario ai giorni non elencati.",
+    "riscontro_79": {
+      "data": "2026-10-23",
+      "rapporto": "aggiornamenti/rapporti/2026-10-23-sansevero-79.md",
+      "esito": "18_date_confrontate_coincidenti_non_applicate_al_compositore"
+    }
   },
   {
     "id": "parchi-ordinanza-2025-07-22",
@@ -341,5 +346,20 @@
     "ricontrollare": "2026-10-24",
     "rapporto": "aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md",
     "nota": "Possibili cancellazioni nei prossimi giorni per difficoltà di approvvigionamento carburante. Non sospensione certa di tutte le corse; fine e decorrenza esatta ignote. Programmi e disponibilità/servizio effettivo distinti, nessun blocco applicativo."
+  },
+  {
+    "id": "sansevero-biglietteria-2026-02-04",
+    "controlli": [
+      "tappa-sansevero"
+    ],
+    "url": "https://www.museosansevero.it/news-ed-eventi/news/trasferimento-temporaneo-della-biglietteria-4-gennaio-2026",
+    "pubblicato": "2026-02-02",
+    "valido_dal": "2026-02-04",
+    "valido_fino": null,
+    "tipo": "avviso_accesso",
+    "stato": "letto_e_confrontato_con_faq",
+    "ricontrollare": "2026-10-28",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-sansevero-79.md",
+    "nota": "Biglietteria trasferita temporaneamente in viaRaimondoDiSangro12; piccoli gruppi fino9 anche in sede secondo disponibilità, stessa degli acquisti online. Fine del trasferimento non pubblicata; ingresso del museo e sue coordinate invariati. Titolo/testo febbraio, slug gennaio."
   }
 ]

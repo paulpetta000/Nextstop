@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Sansevero · revisione 79 del 23 ottobre
+
+Corretta l'esclusività dell'acquisto online in un fatto e due testi: il museo ammette anche piccoli gruppi in biglietteria, con disponibilità condivisa. Aggiunta FAQ, 210 fonti, 792 prove riuscite. Confronto periodico Sansevero concluso, riesame 28 ottobre prima del calendario straordinario. **Build locale bloccata:** file Vite installato contiene `retern`, causa ignota; non riparato/reinstallato, serve riscontro Ubuntu. [Rapporto e limiti](aggiornamenti/rapporti/2026-10-23-sansevero-79.md). Percorsi, algoritmi e grafica invariati. Restano 16 gruppi aperti/10 recuperati, nessun main/produzione o tentativo sul vecchio backup Git.
+
 ## Collegamenti · revisione 78 del 23 ottobre
 
 Confrontati Caremar Napoli–Capri/ritorno e tariffe; registrato avviso 20 ottobre di possibili cancellazioni per carburante, senza blocchi automatici. SNAV fino a marzo 2027 distinto da estate e Caremar; riletta L6, confermata frequenza 20 minuti, durata/festivi ancora aperti. [Rapporto](aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md). **16 aperti/10 recuperati**, controlli completi/scadenze invariati. Solo documenti/registro: codice applicativo fae435e, CI e anteprima riuscite conservati. Nessun main/produzione, installazione o nuovo tentativo sul backup Git.

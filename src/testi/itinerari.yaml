@@ -9,7 +9,7 @@ regate:
 pronto-mezza-giornata:
   usa: [tp-sansevero-orari, tp-sansevero-prenota]
   testo: |
-    Una mattina nel centro storico, tutta a piedi: il Cristo velato, il chiostro di maioliche, Spaccanapoli e, per finire, la pizza a portafoglio. Non andarci di martedì, perché la Cappella Sansevero è chiusa. E compra il biglietto online prima: senza, non entri.
+    Una mattina nel centro storico, tutta a piedi: il Cristo velato, il chiostro di maioliche, Spaccanapoli e, per finire, la pizza a portafoglio. Non andarci di martedì, perché la Cappella Sansevero è chiusa. Prenota il biglietto online prima, per assicurarti l'ingresso.
 
 pronto-un-giorno:
   usa: [tp-sanmartino-orari, tp-sansevero-orari]
