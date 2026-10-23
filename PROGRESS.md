@@ -1,8 +1,8 @@
 # PROGRESS · stato attuale
 
-## Blocco tecnico in corso · revisione 73 del 23 ottobre
+## Blocco tecnico · revisione 73 del 23 ottobre
 
-Sol alto: esclusi nel generatore Acton e Chiaia in manutenzione; cinque test specifici, suite **789/789**, build preparatoria e 811 link riusciti. **Dati ancora da rigenerare e integrare:** tre esecuzioni locali interrotte con errore nativo, cause ignote; preparata verifica manuale Ubuntu sugli ingressi pubblici conservati. [Stato e limiti](docs/storico/2026-10-23-revisione-73.md). Nessuna grafica, main o produzione modificati; ulteriori tentativi sul backup Git sospesi su richiesta di Enrico.
+Codice **5fce2d7**, percorsi rigenerati su Ubuntu e integrati: collegamenti con Acton **31 → 0**; escluso anche ascensore Chiaia in manutenzione, funicolare conservata. Corretto «A piedi» in «Spostamenti» quando ci sono mezzi; tolto un anticipo di caricamento del font senza cambiare grafica. **792/792 test**, build 12 pagine, 810 link, Lighthouse home 100/compositore 99; browser e axe nei limiti del [resoconto](docs/storico/2026-10-23-revisione-73.md). CI finale riuscita (tipi, 792 test, build/link) e anteprima READY sul commit applicativo 5fce2d7, solo ramo autorizzato. Fallimenti locali e primo ZIP non valido conservati, cause ignote; vecchio backup Git lasciato da parte su richiesta di Enrico. Nessun main/produzione o redesign. Restano 17 gruppi di fonti aperti su 26, seguito con Sol medio quando conclusa la consegna tecnica.
 
 ## Stato corrente · revisione 72 del 23 ottobre
 

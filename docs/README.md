@@ -2,7 +2,9 @@
 
 Per iniziare: istruzioni del proprio assistente (`AGENTS.md` o `CLAUDE.md`), [regole comuni](REGOLE.md) e la prima sezione dello [stato corrente](../PROGRESS.md), approfondendo i blocchi precedenti solo se pertinenti. Poi scegli solo la riga del compito, senza aprire tutti i rimandi.
 
-Seguito corrente: [fonti e problema Acton, revisione 72](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md), 17 gruppi aperti e nove recuperati. Acton in manutenzione ancora usato dalle matrici: serve Sol alto per la correzione; codice invariato.
+Stato corrente: [revisione 73, correzione Acton e verifiche](storico/2026-10-23-revisione-73.md), codice 5fce2d7, 792 test e dati rigenerati su Ubuntu: collegamenti con Acton 31 → 0. Seguito ordinario con Sol medio dopo la consegna tecnica; restano 17 gruppi aperti e nove recuperati, backup Git non affidabile lasciato da parte.
+
+Riscontro precedente: [fonti e riproduzione Acton, revisione 72](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md); descrive il problema prima della correzione.
 
 Seguito precedente: [fonti, revisione 71](../aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md), 17 gruppi aperti e nove con fonte/orario ordinario recuperati. Solo rapporto e registro; codice e limiti tecnici restano quelli sotto.
 

@@ -96,6 +96,14 @@
     "dati_applicativi_aggiornati": false,
     "ritentare_entro": "2026-10-25"
   },
+  "riscontro_73": {
+    "data": "2026-10-23",
+    "rapporto": "docs/storico/2026-10-23-revisione-73.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": true,
+    "caso": "V04",
+    "nota": "Corretti generatore e cinque JSON: Acton 31 collegamenti principali prima, zero dopo; escluso ascensore Chiaia, funicolare conservata. Riapertura da verificare prima di nuova generazione. Restano avvisi, scale mobili e durate; controllo completo e scadenza invariati."
+  },
   "riscontro_72": {
     "data": "2026-10-23",
     "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md",
