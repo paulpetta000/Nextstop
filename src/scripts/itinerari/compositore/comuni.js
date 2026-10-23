@@ -230,14 +230,15 @@ const NOMI_FASE = { visita: 'Visite', cammino: 'A piedi', pausa: 'Pause', margin
 /** @param {import('../../../lib/itinerari/pause').Giornata} Gx @param {string} [cl] @param {{suf?:string;bottone?:boolean}} [opzioni] */
 export function tempo(Gx, cl = '', { suf = '', bottone = true } = {}) {
   const fine = Math.max(Gx.fineScelta, Gx.fine), span = Math.max(1, fine - Gx.inizio);
+  const cammino = aPiedi(Gx) ? 'A piedi' : 'Spostamenti';
   /** @param {number} m */
   const pc = m => `${(m / span * 100).toFixed(2)}%`;
   const restaT = Gx.resta >= 0
     ? `<span class="tempo__resta">ti restano <b class="num" data-cifra="resta${suf}" data-n="${Gx.resta}">${durata(Gx.resta)}</b></span>`
     : `<span class="tempo__resta tempo__resta--oltre">sfori di <b class="num" data-cifra="resta${suf}" data-n="${Gx.resta}">${durata(-Gx.resta)}</b></span>`;
   /** @param {keyof typeof NOMI_FASE} k @param {number} n @param {string} testo */
-  const voce = (k, n, testo) => `<div><dt><i class="tempo__p tempo__p--${k}" aria-hidden="true"></i>${NOMI_FASE[k]}</dt><dd class="num" data-cifra="${k === 'visita' ? 'visite' : k === 'pausa' ? 'pause' : k}${suf}" data-n="${n}">${testo}</dd></div>`;
-  const descr = `Dalle ${ora(Gx.inizio)} alle ${ora(Gx.fine)}: visite ${durata(Gx.visite)}, a piedi ${durata(Gx.spostamenti)}, pause ${nessuno(Gx.pauseMin, 'nessuna')}, margine ${nessuno(Gx.margineMin)}. ${Gx.resta >= 0 ? `Ti restano ${durataLunga(Gx.resta)} prima delle ${ora(Gx.fineScelta)}.` : `Sfori di ${durataLunga(-Gx.resta)} oltre le ${ora(Gx.fineScelta)}.`}`;
+  const voce = (k, n, testo) => `<div><dt><i class="tempo__p tempo__p--${k}" aria-hidden="true"></i>${k === 'cammino' ? cammino : NOMI_FASE[k]}</dt><dd class="num" data-cifra="${k === 'visita' ? 'visite' : k === 'pausa' ? 'pause' : k}${suf}" data-n="${n}">${testo}</dd></div>`;
+  const descr = `Dalle ${ora(Gx.inizio)} alle ${ora(Gx.fine)}: visite ${durata(Gx.visite)}, ${cammino.toLowerCase()} ${durata(Gx.spostamenti)}, pause ${nessuno(Gx.pauseMin, 'nessuna')}, margine ${nessuno(Gx.margineMin)}. ${Gx.resta >= 0 ? `Ti restano ${durataLunga(Gx.resta)} prima delle ${ora(Gx.fineScelta)}.` : `Sfori di ${durataLunga(-Gx.resta)} oltre le ${ora(Gx.fineScelta)}.`}`;
   return `<div class="tempo ${cl}">
     <div class="tempo__testa"><p class="tempo__tit">In tutto <b class="num" data-cifra="totale${suf}" data-n="${Gx.totale}">${durata(Gx.totale)}</b>${restaT}</p>${bottone ? `<button type="button" class="tempo__cambia onda" data-azione="tempo">${ic('cursori', 18)}Pause e margini</button>` : ''}</div>
     <div class="tempo__barra" role="img" aria-label="${esc(descr)}"><span class="tempo__pista">${Gx.fasi.map(f => `<i class="tempo__s tempo__s--${f.tipo}" style="left:${pc(f.da - Gx.inizio)};width:${pc(f.a - f.da)}"></i>`).join('')}${Gx.fine > Gx.fineScelta ? `<i class="tempo__oltre" style="left:${pc(Gx.fineScelta - Gx.inizio)};width:${pc(Gx.fine - Gx.fineScelta)}"></i>` : ''}</span>${Gx.fine > Gx.fineScelta ? `<i class="tempo__limite" style="left:${pc(Gx.fineScelta - Gx.inizio)}"></i>` : ''}</div>

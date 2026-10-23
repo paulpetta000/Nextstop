@@ -44,7 +44,8 @@ const ld = [
   {noindex && <meta name="robots" content="noindex" />}
   <meta name="theme-color" content="#F7F6F2" media="(prefers-color-scheme: light)" />
   <meta name="theme-color" content="#0F1524" media="(prefers-color-scheme: dark)" />
-  <link rel="preload" href="/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin />
+  {/* Il compositore parte con i caratteri di sistema: Archivo serve quando si apre il menu. */}
+  {!soloMenu && <link rel="preload" href="/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin />}
   <slot name="head" />
   <!-- prima le icone che legge anche Google (ICO e PNG), poi la SVG per i browser -->
   <link rel="icon" href="/favicon.ico" sizes="48x48" />
