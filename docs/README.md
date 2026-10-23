@@ -1,6 +1,6 @@
 # Documentazione · scegliere cosa leggere
 
-Stato corrente: [Sansevero 79](../aggiornamenti/rapporti/2026-10-23-sansevero-79.md), correzione prenotazione e confronto periodico concluso; build locale bloccata da errore sintattico del file Vite installato, senza diagnosi della causa o riparazione. Riscontro remoto da completare.
+Stato corrente: [Sansevero 79](../aggiornamenti/rapporti/2026-10-23-sansevero-79.md), correzione prenotazione e confronto periodico concluso; CI Ubuntu riuscita e anteprima READY sul commit44cbdbb. Build locale bloccata dal file Vite installato, senza diagnosi della causa o riparazione; controllo visivo79 ancora aperto perché il browser richiede accesso Vercel.
 
 Seguito documentale corrente: [Capri, Caremar e L6 78](../aggiornamenti/rapporti/2026-10-23-collegamenti-capri-78.md), programmi distinti dal servizio effettivo, applicazione invariata.
 

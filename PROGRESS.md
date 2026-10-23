@@ -2,7 +2,7 @@
 
 ## Sansevero · revisione 79 del 23 ottobre
 
-Corretta l'esclusività dell'acquisto online in un fatto e due testi: il museo ammette anche piccoli gruppi in biglietteria, con disponibilità condivisa. Aggiunta FAQ, 210 fonti, 792 prove riuscite. Confronto periodico Sansevero concluso, riesame 28 ottobre prima del calendario straordinario. **Build locale bloccata:** file Vite installato contiene `retern`, causa ignota; non riparato/reinstallato, serve riscontro Ubuntu. [Rapporto e limiti](aggiornamenti/rapporti/2026-10-23-sansevero-79.md). Percorsi, algoritmi e grafica invariati. Restano 16 gruppi aperti/10 recuperati, nessun main/produzione o tentativo sul vecchio backup Git.
+Corretta l'esclusività dell'acquisto online in un fatto e due testi: il museo ammette anche piccoli gruppi in biglietteria, con disponibilità condivisa. Aggiunta FAQ, 210 fonti, 792 prove riuscite. Confronto periodico Sansevero concluso, riesame 28 ottobre prima del calendario straordinario. **CI Ubuntu 39979162265 riuscita**, build12pagine/810link e anteprima READY sul commit applicativo44cbdbb. **Build locale bloccata:** file Vite contiene `retern`, causa ignota, non riparato/reinstallato; preview nel browser richiede login, controllo visivo79 ancora aperto. [Rapporto e limiti](aggiornamenti/rapporti/2026-10-23-sansevero-79.md). Percorsi, algoritmi e grafica invariati. Restano 16 gruppi aperti/10 recuperati, nessun main/produzione o tentativo sul vecchio backup Git.
 
 ## Collegamenti · revisione 78 del 23 ottobre
 
