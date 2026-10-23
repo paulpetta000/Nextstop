@@ -3,7 +3,6 @@
 // nel log evita Action e pacchetti aggiuntivi per recuperare i risultati.
 import fs from 'node:fs';
 import path from 'node:path';
-import os from 'node:os';
 import crypto from 'node:crypto';
 import {spawnSync} from 'node:child_process';
 import {gzipSync} from 'node:zlib';
@@ -26,11 +25,7 @@ if(process.argv[2]==='--esporta') {
  if(process.argv.length>2)throw Error('Argomento non previsto');
  const input=path.join(root,'ricerca/2026-10-23-verifica-ascensori');
  const manifest=JSON.parse(fs.readFileSync(path.join(input,'manifest.json'),'utf8'));
- const archive=path.join(input,'ingressi.zip');
- if(hash(fs.readFileSync(archive))!==manifest.archiveSHA256)throw Error('Archivio ingressi diverso dal manifesto');
- const dir=fs.mkdtempSync(path.join(os.tmpdir(),'nextstop-ingressi-'));
- const unzip=spawnSync('unzip',['-q',archive,'-d',dir],{stdio:'inherit'});
- if(unzip.status!==0)throw Error('Estrazione ingressi non riuscita');
+ const dir=path.join(input,'ingressi');
  for(const name of ['osm.json','quote.json','anm-gtfs.zip']) {
   const entry=manifest.files.find(x=>x.name===name),bytes=fs.readFileSync(path.join(dir,name));
   if(!entry||bytes.length!==entry.bytes||hash(bytes)!==entry.sha256)throw Error('Ingresso diverso: '+name);
