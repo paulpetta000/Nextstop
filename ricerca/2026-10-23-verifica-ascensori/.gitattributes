@@ -1,0 +1,3 @@
+# Gli ingressi hanno impronte dei byte originali: nessuna conversione LF/CRLF.
+ingressi/osm.json -text
+ingressi/quote.json -text
