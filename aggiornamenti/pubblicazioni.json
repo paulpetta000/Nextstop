@@ -375,5 +375,19 @@
     "stato": "avviso_letto_percorribilita_pedonale_integrale_non_confermata",
     "ricontrollare": "2026-10-27",
     "nota": "Scavi in attraversamento su corso Vittorio Emanuele e poi sul marciapiede fino alla cabina all’inizio della Pedamentina. Traffico veicolare non interrotto non equivale a garanzia pedonale. Nessuna chiusura totale o riapertura automatica dal 7 novembre dedotta."
+  },
+  {
+    "id": "girolamini-biblioteca-chiusa-2026-10-19",
+    "controlli": [
+      "tappa-girolamini"
+    ],
+    "url": "https://girolamini.cultura.gov.it/eventi-e-news/%e2%9a%a0%ef%b8%8f-avviso-%e2%9a%a0%ef%b8%8f/",
+    "pubblicato": "2026-10-15",
+    "valido_dal": "2026-10-19",
+    "valido_fino": "2026-10-25",
+    "tipo": "sospensione_temporanea_parziale",
+    "stato": "avviso_letto_sale_storiche_e_servizi_sospesi_chiesa_museo_aperta",
+    "ricontrollare": "2026-10-24",
+    "nota": "Biblioteca distinta dalla Chiesa-Museo. Il 26 ottobre è lunedì, giorno di chiusura ordinaria; dal 27 il comunicato annuncia i nuovi orari. Nessuna riapertura effettiva verificata."
   }
 ]

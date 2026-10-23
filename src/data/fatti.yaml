@@ -701,11 +701,11 @@
   ricontrollare: 2027-04-30
 
 - id: tp-girolamini-orari
-  testo: "Chiesa-Museo: dal martedì al venerdì 10:00–18:30 (dal 25 ottobre 2026 9:00–17:30); sabato, domenica e festivi 8:30–13:30. Chiuso il lunedì. La Biblioteca ha orari suoi, più corti, ed è chiusa anche nei giorni a ingresso gratuito."
+  testo: "Chiesa-Museo: dal martedì al venerdì 10:00–18:30 (dal 25 ottobre 2026 9:00–17:30); sabato, domenica e festivi 8:30–13:30. Chiuso il lunedì. Dal 19 al 25 ottobre 2026 le sale storiche della Biblioteca sono interdette alle visite e i servizi bibliotecari sospesi; la Chiesa-Museo resta aperta secondo i suoi orari. La Biblioteca ha orari suoi, più corti, ed è chiusa anche nei giorni a ingresso gratuito."
   stato: confermato
-  fonti: [tp-girolamini]
-  controllato: 2026-10-03
-  ricontrollare: 2027-04-30
+  fonti: [tp-girolamini, tp-girolamini-sospensione-ottobre-2026]
+  controllato: 2026-10-24
+  ricontrollare: 2026-10-24
 
 - id: tp-girolamini-prezzi
   testo: "Chiesa-Museo 5 €, ridotto 2 €; Biblioteca e sale storiche 10 €, ridotto 2 €, con ingressi a turni (40 persone ogni 40 minuti). Biglietti sull'app o sul sito Musei Italiani, o al totem in sede (solo carta). La prima domenica del mese la Chiesa-Museo è gratuita."

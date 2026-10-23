@@ -232,7 +232,7 @@ purgatorio-ad-arco:
 girolamini:
   usa: [tp-girolamini-orari, tp-girolamini-prezzi]
   testo: |
-    Su via Duomo c'è una chiesa barocca, con un museo e una biblioteca storica che ha riaperto a settembre 2026. È chiusa il lunedì, e nel fine settimana apre solo la mattina, fino alle 13:30. La biblioteca ha un biglietto suo e si entra a turni.
+    Su via Duomo c'è una chiesa barocca, con un museo e una biblioteca storica. La Chiesa-Museo è chiusa il lunedì, e nel fine settimana apre solo la mattina, fino alle 13:30. La biblioteca ha un biglietto suo e si entra a turni, ma dal 19 al 25 ottobre 2026 le sale storiche non sono visitabili e i servizi bibliotecari sono sospesi. La Chiesa-Museo resta aperta secondo i suoi orari.
 
 tetti-duomo:
   usa: [tp-tetti-orari, tp-tetti-prezzi]

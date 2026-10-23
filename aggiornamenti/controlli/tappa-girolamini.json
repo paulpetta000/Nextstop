@@ -28,7 +28,8 @@
     "src/testi/tappe.yaml"
   ],
   "fonti_esistenti": [
-    "tp-girolamini"
+    "tp-girolamini",
+    "tp-girolamini-sospensione-ottobre-2026"
   ],
   "canali_scoperta": [
     "gestore-girolamini-cultura-gov-it",
@@ -56,6 +57,14 @@
   ],
   "pubblicazioni_rilevate": [
     "girolamini-fino-2026-10-24",
-    "girolamini-inverno-2026"
-  ]
+    "girolamini-inverno-2026",
+    "girolamini-biblioteca-chiusa-2026-10-19"
+  ],
+  "riscontro_83": {
+    "data": "2026-10-24",
+    "rapporto": "aggiornamenti/rapporti/2026-10-24-girolamini-83.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": true,
+    "nota": "Recuperato avviso 15 ottobre: Biblioteca interdetta 19–25 ottobre, Chiesa-Museo aperta. Orari nuovi già nel fatto; ordinario e temporaneo distinti. Prezzi e calendario completo non rinnovati."
+  }
 }

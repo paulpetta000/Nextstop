@@ -4697,5 +4697,32 @@
     "testi": [
       "tappe.yaml#pedamentina"
     ]
+  },
+  "tp-girolamini-sospensione-ottobre-2026": {
+    "categoria": "visite",
+    "luoghi": [
+      "Girolamini, chiesa, museo e biblioteca"
+    ],
+    "descrizione": "Sospensione delle visite alle sale storiche e dei servizi della Biblioteca dal 19 al 25 ottobre 2026; Chiesa-Museo aperta",
+    "avviso": "Eccezione temporanea della sola Biblioteca: non è la chiusura della Chiesa-Museo.",
+    "nota": "Indice Eventi e News: 15 ottobre 2026. Il comunicato indica i nuovi orari dal primo feriale utile, 27 ottobre; la pagina ordinaria dal 25 ottobre.",
+    "formato": "",
+    "parole": [
+      "biblioteca",
+      "sale storiche",
+      "sospensione",
+      "ottobre"
+    ],
+    "priorita": 1,
+    "lingua": "",
+    "lettura": null,
+    "prova": "Letto nel browser il 24 ottobre 2026 con pagina orari e primo indice Eventi e News; nessun acquisto o accesso in presenza.",
+    "schede": [
+      "tp-girolamini-orari"
+    ],
+    "durate": [],
+    "testi": [
+      "tappe.yaml#girolamini"
+    ]
   }
 }
