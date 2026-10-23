@@ -4,6 +4,8 @@ Non leggere questa cartella per iniziare un controllo ordinario. Usare [procedur
 
 | Rapporto | Uso |
 |---|---|
+| [Chiusura84, 24 ottobre](2026-10-24-chiusura-84.md) | Risultati finali, build locale ripresa senza riparazione, offline nativo e limiti; verifiche successive raggruppate |
+| [Girolamini83, 24 ottobre](2026-10-24-girolamini-83.md) | Sale storiche/servizi Biblioteca sospesi19–25ottobre, Chiesa-Museo aperta; orario ordinario distinto dall'eccezione |
 | [Pedamentina82, 24 ottobre](2026-10-24-pedamentina-82.md) | Tolta garanzia di percorribilità permanente, aggiunto cantiere datato presso l'accesso senza dichiarare chiusa tutta la scala |
 | [Date delle fonti81, 24 ottobre](2026-10-24-date-fonti-81.md) | Rimosso controllo generale/promessa di validità fino ad aprile, date e fonti delle singole schede; CI e anteprima riuscite |
 | [Anteprima80, 24 ottobre](2026-10-24-anteprima-80.md) | Correzione79 letta su telefono in chiaro/scuro e320px; fallback controllato nell'HTML, nessun nuovo dato applicativo |

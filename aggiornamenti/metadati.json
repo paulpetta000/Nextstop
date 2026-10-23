@@ -134,5 +134,15 @@
     "controlli_completi": 1,
     "dati_applicativi_aggiornati": true,
     "nota": "Concluso il confronto documentale Sansevero; prossima scadenza28ottobre. La correzione non integra il calendario straordinario nei calcoli. Build locale Vite bloccata, riscontro applicativo remoto ancora necessario."
+  },
+  "riscontro_84": {
+    "data": "2026-10-24",
+    "rapporto": "aggiornamenti/rapporti/2026-10-24-chiusura-84.md",
+    "gruppi": 26,
+    "aperti": 16,
+    "fonte_orario_recuperati": 10,
+    "controlli_completi": 1,
+    "dati_applicativi_aggiornati": true,
+    "nota": "Sansevero79 letto sulla preview; nuove cautele Pedamentina e sospensione sola Biblioteca Girolamini. CI e build locale correnti riuscite; Vite conforme all'archivio originale senza riparazione. Verifiche raggruppate su richiesta di Enrico, nessun nuovo controllo completo rinnovato."
   }
 }

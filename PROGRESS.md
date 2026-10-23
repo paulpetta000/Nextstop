@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Chiusura · revisione84 del 24 ottobre
+
+Codice **c2fef1a**,212 fonti/200 fatti. Corrette cautele Pedamentina e sospensione Biblioteca Girolamini, con Chiesa-Museo aperta; grafica, logiche e percorsi invariati. **792 prove locale/Ubuntu, tipi remoti, build locale e remota12pagine/810link riusciti**, preview READY sul ramo autorizzato. Vite oggi coincide con tutti i37 file originali: nessuna riparazione/installazione, differenza rispetto al riscontro79 non spiegata. Offline locale attuale riuscito, cache tecnica rimossa e server spento. Sansevero e testo comune verificati mobile; note82/83 lette offline a1268px, viewport mobile non applicata dallo strumento in questa fase. [Risultati e limiti](aggiornamenti/rapporti/2026-10-24-chiusura-84.md). Restano16 domande aperte/10 recuperate, un controllo completo su106, nessuna revisione totale imposta. Preferenza Enrico: raggruppare le modifiche, unico giro finale; nessun'altra suite per sole note. Nessun main/produzione o tentativo sul vecchio backup Git.
+
 ## Accessi e date · revisione82 del 24 ottobre
 
 Sansevero79 verificato nel browser (rapporto80). Corretta frase generale «valgono oggi» nel compositore: CI81 riuscita,792prove/build12/810link e anteprima letta nei due temi. Riletti avviso e percorso comunali Pedamentina: tolto «sempre percorribile», aggiunta nota sui lavori19ottobre–6novembre presso l'accesso;211fonti,200fatti, un testo dipendente firmato. [Rapporto82](aggiornamenti/rapporti/2026-10-24-pedamentina-82.md). V08 resta aperto, nessuna chiusura totale o riapertura dedotta, percorsi e grafica invariati. Verifica definitiva82 in corso. Nessun main/produzione, installazione, riparazione Vite o nuovo tentativo sul vecchio backup Git.
