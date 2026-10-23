@@ -73,5 +73,16 @@
     "controlli_completi": 0,
     "dati_applicativi_aggiornati": false,
     "problema_riprodotto": "Acton in manutenzione usato da 31 collegamenti delle matrici principali; da correggere con Sol alto"
+  },
+  "riscontro_74": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-74.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "gruppi": 26,
+    "aperti": 17,
+    "fonte_orario_recuperati": 9,
+    "controlli_completi": 0,
+    "nota": "Seguito ordinario dopo consegna tecnica73; nessun controllo completo rinnovato."
   }
 }

@@ -88,5 +88,13 @@
     ],
     "nota": "Avvisi 12 e 19 settembre letti nel browser. Nessuna revoca delle aree interdette confermata. Scheda MiC con mercoledi chiuso per il solo 21 ottobre: non ricavare nuova chiusura settimanale.",
     "ritentare_entro": "2026-10-25"
+  },
+  "riscontro_74": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-74.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V19",
+    "nota": "Scheda MiC riletta: allerta riferita al 21 ottobre, non chiusura settimanale; revoca restrizioni non recuperata."
   }
 }

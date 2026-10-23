@@ -6,6 +6,8 @@ Stato corrente: [revisione 73, correzione Acton e verifiche](storico/2026-10-23-
 
 Riscontro precedente: [fonti e riproduzione Acton, revisione 72](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md); descrive il problema prima della correzione.
 
+Seguito corrente: [fonti, revisione 74](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-74.md), confronto Capri e limiti ufficiali; 17 gruppi ancora aperti, nessun controllo completo rinnovato. Sol medio per proseguire.
+
 Seguito precedente: [fonti, revisione 71](../aggiornamenti/rapporti/2026-10-22-fonti-ripresa-71.md), 17 gruppi aperti e nove con fonte/orario ordinario recuperati. Solo rapporto e registro; codice e limiti tecnici restano quelli sotto.
 
 Stato corrente: [revisione 70, L6 e dati coordinati](storico/2026-10-22-revisione-70.md), codice a9c4403, 784 test, CI Ubuntu e preview riuscite. **La copia Git indipendente fallisce il controllo finale**, dopo un primo successo: leggere il [rapporto integrità](storico/2026-10-22-integrita-70.md) e usare anche gli archivi separati. Seguito ordinario con Sol medio, limiti e stime nel rapporto.

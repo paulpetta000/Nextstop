@@ -82,5 +82,13 @@
       "V20"
     ],
     "controllo_completo": false
+  },
+  "riscontro_74": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-fonti-ripresa-74.md",
+    "controllo_completo": false,
+    "dati_applicativi_aggiornati": false,
+    "caso": "V20",
+    "nota": "Letti regolamento e schede nazionali; contrasto stagionalità Grotta Azzurra, calendario e avvisi ancora da completare."
   }
 }

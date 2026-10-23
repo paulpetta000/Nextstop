@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Ripresa ordinaria · revisione 74 del 23 ottobre
+
+Dopo il passaggio concordato a Sol medio: recuperato confronto Capri sulle tre sedi citate, con discordanza ufficiale sulla stagionalità della Grotta Azzurra; riletta scheda MiC Virgilio distinguendo allerta datata e chiusura settimanale. **17 gruppi aperti e nove recuperati su 26**, controlli completi/scadenze invariati. [Rapporto e limiti](aggiornamenti/rapporti/2026-10-23-fonti-ripresa-74.md). Solo documenti e registro; codice 5fce2d7 e verifiche73 conservati, nessun backup Git ritentato.
+
 ## Blocco tecnico · revisione 73 del 23 ottobre
 
 Codice **5fce2d7**, percorsi rigenerati su Ubuntu e integrati: collegamenti con Acton **31 → 0**; escluso anche ascensore Chiaia in manutenzione, funicolare conservata. Corretto «A piedi» in «Spostamenti» quando ci sono mezzi; tolto un anticipo di caricamento del font senza cambiare grafica. **792/792 test**, build 12 pagine, 810 link, Lighthouse home 100/compositore 99; browser e axe nei limiti del [resoconto](docs/storico/2026-10-23-revisione-73.md). CI finale riuscita (tipi, 792 test, build/link) e anteprima READY sul commit applicativo 5fce2d7, solo ramo autorizzato. Fallimenti locali e primo ZIP non valido conservati, cause ignote; vecchio backup Git lasciato da parte su richiesta di Enrico. Nessun main/produzione o redesign. Restano 17 gruppi di fonti aperti su 26, seguito con Sol medio quando conclusa la consegna tecnica.
