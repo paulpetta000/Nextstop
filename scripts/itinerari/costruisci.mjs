@@ -86,6 +86,11 @@ const BUS = {
 };
 // Ascensori pubblici gratuiti dell'ANM: la domenica e nei festivi chiudono alle 14:00
 const ASCENSORI_FERIALI = /Su[^;]*?0?7:30-14:00|PH,Su 0?7:30-14:00/;
+// ANM, stato letto il 23/10/2026: Acton e Chiaia in manutenzione.
+// https://www.anm.it/s/ascensori?language=it · nodi OSM, non la funicolare di Chiaia.
+// Non presumiamo una data di ripristino: riabilitare dopo nuova conferma ANM e rigenerare.
+// È un vincolo prudenziale dei dati attuali, non una previsione di chiusura per le date future.
+const ASCENSORI_IN_MANUTENZIONE = new Set([2217391295, 3803566239]);
 
 // ---------- Dati ----------
 const osm = JSON.parse(fs.readFileSync(path.join(dir, 'osm.json'), 'utf8'));
@@ -390,7 +395,9 @@ function rete(scenario, modo = 'media') {
       if (!c.unVerso) add(c.a, { a: c.da, t, m: 0, su: 0, tipo: 'corsa', linea: c.linea });
     }
   }
-  const chiusi = new Set([...ascensori].filter(([, x]) => scenario.nome === 'festivo' && x.chiudeDomenica).map(([id]) => id));
+  const chiusi = new Set([...ascensori].filter(([id, x]) =>
+    ASCENSORI_IN_MANUTENZIONE.has(id) || (scenario.nome === 'festivo' && x.chiudeDomenica)
+  ).map(([id]) => id));
   const accantoChiusi = new Set();
   for (const id of chiusi) for (const e of adj.get(id) || []) accantoChiusi.add(e.a);
   const VUOTO = [];

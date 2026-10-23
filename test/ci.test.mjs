@@ -52,6 +52,10 @@ test('CI copre PR, main e avvio manuale mantenendo permessi minimi', () => {
   assert.deepEqual(workflow.on.push?.branches, ['main']);
   assert.ok(Object.hasOwn(workflow.on, 'workflow_dispatch'));
   assert.deepEqual(workflow.permissions, { contents: 'read' });
+  assert.equal(workflow.on.workflow_dispatch.inputs.rigenera_percorsi.default, false);
+  for (const step of workflow.jobs.verifica.steps.filter(x => /rigenera-ci\.mjs/.test(x.run))) {
+    assert.equal(step.if, '${{ inputs.rigenera_percorsi == true }}', 'rigenerazione ed esportazione solo su scelta manuale');
+  }
 });
 
 for (const [name, ref] of [['PR avanzata', 'refs/pull/4/merge'], ['main avanzato', 'refs/heads/main']]) {

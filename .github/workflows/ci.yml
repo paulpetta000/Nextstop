@@ -6,6 +6,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      rigenera_percorsi:
+        description: 'Ricalcola i percorsi con gli ingressi pubblici conservati del 22 ottobre 2026'
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -64,6 +69,10 @@ jobs:
       - name: JavaScript del service worker
         run: npm run check:worker
 
+      - name: Rigenera percorsi dagli ingressi conservati
+        if: ${{ inputs.rigenera_percorsi == true }}
+        run: node scripts/itinerari/rigenera-ci.mjs
+
       - name: Test
         run: npm test
 
@@ -72,3 +81,7 @@ jobs:
 
       - name: Link interni
         run: npm run check:links
+
+      - name: Esporta dati pubblici verificati nel log del controllo
+        if: ${{ inputs.rigenera_percorsi == true }}
+        run: node scripts/itinerari/rigenera-ci.mjs --esporta

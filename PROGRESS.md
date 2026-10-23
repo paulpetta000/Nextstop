@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Blocco tecnico in corso · revisione 73 del 23 ottobre
+
+Sol alto: esclusi nel generatore Acton e Chiaia in manutenzione; cinque test specifici, suite **789/789**, build preparatoria e 811 link riusciti. **Dati ancora da rigenerare e integrare:** tre esecuzioni locali interrotte con errore nativo, cause ignote; preparata verifica manuale Ubuntu sugli ingressi pubblici conservati. [Stato e limiti](docs/storico/2026-10-23-revisione-73.md). Nessuna grafica, main o produzione modificati; ulteriori tentativi sul backup Git sospesi su richiesta di Enrico.
+
 ## Stato corrente · revisione 72 del 23 ottobre
 
 Recuperate pagine comunali e nuovi avvisi su cantieri; stati **17 gruppi aperti e nove recuperati su 26** conservati. **Nuovo problema riprodotto:** Acton è indicato in manutenzione da ANM ma usato da 31 collegamenti delle matrici principali. Correzione del generatore e rigenerazione da fare con **Sol alto**, prima di procedere alle verifiche finali. [Riscontri e limiti](aggiornamenti/rapporti/2026-10-23-fonti-ripresa-72.md). Solo documenti/registro, codice ancora a9c4403; prova mirata fallita come atteso, suite/build precedenti non ripetute. Backup Git ancora non affidabile, nessuna riparazione; originali e archivi conservati. Nessun main/produzione o cambio grafico.
