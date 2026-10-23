@@ -4,6 +4,7 @@ Non leggere questa cartella per iniziare un controllo ordinario. Usare [procedur
 
 | Rapporto | Uso |
 |---|---|
+| [Mercati 77, 23 ottobre](2026-10-23-mercati-77.md) | PDF nel percorso 2026 contiene proposta 2012, nessun nuovo orario dedotto; V12 ancora aperto |
 | [San Lorenzo 76, 23 ottobre](2026-10-23-san-lorenzo-76.md) | Guida obbligatoria confermata da due canali del gestore; testi corretti, controllo completo ancora aperto |
 | [Fonti e avvisi 75, 23 ottobre](2026-10-23-fonti-ripresa-75.md) | Granfuoco ordinario recuperato; contrasti dei locali, Certosa MiC e nuovi avvisi temporanei ANM/EAV; dati applicativi invariati |
 | [Fonti 74, 23 ottobre](2026-10-23-fonti-ripresa-74.md) | Confronto stagionale Capri e limiti Virgilio, prima del nuovo recupero Certosa |

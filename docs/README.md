@@ -1,5 +1,7 @@
 # Documentazione · scegliere cosa leggere
 
+Seguito documentale: [mercati 77](../aggiornamenti/rapporti/2026-10-23-mercati-77.md), proposta storica distinta dal nuovo calendario; nessuna modifica applicativa.
+
 Seguito corrente: [San Lorenzo 76](../aggiornamenti/rapporti/2026-10-23-san-lorenzo-76.md), correzione mirata della guida obbligatoria; 209 fonti, 792 prove. Controllo completo ancora aperto; avvisi e locali nel rapporto 75.
 
 Seguito corrente: [fonti, locali e avvisi 75](../aggiornamenti/rapporti/2026-10-23-fonti-ripresa-75.md), 16 gruppi aperti e dieci con fonte/orario ordinario recuperati. Dati applicativi invariati; avvisi temporanei registrati con i loro limiti.

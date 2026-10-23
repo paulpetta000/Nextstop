@@ -104,5 +104,15 @@
     "controlli_completi": 0,
     "dati_applicativi_aggiornati": false,
     "nota": "Granfuoco ordinario recuperato su scheda Google già ammessa; altri locali con contrasti; avvisi temporanei ANM/EAV conservati senza integrazione applicativa."
+  },
+  "riscontro_77": {
+    "data": "2026-10-23",
+    "rapporto": "aggiornamenti/rapporti/2026-10-23-mercati-77.md",
+    "gruppi": 26,
+    "aperti": 16,
+    "fonte_orario_recuperati": 10,
+    "controlli_completi": 0,
+    "dati_applicativi_aggiornati": false,
+    "nota": "Confronto di allegato storico dei mercati; dati applicativi e conteggi della revisione76 conservati."
   }
 }

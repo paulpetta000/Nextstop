@@ -1,5 +1,9 @@
 # PROGRESS · stato attuale
 
+## Mercati · revisione 77 del 23 ottobre
+
+Confrontato PDF comunale nel percorso gennaio 2026: proposta di orario prolungato appartiene all'allegato 2012, non prova un nuovo calendario Pignasecca/Porta Nolana. [Rapporto e pagine](aggiornamenti/rapporti/2026-10-23-mercati-77.md). V12 e conteggi **16 aperti/10 recuperati** invariati, nessun controllo completo rinnovato. Solo documenti/registro; codice e verifiche riuscite del commit applicativo fae435e sotto. Vecchio backup Git non ritentato, nessun main/produzione.
+
 ## San Lorenzo · revisione 76 del 23 ottobre
 
 Gestore e biglietteria ora indicano guida obbligatoria: corrette due schede e il testo dipendente, aggiunta la fonte collegata (209 fonti pubbliche). Prezzi base, durate, calcoli, cinque JSON generati e grafica invariati. 792/792 prove, build 12 pagine e 810 link riusciti; primo tentativo fallito per metadati/conteggi della nuova fonte, poi completati. Mobile locale chiaro/scuro e 320/390 px verificati; **CI Ubuntu 39975832231 riuscita e anteprima READY sul commit applicativo fae435e**. **16 gruppi aperti e dieci recuperati su 26**, nessun controllo completo/scadenza rinnovati. [Riscontri, conservazione e limiti](aggiornamenti/rapporti/2026-10-23-san-lorenzo-76.md). Nessun main/produzione, nuovo backup Git o istruzione Claude.
